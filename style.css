@@ -1,0 +1,295 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+	font-family: 'PT Sans', sans-serif;
+	background-color: rgb(255, 255, 255);
+	color: rgb(34, 34, 34);
+	font-size: 2rem;
+	-webkit-font-smoothing: antialiased;
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+p{
+	margin: 0 0 3rem;
+}
+
+.post-thumbnail img{
+ border-radius: 1rem;
+}
+
+.entry-meta {
+	font-family: Merriweather, serif;
+	font-size: 1.2rem;
+	margin-bottom: 2rem;
+	text-align: center;
+}
+.entry-meta span{
+	margin-right: 1rem;
+	color: #666;
+}
+
+.entry-meta span a {
+	color: #222;
+	border-bottom: 1px dotted #ccc;
+	padding-bottom: 1px;
+}
+
+img {
+	height: auto;
+	max-width: 100%
+}
+
+h1, h2, h3, h4, h5{
+	font-family: 'Merriweather', serif;
+}
+
+h1 {
+	font-size: 5.5rem;
+	margin: 2rem 0;
+	font-weight: 700;
+}
+
+h2 {
+	font-size: 2.5rem;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+
+/* Page */
+
+.site {
+	width: 90%;
+	margin: auto;
+}
+
+/* Header  & MENU*/
+
+.site-title{
+	text-transform: uppercase;
+	font-size: 1.7rem;
+	font-weight: 700;
+	letter-spacing: 5px;
+	line-height: 1.2;
+	border-bottom: 3px solid rgb(226, 44, 47);
+}
+
+.menu a {
+	padding: 2rem 3rem;
+	display: flex;
+	text-decoration: none;
+	color: rgb(51, 51, 51);
+	font-size: 1.3rem;
+	letter-spacing: 0.2rem;
+	line-height: 1;
+	text-transform: uppercase;
+	font-weight: 800;
+}
+
+@media screen and (max-width: 700px) {
+	header.open {
+		height: 100vh;
+		width: 100vw;
+		background-color: burlywood;
+	}
+
+	.menu {
+		display: none;
+		flex-direction: column;
+		justify-content: space-evenly;
+	}
+
+	.menu.open {
+		display: flex;
+	}
+
+	.menu li {
+		position: relative;
+		list-style: none;
+		text-decoration: none;
+	}
+
+	nav ul ul {
+		display: none;
+		flex-direction: column;
+		margin-left: 1rem;
+	}
+
+	nav .submenu a {
+		padding: 2rem 3rem;
+		font-size: 1.2rem;
+		width: 20rem;
+		letter-spacing: 0.1rem;
+	}
+
+	.menu li:hover > a {
+		color: #e22c2f;
+		border-left: 2px solid red;
+	}
+
+	.menu li:active > a {
+		color: #e22c2f;
+	}
+
+	.menu li:hover > ul {
+		display: flex;
+		width: 20rem;
+	}
+
+	.menu-btn {
+		border: 5px solid white;
+		width: 5rem;
+		height: 5rem;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: all 0.5 ease-in-out;
+	}
+
+	.menu-btn.open .menu-btn__burger {
+		background: transparent;
+	}
+
+	.menu-btn.open .menu-btn__burger::before {
+		transform: rotate(225deg);
+	}
+
+	.menu-btn.open .menu-btn__burger::after {
+		transform: rotate(-225deg);
+	}
+
+	.menu-btn__burger {
+		width: 2rem;
+		height: 0.3rem;
+		border-radius: 2rem;
+		background: #000;
+		transition: all 0.5 ease-in-out;
+	}
+
+	.menu-btn__burger::before,
+	.menu-btn__burger::after {
+		content: "";
+		position: absolute;
+		width: 3rem;
+		height: 0.3rem;
+		border-radius: 2rem;
+		background: #000;
+		transition: all 0.5s ease-in-out;
+	}
+	.menu-btn__burger::after {
+		transform: translateY(0.9rem);
+	}
+
+	.menu-btn__burger::before {
+		transform: translateY(-0.9rem);
+	}
+}
+
+@media screen and (min-width: 701px) {
+	header {
+		min-height: 30vh;
+		/*width: 60%;*/
+		margin: auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.menu {
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		height: 10vh;
+	}
+
+	.menu li {
+		position: relative;
+		list-style: none;
+		text-decoration: none;
+	}
+
+	nav ul ul {
+		display: flex;
+		flex-direction: column;
+		visibility: hidden;
+	}
+
+	.menu > li > ul.sub-menu {
+		position: absolute;
+		top: 100%;
+	}
+
+	nav ul ul ul {
+		position: absolute;
+		top: 0;
+		left: 100%;
+	}
+
+	nav .sub-menu a {
+		padding: 2rem 3rem;
+		border-bottom: 1px solid #eee;
+		font-size: 1.2rem;
+		width: 20rem;
+		letter-spacing: 0.1rem;
+	}
+
+	.menu ul ul li:hover {
+		background-color: rgba(223, 222, 222, 0.2);
+	}
+
+	.menu li:hover > a {
+		color: #e22c2f;
+		/* border-bottom: 1px solid #eee */
+	}
+
+	/* All the properties shold not be here*/
+	.menu li:hover > ul {
+		visibility: visible;
+		border-radius: 1rem;
+		box-shadow: 0 7px 32px 0 rgba(0, 0, 0, 0.12);
+		width: 20rem;
+		transition: opacity 0.4s ease-in-out;
+		border: 1px solid #eee;
+	}
+
+	nav ul.sub-menu::before {
+		content: "";
+		position: absolute;
+		top: -5%;
+		border: 8px solid transparent;
+		border-bottom-color: #f6f9fc;
+	}
+}
+
+
+
+/* Main Section */
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+main{
+	flex: 4 1 60rem;
+	margin: 0 2rem;
+	max-width: 90rem;
+}
+
+aside{
+	flex: 1 1 30rem;
+	padding: 0 2rem;
+}
