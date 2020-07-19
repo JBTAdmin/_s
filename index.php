@@ -13,10 +13,18 @@
  */
 
 get_header();
+
+$sidebar_page_class = '';
+if ( is_active_sidebar( 'sidebar-1' ) ) {
+    $sidebar_page_class = ' with-right-sidebar';
+}
+
+
 ?>
 
 <div class="container">
-	<main id="primary" class="site-main">
+    <div class="wrap">
+	<main id="primary" class="site-main <?php echo esc_attr( $sidebar_page_class ); ?>">
 
 		<?php
 		if ( have_posts() ) :
@@ -38,7 +46,7 @@ get_header();
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+				get_template_part( 'template-parts/blog/blog-layout', get_post_type() );
 
 			endwhile;
 
@@ -56,6 +64,7 @@ get_header();
     <?php
     get_sidebar();
     ?>
+    </div>
 </div>
 <?php
 get_footer();

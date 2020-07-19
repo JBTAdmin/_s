@@ -8,8 +8,11 @@
  */
 
 ?>
-fdsfs
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+    <?php _s_post_thumbnail(); ?>
+
 	<div class="entry-header">
 		<?php
 		if ( is_singular() ) :
@@ -28,8 +31,6 @@ fdsfs
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</div><!-- .entry-header -->
-
-	<?php _s_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php

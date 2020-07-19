@@ -11,6 +11,7 @@ get_header();
 ?>
 
     <div class="container">
+    <div class="wrap">
 	<main id="primary" class="site-main">
 
 		<?php
@@ -39,6 +40,7 @@ get_header();
         <?php
         get_sidebar();
         ?>
+    </div>
     </div> <!-- #container -->
 <?php
 get_footer();
