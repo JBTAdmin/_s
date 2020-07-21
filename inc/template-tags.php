@@ -132,7 +132,8 @@ if ( ! function_exists( '_s_post_thumbnail' ) ) :
 			?>
 
 			<div class="post-thumbnail">
-				<?php the_post_thumbnail(); ?>
+
+				<?php the_post_thumbnail('_s-blog-post-no-sidebar'); ?>
 			</div><!-- .post-thumbnail -->
 
 		<?php else : ?>
@@ -140,7 +141,7 @@ if ( ! function_exists( '_s_post_thumbnail' ) ) :
 			<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 				<?php
 					the_post_thumbnail(
-						'_s-blog-large-grid',
+						'_s-blog-archive',
 						array(
 							'alt' => the_title_attribute(
 								array(

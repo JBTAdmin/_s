@@ -5,4 +5,25 @@ h4,
 h5,
 h6 {
 	clear: both;
+	font-family: 'Merriweather', serif;
+	//font-family: 'Noto Serif', serif;
+	/*font-family: 'Arbutus Slab', serif;*/
+	//font-family: "PT Sans", sans-serif;
+	color: #222;
+}
+
+h1 {
+	font-size: calc(20px + 26 * ((100vw - 576px) / 1024));
+	margin: 2rem 0;
+	font-weight: 700;
+}
+
+h2 {
+	font-size: 2.6rem;
+}
+
+h2.entry-title{
+	margin: 40px 0 10px;
+	letter-spacing: -0.5px;
+
 }

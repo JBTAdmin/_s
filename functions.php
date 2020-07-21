@@ -346,7 +346,7 @@ add_action( 'after_setup_theme', 'mytheme_setup_theme_supported_features' );
 /**
  * Theme images sizes
  */
-add_image_size( '_s-blog-small', 1140, 694, true);
-add_image_size( '_s-blog-large-grid', 270, 200, true);
-add_image_size( '_s-blog-thumb-widget', 220, 180, true);
-add_image_size( '_s-blog-thumb-masonry', 360, 0, false);
+
+add_image_size( '_s-blog-archive', 360, 150, true);
+add_image_size( '_s-blog-post-sidebar', 580, 280, true);
+add_image_size( '_s-blog-post-no-sidebar', 880, 400, true);

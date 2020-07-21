@@ -1,3 +1,32 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	word-wrap: break-word;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+
 body {
 	background: $color__background-body; // Fallback for when there is no custom background color defined.
+	/*font-family: 'PT Sans', sans-serif;*/
+	/*font-family: 'Arbutus Slab', serif;;*/
+	//font-family: 'Noto Serif', serif;
+	//font: 400 18px / 1.77778 "Roboto",sans-serif;
+	font: 400 18px / 1.5 'PT Sans', sans-serif;
+	color: #222;
+	//font-family: 'Roboto', sans-serif;
+	//color: rgb(34, 34, 34);
+	//font-size: 1.6rem;
+	//font-weight: 400;
+	//line-height: 1.5;
+	overflow-x: hidden;
+	-webkit-font-smoothing: antialiased;
+}
+
+p {
+	margin: 0 0 3rem;
 }

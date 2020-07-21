@@ -1,8 +1,19 @@
-.widget {
-	margin: 0 0 1.5em;
 
-	// Make sure select elements fit in widgets.
-	select {
-		max-width: 100%;
-	}
+
+
+/* Widget Styling*/
+.widget-area .widget{
+	margin-bottom: 45px;
+	font-size: 14px;
+	line-height: 23px;
+	color: #666;
+}
+
+.widget-area .widget-title{
+	margin-top: -4px;
+	margin-bottom: 19px;
+	border-radius: 30px;
+	font-size: 2rem;
+	color: #000;
+	position: relative;
 }

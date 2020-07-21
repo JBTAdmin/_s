@@ -1,23 +1,154 @@
-.sticky {
-	display: block;
+
+.post-thumbnail img {
+	border-radius: 1rem;
 }
 
-.post,
-.page {
-	margin: 0 0 1.5em;
+.entry-meta {
+	//font-family: Merriweather, serif;
+	font-size: 1.2rem;
+	margin: 1rem 0 4rem;
+	/*text-align: center;*/
 }
 
-.updated:not(.published) {
-	display: none;
+.entry-meta span {
+	margin-right: 1rem;
+	color: #666;
 }
 
-.page-content,
-.entry-content,
-.entry-summary {
-	margin: 1.5em 0 0;
+.entry-meta span a {
+	color: #222;
+	border-bottom: 1px dotted #ccc;
+	padding-bottom: 1px;
 }
 
-.page-links {
-	clear: both;
-	margin: 0 0 1.5em;
+.entry-footer{
+	margin-top: 3rem;
+}
+
+.wrap {
+	width: 90%;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+
+/* Main Section */
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	position: relative;
+}
+
+main {
+	display: flex;
+	flex-wrap: wrap;
+	//flex: 2 1 60rem;
+	margin: 0 2rem;
+	max-width: 120rem;
+	flex: 2 1 80rem;
+	justify-content: space-between;
+}
+
+aside {
+	flex: 1 1 30rem;
+	padding: 0 2rem;
+}
+
+
+@media (max-width: 920px) {
+	.alignwide {
+		margin: 32px -76px;
+		max-width: 920px;
+		width: 920px;
+	}
+}
+
+@media screen and (min-width: 910px) and (max-width: 991px) {
+	.wrap {
+		width: 910px;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.wrap {
+		width: 1200px;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 910px) {
+	.wrap {
+		width: 750px;
+	}
+}
+
+
+
+/* Blog Type List*/
+.blog-type-list{
+	display: flex;
+	//align-items: flex-start;
+	flex-direction: column;
+}
+
+//.blog-type-list > a{
+//	flex: 1 1 25rem;
+//}
+//.blog-type-list-content{
+//	flex: 2 1 50rem;
+//}
+
+.blog-type-list-content{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+footer .wrap div {
+	flex: 1 1 25rem;
+}
+
+.wrap-site-info {
+	display: flex;
+	justify-content: center;
+	border-top: 1px solid rgba(136, 136, 136, .1);
+}
+
+.site-info-holder {
+	padding: 3rem 0;
+	/*padding-top: 30px;*/
+	/*padding-bottom: 30px;*/
+}
+
+article, nav.navigation {
+	padding: 0 0 4rem;
+}
+
+article{
+	flex: 1 1 30rem;
+	margin: 0 1.666666% 30px;
+}
+
+.home article{
+	max-width: 35rem;
+}
+
+nav.navigation{
+	width: 100%;
+}
+.site-footer {
+	background-color: #17161a;
+	color: rgba(255, 255, 255, 0.8);
+}
+
+.site-footer .wrap {
+
+	padding: 6rem 0;
+}
+
+.site-footer a {
+	color: rgba(255, 255, 255, 0.8);
 }

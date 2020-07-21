@@ -7,8 +7,28 @@ input[type="submit"] {
 	border-radius: 3px;
 	background: $color__background-button;
 	color: rgba(0, 0, 0, 0.8);
-	line-height: 1;
-	padding: 0.6em 1em 0.4em;
+	//line-height: 1;
+	//padding: 0.6em 1em 0.4em;
+
+	//background-color: #17161A;
+	//border: 1px solid #17161A;
+	padding: 1.4rem 1.8rem;
+	min-height: 20px;
+	line-height: 20px;
+	//border-radius: 4px;
+	transition: all cubic-bezier(.4, 0, .2, 1) .4s;
+	font-size: 1.6rem;
+	font-weight: 600;
+	text-decoration: none;
+	vertical-align: middle;
+	outline: 0;
+	display: inline-block;
+	position: relative;
+	text-align: center;
+	overflow: hidden;
+	color: #fff;
+
+
 
 	&:hover {
 		border-color: $color__border-button-hover;
