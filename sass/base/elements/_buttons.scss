@@ -2,8 +2,8 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid;
-	border-color: $color__border-button;
+	border: 1px solid $color__border-button;
+	//border-color: ;
 	border-radius: 3px;
 	background: $color__background-button;
 	color: rgba(0, 0, 0, 0.8);
@@ -26,8 +26,6 @@ input[type="submit"] {
 	position: relative;
 	text-align: center;
 	overflow: hidden;
-	color: #fff;
-
 
 
 	&:hover {
