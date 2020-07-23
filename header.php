@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package _s
+ * @package aaurora
  */
 
 ?>
@@ -18,7 +18,7 @@
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=PT+Sans&family=Noto+Serif:wght@400;700&family=Arbutus+Slab&display=swap"
           rel="stylesheet">
-    <script src="/wp-content/themes/_s-master/js/main.js"></script>
+    <script src="/wp-content/themes/aaurora-master/js/main.js"></script>
     <?php wp_head(); ?>
 </head>
 
@@ -26,7 +26,7 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site">
     <a class="skip-link screen-reader-text" href="#primary">
-        <?php esc_html_e('Skip to content', '_s'); ?></a>
+        <?php esc_html_e('Skip to content', 'aaurora'); ?></a>
 
     <header id="masthead" class="site-header">
         <div class="wrap">
@@ -45,10 +45,10 @@
                                                    rel="home"><?php bloginfo('name'); ?></a></div>
                     <?php
                     endif;
-                    $_s_description = get_bloginfo('description', 'display');
-                    if ($_s_description || is_customize_preview()) :
+                    $aaurora_description = get_bloginfo('description', 'display');
+                    if ($aaurora_description || is_customize_preview()) :
                         ?>
-<!--				<p class="site-description">--><?php //echo $_s_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?><!--</p>-->
+<!--				<p class="site-description">--><?php //echo $aaurora_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?><!--</p>-->
                     <?php endif; ?>
                 </div><!-- .site-branding -->
 
@@ -57,7 +57,7 @@
                     <div class="menu-btn">
                         <div class="menu-btn__burger"></div>
                     </div>
-            <!--			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">--><?php //esc_html_e( 'Primary Menu', '_s' ); ?><!--</button>-->
+            <!--			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">--><?php //esc_html_e( 'Primary Menu', 'aaurora' ); ?><!--</button>-->
                     <?php
                     wp_nav_menu(
                         array(

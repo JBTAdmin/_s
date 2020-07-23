@@ -82,6 +82,7 @@
 .main-container,
 .main-footer{
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .main-footer div{

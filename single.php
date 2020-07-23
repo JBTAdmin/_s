@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package _s
+ * @package aaurora
  */
 
 get_header();
@@ -29,8 +29,8 @@ if (is_active_sidebar('sidebar-1')) {
 
                         the_post_navigation(
                             array(
-                                'prev_text' => '<span class="nav-subtitle">' . esc_html__('Previous:', '_s') . '</span> <span class="nav-title">%title</span>',
-                                'next_text' => '<span class="nav-subtitle">' . esc_html__('Next:', '_s') . '</span> <span class="nav-title">%title</span>',
+                                'prev_text' => '<span class="nav-subtitle">' . esc_html__('Previous:', 'aaurora') . '</span> <span class="nav-title">%title</span>',
+                                'next_text' => '<span class="nav-subtitle">' . esc_html__('Next:', 'aaurora') . '</span> <span class="nav-title">%title</span>',
                             )
                         );
 
