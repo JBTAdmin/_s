@@ -18,7 +18,7 @@
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=PT+Sans&family=Noto+Serif:wght@400;700&family=Arbutus+Slab&display=swap"
           rel="stylesheet">
-    <script src="/wp-content/themes/aaurora-master/js/main.js"></script>
+    <script src="/wp-content/themes/aaurora/js/main.js"></script>
     <?php wp_head(); ?>
 </head>
 

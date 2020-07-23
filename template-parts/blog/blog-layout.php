@@ -1,0 +1,84 @@
+<?php
+/**
+ * Template part for displaying posts
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package aaurora_
+ */
+
+?>
+
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+    <div  class="blog-type-list">
+
+    <?php aaurora_post_thumbnail(); ?>
+
+    <div class="blog-type-list-content">
+    <div class="entry-header">
+        <?php
+
+        the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+
+        if ( 'post' === get_post_type() ) :
+            ?>
+            <div class="entry-meta">
+                <?php
+                aaurora_posted_on();
+
+                aaurora_posted_by();
+                ?>
+            </div><!-- .entry-meta -->
+        <?php endif; ?>
+    </div><!-- .entry-header -->
+
+    <div class="entry-content">
+        <?php
+
+
+        $content_preview = '';
+        $content_preview = get_the_excerpt();
+
+        if (  $content_preview ) {
+//                    $excerpt_length = 5;
+//                    $content_preview = preg_replace( '/\[.+?\]/', '', the_content() );
+            $content_preview  = wp_trim_words( get_the_content(), 20 );
+//                    $content_preview = wp_trim_words( $content_preview, $excerpt_length, apply_filters( 'excerpt_more', '&hellip;' ) );
+        }
+//echo HELLL;
+        echo($content_preview);  /// TODO THIS IS NOT THE RIGHT WAY TO DISPLAY CONTENT
+
+
+        //        the_content(
+        //			sprintf(
+        //				wp_kses(
+        //					/* translators: %s: Name of current post. Only visible to screen readers */
+        //					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'AAURORA' ),
+        //					array(
+        //						'span' => array(
+        //							'class' => array(),
+        //						),
+        //					)
+        //				),
+        //				wp_kses_post( get_the_title() )
+        //			)
+        //		);
+
+//        wp_link_pages(
+//            array(
+//                'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'AAURORA' ),
+//                'after'  => '</div>',
+//            )
+//        );
+        ?>
+    </div><!-- .entry-content -->
+
+    <footer class="entry-footer">
+        <?php aaurora_entry_footer(); ?>
+    </footer><!-- .entry-footer -->
+
+    </div>
+    </div>
+
+</article><!-- #post-<?php the_ID(); ?> -->
