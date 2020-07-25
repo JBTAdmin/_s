@@ -58,6 +58,9 @@ if ( ! function_exists( 'aaurora_entry_footer' ) ) :
 	 */
 	function aaurora_entry_footer() {
 		// Hide category and tag text for pages.
+
+
+
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
 			$categories_list = get_the_category_list( esc_html__( ', ', 'aaurora' ) );
@@ -70,15 +73,15 @@ if ( ! function_exists( 'aaurora_entry_footer' ) ) :
 			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'aaurora' ) );
 			if ( $tags_list ) {
 				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links">' . esc_html__( ' %1$s', 'aaurora' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+//				printf( '<span class="tags-links">' . esc_html__( ' %1$s', 'aaurora' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
 		}
 
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 			echo '<span class="comments-link">';
 
-            printf(esc_html(_nx('%1$s comment', '%1$s comments', get_comments_number(), 'comments title', 'ohio')),
-                esc_html(number_format_i18n(get_comments_number())));
+//            printf(esc_html(_nx('%1$s comment', '%1$s comments', get_comments_number(), 'comments title', 'ohio')),
+//                esc_html(number_format_i18n(get_comments_number())));
 
 //            comments_popup_link(
 //				sprintf(

@@ -18,19 +18,17 @@
     <div class="blog-type-list-content">
     <div class="entry-header">
         <?php
-
+        aaurora_entry_footer();
         the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 
-        if ( 'post' === get_post_type() ) :
-            ?>
-            <div class="entry-meta">
-                <?php
-                aaurora_posted_on();
+        ?>
 
-                aaurora_posted_by();
-                ?>
-            </div><!-- .entry-meta -->
-        <?php endif; ?>
+
+        <a href="<?php echo esc_url( get_permalink() ) ?>" class="btn btn-link brand-color-hover">
+                <?php esc_html_e( 'Read More', 'aaurora' ); ?>
+        </a>
+
+
     </div><!-- .entry-header -->
 
     <div class="entry-content">
@@ -46,8 +44,10 @@
             $content_preview  = wp_trim_words( get_the_content(), 20 );
 //                    $content_preview = wp_trim_words( $content_preview, $excerpt_length, apply_filters( 'excerpt_more', '&hellip;' ) );
         }
+
+
 //echo HELLL;
-        echo($content_preview);  /// TODO THIS IS NOT THE RIGHT WAY TO DISPLAY CONTENT
+//        echo($content_preview);  /// TODO THIS IS NOT THE RIGHT WAY TO DISPLAY CONTENT
 
 
         //        the_content(
@@ -75,7 +75,7 @@
     </div><!-- .entry-content -->
 
     <footer class="entry-footer">
-        <?php aaurora_entry_footer(); ?>
+
     </footer><!-- .entry-footer -->
 
     </div>

@@ -53,6 +53,7 @@ if (is_active_sidebar('sidebar-1')) {
 
                         the_posts_navigation();
 
+                        numeric_posts_nav();
                     else :
 
                         get_template_part('template-parts/content', 'none');

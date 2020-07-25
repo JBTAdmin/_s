@@ -432,8 +432,16 @@ h2 {
 }
 
 h2.entry-title {
-	margin: 40px 0 10px;
+	margin: 20px 0 10px;
 	letter-spacing: -0.5px;
+}
+
+.entry-header{
+	padding-top: 2rem;
+}
+
+.cat-links > a{
+	color: blue;
 }
 
 p {
@@ -791,7 +799,7 @@ aside {
 @media screen and (min-width: 992px) {
 
 	.wrap {
-		width: 1200px;
+		width: 1400px;
 		margin: auto;
 	}
 }
@@ -813,8 +821,8 @@ aside {
 .blog-type-list-content {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	text-align: center;
+	/*align-items: center;*/
+	/*text-align: center;*/
 }
 
 .wrap-site-info {
