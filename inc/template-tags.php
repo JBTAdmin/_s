@@ -14,15 +14,17 @@ if ( ! function_exists( 'aaurora_posted_on' ) ) :
 	function aaurora_posted_on() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+//			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+            $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
 		}
 
 		$time_string = sprintf(
 			$time_string,
 			esc_attr( get_the_date( DATE_W3C ) ),
-			esc_html( get_the_date() ),
-			esc_attr( get_the_modified_date( DATE_W3C ) ),
-			esc_html( get_the_modified_date() )
+			esc_html( get_the_date() )
+//            ,
+//			esc_attr( get_the_modified_date( DATE_W3C ) ),
+//			esc_html( get_the_modified_date() )
 		);
 
 		$posted_on = sprintf(
@@ -43,7 +45,7 @@ if ( ! function_exists( 'aaurora_posted_by' ) ) :
 	function aaurora_posted_by() {
 		$byline = sprintf(
 			/* translators: %s: post author. */
-			esc_html_x( ' %s', 'post author', 'aaurora' ),
+			esc_html_x( '/     %s', 'post author', 'aaurora' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
@@ -133,7 +135,7 @@ if ( ! function_exists( 'aaurora_post_thumbnail' ) ) :
 
 		if(! has_post_thumbnail() & !is_singular()){
             ?>
-
+<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
             <div class="no-post-thumbnail">
 
                 <div class="post-thumbnail-dropcase">
@@ -143,7 +145,7 @@ if ( ! function_exists( 'aaurora_post_thumbnail' ) ) :
 
                 </div>
             </div><!-- .post-thumbnail -->
-
+</a>
             <?php
 
 		    return;

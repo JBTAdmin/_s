@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package writer
+ * @package aaurora
  */
 
 $footer_widgets_count = 0;

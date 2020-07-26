@@ -1,9 +1,9 @@
 /*!
 Theme Name: Aaurora
-Theme URI: https://underscores.me/
-Author: Automattic
-Author URI: https://automattic.com/
-Description: Hi. I'm a starter theme called <code>_s</code>, or <em>underscores</em>, if you like. I'm a theme meant for hacking so don't use me as a <em>Parent Theme</em>. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+Theme URI: https://ipoweruser.com/
+Author: iPower
+Author URI: https://ipoweruser.com/
+Description: Hi. I'm a theme called <code>aaurora</code>, if you like.
 Version: 1.0.0
 Tested up to: 5.4
 Requires PHP: 5.6
@@ -646,8 +646,8 @@ nav.navigation {
   border-radius: 1rem; }
 
 .entry-meta {
-  font-size: 1.2rem;
-  margin: 1rem 0 4rem;
+  font-size: 1.5rem;
+  margin: 0 0 4rem;
   /*text-align: center;*/ }
 
 .entry-meta span {
@@ -655,9 +655,7 @@ nav.navigation {
   color: #666; }
 
 .entry-meta span a {
-  color: #222;
-  border-bottom: 1px dotted #ccc;
-  padding-bottom: 1px; }
+  color: rgba(16, 16, 16, 0.8); }
 
 .entry-footer {
   margin-top: 3rem; }

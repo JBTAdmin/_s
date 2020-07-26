@@ -51,7 +51,7 @@ if (is_active_sidebar('sidebar-1')) {
 
                         endwhile;
 
-                        the_posts_navigation();
+//                        the_posts_navigation();
 
                         numeric_posts_nav();
                     else :

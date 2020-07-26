@@ -50,7 +50,7 @@ if ( ! function_exists( 'aaurora_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', 'AAURORA' ),
+				'menu-1' => esc_html__( 'Primary', 'aaurora' ),
 			)
 		);
 
@@ -127,9 +127,9 @@ add_action( 'after_setup_theme', 'aaurora_content_width', 0 );
 function aaurora_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'AAURORA' ),
+			'name'          => esc_html__( 'Sidebar', 'aaurora' ),
 			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'AAURORA' ),
+			'description'   => esc_html__( 'Add widgets here.', 'aaurora' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -144,9 +144,9 @@ function aaurora_widgets_init() {
 
     register_sidebar(
         [
-            'name' => esc_html__('Footer Column 1', 'writer'),
+            'name' => esc_html__('Footer Column 1', 'aaurora'),
             'id' => 'footer-column-1',
-            'description' => esc_html__('Add widgets here.', 'writer'),
+            'description' => esc_html__('Add widgets here.', 'aaurora'),
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
             'after_widget' => '</div>',
             'before_title' => '<h3 class="widget-title"><span>',
@@ -156,9 +156,9 @@ function aaurora_widgets_init() {
 
     register_sidebar(
         [
-            'name' => esc_html__('Footer Column 2', 'writer'),
+            'name' => esc_html__('Footer Column 2', 'aaurora'),
             'id' => 'footer-column-2',
-            'description' => esc_html__('Add widgets here.', 'writer'),
+            'description' => esc_html__('Add widgets here.', 'aaurora'),
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
             'after_widget' => '</div>',
             'before_title' => '<h3 class="widget-title"><span>',
@@ -168,9 +168,9 @@ function aaurora_widgets_init() {
 
     register_sidebar(
         [
-            'name' => esc_html__('Footer Column 3', 'writer'),
+            'name' => esc_html__('Footer Column 3', 'aaurora'),
             'id' => 'footer-column-3',
-            'description' => esc_html__('Add widgets here.', 'writer'),
+            'description' => esc_html__('Add widgets here.', 'aaurora'),
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
             'after_widget' => '</div>',
             'before_title' => '<h3 class="widget-title"><span>',
@@ -180,9 +180,9 @@ function aaurora_widgets_init() {
 
     register_sidebar(
         [
-            'name' => esc_html__('Footer Column 4', 'writer'),
+            'name' => esc_html__('Footer Column 4', 'aaurora'),
             'id' => 'footer-column-4',
-            'description' => esc_html__('Add widgets here.', 'writer'),
+            'description' => esc_html__('Add widgets here.', 'aaurora'),
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
             'after_widget' => '</div>',
             'before_title' => '<h3 class="widget-title"><span>',
@@ -266,7 +266,7 @@ if (!function_exists('aaurora_theme_comments')) :
                 <li id="comment-<?php comment_ID(); ?>" <?php comment_class(); ?>>
                 <p>
                     <?php
-                    _e('Pingback:', 'read'); ?><?php comment_author_link(); ?><?php edit_comment_link(__('(Edit)', 'read'), '<span class="edit-link">', '</span>');
+                    _e('Pingback:', 'aaurora'); ?><?php comment_author_link(); ?><?php edit_comment_link(__('(Edit)', 'aaurora'), '<span class="edit-link">', '</span>');
                     ?>
                 </p>
                 <?php
@@ -284,7 +284,7 @@ if (!function_exists('aaurora_theme_comments')) :
                     <?php
                     if ('0' == $comment->comment_approved) :
                         ?>
-                        <p class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation.', 'read'); ?></p>
+                        <p class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation.', 'aaurora'); ?></p>
                     <?php
                     endif;
                     ?>
@@ -309,14 +309,14 @@ if (!function_exists('aaurora_theme_comments')) :
                             esc_url(get_comment_link($comment->comment_ID)),
                             get_comment_time('c'),
                             /* translators: 1: date, 2: time */
-                            sprintf(__('%1$s at %2$s', 'read'), get_comment_date(), get_comment_time()));
+                            sprintf(__('%1$s at %2$s', 'aaurora'), get_comment_date(), get_comment_time()));
                         ?>
 
                         <?php
-                        edit_comment_link(__('Edit', 'read'));
+                        edit_comment_link(__('Edit', 'aaurora'));
                         ?>
                         <?php
-                        comment_reply_link(array_merge($args, array('reply_text' => __('Reply', 'read'), 'after' => ' <span>&darr;</span>', 'depth' => $depth, 'max_depth' => $args['max_depth'])));
+                        comment_reply_link(array_merge($args, array('reply_text' => __('Reply', 'aaurora'), 'after' => ' <span>&darr;</span>', 'depth' => $depth, 'max_depth' => $args['max_depth'])));
                         ?>
 
                     </header>
