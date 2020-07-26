@@ -441,3 +441,4 @@ function numeric_posts_nav() {
     echo '</ul></div>' . "\n";
 
 }
+

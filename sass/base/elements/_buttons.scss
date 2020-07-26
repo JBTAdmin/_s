@@ -2,30 +2,26 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid $color__border-button;
-	//border-color: ;
-	border-radius: 3px;
-	background: $color__background-button;
-	color: rgba(0, 0, 0, 0.8);
-	//line-height: 1;
-	//padding: 0.6em 1em 0.4em;
 
-	//background-color: #17161A;
-	//border: 1px solid #17161A;
-	padding: 1.4rem 1.8rem;
-	min-height: 20px;
-	line-height: 20px;
-	//border-radius: 4px;
-	transition: all cubic-bezier(.4, 0, .2, 1) .4s;
-	font-size: 1.6rem;
-	font-weight: 600;
-	text-decoration: none;
-	vertical-align: middle;
-	outline: 0;
-	display: inline-block;
-	position: relative;
-	text-align: center;
-	overflow: hidden;
+	color: #fff;
+	border-radius: 40px;
+	padding: 12px 25px;
+	border: 1px solid #000000;
+	font-size: 15px;
+	background: #000000;
+	line-height: 1.42857143;
+	min-height: 45px;
+	//padding: 0 20px;
+	min-width: 120px;
+	height: 46px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all .2s linear;
+	cursor: pointer;
+	float: right;
+
+
 
 
 	&:hover {

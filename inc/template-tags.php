@@ -127,10 +127,13 @@ if ( ! function_exists( 'aaurora_post_thumbnail' ) ) :
 	 * element when on single views.
 	 */
 	function aaurora_post_thumbnail() {
-		if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
+		if ( post_password_required() || is_attachment() ) {
 			return;
 		}
 
+		if(! has_post_thumbnail() & !is_singular()){
+		    return;
+        }
 		if ( is_singular() ) :
 			?>
 

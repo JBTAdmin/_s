@@ -75,20 +75,20 @@ if ( post_password_required() ) {
     $req = get_option('require_name_email');
     $aria_req = ($req ? " aria-required='true'" : '');
     $fields = array(
-        'email' => '<div class="comment-form-email">' .
-            '<input id="email" name="email" type="text" placeholder="Email*" required value="' . esc_attr($commenter['comment_author_email']) . '" size="30"' . $aria_req . ' /></div>',
-        'author' => '<div class="comment-form-author">' .
-            '<input id="author" name="author" type="text" placeholder="Name*" required value="' . esc_attr($commenter['comment_author']) . '" size="30"' . $aria_req . ' /></div>',
+        'email' => '<p class="comment-form-email">' .
+            '<input id="email" name="email" type="text" placeholder="Email*" required value="' . esc_attr($commenter['comment_author_email']) . '" size="30"' . $aria_req . ' /></p>',
+        'author' => '<p class="comment-form-author">' .
+            '<input id="author" name="author" type="text" placeholder="Name*" required value="' . esc_attr($commenter['comment_author']) . '" size="30"' . $aria_req . ' /></p>',
     );
 
-    $comment_field = '<div class="comment-form-comment">' .
+    $comment_field = '<p class="comment-form-comment">' .
     '<textarea id="comment" name="comment" placeholder="Express your thoughts" cols="45" rows="8" aria-required="true"></textarea>' .
-    '</div>';
+    '</p>';
 
     $comments_args = array(
-        'comment_field' => $comment_field,
         'fields' => $fields,
-        'label_submit' => 'Send My Comment'
+        'comment_field' => $comment_field,
+        'label_submit' => 'Post Comment'
     );
 
 
