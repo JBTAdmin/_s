@@ -8,9 +8,18 @@
  */
 
 get_header();
+
+$sidebar_page_class = '';
+if (is_active_sidebar('sidebar-1')) {
+    $sidebar_page_class = ' with-right-sidebar';
+}
+
 ?>
 
-	<main id="primary" class="site-main">
+    <div class="site-container">
+    <div class="wrap">
+    <div class="main-container">
+    <main id="primary" class="site-main primary-content <?php echo esc_attr($sidebar_page_class); ?>">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -46,8 +55,13 @@ get_header();
 		endif;
 		?>
 
-	</main><!-- #main -->
+    </main><!-- #main -->
 
+        <?php
+        get_sidebar();
+        ?>
+    </div>
+    </div>
+    </div>
 <?php
-get_sidebar();
 get_footer();

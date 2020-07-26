@@ -132,6 +132,20 @@ if ( ! function_exists( 'aaurora_post_thumbnail' ) ) :
 		}
 
 		if(! has_post_thumbnail() & !is_singular()){
+            ?>
+
+            <div class="no-post-thumbnail">
+
+                <div class="post-thumbnail-dropcase">
+
+                    <?php echo get_the_title()[0]; ?>
+<!--                    todo VIVEKA WHAT IF NO TITLE IS TEHRE-->
+
+                </div>
+            </div><!-- .post-thumbnail -->
+
+            <?php
+
 		    return;
         }
 		if ( is_singular() ) :

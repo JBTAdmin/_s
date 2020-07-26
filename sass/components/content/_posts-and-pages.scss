@@ -225,3 +225,32 @@ nav.navigation{
 	width: 100%;
 	text-align: center;
 }
+
+.no-post-thumbnail{
+	width: 35rem;
+	height: 23rem;
+	background: #fed672;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	border-radius: 1rem;
+}
+
+.post-thumbnail-dropcase{
+	font-size: 25rem;
+	color: rgba(0,0,0,.07);
+	font-family: 'Finger Paint', cursive;
+}
+.post-thumbnail-dropcase::before{
+	content: '';
+	//z-index: -2;
+	top: 2vh;
+	right: 2vh;
+	bottom: 1vh;
+	opacity: 0.5;
+	background-image: radial-gradient(#141c3a 6%,transparent 0);
+	background-size: 28px 28px;
+	position: absolute;
+	width: 100%;
+}
