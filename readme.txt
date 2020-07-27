@@ -26,7 +26,7 @@ Hi. I'm a starter theme called aaurora, or underscores, if you like. I'm a theme
 
 = Does this theme support any plugins? =
 
-_s includes support for WooCommerce and for Infinite Scroll in Jetpack.
+aaurora includes support for WooCommerce and for Infinite Scroll in Jetpack.
 
 == Changelog ==
 

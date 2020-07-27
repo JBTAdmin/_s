@@ -2,7 +2,7 @@ Thanks for contributing to `_s` (Underscores) — you rock!
 
 ## Maintainers
 
-`_s` is maintained by the [Automattic Theme Team](https://themeshaper.com/about/).
+`aaurora` is maintained by the [Automattic Theme Team](https://themeshaper.com/about/).
 
 ## Reporting issues
 
