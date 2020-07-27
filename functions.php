@@ -117,6 +117,7 @@ function aaurora_content_width() {
 	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 	$GLOBALS['content_width'] = apply_filters( 'aaurora_content_width', 640 );
 }
+
 add_action( 'after_setup_theme', 'aaurora_content_width', 0 );
 
 /**
@@ -142,54 +143,55 @@ function aaurora_widgets_init() {
 	 */
 
 
-    register_sidebar(
-        [
-            'name' => esc_html__('Footer Column 1', 'aaurora'),
-            'id' => 'footer-column-1',
-            'description' => esc_html__('Add widgets here.', 'aaurora'),
-            'before_widget' => '<div id="%1$s" class="widget %2$s">',
-            'after_widget' => '</div>',
-            'before_title' => '<h3 class="widget-title"><span>',
-            'after_title' => '</span></h3>',
-        ]
-    );
+	register_sidebar(
+		[
+			'name'          => esc_html__( 'Footer Column 1', 'aaurora' ),
+			'id'            => 'footer-column-1',
+			'description'   => esc_html__( 'Add widgets here.', 'aaurora' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title"><span>',
+			'after_title'   => '</span></h3>',
+		]
+	);
 
-    register_sidebar(
-        [
-            'name' => esc_html__('Footer Column 2', 'aaurora'),
-            'id' => 'footer-column-2',
-            'description' => esc_html__('Add widgets here.', 'aaurora'),
-            'before_widget' => '<div id="%1$s" class="widget %2$s">',
-            'after_widget' => '</div>',
-            'before_title' => '<h3 class="widget-title"><span>',
-            'after_title' => '</span></h3>',
-        ]
-    );
+	register_sidebar(
+		[
+			'name'          => esc_html__( 'Footer Column 2', 'aaurora' ),
+			'id'            => 'footer-column-2',
+			'description'   => esc_html__( 'Add widgets here.', 'aaurora' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title"><span>',
+			'after_title'   => '</span></h3>',
+		]
+	);
 
-    register_sidebar(
-        [
-            'name' => esc_html__('Footer Column 3', 'aaurora'),
-            'id' => 'footer-column-3',
-            'description' => esc_html__('Add widgets here.', 'aaurora'),
-            'before_widget' => '<div id="%1$s" class="widget %2$s">',
-            'after_widget' => '</div>',
-            'before_title' => '<h3 class="widget-title"><span>',
-            'after_title' => '</span></h3>',
-        ]
-    );
+	register_sidebar(
+		[
+			'name'          => esc_html__( 'Footer Column 3', 'aaurora' ),
+			'id'            => 'footer-column-3',
+			'description'   => esc_html__( 'Add widgets here.', 'aaurora' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title"><span>',
+			'after_title'   => '</span></h3>',
+		]
+	);
 
-    register_sidebar(
-        [
-            'name' => esc_html__('Footer Column 4', 'aaurora'),
-            'id' => 'footer-column-4',
-            'description' => esc_html__('Add widgets here.', 'aaurora'),
-            'before_widget' => '<div id="%1$s" class="widget %2$s">',
-            'after_widget' => '</div>',
-            'before_title' => '<h3 class="widget-title"><span>',
-            'after_title' => '</span></h3>',
-        ]
-    );
+	register_sidebar(
+		[
+			'name'          => esc_html__( 'Footer Column 4', 'aaurora' ),
+			'id'            => 'footer-column-4',
+			'description'   => esc_html__( 'Add widgets here.', 'aaurora' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title"><span>',
+			'after_title'   => '</span></h3>',
+		]
+	);
 }
+
 add_action( 'widgets_init', 'aaurora_widgets_init' );
 
 /**
@@ -205,6 +207,7 @@ function aaurora_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
+
 add_action( 'wp_enqueue_scripts', 'aaurora_scripts' );
 
 /**
@@ -242,102 +245,105 @@ if ( class_exists( 'WooCommerce' ) ) {
 }
 
 
-
 /* ============================================================================================================================================= */
 
-if (!function_exists('aaurora_theme_comments')) :
+if ( ! function_exists( 'aaurora_theme_comments' ) ) :
 
-    /*
-    * Template for comments and pingbacks.
-    * Used as a callback by wp_list_comments() for displaying the comments.
-    */
+	/*
+	* Template for comments and pingbacks.
+	* Used as a callback by wp_list_comments() for displaying the comments.
+	*/
 
-    function aaurora_theme_comments($comment, $args, $depth)
-    {
-        $GLOBALS['comment'] = $comment;
-        switch ($comment->comment_type) :
+	function aaurora_theme_comments( $comment, $args, $depth ) {
+		$GLOBALS['comment'] = $comment;
+		switch ( $comment->comment_type ) :
 
-            case 'pingback' :
+			case 'pingback' :
 
-            case 'trackback' :
+			case 'trackback' :
 
-                // Display trackbacks differently than normal comments.
-                ?>
+				// Display trackbacks differently than normal comments.
+				?>
                 <li id="comment-<?php comment_ID(); ?>" <?php comment_class(); ?>>
                 <p>
-                    <?php
-                    _e('Pingback:', 'aaurora'); ?><?php comment_author_link(); ?><?php edit_comment_link(__('(Edit)', 'aaurora'), '<span class="edit-link">', '</span>');
-                    ?>
+					<?php
+					_e( 'Pingback:', 'aaurora' ); ?><?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'aaurora' ), '<span class="edit-link">', '</span>' );
+					?>
                 </p>
-                <?php
-                break;
+				<?php
+				break;
 
-            default :
+			default :
 
-                // Proceed with normal comments.
-                global $post;
-                ?>
+				// Proceed with normal comments.
+				global $post;
+				?>
 
             <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
                 <article id="comment-<?php comment_ID(); ?>" class="comment">
 
-                    <?php
-                    if ('0' == $comment->comment_approved) :
-                        ?>
-                        <p class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation.', 'aaurora'); ?></p>
-                    <?php
-                    endif;
-                    ?>
+					<?php
+					if ( '0' == $comment->comment_approved ) :
+						?>
+                        <p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'aaurora' ); ?></p>
+					<?php
+					endif;
+					?>
 
                     <section class="comment-content1 comment">
-                        <?php
-                        comment_text();
-                        ?>
+						<?php
+						comment_text();
+						?>
                     </section>
 
                     <header class="comment-meta comment-author vcard">
-                        <?php
-                        //echo get_avatar( $comment, 150 );
+						<?php
+						//echo get_avatar( $comment, 150 );
 
-                        printf('<cite class="fn">%1$s %2$s</cite>',
-                            get_comment_author_link(),
-                            // If current post author is also comment author, make it known visually.
-                            ($comment->user_id === $post->post_author) ? '<span></span>' : "");
+						printf( '<cite class="fn">%1$s %2$s</cite>',
+							get_comment_author_link(),
+							// If current post author is also comment author, make it known visually.
+							( $comment->user_id === $post->post_author ) ? '<span></span>' : "" );
 
 
-                        printf('<a title="%3$s" href="%1$s"><i class="pw-icon-calendar-1"></i><time datetime="%2$s">%3$s</time></a>',
-                            esc_url(get_comment_link($comment->comment_ID)),
-                            get_comment_time('c'),
-                            /* translators: 1: date, 2: time */
-                            sprintf(__('%1$s at %2$s', 'aaurora'), get_comment_date(), get_comment_time()));
-                        ?>
+						printf( '<a title="%3$s" href="%1$s"><i class="pw-icon-calendar-1"></i><time datetime="%2$s">%3$s</time></a>',
+							esc_url( get_comment_link( $comment->comment_ID ) ),
+							get_comment_time( 'c' ),
+							/* translators: 1: date, 2: time */
+							sprintf( __( '%1$s at %2$s', 'aaurora' ), get_comment_date(), get_comment_time() ) );
+						?>
 
-                        <?php
-                        edit_comment_link(__('Edit', 'aaurora'));
-                        ?>
-                        <?php
-                        comment_reply_link(array_merge($args, array('reply_text' => __('Reply', 'aaurora'), 'after' => ' <span>&darr;</span>', 'depth' => $depth, 'max_depth' => $args['max_depth'])));
-                        ?>
+						<?php
+						edit_comment_link( __( 'Edit', 'aaurora' ) );
+						?>
+						<?php
+						comment_reply_link( array_merge( $args, array(
+							'reply_text' => __( 'Reply', 'aaurora' ),
+							'after'      => ' <span>&darr;</span>',
+							'depth'      => $depth,
+							'max_depth'  => $args['max_depth']
+						) ) );
+						?>
 
                     </header>
 
                 </article>
-                <?php
-                break;
+				<?php
+				break;
 
-        endswitch;
-    }
+		endswitch;
+	}
 
 endif;
 
 
-    /* Gutenberg Support */
+/* Gutenberg Support */
 
 function mytheme_setup_theme_supported_features() {
 
 // Theme supports wide images, galleries and videos.
-    add_theme_support( 'align-wide' );
-    add_theme_support( 'wp-block-styles' );
+	add_theme_support( 'align-wide' );
+	add_theme_support( 'wp-block-styles' );
 }
 
 add_action( 'after_setup_theme', 'mytheme_setup_theme_supported_features' );
@@ -347,9 +353,9 @@ add_action( 'after_setup_theme', 'mytheme_setup_theme_supported_features' );
  * Theme images sizes
  */
 
-add_image_size( 'aaurora-blog-archive', 400, 650, true);
-add_image_size( 'aaurora-blog-post-sidebar', 80, 20, true);
-add_image_size( 'aaurora-blog-post-no-sidebar', 80, 90, true);
+add_image_size( 'aaurora-blog-archive', 400, 650, true );
+add_image_size( 'aaurora-blog-post-sidebar', 80, 20, true );
+add_image_size( 'aaurora-blog-post-no-sidebar', 80, 90, true );
 
 /*  Kirki plugin related changed */
 
@@ -371,74 +377,80 @@ add_image_size( 'aaurora-blog-post-no-sidebar', 80, 90, true);
 require get_template_directory() . '/inc/kirki_configuration.php';
 
 
-
 /********PAGINATION  VIVEKA CHANGE THIS*/
 function numeric_posts_nav() {
 
-    if( is_singular() )
-        return;
+	if ( is_singular() ) {
+		return;
+	}
 
-    global $wp_query;
+	global $wp_query;
 
-    /** Stop execution if there's only 1 page */
-    if( $wp_query->max_num_pages <= 1 )
-        return;
+	/** Stop execution if there's only 1 page */
+	if ( $wp_query->max_num_pages <= 1 ) {
+		return;
+	}
 
-    $paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
-    $max   = intval( $wp_query->max_num_pages );
+	$paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
+	$max   = intval( $wp_query->max_num_pages );
 
-    /** Add current page to the array */
-    if ( $paged >= 1 )
-        $links[] = $paged;
+	/** Add current page to the array */
+	if ( $paged >= 1 ) {
+		$links[] = $paged;
+	}
 
-    /** Add the pages around the current page to the array */
-    if ( $paged >= 3 ) {
-        $links[] = $paged - 1;
-        $links[] = $paged - 2;
-    }
+	/** Add the pages around the current page to the array */
+	if ( $paged >= 3 ) {
+		$links[] = $paged - 1;
+		$links[] = $paged - 2;
+	}
 
-    if ( ( $paged + 2 ) <= $max ) {
-        $links[] = $paged + 2;
-        $links[] = $paged + 1;
-    }
+	if ( ( $paged + 2 ) <= $max ) {
+		$links[] = $paged + 2;
+		$links[] = $paged + 1;
+	}
 
-    echo '<div class="navigation"><ul>' . "\n";
+	echo '<div class="navigation"><ul>' . "\n";
 
-    /** Previous Post Link */
-    if ( get_previous_posts_link() )
-        printf( '<li>%s</li>' . "\n", get_previous_posts_link() );
+	/** Previous Post Link */
+	if ( get_previous_posts_link() ) {
+		printf( '<li>%s</li>' . "\n", get_previous_posts_link() );
+	}
 
-    /** Link to first page, plus ellipses if necessary */
-    if ( ! in_array( 1, $links ) ) {
-        $class = 1 == $paged ? ' class="active"' : '';
+	/** Link to first page, plus ellipses if necessary */
+	if ( ! in_array( 1, $links ) ) {
+		$class = 1 == $paged ? ' class="active"' : '';
 
-        printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( 1 ) ), '1' );
+		printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( 1 ) ), '1' );
 
-        if ( ! in_array( 2, $links ) )
-            echo '<li>…</li>';
-    }
+		if ( ! in_array( 2, $links ) ) {
+			echo '<li>…</li>';
+		}
+	}
 
-    /** Link to current page, plus 2 pages in either direction if necessary */
-    sort( $links );
-    foreach ( (array) $links as $link ) {
-        $class = $paged == $link ? ' class="active"' : '';
-        printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $link ) ), $link );
-    }
+	/** Link to current page, plus 2 pages in either direction if necessary */
+	sort( $links );
+	foreach ( (array) $links as $link ) {
+		$class = $paged == $link ? ' class="active"' : '';
+		printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $link ) ), $link );
+	}
 
-    /** Link to last page, plus ellipses if necessary */
-    if ( ! in_array( $max, $links ) ) {
-        if ( ! in_array( $max - 1, $links ) )
-            echo '<li>…</li>' . "\n";
+	/** Link to last page, plus ellipses if necessary */
+	if ( ! in_array( $max, $links ) ) {
+		if ( ! in_array( $max - 1, $links ) ) {
+			echo '<li>…</li>' . "\n";
+		}
 
-        $class = $paged == $max ? ' class="active"' : '';
-        printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $max ) ), $max );
-    }
+		$class = $paged == $max ? ' class="active"' : '';
+		printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $max ) ), $max );
+	}
 
-    /** Next Post Link */
-    if ( get_next_posts_link() )
-        printf( '<li>%s</li>' . "\n", get_next_posts_link() );
+	/** Next Post Link */
+	if ( get_next_posts_link() ) {
+		printf( '<li>%s</li>' . "\n", get_next_posts_link() );
+	}
 
-    echo '</ul></div>' . "\n";
+	echo '</ul></div>' . "\n";
 
 }
 
