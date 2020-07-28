@@ -34,12 +34,7 @@
     <a href="<?php echo esc_url( get_permalink() ) ?>" class="btn btn-link brand-color-hover">
         <?php esc_html_e( 'Read More', 'aaurora' ); ?>
     </a>
-
-
-<!--    <div class="entry-summary">-->
-<!--		--><?php //the_excerpt(); ?>
-<!--	</div><!-- .entry-summary -->-->
-
+    
 	<footer class="entry-footer">
 		<?php aaurora_entry_footer(); ?>
 	</footer><!-- .entry-footer -->

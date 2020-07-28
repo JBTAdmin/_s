@@ -8,7 +8,7 @@
  */
 
 ?>
-NONE
+
 <section class="no-results not-found">
 	<div class="page-header">
 		<h2 class="page-title"><?php esc_html_e( 'Nothing Found', 'aaurora' ); ?></h2>
