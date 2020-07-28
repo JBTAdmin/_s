@@ -2,57 +2,57 @@
 
 /** viveka CHange this**/
 
-// Update options cache on customizer save
-if(!function_exists('aaurora_update_options_cache')):
-    function aaurora_update_options_cache() {
-        $option_name = 'themeoptions_saved_date';
-
-        $new_value = microtime(true) ;
-
-        if ( get_option( $option_name ) !== false ) {
-
-            // The option already exists, so we just update it.
-            update_option( $option_name, $new_value );
-
-        } else {
-
-            // The option hasn't been added yet. We'll add it with $autoload set to 'no'.
-            $deprecated = null;
-            $autoload = 'no';
-            add_option( $option_name, $new_value, $deprecated, $autoload );
-        }
-    }
-endif;
-add_action( 'customize_save_after', 'aaurora_update_options_cache');
-
-// Change default Customizer options, add new logo option
-if(!function_exists('aaurora_theme_customize_register')):
-    function aaurora_theme_customize_register( $wp_customize ) {
-        $wp_customize->remove_section( 'colors' );
-
-        $wp_customize->get_section('header_image')->title = esc_html__( 'Logo', 'aaurora' );
-
-        $wp_customize->get_section('title_tagline')->title = esc_html__( 'Site Title and Favicon', 'aaurora' );
-
-        $wp_customize->add_setting( 'aaurora_header_transparent_logo' , array(
-            array ( 'default' => '',
-                'sanitize_callback' => 'esc_url_raw'
-            ),
-            'transport'   => 'refresh',
-        ) );
-
-        $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'aaurora_header_transparent_logo', array(
-            'label'    => esc_html__( 'Logo for Transparent Header (Light logo)', 'aaurora' ),
-            'section'  => 'header_image',
-            'settings' => 'aaurora_header_transparent_logo',
-        ) ) );
-
-        // Move header image section to theme settings
-        $wp_customize->get_section( 'header_image' )->panel = 'theme_settings_panel';
-        $wp_customize->get_section( 'header_image' )->priority = 20;
-    }
-endif;
-add_action( 'customize_register', 'aaurora_theme_customize_register' );
+//// Update options cache on customizer save
+//if(!function_exists('aaurora_update_options_cache')):
+//    function aaurora_update_options_cache() {
+//        $option_name = 'themeoptions_saved_date';
+//
+//        $new_value = microtime(true) ;
+//
+//        if ( get_option( $option_name ) !== false ) {
+//
+//            // The option already exists, so we just update it.
+//            update_option( $option_name, $new_value );
+//
+//        } else {
+//
+//            // The option hasn't been added yet. We'll add it with $autoload set to 'no'.
+//            $deprecated = null;
+//            $autoload = 'no';
+//            add_option( $option_name, $new_value, $deprecated, $autoload );
+//        }
+//    }
+//endif;
+//add_action( 'customize_save_after', 'aaurora_update_options_cache');
+//
+//// Change default Customizer options, add new logo option
+//if(!function_exists('aaurora_theme_customize_register')):
+//    function aaurora_theme_customize_register( $wp_customize ) {
+//        $wp_customize->remove_section( 'colors' );
+//
+//        $wp_customize->get_section('header_image')->title = esc_html__( 'Logo', 'aaurora' );
+//
+//        $wp_customize->get_section('title_tagline')->title = esc_html__( 'Site Title and Favicon', 'aaurora' );
+//
+//        $wp_customize->add_setting( 'aaurora_header_transparent_logo' , array(
+//            array ( 'default' => '',
+//                'sanitize_callback' => 'esc_url_raw'
+//            ),
+//            'transport'   => 'refresh',
+//        ) );
+//
+//        $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'aaurora_header_transparent_logo', array(
+//            'label'    => esc_html__( 'Logo for Transparent Header (Light logo)', 'aaurora' ),
+//            'section'  => 'header_image',
+//            'settings' => 'aaurora_header_transparent_logo',
+//        ) ) );
+//
+//        // Move header image section to theme settings
+//        $wp_customize->get_section( 'header_image' )->panel = 'theme_settings_panel';
+//        $wp_customize->get_section( 'header_image' )->priority = 20;
+//    }
+//endif;
+//add_action( 'customize_register', 'aaurora_theme_customize_register' );
 
 
 // Create theme options
@@ -99,6 +99,12 @@ Kirki::add_field( 'aaurora_theme_options', array(
         'background-position'   => 'center center',
         'background-size'       => 'cover',
         'background-attachment' => 'fixed',
+    ),
+	'transport'  => 'auto',
+    'output' => array(
+	    array(
+		    'element'  => 'body'
+	    ),
     ),
 ) );
 
@@ -829,24 +835,16 @@ Kirki::add_section( 'colors', array(
     'panel'          => 'theme_settings_panel',
     'priority'       => 170,
 ) );
-
-
-Kirki::add_field( 'aaurora_theme_options', array(
-    'type'        => 'toggle',
-    'settings'    => 'color_darktheme',
-    'label'       => esc_attr__('Enable dark theme', 'aaurora' ),
-    'description' => esc_html__('Use this option if you set dark backgrounds and light colors for texts. You need to set dark Header and Body backgrounds colors manually.', 'aaurora'),
-    'section'     => 'colors',
-    'default'     => '0',
-) );
-
-Kirki::add_field( 'aaurora_theme_options', array(
-    'type'        => 'custom',
-    'settings'    => 'color_bodybg_html',
-    'label'       => '',
-    'section'     => 'colors',
-    'default'     => '<div class="kirki-input-container"><label><span class="customize-control-title">Body background color</span><div>You can change it in Theme Settings > General.</div></label></div>',
-) );
+//
+//
+//Kirki::add_field( 'aaurora_theme_options', array(
+//    'type'        => 'toggle',
+//    'settings'    => 'color_darktheme',
+//    'label'       => esc_attr__('Enable dark theme', 'aaurora' ),
+//    'description' => esc_html__('Use this option if you set dark backgrounds and light colors for texts. You need to set dark Header and Body backgrounds colors manually.', 'aaurora'),
+//    'section'     => 'colors',
+//    'default'     => '0',
+//) );
 
 Kirki::add_field( 'aaurora_theme_options', array(
     'type'        => 'color',
@@ -855,12 +853,12 @@ Kirki::add_field( 'aaurora_theme_options', array(
     'description' => '',
     'section'     => 'colors',
     'default'     => '#333333',
-    'active_callback'  => array(
-        array(
-            'setting'  => 'color_skin',
-            'operator' => '==',
-            'value'    => 'none',
-        ),
+    'transport'   => 'auto',
+    'output' => array(
+	    array(
+		    'element'  => 'body',
+		    'property' => 'color',
+	    ),
     )
 ) );
 
@@ -871,12 +869,12 @@ Kirki::add_field( 'aaurora_theme_options', array(
     'description' => '',
     'section'     => 'colors',
     'default'     => '#000000',
-    'active_callback'  => array(
-        array(
-            'setting'  => 'color_skin',
-            'operator' => '==',
-            'value'    => 'none',
-        ),
+    'transport'   => 'auto',
+    'output' => array(
+	    array(
+		    'element'  => '.menu a',
+		    'property' => 'color',
+	    ),
     )
 ) );
 
@@ -887,12 +885,12 @@ Kirki::add_field( 'aaurora_theme_options', array(
     'description' => '',
     'section'     => 'colors',
     'default'     => '#2568ef',
-    'active_callback'  => array(
-        array(
-            'setting'  => 'color_skin',
-            'operator' => '==',
-            'value'    => 'none',
-        ),
+    'transport'   => 'auto',
+    'output' => array(
+	    array(
+		    'element'  => 'body',
+		    'property' => 'color',
+	    ),
     )
 ) );
 
@@ -903,12 +901,12 @@ Kirki::add_field( 'aaurora_theme_options', array(
     'description' => '',
     'section'     => 'colors',
     'default'     => '#FFFFFF',
-    'active_callback'  => array(
-        array(
-            'setting'  => 'color_skin',
-            'operator' => '==',
-            'value'    => 'none',
-        ),
+    'transport'   => 'auto',
+    'output' => array(
+	    array(
+		    'element'  => '.site-footer',
+		    'property' => 'background-color',
+	    ),
     )
 ) );
 
