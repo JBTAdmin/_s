@@ -15,18 +15,36 @@ body {
 	/*font-family: 'PT Sans', sans-serif;*/
 	/*font-family: 'Arbutus Slab', serif;;*/
 	//font-family: 'Noto Serif', serif;
+	//font-family: 'Roboto', sans-serif;
 	//font: 400 18px / 1.77778 "Roboto",sans-serif;
+
 	font: 400 18px / 1.5 'PT Sans', sans-serif;
 	color: #222;
-	//font-family: 'Roboto', sans-serif;
-	//color: rgb(34, 34, 34);
-	//font-size: 1.6rem;
-	//font-weight: 400;
-	//line-height: 1.5;
-	//overflow-x: hidden;
 	-webkit-font-smoothing: antialiased;
 }
 
 p {
 	margin: 0 0 3rem;
+}
+
+
+@media screen and (min-width: 910px) and (max-width: 991px) {
+	.wrap {
+		width: 910px;
+		margin: auto;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.wrap {
+		width: 1200px;
+		margin: auto;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 910px) {
+	.wrap {
+		width: 750px;
+		margin: auto;
+	}
 }

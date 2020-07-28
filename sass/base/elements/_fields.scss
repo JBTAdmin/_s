@@ -17,7 +17,6 @@ textarea {
 	color: $color__text-input;
 	border: 1px solid $color__border-input;
 	border-radius: 4px;
-
 	width: 100%;
 	padding: 10px 12px;
 	font-size: 14px;
@@ -38,20 +37,3 @@ select {
 	border: 1px solid $color__border-input;
 }
 
-
-.comment-form-comment textarea {
-	width: 100%;
-	max-width: 100%;
-	padding: 20px;
-	border: 1px solid #ebebf7;
-	border-radius: 4px;
-	background: 0 0;
-	color: #282835;
-	transition: border-color .25s ease-in-out,-webkit-box-shadow .25s ease-in-out;
-	transition: border-color .25s ease-in-out,box-shadow .25s ease-in-out;
-	transition: border-color .25s ease-in-out,box-shadow .25s ease-in-out,-webkit-box-shadow .25s ease-in-out,-moz-box-shadow .25s ease-in-out;
-	transition: border-color .25s ease-in-out,box-shadow .25s ease-in-out,-webkit-box-shadow .25s ease-in-out;
-	margin-bottom: 25px;
-	box-shadow: none;
-	line-height: 1.6;
-}

@@ -1,0 +1,20 @@
+.main-header {
+	width: 90%;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.primary-content header {
+	flex-basis: 100%;
+}
+
+.site-title {
+	text-transform: uppercase;
+	font-size: 1.7rem;
+	font-weight: 700;
+	letter-spacing: 5px;
+	line-height: 1.2;
+	border-bottom: 3px solid rgb(226, 44, 47);
+}

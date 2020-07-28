@@ -1,0 +1,119 @@
+/*
+ * Here i will write down the structure of site
+ * in terms of divinding the different section
+ * of site and their corresponding class.
+ */
+
+body {
+	class: home, blog, single, single-post, page page-template-default;
+
+	div {
+		id: page;
+		class: site;
+	{
+		header {
+			class: site-header;
+
+			div {
+				class: wrap;
+
+				div {
+					class: main-header;
+
+					div {
+						class: site-branding;
+
+						div {
+							class: site-title;
+						}
+					}
+
+					nav {
+						id: site-navigation;
+						class: main-navigation;
+
+						div {
+							class: menu-menu-1-container;
+
+							ul {
+								class: menu;
+							}
+						}
+
+					}
+				}
+			}
+		}
+
+		div {
+			class: site-container;
+
+			div {
+				class: wrap;
+
+				div {
+					class: main-container;
+
+					main {
+						id: primary;
+						class: site-main primary-content with-right-sidebar;
+
+						article {
+							class: post, type-post, page, type-page div { // Post Thumbnail if Any
+								class: post-thumbnail;
+							}
+
+							div { // Article Title and Meta data
+								class: entry-header;
+							}
+
+							div { // Actual Content
+								class: entry-content;
+							}
+
+							footer { // Where we can add tags and all
+								class: entry-footer;
+							}
+						}
+
+						nav { // Next and Previous Post
+							class: navigation post-navigation
+						}
+
+						div { // comment section
+							id: comments;
+							class: comments-area
+
+						}
+					}
+
+					aside { // SIDEBAR
+						id: secondary;
+						class: widget-area;
+
+						SECTION {
+						}
+
+						....
+
+						// DIFFERENT SECTION
+					}
+				}
+			}
+		}
+
+		footer { // probably div can contain 2 footer inside it
+			id: colophon;
+			class: site-footer;
+
+			div {
+				class: wrap;
+			}
+
+			div {
+				class: wrap-site-info; // COPYRIGHT SECTION
+			}
+		}
+	}
+	}
+}

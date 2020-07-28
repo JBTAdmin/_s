@@ -1,3 +1,4 @@
+/** TODO NEED TO CHECK WHAT IS NOT USED**/
 
 .comment-navigation,
 .posts-navigation,
@@ -21,40 +22,88 @@
 	}
 }
 
-.nav-previous > a, .nav-next > a{
+.nav-previous > a, .nav-next > a {
 	display: flex;
 	align-items: center;
 }
 
 
-.nav-previous > a{
+.nav-previous > a {
 	justify-content: flex-start;
 }
 
 
-.nav-next > a{
+.nav-next > a {
 	justify-content: flex-end;
 }
 
 .nav-previous > a > img,
-.nav-next > a > img{
+.nav-next > a > img {
 	margin: 0 10px;
 	border-radius: 10px;
 }
 
-.post-navigation .nav-previous{
+.post-navigation .nav-previous {
 	text-align: start;
 }
 
-nav.navigation{
+nav.navigation {
 	padding: 5rem 0 5rem !important;
 }
 
-.site-main .post-navigation{
+.site-main .post-navigation {
 	border-top: 1px dashed #9ea1a4;
 	border-bottom: 1px dashed #9ea1a4;
 }
 
-.post-navigation .nav-links{
+.post-navigation .nav-links {
 	align-items: center;
+}
+
+
+/****  PAGINATION ****/
+
+.navigation li a,
+.navigation li a:hover,
+.navigation li.active a,
+.navigation li.disabled {
+	color: #fff;
+	text-decoration: none;
+}
+
+.navigation li {
+	display: inline;
+}
+
+.navigation li a:hover,
+.navigation li.active a,
+.navigation li.disabled {
+
+	background-color: #e22c2f;
+	border: 1px solid #e22c2f;
+	font-size: 20px;
+	padding-bottom: 15px;
+	cursor: pointer;
+}
+
+.navigation li a,
+{
+	color: #000;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 100px;
+	padding: 17px 24px 16px;
+	font-size: 16px;
+	font-weight: 900;
+}
+
+/**** tmove it to navigation */
+.navigation {
+	margin: 0 0 1.5em;
+	width: 100%;
+	text-align: center;
+}
+
+nav.navigation {
+	width: 100%;
 }
