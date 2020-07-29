@@ -1,3 +1,14 @@
+main,
+.main-container,
+.main-footer,
+.wrap-site-info,
+.main-header,
+.article-container,
+.comment-form{
+	display: flex;
+	flex-wrap: wrap;
+}
+
 aside {
 	flex: 1 1 30rem;
 	padding: 0 2rem;
@@ -11,4 +22,30 @@ article {
 	flex: 1 1 30rem;
 	margin: 0 1.666666% 30px;
 	min-width: 0;
+}
+
+.blog-type-list {
+	display: flex;
+	flex-direction: column;
+}
+
+.blog-type-list-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.home article,
+.archive article {
+	max-width: 35rem;
+}
+
+main,
+.article-container {
+	margin: 0 2rem;
+	max-width: 120rem;
+	flex: 2 1 80rem;
+	justify-content: space-between;
+	overflow-x: auto;
 }

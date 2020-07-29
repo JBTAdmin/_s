@@ -102,16 +102,27 @@ body {
 			}
 		}
 
-		footer { // probably div can contain 2 footer inside it
+		div { // probably div can contain 2 footer inside it
 			id: colophon;
 			class: site-footer;
 
-			div {
-				class: wrap;
+			footer {
+				div{
+					class: wrap;
+					div{
+						class: main-footer
+					}
+				}
 			}
 
-			div {
-				class: wrap-site-info; // COPYRIGHT SECTION
+			footer {
+				div{
+					class: wrap;
+					div{
+						class: wrap-site-info; // COPYRIGHT SECTION
+					}
+				}
+
 			}
 		}
 	}
