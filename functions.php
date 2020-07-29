@@ -354,8 +354,8 @@ add_action( 'after_setup_theme', 'mytheme_setup_theme_supported_features' );
  */
 
 add_image_size( 'aaurora-blog-archive', 400, 650, true );
-add_image_size( 'aaurora-blog-post-sidebar', 80, 20, true );
-add_image_size( 'aaurora-blog-post-no-sidebar', 80, 90, true );
+add_image_size( 'aaurora-blog-post-sidebar', 400, 500, true );
+add_image_size( 'aaurora-blog-post-no-sidebar', 300, 500, true );
 
 /*  Kirki plugin related changed */
 

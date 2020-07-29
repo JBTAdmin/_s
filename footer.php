@@ -28,7 +28,7 @@ $site_info_text_center = '';
 $site_info_text_right  = 'crafted with by JBT Team / Copyright . JBT';
 
 ?>
-
+Footer
 <div id="colophon" class="site-footer">
     <footer>
         <div class="wrap">

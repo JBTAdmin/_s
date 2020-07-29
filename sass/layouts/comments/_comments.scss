@@ -1,58 +1,60 @@
 .comment-content {
 	clear: both;
 	font-size: 1.6rem;
+	a {
+		word-wrap: break-word;
+	}
 }
 
-.comment-content a {
-	word-wrap: break-word;
-}
-
-.comment-list article {
-	background-color: #fff;
-	box-shadow: rgba(0, 0, 0, 0.06) 0px 15px 20px 0px;
-	border-radius: 10px;
-	padding: 30px 50px;
-}
-
-.comment-list li {
-	padding: 40px 0px 0px 30px;
-	list-style: none;
-}
-
-.comments-area {
-	width: 100%;
+.comment-list {
+	article {
+		background-color: #fff;
+		box-shadow: rgba(0, 0, 0, 0.06) 0px 15px 20px 0px;
+		border-radius: 10px;
+		padding: 30px 50px;
+	}
+	li {
+		padding: 40px 0px 0px 30px;
+		list-style: none;
+	}
 }
 
 .comment-meta {
 	margin-bottom: 2rem;
+	a {
+		color: #555;
+		font-size: 12px;
+		font-weight: 700;
+		letter-spacing: 1.2px;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
 }
 
-.comment-metadata a {
-	color: #555;
-	font-size: 12px;
-	font-weight: 700;
-	letter-spacing: 1.2px;
-	text-decoration: none;
-	text-transform: uppercase;
-}
-
-.comment-form-author, .comment-form-email {
+.comment-form-author,
+.comment-form-email {
 	width: 50%;
 	max-width: 100%;
 	padding: 0 1.5rem;
 	margin-bottom: 35px;
 }
 
-.comment-form .comment-notes, .form-submit, .comment-form-comment {
+.comment-form .comment-notes,
+.form-submit,
+.comments-area{
 	width: 100%;
 }
 
 .comment-form-comment {
 	margin: 0;
 	order: 2;
+	padding: 0 1.5rem;
+	width: 100%;
 }
 
-.comment-form-comment, .comment-notes, .form-submit, .comment-form-cookies-consent {
+.comment-notes,
+.form-submit,
+.comment-form-cookies-consent {
 	padding: 0 1.5rem;
 }
 
@@ -64,11 +66,14 @@
 	order: 4;
 }
 
-.comment-form-author input, .comment-form-comment .textarea, .comment-form-email input {
+.comment-form-author input,
+.comment-form-comment .textarea,
+.comment-form-email input {
 	padding: 20px;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
 	border: 2px solid #e22c2f;
 }
 

@@ -999,9 +999,8 @@ nav.navigation {
 .comment-content {
   clear: both;
   font-size: 1.6rem; }
-
-.comment-content a {
-  word-wrap: break-word; }
+  .comment-content a {
+    word-wrap: break-word; }
 
 .comment-list article {
   background-color: #fff;
@@ -1018,14 +1017,13 @@ nav.navigation {
 
 .comment-meta {
   margin-bottom: 2rem; }
-
-.comment-metadata a {
-  color: #555;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1.2px;
-  text-decoration: none;
-  text-transform: uppercase; }
+  .comment-meta a {
+    color: #555;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-decoration: none;
+    text-transform: uppercase; }
 
 .comment-form-author, .comment-form-email {
   width: 50%;
