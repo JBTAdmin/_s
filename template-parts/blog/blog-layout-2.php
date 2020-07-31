@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('blog-layout-2'); ?>>
 
     <div  class="blog-type-list">
 
@@ -17,25 +17,20 @@
 
     <div class="blog-type-list-content">
     <div class="entry-header">
-        <div class="blog-list-content-metainfo">
-        <?php
-            aaurora_entry_footer();
-        ?>
-        </div>
+     
 	    <?php
         the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
         ?>
-
-        <a href="<?php echo esc_url( get_permalink() ) ?>" class="btn btn-link brand-color-hover">
-                <?php esc_html_e( 'Read More', 'aaurora' ); ?>
-        </a>
-
+        <div class="blog-list-content-metainfo">
+		    <?php
+		    aaurora_entry_footer();
+		    ?>
+        </div>
+        
     </div><!-- .entry-header -->
 
     <div class="entry-content">
         <?php
-
-
         $content_preview = '';
         $content_preview = get_the_excerpt();
 
@@ -45,10 +40,8 @@
             $content_preview  = wp_trim_words( get_the_content(), 20 );
 //                    $content_preview = wp_trim_words( $content_preview, $excerpt_length, apply_filters( 'excerpt_more', '&hellip;' ) );
         }
-
-
-//echo HELLL;
-//        echo($content_preview);  /// TODO THIS IS NOT THE RIGHT WAY TO DISPLAY CONTENT
+        
+        echo($content_preview);  /// TODO THIS IS NOT THE RIGHT WAY TO DISPLAY CONTENT
 
 
         //        the_content(
@@ -73,6 +66,10 @@
 //            )
 //        );
         ?>
+        <a href="<?php echo esc_url( get_permalink() ) ?>" class="btn btn-link brand-color-hover">
+		    <?php esc_html_e( 'Read More', 'aaurora' ); ?>
+        </a>
+
     </div><!-- .entry-content -->
 
     <footer class="entry-footer">

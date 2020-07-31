@@ -1,0 +1,67 @@
+main,
+.main-container,
+.main-footer,
+.wrap-site-info,
+.main-header,
+.article-container,
+.comment-form{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+article {
+	flex: 1 1 30rem;
+	margin: 0 1% 1%;
+	min-width: 0;
+}
+
+aside {
+	flex: 1 1 30rem;
+	padding: 0 2rem;
+}
+
+article, nav.navigation {
+	padding: 0 0 4rem;
+}
+
+//.blog-type-list {
+//	//display: flex;
+//	//flex-direction: column;
+//}
+
+// Probbaly those are part of article section should be moved to content
+.blog-type-list-content {
+	padding-top: 3rem;
+}
+
+.blog-type-list-content .entry-header > a{
+	text-transform: uppercase;
+	color: #c3323a;
+	font-weight: 600;
+}
+
+.entry-title{
+	margin-top: 1rem;
+	margin-bottom: 2rem;
+	font-size: 2.4rem;	// todo can these two thing be centralized?
+	line-height: 1.4;
+}
+
+.home article,
+.archive article {
+	max-width: 35rem;
+}
+
+main,
+.article-container {
+	margin: 0 2rem;
+	max-width: 120rem;
+	flex: 2 1 80rem;
+	justify-content: space-between;
+	overflow-x: auto;
+}
+
+// This is for blog layout new
+.blog-layout-2{
+
+}
