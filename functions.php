@@ -142,9 +142,8 @@ function aaurora_widgets_init() {
 	 * Footer Sidebar Registered
 	 */
 
-
 	register_sidebar(
-		[
+		array(
 			'name'          => esc_html__( 'Footer Column 1', 'aaurora' ),
 			'id'            => 'footer-column-1',
 			'description'   => esc_html__( 'Add widgets here.', 'aaurora' ),
@@ -152,11 +151,11 @@ function aaurora_widgets_init() {
 			'after_widget'  => '</div>',
 			'before_title'  => '<h3 class="widget-title"><span>',
 			'after_title'   => '</span></h3>',
-		]
+		)
 	);
 
 	register_sidebar(
-		[
+		array(
 			'name'          => esc_html__( 'Footer Column 2', 'aaurora' ),
 			'id'            => 'footer-column-2',
 			'description'   => esc_html__( 'Add widgets here.', 'aaurora' ),
@@ -164,11 +163,11 @@ function aaurora_widgets_init() {
 			'after_widget'  => '</div>',
 			'before_title'  => '<h3 class="widget-title"><span>',
 			'after_title'   => '</span></h3>',
-		]
+		)
 	);
 
 	register_sidebar(
-		[
+		array(
 			'name'          => esc_html__( 'Footer Column 3', 'aaurora' ),
 			'id'            => 'footer-column-3',
 			'description'   => esc_html__( 'Add widgets here.', 'aaurora' ),
@@ -176,11 +175,11 @@ function aaurora_widgets_init() {
 			'after_widget'  => '</div>',
 			'before_title'  => '<h3 class="widget-title"><span>',
 			'after_title'   => '</span></h3>',
-		]
+		)
 	);
 
 	register_sidebar(
-		[
+		array(
 			'name'          => esc_html__( 'Footer Column 4', 'aaurora' ),
 			'id'            => 'footer-column-4',
 			'description'   => esc_html__( 'Add widgets here.', 'aaurora' ),
@@ -188,7 +187,7 @@ function aaurora_widgets_init() {
 			'after_widget'  => '</div>',
 			'before_title'  => '<h3 class="widget-title"><span>',
 			'after_title'   => '</span></h3>',
-		]
+		)
 	);
 }
 
@@ -258,76 +257,85 @@ if ( ! function_exists( 'aaurora_theme_comments' ) ) :
 		$GLOBALS['comment'] = $comment;
 		switch ( $comment->comment_type ) :
 
-			case 'pingback' :
-
-			case 'trackback' :
-
+			case 'pingback':
+			case 'trackback':
 				// Display trackbacks differently than normal comments.
 				?>
-                <li id="comment-<?php comment_ID(); ?>" <?php comment_class(); ?>>
-                <p>
+				<li id="comment-<?php comment_ID(); ?>" <?php comment_class(); ?>>
+				<p>
 					<?php
-					_e( 'Pingback:', 'aaurora' ); ?><?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'aaurora' ), '<span class="edit-link">', '</span>' );
+					_e( 'Pingback:', 'aaurora' );
 					?>
-                </p>
+					<?php comment_author_link(); ?>
+					<?php
+					edit_comment_link( __( '(Edit)', 'aaurora' ), '<span class="edit-link">', '</span>' );
+					?>
+				</p>
 				<?php
 				break;
 
-			default :
-
+			default:
 				// Proceed with normal comments.
 				global $post;
 				?>
 
-            <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
-                <article id="comment-<?php comment_ID(); ?>" class="comment">
+			<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
+				<article id="comment-<?php comment_ID(); ?>" class="comment">
 
 					<?php
 					if ( '0' == $comment->comment_approved ) :
 						?>
-                        <p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'aaurora' ); ?></p>
-					<?php
+						<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'aaurora' ); ?></p>
+						<?php
 					endif;
 					?>
 
-                    <section class="comment-content1 comment">
+					<section class="comment-content1 comment">
 						<?php
 						comment_text();
 						?>
-                    </section>
+					</section>
 
-                    <header class="comment-meta comment-author vcard">
+					<header class="comment-meta comment-author vcard">
 						<?php
-						//echo get_avatar( $comment, 150 );
+						// echo get_avatar( $comment, 150 );
 
-						printf( '<cite class="fn">%1$s %2$s</cite>',
+						printf(
+							'<cite class="fn">%1$s %2$s</cite>',
 							get_comment_author_link(),
 							// If current post author is also comment author, make it known visually.
-							( $comment->user_id === $post->post_author ) ? '<span></span>' : "" );
+							( $comment->user_id === $post->post_author ) ? '<span></span>' : ''
+						);
 
-
-						printf( '<a title="%3$s" href="%1$s"><i class="pw-icon-calendar-1"></i><time datetime="%2$s">%3$s</time></a>',
+						printf(
+							'<a title="%3$s" href="%1$s"><i class="pw-icon-calendar-1"></i><time datetime="%2$s">%3$s</time></a>',
 							esc_url( get_comment_link( $comment->comment_ID ) ),
 							get_comment_time( 'c' ),
 							/* translators: 1: date, 2: time */
-							sprintf( __( '%1$s at %2$s', 'aaurora' ), get_comment_date(), get_comment_time() ) );
+							sprintf( __( '%1$s at %2$s', 'aaurora' ), get_comment_date(), get_comment_time() )
+						);
 						?>
 
 						<?php
 						edit_comment_link( __( 'Edit', 'aaurora' ) );
 						?>
 						<?php
-						comment_reply_link( array_merge( $args, array(
-							'reply_text' => __( 'Reply', 'aaurora' ),
-							'after'      => ' <span>&darr;</span>',
-							'depth'      => $depth,
-							'max_depth'  => $args['max_depth']
-						) ) );
+						comment_reply_link(
+							array_merge(
+								$args,
+								array(
+									'reply_text' => __( 'Reply', 'aaurora' ),
+									'after'      => ' <span>&darr;</span>',
+									'depth'      => $depth,
+									'max_depth'  => $args['max_depth'],
+								)
+							)
+						);
 						?>
 
-                    </header>
+					</header>
 
-                </article>
+				</article>
 				<?php
 				break;
 
@@ -341,7 +349,7 @@ endif;
 
 function mytheme_setup_theme_supported_features() {
 
-// Theme supports wide images, galleries and videos.
+	// Theme supports wide images, galleries and videos.
 	add_theme_support( 'align-wide' );
 	add_theme_support( 'wp-block-styles' );
 }
@@ -359,17 +367,19 @@ add_image_size( 'aaurora-blog-single-post', 600, 500, true );
 
 /*  Kirki plugin related changed */
 
-//todo See if below options related to kirki needs to be enabled or not
-/*= Use External stylesheet for Kirki generated styles =*/
-/*=============================================<<<<<*/
-//if (!is_customize_preview() ) {
-//    add_filter( 'kirki_output_inline_styles', '__return_false' );
-//}
+// todo See if below options related to kirki needs to be enabled or not
+/*
+= Use External stylesheet for Kirki generated styles =*/
+/*
+=============================================<<<<<*/
+// if (!is_customize_preview() ) {
+// add_filter( 'kirki_output_inline_styles', '__return_false' );
+// }
 
 /*
  * It led Kirki use CDN font instead of hosting the local fonts.
  */
-//add_filter( 'kirki_use_local_fonts', '__return_false' );
+// add_filter( 'kirki_use_local_fonts', '__return_false' );
 
 /*
  * Kirki Customization

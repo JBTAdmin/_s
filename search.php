@@ -16,21 +16,21 @@ if ( is_active_sidebar( 'sidebar-1' ) ) {
 
 ?>
 
-    <div class="site-container">
-        <div class="wrap">
-            <div class="main-container">
-                <main id="primary" class="site-main primary-content <?php echo esc_attr( $sidebar_page_class ); ?>">
+	<div class="site-container">
+		<div class="wrap">
+			<div class="main-container">
+				<main id="primary" class="site-main primary-content <?php echo esc_attr( $sidebar_page_class ); ?>">
 
 					<?php if ( have_posts() ) : ?>
 
-                        <header class="page-header">
-                            <h1 class="page-title">
+						<header class="page-header">
+							<h1 class="page-title">
 								<?php
 								/* translators: %s: search query. */
 								printf( esc_html__( 'Search Results for: %s', 'aaurora' ), '<span>' . get_search_query() . '</span>' );
 								?>
-                            </h1>
-                        </header><!-- .page-header -->
+							</h1>
+						</header><!-- .page-header -->
 
 						<?php
 						/* Start the Loop */
@@ -55,13 +55,13 @@ if ( is_active_sidebar( 'sidebar-1' ) ) {
 					endif;
 					?>
 
-                </main><!-- #main -->
+				</main><!-- #main -->
 
 				<?php
 				get_sidebar();
 				?>
-            </div>
-        </div>
-    </div>
+			</div>
+		</div>
+	</div>
 <?php
 get_footer();

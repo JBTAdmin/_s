@@ -22,20 +22,20 @@ if ( is_active_sidebar( 'sidebar-1' ) ) {
 
 ?>
 
-    <div class="site-container">
-        <div class="wrap">
-            <div class="main-container">
-                <main id="primary" class="site-main primary-content <?php echo esc_attr( $sidebar_page_class ); ?>">
+	<div class="site-container">
+		<div class="wrap">
+			<div class="main-container">
+				<main id="primary" class="site-main primary-content <?php echo esc_attr( $sidebar_page_class ); ?>">
 
 					<?php
 					if ( have_posts() ) :
 
 						if ( is_home() && ! is_front_page() ) :
 							?>
-                            <header>
-                                <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-                            </header>
-						<?php
+							<header>
+								<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+							</header>
+							<?php
 						endif;
 
 						/* Start the Loop */
@@ -51,7 +51,7 @@ if ( is_active_sidebar( 'sidebar-1' ) ) {
 
 						endwhile;
 
-//                        the_posts_navigation();
+						// the_posts_navigation();
 
 						numeric_posts_nav();
 					else :
@@ -61,13 +61,13 @@ if ( is_active_sidebar( 'sidebar-1' ) ) {
 					endif;
 					?>
 
-                </main><!-- #main -->
+				</main><!-- #main -->
 
 				<?php
 				get_sidebar();
 				?>
-            </div>
-        </div>
-    </div>
+			</div>
+		</div>
+	</div>
 <?php
 get_footer();
