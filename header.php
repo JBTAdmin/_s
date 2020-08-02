@@ -16,8 +16,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<link href="https://fonts.googleapis.com/css2?family=Finger+Paint&family=Merriweather:wght@400;700&family=PT+Sans&family=Noto+Serif:wght@400;700&family=Arbutus+Slab&display=swap"
-		  rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Finger+Paint&family=Merriweather:wght@400;700&family=PT+Sans&family=Noto+Serif:wght@400;700&family=Arbutus+Slab&display=swap" rel="stylesheet">
 	<script src="/wp-content/themes/aaurora/js/main.js"></script>
 	<?php wp_head(); ?>
 </head>
@@ -50,7 +49,7 @@
 						?>
 						<!--				<p class="site-description">-->
 						<?php
-						// echo $aaurora_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+						// echo $aaurora_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped.
 						?>
 						<!--</p>-->
 					<?php endif; ?>
@@ -62,7 +61,7 @@
 						<div class="menu-btn__burger"></div>
 					</div>
 					<!--			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">-->
-					<?php // esc_html_e( 'Primary Menu', 'aaurora' ); ?><!--</button>-->
+					<?php // esc_html_e( 'Primary Menu', 'aaurora' ); ?><!--</button>-->.
 					<?php
 					wp_nav_menu(
 						array(
