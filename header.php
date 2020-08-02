@@ -16,7 +16,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<link href="https://fonts.googleapis.com/css2?family=Finger+Paint&family=Merriweather:wght@400;700&family=PT+Sans&family=Noto+Serif:wght@400;700&family=Arbutus+Slab&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;700family=Finger+Paint&family=Merriweather:wght@400;700&family=PT+Sans&family=Noto+Serif:wght@400;700&family=Arbutus+Slab&display=swap" rel="stylesheet">
 	<script src="/wp-content/themes/aaurora/js/main.js"></script>
 	<?php wp_head(); ?>
 </head>
@@ -26,7 +26,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary">
 		<?php esc_html_e( 'Skip to content', 'aaurora' ); ?></a>
-
+  
 	<header id="masthead" class="site-header">
 		<div class="wrap">
 			<div class="main-header">

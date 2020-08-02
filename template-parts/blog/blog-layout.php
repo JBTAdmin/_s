@@ -17,7 +17,7 @@
 
     <div class="blog-type-list-content">
     <div class="entry-header">
-        <div class="blog-list-content-metainfo">
+        <div class="blog-list-content-meta-info">
         <?php
             aaurora_entry_footer();
         ?>

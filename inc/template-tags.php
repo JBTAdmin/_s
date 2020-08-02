@@ -158,11 +158,11 @@ if ( ! function_exists( 'aaurora_post_thumbnail' ) ) :
 			</div><!-- .post-thumbnail -->
 		
 		<?php else : ?>
-
+   
 			<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 				<?php
 				the_post_thumbnail(
-					'aaurora-blog-archive',
+					'aaurora-blog-2-featured-image',
 					array(
 						'alt' => the_title_attribute(
 							array(
