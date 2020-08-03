@@ -22,7 +22,7 @@
 		?>
 		<div class="blog-list-content-meta-info">
 			<?php
-			aaurora_entry_footer();
+			aaurora_meta_category_list();
 			?>
 		</div>
 		

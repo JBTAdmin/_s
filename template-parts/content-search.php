@@ -36,6 +36,6 @@
     </a>
     
 	<footer class="entry-footer">
-		<?php aaurora_entry_footer(); ?>
+		<?php aaurora_meta_category_list(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

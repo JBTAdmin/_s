@@ -11,12 +11,12 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-    <?php aaurora_post_thumbnail(); ?>
+	<?php aaurora_post_thumbnail(); ?>
 
 	<div class="entry-header">
 		<?php
 
-        the_title( '<h1 class="entry-title">', '</h1>' );
+		the_title( '<h1 class="entry-title">', '</h1>' );
 
 		if ( 'post' === get_post_type() ) :
 			?>
@@ -56,6 +56,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php aaurora_entry_footer(); ?>
+		<?php aaurora_meta_category_list(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
