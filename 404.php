@@ -18,7 +18,8 @@ get_header();
 			</header><!-- .page-header -->
 
 			<div class="page-content">
-				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'aaurora' ); ?></p>
+				<p><?php esc_html_e( 'It looks like nothing was found at this location.
+				Maybe try one of the links below or a search?', 'aaurora' ); ?></p>
 
 				<?php
 				get_search_form();
@@ -45,7 +46,8 @@ get_header();
 
 				<?php
 				/* translators: %1$s: smiley */
-				$aaurora_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'aaurora' ), convert_smilies( ':)' ) ) . '</p>';
+				$aaurora_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s',
+                        'aaurora' ), convert_smilies( ':)' ) ) . '</p>';
 				the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$aaurora_archive_content" );
 
 				the_widget( 'WP_Widget_Tag_Cloud' );
