@@ -334,22 +334,10 @@ Kirki::add_field(
 Kirki::add_field(
 	'aaurora_theme_options',
 	array(
-		'type'        => 'color',
-		'settings'    => 'header_topline_bgcolor_1',
-		'label'       => esc_attr__( 'Top line background color', 'aaurora' ),
-		'description' => esc_attr__( 'First background color for ', 'aaurora' ),
-		'section'     => 'header',
-		'default'     => '#2568ef',
-	)
-);
-
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
 		'type'        => 'background',
-		'settings'    => 'header_topline_background',
-		'label'       => esc_attr__( 'Topline background image', 'aaurora' ),
-		'description' => esc_attr__( 'Change your topline background image settings.', 'aaurora' ),
+		'settings'    => 'header_top_line_background',
+		'label'       => esc_attr__( 'Top line background', 'aaurora' ),
+		'description' => esc_attr__( 'Change your top line background settings.', 'aaurora' ),
 		'section'     => 'header',
 		'default'     => array(
 			'background-color'      => '#ffffff',
@@ -368,7 +356,7 @@ Kirki::add_field(
 
 // SECTION: Main menu
 Kirki::add_section(
-	'mainmenu',
+	'main_menu',
 	array(
 		'title'       => esc_attr__( 'Main menu', 'aaurora' ),
 		'description' => '',
@@ -380,26 +368,10 @@ Kirki::add_section(
 Kirki::add_field(
 	'aaurora_theme_options',
 	array(
-		'type'        => 'radio-buttonset',
-		'settings'    => 'mainmenu_style',
-		'label'       => esc_attr__( 'Main menu below header style', 'aaurora' ),
-		'section'     => 'mainmenu',
-		'default'     => 'light',
-		'choices'     => array(
-			'light' => esc_attr__( 'Light', 'aaurora' ),
-			'dark'  => esc_attr__( 'Dark', 'aaurora' ),
-		),
-		'description' => esc_attr__( 'You can change dark menu background and menu links colors in "Theme settings > Colors" section.', 'aaurora' ),
-	)
-);
-
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
 		'type'     => 'radio-buttonset',
 		'settings' => 'mainmenu_align',
 		'label'    => esc_attr__( 'Main menu align', 'aaurora' ),
-		'section'  => 'mainmenu',
+		'section'  => 'main_menu',
 		'default'  => 'left',
 		'choices'  => array(
 			'left'   => esc_attr__( 'Left', 'aaurora' ),
@@ -415,7 +387,7 @@ Kirki::add_field(
 		'type'        => 'radio-buttonset',
 		'settings'    => 'mainmenu_font_decoration',
 		'label'       => esc_attr__( 'Main menu font decoration', 'aaurora' ),
-		'section'     => 'mainmenu',
+		'section'     => 'main_menu',
 		'default'     => 'none',
 		'choices'     => array(
 			'uppercase' => esc_attr__( 'UPPERCASE', 'aaurora' ),
@@ -432,7 +404,7 @@ Kirki::add_field(
 		'type'        => 'radio-buttonset',
 		'settings'    => 'mainmenu_font_weight',
 		'label'       => esc_attr__( 'Main menu font weight', 'aaurora' ),
-		'section'     => 'mainmenu',
+		'section'     => 'main_menu',
 		'default'     => 'regularfont',
 		'choices'     => array(
 			'regularfont' => esc_attr__( 'Regular', 'aaurora' ),
@@ -448,7 +420,7 @@ Kirki::add_field(
 		'type'        => 'radio-buttonset',
 		'settings'    => 'mainmenu_arrow_style',
 		'label'       => esc_attr__( 'Main menu dropdown arrows', 'aaurora' ),
-		'section'     => 'mainmenu',
+		'section'     => 'main_menu',
 		'default'     => 'noarrow',
 		'choices'     => array(
 			'rightarrow' => esc_attr__( 'Right >', 'aaurora' ),
@@ -466,7 +438,7 @@ Kirki::add_field(
 		'settings'    => 'mainmenu_paddings',
 		'label'       => esc_attr__( 'Main menu top/bottom paddings (px)', 'aaurora' ),
 		'description' => esc_attr__( 'Adjust this value to change menu height. Default: 10px', 'aaurora' ),
-		'section'     => 'mainmenu',
+		'section'     => 'main_menu',
 		'default'     => '10px',
 	)
 );
@@ -687,6 +659,29 @@ Kirki::add_section(
 		'description' => esc_attr__( 'This settings affect your blog single post display.', 'aaurora' ),
 		'panel'       => 'theme_settings_panel',
 		'priority'    => 80,
+	)
+);
+
+
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'        => 'typography',
+		'settings'    => 'blog_post_title_font',
+		'label'       => esc_attr__( 'Post Title Size', 'aaurora' ),
+		'section'     => 'blog_post',
+		'default'     => array(
+			'font-size'      => '2.4rem',
+			'line-height'    => '1.4',
+			'letter-spacing' => '0',
+			'text-transform' => 'none',
+		),
+		'description' => esc_attr__( 'Font used in Single Post Header .', 'aaurora' ),
+		'output'      => array(
+			array(
+				'element' => array( '.entry-title' ),
+			),
+		),
 	)
 );
 
