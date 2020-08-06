@@ -524,31 +524,6 @@ Kirki::add_field(
 	)
 );
 
-
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
-		'type'        => 'toggle',
-		'settings'    => 'footer_htmlblock',
-		'label'       => esc_attr__( 'Footer HTML block', 'aaurora' ),
-		'description' => esc_attr__( 'Fullwidth block with any HTML and background image in footer.', 'aaurora' ),
-		'section'     => 'footer',
-		'default'     => '0',
-	)
-);
-
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
-		'type'        => 'toggle',
-		'settings'    => 'footer_htmlblock_homepage',
-		'label'       => esc_attr__( 'Footer HTML block only on homepage', 'aaurora' ),
-		'description' => esc_attr__( 'Disable this option to show footer HTML block on all site pages.', 'aaurora' ),
-		'section'     => 'footer',
-		'default'     => '1',
-	)
-);
-
 Kirki::add_field(
 	'aaurora_theme_options',
 	array(
@@ -558,12 +533,19 @@ Kirki::add_field(
 		'description' => esc_attr__( 'Upload your footer HTML Block background image (1600x1200px JPG recommended). Remove image to remove background.', 'aaurora' ),
 		'section'     => 'footer',
 		'default'     => array(
-			'background-color'      => '#ffffff',
+			'background-color'      => '#101010',
 			'background-image'      => '',
 			'background-repeat'     => 'no-repeat',
 			'background-position'   => 'center center',
 			'background-size'       => 'cover',
 			'background-attachment' => 'fixed',
+		),
+		'transport'   => 'auto',
+		'output'      => array(
+			array(
+				'element'  => '.site-footer',
+				'property' => 'background-color',
+			),
 		),
 	)
 );
@@ -577,6 +559,13 @@ Kirki::add_field(
 		'description' => esc_attr__( 'Change text color in footer HTML block', 'aaurora' ),
 		'section'     => 'footer',
 		'default'     => '#ffffff',
+		'transport'   => 'auto',
+		'output'      => array(
+			array(
+				'element'  => '.site-footer a',
+				'property' => 'color',
+			),
+		),
 	)
 );
 
@@ -704,52 +693,6 @@ Kirki::add_section(
 Kirki::add_field(
 	'aaurora_theme_options',
 	array(
-		'type'            => 'select',
-		'settings'        => 'blog_post_header_image_type',
-		'label'           => esc_attr__( 'Blog post header image', 'aaurora' ),
-		'section'         => 'blog_post',
-		'default'         => 'header',
-		'choices'         => array(
-			'header' => esc_attr__( 'Post header image', 'aaurora' ),
-			'thumb'  => esc_attr__( 'Post featured image', 'aaurora' ),
-		),
-		'active_callback' => array(
-			array(
-				'setting'  => 'blog_post_header_layout',
-				'operator' => 'in',
-				'value'    => array( 'inheader', 'inheader2' ),
-			),
-		),
-		'description'     => esc_attr__( 'Use this if you want to display post featured image as post header image without uploading new images for your existing posts.', 'aaurora' ),
-	)
-);
-
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
-		'type'            => 'radio-buttonset',
-		'settings'        => 'blog_post_header_width',
-		'label'           => esc_attr__( 'Blog post header width', 'aaurora' ),
-		'section'         => 'blog_post',
-		'default'         => 'boxed',
-		'choices'         => array(
-			'fullwidth' => esc_attr__( 'Fullwidth', 'aaurora' ),
-			'boxed'     => esc_attr__( 'Boxed', 'aaurora' ),
-
-		),
-		'active_callback' => array(
-			array(
-				'setting'  => 'blog_post_header_layout',
-				'operator' => 'in',
-				'value'    => array( 'inheader', 'inheader2', 'inheader3' ),
-			),
-		),
-	)
-);
-
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
 		'type'            => 'toggle',
 		'settings'        => 'blog_post_transparent_header',
 		'label'           => esc_attr__( 'Transparent header', 'aaurora' ),
@@ -790,18 +733,6 @@ Kirki::add_field(
 	)
 );
 
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
-		'type'        => 'toggle',
-		'settings'    => 'blog_post_reading_progress',
-		'label'       => esc_attr__( 'Reading progress bar', 'aaurora' ),
-		'description' => esc_attr__( 'Show reading progress bar in fixed header.', 'aaurora' ),
-		'section'     => 'blog_post',
-		'default'     => '0',
-	)
-);
-
 
 Kirki::add_field(
 	'aaurora_theme_options',
@@ -827,18 +758,6 @@ Kirki::add_field(
 	)
 );
 
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
-		'type'        => 'toggle',
-		'settings'    => 'blog_post_share',
-		'label'       => esc_attr__( 'Share buttons', 'aaurora' ),
-		'description' => '',
-		'section'     => 'blog_post',
-		'default'     => '1',
-	)
-);
-
 
 Kirki::add_field(
 	'aaurora_theme_options',
@@ -851,19 +770,6 @@ Kirki::add_field(
 		'default'     => '1',
 	)
 );
-
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
-		'type'        => 'toggle',
-		'settings'    => 'blog_post_subscribe',
-		'label'       => esc_attr__( 'Subscribe form', 'aaurora' ),
-		'description' => esc_attr__( 'Show subscribe form on single blog post page.', 'aaurora' ),
-		'section'     => 'blog_post',
-		'default'     => '0',
-	)
-);
-
 
 // END SECTION: Blog Single Post
 
@@ -889,25 +795,6 @@ Kirki::add_field(
 		'choices'  => array(
 			'fullwidth' => esc_attr__( 'Fullwidth', 'aaurora' ),
 			'boxed'     => esc_attr__( 'Boxed', 'aaurora' ),
-		),
-	)
-);
-
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
-		'type'            => 'toggle',
-		'settings'        => 'blog_page_transparent_header',
-		'label'           => esc_attr__( 'Transparent header', 'aaurora' ),
-		'description'     => esc_attr__( 'This feature make your header transparent and will show it above page header image. You need to upload light logo version to use this feature and assign header image for pages where you want to see this feature.', 'aaurora' ),
-		'section'         => 'page',
-		'default'         => '0',
-		'active_callback' => array(
-			array(
-				'setting'  => 'page_header_width',
-				'operator' => '==',
-				'value'    => 'fullwidth',
-			),
 		),
 	)
 );
@@ -1044,11 +931,32 @@ Kirki::add_section(
 // 'default'     => '0',
 // ) );
 
+// todo Other two fields in color section is coming from the core wordpress.
+
 Kirki::add_field(
 	'aaurora_theme_options',
 	array(
 		'type'        => 'color',
-		'settings'    => 'color_text',
+		'settings'    => 'color_site_title_text',
+		'label'       => esc_attr__( 'Site Title Color', 'aaurora' ),
+		'description' => '',
+		'section'     => 'colors',
+		'default'     => '#333333',
+		'transport'   => 'auto',
+		'output'      => array(
+			array(
+				'element'  => '.site-title > a',
+				'property' => 'color',
+			),
+		),
+	)
+);
+
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'        => 'color',
+		'settings'    => 'color_body_text',
 		'label'       => esc_attr__( 'Body text color', 'aaurora' ),
 		'description' => '',
 		'section'     => 'colors',
@@ -1067,7 +975,7 @@ Kirki::add_field(
 	'aaurora_theme_options',
 	array(
 		'type'        => 'color',
-		'settings'    => 'color_mainmenu_link',
+		'settings'    => 'color_main_menu_link',
 		'label'       => esc_attr__( 'Mainmenu link color', 'aaurora' ),
 		'description' => '',
 		'section'     => 'colors',
@@ -1086,7 +994,7 @@ Kirki::add_field(
 	'aaurora_theme_options',
 	array(
 		'type'        => 'color',
-		'settings'    => 'color_mainmenu_link_hover',
+		'settings'    => 'color_main_menu_link_hover',
 		'label'       => esc_attr__( 'Mainmenu link hover color', 'aaurora' ),
 		'description' => '',
 		'section'     => 'colors',
@@ -1094,31 +1002,13 @@ Kirki::add_field(
 		'transport'   => 'auto',
 		'output'      => array(
 			array(
-				'element'  => 'body',
+				'element'  => '.menu li:hover > a',
 				'property' => 'color',
 			),
 		),
 	)
 );
 
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
-		'type'        => 'color',
-		'settings'    => 'color_footer_bg',
-		'label'       => esc_attr__( 'Footer background color (light footer)', 'aaurora' ),
-		'description' => '',
-		'section'     => 'colors',
-		'default'     => '#FFFFFF',
-		'transport'   => 'auto',
-		'output'      => array(
-			array(
-				'element'  => '.site-footer',
-				'property' => 'background-color',
-			),
-		),
-	)
-);
 
 // END SECTION: Colors
 
@@ -1138,17 +1028,69 @@ Kirki::add_field(
 	'aaurora_theme_options',
 	array(
 		'type'        => 'typography',
-		'settings'    => 'headers_font',
-		'label'       => esc_attr__( 'Headers font', 'aaurora' ),
+		'settings'    => 'font_header_h1',
+		'label'       => esc_attr__( 'H1 font', 'aaurora' ),
 		'section'     => 'fonts',
 		'default'     => array(
 			'font-family' => 'Nunito',
 			'variant'     => '800',
+			'font-size'      => '14px',
+			'line-height'    => '1.5',
+			'letter-spacing' => '0',
+			'text-transform' => 'none',
 		),
-		'description' => esc_attr__( 'Font used in headers (H1-H6 tags).', 'aaurora' ),
+		'description' => esc_attr__( 'Font used in H1 Header .', 'aaurora' ),
 		'output'      => array(
 			array(
-				'element' => array( 'h1', 'h2', 'h3' ),
+				'element' => array( 'h1' ),
+			),
+		),
+	)
+);
+
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'        => 'typography',
+		'settings'    => 'font_header_h2',
+		'label'       => esc_attr__( 'H2 font', 'aaurora' ),
+		'section'     => 'fonts',
+		'default'     => array(
+			'font-family' => 'Nunito',
+			'variant'     => '800',
+			'font-size'      => '14px',
+			'line-height'    => '1.5',
+			'letter-spacing' => '0',
+			'text-transform' => 'none',
+		),
+		'description' => esc_attr__( 'Font used in H2 header.', 'aaurora' ),
+		'output'      => array(
+			array(
+				'element' => array( 'h2' ),
+			),
+		),
+	)
+);
+
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'        => 'typography',
+		'settings'    => 'font_header_h3',
+		'label'       => esc_attr__( 'H3 font', 'aaurora' ),
+		'section'     => 'fonts',
+		'default'     => array(
+			'font-family' => 'Nunito',
+			'variant'     => '800',
+			'font-size'      => '14px',
+			'line-height'    => '1.5',
+			'letter-spacing' => '0',
+			'text-transform' => 'none',
+		),
+		'description' => esc_attr__( 'Font used in H3 header.', 'aaurora' ),
+		'output'      => array(
+			array(
+				'element' => array( 'h3' ),
 			),
 		),
 	)
@@ -1162,9 +1104,12 @@ Kirki::add_field(
 		'label'       => esc_attr__( 'Body font', 'aaurora' ),
 		'section'     => 'fonts',
 		'default'     => array(
-			'font-family' => 'Rubik',
-			'variant'     => 'regular',
-			'font-size'   => '15px',
+			'font-family' => 'Nunito',
+			'variant'     => '800',
+			'font-size'      => '14px',
+			'line-height'    => '1.5',
+			'letter-spacing' => '0',
+			'text-transform' => 'none',
 		),
 		'description' => esc_attr__( 'Font used in text elements.', 'aaurora' ),
 		'output'      => array(

@@ -13,7 +13,7 @@
 
 	<div  class="blog-type-list">
 
-	<?php aaurora_post_thumbnail(); ?>
+	<?php aaurora_post_thumbnail('aaurora-blog-archive'); ?>
 
 	<div class="blog-type-list-content">
 	<div class="entry-header">
@@ -46,8 +46,7 @@
 			// $content_preview = wp_trim_words( $content_preview, $excerpt_length, apply_filters( 'excerpt_more', '&hellip;' ) );
 		}
 
-
-		// echo HELLL;
+		
 		// echo($content_preview);  /// TODO THIS IS NOT THE RIGHT WAY TO DISPLAY CONTENT
 
 

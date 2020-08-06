@@ -13,7 +13,7 @@
 
 	<div  class="blog-type-list">
 
-	<?php aaurora_post_thumbnail(); ?>
+	<?php aaurora_post_thumbnail('aaurora-blog-2-featured-image'); ?>
 
 <!--	<div class="blog-type-list-content">-->
 	

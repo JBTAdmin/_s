@@ -113,7 +113,7 @@ if ( ! function_exists( 'aaurora_post_thumbnail' ) ) :
 	 * Wraps the post thumbnail in an anchor element on index views, or a div
 	 * element when on single views.
 	 */
-	function aaurora_post_thumbnail() {
+	function aaurora_post_thumbnail($size = 'post-thumbnail') {
 		if ( post_password_required() || is_attachment() ) {
 			return;
 		}
@@ -142,7 +142,7 @@ if ( ! function_exists( 'aaurora_post_thumbnail' ) ) :
 			<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 				<?php
 				the_post_thumbnail(
-					'aaurora-blog-2-featured-image',
+					$size,
 					array(
 						'alt' => the_title_attribute(
 							array(

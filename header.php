@@ -16,7 +16,6 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;700family=Finger+Paint&family=Merriweather:wght@400;700&family=PT+Sans&family=Noto+Serif:wght@400;700&family=Arbutus+Slab&display=swap" rel="stylesheet">
 	<script src="/wp-content/themes/aaurora/js/main.js"></script>
 	<?php wp_head(); ?>
 </head>
@@ -32,17 +31,21 @@
 			<div class="main-header">
 				<div class="site-branding">
 					<?php
+					
 					the_custom_logo();
+     
+					if ( ! get_theme_mod( 'custom_logo' ) ) :
 					if ( is_front_page() && is_home() ) :
 						?>
-						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"
-												  rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+						<div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"
+												  rel="home"><?php bloginfo( 'name' ); ?></a></div>
 						<?php
 					else :
 						?>
 						<div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"
 												   rel="home"><?php bloginfo( 'name' ); ?></a></div>
 						<?php
+					endif;
 					endif;
 					$aaurora_description = get_bloginfo( 'description', 'display' );
 					if ( $aaurora_description || is_customize_preview() ) :
