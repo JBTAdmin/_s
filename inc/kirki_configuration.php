@@ -212,16 +212,12 @@ Kirki::add_field(
 		'settings'    => 'header_layout',
 		'label'       => esc_html__( 'Header layout', 'aaurora' ),
 		'section'     => 'header',
-		'default'     => 'menu-in-header',
+		'default'     => 'menu-below-logo',
 		'multiple'    => 0,
 		'choices'     => array(
-			'menu-in-header'                            => esc_attr__( '1. Menu in header', 'aaurora' ),
-			'menu-below-header-left'                    => esc_attr__( '2. Menu below header, Left logo', 'aaurora' ),
-			'menu-below-header-left-border'             => esc_attr__( '3. Menu below header, Left logo, Border', 'aaurora' ),
-			'menu-below-header-left-border-fullwidth'   => esc_attr__( '4. Menu below header, Left logo, Fullwidth Border', 'aaurora' ),
-			'menu-below-header-center'                  => esc_attr__( '5. Menu below header, Center logo', 'aaurora' ),
-			'menu-below-header-center-border'           => esc_attr__( '6. Menu below header, Center logo, Border', 'aaurora' ),
-			'menu-below-header-center-border-fullwidth' => esc_attr__( '7. Menu below header, Center logo, Fullwidth border', 'aaurora' ),
+			'menu-below-logo'                     => esc_attr__( '1. Menu below Logo', 'aaurora' ),
+			'right-menu-left-logo' => esc_attr__( '2. Menu With Logo, Right Menu , Left logo', 'aaurora' ),
+			'left-menu-right-logo' => esc_attr__( '3. Menu With Logo, Left Menu , Right logo', 'aaurora' ),
 		),
 		'description' => esc_attr__( 'This option completely change site header layout and style.', 'aaurora' ),
 	)
@@ -230,24 +226,16 @@ Kirki::add_field(
 Kirki::add_field(
 	'aaurora_theme_options',
 	array(
-		'type'        => 'number',
-		'settings'    => 'header_height',
-		'label'       => esc_attr__( 'Header height (px)', 'aaurora' ),
-		'description' => esc_attr__( 'For example: 140', 'aaurora' ),
+		'type'        => 'radio-buttonset',
+		'settings'    => 'header_layout_color',
+		'label'       => esc_attr__( 'Main menu style', 'aaurora' ),
 		'section'     => 'header',
-		'default'     => '140',
-	)
-);
-
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
-		'type'        => 'toggle',
-		'settings'    => 'header_sticky',
-		'label'       => esc_attr__( 'Sticky header', 'aaurora' ),
-		'description' => esc_attr__( 'Main Menu fixed to top on scroll.', 'aaurora' ),
-		'section'     => 'header',
-		'default'     => '1',
+		'default'     => 'light',
+		'choices'     => array(
+			'light' => esc_attr__( 'Light', 'aaurora' ),
+			'dark'  => esc_attr__( 'Dark', 'aaurora' ),
+		),
+		'description' => esc_attr__( 'You can change dark menu background and menu links colors in "Theme settings > Colors" section.', 'aaurora' ),
 	)
 );
 
@@ -269,24 +257,26 @@ Kirki::add_field(
 );
 
 
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
-		'type'            => 'toggle',
-		'settings'        => 'header_center_custom',
-		'label'           => esc_attr__( 'Header center custom content', 'aaurora' ),
-		'description'     => esc_attr__( 'Enable to display custom content (e.g. banner) in header center.', 'aaurora' ),
-		'section'         => 'header',
-		'default'         => '0',
-		'active_callback' => array(
-			array(
-				'setting'  => 'header_layout',
-				'operator' => 'in',
-				'value'    => array( 'menu-below-header-left', 'menu-below-header-left-border', 'menu-below-header-left-border-fullwidth' ),
-			),
-		),
-	)
-);
+//todo what is the use of below
+//
+//Kirki::add_field(
+//	'aaurora_theme_options',
+//	array(
+//		'type'            => 'toggle',
+//		'settings'        => 'header_center_custom',
+//		'label'           => esc_attr__( 'Header center custom content', 'aaurora' ),
+//		'description'     => esc_attr__( 'Enable to display custom content (e.g. banner) in header center.', 'aaurora' ),
+//		'section'         => 'header',
+//		'default'         => '0',
+//		'active_callback' => array(
+//			array(
+//				'setting'  => 'header_layout',
+//				'operator' => 'in',
+//				'value'    => array( 'menu-below-header-left', 'menu-below-header-left-border', 'menu-below-header-left-border-fullwidth' ),
+//			),
+//		),
+//	)
+//);
 
 Kirki::add_field(
 	'aaurora_theme_options',
@@ -385,7 +375,7 @@ Kirki::add_field(
 	'aaurora_theme_options',
 	array(
 		'type'        => 'radio-buttonset',
-		'settings'    => 'mainmenu_font_decoration',
+		'settings'    => 'main_menu_font_decoration',
 		'label'       => esc_attr__( 'Main menu font decoration', 'aaurora' ),
 		'section'     => 'main_menu',
 		'default'     => 'none',
@@ -402,7 +392,7 @@ Kirki::add_field(
 	'aaurora_theme_options',
 	array(
 		'type'        => 'radio-buttonset',
-		'settings'    => 'mainmenu_font_weight',
+		'settings'    => 'main_menu_font_weight',
 		'label'       => esc_attr__( 'Main menu font weight', 'aaurora' ),
 		'section'     => 'main_menu',
 		'default'     => 'regularfont',
@@ -418,7 +408,7 @@ Kirki::add_field(
 	'aaurora_theme_options',
 	array(
 		'type'        => 'radio-buttonset',
-		'settings'    => 'mainmenu_arrow_style',
+		'settings'    => 'main_menu_arrow_style',
 		'label'       => esc_attr__( 'Main menu dropdown arrows', 'aaurora' ),
 		'section'     => 'main_menu',
 		'default'     => 'noarrow',

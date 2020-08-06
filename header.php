@@ -9,6 +9,23 @@
  * @package aaurora
  */
 
+$menu_class = '';
+
+$header_class = '';
+
+$header_class .= get_theme_mod('header_layout', 'menu-below-logo');
+
+$header_class .= get_theme_mod('header_layout_color', 'light');
+
+$header_class .= get_theme_mod('search_position', 'header');
+
+$menu_class .= get_theme_mod('main_menu_font_decoration', 'none');
+
+$menu_class .= get_theme_mod('main_menu_font_weight', 'regularfont ');
+
+$menu_class .= get_theme_mod('main_menu_arrow_style', 'noarrow ');
+
+//  todo Top line section should be created and styling should be applied directly.
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -26,7 +43,7 @@
 	<a class="skip-link screen-reader-text" href="#primary">
 		<?php esc_html_e( 'Skip to content', 'aaurora' ); ?></a>
   
-	<header id="masthead" class="site-header">
+	<header id="masthead" class="site-header <?php echo esc_attr($header_class); echo esc_attr($menu_class); ?>">
 		<div class="wrap">
 			<div class="main-header">
 				<div class="site-branding">
