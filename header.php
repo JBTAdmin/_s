@@ -83,7 +83,7 @@ $menu_class .= ' ' . get_theme_mod( 'main_menu_arrow_style', 'noarrow' );
 						<div class="menu-btn__burger"></div>
 					</div>
 					<!--			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">-->
-					<?php // esc_html_e( 'Primary Menu', 'aaurora' ); ?><!--</button>-->.
+					<?php // esc_html_e( 'Primary Menu', 'aaurora' ); ?><!--</button>-->
 					<?php
 					wp_nav_menu(
 						array(
