@@ -730,7 +730,7 @@ select {
 
 @media screen and (min-width: 701px) {
   header .main-header {
-    min-height: 20vh;
+    min-height: 10vh;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -1082,7 +1082,8 @@ main,
 .article-container,
 .comment-form {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  padding: 1rem 0; }
 
 article {
   flex: 1 1 30%;
@@ -1095,6 +1096,10 @@ aside {
 
 article, nav.navigation {
   padding: 0 0 4rem; }
+
+.single-post .primary-content {
+  max-width: 100rem;
+  margin: auto; }
 
 .blog-type-list-content {
   padding-top: 2rem; }

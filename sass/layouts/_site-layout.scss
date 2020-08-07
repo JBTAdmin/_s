@@ -7,6 +7,7 @@ main,
 .comment-form{
 	display: flex;
 	flex-wrap: wrap;
+	padding: 1rem 0;
 }
 
 article {
@@ -24,6 +25,10 @@ article, nav.navigation {
 	padding: 0 0 4rem;
 }
 
+.single-post .primary-content{
+	max-width: 100rem;
+	margin: auto;
+}
 //.blog-type-list {
 //	//display: flex;
 //	//flex-direction: column;
