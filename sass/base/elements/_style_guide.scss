@@ -1,4 +1,4 @@
-/* Here we will design all common Elements e.g. Tables, Pre, Fields, Quote....**/
+/* Here we will design all common Elements e.g. Tables, Pre, Fields**/
 
 p {
 	margin: 0 0 3.6rem;
@@ -29,48 +29,4 @@ h5{
 
 h6{
 	line-height: 1.45;
-}
-
-.wp-block-table {
-	margin-bottom: 3.6rem;
-}
-
-.wp-block-table {
-	 overflow-x: auto;
-}
-
-table{
-	width: 100%;
-}
-
-table {
-	border-collapse: separate;
-	border-spacing: 0;
-	border-top: 1px solid;
-	border-left: 1px solid;
-}
-
-tbody {
-	display: table-row-group;
-	vertical-align: middle;
-	border-color: inherit;
-}
-
-tr {
-	display: table-row;
-	vertical-align: inherit;
-	border-color: inherit;
-}
-
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-.wp-block-table td, .wp-block-table th, table td, table th {
-	border: none;
-	border-top: 1px solid #e5e5e5;
-	border-bottom: 1px solid #e5e5e5;
-	text-align: inherit;
-	padding: 12px 12px 12px 0;
 }

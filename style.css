@@ -363,18 +363,29 @@ h4,
 h5,
 h6 {
   font-family: Merriweather, serif;
-  color: #101010; }
+  color: #17161A;
+  margin-bottom: 3.6rem; }
 
 h1 {
   font-size: calc(20px + 26 * ((100vw - 576px) / 1024));
-  margin: 2rem 0;
-  font-weight: 700; }
+  font-weight: 700;
+  line-height: 1.2; }
 
 h2 {
-  font-size: 2.6rem; }
+  font-size: 2.6rem;
+  line-height: 1.25; }
 
-p {
-  margin-bottom: 1.5em; }
+h3 {
+  line-height: 1.3; }
+
+h4 {
+  line-height: 1.35; }
+
+h5 {
+  line-height: 1.4; }
+
+h6 {
+  line-height: 1.45; }
 
 dfn,
 cite,
@@ -436,7 +447,7 @@ body {
   -webkit-font-smoothing: antialiased; }
 
 p {
-  margin: 0 0 3rem; }
+  margin: 0 0 3.6rem; }
 
 @media screen and (min-width: 910px) and (max-width: 991px) {
   .wrap {
@@ -476,15 +487,43 @@ table {
   margin: 0 0 1.5em;
   width: 100%; }
 
+.wp-block-table {
+  margin-bottom: 3.6rem;
+  overflow-x: auto; }
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-top: 1px solid;
+  border-left: 1px solid; }
+
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit; }
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit; }
+
+.wp-block-table td, .wp-block-table th, table td, table th {
+  border: none;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  text-align: inherit;
+  padding: 12px 12px 12px 0; }
+
 /* Links
 --------------------------------------------- */
 a {
   color: #101010;
   text-decoration: none; }
   a:visited {
-    color: #101010; }
+    color: #0e59b7f5; }
   a:hover, a:focus, a:active {
-    color: #e22c2f; }
+    color: #0e59b7f5; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -764,7 +803,7 @@ select {
   nav .sub-menu a {
     padding: 2rem 3rem; }
   .menu li:hover > a {
-    color: #e22c2f; }
+    color: #0e59b7f5; }
   /* All the properties should not be here*/
   .menu li:hover > ul {
     visibility: visible; } }
@@ -1075,12 +1114,12 @@ textarea:focus {
 /* Layout
 --------------------------------------------- */
 main,
-.main-container,
-.main-footer,
-.wrap-site-info,
 .main-header,
+.main-container,
 .article-container,
-.comment-form {
+.comment-form,
+.main-footer,
+.wrap-site-info {
   display: flex;
   flex-wrap: wrap;
   padding: 1rem 0; }

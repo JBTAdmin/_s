@@ -9,7 +9,6 @@ html {
 	font-size: 62.5%;
 }
 
-
 body {
 	background: $color__background-body; // Fallback for when there is no custom background color defined.
 	/*font-family: 'PT Sans', sans-serif;*/
@@ -19,14 +18,13 @@ body {
 	//font: 400 18px / 1.77778 "Roboto",sans-serif;
 
 	font: 400 18px / 1.5 'PT Sans', sans-serif;
-	color: #222;
+	color: $body_text_light_color;
 	-webkit-font-smoothing: antialiased;
 }
 
 p {
-	margin: 0 0 3rem;
+	margin: 0 0 3.6rem;
 }
-
 
 @media screen and (min-width: 910px) and (max-width: 991px) {
 	.wrap {
