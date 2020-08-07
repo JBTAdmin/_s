@@ -462,6 +462,8 @@ Kirki::add_field(
 	)
 );
 
+
+
 Kirki::add_field(
 	'aaurora_theme_options',
 	array(
@@ -474,50 +476,13 @@ Kirki::add_field(
 	)
 );
 
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
-		'type'        => 'editor',
-		'settings'    => 'footer_copyright',
-		'label'       => esc_attr__( 'Footer copyright text', 'aaurora' ),
-		'description' => esc_attr__( 'Change your footer copyright text.', 'aaurora' ),
-		'section'     => 'footer',
-		'default'     => '',
-	)
-);
-
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
-		'type'        => 'background',
-		'settings'    => 'footer_htmlblock_background',
-		'label'       => esc_attr__( 'Footer HTML block background', 'aaurora' ),
-		'description' => esc_attr__( 'Upload your footer HTML Block background image (1600x1200px JPG recommended). Remove image to remove background.', 'aaurora' ),
-		'section'     => 'footer',
-		'default'     => array(
-			'background-color'      => '#101010',
-			'background-image'      => '',
-			'background-repeat'     => 'no-repeat',
-			'background-position'   => 'center center',
-			'background-size'       => 'cover',
-			'background-attachment' => 'fixed',
-		),
-		'transport'   => 'auto',
-		'output'      => array(
-			array(
-				'element'  => '.site-footer',
-				'property' => 'background-color',
-			),
-		),
-	)
-);
 
 Kirki::add_field(
 	'aaurora_theme_options',
 	array(
 		'type'        => 'color',
-		'settings'    => 'footer_htmlblock_color_text',
-		'label'       => esc_attr__( 'Footer HTML block text color', 'aaurora' ),
+		'settings'    => 'footer_text_color',
+		'label'       => esc_attr__( 'Footer text color', 'aaurora' ),
 		'description' => esc_attr__( 'Change text color in footer HTML block', 'aaurora' ),
 		'section'     => 'footer',
 		'default'     => '#ffffff',
@@ -531,17 +496,38 @@ Kirki::add_field(
 	)
 );
 
+
 Kirki::add_field(
 	'aaurora_theme_options',
 	array(
 		'type'        => 'editor',
-		'settings'    => 'footer_htmlblock_html',
-		'label'       => esc_attr__( 'Footer HTML block content', 'aaurora' ),
-		'description' => esc_attr__( 'You can use any HTML and shortcodes here to display any content in your footer block.', 'aaurora' ),
+		'settings'    => 'footer_copyright',
+		'label'       => esc_attr__( 'Footer copyright text', 'aaurora' ),
+		'description' => esc_attr__( 'Change your footer copyright text.', 'aaurora' ),
 		'section'     => 'footer',
-		'default'     => '',
+		'default'     => '#fff',
 	)
 );
+
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'        => 'color',
+		'settings'    => 'footer_background_color',
+		'label'       => esc_attr__( 'Footer background', 'aaurora' ),
+		'description' => esc_attr__( 'Upload your footer HTML Block background image (1600x1200px JPG recommended). Remove image to remove background.', 'aaurora' ),
+		'section'     => 'footer',
+		'default'     => '#fff',
+		'transport'   => 'auto',
+		'output'      => array(
+			array(
+				'element'  => '.site-footer',
+				'property' => 'background-color',
+			),
+		),
+	)
+);
+
 // END SECTION: Footer
 
 // SECTION: Blog

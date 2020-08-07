@@ -14,6 +14,10 @@ if ( is_active_sidebar( 'sidebar-1' ) ) {
 	$sidebar_page_class = ' with-right-sidebar';
 }
 
+$sidebar_page_class = ' ' . get_theme_mod( 'sidebar_sticky', '0' );
+
+$sidebar_page_class = ' sidebar_position_' . get_theme_mod( 'sidebar_search', 'right' );
+
 ?>
 
 	<div class="site-container">

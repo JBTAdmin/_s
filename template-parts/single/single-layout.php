@@ -11,23 +11,27 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php aaurora_post_thumbnail(); ?>
+    <footer class="entry-footer">
+		<?php aaurora_meta_category_list(); ?>
+    </footer><!-- .entry-footer -->
 
-	<div class="entry-header">
+    <div class="entry-header">
 		<?php
-
+		
 		the_title( '<h1 class="entry-title">', '</h1>' );
-
+		
 		if ( 'post' === get_post_type() ) :
 			?>
-			<div class="entry-meta">
+            <div class="entry-meta">
 				<?php
 				aaurora_posted_on();
 				aaurora_posted_by();
 				?>
-			</div><!-- .entry-meta -->
+            </div><!-- .entry-meta -->
 		<?php endif; ?>
-	</div><!-- .entry-header -->
+    </div><!-- .entry-header -->
+    
+	<?php aaurora_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
@@ -54,8 +58,5 @@
 		);
 		?>
 	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php aaurora_meta_category_list(); ?>
-	</footer><!-- .entry-footer -->
+ 
 </article><!-- #post-<?php the_ID(); ?> -->

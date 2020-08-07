@@ -42,7 +42,7 @@ if ( ! function_exists( 'aaurora_posted_by' ) ) :
 	function aaurora_posted_by() {
 		$byline = sprintf(
 		/* translators: %s: post author. */
-			esc_html_x( '/     %s', 'post author', 'aaurora' ),
+			esc_html_x( '%s', 'post author', 'aaurora' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
@@ -135,7 +135,7 @@ if ( ! function_exists( 'aaurora_post_thumbnail' ) ) :
 			?>
 
 			<div class="post-thumbnail">
-				<?php the_post_thumbnail( 'aaurora-blog-single-post' ); ?>
+				<?php the_post_thumbnail( 'aaurora-blog-single-post-no-sidebar' ); ?>
 			</div><!-- .post-thumbnail -->
 		<?php else : ?>
 

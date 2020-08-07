@@ -445,7 +445,7 @@ p {
 
 @media screen and (min-width: 992px) {
   .wrap {
-    width: 1200px;
+    width: 1400px;
     margin: auto; } }
 
 @media screen and (min-width: 768px) and (max-width: 910px) {
@@ -909,6 +909,9 @@ nav.navigation {
   line-height: 1.2;
   border-bottom: 3px solid #e22c2f; }
 
+header .wrap {
+  width: 100%; }
+
 /* Footer
 --------------------------------------------- */
 .entry-footer {
@@ -1082,7 +1085,7 @@ main,
   flex-wrap: wrap; }
 
 article {
-  flex: 1 1 30rem;
+  flex: 1 1 30%;
   margin: 0 1% 1%;
   min-width: 0; }
 
@@ -1094,12 +1097,22 @@ article, nav.navigation {
   padding: 0 0 4rem; }
 
 .blog-type-list-content {
-  padding-top: 3rem; }
+  padding-top: 2rem; }
+
+.cat-links > a {
+  font-size: 1.5rem;
+  color: #0e59b7f5;
+  letter-spacing: 1px;
+  font-weight: 600; }
 
 .blog-type-list-content .entry-header > a {
-  text-transform: uppercase;
-  color: #c3323a;
-  font-weight: 600; }
+  font-weight: 600;
+  font-size: 1.7rem;
+  border-bottom: 1px solid black; }
+
+.blog-type-list-content .entry-header > a:hover {
+  color: #0e59b7f5;
+  border-bottom-color: #0e59b7f5; }
 
 .entry-title {
   margin-top: 1rem;
@@ -1109,12 +1122,12 @@ article, nav.navigation {
 
 .home article,
 .archive article {
-  max-width: 35rem; }
+  max-width: 43rem; }
 
 main,
 .article-container {
   margin: 0 2rem;
-  max-width: 120rem;
+  max-width: 140rem;
   flex: 2 1 80rem;
   justify-content: space-between;
   overflow-x: auto; }

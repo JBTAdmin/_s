@@ -260,10 +260,10 @@ add_action( 'after_setup_theme', 'mytheme_setup_theme_supported_features' );
  * Theme images sizes
  */
 
-add_image_size( 'aaurora-blog-archive', 400, 430, true ); // This is used for Blog Layout 1
+add_image_size( 'aaurora-blog-1-featured-image', 530, 430, true ); // This is used for Blog Layout 1
 add_image_size( 'aaurora-blog-2-featured-image', 125, 125, true ); // This is used for Blog Layout 2
-add_image_size( 'aaurora-blog-post-sidebar', 400, 500, true );
-add_image_size( 'aaurora-blog-single-post', 600, 500, true );
+add_image_size( 'aaurora-blog-single-post-sidebar', 400, 500, true );
+add_image_size( 'aaurora-blog-single-post-no-sidebar', 700, 500, true );
 
 /*  Kirki plugin related changed */
 
