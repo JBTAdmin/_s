@@ -26,23 +26,8 @@ p {
 	margin: 0 0 3.6rem;
 }
 
-@media screen and (min-width: 910px) and (max-width: 991px) {
-	.wrap {
-		width: 910px;
-		margin: auto;
-	}
-}
-
-@media screen and (min-width: 992px) {
-	.wrap {
-		width: 1400px;
-		margin: auto;
-	}
-}
-
-@media screen and (min-width: 768px) and (max-width: 910px) {
-	.wrap {
-		width: 750px;
-		margin: auto;
-	}
+.wrap {
+	width: 80%;
+	margin: auto;
+	max-width: 140rem;
 }

@@ -8,40 +8,40 @@
 	flex-wrap: wrap;
 }
 
+main{
+	flex: 2 1 80rem;
+	max-width: 140rem;  // todo need to check if this can be removed as other width is there screen and (min-width: 992px)
+}
+
 aside {
 	flex: 1 1 30rem;
-	margin: 2rem;
 }
-main,
+
 .article-container
 {
-	margin: 2rem;
-	max-width: 140rem;  // todo need to check if this can be removed as other width is there screen and (min-width: 992px)
-	flex: 2 1 80rem;
 	justify-content: space-between;
 	overflow-x: auto;
 }
 
 // todo Need to differentiate between logic for Single Post / Page and Archives
-article {
-	flex: 1 1 30%;
-	margin: 1%;
-	min-width: 0;
-}
-
-.single-post .primary-content{
-	max-width: 100rem;
-	margin: auto;
-}
-
-// Probbaly those are part of article section should be moved to content
-.blog-type-list-content {
-	padding-top: 2rem;
+main, aside {
+	margin: 2rem auto;
 }
 
 .home article,
 .archive article {
-	max-width: 43rem;
+	max-width: 31%; //todo see if this percent is working or not
+	flex: 1 1 31%;
+	min-width: 42rem;
+	//min-width: 0; // TODO this is used for images when it crosses the wodth of the area so that it can be accomodated appropriately.
+}
+
+.single-post .primary-content{
+	max-width: 100rem;
+
+	// todo problem when sidebar is large and content is small it auto margin height too
+	// Should be enabled when there is no sidebar
+	//margin: auto;
 }
 
 .entry-title{
@@ -51,23 +51,28 @@ article {
 	line-height: 1.4;
 }
 
-.cat-links > a{
-	font-size: 1.5rem;
-	color: #0e59b7f5;
-	letter-spacing: 1px;
-	font-weight: 600;
-}
-.blog-type-list-content .entry-header > a{
-	font-weight: 600;
-	font-size: 1.7rem;
-	border-bottom: 1px solid black;
-}
+.blog-type-list-content {
+	padding-top: 2rem;
 
-.blog-type-list-content .entry-header > a:hover{
-	color: $theme__color;
-	border-bottom-color: $theme__color;
+	.entry-header{
+		& .cat-links > a{
+			font-size: 1.5rem;
+			color: $theme__color;
+			letter-spacing: 1px;
+			font-weight: 600;
+		}
+		& > a{
+			font-weight: 600;
+			font-size: 1.7rem;
+			border-bottom: 1px solid black;
+			color: inherit;
+		}
+		& > a:hover{
+			color: $theme__color;
+			border-bottom-color: $theme__color;
+		}
+	}
 }
-
 
 
 
