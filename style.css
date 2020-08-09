@@ -771,7 +771,6 @@ select {
   header .main-header {
     min-height: 10vh;
     margin: auto;
-    display: flex;
     justify-content: space-between;
     align-items: center; }
   .menu {
@@ -811,11 +810,6 @@ select {
 /* Navigation
 --------------------------------------------- */
 /** TODO NEED TO CHECK WHAT IS NOT USED**/
-.site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
-.post-navigation {
-  margin: 0 0 1.5em; }
-
 .comment-navigation .nav-links,
 .posts-navigation .nav-links,
 .post-navigation .nav-links {
@@ -849,9 +843,6 @@ select {
 
 .post-navigation .nav-previous {
   text-align: start; }
-
-nav.navigation {
-  padding: 5rem 0 5rem !important; }
 
 .site-main .post-navigation {
   border-top: 1px dashed #9ea1a4;
@@ -895,27 +886,16 @@ nav.navigation {
   width: 100%;
   text-align: center; }
 
-nav.navigation {
-  width: 100%; }
-
 /* Widgets
 --------------------------------------------- */
 /* Widget Styling*/
 .widget-area .widget {
-  margin-bottom: 45px;
-  font-size: 14px;
-  line-height: 23px;
-  color: #1b1d21; }
+  margin: 1%;
+  font-size: 14px; }
 
 .widget-area .widget-title {
-  padding-bottom: 18px;
-  margin-bottom: 25px;
   border-bottom: 1px solid #e5e5e5;
   position: relative;
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: 500;
-  color: #222;
   letter-spacing: 0.3rem; }
 
 .widget-area .widget-title:before {
@@ -937,9 +917,6 @@ nav.navigation {
   margin: auto;
   justify-content: center; }
 
-.primary-content header {
-  flex-basis: 100%; }
-
 .site-title {
   text-transform: uppercase;
   font-size: 1.7rem;
@@ -953,9 +930,6 @@ header .wrap {
 
 /* Footer
 --------------------------------------------- */
-.entry-footer {
-  margin-top: 3rem; }
-
 .site-footer {
   background-color: #17161a;
   color: rgba(255, 255, 255, 0.8); }
@@ -1113,7 +1087,6 @@ textarea:focus {
 
 /* Layout
 --------------------------------------------- */
-main,
 .main-header,
 .main-container,
 .article-container,
@@ -1121,20 +1094,24 @@ main,
 .main-footer,
 .wrap-site-info {
   display: flex;
-  flex-wrap: wrap;
-  padding: 1rem 0; }
-
-article {
-  flex: 1 1 30%;
-  margin: 0 1% 1%;
-  min-width: 0; }
+  flex-wrap: wrap; }
 
 aside {
   flex: 1 1 30rem;
-  padding: 0 2rem; }
+  margin: 2rem; }
 
-article, nav.navigation {
-  padding: 0 0 4rem; }
+main,
+.article-container {
+  margin: 2rem;
+  max-width: 140rem;
+  flex: 2 1 80rem;
+  justify-content: space-between;
+  overflow-x: auto; }
+
+article {
+  flex: 1 1 30%;
+  margin: 1%;
+  min-width: 0; }
 
 .single-post .primary-content {
   max-width: 100rem;
@@ -1142,6 +1119,16 @@ article, nav.navigation {
 
 .blog-type-list-content {
   padding-top: 2rem; }
+
+.home article,
+.archive article {
+  max-width: 43rem; }
+
+.entry-title {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-size: 2.4rem;
+  line-height: 1.4; }
 
 .cat-links > a {
   font-size: 1.5rem;
@@ -1157,24 +1144,6 @@ article, nav.navigation {
 .blog-type-list-content .entry-header > a:hover {
   color: #0e59b7f5;
   border-bottom-color: #0e59b7f5; }
-
-.entry-title {
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-  font-size: 2.4rem;
-  line-height: 1.4; }
-
-.home article,
-.archive article {
-  max-width: 43rem; }
-
-main,
-.article-container {
-  margin: 0 2rem;
-  max-width: 140rem;
-  flex: 2 1 80rem;
-  justify-content: space-between;
-  overflow-x: auto; }
 
 .blog-layout-2 {
   flex: 1 1 50rem;

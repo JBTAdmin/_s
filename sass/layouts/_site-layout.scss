@@ -1,4 +1,3 @@
-main,
 .main-header,
 .main-container,
 .article-container,
@@ -7,24 +6,27 @@ main,
 .wrap-site-info {
 	display: flex;
 	flex-wrap: wrap;
-	padding: 1rem 0;
-}
-
-
-// todo Need to differentiate between logic for Single Post / Page and Archives
-article {
-	flex: 1 1 30%;
-	margin: 0 1% 1%;
-	min-width: 0;
 }
 
 aside {
 	flex: 1 1 30rem;
-	padding: 0 2rem;
+	margin: 2rem;
+}
+main,
+.article-container
+{
+	margin: 2rem;
+	max-width: 140rem;  // todo need to check if this can be removed as other width is there screen and (min-width: 992px)
+	flex: 2 1 80rem;
+	justify-content: space-between;
+	overflow-x: auto;
 }
 
-article, nav.navigation {
-	padding: 0 0 4rem;
+// todo Need to differentiate between logic for Single Post / Page and Archives
+article {
+	flex: 1 1 30%;
+	margin: 1%;
+	min-width: 0;
 }
 
 .single-post .primary-content{
@@ -35,6 +37,18 @@ article, nav.navigation {
 // Probbaly those are part of article section should be moved to content
 .blog-type-list-content {
 	padding-top: 2rem;
+}
+
+.home article,
+.archive article {
+	max-width: 43rem;
+}
+
+.entry-title{
+	margin-top: 1rem;
+	margin-bottom: 2rem;
+	font-size: 2.4rem;	// todo can these two thing be centralized?
+	line-height: 1.4;
 }
 
 .cat-links > a{
@@ -54,26 +68,8 @@ article, nav.navigation {
 	border-bottom-color: $theme__color;
 }
 
-.entry-title{
-	margin-top: 1rem;
-	margin-bottom: 2rem;
-	font-size: 2.4rem;	// todo can these two thing be centralized?
-	line-height: 1.4;
-}
 
-.home article,
-.archive article {
-	max-width: 43rem;
-}
 
-main,
-.article-container {
-	margin: 0 2rem;
-	max-width: 140rem;  // todo need to check if this can be removed as other width is there screen and (min-width: 992px)
-	flex: 2 1 80rem;
-	justify-content: space-between;
-	overflow-x: auto;
-}
 
 // This is for blog layout new
 .blog-layout-2{
