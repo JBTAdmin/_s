@@ -647,15 +647,15 @@ Kirki::add_field(
 		'label'       => esc_attr__( 'Post Title Size', 'aaurora' ),
 		'section'     => 'blog_post',
 		'default'     => array(
-			'font-size'      => '2.4rem',
-			'line-height'    => '1.4',
-			'letter-spacing' => '0',
+			'font-size'      => '7.2rem',
+			'line-height'    => '1.1',
+			'letter-spacing' => '-2.1px',
 			'text-transform' => 'none',
 		),
 		'description' => esc_attr__( 'Font used in Single Post Header .', 'aaurora' ),
 		'output'      => array(
 			array(
-				'element' => array( '.entry-title' ),
+				'element' => array( 'h1.entry-title' ),
 			),
 		),
 	)
@@ -1003,7 +1003,7 @@ Kirki::add_field(
 		'label'       => esc_attr__( 'H1 font', 'aaurora' ),
 		'section'     => 'fonts',
 		'default'     => array(
-			'font-family' => 'Nunito',
+			'font-family' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
 			'variant'     => '800',
 			'font-size'      => '14px',
 			'line-height'    => '1.5',
@@ -1027,7 +1027,7 @@ Kirki::add_field(
 		'label'       => esc_attr__( 'H2 font', 'aaurora' ),
 		'section'     => 'fonts',
 		'default'     => array(
-			'font-family' => 'Nunito',
+			'font-family' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
 			'variant'     => '800',
 			'font-size'      => '14px',
 			'line-height'    => '1.5',
@@ -1051,7 +1051,7 @@ Kirki::add_field(
 		'label'       => esc_attr__( 'H3 font', 'aaurora' ),
 		'section'     => 'fonts',
 		'default'     => array(
-			'font-family' => 'Nunito',
+			'font-family' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
 			'variant'     => '800',
 			'font-size'      => '14px',
 			'line-height'    => '1.5',
@@ -1074,11 +1074,11 @@ Kirki::add_field(
 		'settings'    => 'body_font',
 		'label'       => esc_attr__( 'Body font', 'aaurora' ),
 		'section'     => 'fonts',
-		'default'     => array(
-			'font-family' => 'Nunito',
-			'variant'     => '800',
-			'font-size'      => '14px',
-			'line-height'    => '1.5',
+		'default'     => array(   // TODO  In default can i use Initial as font-family
+			'font-family' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
+			'variant'     => '400',
+			'font-size'      => '18px',
+			'line-height'    => '1.8',
 			'letter-spacing' => '0',
 			'text-transform' => 'none',
 		),

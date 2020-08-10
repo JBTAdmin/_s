@@ -20,6 +20,7 @@
 		<div class="blog-list-content-meta-info">
 		<?php
 			aaurora_meta_category_list();
+			aaurora_posted_on();
 		?>
 		</div>
 		<?php

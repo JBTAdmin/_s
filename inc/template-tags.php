@@ -123,7 +123,7 @@ if ( ! function_exists( 'aaurora_post_thumbnail' ) ) :
 			<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 				<div class="no-post-thumbnail">
 
-					<div class="post-thumbnail-dropcase">
+					<div class="post-thumbnail-drop-case">
 						<?php esc_html( get_the_title()[0] ); ?> <!-- todo VIVEKA WHAT IF NO TITLE IS TEHRE-->
 					</div>
 				</div><!-- .post-thumbnail -->

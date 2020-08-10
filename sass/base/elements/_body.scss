@@ -17,9 +17,11 @@ body {
 	//font-family: 'Roboto', sans-serif;
 	//font: 400 18px / 1.77778 "Roboto",sans-serif;
 
-	font: 400 18px / 1.5 'PT Sans', sans-serif;
+	//font: 400 18px / 1.5 'PT Sans', sans-serif;
+	font-family: $font__main;
 	color: $body_text_light_color;
 	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
 }
 
 p {
