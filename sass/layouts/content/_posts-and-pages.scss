@@ -14,7 +14,8 @@
 }
 
 .entry-meta span a {
-	color: rgba(16, 16, 16, 0.8);
+	color: #000;
+	font-weight: 500;
 }
 
 .no-post-thumbnail {
@@ -56,31 +57,40 @@
 	font-weight: 700;
 }
 
+.blog-list-content-meta-info{
+	font-size: 1.5rem;
+	color: rgba(16,16,16,.8);
+	letter-spacing: 1px;
+	font-weight: 500;
+	padding-bottom: 1.6rem;
+}
+
 .blog-type-list-content {
 	padding-top: 2rem;
 	padding-bottom: 3rem;
 
 	.entry-header{
-		& .cat-links > a{
-			font-size: 1.5rem;
-			color: rgba(16,16,16,.8);
-			letter-spacing: 1px;
-			font-weight: 600;
-		}
+
 		& > a{
 			font-weight: 600;
 			font-size: 1.7rem;
-			border-bottom: 1px solid black;
-			color: inherit;
+			color: #c3323a;
+			text-transform: uppercase;
 		}
 		& > a:hover{
 			color: $theme__color;
 			border-bottom-color: $theme__color;
 		}
+
+		& .entry-title{
+			margin-bottom: 1.8rem;
+		}
 	}
 }
 
-
+h1.entry-title{
+	margin-bottom: 0.8rem;
+}
 
 
 

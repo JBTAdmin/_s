@@ -24,8 +24,8 @@
 			?>
             <div class="entry-meta">
 				<?php
-				aaurora_posted_on();
 				aaurora_posted_by();
+				aaurora_posted_on();
 				?>
             </div><!-- .entry-meta -->
 		<?php endif; ?>

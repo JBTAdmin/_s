@@ -168,3 +168,53 @@ if ( ! function_exists( 'wp_body_open' ) ) :
 		do_action( 'wp_body_open' );
 	}
 endif;
+
+
+
+/**
+ * Load an inline SVG.
+ *
+ * @param string $filename The filename of the SVG.
+ *
+ * @return void
+ */
+function load_inline_svg( $filename ) {
+	
+	ob_start();
+	
+	locate_template(
+	    "assets/images/{$filename}",
+		true,
+		false
+	);
+	
+	echo wp_kses(
+		ob_get_clean(),
+		array_merge(
+			wp_kses_allowed_html( 'post' ),
+			array(
+				'svg'  => array(
+					'role'        => true,
+					'width'       => true,
+					'height'      => true,
+					'fill'        => true,
+					'xmlns'       => true,
+					'viewbox'     => true,
+					'aria-hidden' => true,
+				),
+				'path' => array(
+					'd'              => true,
+					'fill'           => true,
+					'fill-rule'      => true,
+					'stroke'         => true,
+					'stroke-width'   => true,
+					'stroke-linecap' => true,
+				),
+				'g'    => array(
+					'd'    => true,
+					'fill' => true,
+				),
+			)
+		)
+	);
+}

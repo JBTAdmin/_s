@@ -15,49 +15,56 @@
 	z-index: 1000;
 }
 
-@media screen and (max-width: 700px) {
-
-	.menu {
+	.sidebar-menu {
 		display: none;
 		flex-direction: column;
 		justify-content: space-evenly;
 	}
 
-	.menu.open {
+	.sidebar-menu.open {
 		display: flex;
 	}
 
-	.menu li {
+	.sidebar-menu li {
 		position: relative;
 		list-style: none;
 		text-decoration: none;
 	}
 
-	nav ul ul {
+	aside ul ul {
 		display: none;
 		flex-direction: column;
 		margin-left: 1rem;
 	}
 
-	nav .submenu a {
+	aside .submenu a {
 		padding: 2rem 3rem;
 		font-size: 1.2rem;
 		width: 20rem;
 		letter-spacing: 0.1rem;
 	}
 
-	.menu li:hover > a {
+	.sidebar-menu li:hover > a {
 		color: #e22c2f;
 		border-left: 2px solid #FF0000;
 	}
 
-	.menu li:active > a {
+	.sidebar-menu li:active > a {
 		color: #e22c2f;
 	}
 
-	.menu li:hover > ul {
+	.sidebar-menu li:hover > ul {
 		display: flex;   // todo Should it controlled via visibility??
 		width: 20rem;
+	}
+
+@media screen and (max-width: 700px) {
+	.sidebar-menu {
+		display: block;
+	}
+
+	.menu {
+		display: none;
 	}
 
 	.menu-btn {
@@ -65,7 +72,7 @@
 		width: 5rem;
 		height: 5rem;
 		position: relative;
-		display: flex;    // todo do i need this??
+		display: none;    // todo do i need this??
 		align-items: center;
 		justify-content: center;
 		transition: all 0.5 ease-in-out;
@@ -111,14 +118,15 @@
 	}
 }
 
+header .main-header {
+	min-height: 10vh;
+	height: 12rem;
+	margin: auto;
+	justify-content: space-between;
+	align-items: center;
+}
+
 @media screen and (min-width: 701px) {
-	header .main-header {
-		min-height: 10vh;
-		height: 12rem;
-		margin: auto;
-		justify-content: space-between;
-		align-items: center;
-	}
 
 	.menu {
 		display: flex;

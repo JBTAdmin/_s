@@ -7,6 +7,11 @@
 
 html {
 	font-size: 62.5%;
+	width: 100%;
+}
+
+div {
+	outline: none;
 }
 
 body {
@@ -20,8 +25,9 @@ body {
 	//font: 400 18px / 1.5 'PT Sans', sans-serif;
 	font-family: $font__main;
 	color: $body_text_light_color;
-	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 p {
