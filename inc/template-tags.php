@@ -161,7 +161,7 @@ if ( ! function_exists( 'aaurora_post_thumbnail' ) ) :
                 </span>
                 <?php endif; ?>
                 <span class="post-date">
-                    24 June
+                    30 May
                 </span>
 			</a>
         </div>
