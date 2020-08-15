@@ -124,9 +124,12 @@ if ( ! function_exists( 'aaurora_post_thumbnail' ) ) :
 				<div class="no-post-thumbnail">
 
 					<div class="post-thumbnail-drop-case">
-						<?php esc_html( get_the_title()[0] ); ?> <!-- todo VIVEKA WHAT IF NO TITLE IS TEHRE-->
+						<?php echo esc_html( get_the_title()[0] ); ?> <!-- todo VIVEKA WHAT IF NO TITLE IS THERE-->
 					</div>
 				</div><!-- .post-thumbnail -->
+                <span class="post-date">
+                    30 May
+                </span>
 			</a>
 			<?php
 			return;
@@ -138,7 +141,7 @@ if ( ! function_exists( 'aaurora_post_thumbnail' ) ) :
 				<?php the_post_thumbnail( 'aaurora-blog-single-post-no-sidebar' ); ?>
 			</div><!-- .post-thumbnail -->
 		<?php else : ?>
-
+        <div class="post-thumbnail-container">
 			<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 				<?php
 				the_post_thumbnail(
@@ -151,8 +154,17 @@ if ( ! function_exists( 'aaurora_post_thumbnail' ) ) :
 						),
 					)
 				);
+			if ( is_sticky() ) :
 				?>
+                <span class="badge">
+                    <?php load_inline_svg( 'sticky.svg' ); ?>
+                </span>
+                <?php endif; ?>
+                <span class="post-date">
+                    24 June
+                </span>
 			</a>
+        </div>
 			<?php
 		endif; // End is_singular().
 	}
@@ -201,6 +213,8 @@ function load_inline_svg( $filename ) {
 					'xmlns'       => true,
 					'viewbox'     => true,
 					'aria-hidden' => true,
+                    'stroke'      => true,
+                    'stroke-width'=> true
 				),
 				'path' => array(
 					'd'              => true,

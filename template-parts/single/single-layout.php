@@ -9,7 +9,7 @@
 
 ?>
 <div class="article-container">
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('post-article'); ?>>
 
     <footer class="entry-footer">
 		<?php aaurora_meta_category_list(); ?>

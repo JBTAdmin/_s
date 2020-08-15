@@ -7,18 +7,24 @@
 	.site-main & {
 
 	}
-
-	.nav-links {
-		display: flex;
-	}
+	//
+	//.nav-links {
+	//	display: flex;
+	//}
 
 	.nav-previous {
-		flex: 1 0 50%;
+		flex: 1 1 50%;
 	}
 
 	.nav-next {
 		text-align: end;
-		flex: 1 0 50%;
+		flex: 1 1 50%;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.post-navigation .nav-links {
+		flex-direction: column;
 	}
 }
 

@@ -9,12 +9,13 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('blog-post-article'); ?>>
 
 	<div  class="blog-type-list">
 
+ 
 	<?php aaurora_post_thumbnail('aaurora-blog-1-featured-image'); ?>
-
+ 
 	<div class="blog-type-list-content">
 	<div class="entry-header">
 		<div class="blog-list-content-meta-info">
@@ -28,7 +29,9 @@
 		?>
 
 		<a href="<?php echo esc_url( get_permalink() ); ?>" class="btn btn-link brand-color-hover">
-				<?php esc_html_e( 'Read More', 'aaurora' ); ?>
+				<?php esc_html_e( 'Read More', 'aaurora' );
+//				load_inline_svg( 'right_arrow.svg' );
+				?>
 		</a>
 
 	</div><!-- .entry-header -->

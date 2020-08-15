@@ -19,9 +19,10 @@
 }
 
 .no-post-thumbnail {
-	width: 35rem;
+	width: inherit;
 	height: 23rem;
-	background: #fed672;
+	//background: #fed672;
+	background: #c3323a;
 	display: flex;  // todo See if this is the right way to do this.
 	justify-content: center;
 	align-items: center;
@@ -31,20 +32,9 @@
 
 .post-thumbnail-drop-case {
 	font-size: 25rem;
-	color: rgba(0, 0, 0, .07);
+	//color: rgba(0, 0, 0, .07);
+	color: rgba(255,255,255,.3);
 	font-family: 'Finger Paint', cursive;
-}
-
-.post-thumbnail-drop-case::before {
-	content: '';
-	top: 2vh;
-	right: 2vh;
-	bottom: 1vh;
-	opacity: 0.5;
-	background-image: radial-gradient(#141c3a 6%, transparent 0);
-	background-size: 28px 28px;
-	position: absolute;
-	width: 100%;
 }
 
 .entry-title > a{
@@ -52,9 +42,10 @@
 	margin-bottom: 2rem;
 	font-size: 2.4rem;	// todo can these two thing be centralized?
 	line-height: 1.4;
-	color: inherit;
+	color: rgb(16,16,16);
 	letter-spacing: normal;
 	font-weight: 700;
+	font-family: 'Inter', sans-serif;
 }
 
 .blog-list-content-meta-info{
@@ -62,7 +53,7 @@
 	color: rgba(16,16,16,.8);
 	letter-spacing: 1px;
 	font-weight: 500;
-	padding-bottom: 1.6rem;
+	padding-bottom: 1rem;
 }
 
 .blog-type-list-content {
@@ -73,7 +64,7 @@
 
 		& > a{
 			font-weight: 600;
-			font-size: 1.7rem;
+			font-size: 1.4rem;
 			color: #c3323a;
 			text-transform: uppercase;
 		}

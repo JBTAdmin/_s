@@ -50,7 +50,8 @@ $menu_class .= ' ' . get_theme_mod( 'main_menu_arrow_style', 'noarrow' );
 	">
 		<div class="wrap">
 			<div class="main-header">
-				<div class="site-branding" style="width: 12rem">  // TODO MOVE THIS TO SCSS
+				<div class="site-branding" style="width: 12rem">
+<!--                    // TODO MOVE THIS TO SCSS-->
 					<?php
 
 					the_custom_logo();

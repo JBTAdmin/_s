@@ -260,7 +260,7 @@ add_action( 'after_setup_theme', 'mytheme_setup_theme_supported_features' );
  * Theme images sizes
  */
 
-add_image_size( 'aaurora-blog-1-featured-image', 530, 430, true ); // This is used for Blog Layout 1
+add_image_size( 'aaurora-blog-1-featured-image', 530, 420, true ); // This is used for Blog Layout 1
 add_image_size( 'aaurora-blog-2-featured-image', 125, 125, true ); // This is used for Blog Layout 2
 add_image_size( 'aaurora-blog-single-post-sidebar', 400, 500, true );
 add_image_size( 'aaurora-blog-single-post-no-sidebar', 1000, 500, true );
@@ -369,6 +369,6 @@ function numeric_posts_nav() {
  */
 
 function google_fonts() {
-	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap', false );
+	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Inter&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap', false );
 }
 add_action( 'wp_enqueue_scripts', 'google_fonts' );
