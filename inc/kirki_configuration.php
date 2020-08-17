@@ -449,37 +449,6 @@ Kirki::add_section(
 Kirki::add_field(
 	'aaurora_theme_options',
 	array(
-		'type'        => 'radio-buttonset',
-		'settings'    => 'footer_style',
-		'label'       => esc_attr__( 'Footer style', 'aaurora' ),
-		'section'     => 'footer',
-		'default'     => 'white',
-		'choices'     => array(
-			'white' => esc_attr__( 'Light', 'aaurora' ),
-			'black' => esc_attr__( 'Dark', 'aaurora' ),
-		),
-		'description' => esc_attr__( 'Change colors styling for footer.', 'aaurora' ),
-	)
-);
-
-
-
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
-		'type'        => 'toggle',
-		'settings'    => 'footer_sidebar_homepage',
-		'label'       => esc_attr__( 'Footer sidebar only on homepage', 'aaurora' ),
-		'description' => esc_attr__( 'Disable this option to show footer sidebar on all site pages.', 'aaurora' ),
-		'section'     => 'footer',
-		'default'     => '1',
-	)
-);
-
-
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
 		'type'        => 'color',
 		'settings'    => 'footer_text_color',
 		'label'       => esc_attr__( 'Footer text color', 'aaurora' ),
@@ -489,7 +458,7 @@ Kirki::add_field(
 		'transport'   => 'auto',
 		'output'      => array(
 			array(
-				'element'  => '.site-footer a',
+				'element'  => '.site-footer',
 				'property' => 'color',
 			),
 		),

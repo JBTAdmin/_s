@@ -9,19 +9,6 @@
  * @package aaurora
  */
 
-$footer_widgets_count = 0;
-if ( is_active_sidebar( 'footer-column-1' ) ) {
-	$footer_widgets_count ++;
-}
-if ( is_active_sidebar( 'footer-column-2' ) ) {
-	$footer_widgets_count ++;
-}
-if ( is_active_sidebar( 'footer-column-3' ) ) {
-	$footer_widgets_count ++;
-}
-if ( is_active_sidebar( 'footer-column-4' ) ) {
-	$footer_widgets_count ++;
-}
 
 $site_info_text_left   = 'Terms of Use / Privacy Policy / Sitemap / About Us / Contact Us / Partner Site iPowerUser';
 $site_info_text_center = '';
@@ -30,51 +17,6 @@ $site_info_text_right  = 'crafted with by JBT Team / Copyright . JBT';
 ?>
 
 <div id="colophon" class="site-footer">
-	<footer>
-		<div class="wrap">
-			<div class="main-footer">
-				<?php if ( is_active_sidebar( 'footer-column-1' ) ) : ?>
-					<div class="footer-sidebar-1-wrapper">
-						<div class="sidebar footer-sidebar-1-container">
-							<ul id="footer-sidebar-1">
-								<?php dynamic_sidebar( 'footer-column-1' ); ?>
-							</ul>
-						</div>
-					</div>
-				<?php endif; ?>
-				
-				<?php if ( is_active_sidebar( 'footer-column-2' ) ) : ?>
-					<div class="footer-sidebar-2-wrapper">
-						<div class="sidebar footer-sidebar-2-container">
-							<ul id="footer-sidebar-2">
-								<?php dynamic_sidebar( 'footer-column-2' ); ?>
-							</ul>
-						</div>
-					</div>
-				<?php endif; ?>
-				
-				<?php if ( is_active_sidebar( 'footer-column-3' ) ) : ?>
-					<div class="footer-sidebar-3-wrapper">
-						<div class="sidebar footer-sidebar-3-container">
-							<ul id="footer-sidebar-3">
-								<?php dynamic_sidebar( 'footer-column-3' ); ?>
-							</ul>
-						</div>
-					</div>
-				<?php endif; ?>
-				
-				<?php if ( is_active_sidebar( 'footer-column-4' ) ) : ?>
-					<div class="footer-sidebar-4-wrapper">
-						<div class="sidebar footer-sidebar-4-container">
-							<ul id="footer-sidebar-4">
-								<?php dynamic_sidebar( 'footer-column-4' ); ?>
-							</ul>
-						</div>
-					</div>
-				<?php endif; ?>
-			</div>
-		</div>
-	</footer>
 	<footer>
 		<div class="wrap">
 			<div class="wrap-site-info">
