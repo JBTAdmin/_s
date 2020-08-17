@@ -5,7 +5,7 @@ aside{
 	width: 407px;
 	height: 100%;
 	position: fixed;
-	padding: 3rem;
+	//padding: 3rem;
 	top: 0;
 	right: 0;
 	display: block;
@@ -13,6 +13,11 @@ aside{
 	z-index: 9999;
 	transform: translate(100%,0);
 	transition: transform .5s,width .5s ease-in-out;
+	font-size: 1.5rem;
+}
+
+site-header, .aside-header{
+	border-bottom: 1px solid #e9ecef;
 }
 
 @media screen and (max-width: 48rem){
@@ -68,7 +73,13 @@ aside.open{
 .sidebar-close-btn{
 	display: flex;
 	justify-content: flex-end;
-	margin-bottom: 4rem;
+	margin-top: 1rem;
+	float: right;
+}
+
+.aside-header{
+	padding: 3rem 2rem 2rem 5rem;
+	margin-bottom: 3rem;
 }
 
 // FOr Sidebar Categories
@@ -77,7 +88,7 @@ aside.open{
 	margin: 0;
 	list-style: none;
 	padding: 0;
-	display: inline-block;
+	//display: inline-block;
 	color: #444;
 }
 

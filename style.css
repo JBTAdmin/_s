@@ -724,23 +724,26 @@ select {
 .sub-menu {
   z-index: 1000; }
 
-.sidebar-menu {
-  display: none;
-  flex-direction: column;
-  justify-content: space-evenly; }
-
-.sidebar-menu.open {
-  display: flex; }
-
 .sidebar-menu li {
   position: relative;
   list-style: none;
-  text-decoration: none; }
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
 
-aside ul ul {
-  display: none;
-  flex-direction: column;
-  margin-left: 1rem; }
+aside a {
+  line-height: 4.5rem; }
+
+.sidebar-menu li:hover > ul {
+  display: block; }
+
+.sidebar-menu li > ul {
+  display: none; }
+
+.sidebar-menu li.menu-item-has-children > a:after {
+  content: '\003E'; }
+
+.sidebar-menu li.menu-item-has-children:hover > a:after {
+  content: '\2190'; }
 
 aside .submenu a {
   padding: 2rem 3rem;
@@ -754,10 +757,6 @@ aside .submenu a {
 
 .sidebar-menu li:active > a {
   color: #e22c2f; }
-
-.sidebar-menu li:hover > ul {
-  display: flex;
-  width: 20rem; }
 
 @media screen and (max-width: 700px) {
   .sidebar-menu {
@@ -840,6 +839,16 @@ header .main-header {
   /* All the properties should not be here*/
   .menu li:hover > ul {
     visibility: visible; } }
+
+/** SIDEBAR MENU */
+.sidebar-menu .sub-menu a {
+  padding-left: 2rem; }
+
+.sidebar-menu .sub-menu {
+  border-top: 1px solid rgba(0, 0, 0, 0.1); }
+
+.sidebar-menu li:last-child {
+  border: none; }
 
 /* Navigation
 --------------------------------------------- */
@@ -1154,14 +1163,17 @@ aside {
   width: 407px;
   height: 100%;
   position: fixed;
-  padding: 3rem;
   top: 0;
   right: 0;
   display: block;
   overflow: auto;
   z-index: 9999;
   transform: translate(100%, 0);
-  transition: transform .5s,width .5s ease-in-out; }
+  transition: transform .5s,width .5s ease-in-out;
+  font-size: 1.5rem; }
+
+site-header, .aside-header {
+  border-bottom: 1px solid #e9ecef; }
 
 @media screen and (max-width: 48rem) {
   aside {
@@ -1209,13 +1221,17 @@ aside.open {
 .sidebar-close-btn {
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 4rem; }
+  margin-top: 1rem;
+  float: right; }
+
+.aside-header {
+  padding: 3rem 2rem 2rem 5rem;
+  margin-bottom: 3rem; }
 
 .widget-area .widget ul {
   margin: 0;
   list-style: none;
   padding: 0;
-  display: inline-block;
   color: #444; }
 
 .widget.widget_categories a {
@@ -1252,7 +1268,7 @@ aside {
   justify-content: space-between; }
 
 main {
-  margin: 2rem auto; }
+  margin: 6rem auto; }
 
 .blog-post-article {
   padding: 1%;

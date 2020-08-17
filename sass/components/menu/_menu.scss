@@ -15,26 +15,50 @@
 	z-index: 1000;
 }
 
-	.sidebar-menu {
-		display: none;
-		flex-direction: column;
-		justify-content: space-evenly;
-	}
+	//.sidebar-menu {
+	//	display: none;
+	//	flex-direction: column;
+	//	justify-content: space-evenly;
+	//}
 
-	.sidebar-menu.open {
-		display: flex;
-	}
+	//.sidebar-menu.open {
+	//	display: flex;
+	//}
 
 	.sidebar-menu li {
 		position: relative;
 		list-style: none;
 		text-decoration: none;
+		border-bottom: 1px solid rgba(0,0,0,.1);
+	}
+
+	aside a{
+		//padding-left: 2rem;
+		//padding-top: 1rem;
+		//padding-bottom: 1rem;
+		line-height: 4.5rem;
+	}
+
+	.sidebar-menu li:hover > ul{
+		display: block;
+	}
+
+	.sidebar-menu li > ul{
+		display: none;
+	}
+
+    .sidebar-menu li.menu-item-has-children > a:after{
+		content: '\003E';
+	}
+
+	.sidebar-menu li.menu-item-has-children:hover > a:after{
+		content: '\2190';
 	}
 
 	aside ul ul {
-		display: none;
-		flex-direction: column;
-		margin-left: 1rem;
+		//display: none;
+		//flex-direction: column;
+		//margin-left: 1rem;
 	}
 
 	aside .submenu a {
@@ -53,10 +77,10 @@
 		color: #e22c2f;
 	}
 
-	.sidebar-menu li:hover > ul {
-		display: flex;   // todo Should it controlled via visibility??
-		width: 20rem;
-	}
+	//.sidebar-menu li:hover > ul {
+	//	display: flex;   // todo Should it controlled via visibility??
+	//	width: 20rem;
+	//}
 
 @media screen and (max-width: 700px) {
 	.sidebar-menu {
@@ -193,4 +217,18 @@ header .main-header {
 		//border: 1px solid #eee;
 		//background-color: #fff;
 	}
+}
+
+
+/** SIDEBAR MENU */
+.sidebar-menu .sub-menu a{
+	padding-left: 2rem;
+}
+
+.sidebar-menu .sub-menu{
+	border-top: 1px solid rgba(0,0,0,.1);
+}
+
+.sidebar-menu li:last-child{
+	border: none
 }

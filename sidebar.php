@@ -13,15 +13,23 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 ?>
 
 <aside id="secondary" class="widget-area">
-    <div class="sidebar-close-btn">
-		<?php load_inline_svg( 'close.svg' ); ?>
+    <div class="aside-header">
+		<?php
+		the_custom_logo();
+        ?>
+
+        <div class="sidebar-close-btn">
+		    <?php load_inline_svg( 'close.svg' ); ?>
+        </div>
     </div>
+    
 	<?php
 	wp_nav_menu(
 		array(
-			'theme_location' => 'menu-1',
-			'menu_id'        => 'primary-menu-sidebar',
-            'menu_class'     => 'sidebar-menu'
+			'theme_location'  => 'menu-1',
+			'menu_id'         => 'primary-menu-sidebar',
+            'menu_class'      => 'sidebar-menu',
+            'container_class' => 'widget widget-sidebar-menu'
 		)
 	);
 	?>
