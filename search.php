@@ -36,7 +36,7 @@ $sidebar_page_class = ' sidebar_position_' . get_theme_mod( 'sidebar_search', 'r
 							</h1>
 						</header><!-- .page-header -->
 
-                    <div class="article-container">
+					<div class="article-container">
 						<?php
 						/* Start the Loop */
 						while ( have_posts() ) :
@@ -50,9 +50,9 @@ $sidebar_page_class = ' sidebar_position_' . get_theme_mod( 'sidebar_search', 'r
 							get_template_part( 'template-parts/content', 'search' );
 
 						endwhile;
-?>
-                        </div>
-        <?php
+						?>
+						</div>
+						<?php
 						the_posts_navigation();
 
 					else :

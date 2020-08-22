@@ -9,13 +9,10 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('blog-post-article'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'blog-post-article' ); ?>>
 
 	<div  class="blog-type-list">
-
- 
-	<?php aaurora_post_thumbnail('aaurora-blog-1-featured-image'); ?>
- 
+	<?php aaurora_post_thumbnail( 'aaurora-blog-1-featured-image' ); ?>
 	<div class="blog-type-list-content">
 	<div class="entry-header">
 		<div class="blog-list-content-meta-info">
@@ -29,8 +26,8 @@
 		?>
 
 		<a href="<?php echo esc_url( get_permalink() ); ?>" class="btn btn-link brand-color-hover">
-				<?php esc_html_e( 'Read More', 'aaurora' );
-//				load_inline_svg( 'right_arrow.svg' );
+				<?php
+				esc_html_e( 'Read More', 'aaurora' );
 				?>
 		</a>
 
@@ -50,7 +47,7 @@
 			// $content_preview = wp_trim_words( $content_preview, $excerpt_length, apply_filters( 'excerpt_more', '&hellip;' ) );
 		}
 
-		
+
 		// echo($content_preview);  /// TODO THIS IS NOT THE RIGHT WAY TO DISPLAY CONTENT
 
 

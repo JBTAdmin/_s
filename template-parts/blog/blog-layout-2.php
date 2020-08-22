@@ -13,10 +13,9 @@
 
 	<div  class="blog-type-list">
 
-	<?php aaurora_post_thumbnail('aaurora-blog-2-featured-image'); ?>
+	<?php aaurora_post_thumbnail( 'aaurora-blog-2-featured-image' ); ?>
 
 <!--	<div class="blog-type-list-content">-->
-	
 		<?php
 		the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		?>
@@ -25,9 +24,6 @@
 			aaurora_meta_category_list();
 			?>
 		</div>
-		
-	
-
 	<div class="entry-content">
 		<?php
 		$content_preview = '';
@@ -63,7 +59,7 @@
 		// 'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'AAURORA' ),
 		// 'after'  => '</div>',
 		// )
-		// );
+		// );.
 		?>
 		<a href="<?php echo esc_url( get_permalink() ); ?>" class="btn btn-link brand-color-hover">
 			<?php esc_html_e( 'Read More', 'aaurora' ); ?>

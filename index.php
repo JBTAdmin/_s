@@ -39,9 +39,9 @@ $sidebar_page_class = ' sidebar_position_' . get_theme_mod( 'sidebar_blog', 'rig
 							</header>
 							<?php
 						endif;
-?>
-                    <div class="article-container">
-                    <?php
+						?>
+					<div class="article-container">
+						<?php
 						/* Start the Loop */
 						while ( have_posts() ) :
 							the_post();
@@ -54,19 +54,14 @@ $sidebar_page_class = ' sidebar_position_' . get_theme_mod( 'sidebar_blog', 'rig
 							get_template_part( 'template-parts/blog/blog-layout', get_post_type() );
 
 						endwhile;
-?>
-                    </div>
-                        <?php
-						// the_posts_navigation();
-
+						?>
+					</div>
+						<?php
 						numeric_posts_nav();
 					else :
-
 						get_template_part( 'template-parts/content', 'none' );
-
 					endif;
 					?>
-
 				</main><!-- #main -->
 
 				<?php

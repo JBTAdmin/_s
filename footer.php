@@ -9,7 +9,6 @@
  * @package aaurora
  */
 
-
 $site_info_text_left   = 'Terms of Use / Privacy Policy / Sitemap / About Us / Contact Us / Partner Site iPowerUser';
 $site_info_text_center = '';
 $site_info_text_right  = 'crafted with by JBT Team / Copyright . JBT';

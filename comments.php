@@ -52,9 +52,9 @@ if ( post_password_required() ) {
 			<?php
 			wp_list_comments(
 				array(
-					'style'      => 'ol',
-					'short_ping' => true,
-                    'avatar_size'=> 80,
+					'style'       => 'ol',
+					'short_ping'  => true,
+					'avatar_size' => 80,
 				)
 			);
 			?>
@@ -91,10 +91,7 @@ if ( post_password_required() ) {
 		'comment_field' => $comment_field,
 		'label_submit'  => 'Post Comment',
 	);
-
-
 	comment_form( $comments_args );
-	// comment_form();
 	?>
 
 </div><!-- #comments -->

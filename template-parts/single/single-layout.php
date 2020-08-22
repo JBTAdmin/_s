@@ -9,24 +9,22 @@
 
 ?>
 <div class="article-container">
-<article id="post-<?php the_ID(); ?>" <?php post_class('post-article'); ?>>
-    
-    <div class="entry-header">
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'post-article' ); ?>>
+	<div class="entry-header">
 		<?php
 		aaurora_meta_category_list();
 		the_title( '<h1 class="entry-title">', '</h1>' );
-		
+
 		if ( 'post' === get_post_type() ) :
 			?>
-            <div class="entry-meta">
+			<div class="entry-meta">
 				<?php
 				aaurora_posted_by();
 				aaurora_posted_on();
 				?>
-            </div><!-- .entry-meta -->
+			</div><!-- .entry-meta -->
 		<?php endif; ?>
-    </div><!-- .entry-header -->
-    
+	</div><!-- .entry-header -->
 	<?php aaurora_post_thumbnail(); ?>
 
 	<div class="entry-content">
@@ -54,7 +52,6 @@
 		);
 		?>
 	</div><!-- .entry-content -->
- 
 </article><!-- #post-<?php the_ID(); ?> -->
 	<?php
 	aaurora_meta_tag_list();

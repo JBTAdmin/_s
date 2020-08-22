@@ -244,7 +244,7 @@ add_filter( 'kirki/config', 'mytheme_kirki_configuration' );
 /*
  * Kirki Customization
  */
-require get_template_directory() . '/inc/kirki_configuration.php';
+require get_template_directory() . '/inc/kirki-configuration.php';
 
 
 /********PAGINATION  VIVEKA CHANGE THIS*/

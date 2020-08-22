@@ -1,7 +1,5 @@
 <?php
-
-/** viveka CHange this**/
-
+/** Viveka CHange this**/
 // Update options cache on customizer save
 // if(!function_exists('aaurora_update_options_cache')):
 // function aaurora_update_options_cache() {
@@ -52,10 +50,10 @@
 // $wp_customize->get_section( 'header_image' )->priority = 20;
 // }
 // endif;
-// add_action( 'customize_register', 'aaurora_theme_customize_register' );
+// add_action( 'customize_register', 'aaurora_theme_customize_register' );.
 
 
-// Create theme options
+// Create theme options.
 Kirki::add_config(
 	'aaurora_theme_options',
 	array(
@@ -64,7 +62,7 @@ Kirki::add_config(
 	)
 );
 
-// Create main panel
+// Create main panel.
 Kirki::add_panel(
 	'theme_settings_panel',
 	array(
@@ -73,8 +71,7 @@ Kirki::add_panel(
 	)
 );
 
-
-// SECTION: General
+// SECTION: General.
 Kirki::add_section(
 	'general',
 	array(
@@ -84,7 +81,6 @@ Kirki::add_section(
 		'priority'    => 10,
 	)
 );
-
 
 Kirki::add_field(
 	'aaurora_theme_options',
@@ -122,7 +118,6 @@ Kirki::add_field(
 		),
 	)
 );
-
 
 Kirki::add_field(
 	'aaurora_theme_options',
@@ -192,9 +187,9 @@ Kirki::add_field(
 		'description' => esc_attr__( 'Change header tagline text transform style.', 'aaurora' ),
 	)
 );
-// END SECTION: Logo settings (default WordPress modified)
+// END SECTION: Logo settings (default WordPress modified).
 
-// SECTION: Header
+// SECTION: Header.
 Kirki::add_section(
 	'header',
 	array(
@@ -215,7 +210,7 @@ Kirki::add_field(
 		'default'     => 'menu-below-logo',
 		'multiple'    => 0,
 		'choices'     => array(
-			'menu-below-logo'                     => esc_attr__( '1. Menu below Logo', 'aaurora' ),
+			'menu-below-logo'      => esc_attr__( '1. Menu below Logo', 'aaurora' ),
 			'right-menu-left-logo' => esc_attr__( '2. Menu With Logo, Right Menu , Left logo', 'aaurora' ),
 			'left-menu-right-logo' => esc_attr__( '3. Menu With Logo, Left Menu , Right logo', 'aaurora' ),
 		),
@@ -257,26 +252,26 @@ Kirki::add_field(
 );
 
 
-//todo what is the use of below
+// todo what is the use of below.
 //
-//Kirki::add_field(
-//	'aaurora_theme_options',
-//	array(
-//		'type'            => 'toggle',
-//		'settings'        => 'header_center_custom',
-//		'label'           => esc_attr__( 'Header center custom content', 'aaurora' ),
-//		'description'     => esc_attr__( 'Enable to display custom content (e.g. banner) in header center.', 'aaurora' ),
-//		'section'         => 'header',
-//		'default'         => '0',
-//		'active_callback' => array(
-//			array(
-//				'setting'  => 'header_layout',
-//				'operator' => 'in',
-//				'value'    => array( 'menu-below-header-left', 'menu-below-header-left-border', 'menu-below-header-left-border-fullwidth' ),
-//			),
-//		),
-//	)
-//);
+// Kirki::add_field(
+// 'aaurora_theme_options',
+// array(
+// 'type'            => 'toggle',
+// 'settings'        => 'header_center_custom',
+// 'label'           => esc_attr__( 'Header center custom content', 'aaurora' ),
+// 'description'     => esc_attr__( 'Enable to display custom content (e.g. banner) in header center.', 'aaurora' ),
+// 'section'         => 'header',
+// 'default'         => '0',
+// 'active_callback' => array(
+// array(
+// 'setting'  => 'header_layout',
+// 'operator' => 'in',
+// 'value'    => array( 'menu-below-header-left', 'menu-below-header-left-border', 'menu-below-header-left-border-fullwidth' ),
+// ),
+// ),
+// )
+// );.
 
 Kirki::add_field(
 	'aaurora_theme_options',
@@ -340,11 +335,9 @@ Kirki::add_field(
 	)
 );
 
-// END SECTION: Header
+// END SECTION: Header.
 
-
-
-// SECTION: Main menu
+// SECTION: Main menu.
 Kirki::add_section(
 	'main_menu',
 	array(
@@ -432,9 +425,9 @@ Kirki::add_field(
 	)
 );
 
-// END SECTION: Main menu
+// END SECTION: Main menu.
 
-// SECTION: Footer
+// SECTION: Footer.
 Kirki::add_section(
 	'footer',
 	array(
@@ -463,7 +456,6 @@ Kirki::add_field(
 		),
 	)
 );
-
 
 Kirki::add_field(
 	'aaurora_theme_options',
@@ -496,9 +488,9 @@ Kirki::add_field(
 	)
 );
 
-// END SECTION: Footer
+// END SECTION: Footer.
 
-// SECTION: Blog
+// SECTION: Blog.
 Kirki::add_section(
 	'blog',
 	array(
@@ -593,9 +585,9 @@ Kirki::add_field(
 
 $blog_exclude_categories = Kirki_Helper::get_terms( 'category' );
 
-// END SECTION: Blog
+// END SECTION: Blog.
 
-// SECTION: Blog Single Post
+// SECTION: Blog Single Post.
 Kirki::add_section(
 	'blog_post',
 	array(
@@ -605,7 +597,6 @@ Kirki::add_section(
 		'priority'    => 80,
 	)
 );
-
 
 Kirki::add_field(
 	'aaurora_theme_options',
@@ -672,7 +663,6 @@ Kirki::add_field(
 	)
 );
 
-
 Kirki::add_field(
 	'aaurora_theme_options',
 	array(
@@ -710,9 +700,9 @@ Kirki::add_field(
 	)
 );
 
-// END SECTION: Blog Single Post
+// END SECTION: Blog Single Post.
 
-// SECTION: Blog Single Post
+// SECTION: Blog Single Post.
 Kirki::add_section(
 	'page',
 	array(
@@ -738,7 +728,7 @@ Kirki::add_field(
 	)
 );
 
-// SECTION: Sidebars
+// SECTION: Sidebars.
 Kirki::add_section(
 	'sidebars',
 	array(
@@ -846,10 +836,10 @@ Kirki::add_field(
 	)
 );
 
-// END SECTION: Sidebars
+// END SECTION: Sidebars.
 
 
-// SECTION: Colors
+// SECTION: Colors.
 Kirki::add_section(
 	'colors',
 	array(
@@ -859,8 +849,7 @@ Kirki::add_section(
 		'priority'    => 170,
 	)
 );
-//
-//
+
 // Kirki::add_field( 'aaurora_theme_options', array(
 // 'type'        => 'toggle',
 // 'settings'    => 'color_darktheme',
@@ -868,9 +857,9 @@ Kirki::add_section(
 // 'description' => esc_html__('Use this option if you set dark backgrounds and light colors for texts. You need to set dark Header and Body backgrounds colors manually.', 'aaurora'),
 // 'section'     => 'colors',
 // 'default'     => '0',
-// ) );
+// ) );.
 
-// todo Other two fields in color section is coming from the core wordpress.
+// todo Other two fields in color section is coming from the core WordPress.
 
 Kirki::add_field(
 	'aaurora_theme_options',
@@ -948,11 +937,9 @@ Kirki::add_field(
 	)
 );
 
+// END SECTION: Colors.
 
-// END SECTION: Colors
-
-
-// SECTION: Fonts
+// SECTION: Fonts.
 Kirki::add_section(
 	'fonts',
 	array(
@@ -971,8 +958,8 @@ Kirki::add_field(
 		'label'       => esc_attr__( 'H1 font', 'aaurora' ),
 		'section'     => 'fonts',
 		'default'     => array(
-			'font-family' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
-			'variant'     => '800',
+			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
+			'variant'        => '800',
 			'font-size'      => 'calc(46px + 26 * ((100vw - 576px)/ 1024))',
 			'line-height'    => '1.5',
 			'letter-spacing' => '0',
@@ -995,8 +982,8 @@ Kirki::add_field(
 		'label'       => esc_attr__( 'H2 font', 'aaurora' ),
 		'section'     => 'fonts',
 		'default'     => array(
-			'font-family' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
-			'variant'     => '800',
+			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
+			'variant'        => '800',
 			'font-size'      => '14px',
 			'line-height'    => '1.5',
 			'letter-spacing' => '0',
@@ -1019,8 +1006,8 @@ Kirki::add_field(
 		'label'       => esc_attr__( 'H3 font', 'aaurora' ),
 		'section'     => 'fonts',
 		'default'     => array(
-			'font-family' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
-			'variant'     => '800',
+			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
+			'variant'        => '800',
 			'font-size'      => '14px',
 			'line-height'    => '1.5',
 			'letter-spacing' => '0',
@@ -1042,9 +1029,9 @@ Kirki::add_field(
 		'settings'    => 'body_font',
 		'label'       => esc_attr__( 'Body font', 'aaurora' ),
 		'section'     => 'fonts',
-		'default'     => array(   // TODO  In default can i use Initial as font-family
-			'font-family' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
-			'variant'     => '400',
+		'default'     => array(   // TODO  In default can i use Initial as font-family.
+			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
+			'variant'        => '400',
 			'font-size'      => '18px',
 			'line-height'    => '1.8',
 			'letter-spacing' => '0',
@@ -1071,4 +1058,4 @@ Kirki::add_field(
 	)
 );
 
-// END SECTION: Fonts
+// END SECTION: Fonts.
