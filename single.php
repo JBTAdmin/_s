@@ -14,12 +14,15 @@ if ( is_active_sidebar( 'sidebar-1' ) ) {
 	$sidebar_page_class = ' with-right-sidebar';
 }
 
+$sidebar_page_class = ' ' . get_theme_mod( 'sidebar_sticky', '0' );
+
+$sidebar_page_class = ' sidebar_position_' . get_theme_mod( 'sidebar_post', 'right' );
 ?>
 
-    <div class="site-container">
-        <div class="wrap">
-            <div class="main-container">
-                <main id="primary" class="site-main primary-content <?php echo esc_attr( $sidebar_page_class ); ?>">
+	<div class="site-container">
+		<div class="wrap">
+			<div class="main-container">
+				<main id="primary" class="site-main primary-content <?php echo esc_attr( $sidebar_page_class ); ?>">
 
 					<?php
 					while ( have_posts() ) :
@@ -27,12 +30,12 @@ if ( is_active_sidebar( 'sidebar-1' ) ) {
 
 						get_template_part( 'template-parts/single/single-layout', get_post_type() );
 
-//                        the_post_navigation(
-//                            array(
-//                                'prev_text' => '<span class="nav-subtitle">' . esc_html__('Previous:', 'aaurora') . '</span> <span class="nav-title">%title</span>',
-//                                'next_text' => '<span class="nav-subtitle">' . esc_html__('Next:', 'aaurora') . '</span> <span class="nav-title">%title</span>',
-//                            )
-//                        );
+						// the_post_navigation(
+						// array(
+						// 'prev_text' => '<span class="nav-subtitle">' . esc_html__('Previous:', 'aaurora') . '</span> <span class="nav-title">%title</span>',
+						// 'next_text' => '<span class="nav-subtitle">' . esc_html__('Next:', 'aaurora') . '</span> <span class="nav-title">%title</span>',
+						// )
+						// );
 
 
 						// Previous/next post navigation.
@@ -41,24 +44,26 @@ if ( is_active_sidebar( 'sidebar-1' ) ) {
 						$previous_post_thumbnail = '';
 						$next_post_thumbnail     = '';
 
-						if ( is_a( $previous_post, 'WP_Post' ) ):
-							$previous_post_thumbnail = get_the_post_thumbnail( $previous_post->ID, 'thumbnail' );
+						if ( is_a( $previous_post, 'WP_Post' ) ) :
+							$previous_post_thumbnail = get_the_post_thumbnail( $previous_post->ID, 'aaurora-blog-single-post-navigation-featured-image' );
 						endif;
 
-						if ( is_a( $next_post, 'WP_Post' ) ):
-							$next_post_thumbnail = get_the_post_thumbnail( $next_post->ID, 'thumbnail' );
+						if ( is_a( $next_post, 'WP_Post' ) ) :
+							$next_post_thumbnail = get_the_post_thumbnail( $next_post->ID, 'aaurora-blog-single-post-navigation-featured-image' );
 						endif;
 
-						the_post_navigation( array(
+						the_post_navigation(
+							array(
 
-							'next_text' => '<div><small class="meta-nav" aria-hidden="true">' . __( 'Newer Post', 'aaurora' ) . '</small> ' .
-							               '<span class="screen-reader-text">' . __( 'Newer post:', 'aaurora' ) . '</span> ' .
-							               '<h2 class="post-title">%title</h2></div>' . $next_post_thumbnail,
+								'next_text' => '<div><small class="meta-nav" aria-hidden="true">' . __( 'Next Post', 'aaurora' ) . '</small> ' .
+											   '<span class="screen-reader-text">' . __( 'Next post:', 'aaurora' ) . '</span> ' .
+											   '<h2 class="post-title">%title</h2></div>' . $next_post_thumbnail,
 
-							'prev_text' => $previous_post_thumbnail . '<div><small class="meta-nav" aria-hidden="true">' . __( 'Older Post', 'aaurora' ) . '</small> ' .
-							               '<span class="screen-reader-text">' . __( 'Older post:', 'aaurora' ) . '</span> ' .
-							               '<h2 class="post-title">%title</h2></div>',
-						) );
+								'prev_text' => $previous_post_thumbnail . '<div><small class="meta-nav" aria-hidden="true">' . __( 'Previous Post', 'aaurora' ) . '</small> ' .
+											   '<span class="screen-reader-text">' . __( 'Previous post:', 'aaurora' ) . '</span> ' .
+											   '<h2 class="post-title">%title</h2></div>',
+							)
+						);
 
 
 						// If comments are open or we have at least one comment, load up the comment template.
@@ -69,13 +74,13 @@ if ( is_active_sidebar( 'sidebar-1' ) ) {
 					endwhile; // End of the loop.
 					?>
 
-                </main><!-- #main -->
+				</main><!-- #main -->
 
 				<?php
 				get_sidebar();
 				?>
-            </div>
-        </div>
-    </div> <!-- #container -->
+			</div>
+		</div>
+	</div> <!-- #container -->
 <?php
 get_footer();

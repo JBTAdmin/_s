@@ -8,26 +8,26 @@
  */
 
 ?>
-
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-    <?php aaurora_post_thumbnail(); ?>
-
-	<div class="entry-header">
+<div class="article-container">
+<article id="post-<?php the_ID(); ?>" <?php post_class('post-article'); ?>>
+    
+    <div class="entry-header">
 		<?php
-
-        the_title( '<h1 class="entry-title">', '</h1>' );
-
+		aaurora_meta_category_list();
+		the_title( '<h1 class="entry-title">', '</h1>' );
+		
 		if ( 'post' === get_post_type() ) :
 			?>
-			<div class="entry-meta">
+            <div class="entry-meta">
 				<?php
-				aaurora_posted_on();
 				aaurora_posted_by();
+				aaurora_posted_on();
 				?>
-			</div><!-- .entry-meta -->
+            </div><!-- .entry-meta -->
 		<?php endif; ?>
-	</div><!-- .entry-header -->
+    </div><!-- .entry-header -->
+    
+	<?php aaurora_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
@@ -54,8 +54,9 @@
 		);
 		?>
 	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php aaurora_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+ 
 </article><!-- #post-<?php the_ID(); ?> -->
+	<?php
+	aaurora_meta_tag_list();
+	?>
+</div>

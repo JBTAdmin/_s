@@ -19,25 +19,29 @@ if ( is_active_sidebar( 'sidebar-1' ) ) {
 	$sidebar_page_class = ' with-right-sidebar';
 }
 
+$sidebar_page_class = ' ' . get_theme_mod( 'sidebar_sticky', '0' );
 
+$sidebar_page_class = ' sidebar_position_' . get_theme_mod( 'sidebar_blog', 'right' );
 ?>
 
-    <div class="site-container">
-        <div class="wrap">
-            <div class="main-container">
-                <main id="primary" class="site-main primary-content <?php echo esc_attr( $sidebar_page_class ); ?>">
+	<div class="site-container">
+		<div class="wrap">
+			<div class="main-container">
+				<main id="primary" class="site-main primary-content <?php echo esc_attr( $sidebar_page_class ); ?>">
 
 					<?php
 					if ( have_posts() ) :
 
 						if ( is_home() && ! is_front_page() ) :
 							?>
-                            <header>
-                                <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-                            </header>
-						<?php
+							<header>
+								<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+							</header>
+							<?php
 						endif;
-
+?>
+                    <div class="article-container">
+                    <?php
 						/* Start the Loop */
 						while ( have_posts() ) :
 							the_post();
@@ -50,8 +54,10 @@ if ( is_active_sidebar( 'sidebar-1' ) ) {
 							get_template_part( 'template-parts/blog/blog-layout', get_post_type() );
 
 						endwhile;
-
-//                        the_posts_navigation();
+?>
+                    </div>
+                        <?php
+						// the_posts_navigation();
 
 						numeric_posts_nav();
 					else :
@@ -61,13 +67,13 @@ if ( is_active_sidebar( 'sidebar-1' ) ) {
 					endif;
 					?>
 
-                </main><!-- #main -->
+				</main><!-- #main -->
 
 				<?php
 				get_sidebar();
 				?>
-            </div>
-        </div>
-    </div>
+			</div>
+		</div>
+	</div>
 <?php
 get_footer();

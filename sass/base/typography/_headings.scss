@@ -4,22 +4,36 @@ h3,
 h4,
 h5,
 h6 {
-	clear: both;
+	// todo viveka Need to check why it was required. Just a copy past or needed for some work
+	//clear: both;
 	font-family: Merriweather, serif;
-	color: #222;
+	color: #17161A;
+	margin-bottom: 3.6rem;
 }
 
 h1 {
-	font-size: calc(20px + 26 * ((100vw - 576px) / 1024));
-	margin: 2rem 0;
+	font-size: calc(46px + 26 * ((100vw - 576px)/ 1024));
 	font-weight: 700;
+	line-height: 1.1;
 }
 
 h2 {
 	font-size: 2.6rem;
+	line-height: 1.25;
 }
 
-h2.entry-title {
-	margin: 40px 0 10px;
-	letter-spacing: -0.5px;
+h3{
+	line-height: 1.3;
+}
+
+h4{
+	line-height: 1.35;
+}
+
+h5{
+	line-height: 1.4;
+}
+
+h6{
+	line-height: 1.45;
 }

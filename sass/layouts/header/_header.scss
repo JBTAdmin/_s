@@ -1,13 +1,3 @@
-.main-header {
-	width: 90%;
-	margin: auto;
-	justify-content: center;
-}
-
-.primary-content header {
-	flex-basis: 100%;
-}
-
 .site-title {
 	text-transform: uppercase;
 	font-size: 1.7rem;
@@ -15,4 +5,32 @@
 	letter-spacing: 0.5rem;
 	line-height: 1.2;
 	border-bottom: 3px solid rgb(226, 44, 47);
+}
+
+// Center aligned Header Menu
+.header-center .main-navigation{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.main-navigation{
+	display: flex;
+	align-items: center;
+}
+
+.hamburger-menu{
+	display: flex;
+}
+
+.header-wrap, .footer-wrap{
+	padding: 0 7rem;
+}
+
+.left{
+	float: left;
+}
+
+.right{
+	float: right;
 }

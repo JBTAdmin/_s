@@ -138,58 +138,6 @@ function aaurora_widgets_init() {
 		)
 	);
 
-	/*
-	 * Footer Sidebar Registered
-	 */
-
-
-	register_sidebar(
-		[
-			'name'          => esc_html__( 'Footer Column 1', 'aaurora' ),
-			'id'            => 'footer-column-1',
-			'description'   => esc_html__( 'Add widgets here.', 'aaurora' ),
-			'before_widget' => '<div id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</div>',
-			'before_title'  => '<h3 class="widget-title"><span>',
-			'after_title'   => '</span></h3>',
-		]
-	);
-
-	register_sidebar(
-		[
-			'name'          => esc_html__( 'Footer Column 2', 'aaurora' ),
-			'id'            => 'footer-column-2',
-			'description'   => esc_html__( 'Add widgets here.', 'aaurora' ),
-			'before_widget' => '<div id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</div>',
-			'before_title'  => '<h3 class="widget-title"><span>',
-			'after_title'   => '</span></h3>',
-		]
-	);
-
-	register_sidebar(
-		[
-			'name'          => esc_html__( 'Footer Column 3', 'aaurora' ),
-			'id'            => 'footer-column-3',
-			'description'   => esc_html__( 'Add widgets here.', 'aaurora' ),
-			'before_widget' => '<div id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</div>',
-			'before_title'  => '<h3 class="widget-title"><span>',
-			'after_title'   => '</span></h3>',
-		]
-	);
-
-	register_sidebar(
-		[
-			'name'          => esc_html__( 'Footer Column 4', 'aaurora' ),
-			'id'            => 'footer-column-4',
-			'description'   => esc_html__( 'Add widgets here.', 'aaurora' ),
-			'before_widget' => '<div id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</div>',
-			'before_title'  => '<h3 class="widget-title"><span>',
-			'after_title'   => '</span></h3>',
-		]
-	);
 }
 
 add_action( 'widgets_init', 'aaurora_widgets_init' );
@@ -245,103 +193,11 @@ if ( class_exists( 'WooCommerce' ) ) {
 }
 
 
-/* ============================================================================================================================================= */
-
-if ( ! function_exists( 'aaurora_theme_comments' ) ) :
-
-	/*
-	* Template for comments and pingbacks.
-	* Used as a callback by wp_list_comments() for displaying the comments.
-	*/
-
-	function aaurora_theme_comments( $comment, $args, $depth ) {
-		$GLOBALS['comment'] = $comment;
-		switch ( $comment->comment_type ) :
-
-			case 'pingback' :
-
-			case 'trackback' :
-
-				// Display trackbacks differently than normal comments.
-				?>
-                <li id="comment-<?php comment_ID(); ?>" <?php comment_class(); ?>>
-                <p>
-					<?php
-					_e( 'Pingback:', 'aaurora' ); ?><?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'aaurora' ), '<span class="edit-link">', '</span>' );
-					?>
-                </p>
-				<?php
-				break;
-
-			default :
-
-				// Proceed with normal comments.
-				global $post;
-				?>
-
-            <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
-                <article id="comment-<?php comment_ID(); ?>" class="comment">
-
-					<?php
-					if ( '0' == $comment->comment_approved ) :
-						?>
-                        <p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'aaurora' ); ?></p>
-					<?php
-					endif;
-					?>
-
-                    <section class="comment-content1 comment">
-						<?php
-						comment_text();
-						?>
-                    </section>
-
-                    <header class="comment-meta comment-author vcard">
-						<?php
-						//echo get_avatar( $comment, 150 );
-
-						printf( '<cite class="fn">%1$s %2$s</cite>',
-							get_comment_author_link(),
-							// If current post author is also comment author, make it known visually.
-							( $comment->user_id === $post->post_author ) ? '<span></span>' : "" );
-
-
-						printf( '<a title="%3$s" href="%1$s"><i class="pw-icon-calendar-1"></i><time datetime="%2$s">%3$s</time></a>',
-							esc_url( get_comment_link( $comment->comment_ID ) ),
-							get_comment_time( 'c' ),
-							/* translators: 1: date, 2: time */
-							sprintf( __( '%1$s at %2$s', 'aaurora' ), get_comment_date(), get_comment_time() ) );
-						?>
-
-						<?php
-						edit_comment_link( __( 'Edit', 'aaurora' ) );
-						?>
-						<?php
-						comment_reply_link( array_merge( $args, array(
-							'reply_text' => __( 'Reply', 'aaurora' ),
-							'after'      => ' <span>&darr;</span>',
-							'depth'      => $depth,
-							'max_depth'  => $args['max_depth']
-						) ) );
-						?>
-
-                    </header>
-
-                </article>
-				<?php
-				break;
-
-		endswitch;
-	}
-
-endif;
-
-
 /* Gutenberg Support */
 
 function mytheme_setup_theme_supported_features() {
 
-// Theme supports wide images, galleries and videos.
+	// Theme supports wide images, galleries and videos.
 	add_theme_support( 'align-wide' );
 	add_theme_support( 'wp-block-styles' );
 }
@@ -352,24 +208,27 @@ add_action( 'after_setup_theme', 'mytheme_setup_theme_supported_features' );
 /**
  * Theme images sizes
  */
-
-add_image_size( 'aaurora-blog-archive', 400, 650, true );
-add_image_size( 'aaurora-blog-post-sidebar', 80, 20, true );
-add_image_size( 'aaurora-blog-post-no-sidebar', 80, 90, true );
+add_image_size( 'aaurora-blog-single-post-navigation-featured-image', 80, 80, true ); // This is used for Blog Layout 1
+add_image_size( 'aaurora-blog-1-featured-image', 530, 420, true ); // This is used for Blog Layout 1
+add_image_size( 'aaurora-blog-2-featured-image', 125, 125, true ); // This is used for Blog Layout 2
+add_image_size( 'aaurora-blog-single-post-sidebar', 400, 500, true );
+add_image_size( 'aaurora-blog-single-post-no-sidebar', 1000, 570, true );
 
 /*  Kirki plugin related changed */
 
-//todo See if below options related to kirki needs to be enabled or not
-/*= Use External stylesheet for Kirki generated styles =*/
-/*=============================================<<<<<*/
-//if (!is_customize_preview() ) {
-//    add_filter( 'kirki_output_inline_styles', '__return_false' );
-//}
+// todo See if below options related to kirki needs to be enabled or not
+/*
+= Use External stylesheet for Kirki generated styles =*/
+/*
+=============================================<<<<<*/
+// if (!is_customize_preview() ) {
+// add_filter( 'kirki_output_inline_styles', '__return_false' );
+// }
 
 /*
  * It led Kirki use CDN font instead of hosting the local fonts.
  */
-//add_filter( 'kirki_use_local_fonts', '__return_false' );
+// add_filter( 'kirki_use_local_fonts', '__return_false' );
 
 /*
  * Kirki Customization
@@ -414,7 +273,7 @@ function numeric_posts_nav() {
 
 	/** Previous Post Link */
 	if ( get_previous_posts_link() ) {
-		printf( '<li>%s</li>' . "\n", get_previous_posts_link() );
+		printf( '<li>%s</li>' . "\n", get_previous_posts_link( '&lt; Previous' ) );
 	}
 
 	/** Link to first page, plus ellipses if necessary */
@@ -447,10 +306,18 @@ function numeric_posts_nav() {
 
 	/** Next Post Link */
 	if ( get_next_posts_link() ) {
-		printf( '<li>%s</li>' . "\n", get_next_posts_link() );
+		printf( '<li>%s</li>' . "\n", get_next_posts_link( 'Next >' ) );
 	}
 
 	echo '</ul></div>' . "\n";
 
 }
 
+/*
+ * Add Google Fonts
+ */
+
+function google_fonts() {
+	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Inter&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap', false );
+}
+add_action( 'wp_enqueue_scripts', 'google_fonts' );

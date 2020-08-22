@@ -26,7 +26,7 @@ if ( post_password_required() ) {
 	// You can start editing here -- including this comment!
 	if ( have_comments() ) :
 		?>
-        <h2 class="comments-title">
+		<h2 class="comments-title">
 			<?php
 			$aaurora_comment_count = get_comments_number();
 			if ( '1' === $aaurora_comment_count ) {
@@ -44,20 +44,21 @@ if ( post_password_required() ) {
 				);
 			}
 			?>
-        </h2><!-- .comments-title -->
+		</h2><!-- .comments-title -->
 
 		<?php the_comments_navigation(); ?>
 
-        <ol class="comment-list">
+		<ol class="comment-list">
 			<?php
 			wp_list_comments(
 				array(
 					'style'      => 'ol',
 					'short_ping' => true,
+                    'avatar_size'=> 80,
 				)
 			);
 			?>
-        </ol><!-- .comment-list -->
+		</ol><!-- .comment-list -->
 
 		<?php
 		the_comments_navigation();
@@ -65,8 +66,8 @@ if ( post_password_required() ) {
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() ) :
 			?>
-            <p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'aaurora' ); ?></p>
-		<?php
+			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'aaurora' ); ?></p>
+			<?php
 		endif;
 
 	endif; // Check for have_comments().
@@ -76,24 +77,24 @@ if ( post_password_required() ) {
 	$aria_req  = ( $req ? " aria-required='true'" : '' );
 	$fields    = array(
 		'email'  => '<p class="comment-form-email">' .
-		            '<input id="email" name="email" type="text" placeholder="Email*" required value="' . esc_attr( $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></p>',
+					'<input id="email" name="email" type="text" placeholder="Email*" required value="' . esc_attr( $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></p>',
 		'author' => '<p class="comment-form-author">' .
-		            '<input id="author" name="author" type="text" placeholder="Name*" required value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></p>',
+					'<input id="author" name="author" type="text" placeholder="Name*" required value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></p>',
 	);
 
 	$comment_field = '<p class="comment-form-comment">' .
-	                 '<textarea id="comment" name="comment" placeholder="Express your thoughts" cols="45" rows="8" aria-required="true"></textarea>' .
-	                 '</p>';
+					 '<textarea id="comment" name="comment" placeholder="Express your thoughts" cols="45" rows="8" aria-required="true"></textarea>' .
+					 '</p>';
 
 	$comments_args = array(
 		'fields'        => $fields,
 		'comment_field' => $comment_field,
-		'label_submit'  => 'Post Comment'
+		'label_submit'  => 'Post Comment',
 	);
 
 
 	comment_form( $comments_args );
-	//    comment_form();
+	// comment_form();
 	?>
 
 </div><!-- #comments -->

@@ -1,0 +1,243 @@
+
+
+
+<!--If you want to know how Wordpress chooses specific files based on category/ single post/ single page look below URL-->
+https://developer.wordpress.org/themes/basics/template-hierarchy/
+
+Bullet Points:
+1- WordPress uses the header comment section of a style.css to display information about the theme in the Appearance (Themes) dashboard panel.
+2- Wordpress has different post types (Music, Quote...). Though all posts will be stored in the same tables (wp_posts). Column post_type
+in given tables define the post types. Apart from existing post types. Custom post types can also be created.
+
+3- Template files are used to display specific type of Post types. Certain Post Types are tied to certain template files
+4- Default Post types
+Post (‘post’)
+Page (‘page’)
+Attachment (‘attachment’)
+Revision (‘revision’)
+Navigation menu (‘nav_menu_item’)
+
+5- Template files where POST will be displayed
+single.php and single-post.php
+category.php
+tag.php
+taxonomy.php
+archive.php
+author.php
+date.php
+search.php
+home.php
+index.php
+
+6- Template files where PAGES will be displayed
+page.php
+$custom.php
+front-page.php
+search.php
+index.php
+
+7- WP Requires minimum two files (index.php & style.css). header and footer.php might also be required. style.css should always be in
+root folder and not in css folder.
+
+8- For the standard folder structure look for tweenty-tweenty theme.
+
+9- WP uses query-string to determine template files to be used for specific page. There is a template hierarchy which will be
+traversed by the Wordpress to determine template file to use.
+
+10- To know more details on how specific template file is selected for given link / page.
+Go to - https://developer.wordpress.org/themes/basics/template-hierarchy/#the-template-hierarchy-in-detail
+
+11- TEMPLATE TAGS -- Template tags are kind of reusable component which can be used in different parts of Themes to display some data
+or include some files. A template tag is simply a piece of code that tells WordPress to get something
+from the database. It is broken up into three components:
+1- A PHP code tag
+2- A WordPress function
+3- Optional parameters
+
+Example of the template tags
+1- get_header() : Default - header.php
+get_header(custom) : header-custom.php
+2- get_footer() : footer.php
+get_footer('custom') : footer-custom.php
+3- get_sidebar() : sidebar.php
+get_sidebar('custom') : sidebar-custom.php
+
+4- the_title()
+5- bloginfo()
+6- wp_list_cats()
+7- wp_list_pages()
+
+Some of template tags that need to be inside of the loop include
+1- the_content()
+2- the_excerpt()
+3- next_post()
+4- previous_post()
+
+12- WordPress creates pages by assembling various files. Aside from the standard files for the header, footer and sidebar,
+you can create custom template files and call them at any location in the page using get_template_part().
+
+If you have created a template file named PRODUCT.PHP to handle product content type and then you want specific handling for those
+product with category as beauty, you can create a template file names PRODUCT-BEAUTY.PHP. and this template files can be loaded
+using method
+get_template_part( 'product', 'beauty' );
+
+13- The proper way to add scripts and styles to your theme is to enqueue them in the functions.php files.
+wp_enqueue_style( 'style', get_stylesheet_uri() );
+
+wp_enqueue_script( $handle, $src, $deps, $ver, $in_footer);
+$handle is the name for the script.
+$src defines where the script is located.
+$deps is an array that can handle any script that your new script depends on, such as jQuery.
+$ver lets you list a version number.
+$in_footer is a boolean parameter (true/false) that allows you to place your scripts in the footer of your HTML document
+rather then in the header, so that it does not delay the loading of the DOM tree.
+
+14- Conditional Tags / Conditional Function / Boolean Function :  which will be used inside if condition.
+https://developer.wordpress.org/themes/basics/conditional-tags/
+
+Question:
+1- What is slug template or slug argument??
+
+
+
+Links :
+WP Hierarchy template - https://wphierarchy.com/
+
+
+Important Methods in Wordpress
+
+
+Important Code Base for wordpress theme
+
+1- MENU
+https://codepen.io/kazzkiq/pen/qEMjaw/?__cf_chl_jschl_tk__=6c208499562a6e521343e9b17e8952bd59a8fa83-1590490945-0-ARobOEPhjEBy6D_93ZkKMeMuF3g3zK0RVrPdm2CqmZLdai1aMc4U2NZC2oa5WOTigAJbO5sX-zsIrhTm9PM7yOV7gx65h3IpC9tNNBBPvdxyj3_bIoBcP3u05w97Z3JeoyyjZ9AaOJBjbv15Yi4FlxeHp8n2Gqa-XcmzAAm3auGdvVFp-TevXGOB6pTb2AjE9YFiRRCUcObhHI1AjSOAaGQDWojyjDZrOFGpFZlnmdiTZssyHH5sYccsoNUKr3Q0nGep-ryI4w9E_Dw3AFw3TEJrflLnS9DETUE8folph-SLYOSQk0cgSnpINmrzr56XvUFcpcrz2EaOZK3aeyPqK8Db-JAFjV8AK_v7S-L9iNW4
+
+
+
+2- Font
+https://css-tricks.com/understanding-web-fonts-getting/
+
+
+3- CSS Knowledge
+https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048
+
+4- Bootstrap Related nice UI
+https://themesberg.com/
+
+
+5- Layout Idea
+https://web.dev/apply-instant-loading-with-prpl/
+https://www.khanacademy.org/computing/computer-programming/html-js-jquery#dom-modification-with-jquery
+https://www.superhi.com/courses/wordpress
+
+
+6- Imp Site
+https://medium.com/front-end-weekly/what-are-npm-yarn-babel-and-webpack-and-how-to-properly-use-them-d835a758f987
+https://github.com/kamranahmedse/developer-roadmap
+https://medium.com/@thatisuday/angular-material-vs-semantic-ui-vs-bootstrap-vs-foundation-vs-materialize-8bd3646e6f0a1
+https://www.excitoninteractive.com/articles/read/62/webpack4/step-by-step-sass-with-autoprefixer
+
+
+Webpack integration with WORDPRESS
+https://medium.com/q-software/webpack-4-wordpress-9cada8f2647
+https://taylor.callsen.me/using-webpack-4-and-sass-with-wordpress/
+https://www.excitoninteractive.com/articles/read/40/webpack4/quick-start
+https://selleo.com/til/posts/gwyszs0rfi-how-to-add-autoprefixer-in-webpack
+https://carrieforde.com/webpack-wordpress/
+
+#yarn vs npm
+Yarn is a superset of NPM that solves many problems that NPM has.
+Yarn is a package manager that uses NPM registry as its backend.
+
+#webpack vs gulp vs grunt vs browserify
+https://alligator.io/tooling/webpack-gulp-grunt-browserify/
+
+
+**Package Manager**
+PHP : Composer
+Python : PIP/Pipenv
+Java : Maven/ Gradle
+Node : NPM/YARN
+
+??:https://laracasts.com/??
+
+**Babel is a JS transpiler that converts new JS code into old ones.
+
+**Webpack
+Different steps like
+1- SASS Pre-Compiler
+2- Post Processing for Auto Prefixing
+3- Using Babel to provide backward compile JS code
+4- Minify and uglify the CSS and JS code.
+
+All the things can be done with a tool called WEBPACK with a file called WEBPACK.CONFIG.JS
+COMMAND : webpack
+
+Webpack has two parts
+i-  Loaders : First 3 can be done with it.
+ii- Plugins (Core to webpack) : Other things that can not be done with Loaders can be done with plugins.
+
+Form Submit
+https://formspree.io/
+
+For ICONS
+https://iconmonstr.com/
+
+For Images
+https://www.pexels.com/
+
+Font-awesome (SVG Image  )
+https://fontawesome.com/
+
+Clean up the Head of the site
+https://wordpress.stackexchange.com/questions/91678/how-to-prevent-wordpress-from-loading-the-jquery-library-at-the-top-of-the-page/91734
+
+#PHP Code sniffer
+https://stackoverflow.com/questions/48485778/php-codesniffer-wordpress-via-composer
+
+#Blogging Site and Good Layout
+https://bloggingwizard.com/about/
+
+ARIA related good ;
+https://css-tricks.com/solved-with-css-dropdown-menus/
+
+Menu Going Beyond Screen
+https://stackoverflow.com/questions/51185294/dropdown-menu-does-go-out-off-browser-screen-bootstrap-4
+https://stackoverflow.com/questions/15086908/how-to-avoid-horizontal-scroll-on-mobile-web-with-responsive-web-design
+
+#Good Tutorial on Customizer
+https://maddisondesigns.com/2017/05/the-wordpress-customizer-a-developers-guide-part-1/#datetimecontrol
+
+Why image is going beyond flexbox
+https://stackoverflow.com/questions/28568779/why-do-flexbox-item-images-resize-differently-according-to-their-initial-size
+https://stackoverflow.com/questions/31967019/max-width-doesnt-work-in-flexbox
+
+Useful Wordpress Function
+1- https://wordpress.stackexchange.com/questions/321307/what-s-the-difference-between-esc-html-esc-attr-esc-html-e-and-so-on
+2- https://blog.templatetoaster.com/wordpress-wp-kses/
+
+
+Theme for Layouts
+1- https://themes.pixelwars.org/lahanna/demo-04/
+2- https://themes.pixelwars.org/efor/demo-03/2018/10/13/how-to-become-ridiculously-self-aware-in-20-minutes/
+3- Sidebar Layout : https://old4.commonsupport.com/appway/latest-news-2/
+4- Blog Layout : https://vlthemes.com/#mikael
+5- Tools : https://premium.wpmudev.org/blog/wordpress-developer-tools/
+6- https://www.twilio.com/blog/improving-php-code-quality-php-codesniffer-phpcs-laravel
+7- Sidebar > Search layout : http://axilthemes.com/themes/papr/i-was-happy-for-my-wife-to-carry-our-first-child-then-the-belly-envy-hit/
+8- Blog Layout>> Cover Image and data on the image : https://demo.themewinter.com/wp/digiqoles/food-recipe/
+9- Page movement circle INFO >> https://atbs.bk-ninja.com/ceris_fashion/impossibly-high-beauty-standards-are-ruining-my-self-esteem/
+
+
+Things to fix
+1- Block category: Embeds - Here while displaying on home page or archive displaying code from youtube or Twitter
+2- After enabling overflow hove effect is not good as it should be. May be increasing marging or padding will work.
+3- Basic Layout like pre, blockquote should be defined
+4- Why there is a call to gravatar. Hpw to stop the gravatar call at all?? Or should be dont in the settings?
+5- Whenever we change the Theme. There is a problem with Featured Image. It needs to be created to work properly.
+6- Check for Mobile. Enough padding is not there.
+7- Remove Jquery and Block related CSS and JS script.
+8- How to handle Menu when it is going beyond the visual screen? How to handle this situation?
+9-
+
+

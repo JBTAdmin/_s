@@ -14,22 +14,25 @@ if ( is_active_sidebar( 'sidebar-1' ) ) {
 	$sidebar_page_class = ' with-right-sidebar';
 }
 
+$sidebar_page_class = ' ' . get_theme_mod( 'sidebar_sticky', '0' );
+
+$sidebar_page_class = ' sidebar_position_' . get_theme_mod( 'sidebar_archive', 'right' );
 ?>
 
-    <div class="site-container">
-        <div class="wrap">
-            <div class="main-container">
-                <main id="primary" class="site-main primary-content <?php echo esc_attr( $sidebar_page_class ); ?>">
+	<div class="site-container">
+		<div class="wrap">
+			<div class="main-container">
+				<main id="primary" class="site-main primary-content <?php echo esc_attr( $sidebar_page_class ); ?>">
 
 					<?php if ( have_posts() ) : ?>
 
-                        <header class="page-header">
+						<header class="page-header">
 							<?php
 							the_archive_title( '<h1 class="page-title">', '</h1>' );
 							the_archive_description( '<div class="archive-description">', '</div>' );
 							?>
-                        </header><!-- .page-header -->
-                        <div class="article-container">
+						</header><!-- .page-header -->
+						<div class="article-container">
 							<?php
 							/* Start the Loop */
 							while ( have_posts() ) :
@@ -44,7 +47,7 @@ if ( is_active_sidebar( 'sidebar-1' ) ) {
 
 							endwhile;
 							?>
-                        </div>
+						</div>
 						<?php
 
 						the_posts_navigation();
@@ -56,13 +59,13 @@ if ( is_active_sidebar( 'sidebar-1' ) ) {
 					endif;
 					?>
 
-                </main><!-- #main -->
+				</main><!-- #main -->
 
 				<?php
 				get_sidebar();
 				?>
-            </div>
-        </div>
-    </div>
+			</div>
+		</div>
+	</div>
 <?php
 get_footer();

@@ -9,37 +9,27 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('blog-post-article'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'blog-layout-2' ); ?>>
 
 	<div  class="blog-type-list">
 
- 
-	<?php aaurora_post_thumbnail('aaurora-blog-1-featured-image'); ?>
- 
-	<div class="blog-type-list-content">
-	<div class="entry-header">
-		<div class="blog-list-content-meta-info">
-		<?php
-			aaurora_meta_category_list();
-			aaurora_posted_on();
-		?>
-		</div>
+	<?php aaurora_post_thumbnail('aaurora-blog-2-featured-image'); ?>
+
+<!--	<div class="blog-type-list-content">-->
+	
 		<?php
 		the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		?>
-
-		<a href="<?php echo esc_url( get_permalink() ); ?>" class="btn btn-link brand-color-hover">
-				<?php esc_html_e( 'Read More', 'aaurora' );
-//				load_inline_svg( 'right_arrow.svg' );
-				?>
-		</a>
-
-	</div><!-- .entry-header -->
+		<div class="blog-list-content-meta-info">
+			<?php
+			aaurora_meta_category_list();
+			?>
+		</div>
+		
+	
 
 	<div class="entry-content">
 		<?php
-
-
 		$content_preview = '';
 		$content_preview = get_the_excerpt();
 
@@ -50,8 +40,7 @@
 			// $content_preview = wp_trim_words( $content_preview, $excerpt_length, apply_filters( 'excerpt_more', '&hellip;' ) );
 		}
 
-		
-		// echo($content_preview);  /// TODO THIS IS NOT THE RIGHT WAY TO DISPLAY CONTENT
+		echo( $content_preview );  // TODO THIS IS NOT THE RIGHT WAY TO DISPLAY CONTENT.
 
 
 		// the_content(
@@ -76,13 +65,17 @@
 		// )
 		// );
 		?>
+		<a href="<?php echo esc_url( get_permalink() ); ?>" class="btn btn-link brand-color-hover">
+			<?php esc_html_e( 'Read More', 'aaurora' ); ?>
+		</a>
+
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
 
 	</footer><!-- .entry-footer -->
 
-	</div>
+<!--	</div>-->
 	</div>
 
 </article><!-- #post-<?php the_ID(); ?> -->

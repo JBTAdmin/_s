@@ -31,17 +31,7 @@ body {
 main {
 	display: block;
 }
-
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
-
-h1 {
-	font-size: 2em;
-	margin: 0.67em 0;
-}
-
+//todo remove some configuration. Need to check why it was necessary. why margin was given
 /* Grouping content
 	 ========================================================================== */
 
