@@ -13,7 +13,7 @@ aside{
 	z-index: 9999;
 	transform: translate(100%,0);
 	transition: transform .5s,width .5s ease-in-out;
-	font-size: 1.5rem;
+	font-size: 1.7rem;
 }
 
 site-header, .aside-header{
@@ -73,13 +73,17 @@ aside.open{
 .sidebar-close-btn{
 	display: flex;
 	justify-content: flex-end;
-	margin-top: 1rem;
+	margin-top: 0.5rem;
 	float: right;
 }
 
 .aside-header{
 	padding: 3rem 2rem 2rem 5rem;
 	margin-bottom: 3rem;
+	.custom-logo{
+		max-width: 110px;
+		max-height: 110px;
+	}
 }
 
 // FOr Sidebar Categories

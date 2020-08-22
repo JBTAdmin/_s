@@ -73,7 +73,7 @@ if ( ! function_exists( 'aaurora_meta_tag_list' ) ) :
 	function aaurora_meta_tag_list() {
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'aaurora' ) );
+			$tags_list = get_the_tag_list( '', esc_html_x( ' ', 'list item separator', 'aaurora' ) );
 			if ( $tags_list ) {
 				printf( '<span class="tags-links">' . esc_html( ' %1$s' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}

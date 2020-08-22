@@ -10,14 +10,10 @@
 ?>
 <div class="article-container">
 <article id="post-<?php the_ID(); ?>" <?php post_class('post-article'); ?>>
-
-    <footer class="entry-footer">
-		<?php aaurora_meta_category_list(); ?>
-    </footer><!-- .entry-footer -->
-
+    
     <div class="entry-header">
 		<?php
-		
+		aaurora_meta_category_list();
 		the_title( '<h1 class="entry-title">', '</h1>' );
 		
 		if ( 'post' === get_post_type() ) :
@@ -60,4 +56,7 @@
 	</div><!-- .entry-content -->
  
 </article><!-- #post-<?php the_ID(); ?> -->
+	<?php
+	aaurora_meta_tag_list();
+	?>
 </div>

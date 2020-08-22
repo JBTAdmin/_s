@@ -359,12 +359,11 @@ Kirki::add_field(
 	'aaurora_theme_options',
 	array(
 		'type'     => 'radio-buttonset',
-		'settings' => 'mainmenu_align',
+		'settings' => 'main_menu_align',
 		'label'    => esc_attr__( 'Main menu align', 'aaurora' ),
 		'section'  => 'main_menu',
-		'default'  => 'left',
+		'default'  => 'right',
 		'choices'  => array(
-			'left'   => esc_attr__( 'Left', 'aaurora' ),
 			'center' => esc_attr__( 'Center', 'aaurora' ),
 			'right'  => esc_attr__( 'Right', 'aaurora' ),
 		),
@@ -454,7 +453,7 @@ Kirki::add_field(
 		'label'       => esc_attr__( 'Footer text color', 'aaurora' ),
 		'description' => esc_attr__( 'Change text color in footer HTML block', 'aaurora' ),
 		'section'     => 'footer',
-		'default'     => '#ffffff',
+		'default'     => '#fff',
 		'transport'   => 'auto',
 		'output'      => array(
 			array(
@@ -974,7 +973,7 @@ Kirki::add_field(
 		'default'     => array(
 			'font-family' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
 			'variant'     => '800',
-			'font-size'      => '14px',
+			'font-size'      => 'calc(46px + 26 * ((100vw - 576px)/ 1024))',
 			'line-height'    => '1.5',
 			'letter-spacing' => '0',
 			'text-transform' => 'none',

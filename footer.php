@@ -18,7 +18,7 @@ $site_info_text_right  = 'crafted with by JBT Team / Copyright . JBT';
 
 <div id="colophon" class="site-footer">
 	<footer>
-		<div class="wrap">
+		<div class="footer-wrap">
 			<div class="wrap-site-info">
 				<div class="site-info">
 					<div class="row">

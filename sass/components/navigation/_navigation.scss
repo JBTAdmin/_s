@@ -51,21 +51,21 @@
 
 .post-navigation .nav-previous {
 	text-align: start;
-}
-
-nav.navigation {
-
+	border-right: 1px solid rgba(34,34,34,.1);
 }
 
 .site-main .post-navigation {
-	border-top: 1px dashed #9ea1a4;
-	border-bottom: 1px dashed #9ea1a4;
+	border-top: 1px solid rgba(34,34,34,.1);
+	border-bottom: 1px solid rgba(34,34,34,.1);
+	padding: 2rem 0;
 }
 
 .post-navigation .nav-links {
 	align-items: center;
 }
-
+.nav-links h2{
+	margin-bottom: 0;
+}
 
 /****  PAGINATION ****/
 
@@ -87,8 +87,7 @@ nav.navigation {
 
 	background-color: #e22c2f;
 	border: 1px solid #e22c2f;
-	font-size: 20px;
-	padding-bottom: 15px;
+	font-size: 17px;
 	cursor: pointer;
 }
 
@@ -96,16 +95,16 @@ nav.navigation {
 {
 	color: #000;
 	background-color: #fff;
-	border: 1px solid #ddd;
-	border-radius: 100px;
-	padding: 17px 24px 16px;
+	//border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 10px 16px;
 	font-size: 16px;
-	font-weight: 900;
+	font-weight: 700;
 }
 
 /**** tmove it to navigation */
 .navigation {
-	margin: 0 0 1.5em;
+	margin: 1.5em 0;
 	width: 100%;
 	text-align: center;
 }

@@ -48,7 +48,7 @@ $menu_class .= ' ' . get_theme_mod( 'main_menu_arrow_style', 'noarrow' );
 	echo esc_attr( $menu_class );
 	?>
 	">
-		<div class="wrap">
+		<div class="header-wrap">
 			<div class="main-header">
 				<div class="site-branding" style="width: 12rem">
 <!--                    // TODO MOVE THIS TO SCSS-->
@@ -85,15 +85,18 @@ $menu_class .= ' ' . get_theme_mod( 'main_menu_arrow_style', 'noarrow' );
 					</div>
 					<!--			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">-->
 					<?php // esc_html_e( 'Primary Menu', 'aaurora' ); ?><!--</button>-->
-					<?php
+
+                    <div class="<?php echo esc_attr( 'aligned-menu-' . get_theme_mod( 'main_menu_align', 'right' ) ); ?>">
+                    <?php
 					wp_nav_menu(
 						array(
 							'theme_location' => 'menu-1',
 							'menu_id'        => 'primary-menu',
+							'container'      => ''
 						)
 					);
 					?>
-
+            </div>
                     <div class="hamburger-menu">
 						<?php load_inline_svg( 'hamburger.svg' ); ?>
                     </div>

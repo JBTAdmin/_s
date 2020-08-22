@@ -1,4 +1,5 @@
 
+
 .menu a {
 	padding: 2rem 3rem;
 	display: flex;
@@ -9,6 +10,13 @@
 	line-height: 1;
 	//text-transform: uppercase;
 	font-weight: 500;
+}
+
+.aligned-menu-center{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 2;
 }
 
 .sub-menu {
@@ -30,6 +38,7 @@
 		list-style: none;
 		text-decoration: none;
 		border-bottom: 1px solid rgba(0,0,0,.1);
+		padding: 0.6rem;
 	}
 
 	aside a{
@@ -37,14 +46,6 @@
 		//padding-top: 1rem;
 		//padding-bottom: 1rem;
 		line-height: 4.5rem;
-	}
-
-	.sidebar-menu li:hover > ul{
-		display: block;
-	}
-
-	.sidebar-menu li > ul{
-		display: none;
 	}
 
     .sidebar-menu li.menu-item-has-children > a:after{
@@ -70,17 +71,11 @@
 
 	.sidebar-menu li:hover > a {
 		color: #e22c2f;
-		border-left: 2px solid #FF0000;
 	}
 
 	.sidebar-menu li:active > a {
 		color: #e22c2f;
 	}
-
-	//.sidebar-menu li:hover > ul {
-	//	display: flex;   // todo Should it controlled via visibility??
-	//	width: 20rem;
-	//}
 
 @media screen and (max-width: 700px) {
 	.sidebar-menu {
@@ -208,15 +203,6 @@ header .main-header {
 		//background-color: #fff;
 	}
 
-	.menu li > ul {
-		//visibility: hidden;
-		//border-radius: 1rem;
-		//box-shadow: 0 7px 32px 0 rgba(0, 0, 0, 0.12);
-		//width: 20rem;
-		//transition: opacity 0.4s ease-in-out;
-		//border: 1px solid #eee;
-		//background-color: #fff;
-	}
 }
 
 
@@ -227,8 +213,17 @@ header .main-header {
 
 .sidebar-menu .sub-menu{
 	border-top: 1px solid rgba(0,0,0,.1);
+	display: none;
 }
 
 .sidebar-menu li:last-child{
 	border: none
+}
+
+.display-block {
+	display: block !important;
+}
+
+.hide-block {
+	display: none;
 }

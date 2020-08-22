@@ -208,11 +208,11 @@ add_action( 'after_setup_theme', 'mytheme_setup_theme_supported_features' );
 /**
  * Theme images sizes
  */
-
+add_image_size( 'aaurora-blog-single-post-navigation-featured-image', 80, 80, true ); // This is used for Blog Layout 1
 add_image_size( 'aaurora-blog-1-featured-image', 530, 420, true ); // This is used for Blog Layout 1
 add_image_size( 'aaurora-blog-2-featured-image', 125, 125, true ); // This is used for Blog Layout 2
 add_image_size( 'aaurora-blog-single-post-sidebar', 400, 500, true );
-add_image_size( 'aaurora-blog-single-post-no-sidebar', 1000, 500, true );
+add_image_size( 'aaurora-blog-single-post-no-sidebar', 1000, 570, true );
 
 /*  Kirki plugin related changed */
 
@@ -273,7 +273,7 @@ function numeric_posts_nav() {
 
 	/** Previous Post Link */
 	if ( get_previous_posts_link() ) {
-		printf( '<li>%s</li>' . "\n", get_previous_posts_link() );
+		printf( '<li>%s</li>' . "\n", get_previous_posts_link( '&lt; Previous' ) );
 	}
 
 	/** Link to first page, plus ellipses if necessary */
@@ -306,7 +306,7 @@ function numeric_posts_nav() {
 
 	/** Next Post Link */
 	if ( get_next_posts_link() ) {
-		printf( '<li>%s</li>' . "\n", get_next_posts_link() );
+		printf( '<li>%s</li>' . "\n", get_next_posts_link( 'Next >' ) );
 	}
 
 	echo '</ul></div>' . "\n";

@@ -83,6 +83,26 @@ h1.entry-title{
 	margin-bottom: 0.8rem;
 }
 
+.post-thumbnail{
+	margin: 4rem 0;
+}
+
+//todo tags
+.tags-links{
+	margin-top: 3rem;
+}
+.single-post .tags-links a {
+	background: #eee;
+	color: #0f0e0e;
+	padding: 5px 10px;
+	margin-right: 5px;
+	margin-bottom: 10px;
+	display: inline-block;
+	text-decoration: none;
+	line-height: 20px;
+	vertical-align: middle;
+	border-radius: 5px;
+}
 
 
 // This is for blog layout new
@@ -114,4 +134,19 @@ h1.entry-title{
 	max-width: unset !important;
 	padding-right: 35px;
 	padding-left: 60px;
+}
+
+@media (min-width: 768px) {
+	.single-post{
+		.entry-header, .entry-content {
+			margin-left: 8%;
+			max-width: 84%;
+		}
+	}
+	.page{
+		.entry-header, .entry-content {
+			margin-left: 8%;
+			max-width: 84%;
+		}
+	}
 }

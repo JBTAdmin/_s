@@ -9,7 +9,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const menuCloseBtn = document.querySelector('.sidebar-close-btn');
     const sidebarOverlay = document.querySelector('.sidebar-overlay');
 
+    const sidebarMenu = document.querySelectorAll('.widget-area .menu-item-has-children');
+
+    const sidebarMenuLink = document.querySelectorAll('.widget-area .menu-item-has-children > a');
+
     let menuBtClass = false;
+
+    sidebarMenuLink.forEach(el => el.addEventListener('click', function(event){
+        event.preventDefault();
+    }));
+
+    sidebarMenu.forEach(el => el.addEventListener('click', function(event) {
+        this.querySelector('.sub-menu').classList.toggle('display-block');
+    }));
 
     menuBtn.addEventListener('click', function(){
         menuBtn.classList.toggle('open');

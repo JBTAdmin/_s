@@ -1,6 +1,8 @@
 .site-footer {
 	background-color: #17161a;
-	color: rgba(255, 255, 255, 0.8);
+	color: #fff;
+	font-size: 1.5rem;
+	opacity: 0.8;
 }
 
 .site-footer .wrap {
@@ -9,11 +11,6 @@
 
 .site-footer a {
 	color: rgba(255, 255, 255, 0.8);
-}
-
-.wrap-site-info {
-	justify-content: center;
-	border-top: 1px solid rgba(136, 136, 136, .1);
 }
 
 .site-info-holder {
