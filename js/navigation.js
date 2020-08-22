@@ -4,6 +4,7 @@
  * Handles toggling the navigation menu for small screens and enables TAB key
  * navigation support for dropdown menus.
  */
+//todo Viveka where we are using this
 ( function() {
 	const siteNavigation = document.getElementById( 'site-navigation' );
 
