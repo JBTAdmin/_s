@@ -1,47 +1,52 @@
+document.addEventListener("DOMContentLoaded", event => {
+  const menuBtn = document.querySelector(".menu-btn");
+  const menu = document.querySelector(".menu");
+  const header = document.querySelector("header");
+  const hamburgerBtn = document.querySelector(".hamburger-menu");
+  const aside = document.querySelector("aside");
+  const menuCloseBtn = document.querySelector(".sidebar-close-btn");
+  const sidebarOverlay = document.querySelector(".sidebar-overlay");
 
-document.addEventListener('DOMContentLoaded', (event) => {
+  const sidebarMenu = document.querySelectorAll(
+    ".widget-area .menu-item-has-children"
+  );
 
-    const menuBtn = document.querySelector('.menu-btn');
-    const menu = document.querySelector('.menu');
-    const header = document.querySelector('header');
-    const hamburgerBtn = document.querySelector('.hamburger-menu');
-    const aside = document.querySelector('aside');
-    const menuCloseBtn = document.querySelector('.sidebar-close-btn');
-    const sidebarOverlay = document.querySelector('.sidebar-overlay');
+  const sidebarMenuLink = document.querySelectorAll(
+    ".widget-area .menu-item-has-children > a"
+  );
 
-    const sidebarMenu = document.querySelectorAll('.widget-area .menu-item-has-children');
+  let menuBtClass = false;
 
-    const sidebarMenuLink = document.querySelectorAll('.widget-area .menu-item-has-children > a');
+  sidebarMenuLink.forEach(el =>
+    el.addEventListener("click", function(event) {
+      event.preventDefault();
+    })
+  );
 
-    let menuBtClass = false;
+  sidebarMenu.forEach(el =>
+    el.addEventListener("click", function(event) {
+      this.querySelector(".sub-menu").classList.toggle("display-block");
+    })
+  );
 
-    sidebarMenuLink.forEach(el => el.addEventListener('click', function(event){
-        event.preventDefault();
-    }));
+  menuBtn.addEventListener("click", function() {
+    menuBtn.classList.toggle("open");
+    menu.classList.toggle("open");
+    header.classList.toggle("open");
+  });
 
-    sidebarMenu.forEach(el => el.addEventListener('click', function(event) {
-        this.querySelector('.sub-menu').classList.toggle('display-block');
-    }));
+  hamburgerBtn.addEventListener("click", function() {
+    aside.classList.toggle("open");
+    sidebarOverlay.classList.toggle("open");
+  });
 
-    menuBtn.addEventListener('click', function(){
-        menuBtn.classList.toggle('open');
-        menu.classList.toggle('open');
-        header.classList.toggle('open');
-    });
+  menuCloseBtn.addEventListener("click", function() {
+    aside.classList.toggle("open");
+    sidebarOverlay.classList.toggle("open");
+  });
 
-    hamburgerBtn.addEventListener('click', function(){
-        aside.classList.toggle('open');
-        sidebarOverlay.classList.toggle('open');
-    });
-
-    menuCloseBtn.addEventListener('click', function(){
-        aside.classList.toggle('open');
-        sidebarOverlay.classList.toggle('open');
-    });
-
-    sidebarOverlay.addEventListener('click', function(){
-        aside.classList.toggle('open');
-        sidebarOverlay.classList.toggle('open');
-    });
-
-})
+  sidebarOverlay.addEventListener("click", function() {
+    aside.classList.toggle("open");
+    sidebarOverlay.classList.toggle("open");
+  });
+});
