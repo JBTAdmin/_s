@@ -5,6 +5,7 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const autoprefixer = require("autoprefixer");
+var PrettierPlugin = require("prettier-webpack-plugin");
 
 module.exports = {
     context: __dirname,
@@ -80,7 +81,8 @@ module.exports = {
         new BrowserSyncPlugin({
             files: '**/*.php',
             proxy: 'http://localhost:10009/'
-        })
+        }),
+        new PrettierPlugin()
     ],
     optimization: {
         minimizer: [new UglifyJsPlugin(), new OptimizeCssAssetsPlugin()]

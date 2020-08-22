@@ -1,38 +1,40 @@
 table {
-	margin: 0 0 1.5em;
-	width: 100%;
+  margin: 0 0 1.5em;
+  width: 100%;
 }
 
 .wp-block-table {
-	margin-bottom: 3.6rem;
-	overflow-x: auto;
+  margin-bottom: 3.6rem;
+  overflow-x: auto;
 }
 
 table {
-	width: 100%;
-	border-collapse: separate;
-	border-spacing: 0;
-	border-top: 1px solid;
-	border-left: 1px solid;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-top: 1px solid;
+  border-left: 1px solid;
 }
 
 tbody {
-	display: table-row-group;
-	vertical-align: middle;
-	border-color: inherit;
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
 }
 
 tr {
-	display: table-row;
-	vertical-align: inherit;
-	border-color: inherit;
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
 }
 
-
-.wp-block-table td, .wp-block-table th, table td, table th {
-	border: none;
-	border-top: 1px solid #e5e5e5;
-	border-bottom: 1px solid #e5e5e5;
-	text-align: inherit;
-	padding: 12px 12px 12px 0;
+.wp-block-table td,
+.wp-block-table th,
+table td,
+table th {
+  border: none;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  text-align: inherit;
+  padding: 12px 12px 12px 0;
 }

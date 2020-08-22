@@ -3,68 +3,65 @@
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
+  .site-main & {
+  }
+  //
+  //.nav-links {
+  //	display: flex;
+  //}
 
-	.site-main & {
+  .nav-previous {
+    flex: 1 1 50%;
+  }
 
-	}
-	//
-	//.nav-links {
-	//	display: flex;
-	//}
-
-	.nav-previous {
-		flex: 1 1 50%;
-	}
-
-	.nav-next {
-		text-align: end;
-		flex: 1 1 50%;
-	}
+  .nav-next {
+    text-align: end;
+    flex: 1 1 50%;
+  }
 }
 
 @media screen and (max-width: 480px) {
-	.post-navigation .nav-links {
-		flex-direction: column;
-	}
+  .post-navigation .nav-links {
+    flex-direction: column;
+  }
 }
 
-.nav-previous > a, .nav-next > a {
-	display: flex;
-	align-items: center;
+.nav-previous > a,
+.nav-next > a {
+  display: flex;
+  align-items: center;
 }
-
 
 .nav-previous > a {
-	justify-content: flex-start;
+  justify-content: flex-start;
 }
 
-
 .nav-next > a {
-	justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .nav-previous > a > img,
 .nav-next > a > img {
-	margin: 0 10px;
-	border-radius: 10px;
+  margin: 0 10px;
+  border-radius: 10px;
 }
 
 .post-navigation .nav-previous {
-	text-align: start;
-	border-right: 1px solid rgba(34,34,34,.1);
+  text-align: start;
+  border-right: 1px solid rgba(34, 34, 34, 0.1);
 }
 
 .site-main .post-navigation {
-	border-top: 1px solid rgba(34,34,34,.1);
-	border-bottom: 1px solid rgba(34,34,34,.1);
-	padding: 2rem 0;
+  border-top: 1px solid rgba(34, 34, 34, 0.1);
+  border-bottom: 1px solid rgba(34, 34, 34, 0.1);
+  padding: 2rem 0;
 }
 
 .post-navigation .nav-links {
-	align-items: center;
+  align-items: center;
 }
-.nav-links h2{
-	margin-bottom: 0;
+.nav-links h2 {
+  margin-bottom: 0;
 }
 
 /****  PAGINATION ****/
@@ -73,38 +70,36 @@
 .navigation li a:hover,
 .navigation li.active a,
 .navigation li.disabled {
-	color: #fff;
-	text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
 
 .navigation li {
-	display: inline;
+  display: inline;
 }
 
 .navigation li a:hover,
 .navigation li.active a,
 .navigation li.disabled {
-
-	background-color: #e22c2f;
-	border: 1px solid #e22c2f;
-	font-size: 17px;
-	cursor: pointer;
+  background-color: #e22c2f;
+  border: 1px solid #e22c2f;
+  font-size: 17px;
+  cursor: pointer;
 }
 
-.navigation li a,
-{
-	color: #000;
-	background-color: #fff;
-	//border: 1px solid #ddd;
-	border-radius: 3px;
-	padding: 10px 16px;
-	font-size: 16px;
-	font-weight: 700;
+.navigation li a {
+  color: #000;
+  background-color: #fff;
+  //border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 /**** tmove it to navigation */
 .navigation {
-	margin: 1.5em 0;
-	width: 100%;
-	text-align: center;
+  margin: 1.5em 0;
+  width: 100%;
+  text-align: center;
 }
