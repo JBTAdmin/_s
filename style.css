@@ -425,7 +425,8 @@ big {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  word-wrap: break-word; }
+  word-wrap: break-word;
+  word-break: break-word; }
 
 html {
   font-size: 62.5%;
@@ -761,7 +762,7 @@ aside .submenu a {
 .sidebar-menu li:active > a {
   color: #e22c2f; }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   .sidebar-menu {
     display: block; }
   .menu {
@@ -808,7 +809,7 @@ header .main-header {
   justify-content: space-between;
   align-items: center; }
 
-@media screen and (min-width: 701px) {
+@media screen and (min-width: 801px) {
   .menu {
     display: flex;
     align-items: center;
@@ -903,9 +904,6 @@ header .main-header {
   border-bottom: 1px solid rgba(34, 34, 34, 0.1);
   padding: 2rem 0; }
 
-.post-navigation .nav-links {
-  align-items: center; }
-
 .nav-links h2 {
   margin-bottom: 0; }
 
@@ -970,6 +968,11 @@ header .main-header {
 .header-wrap,
 .footer-wrap {
   padding: 0 7rem; }
+
+@media screen and (max-width: 600px) {
+  .header-wrap,
+  .footer-wrap {
+    padding: 0 3rem; } }
 
 .left {
   float: left; }

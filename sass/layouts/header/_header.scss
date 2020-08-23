@@ -28,6 +28,13 @@
   padding: 0 7rem;
 }
 
+@media screen and (max-width: 600px) {
+  .header-wrap,
+  .footer-wrap {
+    padding: 0 3rem;
+  }
+}
+
 .left {
   float: left;
 }
