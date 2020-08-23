@@ -977,6 +977,13 @@ header .main-header {
 .right {
   float: right; }
 
+.site-branding {
+  text-align: center; }
+
+.site-description {
+  font-size: 1.4rem;
+  margin: 0; }
+
 /* Footer
 --------------------------------------------- */
 .site-footer {
@@ -1315,6 +1322,11 @@ aside.open {
   padding: 1.9rem 4rem 1.9rem 0;
   border: none;
   border-bottom: 1px solid #ececec; }
+
+.aside-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
 
 /* Layout
 --------------------------------------------- */
