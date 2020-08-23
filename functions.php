@@ -221,10 +221,10 @@ add_image_size( 'aaurora-blog-single-post-no-sidebar', 1000, 570, true );
 /*
  * Use Kirki Embedded
  */
-include_once( dirname( __FILE__ ) . '/inc/plugin/kirki/kirki.php' );
+include_once( dirname( __FILE__ ) . '/inc/kirki/kirki.php' );
 
 function mytheme_kirki_configuration() {
-	return array( 'url_path'     => get_stylesheet_directory_uri() . '/inc/plugin/kirki/' );
+	return array( 'url_path'     => get_stylesheet_directory_uri() . '/inc/kirki/' );
 }
 add_filter( 'kirki/config', 'mytheme_kirki_configuration' );
 
