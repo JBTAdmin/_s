@@ -11,7 +11,7 @@ if ( ! function_exists( 'aaurora_posted_on' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time.
 	 */
-	function aaurora_posted_on() {
+	function aaurora_posted_on($dateOnly = false) {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
@@ -30,7 +30,11 @@ if ( ! function_exists( 'aaurora_posted_on' ) ) :
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
+		if ($dateOnly){
+		   return get_the_date( 'j M' );
+        } else {
 		echo '<span class="posted-on">' . $posted_on . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		}
 
 	}
 endif;
@@ -113,7 +117,7 @@ if ( ! function_exists( 'aaurora_post_thumbnail' ) ) :
 	 * Wraps the post thumbnail in an anchor element on index views, or a div
 	 * element when on single views.
 	 */
-	function aaurora_post_thumbnail($size = 'post-thumbnail') {
+	function aaurora_post_thumbnail($size = 'post-thumbnail', $date = '') {
 		if ( post_password_required() || is_attachment() ) {
 			return;
 		}
@@ -128,7 +132,7 @@ if ( ! function_exists( 'aaurora_post_thumbnail' ) ) :
 					</div>
 				</div><!-- .post-thumbnail -->
                 <span class="post-date">
-                    30 May
+                    <?php echo esc_html( $date); ?>
                 </span>
 			</a>
 			<?php
@@ -161,7 +165,7 @@ if ( ! function_exists( 'aaurora_post_thumbnail' ) ) :
                 </span>
                 <?php endif; ?>
                 <span class="post-date">
-                    30 May
+                     <?php echo esc_html( $date); ?>
                 </span>
 			</a>
         </div>

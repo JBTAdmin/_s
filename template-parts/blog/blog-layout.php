@@ -11,14 +11,13 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'blog-post-article' ); ?>>
 
-	<div  class="blog-type-list">
-	<?php aaurora_post_thumbnail( 'aaurora-blog-1-featured-image' ); ?>
+    <div  class="blog-type-list">
+	<?php aaurora_post_thumbnail( 'aaurora-blog-1-featured-image', aaurora_posted_on(true) ); ?>
 	<div class="blog-type-list-content">
 	<div class="entry-header">
 		<div class="blog-list-content-meta-info">
 		<?php
 			aaurora_meta_category_list();
-			aaurora_posted_on();
 		?>
 		</div>
 		<?php
