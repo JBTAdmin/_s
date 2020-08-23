@@ -10,7 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php aaurora_post_thumbnail(); ?>
+	<?php aaurora_post_thumbnail('aaurora-blog-1-featured-image'); ?>
 	<div class="entry-header">
 		<?php if ( 'post' === get_post_type() ) : ?>
 			<div class="entry-meta">

@@ -19,7 +19,7 @@
 
 .no-post-thumbnail {
   width: inherit;
-  height: 23rem;
+  max-height: 29rem;
   //background: #fed672;
   background: #c3323a;
   display: flex; // todo See if this is the right way to do this.

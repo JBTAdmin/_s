@@ -50,7 +50,7 @@ $menu_class .= ' ' . get_theme_mod( 'main_menu_arrow_style', 'noarrow' );
 	">
 		<div class="header-wrap">
 			<div class="main-header">
-				<div class="site-branding" style="width: 12rem">
+				<div class="site-branding">
 <!--                    // TODO MOVE THIS TO SCSS-->
 					<?php
 
@@ -83,8 +83,8 @@ $menu_class .= ' ' . get_theme_mod( 'main_menu_arrow_style', 'noarrow' );
 					<div class="menu-btn">
 						<div class="menu-btn__burger"></div>
 					</div>
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-					<?php esc_html_e( 'Primary Menu', 'aaurora' ); ?></button>
+<!--					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">-->
+<!--					--><?php //esc_html_e( 'Primary Menu', 'aaurora' ); ?><!--</button>-->
 
 					<div class="<?php echo esc_attr( 'aligned-menu-' . get_theme_mod( 'main_menu_align', 'right' ) ); ?>">
 					<?php

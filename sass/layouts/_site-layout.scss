@@ -11,7 +11,7 @@
 
 main {
   flex: 2 1 80rem;
-  max-width: 140rem; // todo need to check if this can be removed as other width is there screen and (min-width: 992px)
+  //max-width: 140rem; // todo need to check if this can be removed as other width is there screen and (min-width: 992px)
 }
 
 aside {
@@ -28,7 +28,7 @@ main {
   margin: 6rem auto;
 }
 
-.blog-post-article {
+.blog-post-article { // may be this can be merged in article.
   padding: 1%;
   max-width: 31%; //todo see if this percent is working or not
   flex: 1 1 31%;
@@ -38,6 +38,8 @@ main {
 
 article {
   min-width: 0;
+  //flex: 1 1 33%;
+  //padding: 1rem;
 }
 
 .blog-post-article .post-thumbnail img {
@@ -64,14 +66,16 @@ article {
   opacity: 0;
 }
 
+//@media screen and (min-width: 1200px){
 .single-post .primary-content,
-.page .primary-content {
-  max-width: 100rem;
+.page .primary-content {    // todo can be applied on article
+  max-width: 100%;
 
   // todo problem when sidebar is large and content is small it auto margin height too
   // Should be enabled when there is no sidebar
   //margin: auto;
 }
+//}
 
 @media screen and (min-width: 992px) {
   .blog-post-article {
