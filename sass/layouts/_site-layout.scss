@@ -28,7 +28,8 @@ main {
   margin: 6rem auto;
 }
 
-.blog-post-article { // may be this can be merged in article.
+.blog-post-article {
+  // may be this can be merged in article.
   padding: 1%;
   max-width: 31%; //todo see if this percent is working or not
   flex: 1 1 31%;
@@ -68,7 +69,8 @@ article {
 
 //@media screen and (min-width: 1200px){
 .single-post .primary-content,
-.page .primary-content {    // todo can be applied on article
+.page .primary-content {
+  // todo can be applied on article
   max-width: 100%;
 
   // todo problem when sidebar is large and content is small it auto margin height too
