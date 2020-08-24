@@ -605,12 +605,6 @@ Kirki::add_field(
 		'settings'    => 'blog_post_title_font',
 		'label'       => esc_attr__( 'Post Title Size', 'aaurora' ),
 		'section'     => 'blog_post',
-		'default'     => array(
-			'font-size'      => '7.2rem',
-			'line-height'    => '1.1',
-			'letter-spacing' => '-2.1px',
-			'text-transform' => 'none',
-		),
 		'description' => esc_attr__( 'Font used in Single Post Header .', 'aaurora' ),
 		'output'      => array(
 			array(
@@ -959,11 +953,6 @@ Kirki::add_field(
 		'section'     => 'fonts',
 		'default'     => array(
 			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
-			'variant'        => '800',
-			'font-size'      => 'calc(46px + 26 * ((100vw - 576px)/ 1024))',
-			'line-height'    => '1.5',
-			'letter-spacing' => '0',
-			'text-transform' => 'none',
 		),
 		'description' => esc_attr__( 'Font used in H1 Header .', 'aaurora' ),
 		'output'      => array(
