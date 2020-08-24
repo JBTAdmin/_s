@@ -16,3 +16,9 @@
 .site-info-holder {
   padding: 3rem 0;
 }
+
+.site-info .row{
+  display: flex;
+  place-content: center center;
+  flex-direction: column;
+}

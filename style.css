@@ -1004,6 +1004,11 @@ header .main-header {
 .site-info-holder {
   padding: 3rem 0; }
 
+.site-info .row {
+  display: flex;
+  place-content: center center;
+  flex-direction: column; }
+
 /* Content
 --------------------------------------------- */
 .post-thumbnail img {
@@ -1327,9 +1332,10 @@ aside.open {
   line-height: 42px; }
 
 .widget_search .search-field {
-  padding: 1.9rem 4rem 1.9rem 0;
+  padding: 1rem 2rem 0 0;
   border: none;
-  border-bottom: 1px solid #ececec; }
+  border-bottom: 1px solid #ececec;
+  font-size: 1.8rem; }
 
 .aside-header {
   display: flex;
