@@ -4,6 +4,8 @@
 *::before,
 *::after {
   box-sizing: inherit;
+  word-wrap: break-word;
+  word-break: break-word;
 }
 
 html {

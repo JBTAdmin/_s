@@ -1,27 +1,4 @@
-.comment-content {
-  clear: both;
-  //font-size: 1.6rem;
-  a {
-    word-wrap: break-word;
-  }
-}
-
-// TODO yet to use this part in comment section for background color
-.full-width {
-  left: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  max-width: 100vw;
-  position: relative;
-  right: 50%;
-  width: 100vw;
-  background: #f9f9f9;
-}
-
 .comment-list {
-  article {
-    border-radius: 10px;
-  }
   li {
     padding: 40px 0px 30px 40px;
     list-style: none;
@@ -51,7 +28,6 @@
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 1.2px;
-    text-decoration: none;
     text-transform: uppercase;
   }
 }
@@ -59,12 +35,9 @@
 .comment-form-author,
 .comment-form-email {
   width: 50%;
-  max-width: 100%;
-  padding: 0 1.5rem;
-  margin-bottom: 35px;
 }
 
-@Media screen and (max-width: 600px){
+@Media screen and (max-width: 700px){
   .comment-form-author,
   .comment-form-email{
     width: 100%;
@@ -78,16 +51,8 @@
 }
 
 .comment-form-comment {
-  margin: 0;
   order: 2;
-  padding: 0 1.5rem;
   width: 100%;
-}
-
-.comment-notes,
-.form-submit,
-.comment-form-cookies-consent {
-  padding: 0 1.5rem;
 }
 
 .comment-form-cookies-consent {
@@ -98,42 +63,50 @@
   order: 4;
 }
 
-.comment-form-author input,
-.comment-form-comment .textarea,
-.comment-form-email input {
+.comment-respond {
+  padding: 0 1.5rem;
+}
+
+.comment-form-author {
+  padding-left: 1.5rem;
+}
+
+.comment-form input,
+.comment-form textarea {
   padding: 20px;
+}
+
+.comment-form-comment textarea {
+  padding: 20px;
+  border: 1px solid #ebebf7;
+  border-radius: 4px;
+  transition: border-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+  line-height: 1.6;
 }
 
 input:focus,
 textarea:focus {
-  border: 2px solid #e22c2f;
-}
-
-.comment-form-comment textarea {
-  width: 100%;
-  max-width: 100%;
-  padding: 20px;
-  border: 1px solid #ebebf7;
-  border-radius: 4px;
-  background: 0 0;
-  color: #282835;
-  transition: border-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
-  margin-bottom: 25px;
-  box-shadow: none;
-  line-height: 1.6;
+  border: 2px solid $theme__color;
 }
 
 .reply a {
   text-transform: uppercase;
   border-bottom: 2px solid #e22c2f;
-  border-left: 0;
-  border-right: 0;
-  border-top: 0;
-  border-radius: 0;
   color: #222;
   font-weight: 700;
   letter-spacing: 2px;
   padding: 16px 0 6px 0;
-  text-decoration: none;
   font-size: 1.6rem;
+}
+
+// TODO yet to use this part in comment section for background color
+.full-width {
+  left: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  max-width: 100vw;
+  position: relative;
+  right: 50%;
+  width: 100vw;
+  background: #f9f9f9;
 }
