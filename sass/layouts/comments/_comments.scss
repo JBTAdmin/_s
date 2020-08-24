@@ -64,6 +64,13 @@
   margin-bottom: 35px;
 }
 
+@Media screen and (max-width: 600px){
+  .comment-form-author,
+  .comment-form-email{
+    width: 100%;
+  }
+}
+
 .comment-form .comment-notes,
 .form-submit,
 .comments-area {
