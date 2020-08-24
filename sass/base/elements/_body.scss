@@ -27,6 +27,8 @@ body {
   font-family: $font__main;
   color: $body_text_light_color;
   text-rendering: optimizeLegibility;
+  line-height: 1.8;
+  letter-spacing: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
