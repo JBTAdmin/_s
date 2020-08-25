@@ -37,10 +37,15 @@
   width: 50%;
 }
 
+.comment-form-author {
+  padding-left: 1.5rem;
+}
+
 @Media screen and (max-width: 700px){
   .comment-form-author,
   .comment-form-email{
     width: 100%;
+    padding-left: 0;
   }
 }
 
@@ -67,13 +72,10 @@
   padding: 0 1.5rem;
 }
 
-.comment-form-author {
-  padding-left: 1.5rem;
-}
 
-.comment-form input,
+.comment-form input[type="text"],
 .comment-form textarea {
-  padding: 20px;
+  padding: 20px;   // todo probably we can use the default 15px which is inherited
 }
 
 .comment-form-comment textarea {

@@ -5,10 +5,8 @@ aside {
   width: 407px;
   height: 100%;
   position: fixed;
-  //padding: 3rem;
   top: 0;
   right: 0;
-  display: block;
   overflow: auto;
   z-index: 9999;
   transform: translate(100%, 0);
@@ -16,7 +14,7 @@ aside {
   font-size: 1.7rem;
 }
 
-site-header,
+.site-header,
 .aside-header {
   border-bottom: 1px solid #e9ecef;
 }
@@ -33,37 +31,49 @@ aside.open {
   box-shadow: 0 0 100px rgba(0, 0, 0, 0.5); // TODO need to check if this section is getting copied two times in style.css????
 }
 
-.widget-area .widget {
-  margin-bottom: 5rem;
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 30rem;
+.aside-header {
+  padding: 3rem 2rem 2rem 5rem;
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10rem;
+  .custom-logo {
+    max-width: 110px;
+    max-height: 110px;
+  }
 }
 
 .sidebar-overlay {
   width: 100%;
-  height: calc(100% + 60px);
+  height: 100%;
   position: fixed;
   top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
   z-index: 9998;
   background: rgba(0, 0, 0, 0.8);
-  content: "";
-  display: block;
-  opacity: 0;
   visibility: hidden;
   cursor: pointer;
   transition: all 0.2s ease-in 0.2s;
 }
 
 .sidebar-overlay.open {
-  opacity: 1;
   visibility: visible;
 }
 
-.widget-area .widget-title {
+.sidebar-close-btn {
+  display: flex;
+}
+
+// For Sidebar Categories
+.widget {
+  margin-bottom: 5rem;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 30rem;
+}
+
+.widget-title {
   text-transform: uppercase;
   color: #333;
   font-size: 1.8rem;
@@ -71,50 +81,19 @@ aside.open {
   margin-bottom: 1.5rem;
 }
 
-.sidebar-close-btn {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 0.5rem;
-  float: right;
-}
-
-.aside-header {
-  padding: 3rem 2rem 2rem 5rem;
-  margin-bottom: 3rem;
-  .custom-logo {
-    max-width: 110px;
-    max-height: 110px;
-  }
-}
-
-// FOr Sidebar Categories
-
-.widget-area .widget ul {
-  margin: 0;
+.widget ul {
   list-style: none;
-  padding: 0;
-  //display: inline-block;
-  color: #444;
 }
 
-.widget.widget_categories a {
-  padding: 0 0 0 20px;
-  display: block;
-  position: relative; // todo Why do i need this???
-  line-height: 42px;
+.widget_categories a {
+  padding: 0 0 0 20px;  // todo look for better widget title option so that this can be removed. can it be removed above??
 }
 
 //Sidebar Search field
 
-.widget_search .search-field {
+.search-field {
   padding: 1rem 2rem 0 0;
   border: none;
   border-bottom: 1px solid #ececec;
   font-size: 1.8rem;
-}
-
-.aside-header{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }

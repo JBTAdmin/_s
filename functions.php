@@ -150,7 +150,7 @@ function aaurora_scripts() {
 	wp_style_add_data( 'aaurora-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'aaurora-navigation', get_template_directory_uri() . '/js/navigation.js', array(), AAURORA_VERSION, true );
-
+	wp_enqueue_script( 'aaurora-main', get_template_directory_uri() . '/js/main.js', array(), AAURORA_VERSION, true );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}

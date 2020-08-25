@@ -2,23 +2,12 @@
   background-color: #17161a;
   color: #fff;
   font-size: 1.5rem;
-  opacity: 0.8;
-}
-
-.site-footer .wrap {
-  padding: 1rem 0;
-}
-
-.site-footer a {
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.site-info-holder {
-  padding: 3rem 0;
+  opacity: 0.8;   // Should be part of kirki Configuration
 }
 
 .site-info .row{
   display: flex;
   place-content: center center;
   flex-direction: column;
+  padding: 3rem 0;
 }
