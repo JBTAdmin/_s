@@ -9,9 +9,9 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('blog-post-article'); ?>>
-    <div  class="blog-type-list">
-	<?php aaurora_post_thumbnail('aaurora-blog-1-featured-image', aaurora_posted_on(true) ); ?>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'blog-post-article' ); ?>>
+	<div  class="blog-type-list">
+	<?php aaurora_post_thumbnail( 'aaurora-blog-1-featured-image', aaurora_posted_on( true ) ); ?>
 	<div class="entry-header">
 		<?php if ( 'post' === get_post_type() ) : ?>
 			<div class="entry-meta">
@@ -30,5 +30,5 @@
 	<footer class="entry-footer">
 		<?php aaurora_meta_category_list(); ?>
 	</footer><!-- .entry-footer -->
-    </div>
+	</div>
 </article><!-- #post-<?php the_ID(); ?> -->
