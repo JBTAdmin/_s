@@ -3,7 +3,6 @@
 .article-container,
 .post-navigation .nav-links,
 .comment-form,
-//.wrap-site-info
  {
   display: flex;
   flex-wrap: wrap;
@@ -39,8 +38,6 @@ main {
 
 article {
   min-width: 0;
-  //flex: 1 1 33%;
-  //padding: 1rem;
 }
 
 .blog-post-article .post-thumbnail img {
