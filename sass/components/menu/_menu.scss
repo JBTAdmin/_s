@@ -56,7 +56,7 @@ aside .submenu a {
   color: #e22c2f;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1024px) {
   .sidebar-menu {
     display: block;
   }
@@ -125,7 +125,11 @@ aside .submenu a {
   align-items: center;
 }
 
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 1025px) {
+  .sidebar-menu {
+    display: none;
+  }
+
   .menu {
     display: flex;
     align-items: center;

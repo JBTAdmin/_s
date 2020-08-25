@@ -9,6 +9,9 @@
 
 get_header();
 ?>
+    <div class="site-container">
+    <div class="wrap">
+    <div class="main-container">
 
 	<main id="primary" class="site-main">
 
@@ -57,6 +60,11 @@ get_header();
 		</section><!-- .error-404 -->
 
 	</main><!-- #main -->
-
+	    <?php
+	    get_sidebar();
+	    ?>
+    </div>
+    </div>
+    </div>
 <?php
 get_footer();
