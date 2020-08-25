@@ -58,13 +58,13 @@ $menu_class .= ' ' . get_theme_mod( 'main_menu_arrow_style', 'noarrow' );
 					if ( ! get_theme_mod( 'custom_logo' ) ) :
 						if ( is_front_page() && is_home() ) :
 							?>
-						    <div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
+							<div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
 							<?php
-                        else :
-                            ?>
-                            <div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
-                            <?php
-                        endif;
+						else :
+							?>
+							<div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
+							<?php
+						endif;
 					endif;
 					$aaurora_description = get_bloginfo( 'description', 'display' );
 					if ( $aaurora_description || is_customize_preview() ) :
@@ -79,7 +79,7 @@ $menu_class .= ' ' . get_theme_mod( 'main_menu_arrow_style', 'noarrow' );
 						<div class="menu-btn__burger"></div>
 					</div>
 <!--					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">-->
-<!--					--><?php //esc_html_e( 'Primary Menu', 'aaurora' ); ?><!--</button>-->
+<!--					--><?php // esc_html_e( 'Primary Menu', 'aaurora' ); ?><!--</button>-->
 
 					<div class="<?php echo esc_attr( 'aligned-menu-' . get_theme_mod( 'main_menu_align', 'right' ) ); ?>">
 					<?php

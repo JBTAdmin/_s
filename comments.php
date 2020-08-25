@@ -33,15 +33,15 @@ if ( post_password_required() ) {
 				printf(
 				/* translators: 1: title. */
 					esc_html__( 'One thought', 'aaurora' )
-//                    ,
-//					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
+					// ,
+					// '<span>' . wp_kses_post( get_the_title() ) . '</span>'
 				);
 			} else {
 				printf(
 				/* translators: 1: comment count number, 2: title. */
 					esc_html( _nx( '%1$s thought ', '%1$s thoughts ', $aaurora_comment_count, 'comments title', 'aaurora' ) ),
 					number_format_i18n( $aaurora_comment_count ) // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-//					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
+					// '<span>' . wp_kses_post( get_the_title() ) . '</span>'
 				);
 			}
 			?>

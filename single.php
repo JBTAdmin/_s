@@ -47,11 +47,11 @@ $sidebar_page_class = ' sidebar_position_' . get_theme_mod( 'sidebar_post', 'rig
 						the_post_navigation(
 							array(
 								'next_text' => '<div><small class="meta-nav" aria-hidden="true">' . __( 'Next Post', 'aaurora' ) . '</small> ' .
-											   '<span class="screen-reader-text">' . __( 'Next post:', 'aaurora' ) . '</span> ' .
-											   '<h2 class="post-title">%title</h2></div>' . $next_post_thumbnail,
+											'<span class="screen-reader-text">' . __( 'Next post:', 'aaurora' ) . '</span> ' .
+											'<h2 class="post-title">%title</h2></div>' . $next_post_thumbnail,
 								'prev_text' => $previous_post_thumbnail . '<div><small class="meta-nav" aria-hidden="true">' . __( 'Previous Post', 'aaurora' ) . '</small> ' .
-											   '<span class="screen-reader-text">' . __( 'Previous post:', 'aaurora' ) . '</span> ' .
-											   '<h2 class="post-title">%title</h2></div>',
+											'<span class="screen-reader-text">' . __( 'Previous post:', 'aaurora' ) . '</span> ' .
+											'<h2 class="post-title">%title</h2></div>',
 							)
 						);
 						// If comments are open or we have at least one comment, load up the comment template.

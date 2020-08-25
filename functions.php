@@ -1,6 +1,6 @@
 <?php
 /**
- * aaurora_ functions and definitions
+ * Aaurora_ functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
@@ -193,7 +193,9 @@ if ( class_exists( 'WooCommerce' ) ) {
 }
 
 
-/* Gutenberg Support */
+/**
+ * Gutenberg Support
+ */
 
 function mytheme_setup_theme_supported_features() {
 
@@ -204,9 +206,8 @@ function mytheme_setup_theme_supported_features() {
 
 add_action( 'after_setup_theme', 'mytheme_setup_theme_supported_features' );
 
-/* Featured Image support */
 /**
- * Theme images sizes
+ * Theme Featured Image support.
  */
 add_image_size( 'aaurora-blog-single-post-navigation-featured-image', 80, 80, true ); // This is used for Blog Layout 1
 add_image_size( 'aaurora-blog-1-featured-image', 530, 420, true ); // This is used for Blog Layout 1
@@ -219,19 +220,18 @@ add_image_size( 'aaurora-blog-single-post-no-sidebar', 1000, 570, true );
 // todo See if below options related to kirki needs to be enabled or not
 
 /*
- * Use Kirki Embedded
+ * Use Kirki Embedded.
  */
-include_once( dirname( __FILE__ ) . '/inc/kirki/kirki.php' );
+require_once dirname( __FILE__ ) . '/inc/kirki/kirki.php';
 
 function mytheme_kirki_configuration() {
-	return array( 'url_path'     => get_stylesheet_directory_uri() . '/inc/kirki/' );
+	return array( 'url_path' => get_stylesheet_directory_uri() . '/inc/kirki/' );
 }
 add_filter( 'kirki/config', 'mytheme_kirki_configuration' );
 
 /*
 = Use External stylesheet for Kirki generated styles =*/
 /*
-
 // if (!is_customize_preview() ) {
 // add_filter( 'kirki_output_inline_styles', '__return_false' );
 // }
@@ -242,12 +242,12 @@ add_filter( 'kirki/config', 'mytheme_kirki_configuration' );
 // add_filter( 'kirki_use_local_fonts', '__return_false' );
 
 /*
- * Kirki Customization
+ * Kirki Customization.
  */
 require get_template_directory() . '/inc/kirki-configuration.php';
 
 
-/********PAGINATION  VIVEKA CHANGE THIS*/
+/********PAGINATION  VIVEKA CHANGE THIS.*/
 function numeric_posts_nav() {
 
 	if ( is_singular() ) {
@@ -256,7 +256,7 @@ function numeric_posts_nav() {
 
 	global $wp_query;
 
-	/** Stop execution if there's only 1 page */
+	/** Stop execution if there's only 1 page. */
 	if ( $wp_query->max_num_pages <= 1 ) {
 		return;
 	}
@@ -264,12 +264,12 @@ function numeric_posts_nav() {
 	$paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
 	$max   = intval( $wp_query->max_num_pages );
 
-	/** Add current page to the array */
+	/** Add current page to the array. */
 	if ( $paged >= 1 ) {
 		$links[] = $paged;
 	}
 
-	/** Add the pages around the current page to the array */
+	/** Add the pages around the current page to the array. */
 	if ( $paged >= 3 ) {
 		$links[] = $paged - 1;
 		$links[] = $paged - 2;
@@ -282,12 +282,12 @@ function numeric_posts_nav() {
 
 	echo '<div class="navigation"><ul>' . "\n";
 
-	/** Previous Post Link */
+	/** Previous Post Link. */
 	if ( get_previous_posts_link() ) {
 		printf( '<li>%s</li>' . "\n", get_previous_posts_link( '&lt; Previous' ) );
 	}
 
-	/** Link to first page, plus ellipses if necessary */
+	/** Link to first page, plus ellipses if necessary. */
 	if ( ! in_array( 1, $links ) ) {
 		$class = 1 == $paged ? ' class="active"' : '';
 
@@ -324,8 +324,8 @@ function numeric_posts_nav() {
 
 }
 
-/*
- * Add Google Fonts
+/**
+ * Add Google Fonts.
  */
 
 function google_fonts() {

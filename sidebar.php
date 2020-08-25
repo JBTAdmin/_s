@@ -15,27 +15,27 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 <aside id="secondary" class="widget-area">
 	<div class="aside-header">
 		<div>
-        <?php
-        
+		<?php
+
 		the_custom_logo();
-		
+
 		if ( ! get_theme_mod( 'custom_logo' ) ) :
 			if ( is_front_page() && is_home() ) :
 				?>
-                <div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
-			<?php
+				<div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
+				<?php
 			else :
 				?>
-                <div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
-			<?php
+				<div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
+				<?php
 			endif;
 		endif;
 		$aaurora_description = get_bloginfo( 'description', 'display' );
 		if ( $aaurora_description || is_customize_preview() ) :
 			?>
-            <p class="site-description"> <?php echo $aaurora_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped. ?></p>
+			<p class="site-description"> <?php echo $aaurora_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped. ?></p>
 		<?php endif; ?>
-        </div>
+		</div>
 		<div class="sidebar-close-btn">
 			<?php load_inline_svg( 'close.svg' ); ?>
 		</div>
