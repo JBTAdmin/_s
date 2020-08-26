@@ -85,18 +85,6 @@ Kirki::add_section(
 Kirki::add_field(
 	'aaurora_theme_options',
 	array(
-		'type'        => 'toggle',
-		'settings'    => 'button_backtotop',
-		'label'       => esc_attr__( 'Scroll to top button', 'aaurora' ),
-		'description' => esc_attr__( 'Show scroll to top button after page scroll.', 'aaurora' ),
-		'section'     => 'general',
-		'default'     => '1',
-	)
-);
-
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
 		'type'        => 'background',
 		'settings'    => 'body_background',
 		'label'       => esc_attr__( 'Body background', 'aaurora' ),
@@ -226,24 +214,6 @@ Kirki::add_field(
 	)
 );
 
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
-		'type'        => 'radio-buttonset',
-		'settings'    => 'search_position',
-		'label'       => esc_attr__( 'Search field', 'aaurora' ),
-		'section'     => 'header',
-		'default'     => 'header',
-		'choices'     => array(
-			'header'     => esc_attr__( 'Header', 'aaurora' ),
-			'fullscreen' => esc_attr__( 'Fullscreen', 'aaurora' ),
-			'disable'    => esc_attr__( 'Disable', 'aaurora' ),
-		),
-		'description' => esc_attr__( 'Search field type.', 'aaurora' ),
-	)
-);
-
-
 // todo what is the use of below.
 //
 // Kirki::add_field(
@@ -283,49 +253,49 @@ Kirki::add_field(
 		),
 	)
 );
-
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
-		'type'        => 'toggle',
-		'settings'    => 'header_topline',
-		'label'       => esc_attr__( 'Top line', 'aaurora' ),
-		'description' => esc_attr__( 'Enable to display header topline slider with trending posts.', 'aaurora' ),
-		'section'     => 'header',
-		'default'     => '0',
-	)
-);
-
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
-		'type'        => 'editor',
-		'settings'    => 'header_topline_content',
-		'label'       => esc_attr__( 'Top line text', 'aaurora' ),
-		'description' => esc_attr__( 'Add top line text here. HTML and shortcodes supported.', 'aaurora' ),
-		'section'     => 'header',
-		'default'     => '',
-	)
-);
-
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
-		'type'        => 'background',
-		'settings'    => 'header_top_line_background',
-		'label'       => esc_attr__( 'Top line background', 'aaurora' ),
-		'description' => esc_attr__( 'Change your top line background settings.', 'aaurora' ),
-		'section'     => 'header',
-		'default'     => array(
-			'background-color'      => '#ffffff',
-			'background-image'      => '',
-			'background-repeat'     => 'repeat',
-			'background-position'   => 'center center',
-			'background-size'       => 'cover',
-			'background-attachment' => 'fixed',
-		),
-	)
-);
+//
+//Kirki::add_field(
+//	'aaurora_theme_options',
+//	array(
+//		'type'        => 'toggle',
+//		'settings'    => 'header_topline',
+//		'label'       => esc_attr__( 'Top line', 'aaurora' ),
+//		'description' => esc_attr__( 'Enable to display header topline slider with trending posts.', 'aaurora' ),
+//		'section'     => 'header',
+//		'default'     => '0',
+//	)
+//);
+//
+//Kirki::add_field(
+//	'aaurora_theme_options',
+//	array(
+//		'type'        => 'editor',
+//		'settings'    => 'header_topline_content',
+//		'label'       => esc_attr__( 'Top line text', 'aaurora' ),
+//		'description' => esc_attr__( 'Add top line text here. HTML and shortcodes supported.', 'aaurora' ),
+//		'section'     => 'header',
+//		'default'     => '',
+//	)
+//);
+//
+//Kirki::add_field(
+//	'aaurora_theme_options',
+//	array(
+//		'type'        => 'background',
+//		'settings'    => 'header_top_line_background',
+//		'label'       => esc_attr__( 'Top line background', 'aaurora' ),
+//		'description' => esc_attr__( 'Change your top line background settings.', 'aaurora' ),
+//		'section'     => 'header',
+//		'default'     => array(
+//			'background-color'      => '#ffffff',
+//			'background-image'      => '',
+//			'background-repeat'     => 'repeat',
+//			'background-position'   => 'center center',
+//			'background-size'       => 'cover',
+//			'background-attachment' => 'fixed',
+//		),
+//	)
+//);
 
 // END SECTION: Header.
 
@@ -391,23 +361,6 @@ Kirki::add_field(
 Kirki::add_field(
 	'aaurora_theme_options',
 	array(
-		'type'        => 'radio-buttonset',
-		'settings'    => 'main_menu_arrow_style',
-		'label'       => esc_attr__( 'Main menu dropdown arrows', 'aaurora' ),
-		'section'     => 'main_menu',
-		'default'     => 'noarrow',
-		'choices'     => array(
-			'rightarrow' => esc_attr__( 'Right >', 'aaurora' ),
-			'downarrow'  => esc_attr__( 'Down V', 'aaurora' ),
-			'noarrow'    => esc_attr__( 'Disable', 'aaurora' ),
-		),
-		'description' => '',
-	)
-);
-
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
 		'type'        => 'dimension',
 		'settings'    => 'mainmenu_paddings',
 		'label'       => esc_attr__( 'Main menu top/bottom paddings (px)', 'aaurora' ),
@@ -452,12 +405,12 @@ Kirki::add_field(
 Kirki::add_field(
 	'aaurora_theme_options',
 	array(
-		'type'        => 'editor',
+		'type'        => 'textarea',
 		'settings'    => 'footer_copyright',
 		'label'       => esc_attr__( 'Footer copyright text', 'aaurora' ),
 		'description' => esc_attr__( 'Change your footer copyright text.', 'aaurora' ),
 		'section'     => 'footer',
-		'default'     => '#fff',
+		'default'     => 'Powered by <a href="https://www.wordpress.org">WordPress</a> <br />All rights reserved',
 	)
 );
 
@@ -1009,18 +962,6 @@ Kirki::add_field(
 				'element' => 'body',
 			),
 		),
-	)
-);
-
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
-		'type'        => 'toggle',
-		'settings'    => 'webfonts_loadallvariants',
-		'label'       => esc_attr__( 'Load all Google Fonts variants', 'aaurora' ),
-		'description' => esc_attr__( 'Enable to load all available variants and subsets for fonts that you selected.', 'aaurora' ),
-		'section'     => 'fonts',
-		'default'     => '0',
 	)
 );
 

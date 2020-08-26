@@ -2,10 +2,14 @@
   background-color: #17161a;
   color: #fff;
   font-size: 1.5rem;
-  opacity: 0.8;   // Should be part of kirki Configuration
+  opacity: 0.8; // Should be part of kirki Configuration
 }
 
-.site-info .row{
+.site-footer p{
+  margin: 0;
+}
+
+.site-info .row {
   display: flex;
   place-content: center center;
   flex-direction: column;

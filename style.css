@@ -995,6 +995,9 @@ aside .submenu a {
   font-size: 1.5rem;
   opacity: 0.8; }
 
+.site-footer p {
+  margin: 0; }
+
 .site-info .row {
   display: flex;
   place-content: center center;
@@ -1148,7 +1151,7 @@ h1.entry-title {
 .comment-form-author {
   padding-left: 1.5rem; }
 
-@Media screen and (max-width: 700px) {
+@media screen and (max-width: 700px) {
   .comment-form-author,
   .comment-form-email {
     width: 100%;

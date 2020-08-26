@@ -9,9 +9,9 @@
  * @package aaurora
  */
 
-$site_info_text_left   = 'Terms of Use / Privacy Policy / Sitemap / About Us / Contact Us / Partner Site iPowerUser';
+$site_info_text_left   = get_theme_mod( 'footer_copyright', 'Copyright' );
 $site_info_text_center = '';
-$site_info_text_right  = 'crafted with by JBT Team / Copyright . JBT';
+$site_info_text_right  = 'Crafted with &#10084; by <a href="https:ipoweruser.com">iPoweruser</a> Team';
 
 ?>
 
