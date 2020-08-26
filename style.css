@@ -839,7 +839,7 @@ aside .submenu a {
     top: 0;
     left: 100%; }
   nav .sub-menu a {
-    padding: 2rem 3rem; }
+    padding: 1.1rem 1.3vw; }
   .menu li:hover > a {
     color: #e22c2f; }
   /* All the properties should not be here*/
