@@ -267,7 +267,7 @@ Kirki::add_field(
 		'transport'   => 'auto',
 		'output'      => array(
 			array(
-				'element'  => '.header-menu a',
+				'element'  => '.main-navigation, .sidebar-close-btn',
 				'property' => 'color',
 			),
 		),

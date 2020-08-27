@@ -17,7 +17,7 @@ if ( ! is_active_sidebar( 'sidebar-1' )  || get_theme_mod( 'sidebar_listing', 'r
 <aside id="secondary" class="widget-area">
 	<div class="aside-header-container">
         <div class="widget aside-header">
-            <div>
+            <div class="site-branding">
 				<?php
 				
 				the_custom_logo();
