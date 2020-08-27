@@ -356,8 +356,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Merriweather, serif;
-  color: #17161a; }
+  font-family: Merriweather, serif; }
 
 h1 {
   font-size: calc(46px + 26 * ((100vw - 576px) / 1024));
@@ -715,14 +714,15 @@ select {
 
 /* Menus
 --------------------------------------------- */
-.menu a {
-  padding: 1vw 1.3vw;
-  display: flex;
-  text-decoration: none;
+.header-menu {
   color: #333333;
   font-size: 1.6rem;
   line-height: 1;
   font-weight: 500; }
+
+.header-menu a {
+  padding: 1vw 1.3vw;
+  display: flex; }
 
 .aligned-menu-center {
   position: absolute;
@@ -739,6 +739,9 @@ select {
   text-decoration: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0.6rem; }
+
+aside a {
+  line-height: 4.5rem; }
 
 aside a {
   line-height: 4.5rem; }
@@ -764,7 +767,7 @@ aside .submenu a {
 @media screen and (max-width: 1024px) {
   .sidebar-menu {
     display: block; }
-  .menu {
+  .header-menu {
     display: none; }
   .menu-btn {
     border: 5px solid #fff;
@@ -812,12 +815,12 @@ aside .submenu a {
 @media screen and (min-width: 1025px) {
   .sidebar-menu {
     display: none; }
-  .menu {
+  .header-menu {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     height: 10vh; }
-  .menu li {
+  .header-menu li {
     position: relative;
     list-style: none;
     text-decoration: none; }
@@ -831,7 +834,7 @@ aside .submenu a {
     transition: opacity 0.4s ease-in-out;
     border: 1px solid #eee;
     background-color: #fff; }
-  .menu > li > ul.sub-menu {
+  .header-menu > li > ul.sub-menu {
     position: absolute;
     top: 100%; }
   nav ul ul ul {
@@ -840,10 +843,10 @@ aside .submenu a {
     left: 100%; }
   nav .sub-menu a {
     padding: 1.1rem 1.3vw; }
-  .menu li:hover > a {
+  .header-menu li:hover > a {
     color: #e22c2f; }
   /* All the properties should not be here*/
-  .menu li:hover > ul {
+  .header-menu li:hover > ul {
     visibility: visible; } }
 
 /** SIDEBAR MENU */
@@ -955,6 +958,9 @@ aside .submenu a {
   line-height: 1.2;
   border-bottom: 3px solid #e22c2f;
   text-align: center; }
+
+.site-title a {
+  line-height: 0; }
 
 .header-center .main-navigation {
   position: absolute;
@@ -1071,11 +1077,10 @@ h1.entry-title {
 .post-thumbnail {
   margin: 4rem 0; }
 
-.tags-links {
+.tags-links, .tagcloud {
   margin-top: 3rem; }
-  .tags-links a {
+  .tags-links a, .tagcloud a {
     background: #eee;
-    color: #0f0e0e;
     padding: 5px 10px;
     margin-right: 5px;
     margin-bottom: 10px;
@@ -1214,19 +1219,19 @@ textarea:focus {
 /* Widget Styling*/
 aside {
   background: #fff;
-  width: 407px;
-  height: 100%;
+  width: 400px;
+  height: 98%;
   position: fixed;
-  top: 0;
-  right: 0;
+  top: 1%;
+  right: 1%;
   overflow: auto;
   z-index: 9999;
-  transform: translate(100%, 0);
+  transform: translate(110%, 0);
   transition: transform 0.5s, width 0.5s ease-in-out;
-  font-size: 1.7rem; }
+  font-size: 1.5rem; }
 
 .site-header,
-.aside-header {
+.aside-header-container {
   border-bottom: 1px solid #e9ecef; }
 
 @media screen and (max-width: 48rem) {
@@ -1236,11 +1241,11 @@ aside {
 
 aside.open {
   transform: translate3D(0, 0, 0);
-  box-shadow: 0 0 100px rgba(0, 0, 0, 0.5); }
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+  border-radius: 1rem; }
 
 .aside-header {
-  padding: 3rem 2rem 2rem 5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 0 !important;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1271,20 +1276,18 @@ aside.open {
   margin-bottom: 5rem;
   margin-right: auto;
   margin-left: auto;
-  max-width: 30rem; }
+  max-width: 85%; }
 
 .widget-title {
-  text-transform: uppercase;
   color: #333;
   font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem; }
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee; }
 
 .widget ul {
   list-style: none; }
-
-.widget_categories a {
-  padding: 0 0 0 20px; }
 
 .search-field {
   padding: 1rem 2rem 0 0;

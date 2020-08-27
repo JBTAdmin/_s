@@ -1,13 +1,15 @@
-.menu a {
-  padding: 1vw 1.3vw;
-  display: flex;
-  text-decoration: none;
+.header-menu{
   color: rgb(51, 51, 51);
   font-size: 1.6rem;
   //letter-spacing: 0.2rem;
   line-height: 1;
   //text-transform: uppercase;
   font-weight: 500;
+}
+
+.header-menu a {
+  padding: 1vw 1.3vw;
+  display: flex;
 }
 
 .aligned-menu-center {
@@ -27,6 +29,10 @@
   text-decoration: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0.6rem;
+}
+
+aside a {
+  line-height: 4.5rem;
 }
 
 aside a {
@@ -61,7 +67,7 @@ aside .submenu a {
     display: block;
   }
 
-  .menu {
+  .header-menu {
     display: none;
   }
 
@@ -130,14 +136,14 @@ aside .submenu a {
     display: none;
   }
 
-  .menu {
+  .header-menu {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     height: 10vh;
   }
 
-  .menu li {
+  .header-menu li {
     position: relative;
     list-style: none;
     text-decoration: none;
@@ -155,7 +161,7 @@ aside .submenu a {
     background-color: #fff;
   }
 
-  .menu > li > ul.sub-menu {
+  .header-menu > li > ul.sub-menu {
     position: absolute;
     top: 100%;
   }
@@ -170,12 +176,12 @@ aside .submenu a {
     padding: 1.1rem 1.3vw;
   }
 
-  .menu li:hover > a {
+  .header-menu li:hover > a {
     color: $color__link-hover;
   }
 
   /* All the properties should not be here*/
-  .menu li:hover > ul {
+  .header-menu li:hover > ul {
     visibility: visible;
   }
 }

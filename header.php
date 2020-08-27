@@ -85,16 +85,19 @@ $menu_class .= ' ' . get_theme_mod( 'main_menu_arrow_style', 'noarrow' );
 					<?php
 					wp_nav_menu(
 						array(
-							'theme_location' => 'menu-1',
-							'menu_id'        => 'primary-menu',
-							'container'      => '',
+							'theme_location'       => 'menu-1',
+							'menu_id'              => 'primary-menu',
+							'menu_class'           => 'header-menu',
+                            'container_class'      => 'header-menu-container',
 						)
 					);
 					?>
 			</div>
+                    <?php if ( get_theme_mod( 'sidebar_listing', 'right' ) !== 'disable') : ?>
 					<div class="hamburger-menu">
 						<?php load_inline_svg( 'hamburger.svg' ); ?>
 					</div>
+                    <?php endif; ?>
 				</nav><!-- #site-navigation -->
 			</div>
 		</div>

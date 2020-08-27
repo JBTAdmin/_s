@@ -25,8 +25,11 @@
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</div><!-- .entry-header -->
-	<?php aaurora_post_thumbnail(); ?>
-
+	<?php
+        if ( get_theme_mod( 'blog_post_featured_image', '1' ) == '1') :
+            aaurora_post_thumbnail();
+        endif;
+    ?>
 	<div class="entry-content">
 		<?php
 		the_content(
@@ -54,6 +57,8 @@
 	</div><!-- .entry-content -->
 </article><!-- #post-<?php the_ID(); ?> -->
 	<?php
-	aaurora_meta_tag_list();
+        if ( get_theme_mod( 'blog_post_tags', '1' ) == '1') :
+            aaurora_meta_tag_list();
+        endif;
 	?>
 </div>
