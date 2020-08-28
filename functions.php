@@ -214,37 +214,35 @@ add_image_size( 'aaurora-blog-2-featured-image', 125, 125, true ); // This is us
 add_image_size( 'aaurora-blog-single-post-sidebar', 400, 500, true );
 add_image_size( 'aaurora-blog-single-post-no-sidebar', 1000, 570, true );
 
-/*  Kirki plugin related changed */
 
 // todo See if below options related to kirki needs to be enabled or not.
-
-/*
- * Use Kirki Embedded.
+/**
+ * Uses Embedded Kirki.
  */
 require_once dirname( __FILE__ ) . '/inc/kirki/kirki.php';
 
-/*
- * Kirki Configuration Files location.
+/**
+ * Embedded Kirki location.  // todo need to check if it really required
  */
 function aaurora_kirki_configuration() {
 	return array( 'url_path' => get_stylesheet_directory_uri() . '/inc/kirki/' );
 }
 add_filter( 'kirki/config', 'aaurora_kirki_configuration' );
 
-/*
-= Use External stylesheet for Kirki generated styles =
-/*
-// if (!is_customize_preview() ) {
-// add_filter( 'kirki_output_inline_styles', '__return_false' );
-// }
-
-/*
- * It led Kirki use CDN font instead of hosting the local fonts.
+/**
+ * Use External stylesheet for Kirki generated styles instead of default inline styles.
  */
-// add_filter( 'kirki_use_local_fonts', '__return_false' );
+ if (!is_customize_preview() ) {
+ add_filter( 'kirki_output_inline_styles', '__return_false' );
+ }
 
-/*
- * Kirki Customization.
+/**
+ * Use CDN Font instead of hosted fonts in Kirki.
+ */
+ add_filter( 'kirki_use_local_fonts', '__return_false' );
+
+/**
+ * Kirki Customization File Location.
  */
 require get_template_directory() . '/inc/kirki-configuration.php';
 
