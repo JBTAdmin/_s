@@ -55,8 +55,8 @@ get_header();
 				</div><!-- .widget -->
 
 				<?php
-				/* translators: %1$s: smiley */
 				$aaurora_archive_content = '<p>' . sprintf(
+					/* translators: %1$s: smiley */
 					esc_html__(
 						'Try looking in the monthly archives. %1$s',
 						'aaurora'

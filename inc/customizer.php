@@ -1,6 +1,6 @@
 <?php
 /**
- * aaurora Theme Customizer
+ * Aaurora Theme Customizer
  *
  * @package aaurora
  */

@@ -230,13 +230,6 @@ function aaurora_kirki_configuration() {
 add_filter( 'kirki/config', 'aaurora_kirki_configuration' );
 
 /**
- * Use External stylesheet for Kirki generated styles instead of default inline styles.
- */
- if (!is_customize_preview() ) {
- add_filter( 'kirki_output_inline_styles', '__return_false' );
- }
-
-/**
  * Use CDN Font instead of hosted fonts in Kirki.
  */
  add_filter( 'kirki_use_local_fonts', '__return_false' );

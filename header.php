@@ -78,26 +78,23 @@ $menu_class .= ' ' . get_theme_mod( 'main_menu_arrow_style', 'noarrow' );
 					<div class="menu-btn">
 						<div class="menu-btn__burger"></div>
 					</div>
-<!--					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">-->
-<!--					--><?php // esc_html_e( 'Primary Menu', 'aaurora' ); ?><!--</button>-->
-
 					<div class="<?php echo esc_attr( 'aligned-menu-' . get_theme_mod( 'main_menu_align', 'right' ) ); ?>">
 					<?php
 					wp_nav_menu(
 						array(
-							'theme_location'       => 'menu-1',
-							'menu_id'              => 'primary-menu',
-							'menu_class'           => 'header-menu',
-                            'container_class'      => 'header-menu-container',
+							'theme_location'  => 'menu-1',
+							'menu_id'         => 'primary-menu',
+							'menu_class'      => 'header-menu',
+							'container_class' => 'header-menu-container',
 						)
 					);
 					?>
 			</div>
-                    <?php if ( get_theme_mod( 'sidebar_listing', 'right' ) !== 'disable') : ?>
+					<?php if ( get_theme_mod( 'sidebar_listing', 'right' ) !== 'disable' ) : ?>
 					<div class="hamburger-menu">
 						<?php load_inline_svg( 'hamburger.svg' ); ?>
 					</div>
-                    <?php endif; ?>
+					<?php endif; ?>
 				</nav><!-- #site-navigation -->
 			</div>
 		</div>
