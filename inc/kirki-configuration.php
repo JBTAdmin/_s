@@ -86,6 +86,25 @@ Kirki::add_field(
 	'aaurora_theme_options',
 	array(
 		'type'        => 'color',
+		'settings'    => 'color_theme',
+		'label'       => esc_attr__( 'Theme color', 'aaurora' ),
+		'description' => '',
+		'section'     => 'general',
+		'default'     => '#e22c2f',
+		'transport'   => 'auto',
+		'output'      => array(
+			array(
+				'element'  => ':root',
+				'property' => '--theme-color',
+			),
+		),
+	)
+);
+
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'        => 'color',
 		'settings'    => 'color_body_text',
 		'label'       => esc_attr__( 'Body text color', 'aaurora' ),
 		'description' => '',

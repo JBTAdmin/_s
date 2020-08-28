@@ -47,6 +47,16 @@
   border-right: 1px solid rgba(34, 34, 34, 0.1);
 }
 
+@media screen and (max-width: 768px){
+  .post-navigation .nav-previous {
+    text-align: start;
+    border-bottom: 1px solid rgba(34, 34, 34, 0.1);
+    border-right: none;
+    padding-bottom: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+
 .site-main .post-navigation {
   border-top: 1px solid rgba(34, 34, 34, 0.1);
   border-bottom: 1px solid rgba(34, 34, 34, 0.1);
@@ -74,8 +84,8 @@
 .navigation li a:hover,
 .navigation li.active a,
 .navigation li.disabled {
-  background-color: #e22c2f;
-  border: 1px solid #e22c2f;
+  background-color: $theme__color;
+  border: 1px solid $theme__color;
   font-size: 17px;
   cursor: pointer;
 }

@@ -27,8 +27,5 @@
 	<a href="<?php echo esc_url( get_permalink() ); ?>" class="btn btn-link brand-color-hover">
 		<?php esc_html_e( 'Read More', 'aaurora' ); ?>
 	</a>
-	<footer class="entry-footer">
-		<?php aaurora_meta_category_list(); ?>
-	</footer><!-- .entry-footer -->
 	</div>
 </article><!-- #post-<?php the_ID(); ?> -->

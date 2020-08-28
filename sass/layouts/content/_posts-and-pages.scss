@@ -133,7 +133,10 @@ h1.entry-title {
 @media (min-width: 768px) {
   .single-post {
     .entry-header,
-    .entry-content {
+    .entry-content,
+    .tags-links,
+    .post-navigation,
+    .comments-area {
       margin-left: 8%;
       max-width: 84%;
     }

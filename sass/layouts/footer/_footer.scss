@@ -2,7 +2,6 @@
   background-color: #17161a;
   color: #fff;
   font-size: 1.5rem;
-  opacity: 0.8; // Should be part of kirki Configuration
 }
 
 .site-footer p{
@@ -14,4 +13,11 @@
   place-content: center center;
   flex-direction: column;
   padding: 3rem 0;
+}
+
+@media screen and (max-width: 768px){
+  .site-info-holder .right{
+    text-align: left;
+    width: 100%;
+  }
 }

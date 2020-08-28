@@ -50,11 +50,11 @@ aside .submenu a {
 }
 
 .sidebar-menu li:hover > a {
-  color: #e22c2f;
+  color: $theme__color;
 }
 
 .sidebar-menu li:active > a {
-  color: #e22c2f;
+  color: $theme__color;
 }
 
 @media screen and (max-width: 1024px) {
@@ -188,12 +188,12 @@ aside .submenu a {
     right: auto;
   }
 
-  .header-menu li > a::before {
+  .header-menu > li > a::before {
     content: '';
     position: absolute;
     left: auto;
     right: 0;
-    bottom: 0;
+    bottom: 0.9vw;
     height: 1px;
     width: 0;
     transition: width .6s cubic-bezier(.25,.8,.25,1) 0s;

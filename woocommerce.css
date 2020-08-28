@@ -3,6 +3,13 @@ Theme Name: aaurora
 
 WooCommerce styles override
 */
+/*
+* Variables
+*/
+:root {
+  /* Theme settings colors */
+  --theme-color: #f5f1f1; }
+
 /**
  * Shop tables
  */
