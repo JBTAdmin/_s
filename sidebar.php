@@ -34,7 +34,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) || get_theme_mod( 'sidebar_listing', 'ri
 				$aaurora_description = get_bloginfo( 'description', 'display' );
 				if ( $aaurora_description || is_customize_preview() ) :
 					?>
-					<p class="site-description"> <?php echo $aaurora_description; ?></p> // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped.
+					<p class="site-description"> <?php echo $aaurora_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped. ?></p>
 				<?php endif; ?>
 			</div>
 			<div class="sidebar-close-btn">

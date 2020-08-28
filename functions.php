@@ -196,7 +196,6 @@ if ( class_exists( 'WooCommerce' ) ) {
 /**
  * Gutenberg Support
  */
-
 function mytheme_setup_theme_supported_features() {
 
 	// Theme supports wide images, galleries and videos.
@@ -209,28 +208,31 @@ add_action( 'after_setup_theme', 'mytheme_setup_theme_supported_features' );
 /**
  * Theme Featured Image support.
  */
-add_image_size( 'aaurora-blog-single-post-navigation-featured-image', 80, 80, true ); // This is used for Blog Layout 1
-add_image_size( 'aaurora-blog-1-featured-image', 530, 420, true ); // This is used for Blog Layout 1
-add_image_size( 'aaurora-blog-2-featured-image', 125, 125, true ); // This is used for Blog Layout 2
+add_image_size( 'aaurora-blog-single-post-navigation-featured-image', 80, 80, true ); // This is used for Blog Layout 1.
+add_image_size( 'aaurora-blog-1-featured-image', 530, 420, true ); // This is used for Blog Layout 1.
+add_image_size( 'aaurora-blog-2-featured-image', 125, 125, true ); // This is used for Blog Layout 2.
 add_image_size( 'aaurora-blog-single-post-sidebar', 400, 500, true );
 add_image_size( 'aaurora-blog-single-post-no-sidebar', 1000, 570, true );
 
 /*  Kirki plugin related changed */
 
-// todo See if below options related to kirki needs to be enabled or not
+// todo See if below options related to kirki needs to be enabled or not.
 
 /*
  * Use Kirki Embedded.
  */
 require_once dirname( __FILE__ ) . '/inc/kirki/kirki.php';
 
-function mytheme_kirki_configuration() {
+/*
+ * Kirki Configuration Files location.
+ */
+function aaurora_kirki_configuration() {
 	return array( 'url_path' => get_stylesheet_directory_uri() . '/inc/kirki/' );
 }
-add_filter( 'kirki/config', 'mytheme_kirki_configuration' );
+add_filter( 'kirki/config', 'aaurora_kirki_configuration' );
 
 /*
-= Use External stylesheet for Kirki generated styles =*/
+= Use External stylesheet for Kirki generated styles =
 /*
 // if (!is_customize_preview() ) {
 // add_filter( 'kirki_output_inline_styles', '__return_false' );
@@ -327,7 +329,6 @@ function numeric_posts_nav() {
 /**
  * Add Google Fonts.
  */
-
 function google_fonts() {
 	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Inter&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap', false );
 }
