@@ -160,6 +160,8 @@ aside .submenu a {
     border: 1px solid #eee;
     background-color: #fff;
     color: #000;
+    opacity: 0;
+    transition: opacity ease-in-out .3s;
   }
 
   .header-menu > li > ul.sub-menu {
@@ -203,6 +205,8 @@ aside .submenu a {
   /* All the properties should not be here*/
   .header-menu li:hover > ul {
     visibility: visible;
+    opacity: 1;
+    transition: opacity ease-in-out .3s;
   }
 }
 

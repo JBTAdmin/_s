@@ -837,7 +837,9 @@ aside .submenu a {
     transition: opacity 0.4s ease-in-out;
     border: 1px solid #eee;
     background-color: #fff;
-    color: #000; }
+    color: #000;
+    opacity: 0;
+    transition: opacity ease-in-out .3s; }
   .header-menu > li > ul.sub-menu {
     position: absolute;
     top: 100%;
@@ -864,7 +866,9 @@ aside .submenu a {
     background: currentColor; }
   /* All the properties should not be here*/
   .header-menu li:hover > ul {
-    visibility: visible; } }
+    visibility: visible;
+    opacity: 1;
+    transition: opacity ease-in-out .3s; } }
 
 /** SIDEBAR MENU */
 .sidebar-menu .sub-menu a {
@@ -997,7 +1001,12 @@ aside .submenu a {
   align-items: center; }
 
 .hamburger-menu {
-  display: flex; }
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.08);
+  padding: 1rem; }
+
+.aligned-menu-right {
+  margin: 0 1rem; }
 
 .header-wrap,
 .footer-wrap {
@@ -1315,8 +1324,8 @@ aside.open {
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #eee; }
+  padding: 1rem;
+  border-left: 2px solid var(--theme-color); }
 
 .widget ul {
   list-style: none; }

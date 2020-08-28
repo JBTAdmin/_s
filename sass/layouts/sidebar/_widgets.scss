@@ -92,8 +92,8 @@ aside.open {
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #eee;
+  padding: 1rem;
+  border-left: 2px solid $theme__color;
 }
 
 .widget ul {

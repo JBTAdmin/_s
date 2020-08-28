@@ -26,6 +26,12 @@
 
 .hamburger-menu {
   display: flex;
+  background-color: rgba(0,0,0,0.08);
+  padding: 1rem;
+}
+
+.aligned-menu-right{
+  margin: 0 1rem;
 }
 
 .header-wrap,
