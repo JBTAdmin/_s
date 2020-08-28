@@ -55,12 +55,12 @@ $sidebar_page_class = ' sidebar_position_' . get_theme_mod( 'sidebar_search', 'r
 						<?php
 						numeric_posts_nav();
 
-					else :
+						else :
 
-						get_template_part( 'template-parts/content', 'none' );
+							get_template_part( 'template-parts/content', 'none' );
 
 					endif;
-					?>
+						?>
 
 				</main><!-- #main -->
 

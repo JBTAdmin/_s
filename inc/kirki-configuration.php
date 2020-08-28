@@ -1,59 +1,10 @@
 <?php
-/** Viveka CHange this**/
-// Update options cache on customizer save
-// if(!function_exists('aaurora_update_options_cache')):
-// function aaurora_update_options_cache() {
-// $option_name = 'themeoptions_saved_date';
-//
-// $new_value = microtime(true) ;
-//
-// if ( get_option( $option_name ) !== false ) {
-//
-// The option already exists, so we just update it.
-// update_option( $option_name, $new_value );
-//
-// } else {
-//
-// The option hasn't been added yet. We'll add it with $autoload set to 'no'.
-// $deprecated = null;
-// $autoload = 'no';
-// add_option( $option_name, $new_value, $deprecated, $autoload );
-// }
-// }
-// endif;
-// add_action( 'customize_save_after', 'aaurora_update_options_cache');
-//
-// Change default Customizer options, add new logo option
-// if(!function_exists('aaurora_theme_customize_register')):
-// function aaurora_theme_customize_register( $wp_customize ) {
-// $wp_customize->remove_section( 'colors' );
-//
-// $wp_customize->get_section('header_image')->title = esc_html__( 'Logo', 'aaurora' );
-//
-// $wp_customize->get_section('title_tagline')->title = esc_html__( 'Site Title and Favicon', 'aaurora' );
-//
-// $wp_customize->add_setting( 'aaurora_header_transparent_logo' , array(
-// array ( 'default' => '',
-// 'sanitize_callback' => 'esc_url_raw'
-// ),
-// 'transport'   => 'refresh',
-// ) );
-//
-// $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'aaurora_header_transparent_logo', array(
-// 'label'    => esc_html__( 'Logo for Transparent Header (Light logo)', 'aaurora' ),
-// 'section'  => 'header_image',
-// 'settings' => 'aaurora_header_transparent_logo',
-// ) ) );
-//
-// Move header image section to theme settings
-// $wp_customize->get_section( 'header_image' )->panel = 'theme_settings_panel';
-// $wp_customize->get_section( 'header_image' )->priority = 20;
-// }
-// endif;
-// add_action( 'customize_register', 'aaurora_theme_customize_register' );.
+/**
+ * Create theme options.
+ *
+ * @package aaurora
+ */
 
-
-// Create theme options.
 Kirki::add_config(
 	'aaurora_theme_options',
 	array(
@@ -357,7 +308,7 @@ Kirki::add_field(
 		'default'     => '500',
 		'choices'     => array(
 			'500' => esc_attr__( 'Regular', 'aaurora' ),
-			'700'    => esc_attr__( 'Bold', 'aaurora' ),
+			'700' => esc_attr__( 'Bold', 'aaurora' ),
 		),
 		'description' => '',
 		'output'      => array(
@@ -564,7 +515,7 @@ Kirki::add_field(
 	)
 );
 
-$blog_exclude_categories = Kirki_Helper::get_terms( 'category' ); //todo what is the use of this??
+$blog_exclude_categories = Kirki_Helper::get_terms( 'category' ); // todo what is the use of this??
 
 // END SECTION: Blog.
 
@@ -587,13 +538,13 @@ Kirki::add_field(
 		'label'       => esc_attr__( 'Post Title Size', 'aaurora' ),
 		'section'     => 'blog_post',
 		'default'     => array(
-			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
-			'font-size'      => '62px',
+			'font-family' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
+			'font-size'   => '62px',
 		),
 		'description' => esc_attr__( 'Font used in Single Post Header .', 'aaurora' ),
 		'output'      => array(
 			array(
-				'element' => 'h1.entry-title',
+				'element'  => 'h1.entry-title',
 				'property' => 'font-size',
 			),
 		),
@@ -708,7 +659,6 @@ Kirki::add_field(
 		'section'     => 'sidebars',
 		'default'     => 'right',
 		'choices'     => array(
-//			'left'    => esc_attr__( 'Left', 'aaurora' ),
 			'right'   => esc_attr__( 'Right', 'aaurora' ),
 			'disable' => esc_attr__( 'Disable', 'aaurora' ),
 		),
@@ -737,7 +687,7 @@ Kirki::add_field(
 		'label'       => esc_attr__( 'H1 font', 'aaurora' ),
 		'section'     => 'fonts',
 		'default'     => array(
-			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
+			'font-family' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
 		),
 		'description' => esc_attr__( 'Font used in H1 Header .', 'aaurora' ),
 		'output'      => array(
@@ -756,7 +706,7 @@ Kirki::add_field(
 		'label'       => esc_attr__( 'H2 font', 'aaurora' ),
 		'section'     => 'fonts',
 		'default'     => array(
-			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
+			'font-family' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
 		),
 		'description' => esc_attr__( 'Font used in H2 header.', 'aaurora' ),
 		'output'      => array(
@@ -775,7 +725,7 @@ Kirki::add_field(
 		'label'       => esc_attr__( 'H3 font', 'aaurora' ),
 		'section'     => 'fonts',
 		'default'     => array(
-			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
+			'font-family' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
 		),
 		'description' => esc_attr__( 'Font used in H3 header.', 'aaurora' ),
 		'output'      => array(
@@ -794,7 +744,7 @@ Kirki::add_field(
 		'label'       => esc_attr__( 'Body font', 'aaurora' ),
 		'section'     => 'fonts',
 		'default'     => array(   // TODO  In default can i use Initial as font-family.
-			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
+			'font-family' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
 		),
 		'description' => esc_attr__( 'Font used in text elements.', 'aaurora' ),
 		'output'      => array(

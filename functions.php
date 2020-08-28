@@ -302,7 +302,7 @@ function numeric_posts_nav() {
 	sort( $links );
 	foreach ( (array) $links as $link ) {
 		$class = $paged == $link ? ' class="active"' : '';
-		printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $link ) ), $link );
+		printf( '<li%s><a href="%s">%s</a></li>' . "\n", esc_attr( $class ), esc_url( get_pagenum_link( $link ) ), esc_html( $link ) );
 	}
 
 	/** Link to last page, plus ellipses if necessary */
@@ -312,7 +312,7 @@ function numeric_posts_nav() {
 		}
 
 		$class = $paged == $max ? ' class="active"' : '';
-		printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $max ) ), $max );
+		printf( '<li%s><a href="%s">%s</a></li>' . "\n", esc_attr( $class ), esc_url( get_pagenum_link( $max ) ), esc_html( $max ) );
 	}
 
 	/** Next Post Link */

@@ -10,8 +10,10 @@
 if ( ! function_exists( 'aaurora_posted_on' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time.
+	 *
+	 * @param boolean $date_only   Optional. Return Date or echo date on screen. Default echo.
 	 */
-	function aaurora_posted_on($dateOnly = false) {
+	function aaurora_posted_on( $date_only = false ) {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
@@ -30,10 +32,10 @@ if ( ! function_exists( 'aaurora_posted_on' ) ) :
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
-		if ($dateOnly){
-		   return get_the_date( 'j M' );
-        } else {
-		echo '<span class="posted-on">' . $posted_on . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		if ( $date_only ) {
+			return get_the_date( 'j M' );
+		} else {
+			echo '<span class="posted-on">' . $posted_on . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		}
 
 	}
@@ -45,8 +47,6 @@ if ( ! function_exists( 'aaurora_posted_by' ) ) :
 	 */
 	function aaurora_posted_by() {
 		$byline = sprintf(
-		/* translators: %s: post author. */
-			esc_html_x( '%s', 'post author', 'aaurora' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
@@ -77,7 +77,7 @@ if ( ! function_exists( 'aaurora_meta_tag_list' ) ) :
 	function aaurora_meta_tag_list() {
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html_x( ' ', 'list item separator', 'aaurora' ) );
+			$tags_list = get_the_tag_list();
 			if ( $tags_list ) {
 				printf( '<span class="tags-links">' . esc_html( ' %1$s' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
@@ -94,7 +94,7 @@ if ( ! function_exists( 'aaurora_meta_comment' ) ) :
 			comments_popup_link(
 				sprintf(
 					wp_kses(
-					/* translators: %s: post title */
+						/* translators: %s: post title */
 						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'aaurora' ),
 						array(
 							'span' => array(
@@ -116,8 +116,11 @@ if ( ! function_exists( 'aaurora_post_thumbnail' ) ) :
 	 *
 	 * Wraps the post thumbnail in an anchor element on index views, or a div
 	 * element when on single views.
+	 *
+	 * @param int $size   Optional. Post Thumbnail Size.
+	 * @param int $date   Optional. Post Date.
 	 */
-	function aaurora_post_thumbnail($size = 'post-thumbnail', $date = '') {
+	function aaurora_post_thumbnail( $size = 'post-thumbnail', $date = '' ) {
 		if ( post_password_required() || is_attachment() ) {
 			return;
 		}
@@ -131,9 +134,9 @@ if ( ! function_exists( 'aaurora_post_thumbnail' ) ) :
 						<?php echo esc_html( get_the_title()[0] ); ?> <!-- todo VIVEKA WHAT IF NO TITLE IS THERE-->
 					</div>
 				</div><!-- .post-thumbnail -->
-                <span class="post-date">
-                    <?php echo esc_html( $date); ?>
-                </span>
+				<span class="post-date">
+					<?php echo esc_html( $date ); ?>
+				</span>
 			</a>
 			<?php
 			return;
@@ -145,7 +148,7 @@ if ( ! function_exists( 'aaurora_post_thumbnail' ) ) :
 				<?php the_post_thumbnail( 'aaurora-blog-single-post-no-sidebar' ); ?>
 			</div><!-- .post-thumbnail -->
 		<?php else : ?>
-        <div class="post-thumbnail-container">
+		<div class="post-thumbnail-container">
 			<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 				<?php
 				the_post_thumbnail(
@@ -158,17 +161,17 @@ if ( ! function_exists( 'aaurora_post_thumbnail' ) ) :
 						),
 					)
 				);
-			if ( is_sticky() ) :
-				?>
-                <span class="badge">
-                    <?php load_inline_svg( 'sticky.svg' ); ?>
-                </span>
-                <?php endif; ?>
-                <span class="post-date">
-                     <?php echo esc_html( $date); ?>
-                </span>
+				if ( is_sticky() ) :
+					?>
+				<span class="badge">
+					<?php load_inline_svg( 'sticky.svg' ); ?>
+				</span>
+				<?php endif; ?>
+				<span class="post-date">
+					<?php echo esc_html( $date ); ?>
+				</span>
 			</a>
-        </div>
+		</div>
 			<?php
 		endif; // End is_singular().
 	}
@@ -195,30 +198,30 @@ endif;
  * @return void
  */
 function load_inline_svg( $filename ) {
-	
+
 	ob_start();
-	
+
 	locate_template(
-	    "assets/images/{$filename}",
+		"assets/images/{$filename}",
 		true,
 		false
 	);
-	
+
 	echo wp_kses(
 		ob_get_clean(),
 		array_merge(
 			wp_kses_allowed_html( 'post' ),
 			array(
 				'svg'  => array(
-					'role'        => true,
-					'width'       => true,
-					'height'      => true,
-					'fill'        => true,
-					'xmlns'       => true,
-					'viewbox'     => true,
-					'aria-hidden' => true,
-                    'stroke'      => true,
-                    'stroke-width'=> true
+					'role'         => true,
+					'width'        => true,
+					'height'       => true,
+					'fill'         => true,
+					'xmlns'        => true,
+					'viewbox'      => true,
+					'aria-hidden'  => true,
+					'stroke'       => true,
+					'stroke-width' => true,
 				),
 				'path' => array(
 					'd'              => true,

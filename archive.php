@@ -52,12 +52,12 @@ $sidebar_page_class = ' sidebar_position_' . get_theme_mod( 'sidebar_archive', '
 
 						numeric_posts_nav();
 
-					else :
+						else :
 
-						get_template_part( 'template-parts/content', 'none' );
+							get_template_part( 'template-parts/content', 'none' );
 
-					endif;
-					?>
+						endif;
+						?>
 
 				</main><!-- #main -->
 

@@ -31,14 +31,14 @@ if ( post_password_required() ) {
 			$aaurora_comment_count = get_comments_number();
 			if ( '1' === $aaurora_comment_count ) {
 				printf(
-				/* translators: 1: title. */
+					/* translators: 1: title. */
 					esc_html__( 'One thought', 'aaurora' )
 					// ,
 					// '<span>' . wp_kses_post( get_the_title() ) . '</span>'
 				);
 			} else {
 				printf(
-				/* translators: 1: comment count number, 2: title. */
+					/* translators: 1: comment count number, 2: title. */
 					esc_html( _nx( '%1$s thought ', '%1$s thoughts ', $aaurora_comment_count, 'comments title', 'aaurora' ) ),
 					number_format_i18n( $aaurora_comment_count ) // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 					// '<span>' . wp_kses_post( get_the_title() ) . '</span>'
@@ -84,8 +84,8 @@ if ( post_password_required() ) {
 	);
 
 	$comment_field = '<p class="comment-form-comment">' .
-					 '<textarea id="comment" name="comment" placeholder="Express your thoughts" cols="45" rows="8" aria-required="true"></textarea>' .
-					 '</p>';
+					'<textarea id="comment" name="comment" placeholder="Express your thoughts" cols="45" rows="8" aria-required="true"></textarea>' .
+					'</p>';
 
 	$comments_args = array(
 		'fields'        => $fields,
