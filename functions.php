@@ -284,7 +284,7 @@ function numeric_posts_nav() {
 	if ( ! in_array( 1, $links, true ) ) {
 		$class = 1 === $paged ? ' class=active' : '';
 
-		printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( 1 ) ), '1' );
+		printf( '<li%s><a href="%s">%s</a></li>' . "\n", esc_attr( $class ), esc_url( get_pagenum_link( 1 ) ), '1' );
 
 		if ( ! in_array( 2, $links, true ) ) {
 			echo '<li>…</li>';
