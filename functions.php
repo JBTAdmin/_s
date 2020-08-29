@@ -232,7 +232,7 @@ add_filter( 'kirki/config', 'aaurora_kirki_configuration' );
 /**
  * Use CDN Font instead of hosted fonts in Kirki.
  */
- add_filter( 'kirki_use_local_fonts', '__return_false' );
+add_filter( 'kirki_use_local_fonts', '__return_false' );
 
 /**
  * Kirki Customization File Location.
@@ -281,12 +281,12 @@ function numeric_posts_nav() {
 	}
 
 	/** Link to first page, plus ellipses if necessary. */
-	if ( ! in_array( 1, $links ) ) {
-		$class = 1 == $paged ? ' class="active"' : '';
+	if ( ! in_array( 1, $links, true ) ) {
+		$class = 1 === $paged ? ' class=active' : '';
 
 		printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( 1 ) ), '1' );
 
-		if ( ! in_array( 2, $links ) ) {
+		if ( ! in_array( 2, $links, true ) ) {
 			echo '<li>…</li>';
 		}
 	}
@@ -294,17 +294,17 @@ function numeric_posts_nav() {
 	/** Link to current page, plus 2 pages in either direction if necessary */
 	sort( $links );
 	foreach ( (array) $links as $link ) {
-		$class = $paged == $link ? ' class="active"' : '';
+		$class = $paged === $link ? ' class=active' : '';
 		printf( '<li%s><a href="%s">%s</a></li>' . "\n", esc_attr( $class ), esc_url( get_pagenum_link( $link ) ), esc_html( $link ) );
 	}
 
 	/** Link to last page, plus ellipses if necessary */
-	if ( ! in_array( $max, $links ) ) {
-		if ( ! in_array( $max - 1, $links ) ) {
+	if ( ! in_array( $max, $links, true ) ) {
+		if ( ! in_array( $max - 1, $links, true ) ) {
 			echo '<li>…</li>' . "\n";
 		}
 
-		$class = $paged == $max ? ' class="active"' : '';
+		$class = $paged === $max ? ' class=active' : '';
 		printf( '<li%s><a href="%s">%s</a></li>' . "\n", esc_attr( $class ), esc_url( get_pagenum_link( $max ) ), esc_html( $max ) );
 	}
 

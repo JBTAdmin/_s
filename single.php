@@ -30,7 +30,7 @@ $sidebar_page_class = ' sidebar_position_' . get_theme_mod( 'sidebar_post', 'rig
 
 						get_template_part( 'template-parts/single/single-layout', get_post_type() );
 
-						if ( get_theme_mod( 'blog_post_nav', '1' ) == '1' ) :
+						if ( get_theme_mod( 'blog_post_nav', true ) === true ) :
 							// Previous/next post navigation.
 							$next_post               = get_next_post();
 							$previous_post           = get_previous_post();
