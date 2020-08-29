@@ -2,13 +2,13 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  color: #fff;
-  border-radius: 40px;
+  color: $body_text_dark_color;
+  border-radius: 0.4rem;
   padding: 12px 25px;
-  border: 1px solid #000;
+  border: 1px solid $theme__color;
   //font-size: 15px;
-  background: #000;
-  line-height: 1.5;
+  background: $theme__color;
+  line-height: 1;
   min-height: 45px;
   min-width: 120px;
   height: 46px;

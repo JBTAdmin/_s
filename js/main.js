@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", event => {
   sidebarMenu.forEach(el =>
     el.addEventListener("click", function(event) {
       this.querySelector(".sub-menu").classList.toggle("display-block");
+      el.classList.toggle("active");
     })
   );
 

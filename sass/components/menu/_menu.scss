@@ -34,14 +34,6 @@ aside a {
   line-height: 4.5rem;
 }
 
-.sidebar-menu li.menu-item-has-children > a:after {
-  content: "\003E";
-}
-
-.sidebar-menu li.menu-item-has-children:hover > a:after {
-  content: "\2190";
-}
-
 aside .submenu a {
   padding: 2rem 3rem;
   font-size: 1.2rem;
@@ -115,6 +107,10 @@ aside .submenu a {
 
   .menu-btn__burger::before {
     transform: translateY(-0.9rem);
+  }
+
+  .sub-menu > li {
+    padding: 0.6rem 1.3vw;
   }
 }
 
@@ -230,4 +226,22 @@ aside .submenu a {
 
 .hide-block {
   display: none;
+}
+
+.sub-menu li:hover > a{
+  color: $theme__color;
+}
+
+.sidebar-menu li.menu-item-has-children::after{
+  content: '>';
+  position: absolute;
+  top: 0;
+  right: 2%;
+  line-height: 5.5rem;
+  transform: scaleX(1.7) rotate(90deg);
+}
+
+.sidebar-menu li.menu-item-has-children.active::after{
+  right: 2%;
+  transform: scaleX(1.7) rotate(270deg);
 }

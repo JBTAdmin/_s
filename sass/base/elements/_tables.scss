@@ -12,14 +12,18 @@ table {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
-  border-top: 1px solid;
-  border-left: 1px solid;
 }
 
 tbody {
   display: table-row-group;
   vertical-align: middle;
   border-color: inherit;
+}
+
+thead{
+  background-color: $theme__color;
+  border-color: $theme__color;
+  color: $body_text_dark_color;
 }
 
 tr {
@@ -29,12 +33,19 @@ tr {
 }
 
 .wp-block-table td,
-.wp-block-table th,
-table td,
-table th {
+table td
+{
   border: none;
-  border-top: 1px solid #e5e5e5;
-  border-bottom: 1px solid #e5e5e5;
-  text-align: inherit;
-  padding: 12px 12px 12px 0;
+  padding: 12px;
+  text-align: center;
+}
+
+.wp-block-table th,
+table th {
+  padding: 10px 20px;
+}
+
+.wp-block-table tfoot,
+table tfoot{
+  font-weight: bold;
 }
