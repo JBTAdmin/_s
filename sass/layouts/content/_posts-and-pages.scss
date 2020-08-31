@@ -144,13 +144,15 @@ h1.entry-title {
   }
   .page {
     .entry-header,
-    .entry-content {
+    .entry-content,
+    .comments-area {
       margin-left: 8%;
       max-width: 84%;
     }
   }
 }
 
+.page article,
 .single-post article{
   width: 100%;
 }

@@ -1192,10 +1192,12 @@ h1.entry-title {
     margin-left: 8%;
     max-width: 84%; }
   .page .entry-header,
-  .page .entry-content {
+  .page .entry-content,
+  .page .comments-area {
     margin-left: 8%;
     max-width: 84%; } }
 
+.page article,
 .single-post article {
   width: 100%; }
 
@@ -1236,10 +1238,11 @@ h1.entry-title {
     text-transform: uppercase; }
 
 .comment-form-author,
-.comment-form-email {
-  width: 50%; }
+.comment-form-email,
+.comment-form-url {
+  width: 33.3%; }
 
-.comment-form-author {
+.comment-form-email, .comment-form-url {
   padding-left: 1.5rem; }
 
 @media screen and (max-width: 700px) {
