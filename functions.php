@@ -277,7 +277,7 @@ function numeric_posts_nav() {
 
 	/** Previous Post Link. */
 	if ( get_previous_posts_link() ) {
-		printf( '<li>%s</li>' . "\n", get_previous_posts_link( '&lt; Previous' ) );
+		printf( '<li>%s</li>' . "\n", get_previous_posts_link( '&lt;&nbsp;Previous' ) );
 	}
 
 	/** Link to first page, plus ellipses if necessary. */
@@ -310,7 +310,7 @@ function numeric_posts_nav() {
 
 	/** Next Post Link */
 	if ( get_next_posts_link() ) {
-		printf( '<li>%s</li>' . "\n", get_next_posts_link( 'Next >' ) );
+		printf( '<li>%s</li>' . "\n", get_next_posts_link( 'Next&nbsp;&gt;' ) );
 	}
 
 	echo '</ul></div>' . "\n";

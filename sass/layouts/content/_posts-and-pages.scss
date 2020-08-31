@@ -29,13 +29,13 @@
     -webkit-transform 1s cubic-bezier(0.46, 0.03, 0.52, 0.96);
 }
 
-@media screen and (max-width: 992px) and (min-width: 768px) {
+@media screen and (max-width: 992px) and (min-width: 568px) {
   .post-thumbnail-drop-case {
     font-size: 30vw;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 568px) {
   .post-thumbnail-drop-case {
     font-size: 70vw;
   }

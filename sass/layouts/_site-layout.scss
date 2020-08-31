@@ -89,7 +89,7 @@ article {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 568px) and (max-width: 992px) {
   .blog-post-article {
     max-width: 50%; //todo see if this percent is working or not
     flex: 1 1 50%;
@@ -97,7 +97,7 @@ article {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 568px) {
   .blog-post-article {
     max-width: 100%; //todo see if this percent is working or not
     flex: 1 1 100%;
