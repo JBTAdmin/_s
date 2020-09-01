@@ -682,7 +682,8 @@ select {
 
 /* Make sure logo link wraps around logo image. */
 .custom-logo-link {
-  display: inline-block; }
+  display: inline-block;
+  max-width: 20rem; }
 
 /* Captions
 --------------------------------------------- */
@@ -1035,7 +1036,8 @@ aside .submenu a {
 
 .hamburger-menu {
   display: flex;
-  background-color: rgba(0, 0, 0, 0.08);
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 0.4rem;
   padding: 1rem; }
 
 .aligned-menu-right {
@@ -1340,8 +1342,8 @@ aside.open {
   align-items: center;
   height: 10rem; }
   .aside-header .custom-logo {
-    max-width: 110px;
-    max-height: 110px; }
+    max-width: 20rem;
+    vertical-align: middle; }
 
 .sidebar-overlay {
   width: 100%;
@@ -1359,7 +1361,11 @@ aside.open {
   visibility: visible; }
 
 .sidebar-close-btn {
-  display: flex; }
+  display: flex;
+  display: flex;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 0.4rem; }
 
 .widget {
   margin-bottom: 5rem;
