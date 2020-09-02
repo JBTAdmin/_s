@@ -49,6 +49,15 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
+Feather Icons (https://feathericons.com)
+Copyright (c) 2013-2017 Cole Bemis
+License: MIT License, https://opensource.org/licenses/MIT
+- Hamburger icon
+- Bookmark icon
+- Close icon
+- Comments icon
+
+
 == Frequently Asked Questions ==
 
 = Does this theme support any plugins? =

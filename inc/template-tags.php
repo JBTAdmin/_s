@@ -197,6 +197,8 @@ endif;
  *
  * @return void
  */
+
+//todo probably this method shold be moved to proper location. And remove unnecessary mapping.
 function load_inline_svg( $filename ) {
 
 	ob_start();
@@ -231,9 +233,11 @@ function load_inline_svg( $filename ) {
 					'stroke-width'   => true,
 					'stroke-linecap' => true,
 				),
-				'g'    => array(
-					'd'    => true,
-					'fill' => true,
+				'line'    => array(
+					'x1'    => true,
+					'y1'    => true,
+					'x2'    => true,
+					'y2'    => true,
 				),
 			)
 		)
