@@ -20,7 +20,7 @@ if ( ! function_exists( 'aaurora_theme_customize_register' ) ) :
 
 		$wp_customize->get_section( 'title_tagline' )->panel = 'theme_settings_panel';
 
-		$wp_customize->get_section( 'title_tagline' )->title = esc_html__( 'Site Title and Favicon', 'aaurora' );
+		$wp_customize->get_section( 'title_tagline' )->title = esc_html__( 'Site Logo and Favicon', 'aaurora' );
 	}
 endif;
 add_action( 'customize_register', 'aaurora_theme_customize_register' );
@@ -116,24 +116,6 @@ Kirki::add_section(
 		'description' => '',
 		'panel'       => 'theme_settings_panel',
 		'priority'    => 30,
-	)
-);
-
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
-		'type'        => 'select',
-		'settings'    => 'header_layout',
-		'label'       => esc_html__( 'Header layout', 'aaurora' ),
-		'section'     => 'header',
-		'default'     => 'menu-below-logo',
-		'multiple'    => 0,
-		'choices'     => array(
-			'menu-below-logo'      => esc_attr__( '1. Menu below Logo', 'aaurora' ),
-			'right-menu-left-logo' => esc_attr__( '2. Menu With Logo, Right Menu , Left logo', 'aaurora' ),
-			'left-menu-right-logo' => esc_attr__( '3. Menu With Logo, Left Menu , Right logo', 'aaurora' ),
-		),
-		'description' => esc_attr__( 'Use this option to change site header layout and style.', 'aaurora' ),
 	)
 );
 
@@ -271,24 +253,6 @@ Kirki::add_field(
 	)
 );
 
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
-		'type'            => 'editor',
-		'settings'        => 'header_center_custom_content',
-		'label'           => esc_attr__( 'Header center custom content HTML', 'aaurora' ),
-		'description'     => esc_attr__( 'HTML and shortcodes supported.', 'aaurora' ),
-		'section'         => 'header',
-		'default'         => '',
-		'active_callback' => array(
-			array(
-				'setting'  => 'header_layout',
-				'operator' => 'in',
-				'value'    => array( 'menu-below-header', 'menu-below-header-border' ),
-			),
-		),
-	)
-);
 // END SECTION: Header.
 
 // SECTION: Footer.
@@ -355,103 +319,6 @@ Kirki::add_field(
 
 // END SECTION: Footer.
 
-// SECTION: Blog.
-Kirki::add_section(
-	'blog',
-	array(
-		'title'       => esc_attr__( 'Blog Listing', 'aaurora' ),
-		'description' => esc_attr__( 'This settings affect your blog list display (homepage, archive, search).', 'aaurora' ),
-		'panel'       => 'theme_settings_panel',
-		'priority'    => 70,
-	)
-);
-
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
-		'type'        => 'select',
-		'settings'    => 'blog_layout',
-		'label'       => esc_html__( 'Blog layout', 'aaurora' ),
-		'section'     => 'blog',
-		'default'     => 'standard',
-		'multiple'    => 0,
-		'choices'     => array(
-
-			'large-grid'       => esc_attr__( 'First large then grid', 'aaurora' ),
-			'overlay-grid'     => esc_attr__( 'First large overlay then grid', 'aaurora' ),
-			'large-list'       => esc_attr__( 'First large then list', 'aaurora' ),
-			'overlay-list'     => esc_attr__( 'First large overlay then list', 'aaurora' ),
-			'mixed-overlays'   => esc_attr__( 'Mixed overlays', 'aaurora' ),
-			'grid'             => esc_attr__( 'Grid', 'aaurora' ),
-			'list'             => esc_attr__( 'List', 'aaurora' ),
-			'standard'         => esc_attr__( 'Classic', 'aaurora' ),
-			'overlay'          => esc_attr__( 'Grid overlay', 'aaurora' ),
-			'mixed-large-grid' => esc_attr__( 'Mixed large and grid', 'aaurora' ),
-			'masonry'          => esc_attr__( 'Masonry', 'aaurora' ),
-
-		),
-		'description' => esc_attr__( 'This option completely change blog listing layout and posts display.', 'aaurora' ),
-	)
-);
-
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
-		'type'        => 'select',
-		'settings'    => 'blog_posts_excerpt',
-		'label'       => esc_html__( 'Blog posts short content display', 'aaurora' ),
-		'section'     => 'blog',
-		'default'     => 'excerpt',
-		'multiple'    => 0,
-		'choices'     => array(
-			'content' => esc_attr__( 'Full content (You will add <!--more--> tag manually)', 'aaurora' ),
-			'excerpt' => esc_attr__( 'Excerpt (Auto crop by words)', 'aaurora' ),
-			'none'    => esc_attr__( 'Disable short content and Continue reading button', 'aaurora' ),
-		),
-		'description' => wp_kses_post( __( 'Change short post content display in blog listing.<br/><a href="https://en.support.wordpress.com/more-tag/" target="_blank">Read more</a> about &#x3C;!--more--&#x3E; tag.', 'aaurora' ) ),
-	)
-);
-
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
-		'type'        => 'number',
-		'settings'    => 'blog_posts_excerpt_limit',
-		'label'       => esc_attr__( 'Post excerpt length (words)', 'aaurora' ),
-		'description' => esc_attr__( 'Used by WordPress for post shortening. Default: 35', 'aaurora' ),
-		'section'     => 'blog',
-		'default'     => '22',
-	)
-);
-
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
-		'type'        => 'toggle',
-		'settings'    => 'blog_posts_date_hide',
-		'label'       => esc_attr__( 'Hide posts dates', 'aaurora' ),
-		'description' => '',
-		'section'     => 'blog',
-		'default'     => '0',
-	)
-);
-
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
-		'type'        => 'toggle',
-		'settings'    => 'blog_posts_author',
-		'label'       => esc_attr__( 'Author name ("by author")', 'aaurora' ),
-		'description' => '',
-		'section'     => 'blog',
-		'default'     => '0',
-	)
-);
-
-$blog_exclude_categories = Kirki_Helper::get_terms( 'category' ); // todo what is the use of this??
-
-// END SECTION: Blog.
-
 // SECTION: Blog Single Post.
 Kirki::add_section(
 	'blog_post',
@@ -472,13 +339,14 @@ Kirki::add_field(
 		'section'     => 'blog_post',
 		'default'     => array(
 			'font-family' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
-			'font-size'   => '62px',
+			'font-size'   => '40px',
 		),
 		'description' => esc_attr__( 'Font used in Single Post Header .', 'aaurora' ),
 		'output'      => array(
 			array(
-				'element'  => 'h1.entry-title',
-				'property' => 'font-size',
+				'choice'   => 'font-size',
+				'element'  => ':root',
+				'property' => '--font_size_post-title_mobile',
 			),
 		),
 	)

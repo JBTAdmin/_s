@@ -15,7 +15,7 @@ $font_size_large: 17rem;
 $font_size_large_mobile: 16.6rem;
 
 $font_size_h1: 7.2rem;
-$font_size_h1_mobile: 4.6rem;
+$font_size_h1_mobile: var(--font_size_post-title_mobile);
 
 $font_size_h2: 5.4rem;
 $font_size_h2_mobile: 4rem;

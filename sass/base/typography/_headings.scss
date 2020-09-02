@@ -11,7 +11,7 @@ h6 {
 }
 
 h1 {
-  font-size: calc(46px + 26 * ((100vw - 576px) / 1024));
+  font-size: calc(#{$font_size_h1_mobile} + 34 * ((100vw - 300px) / (1400)));
   font-weight: 700;
   line-height: 1.1;
   margin-bottom: 2.6rem;
