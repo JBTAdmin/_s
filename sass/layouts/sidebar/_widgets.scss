@@ -9,10 +9,10 @@ aside {
   //right: 0;
 
   width: 400px;
-  height: 98%;
+  height: 100%;
   position: fixed;
-  top: 1%;
-  right: 1%;
+  top: 0;
+  right: 0;
 
   overflow: auto;
   z-index: 9999;
@@ -41,7 +41,7 @@ aside.open {
   // New option
   //box-shadow: 2px 2px 6px #efefef;
   //border: 1px solid #eee;
-  border-radius: 1rem;
+  //border-radius: 1rem;
 }
 
 .aside-header {
@@ -96,8 +96,8 @@ aside.open {
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
-  padding: 1rem;
-  border-left: 2px solid $theme__color;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid $theme__color;
 }
 
 .widget ul {

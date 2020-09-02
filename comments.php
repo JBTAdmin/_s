@@ -82,7 +82,7 @@ if ( post_password_required() ) {
 		'email'  => '<p class="comment-form-email">' .
 					'<input id="email" name="email" type="text" placeholder="Email*" required value="' . esc_attr( $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></p>',
 		'url' => '<p class="comment-form-url">' .
-		            '<input id="url" name="url" type="text" placeholder="Website*" required value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30"' . $aria_req . ' /></p>',
+		            '<input id="url" name="url" type="text" placeholder="Website" required value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30"' . $aria_req . ' /></p>',
 	);
 
 	$comment_field = '<p class="comment-form-comment">' .
