@@ -26,12 +26,14 @@ if ( ! is_active_sidebar( 'sidebar-1' ) || get_theme_mod( 'sidebar_listing', 'ri
 						<div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
 						<?php
 					endif;
-				$aaurora_description = get_bloginfo( 'description', 'display' );
-				if ( $aaurora_description || is_customize_preview() ) :
-					?>
-                    <p class="site-description"> <?php echo $aaurora_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped. ?></p>
-				<?php endif;
-				endif;?>
+					$aaurora_description = get_bloginfo( 'description', 'display' );
+					if ( $aaurora_description || is_customize_preview() ) :
+						?>
+					<p class="site-description"> <?php echo $aaurora_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped. ?></p>
+						<?php
+					endif;
+				endif;
+				?>
 			</div>
 			<div class="sidebar-close-btn">
 				<?php load_inline_svg( 'close.svg' ); ?>

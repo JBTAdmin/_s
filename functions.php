@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package aaurora_
+ * @package aaurora
  */
 
 if ( ! defined( 'AAURORA_VERSION' ) ) {

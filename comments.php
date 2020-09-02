@@ -78,11 +78,11 @@ if ( post_password_required() ) {
 	$aria_req  = ( $req ? " aria-required='true'" : '' );
 	$fields    = array(
 		'author' => '<p class="comment-form-author">' .
-		            '<input id="author" name="author" type="text" placeholder="Name*" required value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></p>',
+					'<input id="author" name="author" type="text" placeholder="Name*" required value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></p>',
 		'email'  => '<p class="comment-form-email">' .
 					'<input id="email" name="email" type="text" placeholder="Email*" required value="' . esc_attr( $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></p>',
-		'url' => '<p class="comment-form-url">' .
-		            '<input id="url" name="url" type="text" placeholder="Website" required value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30"' . $aria_req . ' /></p>',
+		'url'    => '<p class="comment-form-url">' .
+					'<input id="url" name="url" type="text" placeholder="Website" required value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30"' . $aria_req . ' /></p>',
 	);
 
 	$comment_field = '<p class="comment-form-comment">' .
