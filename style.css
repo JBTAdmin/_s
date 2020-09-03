@@ -859,7 +859,7 @@ aside .submenu a {
     background-color: #fff;
     color: #000;
     opacity: 0;
-    transition: opacity ease-in-out .3s; }
+    transition: opacity ease-in-out 0.3s; }
   .header-menu > li > ul.sub-menu {
     position: absolute;
     top: 100%;
@@ -875,7 +875,7 @@ aside .submenu a {
     left: 0;
     right: auto; }
   .header-menu > li > a::before {
-    content: '';
+    content: "";
     position: absolute;
     left: auto;
     right: 0;
@@ -888,7 +888,7 @@ aside .submenu a {
   .header-menu li:hover > ul {
     visibility: visible;
     opacity: 1;
-    transition: opacity ease-in-out .3s; } }
+    transition: opacity ease-in-out 0.3s; } }
 
 /** SIDEBAR MENU */
 .sidebar-menu .sub-menu a {
@@ -911,7 +911,7 @@ aside .submenu a {
   color: var(--theme-color); }
 
 .sidebar-menu li.menu-item-has-children::after {
-  content: '>';
+  content: ">";
   position: absolute;
   top: 0;
   right: 2%;
@@ -977,38 +977,39 @@ aside .submenu a {
   margin-bottom: 0; }
 
 /****  PAGINATION ****/
+.navigation li {
+  display: inline; }
+
 .navigation li a,
 .navigation li a:hover,
-.navigation li.active a,
+.navigation li span.active,
 .navigation li.disabled {
   color: #fff;
   text-decoration: none; }
 
-.navigation li {
-  display: inline; }
+.navigation {
+  margin: 1.5em 0;
+  width: 100%;
+  text-align: center; }
 
-.navigation li a:hover,
-.navigation li.active a,
-.navigation li.disabled {
-  background-color: var(--theme-color);
-  border: 1px solid var(--theme-color);
-  font-size: 17px;
-  cursor: pointer; }
-
-.navigation li a {
+.navigation li a,
+.navigation li span.current {
   color: #000;
   background-color: #fff;
-  border-radius: 3px;
+  border-radius: 0.4rem;
   padding: 10px 16px;
   font-size: 16px;
   font-weight: 700;
   line-height: 3; }
 
-/**** tmove it to navigation */
-.navigation {
-  margin: 1.5em 0;
-  width: 100%;
-  text-align: center; }
+.navigation li a:hover,
+.navigation li span.current,
+.navigation li.disabled {
+  background-color: var(--theme-color);
+  border: 1px solid var(--theme-color);
+  font-size: 17px;
+  cursor: pointer;
+  color: #fff; }
 
 /*--------------------------------------------------------------
 # Layout
@@ -1152,9 +1153,11 @@ h1.entry-title {
 .post-thumbnail {
   margin: 4rem 0; }
 
-.tags-links, .tagcloud {
+.tags-links,
+.tagcloud {
   margin-top: 3rem; }
-  .tags-links a, .tagcloud a {
+  .tags-links a,
+  .tagcloud a {
     background: #eee;
     padding: 5px 10px;
     margin-right: 5px;
@@ -1246,7 +1249,8 @@ h1.entry-title {
 .comment-form-url {
   width: 33.3%; }
 
-.comment-form-email, .comment-form-url {
+.comment-form-email,
+.comment-form-url {
   padding-left: 1.5rem; }
 
 @media screen and (max-width: 700px) {

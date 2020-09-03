@@ -20,7 +20,7 @@ tbody {
   border-color: inherit;
 }
 
-thead{
+thead {
   background-color: $theme__color;
   border-color: $theme__color;
   color: $body_text_dark_color;
@@ -33,8 +33,7 @@ tr {
 }
 
 .wp-block-table td,
-table td
-{
+table td {
   border: none;
   padding: 12px;
   text-align: center;
@@ -46,6 +45,6 @@ table th {
 }
 
 .wp-block-table tfoot,
-table tfoot{
+table tfoot {
   font-weight: bold;
 }

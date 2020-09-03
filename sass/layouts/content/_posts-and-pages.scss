@@ -83,7 +83,8 @@ h1.entry-title {
 }
 
 //todo tags
-.tags-links, .tagcloud {
+.tags-links,
+.tagcloud {
   margin-top: 3rem;
   a {
     background: #eee;
@@ -153,11 +154,11 @@ h1.entry-title {
 }
 
 .page article,
-.single-post article{
+.single-post article {
   width: 100%;
 }
 
-.single-post .cat-links{
+.single-post .cat-links {
   border-radius: 0.4rem;
   padding: 0 10px;
   display: inline-block;
