@@ -57,7 +57,7 @@ $sidebar_page_class = ' sidebar_position_' . get_theme_mod( 'sidebar_blog', 'rig
 						?>
 					</div>
 						<?php
-						numeric_posts_nav();
+						post_nav();
 						else :
 							get_template_part( 'template-parts/content', 'none' );
 						endif;

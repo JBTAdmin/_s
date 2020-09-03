@@ -53,7 +53,7 @@ $sidebar_page_class = ' sidebar_position_' . get_theme_mod( 'sidebar_search', 'r
 						?>
 						</div>
 						<?php
-						numeric_posts_nav();
+						post_nav();
 
 						else :
 
