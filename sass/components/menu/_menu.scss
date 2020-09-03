@@ -149,7 +149,7 @@ aside .submenu a {
     display: flex;
     flex-direction: column;
     visibility: hidden;
-    border-radius: 1rem;
+    //border-radius: 1rem;
     box-shadow: 0 7px 32px 0 rgba(0, 0, 0, 0.12);
     width: 20rem;
     transition: opacity 0.4s ease-in-out;
@@ -186,20 +186,10 @@ aside .submenu a {
     right: auto;
   }
 
-  .header-menu > li > a::before {
-    content: "";
-    position: absolute;
-    left: auto;
-    right: 0;
-    bottom: 0.9vw;
-    height: 1px;
-    width: 0;
-    transition: width 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
-    background: currentColor;
-  }
-
   /* All the properties should not be here*/
-  .header-menu li:hover > ul {
+  .header-menu li:hover > ul,
+  .header-menu li:focus > ul,
+  .header-menu li:focus-within > ul{
     visibility: visible;
     opacity: 1;
     transition: opacity ease-in-out 0.3s;
