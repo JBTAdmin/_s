@@ -858,7 +858,8 @@ aside .submenu a {
     background-color: #fff;
     color: #000;
     opacity: 0;
-    transition: opacity ease-in-out 0.3s; }
+    transition: opacity ease-in-out 0.3s;
+    font-weight: 400; }
   .header-menu > li > ul.sub-menu {
     position: absolute;
     top: 100%;
@@ -875,6 +876,7 @@ aside .submenu a {
     right: auto; }
   /* All the properties should not be here*/
   .header-menu li:hover > ul,
+  .header-menu li:focus > ul,
   .header-menu li:focus-within > ul {
     visibility: visible;
     opacity: 1;
@@ -1077,7 +1079,7 @@ aside .submenu a {
 /* Content
 --------------------------------------------- */
 .post-thumbnail img {
-  border-radius: 1rem; }
+  display: block; }
 
 .entry-meta span {
   font-size: 1.5rem;
@@ -1100,6 +1102,7 @@ aside .submenu a {
   font-size: 20vw;
   color: rgba(255, 255, 255, 0.3);
   font-family: "Finger Paint", cursive;
+  overflow: hidden;
   transition: transform 1s cubic-bezier(0.46, 0.03, 0.52, 0.96), -webkit-transform 1s cubic-bezier(0.46, 0.03, 0.52, 0.96); }
 
 @media screen and (max-width: 992px) and (min-width: 568px) {

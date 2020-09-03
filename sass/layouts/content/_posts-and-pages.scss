@@ -1,5 +1,6 @@
 .post-thumbnail img {
-  border-radius: 1rem;
+  //border-radius: 1rem;
+  display: block;
 }
 
 .entry-meta span {
@@ -25,6 +26,7 @@
   font-size: 20vw;
   color: rgba(255, 255, 255, 0.3);
   font-family: "Finger Paint", cursive;
+  overflow: hidden;
   transition: transform 1s cubic-bezier(0.46, 0.03, 0.52, 0.96),
     -webkit-transform 1s cubic-bezier(0.46, 0.03, 0.52, 0.96);
 }
