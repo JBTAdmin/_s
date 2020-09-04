@@ -53,20 +53,11 @@ article {
   transform: scale(1.05) translateZ(0);
 }
 
-.blog-post-article:hover .brand-color-hover {
-  transform: translate3d(0, 0, 0);
-  opacity: 1;
-}
-
 .post-thumbnail-container {
   overflow: hidden;
   border-radius: 1rem;
   display: inline-block;
   position: relative;
-}
-
-.brand-color-hover {
-  opacity: 0;
 }
 
 //@media screen and (min-width: 1200px){
