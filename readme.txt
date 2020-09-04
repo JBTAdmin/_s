@@ -1,6 +1,6 @@
 === aaurora ===
 
-Contributors: iPowerUser
+Contributors: ipoweruser
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
