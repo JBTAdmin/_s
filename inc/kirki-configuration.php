@@ -186,7 +186,7 @@ Kirki::add_field(
 		'settings' => 'main_menu_align',
 		'label'    => esc_attr__( 'Main menu align', 'aaurora' ),
 		'section'  => 'header',
-		'default'  => 'right',
+		'default'  => 'center',
 		'choices'  => array(
 			'center' => esc_attr__( 'Center', 'aaurora' ),
 			'right'  => esc_attr__( 'Right', 'aaurora' ),
@@ -296,7 +296,7 @@ Kirki::add_field(
 		'label'       => esc_attr__( 'Footer background', 'aaurora' ),
 		'description' => esc_attr__( 'Change Background color of the footer section.', 'aaurora' ),
 		'section'     => 'footer',
-		'default'     => '#fff',
+		'default'     => '#050826',
 		'transport'   => 'auto',
 		'output'      => array(
 			array(
