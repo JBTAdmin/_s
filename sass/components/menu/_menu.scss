@@ -190,7 +190,7 @@ aside .submenu a {
   /* All the properties should not be here*/
   .header-menu li:hover > ul,
   .header-menu li:focus > ul,
-  .header-menu li:focus-within > ul{
+  .header-menu li:focus-within > ul {
     visibility: visible;
     opacity: 1;
     transition: opacity ease-in-out 0.3s;

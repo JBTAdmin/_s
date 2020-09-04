@@ -131,14 +131,18 @@ if ( ! function_exists( 'aaurora_post_thumbnail' ) ) :
 				<div class="no-post-thumbnail">
 
 					<div class="post-thumbnail-drop-case">
-						<?php echo esc_html( get_the_title()[0] ); ?> <!-- todo VIVEKA WHAT IF NO TITLE IS THERE-->
+						<?php
+						if ( ! empty( get_the_title() ) ) {
+							echo esc_html( get_the_title()[0] );
+						}
+						?>
 					</div>
 				</div><!-- .post-thumbnail -->
-                <?php if ( is_sticky() ) : ?>
-                <span class="badge">
+				<?php if ( is_sticky() ) : ?>
+				<span class="badge">
 					<?php load_inline_svg( 'sticky.svg' ); ?>
 				</span>
-                <?php endif; ?>
+				<?php endif; ?>
 				<span class="post-date">
 					<?php echo esc_html( $date ); ?>
 				</span>
