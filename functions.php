@@ -210,9 +210,9 @@ add_action( 'after_setup_theme', 'mytheme_setup_theme_supported_features' );
  */
 add_image_size( 'aaurora-blog-single-post-navigation-featured-image', 80, 80, true ); // This is used for Blog Layout 1.
 add_image_size( 'aaurora-blog-1-featured-image', 530, 420, true ); // This is used for Blog Layout 1.
-add_image_size( 'aaurora-blog-2-featured-image', 125, 125, true ); // This is used for Blog Layout 2.
+add_image_size( 'aaurora-blog-2-featured-image', 340, 185, true ); // This is used for Blog Layout 2.
 add_image_size( 'aaurora-blog-single-post-sidebar', 400, 500, true );
-add_image_size( 'aaurora-blog-single-post-no-sidebar', 1000, 570, true );
+add_image_size( 'aaurora-blog-single-post-no-sidebar', 1000, 340, true );
 
 
 // todo See if below options related to kirki needs to be enabled or not.

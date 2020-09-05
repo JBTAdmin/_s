@@ -1419,7 +1419,11 @@ main {
 .blog-post-article {
   padding: 1%;
   max-width: 31%;
-  flex: 1 1 31%; }
+  flex: 1 1 31%;
+  border: 1px solid #f2f2f2;
+  border-radius: 15px;
+  transition: box-shadow .15s ease-in-out;
+  margin: 5px; }
 
 article {
   min-width: 0; }
@@ -1446,13 +1450,13 @@ article {
 
 @media screen and (min-width: 992px) {
   .blog-post-article {
-    max-width: 33%;
-    flex: 1 1 33%; } }
+    max-width: 32%;
+    flex: 1 1 32%; } }
 
 @media screen and (min-width: 568px) and (max-width: 992px) {
   .blog-post-article {
-    max-width: 50%;
-    flex: 1 1 50%; } }
+    max-width: 48%;
+    flex: 1 1 48%; } }
 
 @media screen and (max-width: 568px) {
   .blog-post-article {
