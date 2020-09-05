@@ -577,7 +577,7 @@ a {
 
 /* Forms
 --------------------------------------------- */
-button,
+button:not(.toggle),
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -595,12 +595,12 @@ input[type="submit"] {
   transition: all 0.2s linear;
   cursor: pointer;
   float: right; }
-  button:hover,
+  button:not(.toggle):hover,
   input[type="button"]:hover,
   input[type="reset"]:hover,
   input[type="submit"]:hover {
     border-color: #ccc #bbb #aaa; }
-  button:active, button:focus,
+  button:not(.toggle):active, button:not(.toggle):focus,
   input[type="button"]:active,
   input[type="button"]:focus,
   input[type="reset"]:active,
@@ -1055,6 +1055,10 @@ aside .submenu a {
   font-size: 1.4rem;
   margin: 0; }
 
+.desktop-sidebar-toggle {
+  border: none;
+  line-height: 0; }
+
 /* Footer
 --------------------------------------------- */
 .site-footer {
@@ -1318,6 +1322,9 @@ aside {
   transform: translate(110%, 0);
   transition: transform 0.5s, width 0.5s ease-in-out;
   font-size: 1.5rem; }
+
+body.admin-bar aside {
+  top: 3.2rem; }
 
 .site-header,
 .aside-header-container {

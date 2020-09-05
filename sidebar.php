@@ -21,22 +21,29 @@ if ( ! is_active_sidebar( 'sidebar-1' ) || get_theme_mod( 'sidebar_listing', 'ri
 				<?php
 				the_custom_logo();
 				if ( ! get_theme_mod( 'custom_logo' ) ) :
-					if ( is_front_page() && is_home() ) :
-						?>
-						<div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
-						<?php
-					endif;
+					?>
+					<div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"
+											rel="home"><?php bloginfo( 'name' ); ?></a></div>
+					<?php
 					$aaurora_description = get_bloginfo( 'description', 'display' );
 					if ( $aaurora_description || is_customize_preview() ) :
 						?>
-					<p class="site-description"> <?php echo $aaurora_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped. ?></p>
+						<p class="site-description"> 
+						<?php
+						echo $aaurora_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped.
+						?>
+							</p>
 						<?php
 					endif;
 				endif;
 				?>
 			</div>
 			<div class="sidebar-close-btn">
-				<?php load_inline_svg( 'close.svg' ); ?>
+				<button class="toggle sidebar-close desktop-sidebar-toggle" data-toggle-target=".sidebar-modal" data-toggle-body-class="closing-sidebar-modal" aria-expanded="false">
+									<span class="toggle-inner">
+										<?php load_inline_svg( 'close.svg' ); ?>
+									</span>
+				</button>
 			</div>
 		</div>
 	</div>

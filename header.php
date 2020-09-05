@@ -41,7 +41,7 @@ $menu_class .= ' ' . get_theme_mod( 'main_menu_arrow_style', 'noarrow' );
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary">
 		<?php esc_html_e( 'Skip to content', 'aaurora' ); ?></a>
-	<header id="masthead" class="site-header 
+	<header id="masthead" class="site-header
 	<?php
 	echo esc_attr( $header_class );
 	echo esc_attr( $menu_class );
@@ -55,19 +55,18 @@ $menu_class .= ' ' . get_theme_mod( 'main_menu_arrow_style', 'noarrow' );
 					the_custom_logo();
 
 					if ( ! get_theme_mod( 'custom_logo' ) ) :
-						if ( is_front_page() && is_home() ) :
-							?>
-							<div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
-							<?php
-						else :
-							?>
-							<div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
-							<?php
-						endif;
+						?>
+						<div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"
+												rel="home"><?php bloginfo( 'name' ); ?></a></div>
+						<?php
 						$aaurora_description = get_bloginfo( 'description', 'display' );
 						if ( $aaurora_description || is_customize_preview() ) :
 							?>
-							<p class="site-description"> <?php echo $aaurora_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped. ?></p>
+							<p class="site-description"> 
+							<?php
+							echo $aaurora_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped.
+							?>
+								</p>
 							<?php
 						endif;
 					endif;
@@ -80,21 +79,25 @@ $menu_class .= ' ' . get_theme_mod( 'main_menu_arrow_style', 'noarrow' );
 						<div class="menu-btn__burger"></div>
 					</div>
 					<div class="<?php echo esc_attr( 'aligned-menu-' . get_theme_mod( 'main_menu_align', 'right' ) ); ?>">
-					<?php
-					wp_nav_menu(
-						array(
-							'theme_location'  => 'menu-1',
-							'menu_id'         => 'primary-menu',
-							'menu_class'      => 'header-menu',
-							'container_class' => 'header-menu-container',
-						)
-					);
-					?>
-			</div>
-					<?php if ( get_theme_mod( 'sidebar_listing', 'right' ) !== 'disable' ) : ?>
-					<div class="hamburger-menu">
-						<?php load_inline_svg( 'hamburger.svg' ); ?>
+						<?php
+						wp_nav_menu(
+							array(
+								'theme_location'  => 'menu-1',
+								'menu_id'         => 'primary-menu',
+								'menu_class'      => 'header-menu',
+								'container_class' => 'header-menu-container',
+							)
+						);
+						?>
 					</div>
+					<?php if ( get_theme_mod( 'sidebar_listing', 'right' ) !== 'disable' ) : ?>
+						<div class="hamburger-menu">
+							<button class="toggle sidebar-open desktop-sidebar-toggle" data-toggle-target=".sidebar-modal" data-toggle-body-class="showing-sidebar-modal" aria-expanded="false">
+									<span class="toggle-inner">
+										<?php load_inline_svg( 'hamburger.svg' ); ?>
+									</span>
+							</button>
+						</div>
 					<?php endif; ?>
 				</nav><!-- #site-navigation -->
 			</div>

@@ -2,10 +2,12 @@ document.addEventListener("DOMContentLoaded", event => {
   const menuBtn = document.querySelector(".menu-btn");
   const menu = document.querySelector(".menu");
   const header = document.querySelector("header");
-  const hamburgerBtn = document.querySelector(".hamburger-menu");
+  const hamburgerBtn = document.querySelector(".sidebar-open");
   const aside = document.querySelector("aside");
-  const menuCloseBtn = document.querySelector(".sidebar-close-btn");
+  const menuCloseBtn = document.querySelector(".sidebar-close");
   const sidebarOverlay = document.querySelector(".sidebar-overlay");
+
+  const searchField = document.querySelector(".search-field");
 
   const sidebarMenu = document.querySelectorAll(
     ".widget-area .menu-item-has-children"
@@ -37,11 +39,13 @@ document.addEventListener("DOMContentLoaded", event => {
   });
 
   hamburgerBtn.addEventListener("click", function() {
+    searchField.focus();
     aside.classList.toggle("open");
     sidebarOverlay.classList.toggle("open");
   });
 
   menuCloseBtn.addEventListener("click", function() {
+    hamburgerBtn.focus();
     aside.classList.toggle("open");
     sidebarOverlay.classList.toggle("open");
   });
