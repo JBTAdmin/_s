@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", event => {
+document.addEventListener("DOMContentLoaded", function(event) {
   const menuBtn = document.querySelector(".menu-btn");
   const menu = document.querySelector(".menu");
   const header = document.querySelector("header");
@@ -9,28 +9,28 @@ document.addEventListener("DOMContentLoaded", event => {
 
   const searchField = document.querySelector(".search-field");
 
-  const sidebarMenu = document.querySelectorAll(
-    ".widget-area .menu-item-has-children"
-  );
+  const sidebarMenu = Array.prototype.slice.call(document.querySelectorAll(
+      ".widget-area .menu-item-has-children"
+  ));
 
-  const sidebarMenuLink = document.querySelectorAll(
-    ".widget-area .menu-item-has-children > a"
-  );
+  const sidebarMenuLink = Array.prototype.slice.call(document.querySelectorAll(
+      ".widget-area .menu-item-has-children > a"
+  ));
 
   let menuBtClass = false;
 
-  sidebarMenuLink.forEach(el =>
+  sidebarMenuLink.forEach(function(el) {
     el.addEventListener("click", function(event) {
       event.preventDefault();
     })
-  );
+  });
 
-  sidebarMenu.forEach(el =>
+  sidebarMenu.forEach(function(el) {
     el.addEventListener("click", function(event) {
       this.querySelector(".sub-menu").classList.toggle("display-block");
       el.classList.toggle("active");
     })
-  );
+  });
 
   menuBtn.addEventListener("click", function() {
     menuBtn.classList.toggle("open");

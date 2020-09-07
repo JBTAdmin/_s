@@ -17,6 +17,7 @@ input[type="submit"] {
   transition: all 0.2s linear;
   cursor: pointer;
   float: right;
+  margin: 1rem;
 
   &:hover {
     border-color: $color__border-button-hover;
