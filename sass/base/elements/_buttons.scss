@@ -1,4 +1,4 @@
-button:not(.toggle),
+button:not(.toggle):not(.customize-partial-edit-shortcut-button),
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
