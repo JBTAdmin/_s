@@ -11,35 +11,35 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'blog-post-article' ); ?>>
 
-	<div  class="blog-type-list">
-	<?php aaurora_post_thumbnail( 'aaurora-blog-1-featured-image', aaurora_posted_on( true ) ); ?>
-	<div class="blog-type-list-content">
-	<div class="entry-header">
-		<div class="blog-list-content-meta-info">
-		<?php
-			aaurora_meta_category_list();
-		?>
-		</div>
-		<?php
-		the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		?>
-
-		<a href="<?php echo esc_url( get_permalink() ); ?>" class="btn btn-link brand-color-hover">
+	<div class="blog-type-list">
+		<?php aaurora_post_thumbnail( 'aaurora-blog-1-featured-image', aaurora_posted_on( true ) ); ?>
+		<div class="blog-type-list-content">
+			<div class="entry-header">
+				<div class="blog-list-content-meta-info">
+					<?php
+					aaurora_meta_category_list();
+					?>
+				</div>
 				<?php
-				esc_html_e( 'Read More', 'aaurora' );
+				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 				?>
-		</a>
 
-	</div><!-- .entry-header -->
+				<a href="<?php echo esc_url( get_permalink() ); ?>" class="btn btn-link brand-color-hover">
+					<?php
+					esc_html_e( 'Read More', 'aaurora' );
+					?>
+				</a>
 
-	<div class="entry-content">
-	</div><!-- .entry-content -->
+			</div><!-- .entry-header -->
 
-	<footer class="entry-footer">
+			<div class="entry-content">
+			</div><!-- .entry-content -->
 
-	</footer><!-- .entry-footer -->
+			<footer class="entry-footer">
 
-	</div>
+			</footer><!-- .entry-footer -->
+
+		</div>
 	</div>
 
 </article><!-- #post-<?php the_ID(); ?> -->
