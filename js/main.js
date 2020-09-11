@@ -26,7 +26,7 @@ document.addEventListener(
 			el.insertAdjacentHTML( 'beforebegin', '<span class="sub-menu-btn-icon">&gt;</span>' )
 		);
 
-		const sidebarMenu = document.querySelectorAll( ".widget-area .sub-menu-btn-icon" );
+		const sidebarMenu = Array.prototype.slice.call( document.querySelectorAll( ".widget-area .sub-menu-btn-icon" ) );
 
 		sidebarMenu.forEach(
 			function(el) {
