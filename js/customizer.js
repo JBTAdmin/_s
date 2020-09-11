@@ -6,7 +6,7 @@
  *
  * Contains handlers to make Theme Customizer preview reload changes asynchronously.
  */
-//todo Viveka where we are using this
+// todo Viveka where we are using this
 ( function( $ ) {
 	// Site title and description.
 	wp.customize(

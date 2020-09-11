@@ -1,13 +1,12 @@
-=== aaurora ===
-
+=== Aaurora ===
 Contributors: ipoweruser
-License: GPLv2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments
 Requires at least: 4.5
-Tested up to: 5.4
+Tested up to: 5.5
 Requires PHP: 5.6
 Stable tag: 1.0.0
+License: GPL-2.0-only
+License URI: https://www.gnu.org/licenses/license-list.html#GPLv2
 
 Aaurora is fast, customizable & beautiful WordPress theme mainly suitable for blog. But it can also be used for personal portfolio, business website.
 
@@ -20,7 +19,7 @@ Aaurora is fast, customizable & beautiful WordPress theme suitable mainly for bl
 * Responsive Layout
 * Customize Colors
 * Customize Fonts
-* Lightweight (<50KB)
+* Lightweight
 
 == Installation ==
 
@@ -56,6 +55,20 @@ License: MIT License, https://opensource.org/licenses/MIT
 - Bookmark icon
 - Close icon
 - Comments icon
+
+= Screenshot Licenses =
+
+Screenshot images are all licensed under Creative Commons Zero (CC0) ( https://pnpm run comipxhere.com/en/license )
+
+https://pxhere.com/en/photo/766269
+https://pxhere.com/en/photo/839467
+https://pxhere.com/en/photo/1220602
+https://pxhere.com/en/photo/1455421
+https://pxhere.com/en/photo/654371
+https://pxhere.com/en/photo/1093669
+https://pxhere.com/en/photo/863788
+https://pxhere.com/en/photo/1153069
+https://pxhere.com/en/photo/1171605
 
 
 == Frequently Asked Questions ==

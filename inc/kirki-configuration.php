@@ -359,18 +359,6 @@ Kirki::add_field(
 	'aaurora_theme_options',
 	array(
 		'type'        => 'toggle',
-		'settings'    => 'blog_post_author',
-		'label'       => esc_attr__( 'Author details', 'aaurora' ),
-		'description' => esc_attr__( 'Show post author details with avatar after post content. You need to fill your post author biography details and social links in "Users" section in WordPress.', 'aaurora' ),
-		'section'     => 'blog_post',
-		'default'     => '1',
-	)
-);
-
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
-		'type'        => 'toggle',
 		'settings'    => 'blog_post_featured_image',
 		'label'       => esc_attr__( 'Featured image', 'aaurora' ),
 		'description' => esc_attr__( 'Disable to hide post featured image on single post page (Globally on all site).', 'aaurora' ),

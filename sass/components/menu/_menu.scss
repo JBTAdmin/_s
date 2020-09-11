@@ -23,7 +23,7 @@
   list-style: none;
   text-decoration: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 0.6rem;
+  padding-left: 0.6rem;
 }
 
 aside a {
@@ -109,7 +109,7 @@ aside .submenu a {
     transform: translateY(-0.9rem);
   }
 
-  .sub-menu > li {
+  .header-menu .sub-menu > li {
     padding: 0.6rem 1.3vw;
   }
 }
@@ -223,16 +223,16 @@ aside .submenu a {
   color: $theme__color;
 }
 
-.sidebar-menu li.menu-item-has-children::after {
-  content: ">";
+.sidebar-menu .sub-menu-btn-icon {
   position: absolute;
   top: 0;
   right: 2%;
-  line-height: 5.5rem;
+  line-height: 5rem;
   transform: scaleX(1.7) rotate(90deg);
+  padding: 0 2rem;
 }
 
-.sidebar-menu li.menu-item-has-children.active::after {
+.sidebar-menu li.menu-item-has-children.active .sub-menu-btn-icon {
   right: 2%;
   transform: scaleX(1.7) rotate(270deg);
 }
