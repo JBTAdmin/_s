@@ -22,8 +22,11 @@
   line-height: 1;
 }
 
+.blog-post-article-2 .no-post-thumbnail{
+  height: 18.5rem;
+}
+
 .post-thumbnail-drop-case {
-  font-size: 20vw;
   color: rgba(255, 255, 255, 0.3);
   font-family: Serif;
   overflow: hidden;
@@ -31,14 +34,23 @@
     -webkit-transform 1s cubic-bezier(0.46, 0.03, 0.52, 0.96);
 }
 
+.blog-post-article .post-thumbnail-drop-case {
+  font-size: 20vw;
+}
+
+.blog-post-article-2 .post-thumbnail-drop-case {
+  font-size: 10vw;
+}
+
+
 @media screen and (max-width: 992px) and (min-width: 568px) {
-  .post-thumbnail-drop-case {
+  .blog-post-article .post-thumbnail-drop-case {
     font-size: 30vw;
   }
 }
 
 @media screen and (max-width: 568px) {
-  .post-thumbnail-drop-case {
+  .blog-post-article .post-thumbnail-drop-case {
     font-size: 70vw;
   }
 }
