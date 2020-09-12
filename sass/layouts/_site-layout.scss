@@ -39,6 +39,25 @@ main {
   //min-width: 0; // TODO this is used for images when it crosses the width of the area so that it can be accomodated appropriately.
 }
 
+.blog-post-article-2{
+  margin-bottom: 3rem;
+  transition: transform .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.blog-post-article-2 .blog-type-list-content{
+  padding-top: 1rem;
+  padding-bottom: 0;
+}
+
+.blog-post-article-2:hover{
+box-shadow: 0 9px 12px 0 rgba(0,0,0,.09);
+  transform: translateY(-4px);
+}
+
+.blog-post-article-2 h2.entry-title{
+  margin-bottom: 1.5rem
+}
+
 article {
   min-width: 0;
 }
