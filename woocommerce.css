@@ -482,8 +482,8 @@ p.no-comments {
 
 @media screen and (min-width: 48em) {
 	/**
-	 * Header cart
-	 */
+	* Header cart
+	*/
 	.site-header-cart .widget_shopping_cart {
 		position: absolute;
 		top: 100%;

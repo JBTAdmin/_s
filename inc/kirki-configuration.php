@@ -351,6 +351,10 @@ Kirki::add_field(
 				'element'  => ':root',
 				'property' => '--font_size_post-title_mobile',
 			),
+			array(
+				'choice'   => 'font-family',
+				'element'  => 'h1.entry-title',
+			),
 		),
 	)
 );
@@ -442,6 +446,26 @@ Kirki::add_section(
 		'description' => '',
 		'panel'       => 'theme_settings_panel',
 		'priority'    => 160,
+	)
+);
+
+
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'        => 'typography',
+		'settings'    => 'font_header_blog',
+		'label'       => esc_attr__( 'Blog Title font', 'aaurora' ),
+		'section'     => 'fonts',
+		'default'     => array(
+			'font-family' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
+		),
+		'description' => esc_attr__( 'Font used in Blog Post Header on Home Page.', 'aaurora' ),
+		'output'      => array(
+			array(
+				'element' => array( 'h2.entry-title' ),
+			),
+		),
 	)
 );
 
