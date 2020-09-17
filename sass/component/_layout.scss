@@ -1,3 +1,23 @@
+/* Media
+--------------------------------------------- */
+@import "media/media";
+
+/* Captions
+--------------------------------------------- */
+@import "media/captions";
+
+/* Galleries
+--------------------------------------------- */
+@import "media/galleries";
+
+/* Menus
+--------------------------------------------- */
+@import "menu/menu";
+
+/* Navigation
+--------------------------------------------- */
+@import "navigation/navigation";
+
 /* Header
 --------------------------------------------- */
 @import "header/header";
@@ -9,7 +29,6 @@
 /* Content
 --------------------------------------------- */
 @import "content/posts-and-pages";
-@import "content/archive";
 
 /* Comment
 --------------------------------------------- */

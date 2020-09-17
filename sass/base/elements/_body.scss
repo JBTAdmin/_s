@@ -38,38 +38,3 @@ p {
 .blog-type-list {
   position: relative;
 }
-
-.post-thumbnail .badge {
-  font-size: 1.25rem;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  display: inline-flex;
-  width: 4rem;
-  height: 4rem;
-  pointer-events: none;
-  color: #fff;
-  background-color: #101010;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0 1rem;
-}
-
-.post-thumbnail .post-date {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 8rem;
-  height: 3rem;
-  background: #fff;
-  border-bottom-right-radius: 1rem;
-  border-top-left-radius: 1rem;
-  color: #000;
-  font-size: 1.5rem;
-  font-weight: 600;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
