@@ -197,6 +197,22 @@ Kirki::add_field( 'aaurora_theme_options', array(
 	'description'  => esc_attr__( 'Here you can select Top Bar Layout.', 'aaurora' ),
 ) );
 
+Kirki::add_field( 'aaurora_theme_options', array(
+	'type'        => 'select',
+	'settings'    => 'header_layout_setting',
+	'label'       => esc_attr__( 'Select Header Layout', 'aaurora' ),
+	'section'     => 'header',
+	'default'     => 'layout-1',
+	'multiple'    => 0,
+	'choices'     => array(
+		'header-1' => esc_attr__( 'Logo Top, Menu Below', 'aaurora' ),
+		'header-2' => esc_attr__( 'Logo Top, Menu Below', 'aaurora' ),
+		'header-3' => esc_attr__( 'Logo Left, Menu Right', 'aaurora' ),
+		'header-4' => esc_attr__( 'Logo Right, Menu Left', 'aaurora' )
+	),
+	'description'  => esc_attr__( 'Here you can select which Header layout will be used.', 'aaurora' ),
+) );
+
 Kirki::add_field(
 	'aaurora_theme_options',
 	array(
@@ -396,6 +412,34 @@ Kirki::add_field(
 
 
 // END SECTION: Footer.
+
+// Section: Blog Section
+
+Kirki::add_section(
+	'blog_layout',
+	array(
+		'title'       => esc_attr__( 'Blog Layout', 'aaurora' ),
+		'description' => esc_attr__( 'This settings affect your blog display.', 'aaurora' ),
+		'panel'       => 'theme_settings_panel',
+		'priority'    => 80,
+	)
+);
+
+Kirki::add_field( 'aaurora_theme_options', array(
+	'type'        => 'select',
+	'settings'    => 'blog_layout_setting',
+	'label'       => esc_attr__( 'Select Blog Layout', 'aaurora' ),
+	'section'     => 'blog_layout',
+	'default'     => 'layout-2',
+	'multiple'    => 0,
+	'choices'     => array(
+		'layout-1' => esc_attr__( 'Layout 1', 'aaurora' ),
+		'layout-2' => esc_attr__( 'Layout 2', 'aaurora' )
+	),
+	'description'  => esc_attr__( 'Here you can select which layout will be used to display the blog posts on Home or Index pages..', 'aaurora' ),
+) );
+
+// END Section: Blog Section
 
 // SECTION: Blog Single Post.
 Kirki::add_section(

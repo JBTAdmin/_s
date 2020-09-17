@@ -47,10 +47,11 @@ if ( ! function_exists( 'aaurora_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
-		// This theme uses wp_nav_menu() in one location.
+		// This theme uses wp_nav_menu() in two location.
 		register_nav_menus(
 			array(
 				'menu-1' => esc_html__( 'Primary', 'aaurora' ),
+				'top-bar-menu' => esc_html__( 'Top Bar', 'aaurora' ),
 			)
 		);
 
