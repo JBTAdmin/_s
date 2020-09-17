@@ -45,6 +45,65 @@ Kirki::add_panel(
 	)
 );
 
+// SECTION: General Layout.
+Kirki::add_section(
+	'general_layout',
+	array(
+		'title'       => esc_attr__( 'Layout', 'aaurora' ),
+		'description' => '',
+		'panel'       => 'theme_settings_panel',
+		'priority'    => 10,
+	)
+);
+
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'        => 'slider',
+		'settings'    => 'slider_setting',
+		'label'       => esc_attr__( 'Container Width (px)', 'aaurora' ),
+		'description' => '',
+		'section'     => 'general_layout',
+		'default'     => '1150',
+		'choices'     => [
+			'min'  => 900,
+			'max'  => 1900,
+			'step' => 10,
+		],
+//		'transport'   => 'auto',
+		'output'      => array(
+			array(
+				'element'  => '.wrap',
+				'property' => 'width',
+				'units'    => 'px',
+			),
+		),
+	)
+);
+
+
+// viveka
+
+
+Kirki::add_field( 'aaurora_theme_options', array(
+	'type'        => 'select',
+	'settings'    => 'sidebar_layout_setting',
+	'label'       => esc_attr__( 'Select Top bar Layout', 'aaurora' ),
+	'section'     => 'general_layout',
+	'default'     => 'content-only',
+	'multiple'    => 0,
+	'choices'     => array(
+		'content-only' => esc_attr__( 'Content', 'aaurora' ),
+		'sidebar-right' => esc_attr__( 'Content / Sidebar', 'aaurora' ),
+		'sidebar-left' => esc_attr__( 'Sidebar / Content', 'aaurora' ),
+		'sidebar-both' => esc_attr__( 'Sidebar / Content / Sidebar', 'aaurora' ),
+	),
+	'description'  => esc_attr__( 'Here you can select Top Bar Layout.', 'aaurora' ),
+) );
+
+
+//General Layout
+
 // SECTION: General.
 Kirki::add_section(
 	'general',
@@ -121,6 +180,22 @@ Kirki::add_section(
 		'priority'    => 30,
 	)
 );
+
+
+Kirki::add_field( 'aaurora_theme_options', array(
+	'type'        => 'select',
+	'settings'    => 'top_bar_layout_setting',
+	'label'       => esc_attr__( 'Select Top bar Layout', 'aaurora' ),
+	'section'     => 'header',
+	'default'     => 'disabled',
+	'multiple'    => 0,
+	'choices'     => array(
+		'disabled' => esc_attr__( 'Disabled', 'aaurora' ),
+		'menu-left' => esc_attr__( 'Menu Left, Social Icon Right', 'aaurora' ),
+		'menu-right' => esc_attr__( 'Social Icon Right, Menu Right', 'aaurora' ),
+	),
+	'description'  => esc_attr__( 'Here you can select Top Bar Layout.', 'aaurora' ),
+) );
 
 Kirki::add_field(
 	'aaurora_theme_options',
@@ -425,11 +500,12 @@ Kirki::add_field(
 	array(
 		'type'        => 'radio-buttonset',
 		'settings'    => 'sidebar_listing',
-		'label'       => esc_attr__( 'Sidebar listing', 'aaurora' ),
+		'label'       => esc_attr__( 'Sidebar Alt listing', 'aaurora' ),
 		'section'     => 'sidebars',
 		'default'     => 'right',
 		'choices'     => array(
 			'right'   => esc_attr__( 'Right', 'aaurora' ),
+			'left'   => esc_attr__( 'Left', 'aaurora' ),
 			'disable' => esc_attr__( 'Disable', 'aaurora' ),
 		),
 		'description' => '',

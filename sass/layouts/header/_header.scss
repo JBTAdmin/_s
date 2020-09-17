@@ -19,7 +19,8 @@
   transform: translateX(-50%);
 }
 
-.main-navigation {
+.main-navigation,
+.secondary-navigation {
   display: flex;
   align-items: center;
 }
@@ -67,4 +68,9 @@
 .desktop-sidebar-toggle{
   border: none;
   line-height: 0;
+}
+
+.header-container{
+  display: flex;
+  align-items: center;
 }

@@ -27,6 +27,10 @@ $sidebar_page_class = ' sidebar_position_' . get_theme_mod( 'sidebar_blog', 'rig
 	<div class="site-container">
 		<div class="wrap">
 			<div class="main-container">
+				<?php
+				get_sidebar('alt');
+				get_sidebar('left');
+				?>
 				<main id="primary" class="site-main primary-content <?php echo esc_attr( $sidebar_page_class ); ?>">
 
 					<?php

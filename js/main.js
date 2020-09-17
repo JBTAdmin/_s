@@ -52,7 +52,7 @@ document.addEventListener(
 		hamburgerBtn.addEventListener(
 			"click",
 			function() {
-				searchField.focus();
+				// searchField.focus();
 				aside.classList.toggle( "open" );
 				sidebarOverlay.classList.toggle( "open" );
 			}

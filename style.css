@@ -826,21 +826,13 @@ aside .submenu a {
   .header-menu .sub-menu > li {
     padding: 0.6rem 1.3vw; } }
 
-.main-header {
-  min-height: 10vh;
-  height: 10rem;
-  margin: auto;
-  justify-content: space-between;
-  align-items: center; }
-
 @media screen and (min-width: 1025px) {
   .sidebar-menu {
     display: none; }
   .header-menu {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    height: 10vh; }
+    justify-content: space-evenly; }
   .header-menu li {
     position: relative;
     list-style: none;
@@ -1024,7 +1016,8 @@ aside .submenu a {
   left: 50%;
   transform: translateX(-50%); }
 
-.main-navigation {
+.main-navigation,
+.secondary-navigation {
   display: flex;
   align-items: center; }
 
@@ -1059,6 +1052,10 @@ aside .submenu a {
 .desktop-sidebar-toggle {
   border: none;
   line-height: 0; }
+
+.header-container {
+  display: flex;
+  align-items: center; }
 
 /* Footer
 --------------------------------------------- */
@@ -1319,7 +1316,7 @@ textarea:focus {
 /* Sidebar
 --------------------------------------------- */
 /* Widget Styling*/
-aside {
+aside.sidebar-alt-aside {
   background: #fff;
   width: 400px;
   height: 100%;
@@ -1414,10 +1411,11 @@ aside.open {
   flex-wrap: wrap; }
 
 main {
-  flex: 2 1 80rem; }
+  flex: 3 1; }
 
 aside {
-  flex: 1 1 30rem; }
+  flex: 1 1;
+  margin: 6rem auto; }
 
 .article-container {
   justify-content: space-between; }

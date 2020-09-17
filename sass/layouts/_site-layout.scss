@@ -8,12 +8,13 @@
 }
 
 main {
-  flex: 2 1 80rem;
+  flex: 3 1;
   //max-width: 140rem; // todo need to check if this can be removed as other width is there screen and (min-width: 992px)
 }
 
 aside {
-  flex: 1 1 30rem;
+  flex: 1 1;
+  margin: 6rem auto;
 }
 
 .article-container {
