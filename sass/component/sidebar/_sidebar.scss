@@ -1,0 +1,39 @@
+/* Widget Styling*/
+
+
+/**
+ * LEFT / RIGHT SIDEBAR
+ */
+body.admin-bar aside {
+  top: 3.2rem;
+}
+
+// For Sidebar Categories
+.widget {
+  margin-bottom: 5rem;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 85%;
+}
+
+.widget-title {
+  color: #333;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid $theme__color;
+}
+
+.widget ul {
+  list-style: none;
+}
+
+//Sidebar Search field
+// TODO may be it should be in some common css.
+.search-field {
+  padding: 1rem 2rem 0 0;
+  border: none;
+  border-bottom: 1px solid #ececec;
+  font-size: 1.8rem;
+}

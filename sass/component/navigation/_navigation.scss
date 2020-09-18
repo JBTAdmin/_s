@@ -1,4 +1,13 @@
 /** TODO NEED TO CHECK WHAT IS NOT USED**/
+/**
+ * Navigation on Single POST for movement between POSTS before comment.
+ */
+
+.navigation {
+  margin: 1.5em 0;
+  width: 100%;
+  text-align: center;
+}
 
 .comment-navigation,
 .posts-navigation,
@@ -13,12 +22,6 @@
   .nav-next {
     text-align: end;
     flex: 1 1 50%;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .post-navigation .nav-links {
-    flex-direction: column;
   }
 }
 
@@ -42,27 +45,6 @@
   border-radius: 10px;
 }
 
-.post-navigation .nav-previous {
-  text-align: start;
-  border-right: 1px solid rgba(34, 34, 34, 0.1);
-}
-
-@media screen and (max-width: 768px) {
-  .post-navigation .nav-previous {
-    text-align: start;
-    border-bottom: 1px solid rgba(34, 34, 34, 0.1);
-    border-right: none;
-    padding-bottom: 2rem;
-    margin-bottom: 1rem;
-  }
-}
-
-.site-main .post-navigation {
-  border-top: 1px solid rgba(34, 34, 34, 0.1);
-  border-bottom: 1px solid rgba(34, 34, 34, 0.1);
-  padding: 2rem 0;
-}
-
 .nav-links h2 {
   margin-bottom: 0;
 }
@@ -71,18 +53,15 @@
   display: inline;
 }
 
-.navigation li a,
-.navigation li a:hover,
-.navigation li span.active,
-.navigation li.disabled {
-  color: #fff;
-  text-decoration: none;
+.post-navigation .nav-previous {
+  text-align: start;
+  border-right: 1px solid rgba(34, 34, 34, 0.1);
 }
 
-.navigation {
-  margin: 1.5em 0;
-  width: 100%;
-  text-align: center;
+.site-main .post-navigation {
+  border-top: 1px solid rgba(34, 34, 34, 0.1);
+  border-bottom: 1px solid rgba(34, 34, 34, 0.1);
+  padding: 2rem 0;
 }
 
 .navigation li a,
@@ -96,6 +75,14 @@
   line-height: 3;
 }
 
+.navigation li a,
+.navigation li a:hover,
+.navigation li span.active,
+.navigation li.disabled {
+  color: #fff;
+  text-decoration: none;
+}
+
 .navigation li a:hover,
 .navigation li span.current,
 .navigation li.disabled {
@@ -104,4 +91,20 @@
   font-size: 17px;
   cursor: pointer;
   color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .post-navigation .nav-previous {
+    text-align: start;
+    border-bottom: 1px solid rgba(34, 34, 34, 0.1);
+    border-right: none;
+    padding-bottom: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .post-navigation .nav-links {
+    flex-direction: column;
+  }
 }

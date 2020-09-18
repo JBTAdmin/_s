@@ -28,7 +28,11 @@
 
 /* Content
 --------------------------------------------- */
-@import "content/posts-and-pages";
+@import "content/common";
+@import "content/blog_1";
+@import "content/blog_2";
+@import "content/single_page";
+@import "content/single_post";
 
 /* Comment
 --------------------------------------------- */
@@ -36,7 +40,11 @@
 
 /* Sidebar
 --------------------------------------------- */
-@import "sidebar/widgets";
+@import "sidebar/sidebar";
+
+/* Sidebar
+--------------------------------------------- */
+@import "sidebar/sidebar-alt";
 
 /* Layout
 --------------------------------------------- */

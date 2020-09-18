@@ -1,0 +1,35 @@
+
+// This is for blog layout new
+.blog-layout-2 {
+	.entry-title {
+		font-size: 30px;
+		width: 100%;
+		margin: 0 0 2vh -2px;
+	}
+	.post-thumbnail {
+		float: right;
+		margin-bottom: 15px;
+		margin-left: 7%;
+	}
+
+	.blog-type-list {
+		padding: 10px 0 10px 5%;
+		border-left: 1px dashed #9ea1a4;
+	}
+
+	.blog-list-content-meta-info {
+		margin-bottom: 2vh;
+	}
+	.post-thumbnail img {
+		border: 4px solid #fed672;
+	}
+
+	flex: 1 1 50rem;
+	max-width: unset !important;
+	padding-right: 35px;
+	padding-left: 60px;
+}
+
+.blog-post-article-2 .post-thumbnail-drop-case {
+	font-size: 10vw;
+}
