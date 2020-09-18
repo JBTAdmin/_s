@@ -45,15 +45,6 @@
   padding-left: 1.5rem;
 }
 
-@media screen and (max-width: 700px) {
-  .comment-form-author,
-  .comment-form-email,
-  .comment-form-url {
-    width: 100%;
-    padding-left: 0;
-  }
-}
-
 .comment-form .comment-notes,
 .form-submit,
 .comments-area {
@@ -90,11 +81,6 @@
   line-height: 1.6;
 }
 
-input:focus,
-textarea:focus {
-  border: 2px solid $theme__color;
-}
-
 .reply a {
   text-transform: uppercase;
   border-bottom: 2px solid $theme__color;
@@ -105,7 +91,23 @@ textarea:focus {
   font-size: 1.6rem;
 }
 
-// TODO yet to use this part in comment section for background color
+//TODO SHOULD BE MOVED TO COMMON AREA
+input:focus,
+textarea:focus {
+  border: 2px solid $theme__color;
+}
+
+
+@media screen and (max-width: 700px) {
+  .comment-form-author,
+  .comment-form-email,
+  .comment-form-url {
+    width: 100%;
+    padding-left: 0;
+  }
+}
+
+// TODO yet to use this part in comment section for background color UNUSED
 .full-width {
   left: 50%;
   margin-left: -50vw;

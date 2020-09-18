@@ -27,60 +27,8 @@ main {
   margin: 6rem auto;
 }
 
-.blog-post-article, .blog-post-article-2 {
-  // may be this can be merged in article.
-  padding: 1%;
-  max-width: 31%; //todo see if this percent is working or not
-  flex: 1 1 31%;
-  border: 1px solid #f2f2f2;
-  border-radius: 15px;
-  transition: box-shadow .15s ease-in-out;
-  margin: 5px;
-  //min-width: 42rem;
-  //min-width: 0; // TODO this is used for images when it crosses the width of the area so that it can be accomodated appropriately.
-}
-
-.blog-post-article-2{
-  margin-bottom: 3rem;
-  transition: transform .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-
-.blog-post-article-2 .blog-type-list-content{
-  padding-top: 1rem;
-  padding-bottom: 0;
-}
-
-.blog-post-article-2:hover{
-box-shadow: 0 9px 12px 0 rgba(0,0,0,.09);
-  transform: translateY(-4px);
-}
-
-.blog-post-article-2 h2.entry-title{
-  margin-bottom: 1.5rem
-}
-
 article {
   min-width: 0;
-}
-
-.blog-post-article .post-thumbnail img {
-  transition: transform 1s cubic-bezier(0.46, 0.03, 0.52, 0.96),
-    -webkit-transform 1s cubic-bezier(0.46, 0.03, 0.52, 0.96);
-}
-
-.blog-post-article-2 .post-thumbnail img {
-  height: 18.5rem;
-  transition: transform 1s cubic-bezier(0.46, 0.03, 0.52, 0.96),
-  -webkit-transform 1s cubic-bezier(0.46, 0.03, 0.52, 0.96);
-}
-
-.blog-post-article:hover .post-thumbnail img, .blog-post-article-2:hover .post-thumbnail img {
-  transform: scale(1.05) translateZ(0);
-  border-radius: 1rem;
-}
-
-.blog-post-article:hover .post-thumbnail-drop-case, .blog-post-article-2:hover .post-thumbnail-drop-case {
-  transform: scale(1.05) translateZ(0);
 }
 
 .post-thumbnail-container {
@@ -102,26 +50,3 @@ article {
 }
 //}
 
-@media screen and (min-width: 992px) {
-  .blog-post-article, .blog-post-article-2{
-    max-width: 32%; //todo see if this percent is working or not
-    flex: 1 1 32%;
-    //min-width: 29rem;
-  }
-}
-
-@media screen and (min-width: 640px) and (max-width: 992px) {
-  .blog-post-article, .blog-post-article-2 {
-    max-width: 48%; //todo see if this percent is working or not
-    flex: 1 1 48%;
-    //min-width: 29rem;
-  }
-}
-
-@media screen and (max-width: 640px) {
-  .blog-post-article, .blog-post-article-2 {
-    max-width: 100%; //todo see if this percent is working or not
-    flex: 1 1 100%;
-    //min-width: 29rem;
-  }
-}
