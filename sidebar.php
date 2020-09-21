@@ -14,7 +14,7 @@ if ( ! is_active_sidebar( 'sidebar-right' ) || in_array(get_theme_mod( 'sidebar_
 }
 ?>
 
-<aside id="primary" class="widget-area">
+<aside id="primary" class="widget-area sidebar-right">
     <?php dynamic_sidebar( 'sidebar-right' ); ?>
 </aside><!-- #secondary -->
 

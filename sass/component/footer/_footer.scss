@@ -21,3 +21,27 @@
     width: 100%;
   }
 }
+
+div[class*="footer-sidebar-"] {
+  flex: 1 1 25%;
+  ul{
+    list-style: none;
+  }
+}
+
+.main-footer{
+  display: flex;
+}
+
+.site-footer-main{
+  padding: 0 0 4rem;
+}
+
+.wrap-site-info{
+  border-top: 1px solid #e5e5e5;
+  font-size: 1.3rem;
+}
+
+.site-footer{
+  padding: 6rem 0 1rem;
+}

@@ -1,0 +1,58 @@
+ul, ol {
+	margin: 0 0 1.5em 3em;
+
+	li {
+		padding: 5px 0;
+		list-style-position: inside;
+	}
+
+	ul {
+		list-style-type: circle;
+	}
+}
+
+ul {
+	list-style: disc;
+	margin: 0;
+	padding: 0;
+
+	&.unstyled {
+		list-style: none;
+	}
+	&.inline li {
+		display: inline-block;
+	}
+	&.list-square li {
+		padding-left: 20px;
+		list-style: none;
+
+		&:after {
+			content: '';
+			float: left;
+			margin-left: -20px;
+			margin-top: -1px;
+			font-size: 50%;
+			vertical-align: middle;
+		}
+	}
+}
+
+ol {
+	list-style: decimal;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 25px;
+}
+
+dt {
+	font-weight: 600;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}

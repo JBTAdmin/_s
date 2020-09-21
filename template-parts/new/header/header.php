@@ -37,6 +37,12 @@ if ( ! function_exists( 'aaurora_top_bar_layout' ) ) {
 						);
 						?>
                     </nav><!-- #top-bar-navigation -->
+
+                    
+                    <?php
+                    // Social Icons
+                    aaurora_social_media( 'top-bar-social' );
+                    ?>
                 </div>
             </div>
         </div>
@@ -62,7 +68,7 @@ if ( ! function_exists( 'aaurora_header_branding_layout' ) ) {
 		?>
         <div class="header-menu-bar">
             <div class="wrap">
-                <div class="header-container">
+                <div class="header-container <?php echo esc_attr( get_theme_mod('header_layout_setting', 'flex-dir-row-reverse') ) ?>">
 				<?php
 				aaurora_site_branding( 'left' );
 				?>

@@ -22,6 +22,16 @@
 --------------------------------------------- */
 @import "header/header";
 
+/* Topbar
+--------------------------------------------- */
+@import "topbar/top-bar";
+
+/* Topbar
+--------------------------------------------- */
+@import "backtotop/back_to_top";
+
+
+
 /* Footer
 --------------------------------------------- */
 @import "footer/footer";
@@ -31,6 +41,7 @@
 @import "content/common";
 @import "content/blog_1";
 @import "content/blog_2";
+@import "content/blog_3";
 @import "content/single_page";
 @import "content/single_post";
 

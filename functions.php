@@ -52,6 +52,9 @@ if ( ! function_exists( 'aaurora_setup' ) ) :
 			array(
 				'menu-1' => esc_html__( 'Primary', 'aaurora' ),
 				'top-bar-menu' => esc_html__( 'Top Bar', 'aaurora' ),
+				'footer-1' => esc_html__( 'Footer Menu 1', 'aaurora' ),
+				'footer-2' => esc_html__( 'Footer Menu 2', 'aaurora' ),
+				'footer-3' => esc_html__( 'Footer Menu 3', 'aaurora' ),
 			)
 		);
 
@@ -292,6 +295,7 @@ add_action( 'after_setup_theme', 'mytheme_setup_theme_supported_features' );
 add_image_size( 'aaurora-blog-single-post-navigation-featured-image', 80, 80, true ); // This is used for Blog Layout 1.
 add_image_size( 'aaurora-blog-1-featured-image', 530, 420, true ); // This is used for Blog Layout 1.
 add_image_size( 'aaurora-blog-2-featured-image', 340, 185, true ); // This is used for Blog Layout 2.
+add_image_size( 'aaurora-blog-3-featured-image', 340, 185, true ); // This is used for Blog Layout 2.
 add_image_size( 'aaurora-blog-single-post-sidebar', 400, 500, true );
 add_image_size( 'aaurora-blog-single-post-no-sidebar', 1000, 340, true );
 
@@ -338,3 +342,4 @@ function post_nav() {
 
 
 
+//todo back to top

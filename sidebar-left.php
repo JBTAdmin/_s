@@ -15,6 +15,6 @@ if ( ! is_active_sidebar( 'sidebar-left' ) || in_array(get_theme_mod( 'sidebar_l
 }
 ?>
 
-<aside id="secondary" class="widget-area">
+<aside id="secondary" class="widget-area sidebar-left">
 	<?php dynamic_sidebar( 'sidebar-left' ); ?>
 </aside><!-- #secondary -->

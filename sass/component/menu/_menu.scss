@@ -26,11 +26,7 @@
   padding-left: 0.6rem;
 }
 
-aside a {
-  line-height: 4.5rem;
-}
-
-aside a {
+aside.sidebar-alt .widget-sidebar-menu a {   // todo refine
   line-height: 4.5rem;
 }
 
@@ -146,7 +142,12 @@ aside .submenu a {
 
   .header-menu > li {
     display: flex;
-    padding: 1vw 1.3vw;
+    padding: 0 1.3vw;
+    line-height: 8rem;
+  }
+
+  .header-menu-bar{
+    height: 8rem;
   }
 
   nav ul ul {

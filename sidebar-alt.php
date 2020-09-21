@@ -14,7 +14,7 @@ if ( ! is_active_sidebar( 'sidebar-alt' ) || get_theme_mod( 'sidebar_listing', '
 }
 ?>
 
-<aside id="secondary-alt" class="widget-area sidebar-alt-aside">
+<aside id="secondary-alt" class="widget-area sidebar-alt-aside sidebar-alt">
 	<div class="aside-header-container">
 		<div class="widget aside-header">
 			<div class="site-branding">

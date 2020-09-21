@@ -1,0 +1,106 @@
+.blog-post-article-3{
+	width: 100%;
+	height: 20rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	margin: 0 1rem;
+	border-bottom: 1px solid rgba(68,68,68,0.1);
+	padding-left: 10rem;
+	overflow: hidden;
+}
+
+.blog-post-article-3:hover:after {
+	background-color: rgba(13,13,13,0.5);
+}
+
+.blog-post-article-3:after {
+	//background-color: rgba(13,13,13,0.6);
+	//background-color: rgba(13,13,13,0.35);
+	position: absolute;
+	left: 0;
+	top: 0;
+	content: '';
+	display: block;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	-webkit-transition: background-color 0.4s cubic-bezier(0.05, 0.2, 0.1, 1) 0s;
+	transition: background-color 0.4s cubic-bezier(0.05, 0.2, 0.1, 1) 0s;
+	color: #fff;
+}
+.blog-post-article-3 .blog-type-list{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-size: cover;
+	background-position: center;
+	visibility: hidden;
+	transition: transform 0.4s cubic-bezier(0.05, 0.2, 0.1, 1) 0s;
+}
+
+.blog-post-article-3:hover .blog-type-list{
+	transform: scale(1.1);
+}
+
+.blog-post-article-3:hover .blog-type-list{
+	visibility: visible;
+}
+
+.blog-post-article-3:hover .blog-type-list-content{
+	color: #fff;
+}
+
+.blog-post-article-3 .blog-type-list-content{
+	z-index: 100;
+	color: #000;
+	padding: unset;
+	//position: relative;
+}
+
+.blog-post-article-3 h2.entry-title{
+	font-size: 3.5rem;
+	margin-bottom: unset;
+	text-align: center;
+}
+
+.post-date{
+	position: absolute;
+	top: 50%;
+	left: 1rem;
+	transform: translateY(-50%);
+}
+
+@media screen and (max-width: 700px){
+	.blog-post-article-3 h2.entry-title{
+		font-size: 2.5rem;
+	}
+}
+
+@media screen and (min-width: 700px) and  (max-width: 1000px){
+	.blog-post-article-3 h2.entry-title{
+		font-size: 3rem;
+	}
+}
+
+.post-date-day{
+	font-size: 6rem;
+	display: block;
+	line-height: 5rem;
+	text-align: center;
+}
+
+.post-date-month{
+	text-transform: uppercase;
+	font-size: 1.4rem;
+	//font-weight: 600;
+	text-align: center;
+}
+
+.blog-post-article-3 .blog-list-content-meta-info{
+	text-align: center;
+	padding: unset;
+}

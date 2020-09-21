@@ -21,7 +21,7 @@ if ( is_active_sidebar( 'sidebar-1' ) ) {
 
 $sidebar_page_class = ' ' . get_theme_mod( 'sidebar_sticky', '0' );
 
-$sidebar_page_class = ' sidebar_position_' . get_theme_mod( 'sidebar_blog', 'right' );
+$sidebar_page_class = get_theme_mod( 'sidebar_layout_setting', 'content-only' );
 ?>
 
 	<div class="site-container">
@@ -55,7 +55,7 @@ $sidebar_page_class = ' sidebar_position_' . get_theme_mod( 'sidebar_blog', 'rig
 							 * If you want to override this in a child theme, then include a file
 							 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 							 */
-							get_template_part( 'template-parts/blog/blog-' . get_theme_mod( 'blog_layout_setting', 'layout-2' ), get_post_type() );
+							get_template_part( 'template-parts/blog/blog-' . get_theme_mod( 'blog_layout_setting', 'layout-3' ), get_post_type() );
 
 						endwhile;
 						?>

@@ -73,4 +73,21 @@
 .header-container{
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
+
+.flex-dir-column {
+  flex-direction: column;
+}
+
+.flex-dir-column-reverse {
+  flex-direction: column-reverse;
+}
+
+.flex-dir-row-reverse{
+  flex-direction: row-reverse;
+}
+
+//.header-menu-bar{
+//  padding: 1.5rem 0;
+//}

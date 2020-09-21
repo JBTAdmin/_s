@@ -4,6 +4,19 @@
 /**
  * LEFT / RIGHT SIDEBAR
  */
+.sidebar-right, .sidebar-left{
+  ul, ol {
+    li {
+      padding: 0 0 5px;
+    }
+  }
+}
+
+aside{
+  //border: 3px solid #f1edeb;
+  padding: 20px;
+}
+
 body.admin-bar aside {
   top: 3.2rem;
 }
@@ -11,18 +24,18 @@ body.admin-bar aside {
 // For Sidebar Categories
 .widget {
   margin-bottom: 5rem;
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 85%;
+  //margin-right: auto;
+  //margin-left: auto;
+  //max-width: 85%;
 }
 
 .widget-title {
-  color: #333;
+  color: #6A696C;
   font-size: 1.8rem;
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 1.5rem;
   padding-bottom: 0.4rem;
-  border-bottom: 2px solid $theme__color;
+  //border-bottom: 2px solid $theme__color;
 }
 
 .widget ul {
@@ -37,3 +50,5 @@ body.admin-bar aside {
   border-bottom: 1px solid #ececec;
   font-size: 1.8rem;
 }
+
+

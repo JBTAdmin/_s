@@ -251,3 +251,48 @@ function load_inline_svg( $filename ) {
 }
 
 // todo probably this method shold be moved to proper location. And remove unnecessary mapping.
+
+
+// Social Media
+if ( ! function_exists( 'aaurora_social_media' ) ) {
+	
+	function aaurora_social_media( $social_class='' ) {
+		
+		?>
+
+        <div class="<?php echo esc_attr( $social_class ); ?>">
+			
+			<?php
+
+			if ( get_theme_mod( 'social_media_fb_url', '' ) !== '' ) :
+				?>
+                <a href="<?php echo esc_url( get_theme_mod( 'social_media_fb_url')  ); ?>" target="_blank">
+                    <?php load_inline_svg('facebook.svg') ?>
+                </a>
+			<?php endif; ?>
+			
+			<?php if ( get_theme_mod( 'social_media_tw_url', '' ) !== '' ) : ?>
+                <a href="<?php echo esc_url( get_theme_mod( 'social_media_tw_url')  ); ?>" target="_blank">
+	                <?php load_inline_svg('twitter.svg') ?>
+                </a>
+			<?php endif; ?>
+			
+			<?php if ( get_theme_mod( 'social_media_in_url', '' ) !== '' ) : ?>
+                <a href="<?php echo esc_url( get_theme_mod( 'social_media_in_url') ); ?>" target="_blank">
+	                <?php load_inline_svg('instagram.svg') ?>
+                </a>
+			<?php endif; ?>
+			
+			<?php if ( get_theme_mod( 'social_media_ln_url', '' ) !== '' ) : ?>
+                <a href="<?php echo esc_url( get_theme_mod( 'social_media_ln_url') ); ?>" target="_blank">
+	                <?php load_inline_svg('linkedin.svg') ?>
+                </a>
+			<?php endif; ?>
+
+        </div>
+		
+		<?php
+		
+	}
+	
+} // aaurora_social_media()
