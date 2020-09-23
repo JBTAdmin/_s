@@ -43,7 +43,8 @@ $sidebar_page_class = ' sidebar_position_' . get_theme_mod( 'sidebar_archive', '
 								 * If you want to override this in a child theme, then include a file
 								 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 								 */
-								get_template_part( 'template-parts/blog/blog-layout-2', get_post_type() );
+								//todo probably name can be used here instead of concatenation
+								get_template_part( 'template-parts/blog/blog-' . get_theme_mod( 'blog_layout_setting', 'layout-3' ), get_post_type() );
 
 							endwhile;
 							?>
