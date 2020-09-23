@@ -29,7 +29,7 @@ if ( ! function_exists( 'aaurora_top_bar_layout' ) ) {
 						wp_nav_menu(
 							array(
 								'theme_location'  => 'top-bar-menu',
-								'menu_id'         => 'primary-menu',
+								'menu_id'         => 'top-bar-menu',
 								'menu_class'      => 'header-menu',
 								'container_class' => 'header-menu-container',
 								'fallback_cb'     => false,

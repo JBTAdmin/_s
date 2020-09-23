@@ -230,6 +230,12 @@ function load_inline_svg( $filename ) {
 					'aria-hidden'  => true,
 					'stroke'       => true,
 					'stroke-width' => true,
+					'stroke-linecap' => true,
+					'stroke-linejoin' => true,
+					'rect'         => true,
+					'circle'       => true,
+					'path'         => true,
+					'polyline'     => true,
 				),
 				'path' => array(
 					'd'              => true,
@@ -244,6 +250,22 @@ function load_inline_svg( $filename ) {
 					'y1' => true,
 					'x2' => true,
 					'y2' => true,
+				),
+				'polyline' => array(
+					'points' => true,
+				),
+				'rect' => array(
+					'x' => true,
+					'y' => true,
+					'height' => true,
+					'width' => true,
+					'rx' => true,
+					'ry' => true,
+				),
+				'circle' => array(
+					'cx' => true,
+					'cy' => true,
+					'r'  => true,
 				),
 			)
 		)

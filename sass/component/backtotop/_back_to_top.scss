@@ -23,8 +23,8 @@
 	margin: 0 3em 3em 0;
 	border-radius: 50%;
 	padding: .25em;
-	width: 80px;
-	height: 80px;
+	width: 60px;
+	height: 60px;
 	background-color: #F8F8F8;
 
 	&.show {
@@ -38,18 +38,16 @@
 	}
 
 	svg {
-		fill: #000;
+		//fill: #000;
 		width: 24px;
-		height: 12px;
+		height: 24px;
 	}
 
-	&:hover {
-		background-color: #E8E8E8;
-
-		svg {
-			fill: #000000;
-		}
-	}
+	//&:hover {
+	//	svg {
+	//		fill: #000000;
+	//	}
+	//}
 }
 
 // Text meant only for screen readers.
