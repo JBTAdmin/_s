@@ -16,7 +16,7 @@ if ( ! function_exists( 'aaurora_top_bar_layout' ) ) {
 
 	function aaurora_top_bar_layout() {
 
-		// Return if no top bar
+		// Return if no top bar.
 		if ( 'disabled' === get_theme_mod( 'top_bar_layout_setting', 'disabled' ) ) {
 			return;
 		}
@@ -37,10 +37,8 @@ if ( ! function_exists( 'aaurora_top_bar_layout' ) ) {
 						);
 						?>
 					</nav><!-- #top-bar-navigation -->
-
-					
 					<?php
-					// Social Icons
+					// Social Icons.
 					aaurora_social_media( 'top-bar-social' );
 					?>
 				</div>
@@ -60,7 +58,7 @@ if ( ! function_exists( 'aaurora_header_branding_layout' ) ) {
 
 	function aaurora_header_branding_layout() {
 
-		// Return if no header branding bar
+		// Return if no header branding bar.
 		if ( true != get_theme_mod( 'aaurora_site_branding', true ) ) {
 			return;
 		}
@@ -68,28 +66,28 @@ if ( ! function_exists( 'aaurora_header_branding_layout' ) ) {
 		<div class="header-menu-bar">
 			<div class="wrap">
 				<div class="header-container <?php echo esc_attr( get_theme_mod( 'header_layout_setting', 'flex-dir-row-reverse' ) ); ?>">
-				<?php
-				aaurora_site_branding( 'left' );
-				?>
-				<div class="main-header">
-					<nav id="site-navigation" class="main-navigation">
-						<div class="menu-btn">
-							<div class="menu-btn__burger"></div>
-						</div>
-						<?php
-						wp_nav_menu(
-							array(
-								'theme_location'  => 'menu-1',
-								'menu_id'         => 'primary-menu',
-								'menu_class'      => 'header-menu',
-								'container_class' => 'header-menu-container',
-								'fallback_cb'     => false,
-							)
-						);
-						aaurora_hamburger_menu();
-						?>
-					</nav>
-				</div>
+					<?php
+					aaurora_site_branding( 'left' );
+					?>
+					<div class="main-header">
+						<nav id="site-navigation" class="main-navigation">
+							<div class="menu-btn">
+								<div class="menu-btn__burger"></div>
+							</div>
+							<?php
+							wp_nav_menu(
+								array(
+									'theme_location'  => 'menu-1',
+									'menu_id'         => 'primary-menu',
+									'menu_class'      => 'header-menu',
+									'container_class' => 'header-menu-container',
+									'fallback_cb'     => false,
+								)
+							);
+							aaurora_hamburger_menu();
+							?>
+						</nav>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -110,8 +108,6 @@ if ( ! function_exists( 'aaurora_header_main_menu_layout' ) ) {
 			return;
 		}
 		?>
-		
-		
 		<?php
 	}
 
@@ -126,26 +122,26 @@ if ( ! function_exists( 'aaurora_site_branding' ) ) :
 	function aaurora_site_branding( $location ) {
 		?>
 		<div class="site-branding">
-				<?php
-				the_custom_logo();
+			<?php
+			the_custom_logo();
 
-				if ( ! get_theme_mod( 'custom_logo' ) ) :
-					?>
-					<div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"
-											   rel="home"><?php bloginfo( 'name' ); ?></a></div>
-					<?php
-					$aaurora_description = get_bloginfo( 'description', 'display' );
-					if ( $aaurora_description || is_customize_preview() ) :
-						?>
-						<p class="site-description">
-							<?php
-							echo $aaurora_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped.
-							?>
-						</p>
-						<?php
-					endif;
-				endif;
+			if ( ! get_theme_mod( 'custom_logo' ) ) :
 				?>
+				<div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"
+										rel="home"><?php bloginfo( 'name' ); ?></a></div>
+				<?php
+				$aaurora_description = get_bloginfo( 'description', 'display' );
+				if ( $aaurora_description || is_customize_preview() ) :
+					?>
+					<p class="site-description">
+						<?php
+						echo $aaurora_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped.
+						?>
+					</p>
+					<?php
+				endif;
+			endif;
+			?>
 		</div>
 		<?php
 	}

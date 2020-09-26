@@ -1,4 +1,13 @@
 <?php
+/**
+ * Footer 3 Layout elements.
+ *
+ * @package Aaurora
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
 
 $site_info_text_left  = get_theme_mod( 'footer_copyright', 'Powered by <a href="https://www.wordpress.org">WordPress</a>' );
 $site_info_text_right = 'Crafted with &#10084; by <a href="https:ipoweruser.com">iPoweruser</a> Team';
@@ -29,7 +38,6 @@ $site_info_text_right = 'Crafted with &#10084; by <a href="https:ipoweruser.com"
 					</div>
 				</div>
 			<?php endif; ?>
-			
 			<?php if ( has_nav_menu( 'footer-2' ) ) : ?>
 				<div class="footer-sidebar-3-wrapper">
 					<div class="sidebar footer-sidebar-2-container">
@@ -45,7 +53,6 @@ $site_info_text_right = 'Crafted with &#10084; by <a href="https:ipoweruser.com"
 					</div>
 				</div>
 			<?php endif; ?>
-			
 			<?php if ( has_nav_menu( 'footer-3' ) ) : ?>
 				<div class="footer-sidebar-4-wrapper">
 					<div class="sidebar footer-sidebar-3-container">
