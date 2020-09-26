@@ -13,18 +13,18 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Top bar.
  */
 if ( ! function_exists( 'aaurora_top_bar_layout' ) ) {
-	
+
 	function aaurora_top_bar_layout() {
-		
+
 		// Return if no top bar
 		if ( 'disabled' === get_theme_mod( 'top_bar_layout_setting', 'disabled' ) ) {
 			return;
 		}
 		?>
-        <div id="top-bar" class="top-menu aaurora-top-bar <?php get_theme_mod( 'top_bar_layout_setting' ); ?>">
-            <div class="wrap">
-                <div class="header-top-bar">
-                    <nav id="top-bar-navigation" class="secondary-navigation">
+		<div id="top-bar" class="top-menu aaurora-top-bar <?php get_theme_mod( 'top_bar_layout_setting' ); ?>">
+			<div class="wrap">
+				<div class="header-top-bar">
+					<nav id="top-bar-navigation" class="secondary-navigation">
 						<?php
 						wp_nav_menu(
 							array(
@@ -36,47 +36,46 @@ if ( ! function_exists( 'aaurora_top_bar_layout' ) ) {
 							)
 						);
 						?>
-                    </nav><!-- #top-bar-navigation -->
+					</nav><!-- #top-bar-navigation -->
 
-                    
-                    <?php
-                    // Social Icons
-                    aaurora_social_media( 'top-bar-social' );
-                    ?>
-                </div>
-            </div>
-        </div>
+					
+					<?php
+					// Social Icons
+					aaurora_social_media( 'top-bar-social' );
+					?>
+				</div>
+			</div>
+		</div>
 		<?php
 	}
-	
+
 	add_action( 'aaurora_header_before', 'aaurora_top_bar_layout' );
-	
+
 }
 
 /**
  * Header Branding.
- *
  */
 if ( ! function_exists( 'aaurora_header_branding_layout' ) ) {
-	
+
 	function aaurora_header_branding_layout() {
-		
+
 		// Return if no header branding bar
 		if ( true != get_theme_mod( 'aaurora_site_branding', true ) ) {
 			return;
 		}
 		?>
-        <div class="header-menu-bar">
-            <div class="wrap">
-                <div class="header-container <?php echo esc_attr( get_theme_mod('header_layout_setting', 'flex-dir-row-reverse') ) ?>">
+		<div class="header-menu-bar">
+			<div class="wrap">
+				<div class="header-container <?php echo esc_attr( get_theme_mod( 'header_layout_setting', 'flex-dir-row-reverse' ) ); ?>">
 				<?php
 				aaurora_site_branding( 'left' );
 				?>
-                <div class="main-header">
-                    <nav id="site-navigation" class="main-navigation">
-                        <div class="menu-btn">
-                            <div class="menu-btn__burger"></div>
-                        </div>
+				<div class="main-header">
+					<nav id="site-navigation" class="main-navigation">
+						<div class="menu-btn">
+							<div class="menu-btn__burger"></div>
+						</div>
 						<?php
 						wp_nav_menu(
 							array(
@@ -89,25 +88,24 @@ if ( ! function_exists( 'aaurora_header_branding_layout' ) ) {
 						);
 						aaurora_hamburger_menu();
 						?>
-                    </nav>
-                </div>
-                </div>
-            </div>
-        </div>
+					</nav>
+				</div>
+				</div>
+			</div>
+		</div>
 		<?php
 	}
-	
+
 	add_action( 'aaurora_header', 'aaurora_header_branding_layout' );
 }
 
 /**
  * Header Main Menu.
- *
  */
 if ( ! function_exists( 'aaurora_header_main_menu_layout' ) ) {
-	
+
 	function aaurora_header_main_menu_layout() {
-		
+
 		if ( true != get_theme_mod( 'aaurora_header_main_menu_layout', true ) ) {
 			return;
 		}
@@ -116,7 +114,7 @@ if ( ! function_exists( 'aaurora_header_main_menu_layout' ) ) {
 		
 		<?php
 	}
-	
+
 	add_action( 'aaurora_header_after', 'aaurora_header_main_menu_layout' );
 }
 
@@ -127,28 +125,28 @@ if ( ! function_exists( 'aaurora_site_branding' ) ) :
 	 */
 	function aaurora_site_branding( $location ) {
 		?>
-        <div class="site-branding">
+		<div class="site-branding">
 				<?php
 				the_custom_logo();
-				
+
 				if ( ! get_theme_mod( 'custom_logo' ) ) :
 					?>
-                    <div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"
-                                               rel="home"><?php bloginfo( 'name' ); ?></a></div>
+					<div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"
+											   rel="home"><?php bloginfo( 'name' ); ?></a></div>
 					<?php
 					$aaurora_description = get_bloginfo( 'description', 'display' );
 					if ( $aaurora_description || is_customize_preview() ) :
 						?>
-                        <p class="site-description">
+						<p class="site-description">
 							<?php
 							echo $aaurora_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped.
 							?>
-                        </p>
-					<?php
+						</p>
+						<?php
 					endif;
 				endif;
 				?>
-        </div>
+		</div>
 		<?php
 	}
 endif;
@@ -159,8 +157,8 @@ if ( ! function_exists( 'aaurora_main_menu' ) ) :
 	 */
 	function aaurora_main_menu( $menu_location ) {
 		?>
-        <div class="main-header">
-            <nav id="site-navigation" class="main-navigation">
+		<div class="main-header">
+			<nav id="site-navigation" class="main-navigation">
 				<?php
 				wp_nav_menu(
 					array(
@@ -172,8 +170,8 @@ if ( ! function_exists( 'aaurora_main_menu' ) ) :
 					)
 				);
 				?>
-            </nav>
-        </div>
+			</nav>
+		</div>
 		<?php
 	}
 endif;
@@ -183,15 +181,17 @@ if ( ! function_exists( 'aaurora_hamburger_menu' ) ) :
 	 * Displays Hamburger Menu.
 	 */
 	function aaurora_hamburger_menu() {
-		if ( get_theme_mod( 'sidebar_listing', 'right' ) !== 'disable' ) : ?>
-            <div class="hamburger-menu">
-                <button class="toggle sidebar-open desktop-sidebar-toggle" data-toggle-target=".sidebar-modal"
-                        data-toggle-body-class="showing-sidebar-modal" aria-expanded="false">
+		if ( get_theme_mod( 'sidebar_listing', 'right' ) !== 'disable' ) :
+			?>
+			<div class="hamburger-menu">
+				<button class="toggle sidebar-open desktop-sidebar-toggle" data-toggle-target=".sidebar-modal"
+						data-toggle-body-class="showing-sidebar-modal" aria-expanded="false">
 									<span class="toggle-inner">
 										<?php load_inline_svg( 'hamburger.svg' ); ?>
 									</span>
-                </button>
-            </div>
-		<?php endif;
+				</button>
+			</div>
+			<?php
+		endif;
 	}
 endif;

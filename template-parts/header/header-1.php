@@ -2,13 +2,13 @@
 	<div class="main-header">
 		<div class="site-branding">
 			<?php
-			
+
 			the_custom_logo();
-			
+
 			if ( ! get_theme_mod( 'custom_logo' ) ) :
 				?>
 				<div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"
-				                           rel="home"><?php bloginfo( 'name' ); ?></a></div>
+										   rel="home"><?php bloginfo( 'name' ); ?></a></div>
 				<?php
 				$aaurora_description = get_bloginfo( 'description', 'display' );
 				if ( $aaurora_description || is_customize_preview() ) :
@@ -18,7 +18,7 @@
 						echo $aaurora_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped.
 						?>
 					</p>
-				<?php
+					<?php
 				endif;
 			endif;
 			?>
