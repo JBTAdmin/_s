@@ -9,31 +9,47 @@
 
 ?>
 <div class="article-container">
-    <article id="post-<?php the_ID(); ?>" <?php post_class( 'blog-post-article-3' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<div class="entry-header">
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+	</div><!-- .entry-header -->
 
-        <div  class="blog-type-list" style="background-image:url('<?php echo get_the_post_thumbnail_url(  get_the_ID(),'full' ); ?>')">
-        </div>
-        <a href=" <?php echo esc_url( get_permalink() ) ?>" rel="bookmark"></a>
-        <div class="blog-type-list-content">
-            <!--            todo class names proper-->
-            <div class="post-date">
-                <span class="post-date-day"><?php echo get_the_date( 'd' ) ?></span>
-                <span class="post-date-month"><?php echo get_the_date( 'F' ) ?></span>
-            </div>
-            <div class="entry-header">
-				<?php
-				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-				?>
-                <div class="blog-list-content-meta-info">
-					<?php
-					aaurora_meta_category_list();
-					?>
-                </div><?php
-				//				load_inline_svg('right-arrow.svg');
-				?>
-            </div><!-- .entry-header -->
-        </div>
+	<?php aaurora_post_thumbnail(); ?>
 
+	<div class="entry-content">
+		<?php
+		the_content();
 
-    </article><!-- #post-<?php the_ID(); ?> -->
+		wp_link_pages(
+			array(
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'aaurora' ),
+				'after'  => '</div>',
+			)
+		);
+		?>
+	</div><!-- .entry-content -->
+
+	<?php if ( get_edit_post_link() ) : ?>
+		<footer class="entry-footer">
+			<?php
+			edit_post_link(
+				sprintf(
+					wp_kses(
+						/* translators: %s: Name of current post. Only visible to screen readers */
+						__( 'Edit <span class="screen-reader-text">%s</span>', 'aaurora' ),
+						array(
+							'span' => array(
+								'class' => array(),
+							),
+						)
+					),
+					wp_kses_post( get_the_title() )
+				),
+				'<span class="edit-link">',
+				'</span>'
+			);
+			?>
+		</footer><!-- .entry-footer -->
+	<?php endif; ?>
+</article><!-- #post-<?php the_ID(); ?> -->
 </div>
