@@ -694,9 +694,10 @@ select {
   padding: 0; }
 
 /* Make sure logo link wraps around logo image. */
-.custom-logo-link {
+.custom-logo-link img {
   display: inline-block;
-  max-width: 12rem; }
+  max-width: 12rem;
+  vertical-align: middle; }
 
 /* Captions
 --------------------------------------------- */
@@ -1117,6 +1118,9 @@ li > ul.sub-menu {
 --------------------------------------------- */
 .aaurora-top-bar .header-menu {
   font-size: 1.4rem; }
+
+.aaurora-top-bar {
+  line-height: 3rem; }
 
 .header-top-bar {
   display: flex;

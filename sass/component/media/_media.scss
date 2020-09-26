@@ -8,7 +8,9 @@
 }
 
 /* Make sure logo link wraps around logo image. */
-.custom-logo-link {
+// todo why there are so many css for custom-logo-link
+.custom-logo-link img{
   display: inline-block;
   max-width: 12rem;
+  vertical-align: middle;
 }
