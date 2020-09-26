@@ -50,11 +50,11 @@ if ( ! function_exists( 'aaurora_setup' ) ) :
 		// This theme uses wp_nav_menu() in two location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', 'aaurora' ),
+				'menu-1'       => esc_html__( 'Primary', 'aaurora' ),
 				'top-bar-menu' => esc_html__( 'Top Bar', 'aaurora' ),
-				'footer-1' => esc_html__( 'Footer Menu 1', 'aaurora' ),
-				'footer-2' => esc_html__( 'Footer Menu 2', 'aaurora' ),
-				'footer-3' => esc_html__( 'Footer Menu 3', 'aaurora' ),
+				'footer-1'     => esc_html__( 'Footer Menu 1', 'aaurora' ),
+				'footer-2'     => esc_html__( 'Footer Menu 2', 'aaurora' ),
+				'footer-3'     => esc_html__( 'Footer Menu 3', 'aaurora' ),
 			)
 		);
 
@@ -141,7 +141,7 @@ function aaurora_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
-	
+
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Sidebar Left', 'aaurora' ),
@@ -153,7 +153,7 @@ function aaurora_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
-	
+
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Sidebar Alt', 'aaurora' ),
@@ -165,7 +165,7 @@ function aaurora_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
-	
+
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Footer Column 1', 'aaurora' ),
@@ -177,7 +177,7 @@ function aaurora_widgets_init() {
 			'after_title'   => '</span></h3>',
 		)
 	);
-	
+
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Footer Column 2', 'aaurora' ),
@@ -189,7 +189,7 @@ function aaurora_widgets_init() {
 			'after_title'   => '</span></h3>',
 		)
 	);
-	
+
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Footer Column 3', 'aaurora' ),
@@ -201,7 +201,7 @@ function aaurora_widgets_init() {
 			'after_title'   => '</span></h3>',
 		)
 	);
-	
+
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Footer Column 4', 'aaurora' ),
@@ -342,4 +342,4 @@ function post_nav() {
 
 
 
-//todo back to top
+// todo back to top

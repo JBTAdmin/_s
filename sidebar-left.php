@@ -8,9 +8,9 @@
  */
 
 get_theme_mod( 'sidebar_listing', 'right' );
-$option = array("content-only", "sidebar-right");
+$option = array( 'content-only', 'sidebar-right' );
 
-if ( ! is_active_sidebar( 'sidebar-left' ) || in_array(get_theme_mod( 'sidebar_layout_setting', 'content-only' ), $option) ) {
+if ( ! is_active_sidebar( 'sidebar-left' ) || in_array( get_theme_mod( 'sidebar_layout_setting', 'content-only' ), $option ) ) {
 	return;
 }
 ?>

@@ -8,13 +8,13 @@
  */
 
 get_theme_mod( 'sidebar_listing', 'right' );
-$option = array("content-only", "sidebar-left");
-if ( ! is_active_sidebar( 'sidebar-right' ) || in_array(get_theme_mod( 'sidebar_layout_setting', 'content-only' ), $option) ) {
+$option = array( 'content-only', 'sidebar-left' );
+if ( ! is_active_sidebar( 'sidebar-right' ) || in_array( get_theme_mod( 'sidebar_layout_setting', 'content-only' ), $option ) ) {
 	return;
 }
 ?>
 
 <aside id="primary" class="widget-area sidebar-right">
-    <?php dynamic_sidebar( 'sidebar-right' ); ?>
+	<?php dynamic_sidebar( 'sidebar-right' ); ?>
 </aside><!-- #secondary -->
 
