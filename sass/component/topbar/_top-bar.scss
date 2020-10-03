@@ -11,3 +11,29 @@
 	justify-content: space-between;
 	align-items: center;
 }
+
+.top-bar-social{
+	display: flex;
+}
+
+.social-link svg{
+	display: block;
+	width: 3rem;
+	height: 2rem;
+}
+
+.facebook-social-icon {
+	color: #4080FF;
+}
+
+.twitter-social-icon {
+	color: #40bff5;
+}
+
+.instagram-social-icon {
+	color: #c13584;
+}
+
+.linkedin-social-icon {
+	color: #2867B2;
+}

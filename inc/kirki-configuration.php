@@ -64,16 +64,16 @@ Kirki::add_field(
 		'label'       => esc_attr__( 'Main Container Padding (px)', 'aaurora' ),
 		'description' => '',
 		'section'     => 'padding_margin',
-		'default'     => [
+		'default'     => array(
 			'padding-top'    => '3rem',
 			'padding-bottom' => '3rem',
 			'padding-left'   => '1vh',
 			'padding-right'  => '1vh',
-		],
+		),
 		'transport'   => 'auto',
 		'output'      => array(
 			array(
-				'element'  => '.main-container',
+				'element' => '.main-container',
 			),
 		),
 	)
@@ -88,67 +88,21 @@ Kirki::add_field(
 		'label'       => esc_attr__( 'Main Container Margin (px)', 'aaurora' ),
 		'description' => '',
 		'section'     => 'padding_margin',
-		'default'     => [
+		'default'     => array(
 			'margin-top'    => '3rem',
 			'margin-bottom' => '3rem',
 			'margin-left'   => '1vh',
 			'margin-right'  => '1vh',
-		],
+		),
 		'transport'   => 'auto',
 		'output'      => array(
 			array(
-				'element'  => '.main-container',
+				'element' => '.main-container',
 			),
 		),
 	)
 );
 
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
-		'type'        => 'dimensions',
-		'settings'    => 'sidebar_padding_setting',
-		'label'       => esc_attr__( 'Sidebar Padding (px)', 'aaurora' ),
-		'description' => '',
-		'section'     => 'padding_margin',
-		'default'     => [
-			'padding-top'    => '3rem',
-			'padding-bottom' => '3rem',
-			'padding-left'   => '1vh',
-			'padding-right'  => '1vh',
-		],
-		'transport'   => 'auto',
-		'output'      => array(
-			array(
-				'element'  => 'aside',
-			),
-		),
-	)
-);
-
-
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
-		'type'        => 'dimensions',
-		'settings'    => 'sidebar_margin_setting',
-		'label'       => esc_attr__( 'Sidebar Margin (px)', 'aaurora' ),
-		'description' => '',
-		'section'     => 'padding_margin',
-		'default'     => [
-			'margin-top'    => '3rem',
-			'margin-bottom' => '3rem',
-			'margin-left'   => '1vh',
-			'margin-right'  => '1vh',
-		],
-		'transport'   => 'auto',
-		'output'      => array(
-			array(
-				'element'  => 'aside',
-			),
-		),
-	)
-);
 
 Kirki::add_field(
 	'aaurora_theme_options',
@@ -158,16 +112,16 @@ Kirki::add_field(
 		'label'       => esc_attr__( 'Article Container Padding (px)', 'aaurora' ),
 		'description' => '',
 		'section'     => 'padding_margin',
-		'default'     => [
+		'default'     => array(
 			'padding-top'    => '0',
 			'padding-bottom' => '0',
 			'padding-left'   => '1vh',
 			'padding-right'  => '1vh',
-		],
+		),
 		'transport'   => 'auto',
 		'output'      => array(
 			array(
-				'element'  => '.primary-content',
+				'element' => '.primary-content',
 			),
 		),
 	)
@@ -182,16 +136,63 @@ Kirki::add_field(
 		'label'       => esc_attr__( 'Article Container Margin (px)', 'aaurora' ),
 		'description' => '',
 		'section'     => 'padding_margin',
-		'default'     => [
+		'default'     => array(
 			'margin-top'    => '3rem',
 			'margin-bottom' => '3rem',
 			'margin-left'   => '1vh',
 			'margin-right'  => '1vh',
-		],
+		),
 		'transport'   => 'auto',
 		'output'      => array(
 			array(
-				'element'  => '.primary-content',
+				'element' => '.primary-content',
+			),
+		),
+	)
+);
+
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'        => 'dimensions',
+		'settings'    => 'sidebar_padding_setting',
+		'label'       => esc_attr__( 'Sidebar Padding (px)', 'aaurora' ),
+		'description' => '',
+		'section'     => 'padding_margin',
+		'default'     => array(
+			'padding-top'    => '3rem',
+			'padding-bottom' => '3rem',
+			'padding-left'   => '1vh',
+			'padding-right'  => '1vh',
+		),
+		'transport'   => 'auto',
+		'output'      => array(
+			array(
+				'element' => 'aside',
+			),
+		),
+	)
+);
+
+
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'        => 'dimensions',
+		'settings'    => 'sidebar_margin_setting',
+		'label'       => esc_attr__( 'Sidebar Margin (px)', 'aaurora' ),
+		'description' => '',
+		'section'     => 'padding_margin',
+		'default'     => array(
+			'margin-top'    => '3rem',
+			'margin-bottom' => '3rem',
+			'margin-left'   => '1vh',
+			'margin-right'  => '1vh',
+		),
+		'transport'   => 'auto',
+		'output'      => array(
+			array(
+				'element' => 'aside',
 			),
 		),
 	)
@@ -218,11 +219,11 @@ Kirki::add_field(
 		'description' => '',
 		'section'     => 'general_layout',
 		'default'     => '1150',
-		'choices'     => [
+		'choices'     => array(
 			'min'  => 900,
 			'max'  => 1900,
 			'step' => 10,
-		],
+		),
 		'transport'   => 'auto',
 		'output'      => array(
 			array(
@@ -243,11 +244,11 @@ Kirki::add_field(
 		'description' => '',
 		'section'     => 'general_layout',
 		'default'     => '250',
-		'choices'     => [
+		'choices'     => array(
 			'min'  => 200,
 			'max'  => 500,
 			'step' => 10,
-		],
+		),
 		'transport'   => 'auto',
 		'output'      => array(
 			array(
@@ -260,24 +261,27 @@ Kirki::add_field(
 );
 
 
-Kirki::add_field( 'aaurora_theme_options', array(
-	'type'        => 'select',
-	'settings'    => 'sidebar_layout_setting',
-	'label'       => esc_attr__( 'Select Sidebar Layout', 'aaurora' ),
-	'section'     => 'general_layout',
-	'default'     => 'content-only',
-	'multiple'    => 0,
-	'choices'     => array(
-		'content-only' => esc_attr__( 'Content', 'aaurora' ),
-		'sidebar-right' => esc_attr__( 'Content / Sidebar', 'aaurora' ),
-		'sidebar-left' => esc_attr__( 'Sidebar / Content', 'aaurora' ),
-		'sidebar-both' => esc_attr__( 'Sidebar / Content / Sidebar', 'aaurora' ),
-	),
-	'description'  => esc_attr__( 'Here you can select Top Bar Layout.', 'aaurora' ),
-) );
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'        => 'select',
+		'settings'    => 'sidebar_layout_setting',
+		'label'       => esc_attr__( 'Select Sidebar Layout', 'aaurora' ),
+		'section'     => 'general_layout',
+		'default'     => 'content-only',
+		'multiple'    => 0,
+		'choices'     => array(
+			'content-only'  => esc_attr__( 'Content', 'aaurora' ),
+			'sidebar-right' => esc_attr__( 'Content / Sidebar', 'aaurora' ),
+			'sidebar-left'  => esc_attr__( 'Sidebar / Content', 'aaurora' ),
+			'sidebar-both'  => esc_attr__( 'Sidebar / Content / Sidebar', 'aaurora' ),
+		),
+		'description' => esc_attr__( 'Here you can select Top Bar Layout.', 'aaurora' ),
+	)
+);
 
 
-// SECTION: SOCIAL
+// SECTION: SOCIAL.
 
 Kirki::add_section(
 	'social_media',
@@ -289,46 +293,65 @@ Kirki::add_section(
 	)
 );
 
-Kirki::add_field( 'aaurora_theme_options', [
-	'type'     => 'text',
-	'settings' => 'social_media_fb_url',
-	'label'    => esc_html__( 'Text Control', 'aaurora' ),
-	'section'  => 'social_media',
-	'default'  => esc_html__( '', 'aaurora' ),
-	'priority' => 10,
-] );
 
-Kirki::add_field( 'aaurora_theme_options', [
-	'type'     => 'text',
-	'settings' => 'social_media_tw_url',
-	'label'    => esc_html__( 'Text Control', 'aaurora' ),
-	'section'  => 'social_media',
-	'default'  => esc_html__( '', 'aaurora' ),
-	'priority' => 10,
-] );
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'        => 'toggle',
+		'settings'    => 'top_bar_social_media_button',
+		'label'       => esc_attr__( 'Social Icons', 'aaurora' ),
+		'description' => esc_attr__( 'Disable to hide Social Media Button on Top Bar..', 'aaurora' ),
+		'section'     => 'social_media',
+		'default'     => '1',
+	)
+);
 
-Kirki::add_field( 'aaurora_theme_options', [
-	'type'     => 'text',
-	'settings' => 'social_media_in_url',
-	'label'    => esc_html__( 'Text Control', 'aaurora' ),
-	'section'  => 'social_media',
-	'default'  => esc_html__( '', 'aaurora' ),
-	'priority' => 10,
-] );
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'     => 'text',
+		'settings' => 'social_media_fb_url',
+		'label'    => esc_html__( 'Facebook Url', 'aaurora' ),
+		'section'  => 'social_media',
+		'priority' => 10,
+	)
+);
 
-Kirki::add_field( 'aaurora_theme_options', [
-	'type'     => 'text',
-	'settings' => 'social_media_ln_url',
-	'label'    => esc_html__( 'Text Control', 'aaurora' ),
-	'section'  => 'social_media',
-	'default'  => esc_html__( '', 'aaurora' ),
-	'priority' => 10,
-] );
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'     => 'text',
+		'settings' => 'social_media_tw_url',
+		'label'    => esc_html__( 'Twitter Url', 'aaurora' ),
+		'section'  => 'social_media',
+		'priority' => 10,
+	)
+);
 
-// SECTION END: SOCIAL PROFILE
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'     => 'text',
+		'settings' => 'social_media_in_url',
+		'label'    => esc_html__( 'LinkedIn Url', 'aaurora' ),
+		'section'  => 'social_media',
+		'priority' => 10,
+	)
+);
 
-// SECTION: TOPBAR
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'     => 'text',
+		'settings' => 'social_media_ln_url',
+		'label'    => esc_html__( 'Instagram Url', 'aaurora' ),
+		'section'  => 'social_media',
+		'priority' => 10,
+	)
+);
+// SECTION END: SOCIAL PROFILE.
 
+// SECTION: TOP BAR.
 Kirki::add_section(
 	'top_bar',
 	array(
@@ -339,22 +362,23 @@ Kirki::add_section(
 	)
 );
 
-
-Kirki::add_field( 'aaurora_theme_options', array(
-	'type'        => 'select',
-	'settings'    => 'top_bar_layout_setting',
-	'label'       => esc_attr__( 'Select Top bar Layout', 'aaurora' ),
-	'section'     => 'top_bar',
-	'default'     => 'disabled',
-	'multiple'    => 0,
-	'choices'     => array(
-		'disabled' => esc_attr__( 'Disabled', 'aaurora' ),
-		'menu-left' => esc_attr__( 'Menu Left, Social Icon Right', 'aaurora' ),
-		'menu-right' => esc_attr__( 'Social Icon Right, Menu Right', 'aaurora' ),
-	),
-	'description'  => esc_attr__( 'Here you can select Top Bar Layout.', 'aaurora' ),
-) );
-
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'        => 'select',
+		'settings'    => 'top_bar_layout_setting',
+		'label'       => esc_attr__( 'Select Top bar Layout', 'aaurora' ),
+		'section'     => 'top_bar',
+		'default'     => 'disabled',
+		'multiple'    => 0,
+		'choices'     => array(
+			'disabled'   => esc_attr__( 'Disabled', 'aaurora' ),
+			'menu-left'  => esc_attr__( 'Menu Left, Social Icon Right', 'aaurora' ),
+			'menu-right' => esc_attr__( 'Social Icon Right, Menu Right', 'aaurora' ),
+		),
+		'description' => esc_attr__( 'Here you can select Top Bar Layout.', 'aaurora' ),
+	)
+);
 
 Kirki::add_field(
 	'aaurora_theme_options',
@@ -365,20 +389,14 @@ Kirki::add_field(
 		'description' => esc_attr__( 'Change Top Bar color settings.', 'aaurora' ),
 		'section'     => 'top_bar',
 		'transport'   => 'auto',
-//		'output'      => [
-//			[
-//				'element' => 'body',
-//			],
-//		],
-		'output'    => array(
+		'output'      => array(
 			array(
 				'element'  => '.aaurora-top-bar',
-				'property' => 'color'
+				'property' => 'color',
 			),
 		),
 	)
 );
-
 
 Kirki::add_field(
 	'aaurora_theme_options',
@@ -390,32 +408,13 @@ Kirki::add_field(
 		'section'     => 'top_bar',
 		'default'     => '#2b2d32',
 		'transport'   => 'auto',
-		'output' => array(
+		'output'      => array(
 			array(
-				'element'  => '.aaurora-top-bar',
-//				'property' => 'background-color',
+				'element' => '.aaurora-top-bar',
 			),
 		),
 	)
 );
-
-//Kirki::add_field(
-//	'aaurora_theme_options',
-//	array(
-//		'type'        => 'typography',
-//		'settings'    => 'top_bar_font',
-//		'label'       => esc_attr__( 'Top Bar Font Size', 'aaurora' ),
-//		'section'     => 'top_bar',
-//		'description' => esc_attr__( 'Font used in Single Post Header .', 'aaurora' ),
-////		'output'      => array(
-////			array(
-////				'element' => '.aaurora-top-bar',
-////				'property' => 'font-family',
-////			),
-////		),
-//	)
-//);
-
 
 Kirki::add_field(
 	'aaurora_theme_options',
@@ -431,23 +430,17 @@ Kirki::add_field(
 		'description' => esc_attr__( 'Font used in Single Post Header .', 'aaurora' ),
 		'output'      => array(
 			array(
-				'choice'   => 'font-size',
-				'element'  => '.aaurora-top-bar .header-menu',
-//				'property' => '--font_size_post-title_mobile',
+				'choice'  => 'font-size',
+				'element' => '.aaurora-top-bar .header-menu',
 			),
 			array(
-				'choice'   => 'font-family',
-				'element'  => '.aaurora-top-bar',
+				'choice'  => 'font-family',
+				'element' => '.aaurora-top-bar',
 			),
 		),
 	)
 );
-
-
-// viveka
-
-
-//General Layout
+// General Layout.
 
 // SECTION: General.
 Kirki::add_section(
@@ -527,22 +520,45 @@ Kirki::add_section(
 );
 
 
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'        => 'select',
+		'settings'    => 'header_layout_setting',
+		'label'       => esc_attr__( 'Select Header Layout', 'aaurora' ),
+		'section'     => 'header',
+		'default'     => '',
+		'multiple'    => 0,
+		'choices'     => array(
+			''                        => esc_attr__( 'Logo Left, Menu Right', 'aaurora' ),
+			'flex-dir-row-reverse'    => esc_attr__( 'Logo Right, Menu Left', 'aaurora' ),
+			'flex-dir-column'         => esc_attr__( 'Logo Top, Menu Below', 'aaurora' ),
+			'flex-dir-column-reverse' => esc_attr__( 'Logo Below, Menu Top', 'aaurora' ),
+		),
+		'description' => esc_attr__( 'Here you can select which Header layout will be used.', 'aaurora' ),
+	)
+);
 
-Kirki::add_field( 'aaurora_theme_options', array(
-	'type'        => 'select',
-	'settings'    => 'header_layout_setting',
-	'label'       => esc_attr__( 'Select Header Layout', 'aaurora' ),
-	'section'     => 'header',
-	'default'     => '',
-	'multiple'    => 0,
-	'choices'     => array(
-		'' => esc_attr__( 'Logo Left, Menu Right', 'aaurora' ),
-		'flex-dir-row-reverse' => esc_attr__( 'Logo Right, Menu Left', 'aaurora' ),
-		'flex-dir-column' => esc_attr__( 'Logo Top, Menu Below', 'aaurora' ),
-		'flex-dir-column-reverse' => esc_attr__( 'Logo Below, Menu Top', 'aaurora' ),
-	),
-	'description'  => esc_attr__( 'Here you can select which Header layout will be used.', 'aaurora' ),
-) );
+
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'        => 'typography',
+		'settings'    => 'header_menu_font',
+		'label'       => esc_attr__( 'Header Menu Size', 'aaurora' ),
+		'section'     => 'header',
+		'default'     => array(
+			'font-family' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
+			'font-size'   => '1.6rem',
+		),
+		'description' => esc_attr__( 'Font used in Single Post Header .', 'aaurora' ),
+		'output'      => array(
+			array(
+				'element' => '.main-navigation',
+			),
+		),
+	)
+);
 
 Kirki::add_field(
 	'aaurora_theme_options',
@@ -660,6 +676,29 @@ Kirki::add_field(
 	)
 );
 
+
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'        => 'radio-buttonset',
+		'settings'    => 'main_menu_font_style',
+		'label'       => esc_attr__( 'Main menu font style', 'aaurora' ),
+		'section'     => 'header',
+		'default'     => 'normal',
+		'choices'     => array(
+			'normal' => esc_attr__( 'Regular', 'aaurora' ),
+			'italic' => esc_attr__( 'Italic', 'aaurora' ),
+		),
+		'description' => '',
+		'output'      => array(
+			array(
+				'element'  => '.header-menu',
+				'property' => 'font-style',
+			),
+		),
+	)
+);
+
 Kirki::add_field(
 	'aaurora_theme_options',
 	array(
@@ -740,12 +779,9 @@ Kirki::add_field(
 		'default'     => 'Powered by <a href="https://www.wordpress.org">WordPress</a> <br />All rights reserved',
 	)
 );
-
-
 // END SECTION: Footer.
 
-// Section: Blog Section
-
+// SECTION: Blog Section.
 Kirki::add_section(
 	'blog_layout',
 	array(
@@ -756,23 +792,25 @@ Kirki::add_section(
 	)
 );
 
-Kirki::add_field( 'aaurora_theme_options', array(
-	'type'        => 'select',
-	'settings'    => 'blog_layout_setting',
-	'label'       => esc_attr__( 'Select Blog Layout', 'aaurora' ),
-	'section'     => 'blog_layout',
-	'default'     => 'layout-2',
-	'multiple'    => 0,
-	'choices'     => array(
-		'layout-1' => esc_attr__( 'Layout 1', 'aaurora' ),
-		'layout-2' => esc_attr__( 'Layout 2', 'aaurora' ),
-		'layout-3' => esc_attr__( 'Layout 3', 'aaurora' )
-		
-	),
-	'description'  => esc_attr__( 'Here you can select which layout will be used to display the blog posts on Home or Index pages..', 'aaurora' ),
-) );
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'        => 'select',
+		'settings'    => 'blog_layout_setting',
+		'label'       => esc_attr__( 'Select Blog Layout', 'aaurora' ),
+		'section'     => 'blog_layout',
+		'default'     => 'layout-2',
+		'multiple'    => 0,
+		'choices'     => array(
+			'layout-1' => esc_attr__( 'Layout 1', 'aaurora' ),
+			'layout-2' => esc_attr__( 'Layout 2', 'aaurora' ),
+			'layout-3' => esc_attr__( 'Layout 3', 'aaurora' ),
 
-// END Section: Blog Section
+		),
+		'description' => esc_attr__( 'Here you can select which layout will be used to display the blog posts on Home or Index pages..', 'aaurora' ),
+	)
+);
+// END Section: Blog Section.
 
 // SECTION: Blog Single Post.
 Kirki::add_section(
@@ -804,8 +842,8 @@ Kirki::add_field(
 				'property' => '--font_size_post-title_mobile',
 			),
 			array(
-				'choice'   => 'font-family',
-				'element'  => 'h1.entry-title',
+				'choice'  => 'font-family',
+				'element' => 'h1.entry-title',
 			),
 		),
 	)
@@ -882,7 +920,7 @@ Kirki::add_field(
 		'default'     => 'right',
 		'choices'     => array(
 			'right'   => esc_attr__( 'Right', 'aaurora' ),
-			'left'   => esc_attr__( 'Left', 'aaurora' ),
+			'left'    => esc_attr__( 'Left', 'aaurora' ),
 			'disable' => esc_attr__( 'Disable', 'aaurora' ),
 		),
 		'description' => '',

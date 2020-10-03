@@ -47,11 +47,7 @@ $menu_class .= ' ' . get_theme_mod( 'main_menu_arrow_style', 'noarrow' );
 	echo esc_attr( $menu_class );
 	?>
 	">
-  
 		<?php aaurora_header_before(); ?>
-		
 		<?php aaurora_header(); ?>
-		
 		<?php aaurora_header_after(); ?>
-  
 	</header><!-- #masthead -->

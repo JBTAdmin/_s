@@ -1,10 +1,10 @@
 .header-menu {
   //color: rgb(51, 51, 51);
-  font-size: 1.4rem;
+  //font-size: 1.4rem;
   //letter-spacing: 0.2rem;
   //line-height: 1;
   //text-transform: uppercase;
-  font-weight: 500;
+  //font-weight: 500;
 }
 
 .aligned-menu-center {
@@ -161,7 +161,7 @@ li > ul.sub-menu{
   .header-menu > li {
     display: flex;
     padding: 0 1.3vw;
-    font-style: italic;
+    //font-style: italic;
     //line-height: 8rem;
   }
 
@@ -177,7 +177,7 @@ li > ul.sub-menu{
     box-shadow: 0 7px 32px 0 rgba(0, 0, 0, 0.12);
     width: 30rem;
     transition: opacity 0.4s ease-in-out;
-    border: 1px solid #eee;
+    //border: 1px solid #eee;
     background-color: #fff;
     color: #000;
     opacity: 0;
@@ -214,11 +214,11 @@ li > ul.sub-menu{
     //padding: 1.1rem 1.3vw;
   }
 
-  ul.sub-menu li:first-child {
+ nav .sub-menu li:first-child {
     padding-top: 40px;
   }
 
-  ul.sub-menu li:last-child {
+ nav .sub-menu li:last-child {
     padding-bottom: 40px;
   }
 

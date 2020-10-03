@@ -7,7 +7,7 @@
 .sidebar-right, .sidebar-left{
   ul, ol {
     li {
-      padding: 0 0 5px;
+      //padding: 0 0 5px;
     }
   }
 }
@@ -15,6 +15,7 @@
 aside{
   //border: 3px solid #f1edeb;
   padding: 20px;
+  color: #333;
 }
 
 body.admin-bar aside {
@@ -22,21 +23,39 @@ body.admin-bar aside {
 }
 
 // For Sidebar Categories
-.widget {
-  margin-bottom: 5rem;
-  //margin-right: auto;
-  //margin-left: auto;
-  //max-width: 85%;
+
+.sidebar-right, sidebar-left{
+  & .widget {
+    margin-bottom: 5rem;
+    //margin-right: auto;
+    //margin-left: auto;
+    //max-width: 85%;
+
+    border: 1px solid #dadce0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 10px;
+
+  }
+
+  & .widget-title {
+    color: #6d6d6d;
+    font-size: 1.8rem;
+    font-weight: 700;
+    //margin-bottom: 1.5rem;
+    //padding-bottom: 0.4rem;
+
+    border-radius: 4px;
+    letter-spacing: .8px;
+    text-transform: capitalize;
+    background-color: #e6f4ea;
+    color: #0d652d ;
+    //border-bottom: 2px solid $theme__color;
+  }
 }
 
-.widget-title {
-  color: #6A696C;
-  font-size: 1.8rem;
-  font-weight: 500;
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.4rem;
-  //border-bottom: 2px solid $theme__color;
-}
 
 .widget ul {
   list-style: none;

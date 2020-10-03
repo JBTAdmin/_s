@@ -10,8 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'blog-post-article-3' ); ?>>
-	<div class="blog-type-list"
-		 style="background-image:url('<?php echo get_the_post_thumbnail_url( get_the_ID(), 'full' ); ?>')">
+	<div class="blog-type-list" style="background-image:url('<?php echo esc_url( get_the_post_thumbnail_url( get_the_ID(), 'full' ) ); ?>')">
 	</div>
 	<a href=" <?php echo esc_url( get_permalink() ); ?>" rel="bookmark"></a>
 	<div class="blog-type-list-content">
@@ -29,9 +28,6 @@
 				aaurora_meta_category_list();
 				?>
 			</div>
-			<?php
-			// load_inline_svg('right-arrow.svg');
-			?>
 		</div><!-- .entry-header -->
 	</div>
 

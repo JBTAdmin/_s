@@ -18,26 +18,26 @@ if ( ! function_exists( 'aaurora_posted_on' ) ) :
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
 		}
-		
+
 		$time_string = sprintf(
 			$time_string,
 			esc_attr( get_the_date( DATE_W3C ) ),
 			esc_html( get_the_date() )
-		// ,
-		// esc_attr( get_the_modified_date( DATE_W3C ) ),
-		// esc_html( get_the_modified_date() )
+			// ,
+			// esc_attr( get_the_modified_date( DATE_W3C ) ),
+			// esc_html( get_the_modified_date() )
 		);
-		
+
 		$posted_on = sprintf(
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
-		
+
 		if ( $date_only ) {
 			return get_the_date( 'j M' );
 		} else {
 			echo '<span class="posted-on">' . $posted_on . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		}
-		
+
 	}
 endif;
 
@@ -49,9 +49,9 @@ if ( ! function_exists( 'aaurora_posted_by' ) ) :
 		$byline = sprintf(
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
-		
+
 		echo '<span class="byline"> ' . $byline . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-		
+
 	}
 endif;
 
@@ -124,41 +124,43 @@ if ( ! function_exists( 'aaurora_post_thumbnail' ) ) :
 		if ( post_password_required() || is_attachment() ) {
 			return;
 		}
-		
+
 		if ( ! has_post_thumbnail() & ! is_singular() ) {
 			?>
-            <a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
-                <div class="no-post-thumbnail">
+			<div class="post-thumbnail-container">
+				<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
+					<div class="no-post-thumbnail">
 
-                    <div class="post-thumbnail-drop-case">
-						<?php
-						if ( ! empty( get_the_title() ) ) {
-							echo esc_html( get_the_title()[0] );
-						}
-						?>
-                    </div>
-                </div><!-- .post-thumbnail -->
-				<?php if ( is_sticky() ) : ?>
-                    <span class="badge">
-					<?php load_inline_svg( 'sticky.svg' ); ?>
+						<div class="post-thumbnail-drop-case">
+							<?php
+							if ( ! empty( get_the_title() ) ) {
+								echo esc_html( get_the_title()[0] );
+							}
+							?>
+						</div>
+					</div><!-- .post-thumbnail -->
+					<?php if ( is_sticky() ) : ?>
+						<span class="badge">
+						<?php load_inline_svg( 'sticky.svg' ); ?>
 				</span>
-				<?php endif; ?>
-                <span class="post-date">
+					<?php endif; ?>
+					<span class="post-date">
 					<?php echo esc_html( $date ); ?>
 				</span>
-            </a>
+				</a>
+			</div>
 			<?php
 			return;
 		}
 		if ( is_singular() ) :
 			?>
 
-            <div class="post-thumbnail">
+			<div class="post-thumbnail">
 				<?php the_post_thumbnail( 'aaurora-blog-single-post-no-sidebar' ); ?>
-            </div><!-- .post-thumbnail -->
+			</div><!-- .post-thumbnail -->
 		<?php else : ?>
-            <div class="post-thumbnail-container">
-                <a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
+			<div class="post-thumbnail-container">
+				<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 					<?php
 					the_post_thumbnail(
 						$size,
@@ -172,16 +174,16 @@ if ( ! function_exists( 'aaurora_post_thumbnail' ) ) :
 					);
 					if ( is_sticky() ) :
 						?>
-                        <span class="badge">
-					<?php load_inline_svg( 'sticky.svg' ); ?>
+						<span class="badge">
+						<?php load_inline_svg( 'sticky.svg' ); ?>
 				</span>
 					<?php endif; ?>
-                    <span class="post-date">
+					<span class="post-date">
 					<?php echo esc_html( $date ); ?>
 				</span>
-                </a>
-            </div>
-		<?php
+				</a>
+			</div>
+			<?php
 		endif; // End is_singular().
 	}
 endif;
@@ -206,38 +208,38 @@ endif;
  * @return void
  */
 function load_inline_svg( $filename ) {
-	
+
 	ob_start();
-	
+
 	locate_template(
 		"assets/images/{$filename}",
 		true,
 		false
 	);
-	
+
 	echo wp_kses(
 		ob_get_clean(),
 		array_merge(
 			wp_kses_allowed_html( 'post' ),
 			array(
-				'svg'  => array(
-					'role'         => true,
-					'width'        => true,
-					'height'       => true,
-					'fill'         => true,
-					'xmlns'        => true,
-					'viewbox'      => true,
-					'aria-hidden'  => true,
-					'stroke'       => true,
-					'stroke-width' => true,
-					'stroke-linecap' => true,
+				'svg'      => array(
+					'role'            => true,
+					'width'           => true,
+					'height'          => true,
+					'fill'            => true,
+					'xmlns'           => true,
+					'viewbox'         => true,
+					'aria-hidden'     => true,
+					'stroke'          => true,
+					'stroke-width'    => true,
+					'stroke-linecap'  => true,
 					'stroke-linejoin' => true,
-					'rect'         => true,
-					'circle'       => true,
-					'path'         => true,
-					'polyline'     => true,
+					'rect'            => true,
+					'circle'          => true,
+					'path'            => true,
+					'polyline'        => true,
 				),
-				'path' => array(
+				'path'     => array(
 					'd'              => true,
 					'fill'           => true,
 					'fill-rule'      => true,
@@ -245,7 +247,7 @@ function load_inline_svg( $filename ) {
 					'stroke-width'   => true,
 					'stroke-linecap' => true,
 				),
-				'line' => array(
+				'line'     => array(
 					'x1' => true,
 					'y1' => true,
 					'x2' => true,
@@ -254,15 +256,15 @@ function load_inline_svg( $filename ) {
 				'polyline' => array(
 					'points' => true,
 				),
-				'rect' => array(
-					'x' => true,
-					'y' => true,
+				'rect'     => array(
+					'x'      => true,
+					'y'      => true,
 					'height' => true,
-					'width' => true,
-					'rx' => true,
-					'ry' => true,
+					'width'  => true,
+					'rx'     => true,
+					'ry'     => true,
 				),
-				'circle' => array(
+				'circle'   => array(
 					'cx' => true,
 					'cy' => true,
 					'r'  => true,
@@ -275,46 +277,45 @@ function load_inline_svg( $filename ) {
 // todo probably this method shold be moved to proper location. And remove unnecessary mapping.
 
 
-// Social Media
 if ( ! function_exists( 'aaurora_social_media' ) ) {
-	
-	function aaurora_social_media( $social_class='' ) {
-		
+	/**
+	 * Social Media.
+	 */
+	function aaurora_social_media( $social_class = '' ) {
+		if ( get_theme_mod( 'top_bar_social_media_button', true ) !== true ) :
+			return;
+		endif;
 		?>
 
-        <div class="<?php echo esc_attr( $social_class ); ?>">
-			
+		<div class="<?php echo esc_attr( $social_class ); ?>">
 			<?php
-
 			if ( get_theme_mod( 'social_media_fb_url', '' ) !== '' ) :
 				?>
-                <a href="<?php echo esc_url( get_theme_mod( 'social_media_fb_url')  ); ?>" target="_blank">
-                    <?php load_inline_svg('facebook.svg') ?>
-                </a>
+				<a class="social-link facebook-social-icon"
+					href="<?php echo esc_url( get_theme_mod( 'social_media_fb_url' ) ); ?>" target="_blank">
+					<?php load_inline_svg( 'facebook.svg' ); ?>
+				</a>
 			<?php endif; ?>
-			
 			<?php if ( get_theme_mod( 'social_media_tw_url', '' ) !== '' ) : ?>
-                <a href="<?php echo esc_url( get_theme_mod( 'social_media_tw_url')  ); ?>" target="_blank">
-	                <?php load_inline_svg('twitter.svg') ?>
-                </a>
+				<a class="social-link twitter-social-icon"
+					href="<?php echo esc_url( get_theme_mod( 'social_media_tw_url' ) ); ?>" target="_blank">
+					<?php load_inline_svg( 'twitter.svg' ); ?>
+				</a>
 			<?php endif; ?>
-			
 			<?php if ( get_theme_mod( 'social_media_in_url', '' ) !== '' ) : ?>
-                <a href="<?php echo esc_url( get_theme_mod( 'social_media_in_url') ); ?>" target="_blank">
-	                <?php load_inline_svg('instagram.svg') ?>
-                </a>
+				<a class="social-link instagram-social-icon"
+					href="<?php echo esc_url( get_theme_mod( 'social_media_in_url' ) ); ?>" target="_blank">
+					<?php load_inline_svg( 'instagram.svg' ); ?>
+				</a>
 			<?php endif; ?>
-			
 			<?php if ( get_theme_mod( 'social_media_ln_url', '' ) !== '' ) : ?>
-                <a href="<?php echo esc_url( get_theme_mod( 'social_media_ln_url') ); ?>" target="_blank">
-	                <?php load_inline_svg('linkedin.svg') ?>
-                </a>
+				<a class="social-link linkedin-social-icon"
+					href="<?php echo esc_url( get_theme_mod( 'social_media_ln_url' ) ); ?>" target="_blank">
+					<?php load_inline_svg( 'linkedin.svg' ); ?>
+				</a>
 			<?php endif; ?>
 
-        </div>
-		
+		</div>
 		<?php
-		
 	}
-	
-} // aaurora_social_media()
+} // aaurora_social_media.

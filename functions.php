@@ -251,7 +251,7 @@ require get_template_directory() . '/inc/theme-hooks.php';
 /*
  * Layout Files for different section.
  */
-require get_template_directory() . '/template-parts/new/header/header.php';
+require get_template_directory() . '/template-parts/header/header.php';
 /**
  * Functions which enhance the theme by hooking into WordPress.
  */
@@ -342,4 +342,4 @@ function post_nav() {
 
 
 
-// todo back to top
+// todo back to top.

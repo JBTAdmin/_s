@@ -13,9 +13,8 @@
 
 <footer class="site-footer">
 	<?php
-		get_template_part( 'template-parts/new/footers/footer', get_theme_mod( 'footer_layout_setting', '3' ), get_post_type() );
+		get_template_part( 'template-parts/footers/footer', get_theme_mod( 'footer_layout_setting', '3' ), get_post_type() );
 	?>
-	
 </footer>
 <?php wp_footer(); ?>
 

@@ -16,6 +16,16 @@ aside.sidebar-alt-aside {
 	font-size: 1.5rem;
 }
 
+.sidebar-alt .widget-title{
+	font-size: 1.9rem;
+	margin-bottom: 1rem;
+	color: #6d6d6d;
+}
+
+aside.sidebar-alt-aside section{
+	padding: 1rem 4rem 1rem;
+}
+
 .site-header,
 .aside-header-container {
 	border-bottom: 1px solid #e9ecef;
@@ -59,7 +69,7 @@ aside.open {
 	top: 0;
 	left: 0;
 	z-index: 9998;
-	background: rgba(0, 0, 0, 0.8);
+	background: rgba(0, 0, 0, 0.4);
 	//background: rgba(255, 255, 255, .55);
 	visibility: hidden;
 	cursor: pointer;
