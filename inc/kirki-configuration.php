@@ -802,7 +802,6 @@ Kirki::add_field(
 		'default'     => 'layout-2',
 		'multiple'    => 0,
 		'choices'     => array(
-			'layout-1' => esc_attr__( 'Layout 1', 'aaurora' ),
 			'layout-2' => esc_attr__( 'Layout 2', 'aaurora' ),
 			'layout-3' => esc_attr__( 'Layout 3', 'aaurora' ),
 
