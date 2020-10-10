@@ -800,7 +800,7 @@ li > ul.sub-menu {
 @media screen and (max-width: 1024px) {
   .sidebar-menu {
     display: block; }
-  .header-menu {
+  .header-menu, .aaurora-top-bar {
     display: none; }
   .menu-btn {
     border: 5px solid #fff;
@@ -1290,6 +1290,16 @@ div[class*="footer-sidebar-"] {
     margin-bottom: 1.5rem; }
   .blog-post-article-2 .no-post-thumbnail {
     height: 18.5rem; }
+
+@media screen and (max-width: 1200px) {
+  .blog-post-article-2 {
+    flex: 1 1 50%;
+    max-width: 50%; } }
+
+@media screen and (max-width: 700px) {
+  .blog-post-article-2 {
+    flex: 1 1 100%;
+    max-width: 100%; } }
 
 .blog-article:hover {
   box-shadow: 0 9px 12px 0 rgba(0, 0, 0, 0.09);
