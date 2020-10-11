@@ -68,7 +68,7 @@ if ( ! function_exists( 'aaurora_header_branding_layout' ) ) {
 		?>
 		<div class="header-menu-bar">
 			<div class="wrap">
-				<div class="header-container <?php echo esc_attr( get_theme_mod( 'header_layout_setting', 'flex-dir-row-reverse' ) ); ?>">
+				<div class="header-container <?php echo esc_attr( get_theme_mod( 'header_layout_setting' ) ); ?>">
 					<?php
 					aaurora_site_branding( 'left' );
 					?>
