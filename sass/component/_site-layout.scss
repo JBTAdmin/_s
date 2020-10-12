@@ -12,7 +12,7 @@ main {
   //max-width: 140rem; // todo need to check if this can be removed as other width is there screen and (min-width: 992px)
 }
 
-aside {
+aside:not(.sidebar-alt) {
   flex: 1 1;
   margin: 6rem auto;
 }
