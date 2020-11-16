@@ -1,0 +1,42 @@
+// TODO NEED TO DIFFERENTIATE BETWEEN BLOG 1 AND BLOG 2 AND PROBABLY BLOG 1 CAN BE DISCARDED.
+
+
+.entry-meta span {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  color: #666;
+  font-weight: 500;
+}
+
+// POST THUMBNAIL
+
+
+.post-thumbnail {
+  margin: 4rem 0;
+}
+
+
+
+
+//todo tags
+.tags-links,
+.tagcloud {
+  margin-top: 3rem;
+  a {
+    background: #eee;
+    //color: #0f0e0e;
+    padding: 5px 10px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    display: inline-block;
+    text-decoration: none;
+    line-height: 20px;
+    vertical-align: middle;
+    border-radius: 0.4rem;
+    font-size: 1.6rem !important;
+  }
+}
+
+
+
+

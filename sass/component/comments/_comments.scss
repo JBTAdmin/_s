@@ -1,0 +1,120 @@
+// TODO NEED TO IDENTIFY WHICH IS USED AND WHICH IS NOT USED.
+
+.comment-list {
+  li {
+    padding: 40px 0px 30px 40px;
+    list-style: none;
+  }
+
+  .avatar {
+    border-radius: 50%;
+    float: left;
+    margin-right: 15px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.comment-content,
+.reply {
+  margin-left: 95px;
+}
+
+.comment-content p {
+  margin-bottom: 1.3rem;
+}
+
+.comment-meta {
+  margin-bottom: 2rem;
+  a {
+    color: #555;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+  }
+}
+
+.comment-form-author,
+.comment-form-email,
+.comment-form-url {
+  width: 33.3%;
+}
+
+.comment-form-email,
+.comment-form-url {
+  padding-left: 1.5rem;
+}
+
+.comment-form .comment-notes,
+.form-submit,
+.comments-area {
+  width: 100%;
+}
+
+.comment-form-comment {
+  order: 2;
+  width: 100%;
+}
+
+.comment-form-cookies-consent {
+  order: 3;
+}
+
+.form-submit {
+  order: 4;
+}
+
+.comment-respond {
+  padding: 0 1.5rem;
+}
+
+.comment-form input[type="text"],
+.comment-form textarea {
+  padding: 20px; // todo probably we can use the default 15px which is inherited
+}
+
+.comment-form-comment textarea {
+  padding: 20px;
+  border: 1px solid #ebebf7;
+  border-radius: 4px;
+  transition: border-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+  line-height: 1.6;
+}
+
+.reply a {
+  text-transform: uppercase;
+  border-bottom: 2px solid $theme__color;
+  color: #222;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 16px 0 6px 0;
+  font-size: 1.6rem;
+}
+
+//TODO SHOULD BE MOVED TO COMMON AREA
+input:focus,
+textarea:focus {
+  border: 2px solid $theme__color;
+}
+
+
+@media screen and (max-width: 700px) {
+  .comment-form-author,
+  .comment-form-email,
+  .comment-form-url {
+    width: 100%;
+    padding-left: 0;
+  }
+}
+
+// TODO yet to use this part in comment section for background color UNUSED
+.full-width {
+  left: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  max-width: 100vw;
+  position: relative;
+  right: 50%;
+  width: 100vw;
+  background: #f9f9f9;
+}

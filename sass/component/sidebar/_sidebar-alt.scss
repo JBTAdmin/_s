@@ -1,0 +1,89 @@
+/**
+ * Sidebar Alt
+ */
+
+aside.sidebar-alt-aside {
+	background: #fff;
+	width: 400px;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	right: 0;
+	overflow: auto;
+	z-index: 9999;
+	transform: translate(110%, 0);
+	transition: transform 0.5s, width 0.5s ease-in-out;
+	font-size: 1.5rem;
+}
+
+.sidebar-alt .widget-title{
+	font-size: 1.9rem;
+	margin-bottom: 1rem;
+	color: #6d6d6d;
+}
+
+aside.sidebar-alt-aside section{
+	padding: 1rem 4rem 1rem;
+}
+
+.site-header,
+.aside-header-container {
+	border-bottom: 1px solid #e9ecef;
+}
+
+@media screen and (max-width: 48rem) {
+	aside {
+		max-width: 32rem;
+		padding: 10px 4px 4px;
+	}
+}
+
+aside.open {
+	transform: translate3D(0, 0, 0); // is it necessary
+	box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+	// TODO need to check if this section is getting copied two times in style.css????
+
+	// New option
+	//box-shadow: 2px 2px 6px #efefef;
+	//border: 1px solid #eee;
+	//border-radius: 1rem;
+}
+
+.aside-header {
+	//padding: 3rem 2rem 2rem 5rem;
+	margin-bottom: 0 !important;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 10rem;
+	.custom-logo {
+		max-width: 20rem;
+		vertical-align: middle;
+	}
+}
+
+.sidebar-overlay {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9998;
+	background: rgba(0, 0, 0, 0.4);
+	//background: rgba(255, 255, 255, .55);
+	visibility: hidden;
+	cursor: pointer;
+	transition: all 0.2s ease-in 0.2s;
+}
+
+.sidebar-overlay.open {
+	visibility: visible;
+}
+
+.sidebar-close-btn {
+	display: flex;
+	display: flex;
+	padding: 1rem;
+	background: rgba(0, 0, 0, 0.05);
+	border-radius: 0.4rem;
+}

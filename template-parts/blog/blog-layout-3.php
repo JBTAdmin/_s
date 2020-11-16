@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying results in search pages
+ * Template part for displaying posts
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -10,7 +10,6 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'blog-post-article-3' ); ?>>
-
 	<div class="blog-type-list" style="background-image:url('<?php echo esc_url( get_the_post_thumbnail_url( get_the_ID(), 'full' ) ); ?>')">
 	</div>
 	<a href=" <?php echo esc_url( get_permalink() ); ?>" rel="bookmark"></a>

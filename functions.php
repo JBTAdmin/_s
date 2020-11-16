@@ -47,10 +47,14 @@ if ( ! function_exists( 'aaurora_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
-		// This theme uses wp_nav_menu() in one location.
+		// This theme uses wp_nav_menu() in two location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', 'aaurora' ),
+				'menu-1'       => esc_html__( 'Primary', 'aaurora' ),
+				'top-bar-menu' => esc_html__( 'Top Bar', 'aaurora' ),
+				'footer-1'     => esc_html__( 'Footer Menu 1', 'aaurora' ),
+				'footer-2'     => esc_html__( 'Footer Menu 2', 'aaurora' ),
+				'footer-3'     => esc_html__( 'Footer Menu 3', 'aaurora' ),
 			)
 		);
 
@@ -128,8 +132,8 @@ add_action( 'after_setup_theme', 'aaurora_content_width', 0 );
 function aaurora_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'aaurora' ),
-			'id'            => 'sidebar-1',
+			'name'          => esc_html__( 'Sidebar Right', 'aaurora' ),
+			'id'            => 'sidebar-right',
 			'description'   => esc_html__( 'Add widgets here.', 'aaurora' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
@@ -138,6 +142,77 @@ function aaurora_widgets_init() {
 		)
 	);
 
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Sidebar Left', 'aaurora' ),
+			'id'            => 'sidebar-left',
+			'description'   => esc_html__( 'Add widgets here.', 'aaurora' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Sidebar Alt', 'aaurora' ),
+			'id'            => 'sidebar-alt',
+			'description'   => esc_html__( 'Add widgets here.', 'aaurora' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer Column 1', 'aaurora' ),
+			'id'            => 'footer-column-1',
+			'description'   => esc_html__( 'Add widgets here.', 'aaurora' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title"><span>',
+			'after_title'   => '</span></h3>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer Column 2', 'aaurora' ),
+			'id'            => 'footer-column-2',
+			'description'   => esc_html__( 'Add widgets here.', 'aaurora' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title"><span>',
+			'after_title'   => '</span></h3>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer Column 3', 'aaurora' ),
+			'id'            => 'footer-column-3',
+			'description'   => esc_html__( 'Add widgets here.', 'aaurora' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title"><span>',
+			'after_title'   => '</span></h3>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer Column 4', 'aaurora' ),
+			'id'            => 'footer-column-4',
+			'description'   => esc_html__( 'Add widgets here.', 'aaurora' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title"><span>',
+			'after_title'   => '</span></h3>',
+		)
+	);
 }
 
 add_action( 'widgets_init', 'aaurora_widgets_init' );
@@ -168,6 +243,15 @@ require get_template_directory() . '/inc/custom-header.php';
  */
 require get_template_directory() . '/inc/template-tags.php';
 
+/**
+ * Theme Hooks File.
+ */
+require get_template_directory() . '/inc/theme-hooks.php';
+
+/*
+ * Layout Files for different section.
+ */
+require get_template_directory() . '/template-parts/header/header.php';
 /**
  * Functions which enhance the theme by hooking into WordPress.
  */
@@ -210,9 +294,10 @@ add_action( 'after_setup_theme', 'mytheme_setup_theme_supported_features' );
  */
 add_image_size( 'aaurora-blog-single-post-navigation-featured-image', 80, 80, true ); // This is used for Blog Layout 1.
 add_image_size( 'aaurora-blog-1-featured-image', 530, 420, true ); // This is used for Blog Layout 1.
-add_image_size( 'aaurora-blog-2-featured-image', 125, 125, true ); // This is used for Blog Layout 2.
+add_image_size( 'aaurora-blog-2-featured-image', 540, 185, true ); // This is used for Blog Layout 2.
+add_image_size( 'aaurora-blog-3-featured-image', 340, 185, true ); // This is used for Blog Layout 2.
 add_image_size( 'aaurora-blog-single-post-sidebar', 400, 500, true );
-add_image_size( 'aaurora-blog-single-post-no-sidebar', 1000, 570, true );
+add_image_size( 'aaurora-blog-single-post-no-sidebar', 1000, 340, true );
 
 
 // todo See if below options related to kirki needs to be enabled or not.
@@ -254,3 +339,7 @@ function post_nav() {
 	);
 	echo '</div>';
 }
+
+
+
+// todo back to top.

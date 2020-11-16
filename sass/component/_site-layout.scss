@@ -1,0 +1,58 @@
+.main-header,
+.main-container,
+.article-container,
+.post-navigation .nav-links,
+.comment-form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main {
+  flex: 3 1;
+  //max-width: 140rem; // todo need to check if this can be removed as other width is there screen and (min-width: 992px)
+}
+
+aside:not(.sidebar-alt) {
+  flex: 1 1;
+  margin: 6rem auto;
+}
+
+.article-container {
+  justify-content: space-between;
+  //overflow-x: hidden; why we need this
+  &:after {
+    content: "";
+    flex: auto;
+  }
+}
+
+// todo Need to differentiate between logic for Single Post / Page and Archives
+main {
+  margin: 6rem auto;
+}
+
+article {
+  min-width: 0;
+}
+
+// this is common for all the layout. Need to see which part can be here which all part can be specific scss.
+.post-thumbnail-container {
+  overflow: hidden;
+  border-radius: 1rem;
+  display: inline-block;
+  position: relative;
+}
+
+//@media screen and (min-width: 1200px){
+.single-post .primary-content,
+.page .primary-content {
+  // todo can be applied on article
+  max-width: 100%;
+  min-width: 0;
+
+  // todo problem when sidebar is large and content is small it auto margin height too
+  // Should be enabled when there is no sidebar
+  //margin: auto;
+}
+//}
+
