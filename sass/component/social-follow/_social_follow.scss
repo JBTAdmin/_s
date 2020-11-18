@@ -1,0 +1,36 @@
+@media only screen and (max-width: 750px) {
+  .aaurora_social_follow {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.aaurora_social_follow {
+  position: fixed;
+  height: 56px;
+  top: 0;
+  bottom: 0;
+  font-weight: 600;
+  z-index: 10;
+  align-items: center;
+  margin: auto;
+  right: 40px;
+  transform-origin: 100% 50%;
+  transform: rotate(-90deg) translate(50%, -50%);
+}
+
+.aaurora-social-holder {
+  white-space: nowrap;
+  display: flex;
+  list-style: none;
+}
+
+ul.aaurora-social-holder > li {
+  padding: 0 5px;
+}
+
+.aaurora-social-holder li:not(:last-child) a:after {
+  content: "/";
+  display: inline;
+  padding-left: 10px;
+}

@@ -281,40 +281,50 @@ if ( ! function_exists( 'aaurora_social_media' ) ) {
 	/**
 	 * Social Media.
 	 */
-	function aaurora_social_media( $social_class = '' ) {
-		if ( get_theme_mod( 'top_bar_social_media_button', true ) !== true ) :
+	function aaurora_social_media( $social_class = '', $textOnly = false ) {
+		if ( 'top-bar-social' === $social_class && get_theme_mod( 'top_bar_social_media_button', true ) !== true ) :
 			return;
 		endif;
 		?>
 
 		<div class="<?php echo esc_attr( $social_class ); ?>">
-			<?php
+            <ul class="aaurora-social-holder">
+                <li>Follow Us - </li>
+                <?php
 			if ( get_theme_mod( 'social_media_fb_url', '' ) !== '' ) :
 				?>
+            <li>
 				<a class="social-link facebook-social-icon"
 					href="<?php echo esc_url( get_theme_mod( 'social_media_fb_url' ) ); ?>" target="_blank">
-					<?php load_inline_svg( 'facebook.svg' ); ?>
+					<?php $textOnly ? print ' Fb.' : load_inline_svg( 'facebook.svg' ); ?>
 				</a>
+            </li>
 			<?php endif; ?>
 			<?php if ( get_theme_mod( 'social_media_tw_url', '' ) !== '' ) : ?>
-				<a class="social-link twitter-social-icon"
+				<li>
+                <a class="social-link twitter-social-icon"
 					href="<?php echo esc_url( get_theme_mod( 'social_media_tw_url' ) ); ?>" target="_blank">
-					<?php load_inline_svg( 'twitter.svg' ); ?>
+	                <?php $textOnly ? print ' Tw.' : load_inline_svg( 'twitter.svg' ); ?>
 				</a>
+                </li>
 			<?php endif; ?>
 			<?php if ( get_theme_mod( 'social_media_in_url', '' ) !== '' ) : ?>
-				<a class="social-link instagram-social-icon"
+				<li>
+                <a class="social-link instagram-social-icon"
 					href="<?php echo esc_url( get_theme_mod( 'social_media_in_url' ) ); ?>" target="_blank">
-					<?php load_inline_svg( 'instagram.svg' ); ?>
+	                <?php $textOnly ? print ' In.' : load_inline_svg( 'instagram.svg' ); ?>
 				</a>
+                </li>
 			<?php endif; ?>
 			<?php if ( get_theme_mod( 'social_media_ln_url', '' ) !== '' ) : ?>
-				<a class="social-link linkedin-social-icon"
+				<li>
+                <a class="social-link linkedin-social-icon"
 					href="<?php echo esc_url( get_theme_mod( 'social_media_ln_url' ) ); ?>" target="_blank">
-					<?php load_inline_svg( 'linkedin.svg' ); ?>
+	                <?php $textOnly ? print ' Ln.' : load_inline_svg( 'linkedin.svg' ); ?>
 				</a>
+                </li>
 			<?php endif; ?>
-
+            </ul>
 		</div>
 		<?php
 	}

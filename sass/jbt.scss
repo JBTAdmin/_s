@@ -1,0 +1,241 @@
+.jbt_intro {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.jbt_subscribe {
+  position: relative;
+}
+
+.jbt_subscribe .submit-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 5px;
+}
+
+.jbt_intro > div {
+  flex: 1 1 50%;
+}
+
+@media only screen and (max-width: 750px) {
+  .jbt_intro > div {
+    flex: 1 1 100%;
+  }
+}
+
+.jbt_intro_text {
+  font-size: calc(
+    var(--font_size_post-title_mobile) + 74 * ((100vw - 300px) / (1400))
+  );
+  line-height: 90px;
+}
+
+.entry-content > h1 {
+  text-align: center;
+  margin-bottom: 3.2rem;
+}
+
+.jbt_course_section {
+  display: flex;
+  flex-wrap: wrap;
+  border-left: 2px solid #ff6b77;
+  padding: 1%;
+}
+
+.jbt_course_section > div {
+  flex: 1 1 300px;
+  padding: 40px;
+  border-radius: 10px;
+  min-height: 310px;
+  margin: 20px;
+}
+
+.java_course {
+  background-color: rgba(251, 238, 250, 1);
+}
+
+.selenium_course {
+  background-color: rgba(251, 238, 238, 1);
+}
+
+.vue_js_course {
+  background-color: rgba(242, 251, 238, 1);
+}
+
+.python_course {
+  background-color: rgba(238, 241, 251, 1);
+}
+
+.hibernate_course {
+  background-color: rgba(251, 249, 238, 1);
+}
+
+.spring_boot_course {
+  background-color: rgba(238, 251, 251, 1);
+}
+
+.jbt_socialbar {
+  display: flex;
+  margin: 30px 10px;
+}
+
+.jbt_socialbar a {
+  flex: 1 1;
+  border-width: 1px !important;
+  color: #fff;
+  text-decoration: none;
+  height: 100px;
+  float: left;
+  margin: auto;
+  border: none;
+  border-radius: 0;
+  line-height: 100px;
+  vertical-align: middle;
+  text-align: center;
+  font-weight: 600 !important;
+}
+
+.jbt_socialbar a.twitter {
+  background-color: #2aa3ef;
+  border-color: #2aa3ef;
+}
+
+.jbt_socialbar a.facebook {
+  background-color: #217cef;
+  border-color: #217cef;
+}
+
+.jbt_socialbar a.linkedin {
+  background-color: #4477ab;
+  border-color: #4477ab;
+}
+
+.jbt_socialbar a.pinterest {
+  background-color: #e8323f;
+  border-color: #e8323f;
+}
+
+.jbt_socialbar a.vk {
+  background-color: #6083ab;
+  border-color: #6083ab;
+}
+
+// Only for JBT Course Pages. Remove the hard coding
+
+.page .entry-content ul {
+  list-style: none;
+}
+
+.page .entry-content ul li {
+  border-top: 1px solid #d6d8da;
+  color: black !important;
+  background: url(https://javabeginnerstutorial.com/wp-content/uploads/2020/06/svg_document.svg)
+    no-repeat left center;
+  margin: 0;
+  padding: 20px 0 20px 40px;
+}
+
+.page .entry-content ul li a {
+  color: #21242c !important;
+  font-weight: bold !important;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.page .entry-content ul li.video {
+  background: url(https://javabeginnerstutorial.com/wp-content/uploads/2020/06/svg_video.svg)
+    no-repeat left center;
+}
+
+//Series list related CSS. todo  It should only for Desktop version.
+
+li.serieslist-current-li {
+  border-left: 2px solid #1a73e8 !important;
+  margin-left: 0px;
+  color: #202124 !important;
+  font-weight: 800;
+}
+
+.widget_seriestoc ul li {
+  border-left: 2px solid #e8eaed;
+  display: block;
+  padding: 8px 15px;
+  font-size: 14px;
+  list-style: none;
+}
+
+section.widget:not(.widget_seriestoc) {
+  border: 1px solid #dadce0;
+  box-shadow: none;
+  background-color: #fff;
+  background-position: center;
+  border-radius: 8px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-width: 225px;
+  overflow: hidden;
+  padding: 10px;
+  position: relative;
+  width: 100%;
+  margin: 40px 0;
+  box-shadow: gold 7px 7px 0px 0px;
+}
+
+// todo hide and show series toc Can be optimized with SCSS
+.widget_seriestoc.visible > ul {
+  display: block;
+}
+
+.widget_seriestoc > ul {
+  display: none;
+}
+
+.widget_seriestoc.visible > .widget-title:before {
+  content: "Hide ";
+}
+
+.widget_seriestoc > .widget-title:before {
+  content: "View ";
+}
+
+// STICKY SERIES NEXT POST NAVIGATION
+
+.sticky-nav {
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(226, 226, 226);
+  box-shadow: rgb(234, 234, 234) 7px 7px 0px 0px;
+  max-width: 270px;
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  z-index: 100;
+}
+
+@media screen and (min-width: 1025px) {
+  .sticky-nav-holder {
+    padding: 10px;
+  }
+}
+
+.sticky-nav-holder {
+  padding: 1rem;
+  border-radius: 6px;
+  background-color: gold;
+}
+
+// JBT COmment section
+.comment-content,
+.reply,
+.comment-meta {
+  margin-left: 20px;
+}
+
+.comment-body {
+  border: 1px solid #eee;
+  padding: 5px;
+  border-radius: 5px;
+  border-left: 2px solid gold;
+}
