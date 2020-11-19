@@ -26,9 +26,6 @@ $has_background = Go\has_footer_background();
 			</nav>
 		<?php endif; ?>
 
-		<?php Go\social_icons( array( 'class' => 'social-icons list-reset' ) ); ?>
-
-		<?php Go\copyright( array( 'class' => 'site-info text-xs mb-0 lg:w-full' ) ); ?>
 
 	</div>
 

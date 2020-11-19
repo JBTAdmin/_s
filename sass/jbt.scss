@@ -1,6 +1,8 @@
 .jbt_intro {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .jbt_subscribe {
@@ -16,6 +18,8 @@
 
 .jbt_intro > div {
   flex: 1 1 50%;
+  font-weight: 600;
+  line-height: 10rem;
 }
 
 @media only screen and (max-width: 750px) {
@@ -45,9 +49,9 @@
 
 .jbt_course_section > div {
   flex: 1 1 300px;
-  padding: 40px;
+  padding: 30px;
   border-radius: 10px;
-  min-height: 310px;
+  //min-height: 310px;
   margin: 20px;
 }
 
@@ -77,7 +81,7 @@
 
 .jbt_socialbar {
   display: flex;
-  margin: 30px 10px;
+  margin: 80px 0;
 }
 
 .jbt_socialbar a {
@@ -210,8 +214,16 @@ section.widget:not(.widget_seriestoc) {
   max-width: 270px;
   position: fixed;
   right: 40px;
-  bottom: 40px;
+  bottom: 110px;
   z-index: 100;
+}
+
+@media screen and (max-width: 768px) {
+  .sticky-nav {
+    position: static;
+    max-width: 100%;
+    padding: 20px 0;
+  }
 }
 
 @media screen and (min-width: 1025px) {
@@ -238,4 +250,82 @@ section.widget:not(.widget_seriestoc) {
   padding: 5px;
   border-radius: 5px;
   border-left: 2px solid gold;
+}
+
+// Home page
+.home .primary-content {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+.home .entry-content > h1 {
+  margin-bottom: 8rem;
+}
+
+.home .main-container {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+//Link Color in Article
+.entry-content a {
+  text-decoration: none;
+  color: #e6842e;
+}
+
+// Top Menu Numbering
+.main-navigation .header-menu > li > a:before {
+  content: "0" counter(number);
+  display: inline-block;
+  opacity: 1;
+  font-weight: 700;
+  width: auto;
+  top: -10px;
+  right: 15px;
+  font-size: 0.6em;
+  position: absolute;
+  height: auto;
+  background: 0 0;
+  opacity: 0.7;
+}
+
+.main-navigation .header-menu > li {
+  counter-increment: number;
+}
+
+@media screen and (max-width: 768px) {
+  .aaurora-share {
+    display: none;
+  }
+
+  .jbt_intro > div {
+    line-height: 6rem;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .wrap {
+    width: 100%;
+    margin: auto;
+  }
+}
+
+.custom-logo-link img {
+  max-width: 18rem !important;
+}
+
+.jbt_socialbar > a {
+  color: #fff;
+}
+
+.widget .mc4wp-form-fields input[type="email"] {
+  width: 80%;
+}
+
+.sticky-nav_heading {
+  margin-bottom: 0 !important;
+}
+
+.sticky-nav_item > h6{
+  margin-bottom: 0;
 }

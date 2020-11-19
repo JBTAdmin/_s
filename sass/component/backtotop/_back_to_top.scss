@@ -13,7 +13,7 @@
   transition: all 0.25s ease-in-out;
   position: fixed;
   right: 4rem;
-  bottom: 10rem;
+  bottom: 3.4rem;
   display: inline-flex;
 
   cursor: pointer;
@@ -22,8 +22,8 @@
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  background-color: #f8f8f8;
-  box-shadow: gold 7px 7px 0px 0px;
+  background-color: gold;
+  //box-shadow: gold 7px 7px 0px 0px;
 
   &.show {
     visibility: visible;

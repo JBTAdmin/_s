@@ -1,7 +1,7 @@
 .aaurora-share {
   position: fixed;
-  right: 34px;
-  bottom: 34px;
+  left: 34px;
+  bottom: 124px;
   display: inline-flex;
 
   cursor: pointer;
@@ -10,8 +10,8 @@
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  background-color: #f8f8f8;
-  box-shadow: gold 7px 7px 0px 0px;
+  background-color: gold;
+  //box-shadow: gold 7px 7px 0px 0px;
 
   svg {
     width: 24px;
@@ -49,4 +49,10 @@
   transform: translateY(-156px) scale(1);
   opacity: 1;
   visibility: visible;
+}
+
+@media screen and (max-width: 768px) {
+  .aaurora-share {
+    display: none;
+  }
 }

@@ -1020,4 +1020,28 @@ Kirki::add_field(
 		'priority' => 10,
 	)
 );
+
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'     => 'text',
+		'settings' => 'social_media_yt_url',
+		'label'    => esc_html__( 'YouTube Url', 'aaurora' ),
+		'section'  => 'social_media',
+		'priority' => 10,
+	)
+);
+
+
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'     => 'text',
+		'settings' => 'social_media_gh_url',
+		'label'    => esc_html__( 'Github Url', 'aaurora' ),
+		'section'  => 'social_media',
+		'priority' => 10,
+	)
+);
+
 // SECTION END: SOCIAL PROFILE.

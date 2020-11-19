@@ -324,6 +324,22 @@ if ( ! function_exists( 'aaurora_social_media' ) ) {
 				</a>
                 </li>
 			<?php endif; ?>
+	            <?php if ( get_theme_mod( 'social_media_yt_url', '' ) !== '' ) : ?>
+                    <li>
+                        <a class="social-link youtube-social-icon"
+                           href="<?php echo esc_url( get_theme_mod( 'social_media_yt_url' ) ); ?>" target="_blank">
+				            <?php $textOnly ? print ' Yt.' : load_inline_svg( 'youtube.svg' ); ?>
+                        </a>
+                    </li>
+	            <?php endif; ?>
+	            <?php if ( get_theme_mod( 'social_media_gh_url', '' ) !== '' ) : ?>
+                    <li>
+                        <a class="social-link github-social-icon"
+                           href="<?php echo esc_url( get_theme_mod( 'social_media_gh_url' ) ); ?>" target="_blank">
+				            <?php $textOnly ? print ' Gh.' : load_inline_svg( 'github.svg' ); ?>
+                        </a>
+                    </li>
+	            <?php endif; ?>
             </ul>
 		</div>
 		<?php

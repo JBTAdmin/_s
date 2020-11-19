@@ -3,10 +3,17 @@
   margin: 3rem 0;
   display: flex;
   align-items: center;
+  justify-content: center;
   box-shadow: rgb(234, 234, 234) 7px 7px 0px 0px;
   background-color: gold;
   border: 1px solid #dadce0 !important;
   border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .author-bio {
+    flex-direction: column;
+  }
 }
 
 .author-avatar {
