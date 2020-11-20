@@ -339,7 +339,14 @@ function post_nav() {
 	);
 	echo '</div>';
 }
-
-
-
 // todo back to top.
+
+
+// Disable JQuery
+function deregister_qjuery() {
+	if ( !is_admin() ) {
+		wp_deregister_script('jquery');
+	}
+}
+
+add_action('wp_enqueue_scripts', 'deregister_qjuery');

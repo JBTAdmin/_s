@@ -14,18 +14,18 @@
   z-index: 2;
 }
 
-#primary-menu > li > a:after{
-  content: '';
+#primary-menu > li > a:after {
+  content: "";
   width: 0;
   height: 2px;
   background-color: #0b4b81;
   position: absolute;
   bottom: 0;
   left: 0;
-  transition: width 300ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  transition: width 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-#primary-menu > li:hover > a:after{
+#primary-menu > li:hover > a:after {
   width: 100%;
 }
 .sub-menu {
@@ -40,7 +40,8 @@
   padding-left: 0.6rem;
 }
 
-aside.sidebar-alt .widget-sidebar-menu a {   // todo refine
+aside.sidebar-alt .widget-sidebar-menu a {
+  // todo refine
   line-height: 4.5rem;
 }
 
@@ -59,8 +60,7 @@ aside .submenu a {
   color: $theme__color;
 }
 
-
-li > ul.sub-menu{
+li > ul.sub-menu {
   margin-left: unset;
 }
 
@@ -69,7 +69,8 @@ li > ul.sub-menu{
     display: block;
   }
 
-  .header-menu, .aaurora-top-bar {
+  .header-menu,
+  .aaurora-top-bar {
     display: none;
   }
 
@@ -165,7 +166,7 @@ li > ul.sub-menu{
     //line-height: 8rem;
   }
 
-  .header-menu-bar{
+  .header-menu-bar {
     line-height: 8rem;
   }
 
@@ -193,7 +194,6 @@ li > ul.sub-menu{
     top: 100%;
     left: -0.1vw;
     line-height: 1rem;
-
   }
 
   nav ul ul ul {
@@ -214,11 +214,11 @@ li > ul.sub-menu{
     //padding: 1.1rem 1.3vw;
   }
 
- nav .sub-menu li:first-child {
+  nav .sub-menu li:first-child {
     padding-top: 40px;
   }
 
- nav .sub-menu li:last-child {
+  nav .sub-menu li:last-child {
     padding-bottom: 40px;
   }
 
@@ -260,18 +260,18 @@ li > ul.sub-menu{
   display: none;
 }
 
-.sub-menu li > a{
+.sub-menu li > a {
   padding: 0 2rem;
   position: relative;
   display: block;
   line-height: 3rem;
 }
-.sub-menu li:hover > a{
+.sub-menu li:hover > a {
   color: #000;
 }
 
 .sub-menu li:hover > a:after {
-  content: '';
+  content: "";
   background-color: #fff;
   position: absolute;
   left: 1rem;

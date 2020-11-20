@@ -30,8 +30,6 @@
 --------------------------------------------- */
 @import "backtotop/back_to_top";
 
-
-
 /* Footer
 --------------------------------------------- */
 @import "footer/footer";
@@ -42,6 +40,7 @@
 //@import "content/blog_1";
 @import "content/blog_2";
 @import "content/blog_3";
+@import "content/blog_4";
 @import "content/single_page";
 @import "content/single_post";
 
@@ -60,3 +59,19 @@
 /* Layout
 --------------------------------------------- */
 @import "site-layout";
+
+/* Social Share
+--------------------------------------------- */
+@import "socialshare/social_share";
+
+/* Search
+--------------------------------------------- */
+@import "search/search";
+
+/* Social Follow
+--------------------------------------------- */
+@import "social-follow/social_follow";
+
+/* Author Description
+--------------------------------------------- */
+@import "author/author_description";

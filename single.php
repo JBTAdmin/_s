@@ -33,6 +33,8 @@ $sidebar_page_class = ' sidebar_position_' . get_theme_mod( 'sidebar_post', 'rig
 						the_post();
 
 						get_template_part( 'template-parts/single/single-layout', get_post_type() );
+						
+						get_template_part( 'template-parts/author-description');
 
 						if ( get_theme_mod( 'blog_post_nav', true ) === true ) :
 							// Previous/next post navigation.

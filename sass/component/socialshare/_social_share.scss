@@ -1,0 +1,58 @@
+.aaurora-share {
+  position: fixed;
+  left: 34px;
+  bottom: 124px;
+  display: inline-flex;
+
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background-color: gold;
+  //box-shadow: gold 7px 7px 0px 0px;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  &:hover {
+    .social-share-inner {
+      //visibility: visible;
+      //opacity: 1;
+    }
+  }
+}
+
+.social-share-inner a {
+  border-radius: 50%;
+  padding: 7px;
+  width: 40px;
+  height: 40px;
+  background-color: #f8f8f8;
+  margin: 0.5rem;
+}
+
+.social-share-inner {
+  //display: flex;
+  //flex-direction: column;
+  position: absolute;
+  bottom: 8rem;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.aaurora-share:hover .social-share-inner a:nth-child(1) {
+  transition: all 0.45s cubic-bezier(0.15, 0.2, 0.1, 1);
+  transform: translateY(-156px) scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+
+@media screen and (max-width: 768px) {
+  .aaurora-share {
+    display: none;
+  }
+}

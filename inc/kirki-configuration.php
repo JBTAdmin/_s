@@ -181,12 +181,12 @@ Kirki::add_field(
 		'settings'    => 'blog_layout_setting',
 		'label'       => esc_attr__( 'Blog Layout', 'aaurora' ),
 		'section'     => 'general_layout',
-		'default'     => 'layout-2',
+		'default'     => 'layout-4',
 		'multiple'    => 0,
 		'choices'     => array(
 			'layout-2' => esc_attr__( 'Layout 2', 'aaurora' ),
 			'layout-3' => esc_attr__( 'Layout 3', 'aaurora' ),
-		
+			'layout-4' => esc_attr__( 'Layout 4', 'aaurora' ),
 		),
 		'description' => esc_attr__( 'Here you can select which layout will be used to display the blog posts on Home or Index pages.', 'aaurora' ),
 	)
@@ -1020,4 +1020,28 @@ Kirki::add_field(
 		'priority' => 10,
 	)
 );
+
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'     => 'text',
+		'settings' => 'social_media_yt_url',
+		'label'    => esc_html__( 'YouTube Url', 'aaurora' ),
+		'section'  => 'social_media',
+		'priority' => 10,
+	)
+);
+
+
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'     => 'text',
+		'settings' => 'social_media_gh_url',
+		'label'    => esc_html__( 'Github Url', 'aaurora' ),
+		'section'  => 'social_media',
+		'priority' => 10,
+	)
+);
+
 // SECTION END: SOCIAL PROFILE.

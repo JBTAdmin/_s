@@ -15,10 +15,9 @@
   padding: 3rem 0;
 }
 
-
 div[class*="footer-sidebar-"] {
   flex: 1 1 25%;
-  ul{
+  ul {
     list-style: none;
   }
 }
@@ -35,20 +34,20 @@ div[class*="footer-sidebar-"] {
   }
 }
 
-.main-footer{
+.main-footer {
   display: flex;
   flex-wrap: wrap;
 }
 
-.site-footer-main{
+.site-footer-main {
   padding: 0 0 4rem;
 }
 
-.wrap-site-info{
+.wrap-site-info {
   border-top: 1px solid #dadce0;
   font-size: 1.3rem;
 }
 
-.site-footer{
+.site-footer {
   padding: 6rem 0 1rem;
 }

@@ -65,14 +65,6 @@ $has_background   = Go\has_footer_background();
 				</nav>
 			<?php endif; ?>
 		</div>
-
-		<?php if ( $has_social_icons ) : ?>
-			<div class="site-footer__row flex flex-column lg:flex-row justify-between lg:items-center">
-				<?php Go\copyright( array( 'class' => 'site-info text-sm mb-0' ) ); ?>
-				<?php Go\social_icons( array( 'class' => 'social-icons list-reset' ) ); ?>
-			</div>
-		<?php endif; ?>
-
 	</div>
 
 </footer>
