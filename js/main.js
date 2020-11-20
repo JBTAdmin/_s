@@ -55,11 +55,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   // const shareBtn = document.querySelector(".aaurora-share");
   // const shareInnerBtn = document.querySelector(".social-share-inner");
 
-  // todo JBT Specific Series TOC
-  const seriesToc = document.querySelector("#seriestoc-2");
-  const seriesTocHeading = document.querySelector(
-    "#seriestoc-2 > .widget-title"
-  );
+
 
   // Facebook share function
   function fbs_click() {
@@ -140,10 +136,4 @@ document.addEventListener("DOMContentLoaded", function(event) {
   popupModalCloseBtn.addEventListener("click", function() {
     popupSearchModal.classList.toggle("visible");
   });
-
-  // todo JBT Specific
-  seriesTocHeading &&
-    seriesTocHeading.addEventListener("click", function() {
-      seriesToc.classList.toggle("visible");
-    });
 });
