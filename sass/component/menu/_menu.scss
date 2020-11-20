@@ -302,3 +302,23 @@ li > ul.sub-menu {
   right: 2%;
   transform: scaleX(1.7) rotate(270deg);
 }
+
+//Menu Numbering
+.main-navigation .header-menu > li > a:before {
+  content: "0" counter(number);
+  display: inline-block;
+  opacity: 1;
+  font-weight: 700;
+  width: auto;
+  top: -10px;
+  right: 15px;
+  font-size: 0.6em;
+  position: absolute;
+  height: auto;
+  background: 0 0;
+  opacity: 0.7;
+}
+
+.main-navigation .header-menu > li {
+  counter-increment: number;
+}
