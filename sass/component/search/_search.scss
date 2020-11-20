@@ -17,7 +17,8 @@
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  background-color: gold;
+  box-shadow: 1px 1px 1px 1px gold;
+  border: 1px solid #e7ebed;
 
   svg {
     //fill: #000;

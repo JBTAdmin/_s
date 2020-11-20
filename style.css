@@ -2031,7 +2031,9 @@ article {
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  background-color: gold; }
+  -webkit-box-shadow: 1px 1px 1px 1px gold;
+          box-shadow: 1px 1px 1px 1px gold;
+  border: 1px solid #e7ebed; }
   .aaurora-share svg {
     width: 24px;
     height: 24px; }
@@ -2088,7 +2090,9 @@ article {
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  background-color: gold; }
+  -webkit-box-shadow: 1px 1px 1px 1px gold;
+          box-shadow: 1px 1px 1px 1px gold;
+  border: 1px solid #e7ebed; }
   .aaurora-search svg {
     width: 24px;
     height: 24px; }
