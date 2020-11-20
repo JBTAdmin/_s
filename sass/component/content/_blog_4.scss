@@ -9,3 +9,26 @@
 .blog-article {
   border: 1px solid #e7ebed;
 }
+
+
+.blog-type-post-category {
+  background-color: #f5f7f8;
+  color: #546e7a;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 3px;
+  padding: 3px 5px 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.blog-type-published-date {
+  color: #263238;
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+  margin-bottom: 2rem;
+}
