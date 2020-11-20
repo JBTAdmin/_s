@@ -18,7 +18,7 @@
   content: "";
   width: 0;
   height: 2px;
-  background-color: #0b4b81;
+  background-color: $theme__color;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -185,8 +185,8 @@ li > ul.sub-menu {
     transition: opacity ease-in-out 0.3s;
     font-weight: 400;
 
-    background-color: $theme__color;
-    color: #fff;
+    //background-color: $theme__color;
+    //color: #fff;
   }
 
   .header-menu > li > ul.sub-menu {
@@ -194,6 +194,7 @@ li > ul.sub-menu {
     top: 100%;
     left: -0.1vw;
     line-height: 1rem;
+    padding: 10px 0;
   }
 
   nav ul ul ul {
@@ -214,13 +215,19 @@ li > ul.sub-menu {
     //padding: 1.1rem 1.3vw;
   }
 
-  nav .sub-menu li:first-child {
-    padding-top: 40px;
+  nav .sub-menu li {
+    padding: 5px 0;
+    transition: padding-left 0.07s;
   }
 
-  nav .sub-menu li:last-child {
-    padding-bottom: 40px;
+  nav .sub-menu li:hover {
+    border-left: 2px solid $theme__color;
+    padding-left: 5px;
   }
+
+  //nav .sub-menu li:last-child {
+  //  padding-bottom: 40px;
+  //}
 
   .header-menu li:hover > a::before {
     width: 100%;

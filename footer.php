@@ -22,7 +22,7 @@
 <?php aaurora_social_media( 'aaurora_social_follow', true ); ?>
 
 <a class="top-link hide" href="" id="js-top">
-	<?php load_inline_svg( 'corner-right-up.svg' ); ?>
+	<?php load_inline_svg( 'arrow-up.svg' ); ?>
 	<span class="screen-reader-text">Back to top</span>
 </a>
 
