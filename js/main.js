@@ -55,8 +55,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   // const shareBtn = document.querySelector(".aaurora-share");
   // const shareInnerBtn = document.querySelector(".social-share-inner");
 
-
-
   // Facebook share function
   function fbs_click() {
     u = location.href;
