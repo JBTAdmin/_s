@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying posts
+ * Template part for displaying posts in blog layout.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -12,7 +12,6 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'blog-post-article-4' ); ?>>
 	<div  class="blog-type-list">
 		<div class="blog-article">
-<!--			--><?php //aaurora_post_thumbnail( 'aaurora-blog-2-featured-image', aaurora_posted_on( true ) ); ?>
 			<div class="blog-type-list-content">
                 <div class="blog-type-published-date">
                     <?php echo aaurora_posted_on( true ) ?>
