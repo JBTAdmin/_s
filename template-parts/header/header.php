@@ -190,7 +190,7 @@ if ( ! function_exists( 'aaurora_hamburger_menu' ) ) :
 	 * Displays Hamburger Menu.
 	 */
 	function aaurora_hamburger_menu() {
-		if ( get_theme_mod( 'sidebar_listing', 'right' ) !== 'disable' ) :
+		if ( get_theme_mod( 'sidebar_listing', 'right' ) !== 'disable' && is_active_sidebar( 'sidebar-alt' )) :
 			?>
 			<div class="hamburger-menu">
 				<div class="toggle sidebar-open desktop-sidebar-toggle" data-toggle-target=".sidebar-modal"
