@@ -65,7 +65,7 @@ Kirki::add_field(
 		'label'       => esc_attr__( 'Theme color', 'aaurora' ),
 		'description' => '',
 		'section'     => 'general',
-		'default'     => '#e22c2f',
+		'default'     => '#ffd01b',
 		'transport'   => 'auto',
 		'output'      => array(
 			array(
