@@ -59,7 +59,7 @@
     </div>
     <div class="search_holder">
 <!--        todo hard coding should be removed-->
-        <form role="search" class="search search-form" action="https://javabeginnerstutorial.com/" method="GET">
+        <form role="search" class="search search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="GET">
             <label> <span class="screen-reader-text">Search for</span>
                 <input autocomplete="off" type="text" class="search-field" name="s" placeholder="Search..." value="">
             </label>

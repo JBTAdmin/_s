@@ -190,9 +190,11 @@ if ( ! function_exists( 'aaurora_hamburger_menu' ) ) :
 	 * Displays Hamburger Menu.
 	 */
 	function aaurora_hamburger_menu() {
-		if ( get_theme_mod( 'sidebar_listing', 'right' ) !== 'disable' && is_active_sidebar( 'sidebar-alt' )) :
+		$sidebar_page_class = '';
+		if ( get_theme_mod( 'sidebar_listing', 'right' ) !== 'disable' || is_active_sidebar( 'sidebar-alt' )) :
+		    $sidebar_alt_class = 'menu_only';
 			?>
-			<div class="hamburger-menu">
+			<div class="hamburger-menu <?php echo esc_attr( $sidebar_alt_class ); ?>">
 				<div class="toggle sidebar-open desktop-sidebar-toggle" data-toggle-target=".sidebar-modal"
 						data-toggle-body-class="showing-sidebar-modal" aria-expanded="false">
 									<span class="toggle-inner">

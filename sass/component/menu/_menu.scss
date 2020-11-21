@@ -63,8 +63,12 @@ aside .submenu a {
 li > ul.sub-menu {
   margin-left: unset;
 }
+.hamburger-menu.menu_only {
+  display: none;
+}
 
 @media screen and (max-width: 1024px) {
+  .hamburger-menu.menu_only,
   .sidebar-menu {
     display: block;
   }

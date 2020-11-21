@@ -28,7 +28,6 @@ $sidebar_page_class = get_theme_mod( 'sidebar_layout_setting', 'content-only' );
 		<div class="wrap">
 			<div class="main-container">
 				<?php
-				get_sidebar( 'alt' );
 				get_sidebar( 'left' );
 				?>
 				<main id="primary" class="site-main primary-content <?php echo esc_attr( $sidebar_page_class ); ?>">
@@ -76,3 +75,4 @@ $sidebar_page_class = get_theme_mod( 'sidebar_layout_setting', 'content-only' );
 	</div>
 <?php
 get_footer();
+get_sidebar( 'alt' );

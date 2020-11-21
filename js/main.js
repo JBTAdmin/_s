@@ -108,11 +108,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
     header.classList.toggle("open");
   });
 
-  hamburgerBtn && hamburgerBtn.addEventListener("click", function() {
-    // searchField.focus();
-    altSidebar.classList.toggle("open");
-    sidebarOverlay.classList.toggle("open");
-  });
+  hamburgerBtn &&
+    hamburgerBtn.addEventListener("click", function() {
+      // searchField.focus();
+      altSidebar.classList.toggle("open");
+      sidebarOverlay.classList.toggle("open");
+    });
 
   menuCloseBtn &&
     menuCloseBtn.addEventListener("click", function() {
