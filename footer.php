@@ -51,19 +51,6 @@
             <?php load_inline_svg( 'facebook.svg' ); ?>
         </a>
     </div>
-<!--    -->
-<!--    <div class="social-share-inner">-->
-<!--        <a class="facebook-share" href="#">-->
-<!--	        --><?php //load_inline_svg( 'facebook.svg' ); ?>
-<!--        </a>-->
-<!--        <a class="twitter-share" href="#" >-->
-<!--	        --><?php //load_inline_svg( 'twitter.svg' ); ?>
-<!--        </a>-->
-<!--        <a class="linkedin-share" href="#">-->
-<!--	        --><?php //load_inline_svg( 'linkedin.svg' ); ?>
-<!--        </a>-->
-<!--    </div>-->
-    
 </div>
 
 <div class="popup_search_modal">
@@ -76,8 +63,8 @@
             <label> <span class="screen-reader-text">Search for</span>
                 <input autocomplete="off" type="text" class="search-field" name="s" placeholder="Search..." value="">
             </label>
-            <button type="submit" class="search search-submit">
-            </button>
+            <input type="submit" class="search search-submit" value="Submit">
+            </input>
         </form>
     </div>
 </div>

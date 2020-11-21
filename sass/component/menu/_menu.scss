@@ -304,7 +304,7 @@ li > ul.sub-menu {
 }
 
 //Menu Numbering
-.main-navigation .header-menu > li > a:before {
+.header-menu-container.numbered .header-menu > li > a:before {
   content: "0" counter(number);
   display: inline-block;
   opacity: 1;

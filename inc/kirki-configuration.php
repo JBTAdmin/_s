@@ -563,6 +563,19 @@ Kirki::add_field(
 	)
 );
 
+
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'        => 'toggle',
+		'settings'    => 'main_menu_numbering',
+		'label'       => esc_attr__( 'Main Menu Numbering', 'aaurora' ),
+		'description' => esc_attr__( 'Enable to add Numbering to Main Menu.', 'aaurora' ),
+		'section'     => 'header',
+		'default'     => '1',
+	)
+);
+
 Kirki::add_field(
 	'aaurora_theme_options',
 	array(
