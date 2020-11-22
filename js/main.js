@@ -55,12 +55,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   // const shareBtn = document.querySelector(".aaurora-share");
   // const shareInnerBtn = document.querySelector(".social-share-inner");
 
-  // todo JBT Specific Series TOC
-  const seriesToc = document.querySelector("#seriestoc-2");
-  const seriesTocHeading = document.querySelector(
-    "#seriestoc-2 > .widget-title"
-  );
-
   // Facebook share function
   function fbs_click() {
     u = location.href;
@@ -80,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   const menu = document.querySelector(".menu");
   const header = document.querySelector("header");
   const hamburgerBtn = document.querySelector(".sidebar-open");
-  const aside = document.querySelector("aside");
+  const altSidebar = document.querySelector(".sidebar-alt");
   const menuCloseBtn = document.querySelector(".sidebar-close");
   const sidebarOverlay = document.querySelector(".sidebar-overlay");
 
@@ -114,22 +108,23 @@ document.addEventListener("DOMContentLoaded", function(event) {
     header.classList.toggle("open");
   });
 
-  hamburgerBtn.addEventListener("click", function() {
-    // searchField.focus();
-    aside.classList.toggle("open");
-    sidebarOverlay.classList.toggle("open");
-  });
+  hamburgerBtn &&
+    hamburgerBtn.addEventListener("click", function() {
+      // searchField.focus();
+      altSidebar.classList.toggle("open");
+      sidebarOverlay.classList.toggle("open");
+    });
 
   menuCloseBtn &&
     menuCloseBtn.addEventListener("click", function() {
       hamburgerBtn.focus();
-      aside.classList.toggle("open");
+      altSidebar.classList.toggle("open");
       sidebarOverlay.classList.toggle("open");
     });
 
   sidebarOverlay &&
     sidebarOverlay.addEventListener("click", function() {
-      aside.classList.toggle("open");
+      altSidebar.classList.toggle("open");
       sidebarOverlay.classList.toggle("open");
     });
 
@@ -140,6 +135,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
   popupModalCloseBtn.addEventListener("click", function() {
     popupSearchModal.classList.toggle("visible");
   });
+
+  // todo JBT Specific Series TOC
+  const seriesToc = document.querySelector("#seriestoc-2");
+  const seriesTocHeading = document.querySelector(
+    "#seriestoc-2 > .widget-title"
+  );
 
   // todo JBT Specific
   seriesTocHeading &&

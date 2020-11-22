@@ -458,7 +458,7 @@ div {
 body {
   background: #fff;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  color: #222;
+  color: #fff;
   text-rendering: optimizeLegibility;
   line-height: 1.8;
   letter-spacing: 0;
@@ -557,7 +557,7 @@ tbody {
 thead {
   background-color: var(--theme-color);
   border-color: var(--theme-color);
-  color: #fff; }
+  color: #000; }
 
 tr {
   display: table-row;
@@ -595,7 +595,7 @@ button:not(.toggle):not(.customize-partial-edit-shortcut-button),
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  color: #fff;
+  color: #000;
   border-radius: 0.4rem;
   padding: 12px 25px;
   border: 1px solid var(--theme-color);
@@ -1077,7 +1077,7 @@ li > ul.sub-menu {
 .navigation li span.current {
   color: #000;
   border-radius: 0.4rem;
-  padding: 4px 10px;
+  padding: 9px 18px;
   font-size: 16px;
   font-weight: 700;
   line-height: 3; }
@@ -1095,7 +1095,7 @@ li > ul.sub-menu {
   border: 1px solid var(--theme-color);
   font-size: 17px;
   cursor: pointer;
-  color: #fff; }
+  color: #000; }
 
 @media screen and (max-width: 768px) {
   .post-navigation .nav-previous {
@@ -1717,7 +1717,7 @@ h1.entry-title {
   padding: 0 10px;
   display: inline-block;
   margin-bottom: 10px;
-  color: #fff;
+  color: #000;
   background: var(--theme-color); }
 
 /* Comment
