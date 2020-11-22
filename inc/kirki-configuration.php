@@ -65,7 +65,7 @@ Kirki::add_field(
 		'label'       => esc_attr__( 'Theme color', 'aaurora' ),
 		'description' => '',
 		'section'     => 'general',
-		'default'     => '#e22c2f',
+		'default'     => '#ffd01b',
 		'transport'   => 'auto',
 		'output'      => array(
 			array(
@@ -560,6 +560,19 @@ Kirki::add_field(
 				'property' => 'color',
 			),
 		),
+	)
+);
+
+
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'        => 'toggle',
+		'settings'    => 'main_menu_numbering',
+		'label'       => esc_attr__( 'Main Menu Numbering', 'aaurora' ),
+		'description' => esc_attr__( 'Enable to add Numbering to Main Menu.', 'aaurora' ),
+		'section'     => 'header',
+		'default'     => '1',
 	)
 );
 

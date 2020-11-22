@@ -18,7 +18,7 @@
   content: "";
   width: 0;
   height: 2px;
-  background-color: #0b4b81;
+  background-color: $theme__color;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -63,8 +63,12 @@ aside .submenu a {
 li > ul.sub-menu {
   margin-left: unset;
 }
+.hamburger-menu.menu_only {
+  display: none;
+}
 
 @media screen and (max-width: 1024px) {
+  .hamburger-menu.menu_only,
   .sidebar-menu {
     display: block;
   }
@@ -185,8 +189,8 @@ li > ul.sub-menu {
     transition: opacity ease-in-out 0.3s;
     font-weight: 400;
 
-    background-color: $theme__color;
-    color: #fff;
+    //background-color: $theme__color;
+    //color: #fff;
   }
 
   .header-menu > li > ul.sub-menu {
@@ -194,6 +198,7 @@ li > ul.sub-menu {
     top: 100%;
     left: -0.1vw;
     line-height: 1rem;
+    padding: 10px 0;
   }
 
   nav ul ul ul {
@@ -214,13 +219,19 @@ li > ul.sub-menu {
     //padding: 1.1rem 1.3vw;
   }
 
-  nav .sub-menu li:first-child {
-    padding-top: 40px;
+  nav .sub-menu li {
+    padding: 5px 0;
+    transition: padding-left 0.07s;
   }
 
-  nav .sub-menu li:last-child {
-    padding-bottom: 40px;
+  nav .sub-menu li:hover {
+    border-left: 2px solid $theme__color;
+    padding-left: 5px;
   }
+
+  //nav .sub-menu li:last-child {
+  //  padding-bottom: 40px;
+  //}
 
   .header-menu li:hover > a::before {
     width: 100%;
@@ -294,4 +305,24 @@ li > ul.sub-menu {
 .sidebar-menu li.menu-item-has-children.active .sub-menu-btn-icon {
   right: 2%;
   transform: scaleX(1.7) rotate(270deg);
+}
+
+//Menu Numbering
+.header-menu-container.numbered .header-menu > li > a:before {
+  content: "0" counter(number);
+  display: inline-block;
+  opacity: 1;
+  font-weight: 700;
+  width: auto;
+  top: -10px;
+  right: 15px;
+  font-size: 0.6em;
+  position: absolute;
+  height: auto;
+  background: 0 0;
+  opacity: 0.7;
+}
+
+.main-navigation .header-menu > li {
+  counter-increment: number;
 }

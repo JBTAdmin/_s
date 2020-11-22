@@ -22,6 +22,9 @@ $sidebar_page_class = ' sidebar_position_' . get_theme_mod( 'sidebar_archive', '
 	<div class="site-container">
 		<div class="wrap">
 			<div class="main-container">
+				<?php
+				get_sidebar( 'left' );
+				?>
 				<main id="primary" class="site-main primary-content <?php echo esc_attr( $sidebar_page_class ); ?>">
 
 					<?php if ( have_posts() ) : ?>
@@ -69,3 +72,4 @@ $sidebar_page_class = ' sidebar_position_' . get_theme_mod( 'sidebar_archive', '
 	</div>
 <?php
 get_footer();
+get_sidebar( 'alt' );

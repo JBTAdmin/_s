@@ -9,9 +9,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-//todo JBT Specific
-$site_info_text_left  = get_theme_mod( 'footer_copyright', '<a href="https://javabeginnerstutorial.com/disclaimer/">Terms of Use</a>  /  <a href="https://javabeginnerstutorial.com/privacy-policy-2/">Privacy Policy</a>  /  <a href="https://javabeginnerstutorial.com/sitemap_index.xml"> Sitemap </a>  /  <a href="https://javabeginnerstutorial.com/about-us/">About Us</a>  /  <a href="https://javabeginnerstutorial.com/contact-us/">Contact Us</a>  /  <b>Partner Site</b> <a href="https://ipoweruser.com/">iPowerUser</a>' );
-$site_info_text_right = 'Crafted with  &#10084; <em>by</em> JBT Team  / Copyright . <a href="https://javabeginnerstutorial.com"> JBT</a>';
+$site_info_text_left  = get_theme_mod( 'footer_copyright', 'Powered by <a href="https://www.wordpress.org">WordPress</a>' );
+$site_info_text_right = 'Crafted with &#10084; by <a href="https:ipoweruser.com">iPoweruser</a> Team';
 
 ?>
 

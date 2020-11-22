@@ -10,9 +10,9 @@
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  background-color: gold;
-  //box-shadow: gold 7px 7px 0px 0px;
-
+  box-shadow: 1px 1px 1px 1px $theme__color;
+  border: 1px solid #e7ebed;
+  background: #fff;
   svg {
     width: 24px;
     height: 24px;
@@ -54,5 +54,10 @@
 @media screen and (max-width: 768px) {
   .aaurora-share {
     display: none;
+  }
+
+  .wrap {
+    width: 100%;
+    margin: auto;
   }
 }
