@@ -69,7 +69,7 @@
   color: #000;
   //background-color: #fff;
   border-radius: 0.4rem;
-  padding: 7px 15px;
+  padding: 9px 18px;
   font-size: 16px;
   font-weight: 700;
   line-height: 3;
@@ -90,7 +90,7 @@
   border: 1px solid $theme__color;
   font-size: 17px;
   cursor: pointer;
-  color: #fff;
+  color: $body_text_dark_color;
 }
 
 @media screen and (max-width: 768px) {
