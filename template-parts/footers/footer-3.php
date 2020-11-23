@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $site_info_text_left  = get_theme_mod( 'footer_copyright', 'Powered by <a href="https://www.wordpress.org">WordPress</a>' );
-$site_info_text_right = 'Crafted with &#10084; by <a href="https:ipoweruser.com">iPoweruser</a> Team';
+$site_info_text_right = 'Crafted with &#10084; by <a href=""></a> Team';
 
 ?>
 
