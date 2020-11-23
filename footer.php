@@ -28,45 +28,42 @@
 
 <a class="aaurora-search" href="#" >
 	<?php load_inline_svg( 'search.svg' ); ?>
-    <span class="screen-reader-text">Search</span>
+	<span class="screen-reader-text">Search</span>
 </a>
 
 <div class="aaurora-share" href="#">
-    <a href="#">
-	    <?php load_inline_svg( 'share.svg' ); ?>
-    </a>
-	
-    <span class="screen-reader-text">Social Share</span>
+	<a href="#">
+		<?php load_inline_svg( 'share.svg' ); ?>
+	</a>
+	<span class="screen-reader-text">Social Share</span>
 
-    <div class="social-share-inner">
-        <a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>&title=<?php the_title(); ?>&source=http://localhost:10013/#">
-            <?php load_inline_svg( 'linkedin.svg' ); ?>
-        </a>
-    
-        <a href="http://twitter.com/home?status=Currentlyreading <?php the_permalink(); ?>" title="Click to share this post on Twitter"">
-            <?php load_inline_svg( 'twitter.svg' ); ?>
-        </a>
-        
-        <a href="http://www.facebook.com/share.php?u=<url>" onclick="return fbs_click()" target="_blank">
-            <?php load_inline_svg( 'facebook.svg' ); ?>
-        </a>
-    </div>
+	<div class="social-share-inner">
+		<a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>&title=<?php the_title(); ?>&source=http://localhost:10013/#">
+			<?php load_inline_svg( 'linkedin.svg' ); ?>
+		</a>
+		<a href="http://twitter.com/home?status=Currentlyreading <?php the_permalink(); ?>" title="Click to share this post on Twitter"">
+			<?php load_inline_svg( 'twitter.svg' ); ?>
+		</a>
+		<a href="http://www.facebook.com/share.php?u=<url>" onclick="return fbs_click()" target="_blank">
+			<?php load_inline_svg( 'facebook.svg' ); ?>
+		</a>
+	</div>
 </div>
 
 <div class="popup_search_modal">
-    <div class="popup_modal_close_button">
-        <?php load_inline_svg( 'close.svg' ); ?>
-    </div>
-    <div class="search_holder">
+	<div class="popup_modal_close_button">
+		<?php load_inline_svg( 'close.svg' ); ?>
+	</div>
+	<div class="search_holder">
 <!--        todo hard coding should be removed-->
-        <form role="search" class="search search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="GET">
-            <label> <span class="screen-reader-text">Search for</span>
-                <input autocomplete="off" type="text" class="search-field" name="s" placeholder="Search..." value="">
-            </label>
-            <input type="submit" class="search search-submit" value="Submit">
-            </input>
-        </form>
-    </div>
+		<form role="search" class="search search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="GET">
+			<label> <span class="screen-reader-text">Search for</span>
+				<input autocomplete="off" type="text" class="search-field" name="s" placeholder="Search..." value="">
+			</label>
+			<input type="submit" class="search search-submit" value="Submit">
+			</input>
+		</form>
+	</div>
 </div>
 
 </body>

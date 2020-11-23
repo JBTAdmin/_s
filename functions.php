@@ -342,11 +342,13 @@ function post_nav() {
 // todo back to top.
 
 
-// Disable JQuery
+/**
+ * Disable JQuery.
+ */
 function deregister_qjuery() {
-	if ( !is_admin() ) {
-		wp_deregister_script('jquery');
+	if ( ! is_admin() ) {
+		wp_deregister_script( 'jquery' );
 	}
 }
 
-add_action('wp_enqueue_scripts', 'deregister_qjuery');
+add_action( 'wp_enqueue_scripts', 'deregister_qjuery' );

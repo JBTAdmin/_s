@@ -19,13 +19,13 @@ $site_info_text_right = 'Crafted with &#10084; by <a href="https:ipoweruser.com"
 		<div class="main-footer">
 			
 			<?php if ( is_active_sidebar( 'footer-column-1' ) ) : ?>
-                <div class="footer-sidebar-1-wrapper">
-                    <div class="sidebar footer-sidebar-1-container">
-                        <ul id="footer-sidebar-1">
+				<div class="footer-sidebar-1-wrapper">
+					<div class="sidebar footer-sidebar-1-container">
+						<ul id="footer-sidebar-1">
 							<?php dynamic_sidebar( 'footer-column-1' ); ?>
-                        </ul>
-                    </div>
-                </div>
+						</ul>
+					</div>
+				</div>
 			<?php endif; ?>
 			<?php if ( has_nav_menu( 'footer-1' ) ) : ?>
 				<div class="footer-sidebar-2-wrapper">

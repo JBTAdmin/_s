@@ -9,9 +9,6 @@
 
 get_theme_mod( 'sidebar_listing', 'right' );
 
-//if ( ! is_active_sidebar( 'sidebar-alt' ) || get_theme_mod( 'sidebar_listing', 'right' ) === 'disable' ) {
-//	return;
-//}
 ?>
 
 <aside id="secondary-alt" class="widget-area sidebar-alt-aside sidebar-alt">

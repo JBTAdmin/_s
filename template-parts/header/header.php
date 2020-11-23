@@ -14,18 +14,18 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Top bar.
  */
 if ( ! function_exists( 'aaurora_top_bar_layout' ) ) {
-	
-//	$numbering_class = '';
+
+	// $numbering_class = '';
 	function aaurora_top_bar_layout() {
 
 		// Return if no top bar.
 		if ( 'disabled' === get_theme_mod( 'top_bar_layout_setting', 'disabled' ) ) {
 			return;
 		}
-		
+
 		?>
   
-		<div id="top-bar" class="top-menu aaurora-top-bar <?php get_theme_mod( 'top_bar_layout_setting' );  ?>">
+		<div id="top-bar" class="top-menu aaurora-top-bar <?php get_theme_mod( 'top_bar_layout_setting' ); ?>">
 			<div class="wrap">
 				<div class="header-top-bar">
 					<nav id="top-bar-navigation" class="secondary-navigation ">
@@ -67,13 +67,13 @@ if ( ! function_exists( 'aaurora_header_branding_layout' ) ) {
 		if ( true != get_theme_mod( 'aaurora_site_branding', true ) ) {
 			return;
 		}
-		
+
 		$numbering_class = '';
-		if( true === get_theme_mod( 'main_menu_numbering' ) ) {
+		if ( true === get_theme_mod( 'main_menu_numbering' ) ) {
 			$numbering_class = 'numbered';
 		}
-		
-		$container_alignment_class = 'header-menu-container ' . $numbering_class . ' aligned-menu-' . get_theme_mod( 'main_menu_align', 'right' ) ;
+
+		$container_alignment_class = 'header-menu-container ' . $numbering_class . ' aligned-menu-' . get_theme_mod( 'main_menu_align', 'right' );
 		?>
 		<div class="header-menu-bar">
 			<div class="wrap">
@@ -191,8 +191,8 @@ if ( ! function_exists( 'aaurora_hamburger_menu' ) ) :
 	 */
 	function aaurora_hamburger_menu() {
 		$sidebar_page_class = '';
-		if ( get_theme_mod( 'sidebar_listing', 'right' ) !== 'disable' || is_active_sidebar( 'sidebar-alt' )) :
-		    $sidebar_alt_class = 'menu_only';
+		if ( get_theme_mod( 'sidebar_listing', 'right' ) !== 'disable' || is_active_sidebar( 'sidebar-alt' ) ) :
+			$sidebar_alt_class = 'menu_only';
 			?>
 			<div class="hamburger-menu <?php echo esc_attr( $sidebar_alt_class ); ?>">
 				<div class="toggle sidebar-open desktop-sidebar-toggle" data-toggle-target=".sidebar-modal"
