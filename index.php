@@ -74,5 +74,5 @@ $sidebar_page_class = get_theme_mod( 'sidebar_layout_setting', 'content-only' );
 		</div>
 	</div>
 <?php
-get_footer();
 get_sidebar( 'alt' );
+get_footer();

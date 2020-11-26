@@ -31,20 +31,20 @@
 	<span class="screen-reader-text">Search</span>
 </a>
 
-<div class="aaurora-share" href="#">
+<div class="aaurora-share">
 	<a href="#">
 		<?php load_inline_svg( 'share.svg' ); ?>
 	</a>
 	<span class="screen-reader-text">Social Share</span>
 
 	<div class="social-share-inner">
-		<a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>&title=<?php the_title(); ?>&source=http://localhost:10013/#">
+		<a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>&title=<?php the_title(); ?>&source=<?php the_permalink(); ?>">
 			<?php load_inline_svg( 'linkedin.svg' ); ?>
 		</a>
-		<a href="http://twitter.com/home?status=Currentlyreading <?php the_permalink(); ?>" title="Click to share this post on Twitter"">
+		<a href="http://twitter.com/share?url=<?php the_permalink(); ?>" title="Click to share this post on Twitter">
 			<?php load_inline_svg( 'twitter.svg' ); ?>
 		</a>
-		<a href="http://www.facebook.com/share.php?u=<url>" onclick="return fbs_click()" target="_blank">
+		<a href="http://www.facebook.com/share.php?u=<?php the_permalink(); ?>" onclick="return fbs_click()" target="_blank">
 			<?php load_inline_svg( 'facebook.svg' ); ?>
 		</a>
 	</div>
@@ -61,10 +61,10 @@
 				<input autocomplete="off" type="text" class="search-field" name="s" placeholder="Search..." value="">
 			</label>
 			<input type="submit" class="search search-submit" value="Submit">
-			</input>
 		</form>
 	</div>
 </div>
 
+</div>
 </body>
 </html>

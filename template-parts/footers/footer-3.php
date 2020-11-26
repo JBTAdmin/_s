@@ -21,9 +21,7 @@ $site_info_text_right = 'Crafted with &#10084; by <a href=""></a> Team';
 			<?php if ( is_active_sidebar( 'footer-column-1' ) ) : ?>
 				<div class="footer-sidebar-1-wrapper">
 					<div class="sidebar footer-sidebar-1-container">
-						<ul id="footer-sidebar-1">
 							<?php dynamic_sidebar( 'footer-column-1' ); ?>
-						</ul>
 					</div>
 				</div>
 			<?php endif; ?>

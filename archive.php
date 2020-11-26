@@ -71,5 +71,5 @@ $sidebar_page_class = ' sidebar_position_' . get_theme_mod( 'sidebar_archive', '
 		</div>
 	</div>
 <?php
-get_footer();
 get_sidebar( 'alt' );
+get_footer();

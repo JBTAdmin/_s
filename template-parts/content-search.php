@@ -8,29 +8,29 @@
  */
 
 ?>
-
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'blog-post-article-3' ); ?>>
-
-	<div class="blog-type-list" style="background-image:url('<?php echo esc_url( get_the_post_thumbnail_url( get_the_ID(), 'full' ) ); ?>')">
-	</div>
-	<a href=" <?php echo esc_url( get_permalink() ); ?>" rel="bookmark"></a>
-	<div class="blog-type-list-content">
-		<!--            todo class names proper-->
-		<div class="post-date">
-			<span class="post-date-day"><?php echo get_the_date( 'd' ); ?></span>
-			<span class="post-date-month"><?php echo get_the_date( 'F' ); ?></span>
-		</div>
-		<div class="entry-header">
-			<?php
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-			?>
-			<div class="blog-list-content-meta-info">
-				<?php
-				aaurora_meta_category_list();
-				?>
-			</div>
-		</div><!-- .entry-header -->
-	</div>
-
+<!-- todo with different layout this section should change-->
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'blog-post-article-4' ); ?>>
+    <div  class="blog-type-list">
+        <div class="blog-article">
+            <div class="blog-type-list-content">
+                <div class="blog-type-published-date">
+					<?php echo aaurora_posted_on( true ); ?>
+                </div>
+                <div class="entry-header">
+					<?php
+					the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+					?>
+                </div><!-- .entry-header -->
+                <div class="blog-type-post-category">
+					<?php
+					$categories = get_the_category();
+					if ( ! empty( $categories ) ) {
+						echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
+					}
+					?>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </article><!-- #post-<?php the_ID(); ?> -->

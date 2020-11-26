@@ -74,5 +74,5 @@ $sidebar_page_class = ' sidebar_position_' . get_theme_mod( 'sidebar_search', 'r
 		</div>
 	</div>
 <?php
-get_footer();
 get_sidebar( 'alt' );
+get_footer();
