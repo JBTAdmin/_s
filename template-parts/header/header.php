@@ -15,16 +15,15 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 if ( ! function_exists( 'aaurora_top_bar_layout' ) ) {
 
-	// $numbering_class = '';
+	/**
+	 * Top Bar Layout.
+	 */
 	function aaurora_top_bar_layout() {
-
-		// Return if no top bar.
+			// Return if no top bar.
 		if ( 'disabled' === get_theme_mod( 'top_bar_layout_setting', 'disabled' ) ) {
 			return;
 		}
-
 		?>
-  
 		<div id="top-bar" class="top-menu aaurora-top-bar <?php get_theme_mod( 'top_bar_layout_setting' ); ?>">
 			<div class="wrap">
 				<div class="header-top-bar">
@@ -61,9 +60,13 @@ if ( ! function_exists( 'aaurora_top_bar_layout' ) ) {
  */
 if ( ! function_exists( 'aaurora_header_branding_layout' ) ) {
 
+	/**
+	 * Aorora Branding Layout.
+	 */
 	function aaurora_header_branding_layout() {
-
-		// Return if no header branding bar.
+		/**
+		 * Return if no Header Branding Bar.
+		 */
 		if ( true != get_theme_mod( 'aaurora_site_branding', true ) ) {
 			return;
 		}
@@ -115,6 +118,9 @@ if ( ! function_exists( 'aaurora_header_branding_layout' ) ) {
  */
 if ( ! function_exists( 'aaurora_header_main_menu_layout' ) ) {
 
+	/**
+	 * Header Main Layout.
+	 */
 	function aaurora_header_main_menu_layout() {
 
 		if ( true != get_theme_mod( 'aaurora_header_main_menu_layout', true ) ) {
@@ -131,6 +137,8 @@ if ( ! function_exists( 'aaurora_header_main_menu_layout' ) ) {
 if ( ! function_exists( 'aaurora_site_branding' ) ) :
 	/**
 	 * Displays Site Branding.
+	 *
+	 * @param string $location Needs to remove this todo.
 	 */
 	function aaurora_site_branding( $location ) {
 		?>
@@ -163,6 +171,8 @@ endif;
 if ( ! function_exists( 'aaurora_main_menu' ) ) :
 	/**
 	 * Displays Site Branding.
+	 *
+	 * @param String $menu_location Where this menu will be displayed.
 	 */
 	function aaurora_main_menu( $menu_location ) {
 		?>
@@ -191,10 +201,10 @@ if ( ! function_exists( 'aaurora_hamburger_menu' ) ) :
 	 */
 	function aaurora_hamburger_menu() {
 		$sidebar_alt_class = '';
-		if ( !is_active_sidebar( 'sidebar-alt' ) ) {
+		if ( ! is_active_sidebar( 'sidebar-alt' ) ) {
 			$sidebar_alt_class = 'menu_only';
-        }
-			?>
+		}
+		?>
 			<div class="hamburger-menu <?php echo esc_attr( $sidebar_alt_class ); ?>">
 				<div class="toggle sidebar-open desktop-sidebar-toggle" data-toggle-target=".sidebar-modal"
 						data-toggle-body-class="showing-sidebar-modal" aria-expanded="false">

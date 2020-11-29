@@ -111,7 +111,7 @@ Kirki::add_field(
 		),
 	)
 );
-// SECTION GENERAL END
+// SECTION GENERAL END.
 
 // SECTION: General Layout.
 Kirki::add_section(
@@ -210,7 +210,7 @@ Kirki::add_field(
 		'description' => esc_attr__( 'Here you can select Sidebar Layout.', 'aaurora' ),
 	)
 );
-//SECTION: LAYOUT END
+// SECTION: LAYOUT END.
 
 // SECTION: Padding and Margin.
 Kirki::add_section(

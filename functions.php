@@ -353,14 +353,14 @@ function deregister_qjuery() {
 
 add_action( 'wp_enqueue_scripts', 'deregister_qjuery' );
 
+// todo check how good it is and should i do it?
 /**
- * todo check how good it is and should i do it?
  * Remove type attribute. To Fix W3 Validation.
  * https://wordpress.stackexchange.com/questions/287830/remove-type-attribute-from-script-and-style-tags-added-by-wordpress
  */
 add_action(
 	'after_setup_theme',
 	function() {
-		add_theme_support( 'html5', [ 'script', 'style' ] );
+		add_theme_support( 'html5', array( 'script', 'style' ) );
 	}
 );

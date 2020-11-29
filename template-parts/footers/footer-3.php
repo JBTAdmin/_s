@@ -17,7 +17,6 @@ $site_info_text_right = 'Crafted with &#10084; by <a href=""></a> Team';
 <div id="colophon" class="site-footer-main">
 	<div class="wrap">
 		<div class="main-footer">
-			
 			<?php if ( is_active_sidebar( 'footer-column-1' ) ) : ?>
 				<div class="footer-sidebar-1-wrapper">
 					<div class="sidebar footer-sidebar-1-container">

@@ -14,22 +14,22 @@ if ( ! function_exists( 'aaurora_posted_on' ) ) :
 	 * @param boolean $date_only Optional. Return Date or echo date on screen. Default echo.
 	 */
 	function aaurora_posted_on( $date_only = false, $created_date = false ) {
-		
-		if($created_date){
+
+		if ( $created_date ) {
 			$time_string = '<span class="posted-on"> <time class="entry-date published" datetime="%1$s">%2$s</time></span>';
 			$time_string = sprintf(
 				$time_string,
 				esc_attr( get_the_date( DATE_W3C ) ),
 				esc_html( get_the_date() )
 			);
-        } else {
+		} else {
 			$time_string = '<span class="updated-on"> <time class="entry-date updated" datetime="%1$s">%2$s</time></span>';
 			$time_string = sprintf(
 				$time_string,
 				esc_attr( get_the_modified_date( DATE_W3C ) ),
 				esc_html( get_the_modified_date() )
 			);
-        }
+		}
 
 		$posted_on = sprintf(
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
@@ -284,66 +284,66 @@ if ( ! function_exists( 'aaurora_social_media' ) ) {
 	/**
 	 * Social Media.
 	 */
-	function aaurora_social_media( $social_class = '', $textOnly = false ) {
+	function aaurora_social_media( $social_class = '', $text_only = false ) {
 		if ( 'top-bar-social' === $social_class && get_theme_mod( 'top_bar_social_media_button', true ) !== true ) :
 			return;
 		endif;
 		?>
 
 		<div class="<?php echo esc_attr( $social_class ); ?>">
-            <ul class="aaurora-social-holder">
-                <li>Follow Us - </li>
-                <?php
-			if ( get_theme_mod( 'social_media_fb_url', '' ) !== '' ) :
-				?>
-            <li>
+			<ul class="aaurora-social-holder">
+				<li>Follow Us - </li>
+				<?php
+				if ( get_theme_mod( 'social_media_fb_url', '' ) !== '' ) :
+					?>
+			<li>
 				<a class="social-link facebook-social-icon"
 					href="<?php echo esc_url( get_theme_mod( 'social_media_fb_url' ) ); ?>" target="_blank">
-					<?php $textOnly ? print ' Fb.' : load_inline_svg( 'facebook.svg' ); ?>
+					<?php $text_only ? print ' Fb.' : load_inline_svg( 'facebook.svg' ); ?>
 				</a>
-            </li>
-			<?php endif; ?>
+			</li>
+				<?php endif; ?>
 			<?php if ( get_theme_mod( 'social_media_tw_url', '' ) !== '' ) : ?>
 				<li>
-                <a class="social-link twitter-social-icon"
+				<a class="social-link twitter-social-icon"
 					href="<?php echo esc_url( get_theme_mod( 'social_media_tw_url' ) ); ?>" target="_blank">
-	                <?php $textOnly ? print ' Tw.' : load_inline_svg( 'twitter.svg' ); ?>
+					<?php $text_only ? print ' Tw.' : load_inline_svg( 'twitter.svg' ); ?>
 				</a>
-                </li>
+				</li>
 			<?php endif; ?>
 			<?php if ( get_theme_mod( 'social_media_in_url', '' ) !== '' ) : ?>
 				<li>
-                <a class="social-link instagram-social-icon"
-					href="<?php echo esc_url( get_theme_mod( 'social_media_in_url' ) ); ?>" target="_blank">
-	                <?php $textOnly ? print ' In.' : load_inline_svg( 'instagram.svg' ); ?>
-				</a>
-                </li>
+					<a class="social-link instagram-social-icon"
+						href="<?php echo esc_url( get_theme_mod( 'social_media_in_url' ) ); ?>" target="_blank">
+						<?php $text_only ? print ' In.' : load_inline_svg( 'instagram.svg' ); ?>
+					</a>
+				</li>
 			<?php endif; ?>
 			<?php if ( get_theme_mod( 'social_media_ln_url', '' ) !== '' ) : ?>
 				<li>
-                <a class="social-link linkedin-social-icon"
-					href="<?php echo esc_url( get_theme_mod( 'social_media_ln_url' ) ); ?>" target="_blank">
-	                <?php $textOnly ? print ' Ln.' : load_inline_svg( 'linkedin.svg' ); ?>
-				</a>
-                </li>
+					<a class="social-link linkedin-social-icon"
+						href="<?php echo esc_url( get_theme_mod( 'social_media_ln_url' ) ); ?>" target="_blank">
+						<?php $text_only ? print ' Ln.' : load_inline_svg( 'linkedin.svg' ); ?>
+					</a>
+				</li>
 			<?php endif; ?>
-	            <?php if ( get_theme_mod( 'social_media_yt_url', '' ) !== '' ) : ?>
-                    <li>
-                        <a class="social-link youtube-social-icon"
-                           href="<?php echo esc_url( get_theme_mod( 'social_media_yt_url' ) ); ?>" target="_blank">
-				            <?php $textOnly ? print ' Yt.' : load_inline_svg( 'youtube.svg' ); ?>
-                        </a>
-                    </li>
-	            <?php endif; ?>
-	            <?php if ( get_theme_mod( 'social_media_gh_url', '' ) !== '' ) : ?>
-                    <li>
-                        <a class="social-link github-social-icon"
-                           href="<?php echo esc_url( get_theme_mod( 'social_media_gh_url' ) ); ?>" target="_blank">
-				            <?php $textOnly ? print ' Gh.' : load_inline_svg( 'github.svg' ); ?>
-                        </a>
-                    </li>
-	            <?php endif; ?>
-            </ul>
+				<?php if ( get_theme_mod( 'social_media_yt_url', '' ) !== '' ) : ?>
+					<li>
+						<a class="social-link youtube-social-icon"
+							href="<?php echo esc_url( get_theme_mod( 'social_media_yt_url' ) ); ?>" target="_blank">
+							<?php $text_only ? print ' Yt.' : load_inline_svg( 'youtube.svg' ); ?>
+						</a>
+					</li>
+				<?php endif; ?>
+				<?php if ( get_theme_mod( 'social_media_gh_url', '' ) !== '' ) : ?>
+					<li>
+						<a class="social-link github-social-icon"
+							href="<?php echo esc_url( get_theme_mod( 'social_media_gh_url' ) ); ?>" target="_blank">
+							<?php $text_only ? print ' Gh.' : load_inline_svg( 'github.svg' ); ?>
+						</a>
+					</li>
+				<?php endif; ?>
+			</ul>
 		</div>
 		<?php
 	}

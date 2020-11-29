@@ -34,25 +34,24 @@
 <div class="aaurora-share fixed visible">
 	<a href="#">
 		<?php load_inline_svg( 'share.svg' ); ?>
-    </a>
-    
-    <div class="aaurora-share-inner">
-        <a href="https://www.facebook.com/" target="blank">
-	        <?php load_inline_svg( 'facebook.svg' ); ?>
-        </a>
+	</a>
+	<div class="aaurora-share-inner">
+		<a href="https://www.facebook.com/" target="blank">
+			<?php load_inline_svg( 'facebook.svg' ); ?>
+		</a>
 
-        <a href="https://twitter.com/" target="blank">
-	        <?php load_inline_svg( 'twitter.svg' ); ?>
-        </a>
+		<a href="https://twitter.com/" target="blank">
+			<?php load_inline_svg( 'twitter.svg' ); ?>
+		</a>
 
-        <a href="https://www.linkedin.com/in/mistrykaran/" target="blank">
-	        <?php load_inline_svg( 'linkedin.svg' ); ?>
-        </a>
+		<a href="https://www.linkedin.com/in/mistrykaran/" target="blank">
+			<?php load_inline_svg( 'linkedin.svg' ); ?>
+		</a>
 
-        <a href="https://in.pinterest.com/mistrykaran91/" target="blank">
-            <i class="fa fa-pinterest pinterest" aria-hidden="true"></i>
-        </a>
-    </div>
+		<a href="https://in.pinterest.com/mistrykaran91/" target="blank">
+			<i class="fa fa-pinterest pinterest" aria-hidden="true"></i>
+		</a>
+	</div>
 </div>
 
 <div class="popup_search_modal">
