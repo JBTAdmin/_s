@@ -31,23 +31,28 @@
 	<span class="screen-reader-text">Search</span>
 </a>
 
-<div class="aaurora-share">
+<div class="aaurora-share fixed visible">
 	<a href="#">
 		<?php load_inline_svg( 'share.svg' ); ?>
-	</a>
-	<span class="screen-reader-text">Social Share</span>
+    </a>
+    
+    <div class="aaurora-share-inner">
+        <a href="https://www.facebook.com/" target="blank">
+	        <?php load_inline_svg( 'facebook.svg' ); ?>
+        </a>
 
-	<div class="social-share-inner">
-		<a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>&title=<?php the_title(); ?>&source=<?php the_permalink(); ?>">
-			<?php load_inline_svg( 'linkedin.svg' ); ?>
-		</a>
-		<a href="http://twitter.com/share?url=<?php the_permalink(); ?>" title="Click to share this post on Twitter">
-			<?php load_inline_svg( 'twitter.svg' ); ?>
-		</a>
-		<a href="http://www.facebook.com/share.php?u=<?php the_permalink(); ?>" onclick="return fbs_click()" target="_blank">
-			<?php load_inline_svg( 'facebook.svg' ); ?>
-		</a>
-	</div>
+        <a href="https://twitter.com/" target="blank">
+	        <?php load_inline_svg( 'twitter.svg' ); ?>
+        </a>
+
+        <a href="https://www.linkedin.com/in/mistrykaran/" target="blank">
+	        <?php load_inline_svg( 'linkedin.svg' ); ?>
+        </a>
+
+        <a href="https://in.pinterest.com/mistrykaran91/" target="blank">
+            <i class="fa fa-pinterest pinterest" aria-hidden="true"></i>
+        </a>
+    </div>
 </div>
 
 <div class="popup_search_modal">

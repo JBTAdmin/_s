@@ -1,56 +1,3 @@
-.aaurora-share {
-  position: fixed;
-  left: 34px;
-  bottom: 124px;
-  display: inline-flex;
-
-  cursor: pointer;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  box-shadow: 1px 1px 1px 1px $theme__color;
-  border: 1px solid #e7ebed;
-  background: #fff;
-  svg {
-    width: 24px;
-    height: 24px;
-  }
-
-  &:hover {
-    .social-share-inner {
-      //visibility: visible;
-      //opacity: 1;
-    }
-  }
-}
-
-.social-share-inner a {
-  border-radius: 50%;
-  padding: 7px;
-  width: 40px;
-  height: 40px;
-  background-color: #f8f8f8;
-  margin: 0.5rem;
-}
-
-.social-share-inner {
-  //display: flex;
-  //flex-direction: column;
-  position: absolute;
-  bottom: 8rem;
-  visibility: hidden;
-  opacity: 0;
-}
-
-.aaurora-share:hover .social-share-inner a:nth-child(1) {
-  transition: all 0.45s cubic-bezier(0.15, 0.2, 0.1, 1);
-  transform: translateY(-156px) scale(1);
-  opacity: 1;
-  visibility: visible;
-}
-
 @media screen and (max-width: 768px) {
   .aaurora-share {
     display: none;
@@ -60,4 +7,86 @@
     width: 100%;
     margin: auto;
   }
+}
+
+.aaurora-share.fixed > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20%;
+  width: 60px;
+  height: 60px;
+  box-shadow: 1px 1px 1px 1px $theme__color;
+  border: 1px solid #e7ebed;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.aaurora-share.fixed {
+  position: fixed;
+  right: 30px;
+  bottom: 104px;
+  height: 60px;
+  width: 60px;
+  line-height: 50px;
+  z-index: 1000;
+  transition: transform 0.45s cubic-bezier(0.15, 0.2, 0.1, 1);
+}
+
+.aaurora-share.fixed:hover {
+  height: 340px;
+}
+
+.aaurora-share.fixed .aaurora-share-inner {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.aaurora-share.fixed .aaurora-share-inner a {
+  line-height: 56px;
+  height: 46px;
+  width: 46px;
+  position: absolute;
+  opacity: 0;
+  border: none;
+  top: 0;
+  //box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
+  background: gold;
+  border-radius: 20%;
+  transition: all 0.45s cubic-bezier(0.15, 0.2, 0.1, 1);
+}
+
+.aaurora-share.fixed:hover .aaurora-share-inner a:nth-child(1) {
+  transform: translateY(-56px) scale(1);
+  opacity: 1;
+}
+
+.aaurora-share.fixed:hover .aaurora-share-inner a:nth-child(2) {
+  transform: translateY(-106px) scale(1);
+  opacity: 1;
+}
+
+.aaurora-share.fixed:hover .aaurora-share-inner a:nth-child(3) {
+  transform: translateY(-156px) scale(1);
+  opacity: 1;
+}
+
+.aaurora-share.fixed:hover .aaurora-share-inner a:nth-child(4) {
+  transform: translateY(-206px) scale(1);
+  opacity: 1;
 }

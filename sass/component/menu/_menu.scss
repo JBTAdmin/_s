@@ -229,16 +229,6 @@ li > ul.sub-menu {
     padding-left: 5px;
   }
 
-  //nav .sub-menu li:last-child {
-  //  padding-bottom: 40px;
-  //}
-
-  .header-menu li:hover > a::before {
-    width: 100%;
-    left: 0;
-    right: auto;
-  }
-
   /* All the properties should not be here*/
   .header-menu li:hover > ul,
   .header-menu li:focus > ul,
