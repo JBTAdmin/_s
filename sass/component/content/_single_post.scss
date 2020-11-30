@@ -27,10 +27,14 @@
 }
 
 .single-post .cat-links {
-  border-radius: 0.4rem;
-  padding: 0 10px;
+  border-radius: 10rem;
+  padding: 5px 10px;
   display: inline-block;
   margin-bottom: 10px;
-  color: $body_text_dark_color;
-  background: $theme__color;
+  color: #2b394e;
+  background: rgba(0, 0, 0, 0.06);
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  font-weight: 600;
+  font-size: 1rem;
 }

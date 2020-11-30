@@ -13,12 +13,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 20%;
+  border-radius: 50%;
   width: 60px;
   height: 60px;
-  box-shadow: 1px 1px 1px 1px $theme__color;
-  border: 1px solid #e7ebed;
-  background: #fff;
+  //box-shadow: 1px 1px 1px 1px $theme__color;
+  //border: 1px solid #e7ebed;
+  background: $theme__color;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -32,7 +32,7 @@
 
 .aaurora-share.fixed {
   position: fixed;
-  right: 30px;
+  left: 34px;
   bottom: 104px;
   height: 60px;
   width: 60px;
@@ -66,8 +66,8 @@
   border: none;
   top: 0;
   //box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
-  background: gold;
-  border-radius: 20%;
+  background: $theme__color;
+  border-radius: 50%;
   transition: all 0.45s cubic-bezier(0.15, 0.2, 0.1, 1);
 }
 
