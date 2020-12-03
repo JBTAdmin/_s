@@ -1,6 +1,6 @@
 /*!
-Theme Name: Aaurora
-Author: iPowerUser
+Theme Name: Blah Blah
+Author: Haha
 Author URI: https://ipoweruser.com/
 Description: Hi. I'm a theme called <code>Aaurora</code>, if you like. Aaurora is fast, customizable & beautiful WordPress Blog theme mainly suitable for blog. But it can also be used for personal portfolio, business website.
 Version: 1.0.0
@@ -555,8 +555,6 @@ tbody {
   border-color: inherit; }
 
 thead {
-  background-color: var(--theme-color);
-  border-color: var(--theme-color);
   color: #000; }
 
 tr {
@@ -1719,10 +1717,10 @@ h1.entry-title {
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.5px;
-  margin-bottom: 3px;
-  padding: 3px 5px 1px;
+  padding: 5px;
   text-transform: uppercase;
-  text-decoration: none; }
+  text-decoration: none;
+  border-radius: 1rem; }
 
 .blog-type-published-date {
   color: #263238;
@@ -1757,12 +1755,12 @@ h1.entry-title {
   padding: 5px 10px;
   display: inline-block;
   margin-bottom: 10px;
-  color: #2b394e;
+  color: #546e7a;
   background: rgba(0, 0, 0, 0.06);
   text-transform: uppercase;
   letter-spacing: 0.3rem;
   font-weight: 600;
-  font-size: 1rem; }
+  font-size: 1.2rem; }
 
 /* Comment
 --------------------------------------------- */
@@ -2443,3 +2441,23 @@ ul.aaurora-social-holder > li {
   margin-right: auto;
   margin-bottom: 1.5em; }
 
+/* IpowerUser
+--------------------------------------------- */
+.pros_cons_tables .wp-block-column {
+  margin-left: 0; }
+
+.pros_cons_tables p.has-background {
+  padding: 10px 38px;
+  margin: 0 0 1rem 0; }
+
+.theme_review_p {
+  margin: 0 0 1rem 0; }
+
+
+ul.pros_list li {
+  list-style-image: url("./assets/images/check-circle.svg");
+}
+
+ul.cons_list li {
+  list-style-image: url("./assets/images/minus-circle.svg");
+}
