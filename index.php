@@ -22,6 +22,10 @@ if ( is_active_sidebar( 'sidebar-1' ) ) {
 $sidebar_page_class = ' ' . get_theme_mod( 'sidebar_sticky', '0' );
 
 $sidebar_page_class = get_theme_mod( 'sidebar_layout_setting', 'content-only' );
+
+//R_Debug::list_hooks();
+error_log( wp_debug_backtrace_summary() );
+
 ?>
 
 	<div class="site-container">

@@ -1,6 +1,6 @@
 /*!
-Theme Name: Blah Blah
-Author: Haha
+Theme Name: Aaurora
+Author: iPowerUser
 Author URI: https://ipoweruser.com/
 Description: Hi. I'm a theme called <code>Aaurora</code>, if you like. Aaurora is fast, customizable & beautiful WordPress Blog theme mainly suitable for blog. But it can also be used for personal portfolio, business website.
 Version: 1.0.0
@@ -2441,23 +2441,3 @@ ul.aaurora-social-holder > li {
   margin-right: auto;
   margin-bottom: 1.5em; }
 
-/* IpowerUser
---------------------------------------------- */
-.pros_cons_tables .wp-block-column {
-  margin-left: 0; }
-
-.pros_cons_tables p.has-background {
-  padding: 10px 38px;
-  margin: 0 0 1rem 0; }
-
-.theme_review_p {
-  margin: 0 0 1rem 0; }
-
-
-ul.pros_list li {
-  list-style-image: url("./assets/images/check-circle.svg");
-}
-
-ul.cons_list li {
-  list-style-image: url("./assets/images/minus-circle.svg");
-}
