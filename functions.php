@@ -218,7 +218,7 @@ add_image_size( 'aaurora-blog-single-post-no-sidebar', 1000, 340, true );
 
 //var_dump($wp_actions);
 
-//require dirname( __FILE__ ) . '/inc/admin/class-aaurora-admin.php';
+require dirname( __FILE__ ) . '/inc/admin/class-aaurora-admin.php';
 //
 //require dirname( __FILE__ ) . '/no_check_in/r-debug.php';
 
