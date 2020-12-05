@@ -59,3 +59,30 @@ function aaurora_customize_preview_js() {
 	wp_enqueue_script( 'aaurora-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
 add_action( 'customize_preview_init', 'aaurora_customize_preview_js' );
+
+
+
+// Kirki Related.
+// todo See if below options related to kirki needs to be enabled or not.
+/**
+ * Uses Embedded Kirki.
+ */
+require_once get_parent_theme_file_path('/inc/kirki/kirki.php' );
+
+/**
+ * Embedded Kirki location.  // todo need to check if it really required
+ */
+function aaurora_kirki_configuration() {
+	return array( 'url_path' => get_stylesheet_directory_uri() . '/inc/kirki/' );
+}
+add_filter( 'kirki/config', 'aaurora_kirki_configuration' );
+
+/**
+ * Use CDN Font instead of hosted fonts in Kirki.
+ */
+add_filter( 'kirki_use_local_fonts', '__return_false' );
+
+/**
+ * Kirki Customization File Location.
+ */
+require get_template_directory() . '/inc/kirki-configuration.php';

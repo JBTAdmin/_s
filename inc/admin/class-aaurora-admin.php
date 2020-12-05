@@ -61,7 +61,7 @@ if ( ! class_exists( 'Aaurora_Admin' ) ) :
 			/**
 			 * Add notices.
 			 */
-			add_action( 'admin_notices', array( $this, 'admin_notices' ) );
+//			add_action( 'admin_notices', array( $this, 'admin_notices' ) );
 
 			/**
 			 * After admin loaded
