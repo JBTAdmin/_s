@@ -8,13 +8,13 @@
  * @author      Aaurora Team <hello@aaurorawp.com>
  * @since       1.0.0
  */
-//todo need to revisit the whle admin page code
+// todo need to revisit the whle admin page code
 /**
  * Do not allow direct script access.
  */
 if ( ! defined( 'ABSPATH' ) ) {
-    var_dump('Exiting here Only');
-    var_dump($wp_actions);
+	var_dump( 'Exiting here Only' );
+	var_dump( $wp_actions );
 	exit;
 }
 
@@ -31,7 +31,7 @@ if ( ! class_exists( 'Aaurora_Admin' ) ) :
 		 * @since 1.0.0
 		 */
 		public function __construct() {
-		 
+
 			/**
 			 * Include admin files.
 			 */
@@ -61,13 +61,13 @@ if ( ! class_exists( 'Aaurora_Admin' ) ) :
 			/**
 			 * Add notices.
 			 */
-//			add_action( 'admin_notices', array( $this, 'admin_notices' ) );
+			// add_action( 'admin_notices', array( $this, 'admin_notices' ) );
 
 			/**
 			 * After admin loaded
 			 */
 			do_action( 'aaurora_admin_loaded' );
-			
+
 		}
 
 		/**
@@ -77,7 +77,6 @@ if ( ! class_exists( 'Aaurora_Admin' ) ) :
 		 */
 		private function includes() {
 
-
 			/**
 			 * Include Aaurora welcome page.
 			 */
@@ -86,7 +85,7 @@ if ( ! class_exists( 'Aaurora_Admin' ) ) :
 			/**
 			 * Include Aaurora meta boxes.
 			 */
-//			require_once dirname( __FILE__ ) . '/metabox/class-aaurora-meta-boxes.php'; // phpcs:ignore
+			// require_once dirname( __FILE__ ) . '/metabox/class-aaurora-meta-boxes.php'; // phpcs:ignore
 		}
 
 		/**
@@ -100,9 +99,9 @@ if ( ! class_exists( 'Aaurora_Admin' ) ) :
 			/**
 			 * Do not enqueue if we are not on one of our pages.
 			 */
-//			if ( ! aaurora_is_admin_page( $hook ) ) {
-//				return;
-//			}
+			// if ( ! aaurora_is_admin_page( $hook ) ) {
+			// return;
+			// }
 
 			// Script debug.
 			$prefix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? 'dev/' : '';
@@ -174,11 +173,11 @@ if ( ! class_exists( 'Aaurora_Admin' ) ) :
 			/**
 			 * Only do this if we are on one of our plugin pages.
 			 */
-//			if ( aaurora_is_admin_page( $base ) ) {
-//				return apply_filters( 'aaurora_footer_version', esc_html__( 'Aaurora Theme', 'aaurora' ) . ' ' . '1.0.0' . '<br/><a href="' . esc_url( 'https://twitter.com/aaurorawp' ) . '" target="_blank" rel="noopener noreferrer"><span class="dashicons dashicons-twitter"></span></a><a href="' . esc_url( 'https://facebook.com/aaurorawp' ) . '" target="_blank" rel="noopener noreferrer"><span class="dashicons dashicons-facebook"></span></a>' );
-//			} else {
+			// if ( aaurora_is_admin_page( $base ) ) {
+			// return apply_filters( 'aaurora_footer_version', esc_html__( 'Aaurora Theme', 'aaurora' ) . ' ' . '1.0.0' . '<br/><a href="' . esc_url( 'https://twitter.com/aaurorawp' ) . '" target="_blank" rel="noopener noreferrer"><span class="dashicons dashicons-twitter"></span></a><a href="' . esc_url( 'https://facebook.com/aaurorawp' ) . '" target="_blank" rel="noopener noreferrer"><span class="dashicons dashicons-facebook"></span></a>' );
+			// } else {
 				return $text;
-//			}
+			// }
 		}
 
 		/**
@@ -189,9 +188,9 @@ if ( ! class_exists( 'Aaurora_Admin' ) ) :
 		 */
 		public function filter_admin_footer_text( $text ) {
 
-//			if ( aaurora_is_admin_page() ) {
-//				return;
-//			}
+			// if ( aaurora_is_admin_page() ) {
+			// return;
+			// }
 
 			return $text;
 		}
@@ -204,10 +203,10 @@ if ( ! class_exists( 'Aaurora_Admin' ) ) :
 		public function admin_header() {
 
 			$base = get_current_screen()->base;
-//
-//			if ( ! aaurora_is_admin_page( $base ) ) {
-//				return;
-//			}
+			//
+			// if ( ! aaurora_is_admin_page( $base ) ) {
+			// return;
+			// }
 			?>
 
 			<div id="aaurora-header">
@@ -236,9 +235,9 @@ if ( ! class_exists( 'Aaurora_Admin' ) ) :
 
 			$base = get_current_screen()->base;
 
-//			if ( ! aaurora_is_admin_page( $base ) || aaurora_is_admin_page( $base, 'aaurora_wizard' ) ) {
-//				return;
-//			}
+			// if ( ! aaurora_is_admin_page( $base ) || aaurora_is_admin_page( $base, 'aaurora_wizard' ) ) {
+			// return;
+			// }
 			?>
 			<div id="aaurora-footer">
 			<ul>
@@ -250,7 +249,7 @@ if ( ! class_exists( 'Aaurora_Admin' ) ) :
 
 			<?php
 		}
-		
+
 	}
 endif;
 

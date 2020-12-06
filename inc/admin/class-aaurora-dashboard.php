@@ -6,7 +6,7 @@
  * @author      Aaurora Team <hello@aaurorawp.com>
  * @since       1.0.0
  */
-//todo need to revisit the whle admin page code
+// todo need to revisit the whle admin page code
 /**
  * Do not allow direct script access.
  */
@@ -224,7 +224,7 @@ if ( ! class_exists( 'Aaurora_Dashboard' ) ) :
 
 				<div class="aaurora-section large-section">
 					<div class="aaurora-hero">
-<!--						<img src="--><?php //echo esc_url( AAURORA_THEME_URI . '/assets/images/si-customize.svg' ); ?><!--" alt="--><?php //echo esc_html( 'Customize' ); ?><!--" />-->
+<!--						<img src="--><?php // echo esc_url( AAURORA_THEME_URI . '/assets/images/si-customize.svg' ); ?><!--" alt="--><?php // echo esc_html( 'Customize' ); ?><!--" />-->
 					</div>
 
 					<h2><?php esc_html_e( 'Let‘s customize your website', 'aaurora' ); ?></h2>

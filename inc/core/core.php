@@ -1,7 +1,6 @@
 <?php
 /**
  * Core Theme setup.
- *
  */
 
 if ( ! function_exists( 'aaurora_setup' ) ) :
@@ -81,15 +80,15 @@ if ( ! function_exists( 'aaurora_setup' ) ) :
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
-		
+
 		/**
 		 * Gutenberg Support.
 		 * Theme supports wide images, galleries and videos.
 		 */
 		add_theme_support( 'align-wide' );
-		
+
 		add_theme_support( 'wp-block-styles' );
-		
+
 		/**
 		 * Add support for core custom logo.
 		 *
@@ -131,7 +130,7 @@ add_action( 'after_setup_theme', 'aaurora_content_width', 0 );
 function aaurora_scripts() {
 	wp_enqueue_style( 'aaurora-style', get_stylesheet_uri(), array(), AAURORA_VERSION );
 	wp_style_add_data( 'aaurora-style', 'rtl', 'replace' );
-	
+
 	wp_enqueue_script( 'aaurora-main', get_template_directory_uri() . '/js/main.js', array(), AAURORA_VERSION, true );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

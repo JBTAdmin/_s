@@ -20,7 +20,7 @@ require get_template_directory() . '/inc/widgets.php';
 require get_template_directory() . '/inc/custom-header.php';
 require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/theme-hooks.php';
-require get_template_directory() . '/template-parts/header/header.php'; //todo why we need this as it is specific to header template file.
+require get_template_directory() . '/template-parts/header/header.php'; // todo why we need this as it is specific to header template file.
 require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/customizer.php';
 
@@ -38,11 +38,11 @@ if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
 
-//var_dump($wp_actions);
+// var_dump($wp_actions);
 
 require dirname( __FILE__ ) . '/inc/admin/class-aaurora-admin.php';
 //
-//require dirname( __FILE__ ) . '/no_check_in/r-debug.php';
+// require dirname( __FILE__ ) . '/no_check_in/r-debug.php';
 
 /**
  * Disable JQuery.

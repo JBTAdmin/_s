@@ -67,7 +67,7 @@ add_action( 'customize_preview_init', 'aaurora_customize_preview_js' );
 /**
  * Uses Embedded Kirki.
  */
-require_once get_parent_theme_file_path('/inc/kirki/kirki.php' );
+require_once get_parent_theme_file_path( '/inc/kirki/kirki.php' );
 
 /**
  * Embedded Kirki location.  // todo need to check if it really required
