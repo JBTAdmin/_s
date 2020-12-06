@@ -17,14 +17,14 @@ $has_background   = Go\has_footer_background();
 
 			<?php Go\display_site_branding( array( 'description' => false ) ); ?>
 
-			<?php if ( has_nav_menu( 'footer-1' ) || is_customize_preview() ) : ?>
+			<?php if ( has_nav_menu( 'aaurora-footer-1' ) || is_customize_preview() ) : ?>
 				<nav class="footer-navigation footer-navigation--1 text-sm" aria-label="<?php esc_attr_e( 'Primary Footer Menu', 'aaurora' ); ?>">
-					<span class="footer-navigation__title"><?php echo esc_html( wp_get_nav_menu_name( 'footer-1' ) ); ?></span>
+					<span class="footer-navigation__title"><?php echo esc_html( wp_get_nav_menu_name( 'aaurora-footer-1' ) ); ?></span>
 
 					<?php
 						wp_nav_menu(
 							array(
-								'theme_location' => 'footer-1',
+								'theme_location' => 'aaurora-footer-1',
 								'menu_class'     => 'footer-menu footer-menu--1 list-reset',
 								'depth'          => 1,
 							)
@@ -33,14 +33,14 @@ $has_background   = Go\has_footer_background();
 				</nav>
 			<?php endif; ?>
 
-			<?php if ( has_nav_menu( 'footer-2' ) || is_customize_preview() ) : ?>
+			<?php if ( has_nav_menu( 'aaurora-footer-2' ) || is_customize_preview() ) : ?>
 				<nav class="footer-navigation footer-navigation--2 text-sm" aria-label="<?php esc_attr_e( 'Secondary Footer Menu', 'aaurora' ); ?>">
-					<span class="footer-navigation__title"><?php echo esc_html( wp_get_nav_menu_name( 'footer-2' ) ); ?></span>
+					<span class="footer-navigation__title"><?php echo esc_html( wp_get_nav_menu_name( 'aaurora-footer-2' ) ); ?></span>
 
 					<?php
 						wp_nav_menu(
 							array(
-								'theme_location' => 'footer-2',
+								'theme_location' => 'aaurora-footer-2',
 								'menu_class'     => 'footer-menu footer-menu--2 list-reset',
 								'depth'          => 1,
 							)
@@ -49,14 +49,14 @@ $has_background   = Go\has_footer_background();
 				</nav>
 			<?php endif; ?>
 
-			<?php if ( has_nav_menu( 'footer-3' ) || is_customize_preview() ) : ?>
+			<?php if ( has_nav_menu( 'aaurora-footer-3' ) || is_customize_preview() ) : ?>
 				<nav class="footer-navigation footer-navigation--3 text-sm" aria-label="<?php esc_attr_e( 'Tertiary Footer Menu', 'aaurora' ); ?>">
-					<span class="footer-navigation__title"><?php echo esc_html( wp_get_nav_menu_name( 'footer-3' ) ); ?></span>
+					<span class="footer-navigation__title"><?php echo esc_html( wp_get_nav_menu_name( 'aaurora-footer-3' ) ); ?></span>
 
 					<?php
 						wp_nav_menu(
 							array(
-								'theme_location' => 'footer-3',
+								'theme_location' => 'aaurora-footer-3',
 								'menu_class'     => 'footer-menu footer-menu--3 list-reset',
 								'depth'          => 1,
 							)

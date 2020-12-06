@@ -54,6 +54,6 @@ get_theme_mod( 'sidebar_listing', 'right' );
 		)
 	);
 	?>
-	<?php dynamic_sidebar( 'sidebar-alt' ); ?>
+	<?php dynamic_sidebar( 'aaurora-sidebar-alt' ); ?>
 </aside><!-- #secondary -->
 <div class="sidebar-overlay"></div>

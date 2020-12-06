@@ -2,10 +2,8 @@
 /**
  * Footer #3
  *
- * @package Go
  */
 
-$has_background = Go\has_footer_background();
 ?>
 
 <footer id="colophon" class="site-footer site-footer--2 <?php echo esc_attr( $has_background ); ?>">
@@ -17,7 +15,7 @@ $has_background = Go\has_footer_background();
 				<?php
 					wp_nav_menu(
 						array(
-							'theme_location' => 'footer-1',
+							'theme_location' => 'aaurora-footer-1',
 							'menu_class'     => 'footer-menu footer-menu--1 list-reset',
 							'depth'          => 1,
 						)

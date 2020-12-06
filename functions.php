@@ -15,34 +15,29 @@ if ( ! defined( 'AAURORA_VERSION' ) ) {
 // todo Check this????.
 
 require get_template_directory() . '/inc/core/core.php';
-require get_template_directory() . '/inc/core/helper.php';
+require get_template_directory() . '/inc/helper.php';
 require get_template_directory() . '/inc/widgets.php';
 require get_template_directory() . '/inc/custom-header.php';
 require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/theme-hooks.php';
-require get_template_directory() . '/template-parts/header/header.php'; // todo why we need this as it is specific to header template file.
 require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/customizer.php';
+require get_template_directory() . '/template-parts/header/header.php'; // todo why we need this as it is specific to header template file.
 
-/**
- * Load Jetpack compatibility file.
- */
+
+// Compatibility
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-/**
- * Load WooCommerce compatibility file.
- */
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
 
-// var_dump($wp_actions);
-
-require dirname( __FILE__ ) . '/inc/admin/class-aaurora-admin.php';
-//
-// require dirname( __FILE__ ) . '/no_check_in/r-debug.php';
+// Admin
+if ( is_admin() ) {
+	require dirname( __FILE__ ) . '/inc/admin/class-aaurora-admin.php';
+}
 
 /**
  * Disable JQuery.
@@ -52,7 +47,6 @@ function deregister_jquery() {
 		wp_deregister_script( 'jquery' );
 	}
 }
-
 add_action( 'wp_enqueue_scripts', 'deregister_jquery' );
 
 // todo check how good it is and should i do it?
@@ -64,7 +58,7 @@ add_action( 'wp_enqueue_scripts', 'deregister_jquery' );
  */
 add_action(
 	'after_setup_theme',
-	function() {
+	function () {
 		add_theme_support( 'html5', array( 'script', 'style' ) );
 	}
 );

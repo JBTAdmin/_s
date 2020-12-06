@@ -13,8 +13,6 @@
  * Do not allow direct script access.
  */
 if ( ! defined( 'ABSPATH' ) ) {
-	var_dump( 'Exiting here Only' );
-	var_dump( $wp_actions );
 	exit;
 }
 
@@ -128,36 +126,6 @@ if ( ! class_exists( 'Aaurora_Admin' ) ) :
 				true
 			);
 
-			/**
-			 * Localize admin strings.
-			 */
-			$texts = array(
-				'install'               => esc_html__( 'Install', 'aaurora' ),
-				'install-inprogress'    => esc_html__( 'Installing...', 'aaurora' ),
-				'activate-inprogress'   => esc_html__( 'Activating...', 'aaurora' ),
-				'deactivate-inprogress' => esc_html__( 'Deactivating...', 'aaurora' ),
-				'active'                => esc_html__( 'Active', 'aaurora' ),
-				'retry'                 => esc_html__( 'Retry', 'aaurora' ),
-				'please_wait'           => esc_html__( 'Please Wait...', 'aaurora' ),
-				'importing'             => esc_html__( 'Importing... Please Wait...', 'aaurora' ),
-				'currently_processing'  => esc_html__( 'Currently processing: ', 'aaurora' ),
-				'import'                => esc_html__( 'Import', 'aaurora' ),
-				'import_demo'           => esc_html__( 'Import Demo', 'aaurora' ),
-				'importing_notice'      => esc_html__( 'The demo importer is still working. Closing this window may result in failed import.', 'aaurora' ),
-				'import_complete'       => esc_html__( 'Import Complete!', 'aaurora' ),
-				'import_complete_desc'  => esc_html__( 'The demo has been imported.', 'aaurora' ) . ' <a href="' . esc_url( get_home_url() ) . '">' . esc_html__( 'Visit site.', 'aaurora' ) . '</a>',
-			);
-
-			$strings = array(
-				'ajaxurl'       => admin_url( 'admin-ajax.php' ),
-				'wpnonce'       => wp_create_nonce( 'aaurora_nonce' ),
-				'texts'         => $texts,
-				'color_pallete' => array( '#3857f1', '#06cca6', '#2c2e3a', '#e4e7ec', '#f0b849', '#ffffff', '#000000' ),
-			);
-
-			$strings = apply_filters( 'aaurora_admin_strings', $strings );
-
-			wp_localize_script( 'aaurora-admin-script', 'aaurora_strings', $strings );
 		}
 
 		/**

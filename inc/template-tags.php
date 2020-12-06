@@ -7,6 +7,17 @@
  * @package aaurora
  */
 
+if ( ! function_exists( 'wp_body_open' ) ) :
+	/**
+	 * Shim for sites older than 5.2.
+	 *
+	 * @link https://core.trac.wordpress.org/ticket/12563
+	 */
+	function wp_body_open() {
+		do_action( 'wp_body_open' );
+	}
+endif;
+
 if ( ! function_exists( 'aaurora_posted_on' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time.
@@ -73,6 +84,7 @@ if ( ! function_exists( 'aaurora_meta_category_list' ) ) :
 		}
 	}
 endif;
+
 if ( ! function_exists( 'aaurora_meta_tag_list' ) ) :
 	/**
 	 * Prints meta information for the tags.
@@ -87,6 +99,7 @@ if ( ! function_exists( 'aaurora_meta_tag_list' ) ) :
 		}
 	}
 endif;
+
 if ( ! function_exists( 'aaurora_meta_comment' ) ) :
 	/**
 	 * Prints meta information for comment.
@@ -191,96 +204,7 @@ if ( ! function_exists( 'aaurora_post_thumbnail' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'wp_body_open' ) ) :
-	/**
-	 * Shim for sites older than 5.2.
-	 *
-	 * @link https://core.trac.wordpress.org/ticket/12563
-	 */
-	function wp_body_open() {
-		do_action( 'wp_body_open' );
-	}
-endif;
-
-
-/**
- * Load an inline SVG.
- *
- * @param string $filename The filename of the SVG.
- *
- * @return void
- */
-function load_inline_svg( $filename ) {
-
-	ob_start();
-
-	locate_template(
-		"assets/images/{$filename}",
-		true,
-		false
-	);
-
-	echo wp_kses(
-		ob_get_clean(),
-		array_merge(
-			wp_kses_allowed_html( 'post' ),
-			array(
-				'svg'      => array(
-					'role'            => true,
-					'width'           => true,
-					'height'          => true,
-					'fill'            => true,
-					'xmlns'           => true,
-					'viewbox'         => true,
-					'aria-hidden'     => true,
-					'stroke'          => true,
-					'stroke-width'    => true,
-					'stroke-linecap'  => true,
-					'stroke-linejoin' => true,
-					'rect'            => true,
-					'circle'          => true,
-					'path'            => true,
-					'polyline'        => true,
-				),
-				'path'     => array(
-					'd'              => true,
-					'fill'           => true,
-					'fill-rule'      => true,
-					'stroke'         => true,
-					'stroke-width'   => true,
-					'stroke-linecap' => true,
-				),
-				'line'     => array(
-					'x1' => true,
-					'y1' => true,
-					'x2' => true,
-					'y2' => true,
-				),
-				'polyline' => array(
-					'points' => true,
-				),
-				'rect'     => array(
-					'x'      => true,
-					'y'      => true,
-					'height' => true,
-					'width'  => true,
-					'rx'     => true,
-					'ry'     => true,
-				),
-				'circle'   => array(
-					'cx' => true,
-					'cy' => true,
-					'r'  => true,
-				),
-			)
-		)
-	);
-}
-
-// todo probably this method shold be moved to proper location. And remove unnecessary mapping.
-
-
-if ( ! function_exists( 'aaurora_social_media' ) ) {
+if ( ! function_exists( 'aaurora_social_media' ) ) :
 	/**
 	 * Social Media.
 	 */
@@ -347,4 +271,6 @@ if ( ! function_exists( 'aaurora_social_media' ) ) {
 		</div>
 		<?php
 	}
-} // aaurora_social_media.
+endif;
+
+

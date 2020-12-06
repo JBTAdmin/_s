@@ -463,67 +463,6 @@ if ( ! class_exists( 'Aaurora_Dashboard' ) ) :
 		}
 
 		/**
-		 * Activate plugin.
-		 *
-		 * @since 1.0.0
-		 */
-		public function activate_plugin() {
-
-			// Security check.
-			check_ajax_referer( 'aaurora_nonce' );
-
-			// Plugin data.
-			$plugin = isset( $_POST['plugin'] ) ? sanitize_text_field( wp_unslash( $_POST['plugin'] ) ) : '';
-
-			if ( empty( $plugin ) ) {
-				wp_send_json_error( esc_html__( 'Missing plugin data', 'aaurora' ) );
-			}
-
-			if ( $plugin ) {
-
-				$response = aaurora_plugin_utilities()->activate_plugin( $plugin );
-
-				if ( is_wp_error( $response ) ) {
-					wp_send_json_error( $response->get_error_message(), $response->get_error_code() );
-				}
-
-				wp_send_json_success();
-			}
-
-			wp_send_json_error( esc_html__( 'Failed to activate plugin. Missing plugin data.', 'aaurora' ) );
-		}
-
-		/**
-		 * Deactivate plugin.
-		 *
-		 * @since 1.0.0
-		 */
-		public function deactivate_plugin() {
-
-			// Security check.
-			check_ajax_referer( 'aaurora_nonce' );
-
-			// Plugin data.
-			$plugin = isset( $_POST['plugin'] ) ? sanitize_text_field( wp_unslash( $_POST['plugin'] ) ) : '';
-
-			if ( empty( $plugin ) ) {
-				wp_send_json_error( esc_html__( 'Missing plugin data', 'aaurora' ) );
-			}
-
-			if ( $plugin ) {
-				$response = aaurora_plugin_utilities()->deactivate_plugin( $plugin );
-
-				if ( is_wp_error( $response ) ) {
-					wp_send_json_error( $response->get_error_message(), $response->get_error_code() );
-				}
-
-				wp_send_json_success();
-			}
-
-			wp_send_json_error( esc_html__( 'Failed to deactivate plugin. Missing plugin data.', 'aaurora' ) );
-		}
-
-		/**
 		 * Highlight dashboard page for plugins page.
 		 *
 		 * @since 1.0.0
