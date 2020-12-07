@@ -7,35 +7,33 @@
  * @package aaurora
  */
 
-?>
-<div class="article-container">
-	<article id="post-<?php the_ID(); ?>" <?php post_class( 'post-article' ); ?>>
-		<div class="entry-header">
-			<?php
-			aaurora_meta_category_list();
-			the_title( '<h1 class="entry-title">', '</h1>' );
+/**
+ * Do not allow direct script access.
+ */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
-			if ( 'post' === get_post_type() ) :
-				?>
-				<div class="entry-meta">
-					<?php
-					aaurora_posted_by();
-					aaurora_posted_on();
-					?>
-				</div><!-- .entry-meta -->
-			<?php endif; ?>
-		</div><!-- .entry-header -->
+?>
+
+<div class="article-container">
+    <article id="post-<?php the_ID(); ?>" <?php post_class( 'post-article' ); ?>>
+        <div class="entry-header">
+			<?php
+			get_template_part( 'template-parts/single/single-category' );
+			get_template_part( 'template-parts/single/single-heading' );
+			get_template_part( 'template-parts/single/single-metadata' );
+			?>
+        </div><!-- .entry-header -->
 		<?php
-		if ( get_theme_mod( 'blog_post_featured_image', true ) === true ) :
-			aaurora_post_thumbnail();
-		endif;
+		get_template_part( 'template-parts/single/single-thumbnail' );
 		?>
-		<div class="entry-content">
+        <div class="entry-content">
 			<?php
 			the_content(
 				sprintf(
 					wp_kses(
-						/* translators: %s: Name of current post. Only visible to screen readers */
+					/* translators: %s: Name of current post. Only visible to screen readers */
 						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'aaurora' ),
 						array(
 							'span' => array(
@@ -46,19 +44,18 @@
 					wp_kses_post( get_the_title() )
 				)
 			);
-
+			echo 'page link before';
 			wp_link_pages(
 				array(
 					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'aaurora' ),
 					'after'  => '</div>',
 				)
 			);
+			echo 'page link after';
 			?>
-		</div><!-- .entry-content -->
-	</article><!-- #post-<?php the_ID(); ?> -->
+        </div><!-- .entry-content -->
+    </article><!-- #post-<?php the_ID(); ?> -->
 	<?php
-	if ( get_theme_mod( 'blog_post_tags', true ) === true ) :
-		aaurora_meta_tag_list();
-	endif;
+	get_template_part( 'template-parts/single/single-tag' );
 	?>
 </div>
