@@ -15,68 +15,36 @@
 get_header();
 
 $sidebar_page_class = '';
-if ( is_active_sidebar( 'sidebar-1' ) ) {
-	$sidebar_page_class = ' with-right-sidebar';
-}
-
-$sidebar_page_class = ' ' . get_theme_mod( 'sidebar_sticky', '0' );
-
-$sidebar_page_class = get_theme_mod( 'sidebar_layout_setting', 'content-only' );
+//if ( is_active_sidebar( 'sidebar-1' ) ) {
+//	$sidebar_page_class = ' with-right-sidebar';
+//}
+//
+//$sidebar_page_class = ' ' . get_theme_mod( 'sidebar_sticky', '0' );
+//
+//$sidebar_page_class = get_theme_mod( 'sidebar_layout_setting', 'content-only' );
 
 // R_Debug::list_hooks();
 error_log( wp_debug_backtrace_summary() );
 
 ?>
 
-	<div class="site-container">
-		<div class="wrap">
-			<div class="main-container">
+    <div class="site-container">
+        <div class="wrap">
+            <div class="main-container">
 				<?php
-				get_sidebar( 'left' );
+				aaurora_left_sidebar();
+				aaurora_content_before();
 				?>
-				<main id="primary" class="site-main primary-content <?php echo esc_attr( $sidebar_page_class ); ?>">
-
-					<?php
-					if ( have_posts() ) :
-
-						if ( is_home() && ! is_front_page() ) :
-							?>
-							<header>
-								<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-							</header>
-							<?php
-						endif;
-						?>
-					<div class="article-container">
-						<?php
-						/* Start the Loop */
-						while ( have_posts() ) :
-							the_post();
-
-							/*
-							 * Include the Post-Type-specific template for the content.
-							 * If you want to override this in a child theme, then include a file
-							 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-							 */
-							get_template_part( 'template-parts/blog/blog', get_theme_mod( 'blog_layout_setting', 'layout-3' ), get_post_type() );
-
-						endwhile;
-						?>
-					</div>
-						<?php
-						post_nav();
-						else :
-							get_template_part( 'template-parts/content', 'none' );
-						endif;
-						?>
-				</main><!-- #main -->
-
+                <main id="primary" class="site-main primary-content <?php echo esc_attr( $sidebar_page_class ); ?>">
+					<?php aaurora_entry_content() ?>
+                </main><!-- #main -->
 				<?php
-				get_sidebar();
+				aaurora_content_after();
+				aaurora_right_sidebar();
 				?>
-			</div>
-		</div>
-	</div>
+            </div>
+        </div>
+    </div>
 <?php
 get_sidebar( 'alt' );
 get_footer();

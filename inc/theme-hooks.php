@@ -242,6 +242,13 @@ function aaurora_entry_content_before() {
 }
 
 /**
+ * Entry Content Before.
+ */
+function aaurora_entry_content() {
+	do_action( 'aaurora_entry_content' );
+}
+
+/**
  * Entry Content After.
  */
 function aaurora_entry_content_after() {
@@ -285,6 +292,20 @@ function aaurora_comments_after() {
  */
 function aaurora_sidebars_before() {
 	do_action( 'aaurora_sidebars_before' );
+}
+
+/**
+ * Right Sidebar.
+ */
+function aaurora_right_sidebar() {
+	do_action( 'aaurora_right_sidebar' );
+}
+
+/**
+ * Left Sidebar.
+ */
+function aaurora_left_sidebar() {
+	do_action( 'aaurora_left_sidebar' );
 }
 
 /**

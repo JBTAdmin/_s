@@ -30,7 +30,7 @@ if ( ! function_exists( 'aaurora_widgets_init' ) ) :
 				'after_title'   => '</h2>',
 			)
 		);
-		
+
 		register_sidebar(
 			array(
 				'name'          => esc_html__( 'Sidebar Left', 'aaurora' ),
@@ -42,7 +42,7 @@ if ( ! function_exists( 'aaurora_widgets_init' ) ) :
 				'after_title'   => '</h2>',
 			)
 		);
-		
+
 		register_sidebar(
 			array(
 				'name'          => esc_html__( 'Sidebar Alt', 'aaurora' ),
@@ -54,7 +54,7 @@ if ( ! function_exists( 'aaurora_widgets_init' ) ) :
 				'after_title'   => '</h2>',
 			)
 		);
-		
+
 		register_sidebar(
 			array(
 				'name'          => esc_html__( 'Footer 1', 'aaurora' ),
@@ -66,7 +66,7 @@ if ( ! function_exists( 'aaurora_widgets_init' ) ) :
 				'after_title'   => '</span></h3>',
 			)
 		);
-		
+
 		register_sidebar(
 			array(
 				'name'          => esc_html__( 'Footer 2', 'aaurora' ),
@@ -78,7 +78,7 @@ if ( ! function_exists( 'aaurora_widgets_init' ) ) :
 				'after_title'   => '</span></h3>',
 			)
 		);
-		
+
 		register_sidebar(
 			array(
 				'name'          => esc_html__( 'Footer 3', 'aaurora' ),
@@ -90,7 +90,7 @@ if ( ! function_exists( 'aaurora_widgets_init' ) ) :
 				'after_title'   => '</span></h3>',
 			)
 		);
-		
+
 		register_sidebar(
 			array(
 				'name'          => esc_html__( 'Footer 4', 'aaurora' ),

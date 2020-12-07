@@ -162,12 +162,12 @@ document.addEventListener(
 			}
 		);
 
-		popupSearchModal &&
-		popupSearchModal.addEventListener(
-			"click",
-			function() {
-				popupSearchModal.classList.toggle( "visible" );
-			}
-		);
+		// popupSearchModal &&
+		// popupSearchModal.addEventListener(
+		// 	"click",
+		// 	function() {
+		// 		popupSearchModal.classList.toggle( "visible" );
+		// 	}
+		// );
 	}
 );
