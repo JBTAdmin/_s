@@ -5,6 +5,101 @@
  * @package aaurora
  */
 
+
+
+/**
+ * Outputs the theme single content.
+ *
+ * @since 1.0.0
+ */
+function aaurora_content_singular() {
+	
+	if ( have_posts() ) :
+		while ( have_posts() ) :
+			the_post();
+			
+			if ( is_singular( 'post' ) ) {
+				do_action( 'aaurora_content_single' );
+			} else {
+				do_action( 'aaurora_content_page' );
+			}
+		
+		endwhile;
+	else :
+		get_template_part( 'template-parts/content', 'none' );
+	endif;
+}
+add_action( 'sinatra_content_singular', 'sinatra_content_singular' );
+
+function aaurora_content_page_layout(){
+	get_template_part( 'template-parts/content-page' );
+}
+add_action( 'aaurora_content_page', 'aaurora_content_page_layout' );
+
+
+/**
+ * Outputs the theme single content.
+ *
+ * @since 1.0.0
+ */
+function aaurora_content_single_layout() {
+	?>
+    <div class="article-container">
+        <article id="post-<?php the_ID(); ?>" <?php post_class( 'post-article' ); ?>>
+            <div class="entry-header">
+				<?php
+				get_template_part( 'template-parts/single/category' );
+				get_template_part( 'template-parts/single/heading' );
+				get_template_part( 'template-parts/single/metadata' );
+				?>
+            </div><!-- .entry-header -->
+			<?php
+			get_template_part( 'template-parts/single/thumbnail' );
+			?>
+            <div class="entry-content">
+				<?php
+				the_content(
+					sprintf(
+						wp_kses(
+						/* translators: %s: Name of current post. Only visible to screen readers */
+							__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'aaurora' ),
+							array(
+								'span' => array(
+									'class' => array(),
+								),
+							)
+						),
+						wp_kses_post( get_the_title() )
+					)
+				);
+				echo 'page link before';
+				wp_link_pages(
+					array(
+						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'aaurora' ),
+						'after'  => '</div>',
+					)
+				);
+				echo 'page link after';
+				?>
+            </div><!-- .entry-content -->
+        </article><!-- #post-<?php the_ID(); ?> -->
+    </div>
+	
+	<?php
+	
+	get_template_part( 'template-parts/single/tag' );
+	get_template_part( 'template-parts/single/author' );
+	get_template_part( 'template-parts/single/post-navigation' );
+	
+	// If comments are open or we have at least one comment, load up the comment template.
+	if ( comments_open() || get_comments_number() ) :
+		comments_template();
+	endif;
+}
+
+add_action( 'aaurora_content_single', 'aaurora_content_single_layout' );
+
+
 /**
  * Adds custom classes to the array of body classes.
  *
