@@ -8,6 +8,7 @@
  * @author      Aaurora Team <hello@aaurorawp.com>
  * @since       1.0.0
  */
+
 // todo need to revisit the whle admin page code
 /**
  * Do not allow direct script access.
@@ -89,8 +90,9 @@ if ( ! class_exists( 'Aaurora_Admin' ) ) :
 		/**
 		 * Load our required assets on admin pages.
 		 *
-		 * @since 1.0.0
 		 * @param string $hook it holds the information about the current page.
+		 *
+		 * @since 1.0.0
 		 */
 		public function load_assets( $hook ) {
 
@@ -131,8 +133,9 @@ if ( ! class_exists( 'Aaurora_Admin' ) ) :
 		/**
 		 * Filters WordPress footer right text to hide all text.
 		 *
-		 * @since 1.0.0
 		 * @param string $text Text that we're going to replace.
+		 *
+		 * @since 1.0.0
 		 */
 		public function filter_update_footer( $text ) {
 
@@ -144,15 +147,16 @@ if ( ! class_exists( 'Aaurora_Admin' ) ) :
 			// if ( aaurora_is_admin_page( $base ) ) {
 			// return apply_filters( 'aaurora_footer_version', esc_html__( 'Aaurora Theme', 'aaurora' ) . ' ' . '1.0.0' . '<br/><a href="' . esc_url( 'https://twitter.com/aaurorawp' ) . '" target="_blank" rel="noopener noreferrer"><span class="dashicons dashicons-twitter"></span></a><a href="' . esc_url( 'https://facebook.com/aaurorawp' ) . '" target="_blank" rel="noopener noreferrer"><span class="dashicons dashicons-facebook"></span></a>' );
 			// } else {
-				return $text;
+			return $text;
 			// }
 		}
 
 		/**
 		 * Filter WordPress footer left text to display our text.
 		 *
-		 * @since 1.0.0
 		 * @param string $text Text that we're going to replace.
+		 *
+		 * @since 1.0.0
 		 */
 		public function filter_admin_footer_text( $text ) {
 
@@ -180,13 +184,16 @@ if ( ! class_exists( 'Aaurora_Admin' ) ) :
 			<div id="aaurora-header">
 				<div class="si-container">
 
-					<a href="<?php echo esc_url( admin_url( 'admin.php?page=aaurora-dashboard' ) ); ?>" class="aaurora-logo">
-						<img src="<?php echo esc_url( get_parent_theme_file_uri() . '/assets/images/aaurora-logo.svg' ); ?>" alt="<?php echo esc_html( 'Aaurora' ); ?>" />
+					<a href="<?php echo esc_url( admin_url( 'admin.php?page=aaurora-dashboard' ) ); ?>"
+					   class="aaurora-logo">
+						<img src="<?php echo esc_url( get_parent_theme_file_uri() . '/assets/images/aaurora-logo.svg' ); ?>"
+							 alt="<?php echo esc_html( 'Aaurora' ); ?>"/>
 					</a>
 
 					<span class="aaurora-header-action">
 						<a href="<?php echo esc_url( admin_url( 'customize.php' ) ); ?>"><?php esc_html_e( 'Customize', 'aaurora' ); ?></a>
-						<a href="<?php echo esc_url( 'https://aaurorawp.com/docs/' ); ?>" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'Help Articles', 'aaurora' ); ?></a>
+						<a href="<?php echo esc_url( 'https://aaurorawp.com/docs/' ); ?>" target="_blank"
+						   rel="noopener noreferrer"><?php esc_html_e( 'Help Articles', 'aaurora' ); ?></a>
 					</span>
 
 				</div>
@@ -208,13 +215,21 @@ if ( ! class_exists( 'Aaurora_Admin' ) ) :
 			// }
 			?>
 			<div id="aaurora-footer">
-			<ul>
-				<li><a href="<?php echo esc_url( 'https://aaurorawp.com/docs/' ); ?>" target="_blank" rel="noopener noreferrer"><span><?php esc_html_e( 'Help Articles', 'aaurora' ); ?></span></span></a></li>
-				<li><a href="<?php echo esc_url( 'https://www.facebook.com/groups/aaurorawp/' ); ?>" target="_blank" rel="noopener noreferrer"><span><?php esc_html_e( 'Join Facebook Group', 'aaurora' ); ?></span></span></a></li>
-				<li><a href="<?php echo esc_url( 'https://wordpress.org/support/theme/aaurora/reviews/#new-post' ); ?>" target="_blank" rel="noopener noreferrer"><span class="dashicons dashicons-heart" aria-hidden="true"></span><span><?php esc_html_e( 'Leave a Review', 'aaurora' ); ?></span></a></li>
-			</ul>
+				<ul>
+					<li><a href="<?php echo esc_url( 'https://aaurorawp.com/docs/' ); ?>" target="_blank"
+						   rel="noopener noreferrer"><span><?php esc_html_e( 'Help Articles', 'aaurora' ); ?></span></span>
+						</a></li>
+					<li><a href="<?php echo esc_url( 'https://www.facebook.com/groups/aaurorawp/' ); ?>" target="_blank"
+						   rel="noopener noreferrer"><span><?php esc_html_e( 'Join Facebook Group', 'aaurora' ); ?></span></span>
+						</a></li>
+					<li>
+						<a href="<?php echo esc_url( 'https://wordpress.org/support/theme/aaurora/reviews/#new-post' ); ?>"
+						   target="_blank" rel="noopener noreferrer"><span class="dashicons dashicons-heart"
+																		   aria-hidden="true"></span><span><?php esc_html_e( 'Leave a Review', 'aaurora' ); ?></span></a>
+					</li>
+				</ul>
 			</div><!-- END #aaurora-footer -->
-
+			
 			<?php
 		}
 

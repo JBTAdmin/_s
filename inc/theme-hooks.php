@@ -66,12 +66,12 @@ add_theme_support(
 		'sidebar',
 		'footer',
 
-	/**
-	 * If/when WordPress Core implements similar methodology, Themes and Plugins
-	 * will be able to check whether the version of THA supplied by the theme
-	 * supports Core hooks.
-	 */
-	// 'core',
+		/**
+		 * If/when WordPress Core implements similar methodology, Themes and Plugins
+		 * will be able to check whether the version of THA supplied by the theme
+		 * supports Core hooks.
+		 */
+		// 'core',
 	)
 );
 
@@ -96,6 +96,7 @@ add_theme_support(
 function aaurora_current_theme_supports( $bool, $args, $registered ) {
 	return in_array( $args[0], $registered[0] ) || in_array( 'all', $registered[0] );
 }
+
 add_filter( 'current_theme_supports-aaurora_hooks', 'aaurora_current_theme_supports', 10, 3 );
 
 /**
@@ -106,6 +107,7 @@ add_filter( 'current_theme_supports-aaurora_hooks', 'aaurora_current_theme_suppo
 function aaurora_html_before() {
 	do_action( 'aaurora_html_before' );
 }
+
 /**
  * HTML <body> hooks
  * $aaurora_supports[] = 'body';
@@ -256,10 +258,6 @@ function aaurora_entry_content_after() {
 }
 
 
-
-
-
-
 /**
  * Entry Top.
  */
@@ -363,11 +361,6 @@ function aaurora_footer_top() {
 function aaurora_footer_bottom() {
 	do_action( 'aaurora_footer_bottom' );
 }
-
-
-
-
-
 
 
 /**

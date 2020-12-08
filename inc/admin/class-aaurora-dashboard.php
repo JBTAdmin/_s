@@ -31,14 +31,15 @@ if ( ! class_exists( 'Aaurora_Dashboard' ) ) :
 		/**
 		 * Main Aaurora Dashboard Instance.
 		 *
-		 * @since 1.0.0
 		 * @return Aaurora_Dashboard
+		 * @since 1.0.0
 		 */
 		public static function instance() {
 
 			if ( ! isset( self::$instance ) && ! ( self::$instance instanceof Aaurora_Dashboard ) ) {
 				self::$instance = new self();
 			}
+
 			return self::$instance;
 		}
 
@@ -130,22 +131,28 @@ if ( ! class_exists( 'Aaurora_Dashboard' ) ) :
 
 					<div class="aaurora-column">
 						<div class="aaurora-box">
-							<h4><i class="dashicons dashicons-admin-plugins"></i><?php esc_html_e( 'Install Plugins', 'aaurora' ); ?></h4>
+							<h4>
+								<i class="dashicons dashicons-admin-plugins"></i><?php esc_html_e( 'Install Plugins', 'aaurora' ); ?>
+							</h4>
 							<p><?php esc_html_e( 'Explore recommended plugins. These free plugins provide additional features and customization options.', 'aaurora' ); ?></p>
 
 							<div class="aaurora-buttons">
-								<a href="<?php echo esc_url( menu_page_url( 'aaurora-plugins', false ) ); ?>" class="si-btn secondary" role="button"><?php esc_html_e( 'Install Plugins', 'aaurora' ); ?></a>
+								<a href="<?php echo esc_url( menu_page_url( 'aaurora-plugins', false ) ); ?>"
+								   class="si-btn secondary"
+								   role="button"><?php esc_html_e( 'Install Plugins', 'aaurora' ); ?></a>
 							</div><!-- END .aaurora-buttons -->
 						</div>
 					</div>
 
 					<div class="aaurora-column">
 						<div class="aaurora-box">
-							<h4><i class="dashicons dashicons-layout"></i><?php esc_html_e( 'Start with a Template', 'aaurora' ); ?></h4>
+							<h4>
+								<i class="dashicons dashicons-layout"></i><?php esc_html_e( 'Start with a Template', 'aaurora' ); ?>
+							</h4>
 							<p><?php esc_html_e( 'Don&rsquo;t want to start from scratch? Import a pre-built demo website in 1-click and get a head start.', 'aaurora' ); ?></p>
 
 							<div class="aaurora-buttons plugins">
-
+								
 								<?php
 								if ( file_exists( WP_PLUGIN_DIR . '/aaurora-core/aaurora-core.php' ) && is_plugin_inactive( 'aaurora-core/aaurora-core.php' ) ) {
 									$class       = 'si-btn secondary';
@@ -179,44 +186,59 @@ if ( ! class_exists( 'Aaurora_Dashboard' ) ) :
 
 					<div class="aaurora-column">
 						<div class="aaurora-box">
-							<h4><i class="dashicons dashicons-palmtree"></i><?php esc_html_e( 'Upload Your Logo', 'aaurora' ); ?></h4>
+							<h4>
+								<i class="dashicons dashicons-palmtree"></i><?php esc_html_e( 'Upload Your Logo', 'aaurora' ); ?>
+							</h4>
 							<p><?php esc_html_e( 'Kick off branding your new site by uploading your logo. Simply upload your logo and customize as you need.', 'aaurora' ); ?></p>
 
 							<div class="aaurora-buttons">
-								<a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[control]=custom_logo' ) ); ?>" class="si-btn secondary" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'Upload Logo', 'aaurora' ); ?></a>
+								<a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[control]=custom_logo' ) ); ?>"
+								   class="si-btn secondary" target="_blank"
+								   rel="noopener noreferrer"><?php esc_html_e( 'Upload Logo', 'aaurora' ); ?></a>
 							</div><!-- END .aaurora-buttons -->
 						</div>
 					</div>
 
 					<div class="aaurora-column">
 						<div class="aaurora-box">
-							<h4><i class="dashicons dashicons-welcome-widgets-menus"></i><?php esc_html_e( 'Change Menus', 'aaurora' ); ?></h4>
+							<h4>
+								<i class="dashicons dashicons-welcome-widgets-menus"></i><?php esc_html_e( 'Change Menus', 'aaurora' ); ?>
+							</h4>
 							<p><?php esc_html_e( 'Customize menu links and choose what&rsquo;s displayed in available theme menu locations.', 'aaurora' ); ?></p>
 
 							<div class="aaurora-buttons">
-								<a href="<?php echo esc_url( admin_url( 'nav-menus.php' ) ); ?>" class="si-btn secondary" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'Go to Menus', 'aaurora' ); ?></a>
+								<a href="<?php echo esc_url( admin_url( 'nav-menus.php' ) ); ?>"
+								   class="si-btn secondary" target="_blank"
+								   rel="noopener noreferrer"><?php esc_html_e( 'Go to Menus', 'aaurora' ); ?></a>
 							</div><!-- END .aaurora-buttons -->
 						</div>
 					</div>
 
 					<div class="aaurora-column">
 						<div class="aaurora-box">
-							<h4><i class="dashicons dashicons-art"></i><?php esc_html_e( 'Change Colors', 'aaurora' ); ?></h4>
+							<h4>
+								<i class="dashicons dashicons-art"></i><?php esc_html_e( 'Change Colors', 'aaurora' ); ?>
+							</h4>
 							<p><?php esc_html_e( 'Replace the default theme colors and make your website color scheme match your brand design.', 'aaurora' ); ?></p>
 
 							<div class="aaurora-buttons">
-								<a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[section]=aaurora_section_colors' ) ); ?>" class="si-btn secondary" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'Change Colors', 'aaurora' ); ?></a>
+								<a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[section]=aaurora_section_colors' ) ); ?>"
+								   class="si-btn secondary" target="_blank"
+								   rel="noopener noreferrer"><?php esc_html_e( 'Change Colors', 'aaurora' ); ?></a>
 							</div><!-- END .aaurora-buttons -->
 						</div>
 					</div>
 
 					<div class="aaurora-column">
 						<div class="aaurora-box">
-							<h4><i class="dashicons dashicons-editor-help"></i><?php esc_html_e( 'Need Help?', 'aaurora' ); ?></h4>
+							<h4>
+								<i class="dashicons dashicons-editor-help"></i><?php esc_html_e( 'Need Help?', 'aaurora' ); ?>
+							</h4>
 							<p><?php esc_html_e( 'Head over to our site to learn more about the Aaurora theme, read help articles and get support.', 'aaurora' ); ?></p>
 
 							<div class="aaurora-buttons">
-								<a href="https://aaurorawp.com/docs/" target="_blank" rel="noopener noreferrer" class="si-btn secondary"><?php esc_html_e( 'Help Articles', 'aaurora' ); ?></a>
+								<a href="https://aaurorawp.com/docs/" target="_blank" rel="noopener noreferrer"
+								   class="si-btn secondary"><?php esc_html_e( 'Help Articles', 'aaurora' ); ?></a>
 							</div><!-- END .aaurora-buttons -->
 						</div>
 					</div>
@@ -224,22 +246,25 @@ if ( ! class_exists( 'Aaurora_Dashboard' ) ) :
 
 				<div class="aaurora-section large-section">
 					<div class="aaurora-hero">
-<!--						<img src="--><?php // echo esc_url( AAURORA_THEME_URI . '/assets/images/si-customize.svg' ); ?><!--" alt="--><?php // echo esc_html( 'Customize' ); ?><!--" />-->
+						<!--						<img src="-->
+						<?php // echo esc_url( AAURORA_THEME_URI . '/assets/images/si-customize.svg' ); ?><!--" alt="-->
+						<?php // echo esc_html( 'Customize' ); ?><!--" />-->
 					</div>
 
 					<h2><?php esc_html_e( 'Let‘s customize your website', 'aaurora' ); ?></h2>
 					<p><?php esc_html_e( 'There are many changes you can make to customize your website. Explore Aaurora customization options and make it unique.', 'aaurora' ); ?></p>
 
 					<div class="aaurora-buttons">
-						<a href="<?php echo esc_url( admin_url( 'customize.php' ) ); ?>" class="si-btn primary large-button"><?php esc_html_e( 'Start Customizing', 'aaurora' ); ?></a>
+						<a href="<?php echo esc_url( admin_url( 'customize.php' ) ); ?>"
+						   class="si-btn primary large-button"><?php esc_html_e( 'Start Customizing', 'aaurora' ); ?></a>
 					</div><!-- END .aaurora-buttons -->
 
 				</div><!-- END .aaurora-section -->
-
+				
 				<?php do_action( 'aaurora_about_content_after' ); ?>
 
 			</div><!-- END .si-container -->
-
+			
 			<?php
 		}
 
@@ -262,10 +287,10 @@ if ( ! class_exists( 'Aaurora_Dashboard' ) ) :
 				</div><!-- END .aaurora-section-title -->
 
 				<div class="aaurora-section aaurora-columns plugins">
-
+					
 					<?php if ( is_array( $plugins ) && ! empty( $plugins ) ) { ?>
 						<?php foreach ( $plugins as $plugin ) { ?>
-
+							
 							<?php
 							// Check plugin status.
 							if ( aaurora_plugin_utilities()->is_activated( $plugin['slug'] ) ) {
@@ -290,15 +315,18 @@ if ( ! class_exists( 'Aaurora_Dashboard' ) ) :
 								<div class="aaurora-box">
 
 									<div class="plugin-image">
-										<img src="<?php echo esc_url( $plugin['thumb'] ); ?>" alt="<?php echo esc_html( $plugin['name'] ); ?>"/>					
+										<img src="<?php echo esc_url( $plugin['thumb'] ); ?>"
+											 alt="<?php echo esc_html( $plugin['name'] ); ?>"/>
 									</div>
 
 									<div class="plugin-info">
 										<h4><?php echo esc_html( $plugin['name'] ); ?></h4>
 										<p><?php echo esc_html( $plugin['desc'] ); ?></p>
 										<div class="aaurora-buttons">
-											<?php echo ( wp_kses_post( $notice ) ); ?>
-											<a href="#" class="<?php echo esc_attr( $btn_class ); ?>" data-plugin="<?php echo esc_attr( $plugin['slug'] ); ?>" data-action="<?php echo esc_attr( $action ); ?>"><?php echo esc_html( $btn_text ); ?></a>
+											<?php echo( wp_kses_post( $notice ) ); ?>
+											<a href="#" class="<?php echo esc_attr( $btn_class ); ?>"
+											   data-plugin="<?php echo esc_attr( $plugin['slug'] ); ?>"
+											   data-action="<?php echo esc_attr( $action ); ?>"><?php echo esc_html( $btn_text ); ?></a>
 										</div>
 									</div>
 
@@ -308,11 +336,11 @@ if ( ! class_exists( 'Aaurora_Dashboard' ) ) :
 					<?php } ?>
 
 				</div><!-- END .aaurora-section -->
-
+				
 				<?php do_action( 'aaurora_recommended_plugins_after' ); ?>
 
 			</div><!-- END .si-container -->
-
+			
 			<?php
 		}
 
@@ -362,7 +390,7 @@ if ( ! class_exists( 'Aaurora_Dashboard' ) ) :
 						</div>
 					</div>
 				</div><!-- END .aaurora-columns -->
-
+				
 				<?php do_action( 'aaurora_after_changelog' ); ?>
 
 			</div><!-- END .si-container -->
@@ -398,7 +426,7 @@ if ( ! class_exists( 'Aaurora_Dashboard' ) ) :
 							<li class="<?php echo esc_attr( $current ); ?>">
 								<a href="<?php echo esc_url( $item['url'] ); ?>">
 									<?php echo esc_html( $item['name'] ); ?>
-
+									
 									<?php
 									if ( isset( $item['icon'] ) && $item['icon'] ) {
 										aaurora_print_admin_icon( $item['icon'] );
@@ -406,7 +434,7 @@ if ( ! class_exists( 'Aaurora_Dashboard' ) ) :
 									?>
 								</a>
 							</li>
-
+						
 						<?php } ?>
 					</ul>
 				</div><!-- END .aaurora-tabs -->
@@ -418,8 +446,8 @@ if ( ! class_exists( 'Aaurora_Dashboard' ) ) :
 		/**
 		 * Return the current Aaurora Dashboard page.
 		 *
-		 * @since 1.0.0
 		 * @return string $page Current dashboard page slug.
+		 * @since 1.0.0
 		 */
 		public function get_current_page() {
 
@@ -433,8 +461,8 @@ if ( ! class_exists( 'Aaurora_Dashboard' ) ) :
 		/**
 		 * Print admin page navigation items.
 		 *
-		 * @since 1.0.0
 		 * @return array $items Array of navigation items.
+		 * @since 1.0.0
 		 */
 		public function get_navigation_items() {
 
@@ -465,8 +493,9 @@ if ( ! class_exists( 'Aaurora_Dashboard' ) ) :
 		/**
 		 * Highlight dashboard page for plugins page.
 		 *
-		 * @since 1.0.0
 		 * @param string $submenu_file The submenu file.
+		 *
+		 * @since 1.0.0
 		 */
 		public function highlight_submenu( $submenu_file ) {
 
@@ -494,8 +523,8 @@ endif;
  *
  * Example: <?php $aaurora_dashboard = aaurora_dashboard(); ?>
  *
- * @since 1.0.0
  * @return object
+ * @since 1.0.0
  */
 function aaurora_dashboard() {
 	return Aaurora_Dashboard::instance();
