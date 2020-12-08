@@ -29,7 +29,7 @@ function aaurora_content_singular() {
 		get_template_part( 'template-parts/content', 'none' );
 	endif;
 }
-add_action( 'sinatra_content_singular', 'sinatra_content_singular' );
+add_action( 'aaurora_content_singular', 'aaurora_content_singular' );
 
 function aaurora_content_page_layout(){
 	get_template_part( 'template-parts/content-page' );

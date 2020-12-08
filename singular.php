@@ -6,6 +6,8 @@
  * version 4.3.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-page
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#attachment
  *
  * @package     Aaurora
  * @since       1.0.0
@@ -34,8 +36,7 @@ $sidebar_page_class = '';
 					?>
 
                 </main><!-- #content .site-content -->
-				
-				
+                
 				<?php
 				aaurora_content_after();
 				aaurora_right_sidebar();
