@@ -8,7 +8,7 @@
  */
 
 ?>
-
+<!--todo having some issues. Need to check. -->
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'blog-post-article-3' ); ?>>
 	<div class="blog-type-list" style="background-image:url('<?php echo esc_url( get_the_post_thumbnail_url( get_the_ID(), 'full' ) ); ?>')">
 	</div>

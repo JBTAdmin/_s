@@ -25,11 +25,11 @@ $sidebar_page_class = '';
 					while ( have_posts() ) :
 						the_post();
 
-						get_template_part( 'template-parts/single/single-layout', get_post_type() );
+						get_template_part( 'template-parts/single/layout', get_post_type() );
 
-						get_template_part( 'template-parts/author-description' );
+						get_template_part( 'template-parts/single/author' );
 						
-						get_template_part( 'template-parts/post-navigation' );
+						get_template_part( 'template-parts/single/post-navigation' );
 						
 						
 						// If comments are open or we have at least one comment, load up the comment template.

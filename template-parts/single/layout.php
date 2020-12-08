@@ -20,13 +20,13 @@ if ( ! defined( 'ABSPATH' ) ) {
     <article id="post-<?php the_ID(); ?>" <?php post_class( 'post-article' ); ?>>
         <div class="entry-header">
 			<?php
-			get_template_part( 'template-parts/single/single-category' );
-			get_template_part( 'template-parts/single/single-heading' );
-			get_template_part( 'template-parts/single/single-metadata' );
+			get_template_part( 'template-parts/single/category' );
+			get_template_part( 'template-parts/single/heading' );
+			get_template_part( 'template-parts/single/metadata' );
 			?>
         </div><!-- .entry-header -->
 		<?php
-		get_template_part( 'template-parts/single/single-thumbnail' );
+		get_template_part( 'template-parts/single/thumbnail' );
 		?>
         <div class="entry-content">
 			<?php
@@ -56,6 +56,6 @@ if ( ! defined( 'ABSPATH' ) ) {
         </div><!-- .entry-content -->
     </article><!-- #post-<?php the_ID(); ?> -->
 	<?php
-	get_template_part( 'template-parts/single/single-tag' );
+	get_template_part( 'template-parts/single/tag' );
 	?>
 </div>

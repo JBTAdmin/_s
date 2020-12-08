@@ -69,37 +69,6 @@ if ( ! function_exists( 'aaurora_posted_by' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'aaurora_meta_category_list' ) ) :
-	/**
-	 * Prints meta information for the categories.
-	 */
-	function aaurora_meta_category_list() {
-		if ( 'post' === get_post_type() ) {
-			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', 'aaurora' ) );
-			if ( $categories_list ) {
-				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html( '%1$s ' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-			}
-		}
-	}
-endif;
-
-if ( ! function_exists( 'aaurora_meta_tag_list' ) ) :
-	/**
-	 * Prints meta information for the tags.
-	 */
-	function aaurora_meta_tag_list() {
-		if ( 'post' === get_post_type() ) {
-			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list();
-			if ( $tags_list ) {
-				printf( '<span class="tags-links">' . esc_html( ' %1$s' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-			}
-		}
-	}
-endif;
-
 if ( ! function_exists( 'aaurora_meta_comment' ) ) :
 	/**
 	 * Prints meta information for comment.
