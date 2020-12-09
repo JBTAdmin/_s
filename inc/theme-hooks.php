@@ -176,21 +176,7 @@ function aaurora_header_bottom() {
 	do_action( 'aaurora_header_bottom' );
 }
 
-/**
- * Semantic <content> hooks
- *
- * $aaurora_supports[] = 'content';
- */
-function aaurora_content_before() {
-	do_action( 'aaurora_content_before' );
-}
 
-/**
- * Content After.
- */
-function aaurora_content_after() {
-	do_action( 'aaurora_content_after' );
-}
 
 /**
  * Content Top.
@@ -234,27 +220,6 @@ function aaurora_entry_before() {
  */
 function aaurora_entry_after() {
 	do_action( 'aaurora_entry_after' );
-}
-
-/**
- * Entry Content Before.
- */
-function aaurora_entry_content_before() {
-	do_action( 'aaurora_entry_content_before' );
-}
-
-/**
- * Entry Content Before.
- */
-function aaurora_entry_content() {
-	do_action( 'aaurora_entry_content' );
-}
-
-/**
- * Entry Content After.
- */
-function aaurora_entry_content_after() {
-	do_action( 'aaurora_entry_content_after' );
 }
 
 
@@ -403,4 +368,35 @@ function aaurora_entry_navigation_before() {
  */
 function aaurora_entry_navigation_after() {
 	do_action( 'aaurora_entry_navigation_after' );
+}
+
+
+////////////////viveka
+
+function aaurora_main_content_before() {
+	do_action( 'aaurora_main_content_before' );
+}
+
+function aaurora_main_content_after() {
+	do_action( 'aaurora_main_content_after' );
+}
+
+function aaurora_content_before() {
+	do_action( 'aaurora_content_before' );
+}
+
+function aaurora_content_after() {
+	do_action( 'aaurora_content_after' );
+}
+
+function aaurora_entry_content_before() {
+	do_action( 'aaurora_entry_content_before' );
+}
+
+function aaurora_entry_content() {
+	do_action( 'aaurora_entry_content' );
+}
+
+function aaurora_entry_content_after() {
+	do_action( 'aaurora_entry_content_after' );
 }

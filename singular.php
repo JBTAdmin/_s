@@ -21,10 +21,9 @@ $sidebar_page_class = '';
     <div class="site-container">
         <div class="wrap">
             <div class="main-container">
-				<?php
-				aaurora_left_sidebar();
-				aaurora_content_before();
-				?>
+				
+                <?php aaurora_main_content_before(); ?>
+                
                 <main id="primary" class="site-main primary-content <?php echo esc_attr( $sidebar_page_class ); ?>">
 					
 					<?php
@@ -37,10 +36,7 @@ $sidebar_page_class = '';
 
                 </main><!-- #content .site-content -->
                 
-				<?php
-				aaurora_content_after();
-				aaurora_right_sidebar();
-				?>
+				<?php aaurora_main_content_after(); ?>
 
             </div><!-- #primary .content-area -->
 

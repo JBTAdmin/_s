@@ -110,7 +110,7 @@ function load_inline_svg( $filename ) {
  * @since 1.0.0
  */
 function aaurora_is_frontpage() {
-	return ( is_front_page() && ! is_home() );
+	return is_front_page() && ! is_home();
 }
 
 /**
