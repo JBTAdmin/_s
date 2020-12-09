@@ -24,7 +24,7 @@ require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/customizer.php';
 
 
-// Compatibility
+// Compatibility.
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
@@ -33,7 +33,7 @@ if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
 
-// Admin
+// Admin.
 if ( is_admin() ) {
 	require dirname( __FILE__ ) . '/inc/admin/class-aaurora-admin.php';
 }
@@ -50,7 +50,7 @@ add_action( 'wp_enqueue_scripts', 'deregister_jquery' );
 
 // todo check how good it is and should i do it?
 // It should work without below changes coz in core.php given thing is already added. So check why that thing is not working and how that is different from this.
-// core.php  search for html5
+// core.php  search for html5.
 /**
  * Remove type attribute. To Fix W3 Validation.
  * https://wordpress.stackexchange.com/questions/287830/remove-type-attribute-from-script-and-style-tags-added-by-wordpress

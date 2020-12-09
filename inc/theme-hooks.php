@@ -371,7 +371,7 @@ function aaurora_entry_navigation_after() {
 }
 
 
-////////////////viveka
+// viveka
 
 function aaurora_main_content_before() {
 	do_action( 'aaurora_main_content_before' );

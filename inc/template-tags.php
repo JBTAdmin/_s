@@ -141,7 +141,7 @@ if ( ! function_exists( 'aaurora_post_thumbnail' ) ) :
 			?>
 
 			<div class="post-thumbnail">
-				<?php the_post_thumbnail( 'aaurora-blog-single-post-no-sidebar' ); ?>
+				<?php the_post_thumbnail( 'full' ); ?>
 			</div><!-- .post-thumbnail -->
 		<?php else : ?>
 			<div class="post-thumbnail-container">

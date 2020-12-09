@@ -18,29 +18,29 @@ $sidebar_page_class = '';
 
 <?php get_header(); ?>
 
-    <div class="site-container">
-        <div class="wrap">
-            <div class="main-container">
-				
-                <?php aaurora_main_content_before(); ?>
-                
-                <main id="primary" class="site-main primary-content <?php echo esc_attr( $sidebar_page_class ); ?>">
-					
+	<div class="site-container">
+		<div class="wrap">
+			<div class="main-container">
+
+				<?php aaurora_main_content_before(); ?>
+
+				<main id="primary" class="site-main primary-content <?php echo esc_attr( $sidebar_page_class ); ?>">
+
 					<?php
 					do_action( 'aaurora_before_singular' );
-					
+
 					do_action( 'aaurora_content_singular' );
-					
+
 					do_action( 'aaurora_after_singular' );
 					?>
 
-                </main><!-- #content .site-content -->
-                
+				</main><!-- #content .site-content -->
+
 				<?php aaurora_main_content_after(); ?>
 
-            </div><!-- #primary .content-area -->
+			</div><!-- #primary .content-area -->
 
-        </div><!-- END .si-container -->
-    </div>
+		</div><!-- END .si-container -->
+	</div>
 <?php
 get_footer();

@@ -13,17 +13,17 @@
  * @since 1.0.0
  */
 function aaurora_content_singular() {
-	
+
 	if ( have_posts() ) :
 		while ( have_posts() ) :
 			the_post();
-			
+
 			if ( is_singular( 'post' ) ) {
 				do_action( 'aaurora_content_single' );
 			} else {
 				do_action( 'aaurora_content_page' );
 			}
-		
+
 		endwhile;
 	else :
 		get_template_part( 'template-parts/content', 'none' );
@@ -31,7 +31,7 @@ function aaurora_content_singular() {
 }
 add_action( 'aaurora_content_singular', 'aaurora_content_singular' );
 
-function aaurora_content_page_layout(){
+function aaurora_content_page_layout() {
 	get_template_part( 'template-parts/content-page' );
 }
 add_action( 'aaurora_content_page', 'aaurora_content_page_layout' );
@@ -47,15 +47,15 @@ function aaurora_content_single_layout() {
 	
 	<?php aaurora_content_before(); ?>
 
-    <article id="post-<?php the_ID(); ?>" <?php post_class( 'post-article' ); ?>>
+	<article id="post-<?php the_ID(); ?>" <?php post_class( 'post-article' ); ?>>
 		
 		<?php get_template_part( 'template-parts/single/content' ); ?>
 
-    </article><!-- #post-<?php the_ID(); ?> -->
+	</article><!-- #post-<?php the_ID(); ?> -->
 	
 	<?php
 	aaurora_content_after();
-	
+
 	// If comments are open or we have at least one comment, load up the comment template.
 	if ( comments_open() || get_comments_number() ) :
 		comments_template();
@@ -65,12 +65,12 @@ function aaurora_content_single_layout() {
 add_action( 'aaurora_content_single', 'aaurora_content_single_layout' );
 
 function aaurora_content_single_header_layout() {
-	
+
 	get_template_part( 'template-parts/single/category' );
 	get_template_part( 'template-parts/single/heading' );
 	get_template_part( 'template-parts/single/metadata' );
 	get_template_part( 'template-parts/single/thumbnail' );
-	
+
 }
 
 add_action( 'aaurora_entry_content_before', 'aaurora_content_single_header_layout' );

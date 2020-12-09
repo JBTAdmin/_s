@@ -12,7 +12,7 @@ if ( 'post' === get_post_type() ) :
 	<div class="entry-meta">
 		<?php
 		aaurora_posted_by();
-		aaurora_posted_on(false, true);
+		aaurora_posted_on( false, true );
 		aaurora_posted_on()
 		?>
 	</div><!-- .entry-meta -->
