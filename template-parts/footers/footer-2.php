@@ -1,6 +1,9 @@
 <?php
 /**
  * Footer #3
+ *
+ * @package Aaurora
+ * @since 1.0
  */
 
 ?>

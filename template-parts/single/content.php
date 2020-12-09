@@ -1,7 +1,9 @@
 <?php
-
 /**
+ * Displayes Content Part.
  *
+ * @package Aaurora
+ * @since 1.0
  */
 
 aaurora_entry_content_before();

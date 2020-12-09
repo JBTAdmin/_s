@@ -10,21 +10,12 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package aaurora
+ * @since 1.0
  */
 
 get_header();
 
 $sidebar_page_class = '';
-// if ( is_active_sidebar( 'sidebar-1' ) ) {
-// $sidebar_page_class = ' with-right-sidebar';
-// }
-//
-// $sidebar_page_class = ' ' . get_theme_mod( 'sidebar_sticky', '0' );
-//
-// $sidebar_page_class = get_theme_mod( 'sidebar_layout_setting', 'content-only' );
-
-// R_Debug::list_hooks();
-//error_log( wp_debug_backtrace_summary() );
 
 ?>
 
