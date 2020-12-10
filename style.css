@@ -547,7 +547,9 @@ table {
 table {
   width: 100%;
   border-collapse: separate;
-  border-spacing: 0; }
+  border-spacing: 0;
+  border-left: 1px solid rgba(68, 68, 68, 0.3);
+  border-top: 1px solid rgba(68, 68, 68, 0.3); }
 
 tbody {
   display: table-row-group;
@@ -563,14 +565,18 @@ tr {
   border-color: inherit; }
 
 .wp-block-table td,
-table td {
+table td,
+.wp-block-table th,
+table th {
   border: none;
+  border-right: 1px solid rgba(68, 68, 68, 0.3);
+  border-bottom: 1px solid rgba(68, 68, 68, 0.3);
   padding: 12px;
   text-align: center; }
 
 .wp-block-table th,
 table th {
-  padding: 10px 20px; }
+  font-weight: bold; }
 
 .wp-block-table tfoot,
 table tfoot {
