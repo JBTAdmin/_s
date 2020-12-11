@@ -93,7 +93,7 @@
 //TODO SHOULD BE MOVED TO COMMON AREA
 input:focus,
 textarea:focus {
-  border: 2px solid $theme__color;
+  border: 1px solid $theme__color;
 }
 
 @media screen and (max-width: 700px) {

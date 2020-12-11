@@ -8,7 +8,6 @@
  */
 
 get_theme_mod( 'sidebar_listing', 'right' );
-
 ?>
 
 <aside id="secondary-alt" class="widget-area sidebar-alt-aside sidebar-alt">

@@ -18,7 +18,8 @@
   height: 60px;
   //box-shadow: 1px 1px 1px 1px $theme__color;
   //border: 1px solid #e7ebed;
-  background: $theme__color;
+  background: #fff;
+  border: 1px solid #e7ebed;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -66,7 +67,8 @@
   border: none;
   top: 0;
   //box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
-  background: $theme__color;
+  background: #fff;
+  border: 1px solid #e7ebed;
   border-radius: 50%;
   transition: all 0.45s cubic-bezier(0.15, 0.2, 0.1, 1);
 }

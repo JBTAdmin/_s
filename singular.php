@@ -43,4 +43,5 @@ $sidebar_page_class = '';
 		</div><!-- END .si-container -->
 	</div>
 <?php
+get_sidebar( 'alt' );
 get_footer();

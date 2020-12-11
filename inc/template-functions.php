@@ -357,7 +357,7 @@ if ( ! function_exists( 'aaurora_hamburger_menu' ) ) :
 	 */
 	function aaurora_hamburger_menu() {
 		$sidebar_alt_class = '';
-		if ( ! is_active_sidebar( 'sidebar-alt' ) ) {
+		if ( ! is_active_sidebar( 'aaurora-sidebar-alt' ) ) {
 			$sidebar_alt_class = 'menu_only';
 		}
 		?>

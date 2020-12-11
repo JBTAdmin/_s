@@ -32,7 +32,6 @@ aaurora_entry_content_before();
 			'after'  => '</div>',
 		)
 	);
-	echo 'page link after';
 	?>
 </div><!-- .entry-content -->
 

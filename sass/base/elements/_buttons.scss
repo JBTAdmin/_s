@@ -2,29 +2,24 @@ button:not(.toggle):not(.customize-partial-edit-shortcut-button),
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  color: $body_text_dark_color;
+  background: #fff; //$button--background;
+  color: #000; //$button__text-color;
+  border: 1px solid $button--border-color;
   border-radius: 0.4rem;
-  padding: 12px 25px;
-  border: 1px solid $theme__color;
-  //font-size: 15px;
-  background: $theme__color;
-  line-height: 1;
-  min-height: 45px;
-  min-width: 120px;
-  height: 46px;
+  padding: 15px 25px;
   align-items: center;
   justify-content: center;
   transition: all 0.2s linear;
   cursor: pointer;
   float: right;
   margin: 1rem;
+  font-weight: 600;
 
-  &:hover {
-    border-color: $color__border-button-hover;
-  }
-
+  &:hover,
   &:active,
   &:focus {
-    border-color: $color__border-button-focus;
+    border-color: $button__hover-background;
+    background-color: $button__hover-background;
+    color: $button__hover-text-color;
   }
 }
