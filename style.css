@@ -57,11 +57,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   /* Theme settings colors */
   --theme-color: #f5f1f1;
   --font_size_post-title_mobile: 4rem;
-  --button-background: #17161a;
-  --button-text-color: #fff;
+  --button-background: #fff;
+  --button-text-color: #000;
   --button-border-color: #17161a;
   --button-hover-background: #d90a2c;
-  --button-hover-text-color: #fff; }
+  --button-hover-text-color: #fff;
+  --button-border-radius: 0.4rem;
+  --left-position: 3.4rem;
+  --righ-position: 3.4rem; }
 
 /*--------------------------------------------------------------
 # Generic
@@ -604,10 +607,10 @@ button:not(.toggle):not(.customize-partial-edit-shortcut-button),
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  background: #fff;
-  color: #000;
+  background: var(--button-background);
+  color: var(--button-text-color);
   border: 1px solid var(--button-border-color);
-  border-radius: 0.4rem;
+  border-radius: var(--button-border-radius);
   padding: 15px 25px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -952,7 +955,7 @@ li > ul.sub-menu {
     -o-transition: padding-left 0.07s;
     transition: padding-left 0.07s; }
   nav .sub-menu li:hover {
-    border-left: 2px solid var(--theme-color);
+    background-color: #ececec94;
     padding-left: 5px; }
   /* All the properties should not be here*/
   .header-menu li:hover > ul,
@@ -1278,7 +1281,7 @@ li > ul.sub-menu {
   -o-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
   position: fixed;
-  right: 4rem;
+  right: 3.4rem;
   bottom: 3.4rem;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -1293,8 +1296,7 @@ li > ul.sub-menu {
   border-radius: 20%;
   width: 35px;
   height: 55px;
-  background-color: #fff;
-  border: 1px solid #e7ebed; }
+  background-color: rgba(136, 136, 136, 0.06); }
   .top-link.show {
     visibility: visible;
     opacity: 1; }
@@ -1729,7 +1731,7 @@ h1.entry-title {
   padding: 5px;
   text-transform: uppercase;
   text-decoration: none;
-  border-radius: 1rem; }
+  border-radius: 0.5rem; }
 
 .blog-type-published-date {
   color: #263238;
@@ -1744,7 +1746,7 @@ h1.entry-title {
   width: 100%; }
 
 .single-post .cat-links {
-  border-radius: 10rem;
+  border-radius: 0.5rem;
   padding: 5px 10px;
   display: inline-block;
   margin-bottom: 10px;
@@ -2094,6 +2096,10 @@ article {
     width: 100%;
     margin: auto; } }
 
+.aaurora-share.fixed a > svg {
+  width: 18px;
+  height: 18px; }
+
 .aaurora-share.fixed > a {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2107,8 +2113,7 @@ article {
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  background: #fff;
-  border: 1px solid #e7ebed;
+  background: rgba(136, 136, 136, 0.06);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -2119,7 +2124,7 @@ article {
 
 .aaurora-share.fixed {
   position: fixed;
-  left: 34px;
+  left: 3.4rem;
   bottom: 104px;
   height: 60px;
   width: 60px;
@@ -2150,14 +2155,13 @@ article {
           justify-content: center; }
 
 .aaurora-share.fixed .aaurora-share-inner a {
-  line-height: 56px;
-  height: 46px;
-  width: 46px;
+  line-height: 45px;
+  height: 40px;
+  width: 40px;
   position: absolute;
   opacity: 0;
   border: none;
   top: 0;
-  background: #fff;
   border: 1px solid #e7ebed;
   border-radius: 50%;
   -webkit-transition: all 0.45s cubic-bezier(0.15, 0.2, 0.1, 1);
@@ -2188,6 +2192,22 @@ article {
           transform: translateY(-206px) scale(1);
   opacity: 1; }
 
+a.fb {
+  background-color: #3a579a;
+  color: #fff; }
+
+a.tw {
+  background-color: #00abf0;
+  color: #fff; }
+
+a.ln {
+  background-color: #127bb6;
+  color: #fff; }
+
+a.pt {
+  background-color: #cd1c1f;
+  color: #fff; }
+
 /* Search
 --------------------------------------------- */
 @media only screen and (max-width: 768px) {
@@ -2197,7 +2217,7 @@ article {
 
 .aaurora-search {
   position: fixed;
-  left: 34px;
+  left: 3.4rem;
   bottom: 34px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -2212,8 +2232,7 @@ article {
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  border: 1px solid #e7ebed;
-  background: #fff; }
+  background: rgba(136, 136, 136, 0.06); }
   .aaurora-search svg {
     width: 24px;
     height: 24px; }
@@ -2299,7 +2318,7 @@ article {
       -ms-flex-align: center;
           align-items: center;
   margin: auto;
-  right: 40px;
+  right: 1rem;
   -webkit-transform-origin: 100% 50%;
       -ms-transform-origin: 100% 50%;
           transform-origin: 100% 50%;
@@ -2459,4 +2478,49 @@ ul.aaurora-social-holder > li {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1.5em; }
+
+/* Animation
+--------------------------------------------- */
+.aaurora-share::after {
+  height: 40px;
+  width: 40px;
+  background-color: rgba(133, 164, 46, 0.3);
+  -webkit-animation-name: stretch;
+          animation-name: stretch;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: none;
+          animation-fill-mode: none;
+  -webkit-animation-play-state: running;
+          animation-play-state: running; }
+
+@-webkit-keyframes stretch {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    border-radius: 50%; }
+  100% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    background-color: gray;
+    border-radius: 50%; } }
+
+@keyframes stretch {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    border-radius: 50%; }
+  100% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    background-color: gray;
+    border-radius: 50%; } }
 

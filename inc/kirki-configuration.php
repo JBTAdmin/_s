@@ -57,6 +57,17 @@ Kirki::add_section(
 	)
 );
 
+Kirki::add_section(
+	'general_color',
+	array(
+		'title'       => esc_attr__( 'Color', 'aaurora' ),
+		'description' => '',
+		'section'       => 'general',
+		'priority'    => 1,
+	)
+);
+
+
 Kirki::add_field(
 	'aaurora_theme_options',
 	array(
@@ -64,7 +75,7 @@ Kirki::add_field(
 		'settings'    => 'color_theme',
 		'label'       => esc_attr__( 'Theme color', 'aaurora' ),
 		'description' => '',
-		'section'     => 'general',
+		'section'     => 'general_color',
 		'default'     => '#ffd01b',
 		'transport'   => 'auto',
 		'output'      => array(
@@ -83,7 +94,7 @@ Kirki::add_field(
 		'settings'    => 'color_body_text',
 		'label'       => esc_attr__( 'Body text color', 'aaurora' ),
 		'description' => '',
-		'section'     => 'general',
+		'section'     => 'general_color',
 		'default'     => '#333333',
 		'transport'   => 'auto',
 		'output'      => array(
@@ -102,7 +113,7 @@ Kirki::add_field(
 		'settings'    => 'body_background',
 		'label'       => esc_attr__( 'Body background', 'aaurora' ),
 		'description' => esc_attr__( 'Change your site main background settings.', 'aaurora' ),
-		'section'     => 'general',
+		'section'     => 'general_color',
 		'transport'   => 'auto',
 		'output'      => array(
 			array(
@@ -111,6 +122,135 @@ Kirki::add_field(
 		),
 	)
 );
+
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'        => 'color',
+		'settings'    => 'color_theme',
+		'label'       => esc_attr__( 'Delete ME DUMMY', 'aaurora' ),
+		'description' => '',
+		'section'     => 'general',
+		'default'     => '#ffd01b',
+		'transport'   => 'auto',
+		'output'      => array(
+			array(
+				'element'  => ':root',
+				'property' => '--theme-color',
+			),
+		),
+	)
+);
+
+
+// General Button START
+
+Kirki::add_section(
+	'general_button',
+	array(
+		'title'       => esc_attr__( 'Button', 'aaurora' ),
+		'description' => '',
+		'section'       => 'general',
+		'priority'    => 1,
+	)
+);
+
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'        => 'color',
+		'settings'    => 'button_bkg_clr',
+		'label'       => esc_attr__( 'Background Color', 'aaurora' ),
+		'description' => '',
+		'section'     => 'general_button',
+		'default'     => '#fff',
+		'transport'   => 'auto',
+		'output'      => array(
+			array(
+				'element'  => ':root',
+				'property' => '--button-background',
+			),
+		),
+	)
+);
+
+
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'        => 'color',
+		'settings'    => 'button_bkg_hover_clr',
+		'label'       => esc_attr__( 'Background Hover Color', 'aaurora' ),
+		'description' => '',
+		'section'     => 'general_button',
+		'default'     => '#d90a2c',
+		'transport'   => 'auto',
+		'output'      => array(
+			array(
+				'element'  => ':root',
+				'property' => '--button-hover-background',
+			),
+		),
+	)
+);
+
+
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'        => 'color',
+		'settings'    => 'button_text_clr',
+		'label'       => esc_attr__( 'Text Color', 'aaurora' ),
+		'description' => '',
+		'section'     => 'general_button',
+		'default'     => '#000',
+		'transport'   => 'auto',
+		'output'      => array(
+			array(
+				'element'  => ':root',
+				'property' => '--button-text-color',
+			),
+		),
+	)
+);
+
+
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'        => 'color',
+		'settings'    => 'button_text_hover_clr',
+		'label'       => esc_attr__( 'Text Hover Color', 'aaurora' ),
+		'description' => '',
+		'section'     => 'general_button',
+		'default'     => '#fff',
+		'transport'   => 'auto',
+		'output'      => array(
+			array(
+				'element'  => ':root',
+				'property' => '--button-hover-text-color',
+			),
+		),
+	)
+);
+
+Kirki::add_field( 'theme_config_id', [
+	'type'        => 'dimension',
+	'settings'    => 'button_border_radius',
+	'label'       => esc_html__( 'Dimension Control', 'aaurora' ),
+	'description' => esc_html__( 'Description Here.', 'aaurora' ),
+	'section'     => 'general_button',
+	'default'     => '10px',
+	'output'      => array(
+		array(
+			'element'  => ':root',
+			'property' => '--button-border-radius',
+		),
+	),
+] );
+
+// General Button END
+
 // SECTION GENERAL END.
 
 // SECTION: General Layout.

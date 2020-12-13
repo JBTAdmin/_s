@@ -388,19 +388,19 @@ if ( ! function_exists( 'aaurora_footer_share_layout' ) ) :
 				<?php load_inline_svg( 'share.svg' ); ?>
 			</a>
 			<div class="aaurora-share-inner">
-				<a href="https://www.facebook.com/" target="blank">
+				<a href="https://www.facebook.com/sharer.php?u=<?php esc_attr_e(get_permalink(get_the_ID())); ?>" target="blank" class="fb" rel="nofollow" data-social_name="facebook">
 					<?php load_inline_svg( 'facebook.svg' ); ?>
 				</a>
 
-				<a href="https://twitter.com/" target="blank">
+				<a href="https://twitter.com/intent/tweet?text=<?php esc_attr_e(get_permalink(get_the_ID())); ?>" target="blank" class="tw" rel="nofollow" data-social_name="twitter">
 					<?php load_inline_svg( 'twitter.svg' ); ?>
 				</a>
 
-				<a href="https://www.linkedin.com/in/mistrykaran/" target="blank">
+				<a href="https://www.linkedin.com/cws/share?url=<?php esc_attr_e(get_permalink(get_the_ID())); ?>" target="blank" class="ln" rel="nofollow" data-social_name="linkedin">
 					<?php load_inline_svg( 'linkedin.svg' ); ?>
 				</a>
 
-				<a href="https://in.pinterest.com/mistrykaran91/" target="blank">
+				<a href="https://in.pinterest.com/mistrykaran91/" target="blank" class="pt" rel="nofollow" data-social_name="pinterest">
 					<i class="fa fa-pinterest pinterest" aria-hidden="true"></i>
 				</a>
 			</div>
