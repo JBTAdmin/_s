@@ -285,6 +285,7 @@ if ( ! function_exists( 'aaurora_header_branding_layout' ) ) :
 									'menu_class'      => 'header-menu',
 									'container_class' => $container_alignment_class,
 									'fallback_cb'     => false,
+									'walker'  => new Wdm_Custom_Nav_Walker() //use our custom walker
 								)
 							);
 							aaurora_hamburger_menu();

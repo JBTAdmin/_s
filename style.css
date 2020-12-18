@@ -806,11 +806,11 @@ select {
   position: relative;
   list-style: none;
   text-decoration: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding-left: 0.6rem; }
 
 aside.sidebar-alt .widget-sidebar-menu a {
-  line-height: 4.5rem; }
+  line-height: 6.5rem;
+  color: #000; }
 
 aside .submenu a {
   padding: 2rem 3rem;
@@ -894,8 +894,6 @@ li > ul.sub-menu {
     padding: 0.6rem 1.3vw; } }
 
 @media screen and (min-width: 1025px) {
-  .sidebar-menu {
-    display: none; }
   .header-menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -969,17 +967,21 @@ li > ul.sub-menu {
 
 /** SIDEBAR MENU */
 .sidebar-menu .sub-menu a {
-  padding-left: 2rem; }
+  padding-left: 2rem;
+  font-size: 1.5rem; }
 
 .sidebar-menu .sub-menu {
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  display: none; }
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.5s ease-in-out;
+  -o-transition: max-height 0.5s ease-in-out;
+  transition: max-height 0.5s ease-in-out; }
 
 .sidebar-menu li:last-child {
   border: none; }
 
 .display-block {
-  display: block !important; }
+  max-height: 100rem !important; }
 
 .hide-block {
   display: none; }
@@ -1036,6 +1038,60 @@ li > ul.sub-menu {
 
 .main-navigation .header-menu > li {
   counter-increment: number; }
+
+.ins-drawer-button-area {
+  position: relative; }
+
+.drawer-dropdown-button {
+  height: 6.5rem;
+  width: 4rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  background: none;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  -o-transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out; }
+
+.drawer-dropdown-button:before {
+  width: 14px;
+  height: 2px;
+  opacity: 1;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out; }
+
+.drawer-dropdown-button:after,
+.drawer-dropdown-button:before {
+  position: absolute;
+  display: inline-block;
+  background: #096ffa;
+  content: ""; }
+
+.drawer-dropdown-button:after {
+  width: 2px;
+  height: 14px;
+  background: green; }
+
+.drawer-dropdown-button.active:before {
+  opacity: 0; }
+
+.drawer-dropdown-button.active {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg); }
 
 /* Navigation
 --------------------------------------------- */
@@ -1473,11 +1529,11 @@ div[class*="footer-sidebar-"] {
     max-width: 100%; } }
 
 .blog-article:hover {
-  -webkit-box-shadow: 0 9px 12px 0 rgba(0, 0, 0, 0.09);
-          box-shadow: 0 9px 12px 0 rgba(0, 0, 0, 0.09);
-  -webkit-transform: translateY(-4px);
-      -ms-transform: translateY(-4px);
-          transform: translateY(-4px); }
+  -webkit-box-shadow: 6px 6px 0 0 var(--theme-color);
+          box-shadow: 6px 6px 0 0 var(--theme-color);
+  -webkit-transform: translateY(-1px);
+      -ms-transform: translateY(-1px);
+          transform: translateY(-1px); }
 
 h2.entry-title {
   font-size: 2.4rem;
@@ -1571,7 +1627,8 @@ h1.entry-title {
 
 .blog-type-list {
   position: relative;
-  height: 100%; }
+  height: 100%;
+  cursor: pointer; }
 
 .blog-article {
   padding: 2rem;
@@ -1957,6 +2014,7 @@ sidebar-left .widget-title {
 aside.sidebar-alt-aside {
   background: #fff;
   width: 600px;
+  max-width: 100%;
   height: 100%;
   position: fixed;
   top: 0;
@@ -1971,7 +2029,7 @@ aside.sidebar-alt-aside {
   -o-transition: transform 0.5s, width 0.5s ease-in-out;
   transition: transform 0.5s, width 0.5s ease-in-out;
   transition: transform 0.5s, width 0.5s ease-in-out, -webkit-transform 0.5s;
-  font-size: 1.5rem; }
+  font-size: 1.9rem; }
 
 .sidebar-alt .widget-title {
   font-size: 1.9rem;

@@ -61,8 +61,8 @@
 }
 
 .blog-article:hover {
-  box-shadow: 0 9px 12px 0 rgba(0, 0, 0, 0.09);
-  transform: translateY(-4px);
+  box-shadow: 6px 6px 0 0 var(--theme-color);
+  transform: translateY(-1px);
 }
 
 h2.entry-title {
@@ -150,6 +150,7 @@ h1.entry-title {
 .blog-type-list {
   position: relative;
   height: 100%;
+  cursor: pointer;
 }
 
 .blog-article {

@@ -85,12 +85,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
   subMenu.forEach(el =>
     el.insertAdjacentHTML(
       "beforebegin",
-      '<span class="sub-menu-btn-icon">&gt;</span>'
+      '<span class="drawer-dropdown-button" ></span>'
+      // '<div class="ins-drawer-button-area"><span class="drawer-dropdown-button" ></span></div>'
+      // '<span class="sub-menu-btn-icon">&gt;</span>'
     )
   );
 
   const sidebarMenu = Array.prototype.slice.call(
-    document.querySelectorAll(".widget-area .sub-menu-btn-icon")
+    document.querySelectorAll(".widget-area .drawer-dropdown-button")
   );
 
   sidebarMenu.forEach(function(el) {
