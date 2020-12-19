@@ -362,7 +362,7 @@ if ( ! function_exists( 'aaurora_hamburger_menu' ) ) :
 			$sidebar_alt_class = 'menu_only';
 		}
 		?>
-		<div class="hamburger-menu <?php echo esc_attr( $sidebar_alt_class ); ?>">
+        <div class="hamburger-menu <?php echo esc_attr( $sidebar_alt_class ); ?>" on="tap:drawermenu.toggle" role="button" tabindex="1">
 			<div class="toggle sidebar-open desktop-sidebar-toggle" data-toggle-target=".sidebar-modal"
 				 data-toggle-body-class="showing-sidebar-modal" aria-expanded="false">
 									<span class="toggle-inner">
@@ -442,7 +442,7 @@ endif;
 if ( ! function_exists( 'aaurora_footer_go_to_top_layout' ) ) :
 	function aaurora_footer_go_to_top_layout() {
 		?>
-		<a class="top-link hide" href="" id="js-top">
+        <a class="top-link" href="#" id="js-top" on="tap:masthead.scrollTo" role="button" tabindex="1">
 			<?php load_inline_svg( 'arrow-up.svg' ); ?>
 			<span class="screen-reader-text">Back to top</span>
 		</a>

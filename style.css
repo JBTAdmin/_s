@@ -2220,7 +2220,6 @@ article {
   opacity: 0;
   border: none;
   top: 0;
-  border: 1px solid #e7ebed;
   border-radius: 50%;
   -webkit-transition: all 0.45s cubic-bezier(0.15, 0.2, 0.1, 1);
   -o-transition: all 0.45s cubic-bezier(0.15, 0.2, 0.1, 1);
