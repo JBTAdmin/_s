@@ -40,13 +40,7 @@ if ( ! class_exists( 'Aaurora_Admin' ) ) :
 			 * Load admin assets.
 			 */
 			add_action( 'admin_enqueue_scripts', array( $this, 'load_assets' ) );
-
-			/**
-			 * Add filters for WordPress header and footer text.
-			 */
-			add_filter( 'update_footer', array( $this, 'filter_update_footer' ), 50 );
-			add_filter( 'admin_footer_text', array( $this, 'filter_admin_footer_text' ), 50 );
-
+			
 			/**
 			 * Admin page header.
 			 */
@@ -56,16 +50,6 @@ if ( ! class_exists( 'Aaurora_Admin' ) ) :
 			 * Admin page footer.
 			 */
 			add_action( 'in_admin_footer', array( $this, 'admin_footer' ), 100 );
-
-			/**
-			 * Add notices.
-			 */
-			// add_action( 'admin_notices', array( $this, 'admin_notices' ) );
-
-			/**
-			 * After admin loaded
-			 */
-			do_action( 'aaurora_admin_loaded' );
 
 		}
 
@@ -80,11 +64,6 @@ if ( ! class_exists( 'Aaurora_Admin' ) ) :
 			 * Include Aaurora welcome page.
 			 */
 			require_once dirname( __FILE__ ) . '/class-aaurora-dashboard.php'; // phpcs:ignore
-
-			/**
-			 * Include Aaurora meta boxes.
-			 */
-			// require_once dirname( __FILE__ ) . '/metabox/class-aaurora-meta-boxes.php'; // phpcs:ignore
 		}
 
 		/**
@@ -99,14 +78,10 @@ if ( ! class_exists( 'Aaurora_Admin' ) ) :
 			/**
 			 * Do not enqueue if we are not on one of our pages.
 			 */
-			// if ( ! aaurora_is_admin_page( $hook ) ) {
-			// return;
-			// }
-
-			// Script debug.
-			$prefix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? 'dev/' : '';
-			$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
-
+			 if ( ! $this->is_admin_page() ) {
+			 return;
+			 }
+			 
 			/**
 			 * Enqueue admin pages stylesheet.
 			 */
@@ -116,55 +91,6 @@ if ( ! class_exists( 'Aaurora_Admin' ) ) :
 				false,
 				'1.0.0'
 			);
-
-			/**
-			 * Enqueue admin pages script.
-			 */
-			wp_enqueue_script(
-				'aaurora-admin-script',
-				get_parent_theme_file_uri() . '/inc/admin/assets/js/' . $prefix . 'aaurora-admin' . $suffix . '.js',
-				array( 'jquery', 'wp-util', 'updates' ),
-				'1.0.0',
-				true
-			);
-
-		}
-
-		/**
-		 * Filters WordPress footer right text to hide all text.
-		 *
-		 * @param string $text Text that we're going to replace.
-		 *
-		 * @since 1.0.0
-		 */
-		public function filter_update_footer( $text ) {
-
-			$base = get_current_screen()->base;
-
-			/**
-			 * Only do this if we are on one of our plugin pages.
-			 */
-			// if ( aaurora_is_admin_page( $base ) ) {
-			// return apply_filters( 'aaurora_footer_version', esc_html__( 'Aaurora Theme', 'aaurora' ) . ' ' . '1.0.0' . '<br/><a href="' . esc_url( 'https://twitter.com/aaurorawp' ) . '" target="_blank" rel="noopener noreferrer"><span class="dashicons dashicons-twitter"></span></a><a href="' . esc_url( 'https://facebook.com/aaurorawp' ) . '" target="_blank" rel="noopener noreferrer"><span class="dashicons dashicons-facebook"></span></a>' );
-			// } else {
-			return $text;
-			// }
-		}
-
-		/**
-		 * Filter WordPress footer left text to display our text.
-		 *
-		 * @param string $text Text that we're going to replace.
-		 *
-		 * @since 1.0.0
-		 */
-		public function filter_admin_footer_text( $text ) {
-
-			// if ( aaurora_is_admin_page() ) {
-			// return;
-			// }
-
-			return $text;
 		}
 
 		/**
@@ -173,28 +99,20 @@ if ( ! class_exists( 'Aaurora_Admin' ) ) :
 		 * @since 1.0.0
 		 */
 		public function admin_header() {
-
-			$base = get_current_screen()->base;
-			//
-			// if ( ! aaurora_is_admin_page( $base ) ) {
-			// return;
-			// }
+		 
+			if ( ! $this->is_admin_page() ) {
+				return;
+			}
 			?>
 
 			<div id="aaurora-header">
-				<div class="si-container">
+				<div class="wrap-container">
 
 					<a href="<?php echo esc_url( admin_url( 'admin.php?page=aaurora-dashboard' ) ); ?>"
 					   class="aaurora-logo">
 						<img src="<?php echo esc_url( get_parent_theme_file_uri() . '/assets/images/aaurora-logo.svg' ); ?>"
 							 alt="<?php echo esc_html( 'Aaurora' ); ?>"/>
 					</a>
-
-					<span class="aaurora-header-action">
-						<a href="<?php echo esc_url( admin_url( 'customize.php' ) ); ?>"><?php esc_html_e( 'Customize', 'aaurora' ); ?></a>
-						<a href="<?php echo esc_url( 'https://aaurorawp.com/docs/' ); ?>" target="_blank"
-						   rel="noopener noreferrer"><?php esc_html_e( 'Help Articles', 'aaurora' ); ?></a>
-					</span>
 
 				</div>
 			</div><!-- END #aaurora-header -->
@@ -208,31 +126,37 @@ if ( ! class_exists( 'Aaurora_Admin' ) ) :
 		 */
 		public function admin_footer() {
 
-			$base = get_current_screen()->base;
-
-			// if ( ! aaurora_is_admin_page( $base ) || aaurora_is_admin_page( $base, 'aaurora_wizard' ) ) {
-			// return;
-			// }
+			 if ( ! $this->is_admin_page() ) {
+			 return;
+			 }
 			?>
 			<div id="aaurora-footer">
 				<ul>
 					<li><a href="<?php echo esc_url( 'https://aaurorawp.com/docs/' ); ?>" target="_blank"
 						   rel="noopener noreferrer"><span><?php esc_html_e( 'Help Articles', 'aaurora' ); ?></span></span>
 						</a></li>
-					<li><a href="<?php echo esc_url( 'https://www.facebook.com/groups/aaurorawp/' ); ?>" target="_blank"
-						   rel="noopener noreferrer"><span><?php esc_html_e( 'Join Facebook Group', 'aaurora' ); ?></span></span>
-						</a></li>
 					<li>
 						<a href="<?php echo esc_url( 'https://wordpress.org/support/theme/aaurora/reviews/#new-post' ); ?>"
-						   target="_blank" rel="noopener noreferrer"><span class="dashicons dashicons-heart"
-																		   aria-hidden="true"></span><span><?php esc_html_e( 'Leave a Review', 'aaurora' ); ?></span></a>
+						   target="_blank" rel="noopener noreferrer"><span>&#x1f494;<?php esc_html_e( 'Crafted without love', 'aaurora' ); ?></span></a>
 					</li>
 				</ul>
 			</div><!-- END #aaurora-footer -->
 			
 			<?php
 		}
-
+		
+		/**
+		 * Check if we're on a Aarura admin page.
+		 *
+		 * @since 1.0.0
+		 * @return boolean
+		 */
+		function is_admin_page() {
+			
+		    $base = get_current_screen()->base;
+			return false != strpos( $base, 'aaurora' );
+		}
+		
 	}
 endif;
 
