@@ -67,8 +67,8 @@ if ( ! class_exists( 'Aaurora_Dashboard' ) ) :
 			 * Dashboard page.
 			 */
 			add_theme_page(
-				esc_html__( 'Aaurora Theme', 'aaurora' ),
-				'Aaurora Theme',
+				esc_html__( 'About Aaurora', 'aaurora' ),
+				'About Aaurora',
 				apply_filters( 'aaurora_manage_cap', 'edit_theme_options' ),
 				'aaurora-dashboard',
 				array( $this, 'render_dashboard' )
@@ -87,6 +87,34 @@ if ( ! class_exists( 'Aaurora_Dashboard' ) ) :
 			
 			// Hide from admin navigation.
 			remove_submenu_page( 'themes.php', 'aaurora-changelog' );
+			
+			/**
+			 * Useful Plugins.
+			 */
+			add_theme_page(
+				esc_html__( 'Useful Plugins', 'aaurora' ),
+				'Useful Plugins',
+				apply_filters( 'aaurora_manage_cap', 'edit_theme_options' ),
+				'aaurora-plugins',
+				array( $this, 'render_plugins' )
+			);
+			
+			// Hide from admin navigation.
+			remove_submenu_page( 'themes.php', 'aaurora-plugins' );
+			
+			/**
+			 * Support.
+			 */
+			add_theme_page(
+				esc_html__( 'Support', 'aaurora' ),
+				'Support',
+				apply_filters( 'aaurora_manage_cap', 'edit_theme_options' ),
+				'aaurora-support',
+				array( $this, 'render_support' )
+			);
+			
+			// Hide from admin navigation.
+			remove_submenu_page( 'themes.php', 'aaurora-support' );
 		}
 		
 		/**
@@ -115,7 +143,7 @@ if ( ! class_exists( 'Aaurora_Dashboard' ) ) :
 
                         <div class="aaurora-buttons">
                             <a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[control]=custom_logo' ) ); ?>"
-                               class="si-btn secondary" target="_blank"
+                               class="adm-btn secondary" target="_blank"
                                rel="noopener noreferrer"><?php esc_html_e( 'Upload Logo', 'aaurora' ); ?></a>
                         </div><!-- END .aaurora-buttons -->
                     </div>
@@ -128,7 +156,7 @@ if ( ! class_exists( 'Aaurora_Dashboard' ) ) :
 
                         <div class="aaurora-buttons">
                             <a href="<?php echo esc_url( admin_url( 'nav-menus.php' ) ); ?>"
-                               class="si-btn secondary" target="_blank"
+                               class="adm-btn secondary" target="_blank"
                                rel="noopener noreferrer"><?php esc_html_e( 'Go to Menus', 'aaurora' ); ?></a>
                         </div><!-- END .aaurora-buttons -->
                     </div>
@@ -141,7 +169,7 @@ if ( ! class_exists( 'Aaurora_Dashboard' ) ) :
 
                         <div class="aaurora-buttons">
                             <a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[section]=aaurora_section_colors' ) ); ?>"
-                               class="si-btn secondary" target="_blank"
+                               class="adm-btn secondary" target="_blank"
                                rel="noopener noreferrer"><?php esc_html_e( 'Change Colors', 'aaurora' ); ?></a>
                         </div><!-- END .aaurora-buttons -->
                     </div>
@@ -160,7 +188,7 @@ if ( ! class_exists( 'Aaurora_Dashboard' ) ) :
 
                     <div class="aaurora-buttons">
                         <a href="<?php echo esc_url( admin_url( 'customize.php' ) ); ?>"
-                           class="si-btn primary large-button"><?php esc_html_e( 'Start Customizing', 'aaurora' ); ?></a>
+                           class="adm-btn primary large-button"><?php esc_html_e( 'Start Customizing', 'aaurora' ); ?></a>
                     </div><!-- END .aaurora-buttons -->
 
                 </div><!-- END .aaurora-section -->
@@ -210,6 +238,60 @@ if ( ! class_exists( 'Aaurora_Dashboard' ) ) :
                 <div class="aaurora-section aaurora-columns">
                     <div class="aaurora-changelog">
                         <pre><?php echo esc_html( $changelog ); ?></pre>
+                    </div>
+                </div><!-- END .aaurora-columns -->
+            </div><!-- END .wrap-container -->
+			<?php
+		}
+		
+		/**
+		 * Render the plugin page.
+		 *
+		 * @since 1.0.0
+		 */
+		public function render_plugins() {
+			
+			// Render dashboard navigation.
+			$this->render_navigation();
+			
+			?>
+            <div class="wrap-container">
+                <div class="aaurora-section-title">
+                    <h2 class="aaurora-section-title">
+                        <span><?php esc_html_e( 'Plugins', 'aaurora' ); ?></span>
+                    </h2>
+                </div><!-- END .aaurora-section-title -->
+
+                <div class="aaurora-section aaurora-columns">
+                    <div class="aaurora-changelog">
+                    
+                    </div>
+                </div><!-- END .aaurora-columns -->
+            </div><!-- END .wrap-container -->
+			<?php
+		}
+		
+		/**
+		 * Render the support page.
+		 *
+		 * @since 1.0.0
+		 */
+		public function render_support() {
+			
+			// Render dashboard navigation.
+			$this->render_navigation();
+			
+			?>
+            <div class="wrap-container">
+                <div class="aaurora-section-title">
+                    <h2 class="aaurora-section-title">
+                        <span><?php esc_html_e( 'Support', 'aaurora' ); ?></span>
+                    </h2>
+                </div><!-- END .aaurora-section-title -->
+
+                <div class="aaurora-section aaurora-columns">
+                    <div class="aaurora-changelog">
+
                     </div>
                 </div><!-- END .aaurora-columns -->
             </div><!-- END .wrap-container -->
@@ -297,6 +379,18 @@ if ( ! class_exists( 'Aaurora_Dashboard' ) ) :
 					'name' => esc_html__( 'Changelog', 'aaurora' ),
 					'icon' => '',
 					'url'  => menu_page_url( 'aaurora-changelog', false ),
+				),
+				'plugins' => array(
+					'id'   => 'plugins',
+					'name' => esc_html__( 'Plugins', 'aaurora' ),
+					'icon' => '',
+					'url'  => menu_page_url( 'aaurora-plugins', false ),
+				),
+				'support' => array(
+					'id'   => 'support',
+					'name' => esc_html__( 'Support', 'aaurora' ),
+					'icon' => '',
+					'url'  => menu_page_url( 'aaurora-support', false ),
 				),
 			);
 			

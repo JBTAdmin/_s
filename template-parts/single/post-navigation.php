@@ -20,7 +20,7 @@ if ( empty( $next_post ) && empty( $previous_post ) ) {
 }
 ?>
 <section class="post-nav" role="navigation">
-	<h2 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'sinatra' ); ?></h2>
+	<h2 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'aaurora' ); ?></h2>
 	<?php
 
 	$previous_post_thumbnail = '';

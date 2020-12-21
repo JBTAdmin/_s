@@ -3,7 +3,9 @@
 *  ========================================================================== */
 
 /*todo need to revisit this css files*/
-
+body{
+	background-color: #fff;
+}
 #wpcontent {
 	padding: 0;
 	box-sizing: border-box;
@@ -52,6 +54,7 @@
 	padding-left: 0;
 	margin-bottom: 0;
 	list-style: none;
+	border-radius: 20px;
 }
 
 .aaurora-tabs > ul > li {
@@ -64,11 +67,11 @@
 	overflow: hidden;
 	user-select: none;
 	margin-bottom: 0;
+	border-radius: 20px;
 	-webkit-tap-highlight-color: transparent;
 }
 
 .aaurora-tabs > ul > li > a {
-	border-radius: .25rem;
 	display: block;
 	padding: .5rem 1rem;
 	color: #303e67;
@@ -146,12 +149,12 @@
 	padding: 10px;
 }
 
-#wpbody-content .aaurora-card .aaurora-buttons .si-btn{
+#wpbody-content .aaurora-card .aaurora-buttons .adm-btn{
 	cursor: pointer;
-	padding: 7px 10px;
+	padding: 8px 13px;
 	font-size: 11px;
 	line-height: 1.8;
-	border-radius: 3px;
+	border-radius: 20px;
 	color: #fff;
 	background-color: #1761fd;
 	border-color: #1761fd;
@@ -190,6 +193,7 @@
 	overflow: scroll;
 	padding: 0 20px;
 	background-color: #f1f1f1;
+	width: 100%;
 }
 
 
