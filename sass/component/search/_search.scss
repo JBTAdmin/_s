@@ -29,7 +29,7 @@
 }
 
 .popup_search_modal {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(23, 22, 26, 0.99);
   width: 100%;
   height: 100%;
   position: fixed;
@@ -62,18 +62,21 @@
 }
 
 .popup_search_modal .search-field {
-  &::placeholder {
-    color: #000;
+  &:focus {
+    color: #fff;
   }
-  font-size: 30px;
+  &::placeholder {
+    color: #fff;
+  }
+  font-size: 16px;
   display: block;
   width: 100%;
   padding: 15px 20px;
 
-  //background-color: rgba(255, 255, 255, 0.04);
+  background-color: rgba(255, 255, 255, 0.03);
   //border-color: rgba(0, 0, 0, 0.2);
   //border-radius: 5px;
-  //color: #fff;
+  color: #fff;
   //height: 56px;
   //width: 40rem;
   text-align: center;
@@ -85,10 +88,9 @@
   top: 20vh;
   overflow: hidden;
   width: calc(100% - 50px);
-  max-width: 900px;
+  max-width: 500px;
   margin: 0 auto;
   border-radius: 5px;
-  background-color: #fff;
 }
 
 .popup_search_modal > .popup_modal_close_button {

@@ -428,7 +428,6 @@ if ( ! function_exists( 'aaurora_footer_popup_search_modal_layout' ) ) :
 						<input autocomplete="off" type="text" class="search-field" name="s" placeholder="Search..."
 							   value="">
 					</label>
-					<input type="submit" class="search search-submit" value="Submit">
 				</form>
 			</div>
 		</div>

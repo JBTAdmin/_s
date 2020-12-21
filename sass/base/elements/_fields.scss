@@ -24,7 +24,7 @@ textarea {
   vertical-align: middle;
   outline: 0;
   transition: all 0.2s ease-out;
-
+  cursor: text;
   &:focus {
     color: $color__text-input-focus;
   }
