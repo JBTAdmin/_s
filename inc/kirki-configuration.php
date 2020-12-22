@@ -703,6 +703,17 @@ Kirki::add_field(
 	)
 );
 
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'        => 'toggle',
+		'settings'    => 'fixed-header',
+		'label'       => esc_attr__( 'Header Fixed', 'aaurora' ),
+		'description' => esc_attr__( 'Enable to fixed header.', 'aaurora' ),
+		'section'     => 'header',
+		'default'     => '1',
+	)
+);
 
 Kirki::add_field(
 	'aaurora_theme_options',

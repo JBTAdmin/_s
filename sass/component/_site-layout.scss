@@ -7,6 +7,15 @@
   flex-wrap: wrap;
 }
 
+.site-container::before {
+  content: "";
+  display: block;
+  height: 8rem;
+  margin-top: -8rem;
+  pointer-events: none;
+  visibility: hidden;
+}
+
 main {
   flex: 3 1;
   //max-width: 140rem; // todo need to check if this can be removed as other width is there screen and (min-width: 992px)

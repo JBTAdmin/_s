@@ -26,7 +26,7 @@ body.admin-bar aside {
 // For Sidebar Categories
 
 .sidebar-right,
-sidebar-left {
+.sidebar-left {
   & .widget:not(.widget_seriestoc) {
     margin-bottom: 5rem;
 
@@ -41,9 +41,9 @@ sidebar-left {
   }
 
   & .widget-title {
-    color: #6d6d6d;
+    color: #000;
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 600;
     //margin-bottom: 1.5rem;
     //padding-bottom: 0.4rem;
 
@@ -51,7 +51,7 @@ sidebar-left {
     letter-spacing: 0.8px;
     text-transform: capitalize;
     //background-color: #e6f4ea;
-    color: #17161a;
+    //color: #17161a;
     //border-bottom: 2px solid $theme__color;
     position: relative;
 

@@ -12,6 +12,7 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
+  height: 100%;
 }
 
 #primary-menu > li > a:after {
@@ -153,7 +154,7 @@ li > ul.sub-menu {
 
   .header-menu {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-evenly;
     //height: 10vh;
   }
@@ -167,12 +168,17 @@ li > ul.sub-menu {
   .header-menu > li {
     display: flex;
     padding: 0 1.3vw;
+    align-items: center;
     //font-style: italic;
     //line-height: 8rem;
   }
 
+  .header-menu > li > a {
+    position: relative;
+  }
+
   .header-menu-bar {
-    line-height: 8rem;
+    height: 8rem;
   }
 
   nav ul ul {
@@ -307,12 +313,11 @@ li > ul.sub-menu {
   opacity: 1;
   font-weight: 700;
   width: auto;
-  top: -10px;
-  right: 15px;
+  top: -7px;
+  right: 0px;
   font-size: 0.6em;
   position: absolute;
   height: auto;
-  background: 0 0;
   opacity: 0.7;
 }
 
