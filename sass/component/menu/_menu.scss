@@ -165,6 +165,10 @@ li > ul.sub-menu {
     text-decoration: none;
   }
 
+  .header-menu > li:hover {
+    background-color: rgba(32, 33, 36, 0.04);
+  }
+
   .header-menu > li {
     display: flex;
     padding: 0 1.3vw;
