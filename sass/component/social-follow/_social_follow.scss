@@ -7,15 +7,13 @@
 
 .aaurora_social_follow {
   position: fixed;
-  height: 56px;
-  top: 0;
-  bottom: 0;
+  right: 34px;
+  top: 50%;
   font-weight: 600;
   z-index: 10;
   align-items: center;
   margin: auto;
-  right: 1rem; // todo a better solution needed.
-  transform-origin: 100% 50%;
+  transform-origin: center right;
   transform: rotate(-90deg) translate(50%, -50%);
 }
 

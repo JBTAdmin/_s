@@ -2332,8 +2332,7 @@ a.pt {
   width: 100%;
   padding: 15px 20px;
   background-color: rgba(255, 255, 255, 0.03);
-  color: #fff;
-  text-align: center; }
+  color: #fff; }
   .popup_search_modal .search-field:focus {
     color: #fff; }
   .popup_search_modal .search-field::-webkit-input-placeholder {
@@ -2370,19 +2369,17 @@ a.pt {
 
 .aaurora_social_follow {
   position: fixed;
-  height: 56px;
-  top: 0;
-  bottom: 0;
+  right: 34px;
+  top: 50%;
   font-weight: 600;
   z-index: 10;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   margin: auto;
-  right: 1rem;
-  -webkit-transform-origin: 100% 50%;
-      -ms-transform-origin: 100% 50%;
-          transform-origin: 100% 50%;
+  -webkit-transform-origin: center right;
+      -ms-transform-origin: center right;
+          transform-origin: center right;
   -webkit-transform: rotate(-90deg) translate(50%, -50%);
       -ms-transform: rotate(-90deg) translate(50%, -50%);
           transform: rotate(-90deg) translate(50%, -50%); }
