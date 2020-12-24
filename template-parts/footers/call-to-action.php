@@ -1,13 +1,20 @@
-<div class="cta_wrapper">
-	<div class="si-flex-row middle-md">
-		
-		<div class="col-xs-12 col-md-8 center-xs start-md">
-			<p class="h3"><?php echo wp_kses_post( $aaurora_cta_text ); ?></p>
-		</div>
-		
-		<div class="col-xs-12 col-md-4 center-xs end-md">
-			<?php echo $aaurora_cta_button; // phpcs:ignore ?>
-		</div>
-	
-	</div>
+<div id="colophon" class="site-footer-main">
+    <div class="wrap">
+        <div class="aaurora-cta_wrapper">
+
+            <div class="aaurora-cta-text">
+                <div class="cta-heading">
+                    Want to set up <br>your business today?
+                </div>
+                <div class="cta-text">
+                    Create a High Performed UI/UX Design from a Silicon Valley. Find More
+                </div>
+            </div>
+
+            <div class="aaurora-cta-button">
+                <input type="button" value="Click Me" href="#">
+            </div>
+
+        </div>
+    </div>
 </div>

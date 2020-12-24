@@ -60,11 +60,6 @@
   }
 }
 
-.blog-article:hover {
-  box-shadow: 6px 6px 0 0 var(--theme-color);
-  transform: translateY(-1px);
-}
-
 h2.entry-title {
   font-size: 2.4rem; // todo can these two thing be centralized?
   line-height: 1.4;
@@ -157,7 +152,7 @@ h1.entry-title {
   padding: 2rem;
   border-radius: 15px;
   border: 1px solid #f2f2f2;
-  transition: box-shadow 0.15s ease-in-out;
+  transition: transform ease 0.3s;
   background-color: #fff;
   height: 100%;
 }

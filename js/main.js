@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   const popupSearchModal = document.querySelector(".popup_search_modal");
   const searchButton = document.querySelector(".aaurora-search");
+  const headerSearchButton = document.querySelector(".aaurora-header-search");
   const popupModalCloseBtn = document.querySelector(
     ".popup_modal_close_button"
   );
@@ -131,6 +132,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
 
   searchButton.addEventListener("click", function() {
+    popupSearchModal.classList.toggle("visible");
+  });
+
+  headerSearchButton.addEventListener("click", function() {
     popupSearchModal.classList.toggle("visible");
   });
 

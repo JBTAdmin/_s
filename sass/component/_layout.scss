@@ -34,6 +34,10 @@
 --------------------------------------------- */
 @import "footer/footer";
 
+/* Footer
+--------------------------------------------- */
+@import "footer/footer-2";
+
 /* Content
 --------------------------------------------- */
 @import "content/common";
@@ -77,3 +81,7 @@
 /* Author Description
 --------------------------------------------- */
 @import "author/author_description";
+
+/* Call To Action
+--------------------------------------------- */
+@import "call-to-action/call-to-action";

@@ -288,6 +288,7 @@ if ( ! function_exists( 'aaurora_header_branding_layout' ) ) :
 									'walker'  => new Wdm_Custom_Nav_Walker() //use our custom walker
 								)
 							);
+							aaurora_header_search();
 							aaurora_hamburger_menu();
 							?>
 						</nav>
@@ -348,6 +349,20 @@ if ( ! function_exists( 'aaurora_site_branding' ) ) :
 			endif;
 			?>
 		</div>
+		<?php
+	}
+endif;
+
+if ( ! function_exists( 'aaurora_header_search' ) ) :
+	/**
+	 * Displays Search Button in Header.
+	 */
+	function aaurora_header_search() {
+		
+		?>
+        <div class="aaurora-header-search" role="button" tabindex="1">
+                <?php load_inline_svg( 'search.svg' ); ?>
+        </div>
 		<?php
 	}
 endif;
@@ -475,19 +490,30 @@ if ( ! function_exists( 'aaurora_social_media' ) ) :
 		if ( 'top-bar-social' === $social_class && get_theme_mod( 'top_bar_social_media_button', true ) !== true ) :
 			return;
 		endif;
-		$social_class = 'aaurora_social_follow';  // todo need to revisit this. passing parameter to Actions.
+		
+		if ( get_theme_mod( 'side_social_media_button', true ) !== true ) {
+		    return;
+        }
+		
+		$text_only = get_theme_mod( 'side_social_media_button_text', true );
+		
+		if( get_theme_mod( 'side_social_media_button_color', false ) === false) {
+			$social_class .= ' ' . 'no_social_color';
+        }
+		
+        
+		$social_class .= ' ' . 'aaurora_social_follow';  // todo need to revisit this. passing parameter to Actions.
 		?>
 
 		<div class="<?php echo esc_attr( $social_class ); ?>">
 			<ul class="aaurora-social-holder">
-				<li>Follow Us -</li>
 				<?php
 				if ( get_theme_mod( 'social_media_fb_url', '' ) !== '' ) :
 					?>
 					<li>
 						<a class="social-link facebook-social-icon"
 						   href="<?php echo esc_url( get_theme_mod( 'social_media_fb_url' ) ); ?>" target="_blank">
-							<?php $text_only ? print ' Fb.' : load_inline_svg( 'facebook.svg' ); ?>
+							<?php $text_only ? print ' facebook' : load_inline_svg( 'facebook.svg' ); ?>
 						</a>
 					</li>
 				<?php endif; ?>
@@ -495,7 +521,7 @@ if ( ! function_exists( 'aaurora_social_media' ) ) :
 					<li>
 						<a class="social-link twitter-social-icon"
 						   href="<?php echo esc_url( get_theme_mod( 'social_media_tw_url' ) ); ?>" target="_blank">
-							<?php $text_only ? print ' Tw.' : load_inline_svg( 'twitter.svg' ); ?>
+							<?php $text_only ? print ' twitter' : load_inline_svg( 'twitter.svg' ); ?>
 						</a>
 					</li>
 				<?php endif; ?>
@@ -503,7 +529,7 @@ if ( ! function_exists( 'aaurora_social_media' ) ) :
 					<li>
 						<a class="social-link instagram-social-icon"
 						   href="<?php echo esc_url( get_theme_mod( 'social_media_in_url' ) ); ?>" target="_blank">
-							<?php $text_only ? print ' In.' : load_inline_svg( 'instagram.svg' ); ?>
+							<?php $text_only ? print ' instagram' : load_inline_svg( 'instagram.svg' ); ?>
 						</a>
 					</li>
 				<?php endif; ?>
@@ -511,7 +537,7 @@ if ( ! function_exists( 'aaurora_social_media' ) ) :
 					<li>
 						<a class="social-link linkedin-social-icon"
 						   href="<?php echo esc_url( get_theme_mod( 'social_media_ln_url' ) ); ?>" target="_blank">
-							<?php $text_only ? print ' Ln.' : load_inline_svg( 'linkedin.svg' ); ?>
+							<?php $text_only ? print ' linkedin' : load_inline_svg( 'linkedin.svg' ); ?>
 						</a>
 					</li>
 				<?php endif; ?>
@@ -519,7 +545,7 @@ if ( ! function_exists( 'aaurora_social_media' ) ) :
 					<li>
 						<a class="social-link youtube-social-icon"
 						   href="<?php echo esc_url( get_theme_mod( 'social_media_yt_url' ) ); ?>" target="_blank">
-							<?php $text_only ? print ' Yt.' : load_inline_svg( 'youtube.svg' ); ?>
+							<?php $text_only ? print ' youtube' : load_inline_svg( 'youtube.svg' ); ?>
 						</a>
 					</li>
 				<?php endif; ?>
@@ -527,7 +553,7 @@ if ( ! function_exists( 'aaurora_social_media' ) ) :
 					<li>
 						<a class="social-link github-social-icon"
 						   href="<?php echo esc_url( get_theme_mod( 'social_media_gh_url' ) ); ?>" target="_blank">
-							<?php $text_only ? print ' Gh.' : load_inline_svg( 'github.svg' ); ?>
+							<?php $text_only ? print ' github' : load_inline_svg( 'github.svg' ); ?>
 						</a>
 					</li>
 				<?php endif; ?>

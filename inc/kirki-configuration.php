@@ -813,16 +813,20 @@ Kirki::add_field(
 	'aaurora_theme_options',
 	array(
 		'type'        => 'dimension',
-		'settings'    => 'mainmenu_paddings',
+		'settings'    => 'mainmenu_height',
 		'label'       => esc_attr__( 'Main Header Height', 'aaurora' ),
-		'description' => esc_attr__( 'Use this option to change header height. Default: 10rem', 'aaurora' ),
+		'description' => esc_attr__( 'Use this option to change header height. Default: 8rem', 'aaurora' ),
 		'section'     => 'header',
-		'default'     => '10rem',
+		'default'     => '8rem',
 		'output'      => array(
 			array(
-				'element'  => '.main-header, .aside-header',
+				'element'  => '.header-menu-bar',
 				'property' => 'height',
 			),
+	         array(
+	             'element'  => '.site-container::before',
+	             'property' => 'height',
+	         ),
 		),
 	)
 );
@@ -1136,6 +1140,42 @@ Kirki::add_field(
 		'settings'    => 'top_bar_social_media_button',
 		'label'       => esc_attr__( 'Social Icons', 'aaurora' ),
 		'description' => esc_attr__( 'Disable to hide Social Media Button on Top Bar..', 'aaurora' ),
+		'section'     => 'social_media',
+		'default'     => '1',
+	)
+);
+
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'        => 'toggle',
+		'settings'    => 'side_social_media_button',
+		'label'       => esc_attr__( 'Social Icons', 'aaurora' ),
+		'description' => esc_attr__( 'Disable to hide Social Media Button on SIDE.', 'aaurora' ),
+		'section'     => 'social_media',
+		'default'     => '1',
+	)
+);
+
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'        => 'toggle',
+		'settings'    => 'side_social_media_button_text',
+		'label'       => esc_attr__( 'Social text or Icons', 'aaurora' ),
+		'description' => esc_attr__( 'Disable to show social text insted of icon.', 'aaurora' ),
+		'section'     => 'social_media',
+		'default'     => '1',
+	)
+);
+
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'        => 'toggle',
+		'settings'    => 'side_social_media_button_color',
+		'label'       => esc_attr__( 'Use Color code social media', 'aaurora' ),
+		'description' => esc_attr__( 'Disable to use only black color.', 'aaurora' ),
 		'section'     => 'social_media',
 		'default'     => '1',
 	)
