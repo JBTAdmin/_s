@@ -324,9 +324,11 @@ Kirki::add_field(
 		'default'     => 'layout-4',
 		'multiple'    => 0,
 		'choices'     => array(
+			'layout-1' => esc_attr__( 'Layout 1', 'aaurora' ),
 			'layout-2' => esc_attr__( 'Layout 2', 'aaurora' ),
 			'layout-3' => esc_attr__( 'Layout 3', 'aaurora' ),
 			'layout-4' => esc_attr__( 'Layout 4', 'aaurora' ),
+			'layout-5' => esc_attr__( 'Layout 5', 'aaurora' ),
 		),
 		'description' => esc_attr__( 'Here you can select which layout will be used to display the blog posts on Home or Index pages.', 'aaurora' ),
 	)
@@ -843,6 +845,27 @@ Kirki::add_section(
 		'priority'    => 6,
 	)
 );
+
+
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'        => 'select',
+		'settings'    => 'footer_layout_setting',
+		'label'       => esc_attr__( 'Footer Layout', 'aaurora' ),
+		'section'     => 'footer',
+		'default'     => '4',
+		'multiple'    => 0,
+		'choices'     => array(
+			'1' => esc_attr__( 'Layout 1', 'aaurora' ),
+			'2' => esc_attr__( 'Layout 2', 'aaurora' ),
+			'3' => esc_attr__( 'Layout 3', 'aaurora' ),
+			'4' => esc_attr__( 'Layout 4', 'aaurora' ),
+		),
+		'description' => esc_attr__( 'Here you can select which layout will be used to display the blog posts on Home or Index pages.', 'aaurora' ),
+	)
+);
+
 
 Kirki::add_field(
 	'aaurora_theme_options',

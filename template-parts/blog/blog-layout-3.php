@@ -11,26 +11,23 @@
 ?>
 <!--todo having some issues. Need to check. -->
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'blog-post-article-3' ); ?>>
-	<div class="blog-type-list" style="background-image:url('<?php echo esc_url( get_the_post_thumbnail_url( get_the_ID(), 'full' ) ); ?>')">
-	</div>
-	<a href=" <?php echo esc_url( get_permalink() ); ?>" rel="bookmark"></a>
-	<div class="blog-type-list-content">
-		<!--            todo class names proper-->
-		<div class="post-date">
-			<span class="post-date-day"><?php echo get_the_date( 'd' ); ?></span>
-			<span class="post-date-month"><?php echo get_the_date( 'F' ); ?></span>
-		</div>
-		<div class="entry-header">
+
+    
+        <div class="post-info">
+            <div class="post-date">
+				<?php echo aaurora_posted_on(); ?>
+            </div>
+			
 			<?php
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 			?>
-			<div class="blog-list-content-meta-info">
-				<?php
-				aaurora_meta_category_list();
-				?>
-			</div>
-		</div><!-- .entry-header -->
-	</div>
-
+        </div>
+        
+        <div class="post-excerpt">
+            <a href=" <?php echo esc_url( get_permalink() ); ?>" rel="bookmark1">
+                In just a few short days, we'll welcome over 1,200 of you to Revolution Hall for this year's XOXO. After last year's festival at Veterans Memorial Coliseum...
+            </a>
+        </div>
+    
 
 </article><!-- #post-<?php the_ID(); ?> -->

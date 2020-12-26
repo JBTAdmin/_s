@@ -25,6 +25,8 @@ if ( true === get_theme_mod( 'fixed-header' ) ) {
 	$body_class .= ' ' . 'header-fixed';
 }
 
+$body_class .= ' blog-' . get_theme_mod( 'blog_layout_setting', 'layout-1' );
+
 $menu_class .= ' ' . get_theme_mod( 'main_menu_font_decoration', 'none' );
 
 $menu_class .= ' ' . get_theme_mod( 'main_menu_font_weight', 'regularfont' );

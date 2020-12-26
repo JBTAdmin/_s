@@ -139,6 +139,13 @@ function aaurora_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'aaurora_scripts' );
 
+if ( ! function_exists( 'aaurora_excerpt' ) ) {
+	
+	function aaurora_excerpt( $limit = 50 ) {
+		echo wp_trim_words(get_the_excerpt(), $limit);
+	}
+	
+}
 
 /**
  * Theme Featured Image support.
