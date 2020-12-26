@@ -15,17 +15,17 @@ $header_class = '';
 
 $body_class = '';
 
+$body_class = ' blog-' . get_theme_mod( 'blog_layout_setting', 'layout-1' );
+
+if ( true === get_theme_mod( 'fixed-header' ) ) {
+	$body_class .= ' header-fixed';
+}
+
 $header_class .= ' ' . get_theme_mod( 'header_layout', 'menu-below-logo' );
 
 $header_class .= ' ' . get_theme_mod( 'header_layout_color', 'light' );
 
 $header_class .= ' ' . get_theme_mod( 'search_position', 'header' );
-
-if ( true === get_theme_mod( 'fixed-header' ) ) {
-	$body_class .= ' ' . 'header-fixed';
-}
-
-$body_class .= ' blog-' . get_theme_mod( 'blog_layout_setting', 'layout-1' );
 
 $menu_class .= ' ' . get_theme_mod( 'main_menu_font_decoration', 'none' );
 

@@ -114,9 +114,8 @@ function aaurora_is_frontpage() {
 }
 
 /**
- * Return Article Layout.
+ * Use Specific Article Layout.
  *
- * @return string Article layout template.
  * @since 1.0.0
  */
 function aaurora_get_content_layout() {

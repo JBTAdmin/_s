@@ -143,8 +143,7 @@ Kirki::add_field(
 );
 
 
-// General Button START
-
+// General Button START.
 Kirki::add_section(
 	'general_button',
 	array(
@@ -251,8 +250,7 @@ Kirki::add_field(
 		),
 	)
 );
-
-// General Button END
+// General Button END.
 
 // SECTION GENERAL END.
 

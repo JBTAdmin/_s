@@ -371,32 +371,52 @@ function aaurora_entry_navigation_after() {
 }
 
 
-// viveka
-
+// todo viveka.
+/**
+ * Before Main Content
+ */
 function aaurora_main_content_before() {
 	do_action( 'aaurora_main_content_before' );
 }
 
+/**
+ * After Main Content.
+ */
 function aaurora_main_content_after() {
 	do_action( 'aaurora_main_content_after' );
 }
 
+/**
+ * Before Content.
+ */
 function aaurora_content_before() {
 	do_action( 'aaurora_content_before' );
 }
 
+/**
+ * After Content.
+ */
 function aaurora_content_after() {
 	do_action( 'aaurora_content_after' );
 }
 
+/**
+ * Before Entry Content.
+ */
 function aaurora_entry_content_before() {
 	do_action( 'aaurora_entry_content_before' );
 }
 
+/**
+ * Entry Content.
+ */
 function aaurora_entry_content() {
 	do_action( 'aaurora_entry_content' );
 }
 
+/**
+ * After Entry Content
+ */
 function aaurora_entry_content_after() {
 	do_action( 'aaurora_entry_content_after' );
 }

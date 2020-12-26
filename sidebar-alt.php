@@ -16,7 +16,7 @@ if ( is_amp_endpoint() ) {
 
 ?>
 <amp-sidebar id="drawermenu" layout="nodisplay" side="right">
-	<aside id="secondary-alt" class="<?php echo $class; ?>">
+	<aside id="secondary-alt" class="<?php echo esc_attr( $class ); ?>">
 	<div class="aside-header-container">
 		<div class="widget aside-header">
 			<div class="site-branding">
@@ -32,7 +32,7 @@ if ( is_amp_endpoint() ) {
 						?>
 						<p class="site-description"> 
 						<?php
-						echo $aaurora_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped.
+						echo esc_html( $aaurora_description ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped.
 						?>
 							</p>
 						<?php

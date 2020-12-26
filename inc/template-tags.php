@@ -23,6 +23,7 @@ if ( ! function_exists( 'aaurora_posted_on' ) ) :
 	 * Prints HTML with meta information for the current post-date/time.
 	 *
 	 * @param boolean $date_only Optional. Return Date or echo date on screen. Default echo.
+	 * @param boolean $created_date Optional. Created or Updated Date. Default Updated Post Date.
 	 */
 	function aaurora_posted_on( $date_only = false, $created_date = false ) {
 

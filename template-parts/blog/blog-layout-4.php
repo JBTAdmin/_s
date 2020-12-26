@@ -15,7 +15,7 @@
 		<div class="blog-article">
 			<div class="blog-type-list-content">
 				<div class="blog-type-published-date">
-					<?php echo aaurora_posted_on( true ); ?>
+					<?php aaurora_posted_on( true ); ?>
 				</div>
 				<div class="entry-header">
 					<?php

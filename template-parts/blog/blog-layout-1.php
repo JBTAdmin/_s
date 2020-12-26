@@ -15,10 +15,10 @@
 		<div class="article-featured-image" >
 			<?php aaurora_post_thumbnail( 'full', aaurora_posted_on( true ) ); ?>
 		</div>
-		
+
 		<div class="blog-article-metainfo">
 			<div class="post-date">
-				<?php echo aaurora_posted_on(); ?>
+				<?php aaurora_posted_on(); ?>
 			</div>
 			<div class="article-header">
 				<?php
