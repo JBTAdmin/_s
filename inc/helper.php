@@ -121,7 +121,7 @@ function aaurora_is_frontpage() {
 function aaurora_get_content_layout() {
 
 	if ( is_home() || is_archive() || is_search() ) {
-		get_template_part( 'template-parts/blog/blog', get_theme_mod( 'blog_layout_setting', 'layout-3' ), get_post_type() );
+		get_template_part( 'template-parts/blog/blog', get_theme_mod( 'blog_layout_setting', '3' ), get_post_type() );
 	} else {
 		get_template_part( 'template-parts/single/single', 'layout', get_post_type() );
 	}

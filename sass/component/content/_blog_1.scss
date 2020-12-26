@@ -1,8 +1,8 @@
-.blog-layout-1 .blog-type-list::before {
+.blog-1 .blog-type-list::before {
   content: unset;
 }
 
-.blog-layout-1 .article-container {
+.blog-1 .article-container {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
@@ -86,13 +86,13 @@
 }
 
 @media screen and (max-width: 900px) {
-  .blog-layout-1 .article-container article {
+  .blog-1 .article-container article {
     flex-basis: 50%;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .blog-layout-1 .article-container article {
+  .blog-1 .article-container article {
     flex-basis: 100%;
   }
 }
