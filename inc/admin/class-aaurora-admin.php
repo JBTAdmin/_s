@@ -40,7 +40,7 @@ if ( ! class_exists( 'Aaurora_Admin' ) ) :
 			 * Load admin assets.
 			 */
 			add_action( 'admin_enqueue_scripts', array( $this, 'load_assets' ) );
-			
+
 			/**
 			 * Admin page header.
 			 */
@@ -78,10 +78,10 @@ if ( ! class_exists( 'Aaurora_Admin' ) ) :
 			/**
 			 * Do not enqueue if we are not on one of our pages.
 			 */
-			 if ( ! $this->is_admin_page() ) {
-			 return;
-			 }
-			 
+			if ( ! $this->is_admin_page() ) {
+				return;
+			}
+
 			/**
 			 * Enqueue admin pages stylesheet.
 			 */
@@ -99,7 +99,7 @@ if ( ! class_exists( 'Aaurora_Admin' ) ) :
 		 * @since 1.0.0
 		 */
 		public function admin_header() {
-		 
+
 			if ( ! $this->is_admin_page() ) {
 				return;
 			}
@@ -126,9 +126,9 @@ if ( ! class_exists( 'Aaurora_Admin' ) ) :
 		 */
 		public function admin_footer() {
 
-			 if ( ! $this->is_admin_page() ) {
-			 return;
-			 }
+			if ( ! $this->is_admin_page() ) {
+				return;
+			}
 			?>
 			<div id="aaurora-footer">
 				<ul>
@@ -144,7 +144,7 @@ if ( ! class_exists( 'Aaurora_Admin' ) ) :
 			
 			<?php
 		}
-		
+
 		/**
 		 * Check if we're on a Aarura admin page.
 		 *
@@ -152,11 +152,11 @@ if ( ! class_exists( 'Aaurora_Admin' ) ) :
 		 * @return boolean
 		 */
 		function is_admin_page() {
-			
-		    $base = get_current_screen()->base;
+
+			$base = get_current_screen()->base;
 			return false != strpos( $base, 'aaurora' );
 		}
-		
+
 	}
 endif;
 

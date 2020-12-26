@@ -62,7 +62,7 @@ Kirki::add_section(
 	array(
 		'title'       => esc_attr__( 'Color', 'aaurora' ),
 		'description' => '',
-		'section'       => 'general',
+		'section'     => 'general',
 		'priority'    => 1,
 	)
 );
@@ -150,7 +150,7 @@ Kirki::add_section(
 	array(
 		'title'       => esc_attr__( 'Button', 'aaurora' ),
 		'description' => '',
-		'section'       => 'general',
+		'section'     => 'general',
 		'priority'    => 1,
 	)
 );
@@ -234,20 +234,23 @@ Kirki::add_field(
 	)
 );
 
-Kirki::add_field( 'theme_config_id', [
-	'type'        => 'dimension',
-	'settings'    => 'button_border_radius',
-	'label'       => esc_html__( 'Dimension Control', 'aaurora' ),
-	'description' => esc_html__( 'Description Here.', 'aaurora' ),
-	'section'     => 'general_button',
-	'default'     => '10px',
-	'output'      => array(
-		array(
-			'element'  => ':root',
-			'property' => '--button-border-radius',
+Kirki::add_field(
+	'theme_config_id',
+	array(
+		'type'        => 'dimension',
+		'settings'    => 'button_border_radius',
+		'label'       => esc_html__( 'Dimension Control', 'aaurora' ),
+		'description' => esc_html__( 'Description Here.', 'aaurora' ),
+		'section'     => 'general_button',
+		'default'     => '10px',
+		'output'      => array(
+			array(
+				'element'  => ':root',
+				'property' => '--button-border-radius',
+			),
 		),
-	),
-] );
+	)
+);
 
 // General Button END
 
@@ -825,10 +828,10 @@ Kirki::add_field(
 				'element'  => '.header-menu-bar',
 				'property' => 'height',
 			),
-	         array(
-	             'element'  => '.site-container::before',
-	             'property' => 'height',
-	         ),
+			array(
+				'element'  => '.site-container::before',
+				'property' => 'height',
+			),
 		),
 	)
 );

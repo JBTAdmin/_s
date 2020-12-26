@@ -44,7 +44,7 @@ $menu_class .= ' ' . get_theme_mod( 'main_menu_arrow_style', 'noarrow' );
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class($body_class); ?>>
+<body <?php body_class( $body_class ); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary">

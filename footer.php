@@ -11,7 +11,7 @@
 
 ?>
 
-<?php 	get_template_part( 'template-parts/footers/call-to-action', get_post_type() ); ?>
+<?php get_template_part( 'template-parts/footers/call-to-action', get_post_type() ); ?>
 <footer class="site-footer">
 	<?php
 		get_template_part( 'template-parts/footers/footer', get_theme_mod( 'footer_layout_setting', '3' ), get_post_type() );

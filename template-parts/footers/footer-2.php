@@ -16,10 +16,10 @@ $site_info_text_right = 'Crafted with &#10084; by <a href=""></a> Team';
 ?>
 
 <div id="colophon" class="site-footer-2-main">
-    <div class="wrap">
-        <div class="main-footer-2">
+	<div class="wrap">
+		<div class="main-footer-2">
 			<?php if ( has_nav_menu( 'footer-1' ) || is_customize_preview() ) : ?>
-                <nav class="footer-navigation" aria-label="<?php esc_attr_e( 'Footer Menu', 'aaurora' ); ?>">
+				<nav class="footer-navigation" aria-label="<?php esc_attr_e( 'Footer Menu', 'aaurora' ); ?>">
 					<?php
 					wp_nav_menu(
 						array(
@@ -29,29 +29,29 @@ $site_info_text_right = 'Crafted with &#10084; by <a href=""></a> Team';
 						)
 					);
 					?>
-                </nav>
+				</nav>
 			<?php endif; ?>
 
-        </div>
-    </div>
+		</div>
+	</div>
 </div>
 
 <div class="site-footer-2-info">
-    <div class="wrap">
-        <div class="wrap-site-info">
-            <div class="site-info">
-                <div class="row">
-                    <div class="site-info-holder">
-                        <div class="left">
+	<div class="wrap">
+		<div class="wrap-site-info">
+			<div class="site-info">
+				<div class="row">
+					<div class="site-info-holder">
+						<div class="left">
 							<?php echo wp_kses( $site_info_text_left, 'post' ); ?>
-                        </div>
-                        &nbsp; • &nbsp;
-                        <div class="right">
+						</div>
+						&nbsp; • &nbsp;
+						<div class="right">
 							<?php echo wp_kses( $site_info_text_right, 'post' ); ?>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- .site-info -->
-        </div>
-    </div>
+						</div>
+					</div>
+				</div>
+			</div><!-- .site-info -->
+		</div>
+	</div>
 </div>

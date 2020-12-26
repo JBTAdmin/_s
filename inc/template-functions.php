@@ -285,7 +285,7 @@ if ( ! function_exists( 'aaurora_header_branding_layout' ) ) :
 									'menu_class'      => 'header-menu',
 									'container_class' => $container_alignment_class,
 									'fallback_cb'     => false,
-									'walker'  => new Wdm_Custom_Nav_Walker() //use our custom walker
+									'walker'          => new Wdm_Custom_Nav_Walker(), // use our custom walker
 								)
 							);
 							aaurora_header_search();
@@ -358,11 +358,11 @@ if ( ! function_exists( 'aaurora_header_search' ) ) :
 	 * Displays Search Button in Header.
 	 */
 	function aaurora_header_search() {
-		
+
 		?>
-        <div class="aaurora-header-search" role="button" tabindex="1">
-                <?php load_inline_svg( 'search.svg' ); ?>
-        </div>
+		<div class="aaurora-header-search" role="button" tabindex="1">
+				<?php load_inline_svg( 'search.svg' ); ?>
+		</div>
 		<?php
 	}
 endif;
@@ -377,7 +377,7 @@ if ( ! function_exists( 'aaurora_hamburger_menu' ) ) :
 			$sidebar_alt_class = 'menu_only';
 		}
 		?>
-        <div class="hamburger-menu <?php echo esc_attr( $sidebar_alt_class ); ?>" on="tap:drawermenu.toggle" role="button" tabindex="1">
+		<div class="hamburger-menu <?php echo esc_attr( $sidebar_alt_class ); ?>" on="tap:drawermenu.toggle" role="button" tabindex="1">
 			<div class="toggle sidebar-open desktop-sidebar-toggle" data-toggle-target=".sidebar-modal"
 				 data-toggle-body-class="showing-sidebar-modal" aria-expanded="false">
 									<span class="toggle-inner">
@@ -404,15 +404,15 @@ if ( ! function_exists( 'aaurora_footer_share_layout' ) ) :
 				<?php load_inline_svg( 'share.svg' ); ?>
 			</a>
 			<div class="aaurora-share-inner">
-				<a href="https://www.facebook.com/sharer.php?u=<?php esc_attr_e(get_permalink(get_the_ID())); ?>" target="blank" class="fb" rel="nofollow" data-social_name="facebook">
+				<a href="https://www.facebook.com/sharer.php?u=<?php esc_attr_e( get_permalink( get_the_ID() ) ); ?>" target="blank" class="fb" rel="nofollow" data-social_name="facebook">
 					<?php load_inline_svg( 'facebook.svg' ); ?>
 				</a>
 
-				<a href="https://twitter.com/intent/tweet?text=<?php esc_attr_e(get_permalink(get_the_ID())); ?>" target="blank" class="tw" rel="nofollow" data-social_name="twitter">
+				<a href="https://twitter.com/intent/tweet?text=<?php esc_attr_e( get_permalink( get_the_ID() ) ); ?>" target="blank" class="tw" rel="nofollow" data-social_name="twitter">
 					<?php load_inline_svg( 'twitter.svg' ); ?>
 				</a>
 
-				<a href="https://www.linkedin.com/cws/share?url=<?php esc_attr_e(get_permalink(get_the_ID())); ?>" target="blank" class="ln" rel="nofollow" data-social_name="linkedin">
+				<a href="https://www.linkedin.com/cws/share?url=<?php esc_attr_e( get_permalink( get_the_ID() ) ); ?>" target="blank" class="ln" rel="nofollow" data-social_name="linkedin">
 					<?php load_inline_svg( 'linkedin.svg' ); ?>
 				</a>
 
@@ -456,7 +456,7 @@ endif;
 if ( ! function_exists( 'aaurora_footer_go_to_top_layout' ) ) :
 	function aaurora_footer_go_to_top_layout() {
 		?>
-        <a class="top-link" href="#" id="js-top" on="tap:masthead.scrollTo" role="button" tabindex="1">
+		<a class="top-link" href="#" id="js-top" on="tap:masthead.scrollTo" role="button" tabindex="1">
 			<?php load_inline_svg( 'arrow-up.svg' ); ?>
 			<span class="screen-reader-text">Back to top</span>
 		</a>
@@ -490,18 +490,17 @@ if ( ! function_exists( 'aaurora_social_media' ) ) :
 		if ( 'top-bar-social' === $social_class && get_theme_mod( 'top_bar_social_media_button', true ) !== true ) :
 			return;
 		endif;
-		
+
 		if ( get_theme_mod( 'side_social_media_button', true ) !== true ) {
-		    return;
-        }
-		
+			return;
+		}
+
 		$text_only = get_theme_mod( 'side_social_media_button_text', true );
-		
-		if( get_theme_mod( 'side_social_media_button_color', false ) === false) {
+
+		if ( get_theme_mod( 'side_social_media_button_color', false ) === false ) {
 			$social_class .= ' ' . 'no_social_color';
-        }
-		
-        
+		}
+
 		$social_class .= ' ' . 'aaurora_social_follow';  // todo need to revisit this. passing parameter to Actions.
 		?>
 

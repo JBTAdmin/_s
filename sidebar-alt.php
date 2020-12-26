@@ -9,14 +9,14 @@
 
 get_theme_mod( 'sidebar_listing', 'right' );
 
-$class = "widget-area sidebar-alt-aside sidebar-alt";
-if(is_amp_endpoint()){
-	$class = "";
+$class = 'widget-area sidebar-alt-aside sidebar-alt';
+if ( is_amp_endpoint() ) {
+	$class = '';
 }
 
 ?>
 <amp-sidebar id="drawermenu" layout="nodisplay" side="right">
-    <aside id="secondary-alt" class="<?php echo $class?>">
+	<aside id="secondary-alt" class="<?php echo $class; ?>">
 	<div class="aside-header-container">
 		<div class="widget aside-header">
 			<div class="site-branding">
@@ -40,7 +40,7 @@ if(is_amp_endpoint()){
 				endif;
 				?>
 			</div>
-            <div class="sidebar-close-btn" on="tap:drawermenu.toggle" role="button" tabindex="1">
+			<div class="sidebar-close-btn" on="tap:drawermenu.toggle" role="button" tabindex="1">
 				<button class="toggle sidebar-close desktop-sidebar-toggle" data-toggle-target=".sidebar-modal" data-toggle-body-class="closing-sidebar-modal" aria-expanded="false">
 									<span class="toggle-inner">
 										<?php load_inline_svg( 'close.svg' ); ?>
