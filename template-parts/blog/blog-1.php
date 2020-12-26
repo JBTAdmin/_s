@@ -10,7 +10,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'blog-layout-1' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'blog-1' ); ?>>
 	<div  class="blog-type-list">
 		<div class="article-featured-image" >
 			<?php aaurora_post_thumbnail( 'full', aaurora_posted_on( true ) ); ?>

@@ -10,7 +10,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'blog-post-article-4' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'blog-4' ); ?>>
 	<div  class="blog-type-list">
 		<div class="blog-article">
 			<div class="blog-type-list-content">

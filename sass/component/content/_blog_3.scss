@@ -1,8 +1,8 @@
-.blog-post-article-3 .blog-type-list::before {
+.blog-3 .blog-type-list::before {
   content: unset;
 }
 
-.blog-post-article-3 {
+.blog-3 {
   display: flex;
   justify-content: flex-end;
   margin: 2rem 0;
@@ -33,7 +33,7 @@
 }
 
 @media screen and (max-width: 900px) {
-  .blog-post-article-3 {
+  .blog-3 {
     flex-direction: column;
 
     & .post-excerpt {
