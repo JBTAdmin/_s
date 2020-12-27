@@ -125,6 +125,7 @@ add_action( 'wp_head', 'aaurora_pingback_header' );
 function aaurora_content() {
 
 	if ( have_posts() ) {
+		$container_class = ' blog-' . get_theme_mod( 'blog_layout_setting', '1' );
 		?>
 		<header class="page-header">
 			<?php
@@ -147,7 +148,7 @@ function aaurora_content() {
 			}
 			?>
 		</header><!-- .page-header -->
-		<div class="article-container">
+		<div class="article-container <?php echo esc_attr($container_class) ?>">
 			<?php
 			while ( have_posts() ) :
 				the_post();

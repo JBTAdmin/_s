@@ -1,8 +1,4 @@
-.blog-5 .blog-type-list::before {
-  content: unset;
-}
-
-.blog-5 .article-container {
+.blog-5 {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
@@ -20,8 +16,6 @@
     padding: 2em 1em 0;
 
     & > .blog-type-list {
-      //display: flex;
-      //flex-direction: column;
       border-radius: 10px;
       border: 1px solid #ededed;
       transition: box-shadow 300ms ease-in-out;

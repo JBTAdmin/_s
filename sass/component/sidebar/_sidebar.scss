@@ -84,3 +84,14 @@ body.admin-bar aside {
   border-bottom: 1px solid #ececec;
   font-size: 1.8rem;
 }
+
+@media screen and (max-width: 1000px) {
+  .primary-content,    // todo see where it can be moved and is it needed.
+  aside {
+    flex-basis: 100%;
+  }
+  aside {
+    max-width: 100%;
+    order: 1;
+  }
+}

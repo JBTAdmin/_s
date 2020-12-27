@@ -10,7 +10,7 @@
 
 ?>
 <!--todo having some issues. Need to check. -->
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'blog-3' ); ?>>
+<article id="post-<?php the_ID(); ?>">
 
 
 		<div class="post-info">
