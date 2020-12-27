@@ -1794,6 +1794,20 @@ h2.entry-title {
   -o-transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out; }
+  .blog-2 article .inner-entry {
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid #f2f2f2;
+    -webkit-transition: -webkit-transform ease 0.3s;
+    transition: -webkit-transform ease 0.3s;
+    -o-transition: transform ease 0.3s;
+    transition: transform ease 0.3s;
+    transition: transform ease 0.3s, -webkit-transform ease 0.3s;
+    background-color: #fff;
+    height: 100%;
+    position: relative;
+    height: 100%;
+    cursor: pointer; }
   .blog-2 article .post-thumbnail-container {
     display: block; }
   .blog-2 article .post-thumbnail-drop-case {

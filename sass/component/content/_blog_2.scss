@@ -5,6 +5,18 @@
   margin-bottom: 3rem;
   transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
+  & .inner-entry {
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid #f2f2f2;
+    transition: transform ease 0.3s;
+    background-color: #fff;
+    height: 100%;
+    position: relative;
+    height: 100%;
+    cursor: pointer;
+  }
+
   & .post-thumbnail-container {
     display: block;
   }
