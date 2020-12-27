@@ -1692,29 +1692,29 @@ h2.entry-title {
           align-items: stretch;
   -ms-flex-line-pack: start;
       align-content: flex-start; }
-  .blog-1 .entry-title {
-    font-weight: 700;
-    margin-bottom: 0; }
   .blog-1 > article {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 33.33%;
             flex: 1 1 33.33%;
     position: relative;
     padding: 2em 1em 0; }
+  .blog-1 .entry-title {
+    font-weight: 700;
+    margin-bottom: 0; }
   .blog-1 .no-post-thumbnail {
     border-radius: unset;
     background: -webkit-gradient(linear, left top, right top, from(#0099f7), to(#f11712));
     background: -o-linear-gradient(left, #0099f7, #f11712);
     background: linear-gradient(to right, #0099f7, #f11712); }
-  .blog-1 .blog-type-list {
+  .blog-1 .inner-entry {
     border-radius: 10px;
     border: 1px solid #ededed;
-    -webkit-transition: -webkit-box-shadow 500ms ease-in-out;
-    transition: -webkit-box-shadow 500ms ease-in-out;
-    -o-transition: box-shadow 500ms ease-in-out;
-    transition: box-shadow 500ms ease-in-out;
-    transition: box-shadow 500ms ease-in-out, -webkit-box-shadow 500ms ease-in-out; }
-    .blog-1 .blog-type-list .read-more > a {
+    -webkit-transition: -webkit-box-shadow 500ms ease-in-out, -webkit-transform ease 0.3s;
+    transition: -webkit-box-shadow 500ms ease-in-out, -webkit-transform ease 0.3s;
+    -o-transition: box-shadow 500ms ease-in-out, transform ease 0.3s;
+    transition: box-shadow 500ms ease-in-out, transform ease 0.3s;
+    transition: box-shadow 500ms ease-in-out, transform ease 0.3s, -webkit-box-shadow 500ms ease-in-out, -webkit-transform ease 0.3s; }
+    .blog-1 .inner-entry .read-more > a {
       font-size: 1.5rem;
       text-transform: uppercase;
       font-weight: 500;
@@ -1730,14 +1730,14 @@ h2.entry-title {
       -o-transition: transform 500ms ease-in-out;
       transition: transform 500ms ease-in-out;
       transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out; }
-    .blog-1 .blog-type-list:hover {
+    .blog-1 .inner-entry:hover {
       -webkit-box-shadow: 0 7px 30px -10px rgba(133, 153, 162, 0.5);
               box-shadow: 0 7px 30px -10px rgba(133, 153, 162, 0.5); }
-      .blog-1 .blog-type-list:hover .read-more > a {
+      .blog-1 .inner-entry:hover .read-more > a {
         -webkit-transform: translateX(10px);
             -ms-transform: translateX(10px);
                 transform: translateX(10px); }
-  .blog-1 .article-featured-image {
+  .blog-1 .featured-image {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 100%;
             flex: 1 0 100%;
@@ -1746,8 +1746,8 @@ h2.entry-title {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content; }
-  .blog-1 .blog-article-metainfo,
-  .blog-1 .blog-article-content,
+  .blog-1 .entry-header,
+  .blog-1 .entry-summary,
   .blog-1 .read-more {
     padding: 1rem 2rem; }
   .blog-1 .post-thumbnail-container {

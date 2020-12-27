@@ -4,15 +4,15 @@
   align-items: stretch;
   align-content: flex-start;
 
-  & .entry-title {
-    font-weight: 700;
-    margin-bottom: 0;
-  }
-
   & > article {
     flex: 1 1 33.33%;
     position: relative;
     padding: 2em 1em 0;
+  }
+
+  & .entry-title {
+    font-weight: 700;
+    margin-bottom: 0;
   }
 
   & .no-post-thumbnail {
@@ -20,10 +20,10 @@
     background: linear-gradient(to right, #0099f7, #f11712);
   }
 
-  & .blog-type-list {
+  & .inner-entry {
     border-radius: 10px;
     border: 1px solid #ededed;
-    transition: box-shadow 500ms ease-in-out;
+    transition: box-shadow 500ms ease-in-out, transform ease 0.3s;
 
     & .read-more > a {
       font-size: 1.5rem;
@@ -44,15 +44,15 @@
     }
   }
 
-  & .article-featured-image {
+  & .featured-image {
     flex: 1 0 100%;
     overflow: hidden;
     width: auto;
     height: fit-content;
   }
 
-  & .blog-article-metainfo,
-  & .blog-article-content,
+  & .entry-header,
+  & .entry-summary,
   & .read-more {
     padding: 1rem 2rem;
   }
