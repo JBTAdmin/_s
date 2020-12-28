@@ -26,6 +26,7 @@
 				?>
 			</div>
 		</div>
+<!--         todo a better naming could be entry-excerpt-->
 		<div class="entry-summary">
 			<?php aaurora_excerpt( 20 ); ?>
             <div class="read-more">

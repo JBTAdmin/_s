@@ -1,4 +1,4 @@
-.blog-3 article {
+.blog-3 .inner-entry {
   display: flex;
   justify-content: flex-end;
   margin: 2rem 0;
@@ -19,11 +19,11 @@
     margin-right: 4rem;
   }
 
-  & .post-date {
+  & .posted-on {
     color: rgba(0, 0, 0, 0.4);
   }
 
-  & .post-excerpt {
+  & .entry-summary {
     margin-top: 3rem;
   }
 }

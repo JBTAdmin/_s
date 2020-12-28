@@ -15,7 +15,8 @@
     position: relative;
     padding: 2em 1em 0;
 
-    & > .blog-type-list {
+    & > .inner-entry {
+      position: relative;
       border-radius: 10px;
       border: 1px solid #ededed;
       transition: box-shadow 300ms ease-in-out;
@@ -25,7 +26,7 @@
         box-shadow: 0 7px 30px -10px rgba(133, 153, 162, 0.5);
       }
 
-      & > .article-featured-image {
+      & > .featured-image {
         flex: 1 0 100%;
         overflow: hidden;
         width: auto;
@@ -39,7 +40,7 @@
         border-radius: 1rem;
       }
 
-      & .blog-article-metainfo {
+      & .entry-header {
         padding: 1rem 3rem;
         position: absolute;
         bottom: 0;

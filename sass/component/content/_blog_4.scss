@@ -39,20 +39,20 @@
     background-color: #fff;
     height: 100%;
   }
+
+  & .inner-entry {
+    border: 1px solid #e7ebed;
+    position: relative;
+    height: 100%;
+  }
+
+  & h2.entry-title {
+    font-weight: 500;
+  }
 }
 
 .inner-entry:hover {
   transform: translate(-0.3rem, -0.3rem);
-}
-
-.blog-4 h2.entry-title {
-  font-weight: 500;
-}
-
-.inner-entry {
-  border: 1px solid #e7ebed;
-  position: relative;
-  height: 100%;
 }
 
 .entry-meta > .cat-links {
