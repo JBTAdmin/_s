@@ -1,8 +1,13 @@
 .blog-3 {
+  & > article {
+    flex: unset;
+  }
+
   & .inner-entry {
     display: flex;
     margin: 2rem 0;
     width: 100%;
+    border: none !important;
 
     & > div {
       flex: 1 1 50%;
@@ -15,7 +20,6 @@
 
   & .entry-title {
     font-size: 3.5rem;
-    font-weight: 700;
     line-height: 120%;
     margin-right: 4rem;
   }

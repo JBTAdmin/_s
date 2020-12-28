@@ -1,9 +1,6 @@
 .blog-4 {
   & > article {
-    padding: 0 1%;
-    flex: 1 1 33.333%;
     margin-bottom: 3rem;
-    transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   }
 
   & .inner-article {
@@ -25,21 +22,13 @@
 
   & .inner-entry {
     padding: 2rem;
-    border-radius: 15px;
-    border: 1px solid #f2f2f2;
-    transition: transform ease 0.3s;
-    background-color: #fff;
-    height: 100%;
-    border: 1px solid #e7ebed;
-    position: relative;
 
     &:hover {
       transform: translate(-0.3rem, -0.3rem);
     }
   }
 
-  & h2.entry-title {
-    margin-bottom: 1.5rem;
+  & .entry-title {
     font-weight: 500;
   }
 }

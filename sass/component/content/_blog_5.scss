@@ -1,15 +1,5 @@
 .blog-5 {
-  & > article {
-    flex: 1 1 33.33%;
-    position: relative;
-    padding: 2em 1em 0;
-  }
-
   & .inner-entry {
-    position: relative;
-    border-radius: 10px;
-    border: 1px solid #ededed;
-    transition: box-shadow 300ms ease-in-out;
     background: linear-gradient(to right, #0099f7, #f11712);
 
     &:hover {
@@ -22,8 +12,7 @@
     position: absolute;
     bottom: 0;
     color: #fff;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), transparent);
-
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1), transparent);
     width: 100%;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -36,16 +25,8 @@
   }
 
   & .featured-image {
-    flex: 1 0 100%;
-    overflow: hidden;
-    width: auto;
-    height: fit-content;
     padding-top: 100%;
     min-width: 100%;
-    height: auto;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     border-radius: 1rem;
   }
 

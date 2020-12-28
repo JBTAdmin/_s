@@ -17,9 +17,11 @@
 		</div>
 
 		<div class="entry-header">
-			<div class="posted-on">
-				<?php aaurora_posted_on(); ?>
-			</div>
+            <div class="entry-meta">
+                <div class="posted-on">
+                    <?php aaurora_posted_on(); ?>
+                </div>
+            </div>
             <?php
             the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
             ?>

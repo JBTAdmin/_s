@@ -1,14 +1,39 @@
 // TODO NEED TO DIFFERENTIATE BETWEEN BLOG 1 AND BLOG 2 AND PROBABLY BLOG 1 CAN BE DISCARDED.
 
-.article-container > article {
-  & h1.entry-title {
-    margin-bottom: 0.8rem;
+.article-container {
+  & > article {
+    flex: 1 1 33.33%;
+    position: relative;
+    padding: 2rem 1rem 0;
+    transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   }
 
-  & h2.entry-title {
+  & .inner-entry {
+    background-color: #fff;
+    border: 1px solid #ededed; // f2f2f2
+    border-radius: 10px;
+    cursor: pointer;
+    height: 100%;
+    position: relative;
+    transition: box-shadow 500ms ease-in-out, transform ease 0.3s;
+  }
+
+  & .entry-title {
     font-size: 2.4rem; // todo can these two thing be centralized?
     line-height: 1.4;
-    font-weight: 400;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+
+  & .featured-image {
+    flex: 1 0 100%;
+    overflow: hidden;
+    width: auto;
+    height: fit-content;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   & .post-thumbnail {
@@ -86,9 +111,8 @@
 
   // Not useful for Blog-4 scss. Commenting for the same purpose
   & .entry-meta span {
-    font-size: 1.5rem;
     margin-right: 1rem;
-    color: #666;
+    color: #546e7a;
     font-weight: 500;
   }
 
