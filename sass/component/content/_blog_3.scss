@@ -1,15 +1,16 @@
-.blog-3 .inner-entry {
-  display: flex;
-  justify-content: flex-end;
-  margin: 2rem 0;
-  width: 100%;
+.blog-3 {
+  & .inner-entry {
+    display: flex;
+    margin: 2rem 0;
+    width: 100%;
 
-  &:hover a {
-    color: #00f;
-  }
+    & > div {
+      flex: 1 1 50%;
+    }
 
-  & > div {
-    flex: 1 1 50%;
+    &:hover a {
+      color: #00f;
+    }
   }
 
   & .entry-title {

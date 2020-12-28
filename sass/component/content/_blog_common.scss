@@ -1,99 +1,114 @@
 // TODO NEED TO DIFFERENTIATE BETWEEN BLOG 1 AND BLOG 2 AND PROBABLY BLOG 1 CAN BE DISCARDED.
 
-// Not useful for Blog-4 scss. Commenting for the same purpose
-.entry-meta span {
-  font-size: 1.5rem;
-  margin-right: 1rem;
-  color: #666;
-  font-weight: 500;
-}
+.article-container > article {
+  & h1.entry-title {
+    margin-bottom: 0.8rem;
+  }
 
-h1.entry-title {
-  margin-bottom: 0.8rem;
-}
+  & h2.entry-title {
+    font-size: 2.4rem; // todo can these two thing be centralized?
+    line-height: 1.4;
+    font-weight: 400;
+  }
 
-h2.entry-title {
-  font-size: 2.4rem; // todo can these two thing be centralized?
-  line-height: 1.4;
-  font-weight: 400;
-}
+  & .post-thumbnail {
+    margin: 4rem 0;
+  }
 
-.post-thumbnail {
-  margin: 4rem 0;
-}
+  & .post-thumbnail img {
+    display: block;
+  }
 
-.post-thumbnail img {
-  display: block;
-}
+  & .no-post-thumbnail {
+    width: inherit;
+    max-height: 28.2rem;
+    background: $theme__color;
+    display: flex; // todo See if this is the right way to do this.
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 1rem;
+    line-height: 1;
+  }
 
-.no-post-thumbnail {
-  width: inherit;
-  max-height: 28.2rem;
-  background: $theme__color;
-  display: flex; // todo See if this is the right way to do this.
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  border-radius: 1rem;
-  line-height: 1;
-}
+  & .post-thumbnail-drop-case {
+    height: 25rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10vw;
+    //font-size: 20rem;
+    color: rgba(255, 255, 255, 0.3);
+    //color: #fff;
+    font-family: Serif;
+    overflow: hidden;
+    transition: transform 1s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  }
 
-.post-thumbnail-drop-case {
-  color: rgba(255, 255, 255, 0.3);
-  font-family: Serif;
-  overflow: hidden;
-  transition: transform 1s cubic-bezier(0.46, 0.03, 0.52, 0.96);
-}
+  &:hover .post-thumbnail-drop-case {
+    transform: scale(1.2) translateZ(0);
+  }
 
-.post-thumbnail .post-date {
-  position: absolute;
-  left: 1rem;
-  top: 1rem;
-  width: 8rem;
-  height: 2rem;
-  background: #fff;
-  border-radius: 0.3rem;
-  color: #000;
-  font-size: 1.3rem;
-  font-weight: 700;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  & .post-thumbnail .post-date {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    width: 8rem;
+    height: 2rem;
+    background: #fff;
+    border-radius: 0.3rem;
+    color: #000;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-.post-thumbnail .badge {
-  font-size: 1.25rem;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  display: inline-flex;
-  width: 4rem;
-  height: 4rem;
-  pointer-events: none;
-  color: #fff;
-  background-color: #101010;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0 1rem;
-}
+  & .post-thumbnail .badge {
+    font-size: 1.25rem;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    display: inline-flex;
+    width: 4rem;
+    height: 4rem;
+    pointer-events: none;
+    color: #fff;
+    background-color: #101010;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 1rem;
+  }
 
-.tags-links,
-.tagcloud {
-  margin-top: 3rem;
-  a {
-    background: #eee;
-    //color: #0f0e0e;
-    padding: 5px 10px;
-    margin-right: 5px;
-    margin-bottom: 10px;
-    display: inline-block;
-    text-decoration: none;
-    line-height: 20px;
-    vertical-align: middle;
-    border-radius: 0.4rem;
-    font-size: 1.6rem !important;
+  // Not useful for Blog-4 scss. Commenting for the same purpose
+  & .entry-meta span {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    color: #666;
+    font-weight: 500;
+  }
+
+  & .tags-links,
+  & .tagcloud {
+    margin-top: 3rem;
+
+    a {
+      background: #eee;
+      //color: #0f0e0e;
+      padding: 5px 10px;
+      margin-right: 5px;
+      margin-bottom: 10px;
+      display: inline-block;
+      text-decoration: none;
+      line-height: 20px;
+      vertical-align: middle;
+      border-radius: 0.4rem;
+      font-size: 1.6rem !important;
+    }
   }
 }
 

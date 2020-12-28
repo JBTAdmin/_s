@@ -28,6 +28,9 @@ aside:not(.sidebar-alt) {
 
 .article-container {
   justify-content: space-between;
+  align-items: stretch;
+  align-content: flex-start;
+
   //overflow-x: hidden; why we need this
   &:after {
     content: "";
