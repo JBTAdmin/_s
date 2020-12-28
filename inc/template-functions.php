@@ -159,7 +159,7 @@ function aaurora_content() {
 		<?php
 		post_nav();
 	} else {
-		get_template_part( 'template-parts/content/content', 'none' );
+		get_template_part( 'template-parts/content', 'none' );
 	}
 }
 add_action( 'aaurora_entry_content', 'aaurora_content' );

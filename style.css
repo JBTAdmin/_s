@@ -1539,27 +1539,6 @@ div[class*="footer-sidebar-"] {
   color: #666;
   font-weight: 500; }
 
-.blog-type-list {
-  position: relative;
-  height: 100%;
-  cursor: pointer; }
-
-.blog-article {
-  padding: 2rem;
-  border-radius: 15px;
-  border: 1px solid #f2f2f2;
-  -webkit-transition: -webkit-transform ease 0.3s;
-  transition: -webkit-transform ease 0.3s;
-  -o-transition: transform ease 0.3s;
-  transition: transform ease 0.3s;
-  transition: transform ease 0.3s, -webkit-transform ease 0.3s;
-  background-color: #fff;
-  height: 100%; }
-
-.blog-type-list-content {
-  padding-top: 2rem;
-  padding-bottom: 3rem; }
-
 h1.entry-title {
   margin-bottom: 0.8rem; }
 
@@ -1567,6 +1546,12 @@ h2.entry-title {
   font-size: 2.4rem;
   line-height: 1.4;
   font-weight: 400; }
+
+.post-thumbnail {
+  margin: 4rem 0; }
+
+.post-thumbnail img {
+  display: block; }
 
 .no-post-thumbnail {
   width: inherit;
@@ -1589,14 +1574,11 @@ h2.entry-title {
   color: rgba(255, 255, 255, 0.3);
   font-family: Serif;
   overflow: hidden;
+  -webkit-transition: -webkit-transform 1s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  transition: -webkit-transform 1s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  -o-transition: transform 1s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  transition: transform 1s cubic-bezier(0.46, 0.03, 0.52, 0.96);
   transition: transform 1s cubic-bezier(0.46, 0.03, 0.52, 0.96), -webkit-transform 1s cubic-bezier(0.46, 0.03, 0.52, 0.96); }
-
-.blog-list-content-meta-info {
-  font-size: 1.5rem;
-  color: rgba(16, 16, 16, 0.8);
-  letter-spacing: 1px;
-  font-weight: 500;
-  padding-bottom: 1rem; }
 
 .post-thumbnail .post-date {
   position: absolute;
@@ -1620,9 +1602,6 @@ h2.entry-title {
       -ms-flex-align: center;
           align-items: center; }
 
-.post-thumbnail img {
-  display: block; }
-
 .post-thumbnail .badge {
   font-size: 1.25rem;
   position: absolute;
@@ -1644,9 +1623,6 @@ h2.entry-title {
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 0 1rem; }
-
-.post-thumbnail {
-  margin: 4rem 0; }
 
 .tags-links,
 .tagcloud {

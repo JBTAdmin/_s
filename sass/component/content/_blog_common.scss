@@ -8,26 +8,6 @@
   font-weight: 500;
 }
 
-.blog-type-list {
-  position: relative;
-  height: 100%;
-  cursor: pointer;
-}
-
-.blog-article {
-  padding: 2rem;
-  border-radius: 15px;
-  border: 1px solid #f2f2f2;
-  transition: transform ease 0.3s;
-  background-color: #fff;
-  height: 100%;
-}
-
-.blog-type-list-content {
-  padding-top: 2rem;
-  padding-bottom: 3rem;
-}
-
 h1.entry-title {
   margin-bottom: 0.8rem;
 }
@@ -36,6 +16,14 @@ h2.entry-title {
   font-size: 2.4rem; // todo can these two thing be centralized?
   line-height: 1.4;
   font-weight: 400;
+}
+
+.post-thumbnail {
+  margin: 4rem 0;
+}
+
+.post-thumbnail img {
+  display: block;
 }
 
 .no-post-thumbnail {
@@ -54,16 +42,7 @@ h2.entry-title {
   color: rgba(255, 255, 255, 0.3);
   font-family: Serif;
   overflow: hidden;
-  transition: transform 1s cubic-bezier(0.46, 0.03, 0.52, 0.96),
-    -webkit-transform 1s cubic-bezier(0.46, 0.03, 0.52, 0.96);
-}
-
-.blog-list-content-meta-info {
-  font-size: 1.5rem;
-  color: rgba(16, 16, 16, 0.8);
-  letter-spacing: 1px;
-  font-weight: 500;
-  padding-bottom: 1rem;
+  transition: transform 1s cubic-bezier(0.46, 0.03, 0.52, 0.96);
 }
 
 .post-thumbnail .post-date {
@@ -83,10 +62,6 @@ h2.entry-title {
   align-items: center;
 }
 
-.post-thumbnail img {
-  display: block;
-}
-
 .post-thumbnail .badge {
   font-size: 1.25rem;
   position: absolute;
@@ -104,12 +79,6 @@ h2.entry-title {
   border-radius: 0 1rem;
 }
 
-// POST THUMBNAIL
-.post-thumbnail {
-  margin: 4rem 0;
-}
-
-//todo tags
 .tags-links,
 .tagcloud {
   margin-top: 3rem;
