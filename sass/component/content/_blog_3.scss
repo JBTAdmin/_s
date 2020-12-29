@@ -1,6 +1,6 @@
 .blog-3 {
   & > article {
-    flex: unset;
+    flex-basis: 100%;
   }
 
   & .inner-entry {
@@ -28,7 +28,7 @@
     color: rgba(0, 0, 0, 0.4);
   }
 
-  & .entry-summary {
+  & .entry-excerpt {
     margin-top: 3rem;
   }
 }

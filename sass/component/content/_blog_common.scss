@@ -12,7 +12,6 @@
     background-color: #fff;
     border: 1px solid #ededed; // f2f2f2
     border-radius: 10px;
-    cursor: pointer;
     height: 100%;
     position: relative;
     transition: box-shadow 500ms ease-in-out, transform ease 0.3s;
@@ -23,6 +22,7 @@
   }
 
   & .entry-title {
+    cursor: pointer;
     font-size: 2.4rem; // todo can these two thing be centralized?
     line-height: 1.4;
     font-weight: 700;
@@ -30,6 +30,7 @@
   }
 
   & .featured-image {
+    cursor: pointer;
     flex: 1 0 100%;
     overflow: hidden;
     width: auto;
@@ -49,6 +50,7 @@
   }
 
   & .no-post-thumbnail {
+    cursor: pointer;
     width: inherit;
     max-height: 28.2rem;
     //background: $theme__color;

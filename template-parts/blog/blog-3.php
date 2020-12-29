@@ -22,10 +22,10 @@
             ?>
 		</div>
 
-		<div class="entry-summary">
-			<a href=" <?php echo esc_url( get_permalink() ); ?>" rel="bookmark1">
-				In just a few short days, we'll welcome over 1,200 of you to Revolution Hall for this year's XOXO. After last year's festival at Veterans Memorial Coliseum...
-			</a>
+		<div class="entry-excerpt">
+            <a href="<?php echo esc_url( get_permalink() ); ?>">
+			    <?php aaurora_excerpt( 20 ); ?>
+            </a>
 		</div>
 
 </div>

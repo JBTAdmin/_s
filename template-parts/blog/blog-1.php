@@ -27,7 +27,7 @@
             ?>
 		</div>
 <!--         todo a better naming could be entry-excerpt-->
-		<div class="entry-summary">
+        <div class="entry-excerpt">
 			<?php aaurora_excerpt( 20 ); ?>
             <div class="read-more">
                 <a href="<?php echo esc_url( get_permalink() ); ?>"><?php esc_html_e( 'read more', 'aaurora' ); ?> <?php load_inline_svg( 'arrow-right-circle.svg' ); ?></a>
