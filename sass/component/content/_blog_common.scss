@@ -16,6 +16,10 @@
     height: 100%;
     position: relative;
     transition: box-shadow 500ms ease-in-out, transform ease 0.3s;
+
+    &:hover .post-thumbnail-drop-case {
+      transform: scale(1.2) translateZ(0);
+    }
   }
 
   & .entry-title {
@@ -47,7 +51,8 @@
   & .no-post-thumbnail {
     width: inherit;
     max-height: 28.2rem;
-    background: $theme__color;
+    //background: $theme__color;
+    background: linear-gradient(to right, #0099f7, #f11712);
     display: flex; // todo See if this is the right way to do this.
     justify-content: center;
     align-items: center;
@@ -69,10 +74,6 @@
     font-family: Serif;
     overflow: hidden;
     transition: transform 1s cubic-bezier(0.46, 0.03, 0.52, 0.96);
-  }
-
-  &:hover .post-thumbnail-drop-case {
-    transform: scale(1.2) translateZ(0);
   }
 
   & .post-thumbnail .post-date {
