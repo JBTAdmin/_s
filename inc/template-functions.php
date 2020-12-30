@@ -17,7 +17,7 @@ function aaurora_content_singular() {
 			the_post();
 
 			if ( is_singular( 'post' ) ) {
-				do_action( 'aaurora_content_single' );
+				do_action( 'aaurora_content_post' );
 			} else {
 				do_action( 'aaurora_content_page' );
 			}
@@ -30,26 +30,26 @@ function aaurora_content_singular() {
 add_action( 'aaurora_content_singular', 'aaurora_content_singular' );
 
 /**
- * Outputs the page layout.
+ * Outputs the theme single page.
  */
-function aaurora_content_page_layout() {
+function aaurora_single_page_layout() {
 	get_template_part( 'template-parts/content-page' );
 }
-add_action( 'aaurora_content_page', 'aaurora_content_page_layout' );
+add_action( 'aaurora_content_page', 'aaurora_single_page_layout' );
 
 /**
- * Outputs the theme single content.
+ * Outputs the theme single post.
  *
  * @since 1.0.0
  */
-function aaurora_content_single_layout() {
+function aaurora_single_post_layout() {
 	?>
 
 	<?php aaurora_content_before(); ?>
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class( 'post-article' ); ?>>
 
-		<?php get_template_part( 'template-parts/single/content' ); ?>
+		<?php get_template_part( 'template-parts/single/layout' ); ?>
 
 	</article><!-- #post-<?php the_ID(); ?> -->
 
@@ -61,7 +61,7 @@ function aaurora_content_single_layout() {
 		comments_template();
 	endif;
 }
-add_action( 'aaurora_content_single', 'aaurora_content_single_layout' );
+add_action( 'aaurora_content_post', 'aaurora_single_post_layout' );
 
 /**
  * Output Metadata of Posts.

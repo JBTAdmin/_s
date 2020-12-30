@@ -40,14 +40,14 @@
 
 /* Content
 --------------------------------------------- */
-@import "content/blog_common";
-@import "content/blog_1";
-@import "content/blog_2";
-@import "content/blog_3";
-@import "content/blog_4";
-@import "content/blog_5";
-@import "content/single_page";
-@import "content/single_post";
+@import "content/blog/blog_common";
+@import "content/blog/blog_1";
+@import "content/blog/blog_2";
+@import "content/blog/blog_3";
+@import "content/blog/blog_4";
+@import "content/blog/blog_5";
+@import "content/page/single_page";
+@import "content/post/single_post";
 @import "content/call_to_action";
 @import "subscribe/subscribe";
 
