@@ -420,3 +420,19 @@ function aaurora_entry_content() {
 function aaurora_entry_content_after() {
 	do_action( 'aaurora_entry_content_after' );
 }
+
+/**
+ * Before Site Container
+ */
+function aaurora_site_container_before() {
+	do_action( 'aaurora_site_container_before' );
+}
+
+
+/**
+ * After Site Container
+ */
+function aaurora_site_container_after() {
+	do_action( 'aaurora_site_container_after' );
+}
+

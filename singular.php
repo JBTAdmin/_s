@@ -19,28 +19,34 @@ $sidebar_page_class = '';
 <?php get_header(); ?>
 
 	<div class="site-container">
-		<div class="wrap">
-			<div class="main-container">
 
-				<?php aaurora_main_content_before(); ?>
+		<?php aaurora_site_container_before(); ?>
 
-				<main id="primary" class="site-main primary-content <?php echo esc_attr( $sidebar_page_class ); ?>">
+			<div class="wrap">
 
-					<?php
-					do_action( 'aaurora_before_singular' );
+				<div class="main-container">
 
-					do_action( 'aaurora_content_singular' );
+					<?php aaurora_main_content_before(); ?>
 
-					do_action( 'aaurora_after_singular' );
-					?>
+					<main id="primary" class="site-main primary-content <?php echo esc_attr( $sidebar_page_class ); ?>">
 
-				</main><!-- #content .site-content -->
+						<?php
+						do_action( 'aaurora_before_singular' );
 
-				<?php aaurora_main_content_after(); ?>
+						do_action( 'aaurora_content_singular' );
 
-			</div><!-- #primary .content-area -->
+						do_action( 'aaurora_after_singular' );
+						?>
 
-		</div><!-- END .si-container -->
+					</main><!-- #content .site-content -->
+
+					<?php aaurora_main_content_after(); ?>
+
+				</div><!-- #primary .content-area -->
+
+			</div><!-- END .wrap -->
+
+		<?php aaurora_site_container_after(); ?>
 	</div>
 <?php
 get_sidebar( 'alt' );

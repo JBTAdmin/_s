@@ -353,6 +353,49 @@ Kirki::add_field(
 		'description' => esc_attr__( 'Here you can select Sidebar Layout.', 'aaurora' ),
 	)
 );
+
+Kirki::add_field(
+	'theme_config_id',
+	array(
+		'type'     => 'sortable',
+		'settings' => 'entry_header_sequence',
+		'label'    => esc_html__( 'Sequence of Header Section', 'aaurora' ),
+		'section'  => 'general_layout',
+		'default'  => array(
+			'category',
+			'heading',
+			'thumbnail',
+		),
+		'choices'  => array(
+			'category'  => esc_html__( 'Category', 'aaurora' ),
+			'heading'   => esc_html__( 'Heading', 'aaurora' ),
+			'metadata'  => esc_html__( 'Metadata', 'aaurora' ),
+			'thumbnail' => esc_html__( 'Thumbnail', 'aaurora' ),
+		),
+		'priority' => 10,
+	)
+);
+
+Kirki::add_field(
+	'theme_config_id',
+	array(
+		'type'     => 'sortable',
+		'settings' => 'entry_footer_sequence',
+		'label'    => esc_html__( 'Sequence of Footer Section', 'aaurora' ),
+		'section'  => 'general_layout',
+		'default'  => array(
+			'tag',
+			'author',
+			'post-navigation',
+		),
+		'choices'  => array(
+			'tag'             => esc_html__( 'Tag', 'aaurora' ),
+			'author'          => esc_html__( 'Author', 'aaurora' ),
+			'post-navigation' => esc_html__( 'Post Navigation', 'aaurora' ),
+		),
+		'priority' => 10,
+	)
+);
 // SECTION: LAYOUT END.
 
 // SECTION: Padding and Margin.
@@ -953,6 +996,23 @@ Kirki::add_field(
 				'choice'  => 'font-family',
 				'element' => 'h1.entry-title',
 			),
+		),
+	)
+);
+
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'        => 'select',
+		'settings'    => 'blog_post_header_location',
+		'label'       => esc_html__( 'Header Location', 'aaurora' ),
+		'section'     => 'blog_post',
+		'default'     => 'in-content',
+		'placeholder' => esc_html__( 'Select an option to display header in Content or in Page Header.', 'aaurora' ),
+		'multiple'    => 0,
+		'choices'     => array(
+			'aaurora_entry_content_before'  => esc_html__( 'In Content', 'aaurora' ),
+			'aaurora_site_container_before' => esc_html__( 'Page Header', 'aaurora' ),
 		),
 	)
 );
