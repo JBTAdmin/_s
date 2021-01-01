@@ -1913,6 +1913,50 @@ div[class*="footer-sidebar-"] {
   font-weight: 600;
   font-size: 1.2rem; }
 
+.column-2-title-image .wrap {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 100%;
+  background-color: #f5f5f5; }
+  .column-2-title-image .wrap > div {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 50%;
+            flex: 1 1 50%; }
+    .column-2-title-image .wrap > div img {
+      display: block; }
+  .column-2-title-image .wrap .meta-data {
+    padding: 5rem; }
+
+.column-2-title-image-compact .wrap {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 1rem; }
+  .column-2-title-image-compact .wrap > div {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 50%;
+            flex: 1 1 50%; }
+    .column-2-title-image-compact .wrap > div img {
+      display: block; }
+  .column-2-title-image-compact .wrap .meta-data {
+    padding: 5rem; }
+
 .subscribe-form {
   display: -webkit-box;
   display: -ms-flexbox;

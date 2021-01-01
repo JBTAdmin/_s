@@ -67,16 +67,16 @@ add_action( 'aaurora_content_post', 'aaurora_single_post_layout' );
  * Output Metadata of Posts.
  */
 function aaurora_post_content_before() {
-
+	
 	if ( current_filter() === get_theme_mod( 'blog_post_header_location', 'aaurora_entry_content_before' ) ) {
 
-		$template_parts = get_theme_mod( 'entry_header_sequence', array( 'category', 'heading', 'metadata' ) );
-
-		foreach ( $template_parts as $template_part ) {
-			get_template_part( 'template-parts/single/' . $template_part );
+		if ( 'aaurora_site_container_before' === get_theme_mod( 'blog_post_header_location', 'aaurora_entry_content_before' ) ) {
+			get_template_part( 'template-parts/single/post-header/page-header-style-1' );
+		} else {
+			get_template_part( 'template-parts/single/post-header/in-content-post-header' );
 		}
-	}
 
+	}
 }
 
 add_action( 'aaurora_entry_content_before', 'aaurora_post_content_before' );

@@ -17,37 +17,37 @@ $sidebar_page_class = '';
 ?>
 
 <?php get_header(); ?>
+<!--todo may be name of the hooks can be revisited-->
+<?php aaurora_site_container_before(); ?>
 
-	<div class="site-container">
+    <div class="site-container">
 
-		<?php aaurora_site_container_before(); ?>
+        <div class="wrap">
 
-			<div class="wrap">
+            <div class="main-container">
+				
+				<?php aaurora_main_content_before(); ?>
 
-				<div class="main-container">
+                <main id="primary" class="site-main primary-content <?php echo esc_attr( $sidebar_page_class ); ?>">
+					
+					<?php
+					do_action( 'aaurora_before_singular' );
+					
+					do_action( 'aaurora_content_singular' );
+					
+					do_action( 'aaurora_after_singular' );
+					?>
 
-					<?php aaurora_main_content_before(); ?>
+                </main><!-- #content .site-content -->
+				
+				<?php aaurora_main_content_after(); ?>
 
-					<main id="primary" class="site-main primary-content <?php echo esc_attr( $sidebar_page_class ); ?>">
+            </div><!-- #primary .content-area -->
 
-						<?php
-						do_action( 'aaurora_before_singular' );
+        </div><!-- END .wrap -->
 
-						do_action( 'aaurora_content_singular' );
-
-						do_action( 'aaurora_after_singular' );
-						?>
-
-					</main><!-- #content .site-content -->
-
-					<?php aaurora_main_content_after(); ?>
-
-				</div><!-- #primary .content-area -->
-
-			</div><!-- END .wrap -->
-
-		<?php aaurora_site_container_after(); ?>
-	</div>
+    </div>
 <?php
+aaurora_site_container_after();
 get_sidebar( 'alt' );
 get_footer();

@@ -1,0 +1,20 @@
+.column-2-title-image {
+  & .wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    background-color: #f5f5f5;
+    & > div {
+      //flex-basis: 50%;
+      flex: 1 1 50%;
+      & img {
+        display: block;
+      }
+    }
+    & .meta-data {
+      padding: 5rem;
+    }
+  }
+}
