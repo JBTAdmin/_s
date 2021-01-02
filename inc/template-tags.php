@@ -25,7 +25,7 @@ if ( ! function_exists( 'aaurora_posted_on' ) ) :
 	 * @param boolean $date_only Optional. Return Date or echo date on screen. Default echo.
 	 * @param boolean $created_date Optional. Created or Updated Date. Default Updated Post Date.
 	 */
-	function aaurora_posted_on( $date_only = false, $created_date = false ) {
+	function aaurora_posted_on( $date_only = false, $created_date = true ) {
 
 		if ( $created_date ) {
 			$time_string = '<span class="posted-on"> <time class="entry-date published" datetime="%1$s">%2$s</time></span>';
@@ -56,6 +56,15 @@ if ( ! function_exists( 'aaurora_posted_on' ) ) :
 	}
 endif;
 
+if ( ! function_exists( 'aaurora_updated_on' ) ) :
+	/**
+	 * Prints HTML with meta information for the current post-date/time.
+	 */
+	function aaurora_updated_on( ) {
+		aaurora_posted_on(false, false);
+	}
+endif;
+
 if ( ! function_exists( 'aaurora_posted_by' ) ) :
 	/**
 	 * Prints HTML with meta information for the current author.
@@ -75,7 +84,7 @@ if ( ! function_exists( 'aaurora_meta_comment' ) ) :
 	 * Prints meta information for comment.
 	 */
 	function aaurora_meta_comment() {
-		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
+		if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 			echo '<span class="comments-link">';
 			comments_popup_link(
 				sprintf(

@@ -974,6 +974,78 @@ Kirki::add_field(
 	)
 );
 
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'        => 'select',
+		'settings'    => 'blog_post_in_content_header_layout',
+		'label'       => esc_html__( 'Post Header Layout', 'aaurora' ),
+		'section'     => 'blog_post',
+		'default'     => 'in-content',
+		'placeholder' => esc_html__( 'Select the layout.', 'aaurora' ),
+		'multiple'    => 0,
+		'choices'     => array(
+			'layout-1'  => esc_html__( 'Layout 1', 'aaurora' ),
+			'layout-2' => esc_html__( 'Layout 2', 'aaurora' ),
+		),
+		'active_callback' => [
+			[
+				'setting'  => 'blog_post_header_location',
+				'operator' => '==',
+				'value'    => 'aaurora_entry_content_before',
+			]
+		],
+	)
+);
+
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'        => 'select',
+		'settings'    => 'blog_post_in_page_header_layout',
+		'label'       => esc_html__( 'Post Header Layout', 'aaurora' ),
+		'section'     => 'blog_post',
+		'default'     => 'in-content',
+		'placeholder' => esc_html__( 'Select the layout.', 'aaurora' ),
+		'multiple'    => 0,
+		'choices'     => array(
+			'column-2-title-image'  => esc_html__( 'Layout 3', 'aaurora' ),
+			'column-2-title-image-compact' => esc_html__( 'Layout 4', 'aaurora' ),
+			'column-2-title-image-column' => esc_html__( 'Layout 5', 'aaurora' ),
+		),
+		'active_callback' => [
+			[
+				'setting'  => 'blog_post_header_location',
+				'operator' => '==',
+				'value'    => 'aaurora_site_container_before',
+			]
+		],
+	)
+);
+
+
+Kirki::add_field(
+	'theme_config_id',
+	array(
+		'type'     => 'sortable',
+		'settings' => 'entry_header_metadata_element',
+		'label'    => esc_html__( 'Metadata Elements', 'aaurora' ),
+		'section'  => 'blog_post',
+		'default'  => array(
+			'category',
+			'updated_on',
+			'posted_by',
+		),
+		'choices'  => array(
+			'category'  => esc_html__( 'Category', 'aaurora' ),
+			'posted_on'   => esc_html__( 'Posted Date', 'aaurora' ),
+			'updated_on'  => esc_html__( 'Updated Date', 'aaurora' ),
+			'posted_by' => esc_html__( 'Author', 'aaurora' ),
+			'meta_comment' => esc_html__( 'Comment', 'aaurora' ),
+		),
+		'priority' => 10,
+	)
+);
 
 Kirki::add_field(
 	'theme_config_id',

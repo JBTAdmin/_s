@@ -1,11 +1,12 @@
-.column-2-title-image {
+.column-2-title-image-column {
   & .wrap {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 100%;
     background-color: #f5f5f5;
+    border-radius: 1rem;
+    flex-direction: column;
     & > div {
       //flex-basis: 50%;
       flex: 1 1 50%;
