@@ -1,5 +1,5 @@
         <div class="site-container column-2-title-image">
-            <div class="wrap">
+            <div class="wrap flex-column">
                 <div class="featured-image">
                 <?php get_template_part( 'template-parts/single/thumbnail' ); ?>
                 </div>

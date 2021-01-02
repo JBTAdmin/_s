@@ -17,4 +17,7 @@
       padding: 5rem;
     }
   }
+  & .wrap.flex-column {
+    flex-direction: column;
+  }
 }

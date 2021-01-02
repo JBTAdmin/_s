@@ -28,6 +28,16 @@
     padding-top: 100%;
     min-width: 100%;
     border-radius: 1rem;
+    &::after {
+      content: " ";
+      background-color: rgba(45, 45, 45, 0.35);
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      border-radius: 1rem;
+    }
   }
 
   & .post-thumbnail-container {
