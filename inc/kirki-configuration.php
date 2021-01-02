@@ -353,49 +353,6 @@ Kirki::add_field(
 		'description' => esc_attr__( 'Here you can select Sidebar Layout.', 'aaurora' ),
 	)
 );
-
-Kirki::add_field(
-	'theme_config_id',
-	array(
-		'type'     => 'sortable',
-		'settings' => 'entry_header_sequence',
-		'label'    => esc_html__( 'Sequence of Header Section', 'aaurora' ),
-		'section'  => 'general_layout',
-		'default'  => array(
-			'category',
-			'heading',
-			'thumbnail',
-		),
-		'choices'  => array(
-			'category'  => esc_html__( 'Category', 'aaurora' ),
-			'heading'   => esc_html__( 'Heading', 'aaurora' ),
-			'metadata'  => esc_html__( 'Metadata', 'aaurora' ),
-			'thumbnail' => esc_html__( 'Thumbnail', 'aaurora' ),
-		),
-		'priority' => 10,
-	)
-);
-
-Kirki::add_field(
-	'theme_config_id',
-	array(
-		'type'     => 'sortable',
-		'settings' => 'entry_footer_sequence',
-		'label'    => esc_html__( 'Sequence of Footer Section', 'aaurora' ),
-		'section'  => 'general_layout',
-		'default'  => array(
-			'tag',
-			'author',
-			'post-navigation',
-		),
-		'choices'  => array(
-			'tag'             => esc_html__( 'Tag', 'aaurora' ),
-			'author'          => esc_html__( 'Author', 'aaurora' ),
-			'post-navigation' => esc_html__( 'Post Navigation', 'aaurora' ),
-		),
-		'priority' => 10,
-	)
-);
 // SECTION: LAYOUT END.
 
 // SECTION: Padding and Margin.
@@ -1017,54 +974,49 @@ Kirki::add_field(
 	)
 );
 
+
 Kirki::add_field(
-	'aaurora_theme_options',
+	'theme_config_id',
 	array(
-		'type'        => 'toggle',
-		'settings'    => 'blog_post_featured_image',
-		'label'       => esc_attr__( 'Featured image', 'aaurora' ),
-		'description' => esc_attr__( 'Disable to hide post featured image on single post page (Globally on all site).', 'aaurora' ),
-		'section'     => 'blog_post',
-		'default'     => '1',
+		'type'     => 'sortable',
+		'settings' => 'entry_header_sequence',
+		'label'    => esc_html__( 'Header Elements', 'aaurora' ),
+		'section'  => 'blog_post',
+		'default'  => array(
+			'category',
+			'heading',
+			'thumbnail',
+		),
+		'choices'  => array(
+			'category'  => esc_html__( 'Category', 'aaurora' ),
+			'heading'   => esc_html__( 'Heading', 'aaurora' ),
+			'metadata'  => esc_html__( 'Metadata', 'aaurora' ),
+			'thumbnail' => esc_html__( 'Thumbnail', 'aaurora' ),
+		),
+		'priority' => 10,
 	)
 );
 
 Kirki::add_field(
-	'aaurora_theme_options',
+	'theme_config_id',
 	array(
-		'type'        => 'toggle',
-		'settings'    => 'blog_post_tags',
-		'label'       => esc_attr__( 'Tags', 'aaurora' ),
-		'description' => esc_attr__( 'Disable to hide post tags on single post page.', 'aaurora' ),
-		'section'     => 'blog_post',
-		'default'     => '1',
+		'type'     => 'sortable',
+		'settings' => 'entry_footer_sequence',
+		'label'    => esc_html__( 'Footer Elements', 'aaurora' ),
+		'section'  => 'blog_post',
+		'default'  => array(
+			'tag',
+			'author',
+			'post-navigation',
+		),
+		'choices'  => array(
+			'tag'             => esc_html__( 'Tag', 'aaurora' ),
+			'author'          => esc_html__( 'Author', 'aaurora' ),
+			'post-navigation' => esc_html__( 'Post Navigation', 'aaurora' ),
+		),
+		'priority' => 10,
 	)
 );
-
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
-		'type'        => 'toggle',
-		'settings'    => 'blog_post_comments',
-		'label'       => esc_attr__( 'Comments counter', 'aaurora' ),
-		'description' => '',
-		'section'     => 'blog_post',
-		'default'     => '0',
-	)
-);
-
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
-		'type'        => 'toggle',
-		'settings'    => 'blog_post_nav',
-		'label'       => esc_attr__( 'Navigation links', 'aaurora' ),
-		'description' => esc_attr__( 'Previous/next posts navigation links below post content.', 'aaurora' ),
-		'section'     => 'blog_post',
-		'default'     => '1',
-	)
-);
-
 // END SECTION: Blog Single Post.
 
 // SECTION: Sidebars.

@@ -10,11 +10,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// Do not show if category is disabled. todo use the proper category key.
-if ( get_theme_mod( 'blog_post_nav', true ) === false ) {
-	return;
-}
-
 /* translators: used between list items, there is a space after the comma */
 if ( 'post' === get_post_type() ) {
 	$categories_list = get_the_category_list( esc_html__( ', ', 'aaurora' ) );

@@ -7,7 +7,7 @@
  */
 
 // Do not show if post is password protected or Navigation is disabled.
-if ( post_password_required() || get_theme_mod( 'blog_post_nav', true ) === false ) {
+if ( post_password_required() ) {
 	return;
 }
 
