@@ -1,5 +1,6 @@
 <div class="site-container one <?php esc_attr_e(get_theme_mod( 'blog_post_in_page_header_layout', 'column-2-title-image' )); ?>">
     <div class="wrap">
+<!--        todo probably this div is not required AS featured image also comes as wrapper to div-->
         <div class="featured-image">
 			<?php get_template_part( 'template-parts/single/thumbnail' ); ?>
         </div>

@@ -133,39 +133,39 @@ add_action( 'wp_head', 'aaurora_pingback_header' );
  * @since 1.0.0
  */
 function aaurora_content() {
-
+	
 	if ( have_posts() ) {
 		$container_class = ' blog-' . get_theme_mod( 'blog_layout_setting', '1' );
 		?>
-		<header class="page-header">
+        <header class="page-header">
 			<?php
 			if ( is_archive() ) {
 				the_archive_title( '<h1 class="page-title">', '</h1>' );
 				the_archive_description( '<div class="archive-description">', '</div>' );
 			} elseif ( is_search() ) {
 				?>
-				<h1 class="page-title">
+                <h1 class="page-title">
 					<?php
 					/* translators: %s: search query. */
 					printf( esc_html__( 'Search Results for: %s', 'aaurora' ), '<span>' . get_search_query() . '</span>' );
 					?>
-				</h1>
+                </h1>
 				<?php
 			} else {
 				?>
-				<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+                <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 				<?php
 			}
 			?>
-		</header><!-- .page-header -->
-		<div class="article-container <?php echo esc_attr( $container_class ); ?>">
+        </header><!-- .page-header -->
+        <div class="article-container <?php echo esc_attr( $container_class ); ?>">
 			<?php
 			while ( have_posts() ) :
 				the_post();
 				aaurora_get_content_layout();
 			endwhile;
 			?>
-		</div>
+        </div>
 		<?php
 		post_nav();
 	} else {
@@ -253,7 +253,7 @@ endif;
 if ( ! function_exists( 'aaurora_header_branding_layout' ) ) :
 
 	/**
-	 * Aorora Branding Layout.
+	 * Aaurora Branding Layout.
 	 */
 	function aaurora_header_branding_layout() {
 		/**
