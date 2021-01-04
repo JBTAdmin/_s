@@ -1404,7 +1404,7 @@ li > ul.sub-menu {
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  background-color: rgba(136, 136, 136, 0.06); }
+  background-color: #fff; }
   .top-link.show {
     visibility: visible;
     opacity: 1; }
@@ -2366,7 +2366,7 @@ article {
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  background: rgba(136, 136, 136, 0.06);
+  background: #fff;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -2484,7 +2484,7 @@ a.pt {
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  background: rgba(136, 136, 136, 0.06); }
+  background: #fff; }
   .aaurora-search svg {
     width: 24px;
     height: 24px; }

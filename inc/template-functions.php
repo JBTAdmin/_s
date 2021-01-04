@@ -112,7 +112,7 @@ if ( ! function_exists( 'aaurora_post_content_before' ) ) {
 		if ( current_filter() === get_theme_mod( 'blog_post_header_location', 'aaurora_entry_content_before' ) ) {
 			
 			if ( 'aaurora_site_container_before' === get_theme_mod( 'blog_post_header_location', 'aaurora_entry_content_before' ) ) {
-				get_template_part( 'template-parts/single/post-header/page-header-style-1' );
+				get_template_part( 'template-parts/single/post-header/page-header-style' );
 			} else {
 				get_template_part( 'template-parts/single/post-header/in-content-post-header' );
 			}

@@ -40,6 +40,7 @@ if ( is_admin() ) {
 
 /**
  * Disable JQuery.
+ * todo
  */
 function deregister_jquery() {
 	if ( ! is_admin() ) {
