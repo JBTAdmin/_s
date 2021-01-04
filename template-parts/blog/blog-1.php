@@ -12,9 +12,8 @@
 
 <article id="post-<?php the_ID(); ?>">
 	<div class="inner-entry">
-		<div class="featured-image" >
-			<?php aaurora_post_thumbnail( 'full', aaurora_posted_on( true ) ); ?>
-		</div>
+
+        <?php aaurora_post_thumbnail( 'full', aaurora_posted_on( true ) ); ?>
 
 		<div class="entry-header">
             <div class="entry-meta">

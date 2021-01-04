@@ -23,11 +23,21 @@
     font-size: 3rem;
     line-height: 1.2;
   }
-
-  & .featured-image {
+  //todo should be removed as it is not used
+  & .post-thumbnail {
     padding-top: 100%;
     min-width: 100%;
     border-radius: 1rem;
+    cursor: pointer;
+    flex: 1 0 100%;
+    overflow: hidden;
+    width: auto;
+    height: fit-content;
+    height: auto;
+    margin: unset;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     &::after {
       content: " ";
       background-color: rgba(45, 45, 45, 0.35);

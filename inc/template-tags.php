@@ -122,6 +122,7 @@ if ( ! function_exists( 'aaurora_post_thumbnail' ) ) :
 
 		if ( ! has_post_thumbnail() & ! is_singular() ) {
 			?>
+<!-- todo should be refined-->
 			<div class="post-thumbnail-container">
 				<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 					<div class="no-post-thumbnail">

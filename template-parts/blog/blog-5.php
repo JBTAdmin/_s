@@ -12,7 +12,8 @@
 
 <article id="post-<?php the_ID(); ?>">
 	<div  class="inner-entry">
-		<div class="featured-image" style="background-image:url('<?php echo esc_url( get_the_post_thumbnail_url( get_the_ID(), 'full' ) ); ?>')">
+<!--        todo it should be handled in core method only instead of handing here-->
+		<div class="post-thumbnail" style="background-image:url('<?php echo esc_url( get_the_post_thumbnail_url( get_the_ID(), 'full' ) ); ?>')">
 <!--	        --><?php // aaurora_post_thumbnail( 'full', aaurora_posted_on( true ) ); ?>
 		</div>
 

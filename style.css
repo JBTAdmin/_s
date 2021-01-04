@@ -1567,21 +1567,6 @@ div[class*="footer-sidebar-"] {
   font-weight: 700;
   margin-bottom: 1.5rem; }
 
-.article-container .featured-image {
-  cursor: pointer;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 100%;
-          flex: 1 0 100%;
-  overflow: hidden;
-  width: auto;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  height: auto;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; }
-
 .article-container .post-thumbnail {
   margin: 4rem 0; }
 
@@ -1889,11 +1874,25 @@ div[class*="footer-sidebar-"] {
   font-size: 3rem;
   line-height: 1.2; }
 
-.blog-5 .featured-image {
+.blog-5 .post-thumbnail {
   padding-top: 100%;
   min-width: 100%;
-  border-radius: 1rem; }
-  .blog-5 .featured-image::after {
+  border-radius: 1rem;
+  cursor: pointer;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+  overflow: hidden;
+  width: auto;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  height: auto;
+  margin: unset;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+  .blog-5 .post-thumbnail::after {
     content: " ";
     background-color: rgba(45, 45, 45, 0.35);
     position: absolute;
