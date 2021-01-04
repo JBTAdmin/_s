@@ -17,7 +17,7 @@ add_action( 'aaurora_header_before', 'aaurora_top_bar_layout' );
 add_action( 'aaurora_header', 'aaurora_header_branding_layout' );
 add_action( 'aaurora_header_after', 'aaurora_header_main_menu_layout' );
 
-add_action( 'aaurora_content_singular', 'aaurora_content_singular' );
+add_action( 'aaurora_singular_content', 'aaurora_singular_content_layout' );
 add_action( 'aaurora_content_page', 'aaurora_single_page_layout' );
 add_action( 'aaurora_content_post', 'aaurora_single_post_layout' );
 add_action( 'aaurora_entry_content_before', 'aaurora_post_content_before' );
@@ -43,13 +43,13 @@ add_action( 'aaurora_footer_after', 'aaurora_social_media' );
 add_filter( 'body_class', 'aaurora_body_classes' );
 
 
-if ( ! function_exists( 'aaurora_content_singular' ) ) {
+if ( ! function_exists( 'aaurora_singular_content_layout' ) ) {
 	/**
 	 * Outputs the theme single content.
 	 *
 	 * @since 1.0.0
 	 */
-	function aaurora_content_singular() {
+	function aaurora_singular_content_layout() {
 		
 		if ( have_posts() ) {
 			while ( have_posts() ) {

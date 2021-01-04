@@ -448,3 +448,25 @@ function aaurora_footer_content() {
 function aaurora_footer_content_bottom() {
 	do_action( 'aaurora_footer_content_bottom' );
 }
+
+
+/**
+ * Before Singular Content.
+ */
+function aaurora_singular_content_before() {
+	do_action( 'aaurora_singular_content_before' );
+}
+
+/**
+ * Singular Content.
+ */
+function aaurora_singular_content() {
+	do_action( 'aaurora_singular_content' );
+}
+
+/**
+ * After Singular Content.
+ */
+function aaurora_singular_content_after() {
+	do_action( 'aaurora_singular_content_after' );
+}

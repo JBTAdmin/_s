@@ -30,13 +30,11 @@ $sidebar_page_class = '';
 
                 <main id="primary" class="site-main primary-content <?php echo esc_attr( $sidebar_page_class ); ?>">
 					
-					<?php
-					do_action( 'aaurora_before_singular' );
-					
-					do_action( 'aaurora_content_singular' );
-					
-					do_action( 'aaurora_after_singular' );
-					?>
+					<?php aaurora_singular_content_before(); ?>
+                    
+                    <?php aaurora_singular_content(); ?>
+                    
+                    <?php aaurora_singular_content_after(); ?>
 
                 </main><!-- #content .site-content -->
 				
