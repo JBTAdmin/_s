@@ -47,14 +47,6 @@ article {
   min-width: 0;
 }
 
-// this is common for all the layout. Need to see which part can be here which all part can be specific scss.
-.post-thumbnail-container {
-  overflow: hidden;
-  border-radius: 1rem;
-  display: inline-block;
-  position: relative;
-}
-
 //@media screen and (min-width: 1200px){
 .single-post .primary-content,
 .page .primary-content {

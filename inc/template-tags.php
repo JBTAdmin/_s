@@ -131,8 +131,8 @@ if ( ! function_exists( 'aaurora_post_thumbnail' ) ) {
 				<?php the_post_thumbnail( $size ); ?>
             </div><!-- .post-thumbnail -->
 		<?php } else { ?>
-            <div class="post-thumbnail-container">
-                <a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
+            <div class="post-thumbnail">
+                <a href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 					<?php
 					the_post_thumbnail(
 						$size,
@@ -162,8 +162,8 @@ if ( ! function_exists( 'aaurora_post_thumbnail' ) ) {
 
 function no_post_thumbnail($date = '') {
     ?>
-    <div class="post-thumbnail-container">
-        <a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
+    <div class="post-thumbnail">
+        <a href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
             <div class="no-post-thumbnail">
 
                 <div class="post-thumbnail-drop-case">

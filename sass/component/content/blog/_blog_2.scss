@@ -10,8 +10,12 @@
     padding: 2rem;
   }
 
-  & .post-thumbnail-container {
+  & .post-thumbnail {
     display: block;
+    overflow: hidden;
+    border-radius: 1rem;
+    position: relative;
+    width: 100%;
   }
 
   & .post-thumbnail img {

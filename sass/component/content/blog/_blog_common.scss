@@ -14,6 +14,7 @@
     border-radius: 10px;
     height: 100%;
     position: relative;
+    overflow: hidden;
     transition: box-shadow 500ms ease-in-out, transform ease 0.3s;
 
     &:hover .post-thumbnail-drop-case {
@@ -27,10 +28,6 @@
     line-height: 1.4;
     font-weight: 700;
     margin-bottom: 1.5rem;
-  }
-
-  & .post-thumbnail {
-    margin: 4rem 0;
   }
 
   & .post-thumbnail img {
