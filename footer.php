@@ -11,24 +11,13 @@
 
 ?>
 
-<?php get_template_part( 'template-parts/footers/call-to-action', get_post_type() ); ?>
-<footer class="site-footer">
-	<?php
-		get_template_part( 'template-parts/footers/footer', get_theme_mod( 'footer_layout_setting', '3' ), get_post_type() );
-	?>
-</footer>
-<?php wp_footer(); ?>
+<?php aaurora_footer_before(); ?>
 
+<?php aaurora_footer(); ?>
 
-<?php
-// todo need to check the difference between top and before???.
-aaurora_footer_before();
-aaurora_footer_top();
-aaurora_footer_bottom();
-aaurora_footer_after();
-?>
-
+<?php aaurora_footer_after(); ?>
 
 </div>
+<?php wp_footer(); ?>
 </body>
 </html>

@@ -309,24 +309,16 @@ function aaurora_footer_before() {
 /**
  * Footer After.
  */
+function aaurora_footer() {
+	do_action( 'aaurora_footer' );
+}
+
+/**
+ * Footer After.
+ */
 function aaurora_footer_after() {
 	do_action( 'aaurora_footer_after' );
 }
-
-/**
- * Footer Top.
- */
-function aaurora_footer_top() {
-	do_action( 'aaurora_footer_top' );
-}
-
-/**
- * Footer Bottom.
- */
-function aaurora_footer_bottom() {
-	do_action( 'aaurora_footer_bottom' );
-}
-
 
 /**
  * Entry Content After.
@@ -436,3 +428,23 @@ function aaurora_site_container_after() {
 	do_action( 'aaurora_site_container_after' );
 }
 
+/**
+ * Before Footer Content.
+ */
+function aaurora_footer_content_top() {
+	do_action( 'aaurora_footer_content_top' );
+}
+
+/**
+ * Footer Content.
+ */
+function aaurora_footer_content() {
+	do_action( 'aaurora_footer_content' );
+}
+
+/**
+ * After Footer Content.
+ */
+function aaurora_footer_content_bottom() {
+	do_action( 'aaurora_footer_content_bottom' );
+}
