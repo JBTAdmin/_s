@@ -24,7 +24,7 @@
     line-height: 1.2;
   }
   //todo should be removed as it is not used
-  & .post-thumbnail {
+  & .post-thumbnail:not(.no-post-thumbnail) {
     padding-top: 100%;
     min-width: 100%;
     border-radius: 1rem;
@@ -48,5 +48,9 @@
       width: 100%;
       border-radius: 1rem;
     }
+  }
+
+  & .post-thumbnail-drop-case {
+    align-items: flex-end;
   }
 }
