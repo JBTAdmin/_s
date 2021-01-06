@@ -112,8 +112,10 @@ if ( ! function_exists( 'aaurora_post_thumbnail' ) ) {
 	 * Wraps the post thumbnail in an anchor element on index views, or a div
 	 * element when on single views.
 	 *
-	 * @param int $size Optional. Post Thumbnail Size.
-	 * @param int $date Optional. Post Date.
+	 * @param int     $size Optional. Post Thumbnail Size.
+	 * @param int     $date Optional. Post Date.
+	 * @param boolean $in_style Optional. Image is added as div or in style.
+	 * @param boolean $background_needed Optional. Should background be added in form of linear gradient.
 	 */
 	function aaurora_post_thumbnail( $size = 'post-thumbnail', $date = '', $in_style = false, $background_needed = true ) {
 		if ( post_password_required() || is_attachment() ) {
@@ -138,6 +140,11 @@ if ( ! function_exists( 'aaurora_post_thumbnail' ) ) {
 	}
 }
 
+/**
+ * Include Text based post thumbnail in case no featured post is provided for given post.
+ *
+ * @param string $date Optional. Post date to be included in post thumbnail.
+ */
 function no_post_thumbnail( $date = '' ) {
 	?>
 	<div class="post-thumbnail no-post-thumbnail">
@@ -165,6 +172,13 @@ function no_post_thumbnail( $date = '' ) {
 	<?php
 }
 
+/**
+ * Blog post thumbnail to be included for post.
+ *
+ * @param String  $date Post date to be included in featured image.
+ * @param String  $size Size of the featured image.
+ * @param boolean $in_style Should image be included as Div or In style.
+ */
 function blog_post_thumbnail( $date, $size, $in_style ) {
 	if ( $in_style ) {
 		?>

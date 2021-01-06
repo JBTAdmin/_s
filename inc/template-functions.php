@@ -297,7 +297,7 @@ if ( ! function_exists( 'aaurora_header_branding_layout' ) ) {
 		/**
 		 * Return if no Header Branding Bar.
 		 */
-		if ( true != get_theme_mod( 'aaurora_site_branding', true ) ) {
+		if ( true !== get_theme_mod( 'aaurora_site_branding', true ) ) {
 			return;
 		}
 
@@ -349,7 +349,7 @@ if ( ! function_exists( 'aaurora_header_main_menu_layout' ) ) {
 	 */
 	function aaurora_header_main_menu_layout() {
 
-		if ( true != get_theme_mod( 'aaurora_header_main_menu_layout', true ) ) {
+		if ( true !== get_theme_mod( 'aaurora_header_main_menu_layout', true ) ) {
 			return;
 		}
 		?>
@@ -429,14 +429,18 @@ if ( ! function_exists( 'aaurora_hamburger_menu' ) ) {
 }
 
 if ( ! function_exists( 'aaurora_footer_call_to_action' ) ) {
-
+	/**
+	 * Displayes call to Action.
+	 */
 	function aaurora_footer_call_to_action() {
 		get_template_part( 'template-parts/footers/call-to-action', get_post_type() );
 	}
 }
 
 if ( ! function_exists( 'aaurora_footer_section' ) ) {
-
+	/**
+	 * Displayes Footer Section.
+	 */
 	function aaurora_footer_section() {
 		?>
 		<footer class="site-footer">
@@ -453,7 +457,9 @@ if ( ! function_exists( 'aaurora_footer_section' ) ) {
 }
 
 if ( ! function_exists( 'aaurora_footer_main_layout' ) ) {
-
+	/**
+	 * Footer Main Layout Hookds in Footer Content.
+	 */
 	function aaurora_footer_main_layout() {
 		get_template_part( 'template-parts/footers/footer', get_theme_mod( 'footer_layout_setting', '3' ), get_post_type() );
 	}
