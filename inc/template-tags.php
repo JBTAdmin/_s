@@ -118,6 +118,7 @@ if ( ! function_exists( 'aaurora_post_thumbnail' ) ) {
 	 * @param boolean $background_needed Optional. Should background be added in form of linear gradient.
 	 */
 	function aaurora_post_thumbnail( $size = 'post-thumbnail', $date = '', $in_style = false, $background_needed = true ) {
+	 
 		if ( post_password_required() || is_attachment() ) {
 			return;
 		}
@@ -128,15 +129,9 @@ if ( ! function_exists( 'aaurora_post_thumbnail' ) ) {
 
 			return;
 		}
-		if ( is_singular() ) {
-			?>
-			<div class="post-thumbnail">
-				<?php the_post_thumbnail( $size ); ?>
-			</div><!-- .post-thumbnail -->
-			<?php
-		} else {
-			blog_post_thumbnail( $date, $size, $in_style );
-		} // End is_singular().
+		
+		blog_post_thumbnail( $date, $size, $in_style );
+		
 	}
 }
 
@@ -182,11 +177,17 @@ function no_post_thumbnail( $date = '' ) {
 function blog_post_thumbnail( $date, $size, $in_style ) {
 	if ( $in_style ) {
 		?>
-		<div class="post-thumbnail"
+		<div class="post-thumbnail in-style"
 			style="background-image:url('<?php the_post_thumbnail_url( $size ); ?>')">
 		</div>
 		<?php
 		return;
+	} elseif (is_singular()) {
+	    ?>
+        <div class="post-thumbnail">
+			<?php the_post_thumbnail( $size ); ?>
+        </div><!-- .post-thumbnail -->
+            <?php
 	} else {
 		?>
 		<div class="post-thumbnail">
