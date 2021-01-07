@@ -6,6 +6,7 @@
     align-items: center;
     max-width: 100%;
     background-color: #f5f5f5;
+    margin-top: 5rem;
     & > div {
       //flex-basis: 50%;
       flex: 1 1 50%;
@@ -14,7 +15,7 @@
       }
     }
     & .meta-data {
-      padding: 5rem;
+      padding: 10rem;
     }
   }
 }

@@ -7,7 +7,7 @@
   flex-wrap: wrap;
 }
 
-.site-container::before {
+.site-header + .site-container::before {
   content: "";
   display: block;
   height: 8rem;
