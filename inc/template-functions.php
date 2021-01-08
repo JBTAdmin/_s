@@ -524,7 +524,7 @@ if ( ! function_exists( 'aaurora_footer_popup_search_modal_layout' ) ) {
 				<form role="search" class="search search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>"
 						method="GET">
 					<label> <span class="screen-reader-text">Search for</span>
-						<input autocomplete="off" type="text" class="search-field" name="s" placeholder="Search..."
+						<input autocomplete="off" type="text" id="search-field" class="search-field" name="s" placeholder="Search..."
 							value="">
 					</label>
 				</form>
