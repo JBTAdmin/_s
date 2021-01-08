@@ -43,7 +43,7 @@
   overflow: hidden;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.25s cubic-bezier(0.15, 0.2, 0.1, 1);
+  transition: opacity 0s cubic-bezier(0.15, 0.2, 0.1, 1);
 }
 
 .popup_search_modal.visible {
@@ -76,7 +76,7 @@
   width: 100%;
   padding: 15px 20px;
 
-  background-color: rgba(255, 255, 255, 0.03);
+  background-color: rgba(255, 255, 255, 0.3);
   //border-color: rgba(0, 0, 0, 0.2);
   //border-radius: 5px;
   color: #fff;
@@ -98,4 +98,10 @@
 .popup_search_modal > .popup_modal_close_button {
   color: #fff;
   padding: 4rem;
+  display: flex;
+  justify-content: flex-end;
+  & > svg {
+    width: 6rem;
+    height: 6rem;
+  }
 }
