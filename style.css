@@ -1336,7 +1336,7 @@ li > ul.sub-menu {
   position: fixed;
   top: 0; }
 
-.header-fixed + .site-container::before {
+.header-fixed .site-container::before {
   margin-top: 0; }
 
 /* Topbar
@@ -2301,7 +2301,7 @@ aside.open {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
 
-.site-header + .site-container::before {
+.site-container::before {
   content: "";
   display: block;
   height: 8rem;
