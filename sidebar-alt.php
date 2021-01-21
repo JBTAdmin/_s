@@ -10,6 +10,8 @@
 get_theme_mod( 'sidebar_listing', 'right' );
 
 $class = 'widget-area sidebar-alt-aside sidebar-alt';
+
+//This function will work only when AMP plugin is installed. Hence removing this.
 if ( is_amp_endpoint() ) {
 	$class = '';
 }
