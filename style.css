@@ -3101,20 +3101,6 @@ section.widget:not(.widget_seriestoc) {
   text-decoration: none;
   color: #e6842e; }
 
-.main-navigation .header-menu > li > a:before {
-  content: "0" counter(number);
-  display: inline-block;
-  opacity: 1;
-  font-weight: 700;
-  width: auto;
-  top: -10px;
-  right: 15px;
-  font-size: 0.6em;
-  position: absolute;
-  height: auto;
-  background: 0 0;
-  opacity: 0.7; }
-
 .main-navigation .header-menu > li {
   counter-increment: number; }
 
