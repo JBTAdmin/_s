@@ -497,11 +497,6 @@ if ( ! function_exists( 'aaurora_footer_share_layout' ) ) {
 					target="blank" class="ln" rel="nofollow" data-social_name="linkedin">
 					<?php load_inline_svg( 'linkedin.svg' ); ?>
 				</a>
-
-				<a href="https://in.pinterest.com/mistrykaran91/" target="blank" class="pt" rel="nofollow"
-					data-social_name="pinterest">
-					<i class="fa fa-pinterest pinterest" aria-hidden="true"></i>
-				</a>
 			</div>
 		</div>
 		<?php
