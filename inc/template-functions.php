@@ -515,7 +515,7 @@ if ( ! function_exists( 'aaurora_footer_popup_search_modal_layout' ) ) {
 	 */
 	function aaurora_footer_popup_search_modal_layout() {
 		?>
-		<div class="popup_search_modal">
+		<div class="popup_search_modal" tabindex="1">
 			<div class="popup_modal_close_button">
 				<?php load_inline_svg( 'close.svg' ); ?>
 			</div>
@@ -525,7 +525,7 @@ if ( ! function_exists( 'aaurora_footer_popup_search_modal_layout' ) ) {
 						method="GET">
 					<label> <span class="screen-reader-text">Search for</span>
 						<input autocomplete="off" type="text" id="search-field" class="search-field" name="s" placeholder="Search..."
-							value="">
+							value="" >
 					</label>
 				</form>
 			</div>
