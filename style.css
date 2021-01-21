@@ -3152,3 +3152,8 @@ section.widget:not(.widget_seriestoc) {
   text-decoration: none;
   margin-bottom: 2rem; }
 
+.page-template-full-width article {
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%; }
+
