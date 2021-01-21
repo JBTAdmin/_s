@@ -28,7 +28,6 @@ aside.sidebar-alt-aside section {
 }
 
 .aside-header-container {
-  border-bottom: 1px solid #e9ecef;
   width: 100%;
   z-index: 1000;
 }
@@ -57,7 +56,6 @@ aside.open {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10rem;
   .custom-logo {
     max-width: 20rem;
     vertical-align: middle;

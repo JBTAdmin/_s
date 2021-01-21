@@ -70,7 +70,9 @@ li > ul.sub-menu {
 }
 
 @media screen and (max-width: 1024px) {
-  .hamburger-menu.menu_only,
+  .hamburger-menu.menu_only {
+    display: flex;
+  }
   .sidebar-menu {
     display: block;
   }

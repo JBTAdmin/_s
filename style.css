@@ -834,7 +834,10 @@ li > ul.sub-menu {
   display: none; }
 
 @media screen and (max-width: 1024px) {
-  .hamburger-menu.menu_only,
+  .hamburger-menu.menu_only {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
   .sidebar-menu {
     display: block; }
   .header-menu,
@@ -2233,7 +2236,6 @@ aside.sidebar-alt-aside section {
   padding: 1rem 4rem 1rem; }
 
 .aside-header-container {
-  border-bottom: 1px solid #e9ecef;
   width: 100%;
   z-index: 1000; }
 
@@ -2259,8 +2261,7 @@ aside.open {
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center;
-  height: 10rem; }
+          align-items: center; }
   .aside-header .custom-logo {
     max-width: 20rem;
     vertical-align: middle; }
