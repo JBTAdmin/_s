@@ -177,7 +177,7 @@ if ( ! function_exists( 'aaurora_content' ) ) {
 	function aaurora_content() {
 
 		if ( have_posts() ) {
-			$container_class = ' blog-' . get_theme_mod( 'blog_layout_setting', '1' );
+			$container_class = ' blog-' . get_theme_mod( 'blog_layout_setting', '4' );
 			?>
 			<header class="page-header">
 				<?php
