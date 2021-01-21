@@ -150,4 +150,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
   // popupSearchModal.classList.toggle( "visible" );
   // }
   // );
+
+  // todo JBT Specific Series TOC
+  const seriesToc = document.querySelector("#seriestoc-2");
+  const seriesTocHeading = document.querySelector(
+      "#seriestoc-2 > .widget-title"
+  );
+
+  seriesTocHeading &&
+  seriesTocHeading.addEventListener("click", function() {
+    seriesToc.classList.toggle("visible");
+  });
 });
