@@ -10,9 +10,6 @@
 get_theme_mod( 'sidebar_listing', 'right' );
 
 $class = 'widget-area sidebar-alt-aside sidebar-alt';
-if ( is_amp_endpoint() ) {
-	$class = '';
-}
 
 ?>
 <amp-sidebar id="drawermenu" layout="nodisplay" side="right">
