@@ -8,13 +8,13 @@
  */
 
 get_theme_mod( 'sidebar_listing', 'right' );
-$option = array( 'content-only', 'sidebar-left' );
-if ( ! is_active_sidebar( 'sidebar-right' ) || in_array( get_theme_mod( 'sidebar_layout_setting', 'content-only' ), $option, true ) ) {
+$option = array( 'content-only', 'aaurora-sidebar-left' );
+if ( ! is_active_sidebar( 'aaurora-sidebar-right' ) || in_array( get_theme_mod( 'sidebar_layout_setting', 'content-only' ), $option, true ) ) {
 	return;
 }
 ?>
 
-<aside id="primary" class="widget-area sidebar-right">
-	<?php dynamic_sidebar( 'sidebar-right' ); ?>
+<aside id="primary-sidebar" class="widget-area sidebar-right">
+	<?php dynamic_sidebar( 'aaurora-sidebar-right' ); ?>
 </aside><!-- #secondary -->
 

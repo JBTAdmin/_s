@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   const popupSearchModal = document.querySelector(".popup_search_modal");
   const searchButton = document.querySelector(".aaurora-search");
+  const headerSearchButton = document.querySelector(".aaurora-header-search");
   const popupModalCloseBtn = document.querySelector(
     ".popup_modal_close_button"
   );
@@ -85,12 +86,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
   subMenu.forEach(el =>
     el.insertAdjacentHTML(
       "beforebegin",
-      '<span class="sub-menu-btn-icon">&gt;</span>'
+      '<span class="drawer-dropdown-button" ></span>'
+      // '<div class="ins-drawer-button-area"><span class="drawer-dropdown-button" ></span></div>'
+      // '<span class="sub-menu-btn-icon">&gt;</span>'
     )
   );
 
   const sidebarMenu = Array.prototype.slice.call(
-    document.querySelectorAll(".widget-area .sub-menu-btn-icon")
+    document.querySelectorAll(".widget-area .drawer-dropdown-button")
   );
 
   sidebarMenu.forEach(function(el) {
@@ -132,18 +135,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
     popupSearchModal.classList.toggle("visible");
   });
 
+  headerSearchButton.addEventListener("click", function() {
+    popupSearchModal.classList.toggle("visible");
+  });
+
   popupModalCloseBtn.addEventListener("click", function() {
     popupSearchModal.classList.toggle("visible");
   });
 
-  // todo JBT Specific Series TOC
-  const seriesToc = document.querySelector("#seriestoc-2");
-  const seriesTocHeading = document.querySelector(
-    "#seriestoc-2 > .widget-title"
-  );
-
-  seriesTocHeading &&
-    seriesTocHeading.addEventListener("click", function() {
-      seriesToc.classList.toggle("visible");
-    });
+  // popupSearchModal &&
+  // popupSearchModal.addEventListener(
+  // "click",
+  // function() {
+  // popupSearchModal.classList.toggle( "visible" );
+  // }
+  // );
 });

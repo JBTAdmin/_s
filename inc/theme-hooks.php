@@ -66,12 +66,12 @@ add_theme_support(
 		'sidebar',
 		'footer',
 
-	/**
-	 * If/when WordPress Core implements similar methodology, Themes and Plugins
-	 * will be able to check whether the version of THA supplied by the theme
-	 * supports Core hooks.
-	 */
-	// 'core',
+		/**
+		 * If/when WordPress Core implements similar methodology, Themes and Plugins
+		 * will be able to check whether the version of THA supplied by the theme
+		 * supports Core hooks.
+		 */
+		// 'core',
 	)
 );
 
@@ -96,6 +96,7 @@ add_theme_support(
 function aaurora_current_theme_supports( $bool, $args, $registered ) {
 	return in_array( $args[0], $registered[0] ) || in_array( 'all', $registered[0] );
 }
+
 add_filter( 'current_theme_supports-aaurora_hooks', 'aaurora_current_theme_supports', 10, 3 );
 
 /**
@@ -106,6 +107,7 @@ add_filter( 'current_theme_supports-aaurora_hooks', 'aaurora_current_theme_suppo
 function aaurora_html_before() {
 	do_action( 'aaurora_html_before' );
 }
+
 /**
  * HTML <body> hooks
  * $aaurora_supports[] = 'body';
@@ -174,21 +176,7 @@ function aaurora_header_bottom() {
 	do_action( 'aaurora_header_bottom' );
 }
 
-/**
- * Semantic <content> hooks
- *
- * $aaurora_supports[] = 'content';
- */
-function aaurora_content_before() {
-	do_action( 'aaurora_content_before' );
-}
 
-/**
- * Content After.
- */
-function aaurora_content_after() {
-	do_action( 'aaurora_content_after' );
-}
 
 /**
  * Content Top.
@@ -234,19 +222,6 @@ function aaurora_entry_after() {
 	do_action( 'aaurora_entry_after' );
 }
 
-/**
- * Entry Content Before.
- */
-function aaurora_entry_content_before() {
-	do_action( 'aaurora_entry_content_before' );
-}
-
-/**
- * Entry Content After.
- */
-function aaurora_entry_content_after() {
-	do_action( 'aaurora_entry_content_after' );
-}
 
 /**
  * Entry Top.
@@ -288,6 +263,20 @@ function aaurora_sidebars_before() {
 }
 
 /**
+ * Right Sidebar.
+ */
+function aaurora_right_sidebar() {
+	do_action( 'aaurora_right_sidebar' );
+}
+
+/**
+ * Left Sidebar.
+ */
+function aaurora_left_sidebar() {
+	do_action( 'aaurora_left_sidebar' );
+}
+
+/**
  * Sidebar After.
  */
 function aaurora_sidebars_after() {
@@ -320,20 +309,164 @@ function aaurora_footer_before() {
 /**
  * Footer After.
  */
+function aaurora_footer() {
+	do_action( 'aaurora_footer' );
+}
+
+/**
+ * Footer After.
+ */
 function aaurora_footer_after() {
 	do_action( 'aaurora_footer_after' );
 }
 
 /**
- * Footer Top.
+ * Entry Content After.
  */
-function aaurora_footer_top() {
-	do_action( 'aaurora_footer_top' );
+function aaurora_entry_tag_before() {
+	do_action( 'aaurora_entry_tag_before' );
 }
 
 /**
- * Footer Bottom.
+ * Entry Content After.
  */
-function aaurora_footer_bottom() {
-	do_action( 'aaurora_footer_bottom' );
+function aaurora_entry_tag_after() {
+	do_action( 'aaurora_entry_tag_after' );
+}
+
+/**
+ * Entry Content After.
+ */
+function aaurora_entry_author_before() {
+	do_action( 'aaurora_entry_author_before' );
+}
+
+/**
+ * Entry Content After.
+ */
+function aaurora_entry_author_after() {
+	do_action( 'aaurora_entry_author_after' );
+}
+
+/**
+ * Entry Content After.
+ */
+function aaurora_entry_navigation_before() {
+	do_action( 'aaurora_entry_navigation_before' );
+}
+
+/**
+ * Entry Content After.
+ */
+function aaurora_entry_navigation_after() {
+	do_action( 'aaurora_entry_navigation_after' );
+}
+
+
+// todo viveka.
+/**
+ * Before Main Content
+ */
+function aaurora_main_content_before() {
+	do_action( 'aaurora_main_content_before' );
+}
+
+/**
+ * After Main Content.
+ */
+function aaurora_main_content_after() {
+	do_action( 'aaurora_main_content_after' );
+}
+
+/**
+ * Before Content.
+ */
+function aaurora_content_before() {
+	do_action( 'aaurora_content_before' );
+}
+
+/**
+ * After Content.
+ */
+function aaurora_content_after() {
+	do_action( 'aaurora_content_after' );
+}
+
+/**
+ * Before Entry Content.
+ */
+function aaurora_entry_content_before() {
+	do_action( 'aaurora_entry_content_before' );
+}
+
+/**
+ * Entry Content.
+ */
+function aaurora_entry_content() {
+	do_action( 'aaurora_entry_content' );
+}
+
+/**
+ * After Entry Content
+ */
+function aaurora_entry_content_after() {
+	do_action( 'aaurora_entry_content_after' );
+}
+
+/**
+ * Before Site Container
+ */
+function aaurora_site_container_before() {
+	do_action( 'aaurora_site_container_before' );
+}
+
+
+/**
+ * After Site Container
+ */
+function aaurora_site_container_after() {
+	do_action( 'aaurora_site_container_after' );
+}
+
+/**
+ * Before Footer Content.
+ */
+function aaurora_footer_content_top() {
+	do_action( 'aaurora_footer_content_top' );
+}
+
+/**
+ * Footer Content.
+ */
+function aaurora_footer_content() {
+	do_action( 'aaurora_footer_content' );
+}
+
+/**
+ * After Footer Content.
+ */
+function aaurora_footer_content_bottom() {
+	do_action( 'aaurora_footer_content_bottom' );
+}
+
+
+/**
+ * Before Singular Content.
+ */
+function aaurora_singular_content_before() {
+	do_action( 'aaurora_singular_content_before' );
+}
+
+/**
+ * Singular Content.
+ */
+function aaurora_singular_content() {
+	do_action( 'aaurora_singular_content' );
+}
+
+/**
+ * After Singular Content.
+ */
+function aaurora_singular_content_after() {
+	do_action( 'aaurora_singular_content_after' );
 }

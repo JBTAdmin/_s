@@ -1,0 +1,144 @@
+// TODO NEED TO DIFFERENTIATE BETWEEN BLOG 1 AND BLOG 2 AND PROBABLY BLOG 1 CAN BE DISCARDED.
+
+.article-container {
+  & > article {
+    flex: 1 1 33.33%;
+    position: relative;
+    padding: 2rem 1rem 0;
+    transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+
+  & .inner-entry {
+    background-color: #fff;
+    border: 1px solid #ededed; // f2f2f2
+    border-radius: 10px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 500ms ease-in-out, transform ease 0.3s;
+
+    &:hover .post-thumbnail-drop-case {
+      transform: scale(1.2) translateZ(0);
+    }
+  }
+
+  & .entry-title {
+    cursor: pointer;
+    font-size: 2.4rem; // todo can these two thing be centralized?
+    line-height: 1.4;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+
+  & .post-thumbnail img {
+    display: block;
+  }
+
+  & .no-post-thumbnail {
+    cursor: pointer;
+    width: inherit;
+    max-height: 28.2rem;
+    //background: $theme__color;
+    background: linear-gradient(to right, #0099f7, #f11712);
+    display: flex; // todo See if this is the right way to do this.
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 1rem;
+    line-height: 1;
+  }
+
+  & .post-thumbnail-drop-case {
+    height: 25rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10vw;
+    //font-size: 20rem;
+    color: rgba(255, 255, 255, 0.3);
+    //color: #fff;
+    font-family: Serif;
+    overflow: hidden;
+    transition: transform 1s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  }
+
+  & .post-thumbnail .post-date {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    width: 8rem;
+    height: 2rem;
+    background: #fff;
+    border-radius: 0.3rem;
+    color: #000;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & .post-thumbnail .badge {
+    font-size: 1.25rem;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    display: inline-flex;
+    width: 4rem;
+    height: 4rem;
+    pointer-events: none;
+    color: #fff;
+    background-color: #101010;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 1rem;
+  }
+
+  // Not useful for Blog-4 scss. Commenting for the same purpose
+  & .entry-meta span {
+    margin-right: 1rem;
+    color: #546e7a;
+    font-weight: 500;
+  }
+
+  & .tags-links,
+  & .tagcloud {
+    margin-top: 3rem;
+
+    a {
+      background: #eee;
+      //color: #0f0e0e;
+      padding: 5px 10px;
+      margin-right: 5px;
+      margin-bottom: 10px;
+      display: inline-block;
+      text-decoration: none;
+      line-height: 20px;
+      vertical-align: middle;
+      border-radius: 0.4rem;
+      font-size: 1.6rem !important;
+    }
+  }
+}
+
+// Responsive Layout.
+@media screen and (max-width: 900px) {
+  .blog-1 article,
+  .blog-2 article,
+  .blog-4 article,
+  .blog-5 article {
+    flex-basis: 50% !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .blog-1 article,
+  .blog-2 article,
+  .blog-4 article,
+  .blog-5 article {
+    flex-basis: 100% !important;
+  }
+}

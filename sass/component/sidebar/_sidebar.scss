@@ -26,35 +26,49 @@ body.admin-bar aside {
 // For Sidebar Categories
 
 .sidebar-right,
-sidebar-left {
+.sidebar-left {
   & .widget:not(.widget_seriestoc) {
     margin-bottom: 5rem;
-    //margin-right: auto;
-    //margin-left: auto;
-    //max-width: 85%;
 
-    border: 1px solid #dadce0;
     background-color: #fff;
-    border-radius: 8px;
     box-sizing: border-box;
     overflow: hidden;
     padding: 10px;
-    box-shadow: $theme__color 3px 3px 0px 0px;
+
+    //border: 1px solid #dadce0;
+    //border-radius: 8px;
+    //box-shadow: $theme__color 3px 3px 0px 0px;
   }
 
   & .widget-title {
-    color: #6d6d6d;
-    font-size: 2.2rem;
-    font-weight: 500;
+    color: #000;
     //margin-bottom: 1.5rem;
     //padding-bottom: 0.4rem;
 
-    border-radius: 4px;
     letter-spacing: 0.8px;
-    text-transform: capitalize;
+    text-transform: uppercase;
+    padding-bottom: 8px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #e7eaec;
     //background-color: #e6f4ea;
-    color: #17161a;
+    //color: #17161a;
     //border-bottom: 2px solid $theme__color;
+    position: relative;
+
+    //&:after {
+    //  content: "";
+    //  position: absolute;
+    //  top: 50%;
+    //  width: 100%;
+    //  height: 1px;
+    //  background-color: #f0f0f0;
+    //  margin-left: 20px;
+    //}
   }
 }
 
@@ -69,4 +83,15 @@ sidebar-left {
   border: none;
   border-bottom: 1px solid #ececec;
   font-size: 1.8rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .primary-content,    // todo see where it can be moved and is it needed.
+  aside {
+    flex-basis: 100%;
+  }
+  aside {
+    max-width: 100%;
+    order: 1;
+  }
 }

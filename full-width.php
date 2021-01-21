@@ -20,10 +20,6 @@ get_header();
 	<div class="site-container">
 		<div class="wrap">
 			<div class="main-container">
-				<?php
-				get_sidebar( 'alt' );
-				get_sidebar( 'left' );
-				?>
 				<main id="primary" class="site-main primary-content">
 					<?php
 					while ( have_posts() ) :
@@ -44,4 +40,5 @@ get_header();
 		</div>
 	</div> <!-- #container -->
 <?php
+get_sidebar( 'alt' );
 get_footer();

@@ -9,9 +9,14 @@
 
 get_theme_mod( 'sidebar_listing', 'right' );
 
-?>
+$class = 'widget-area sidebar-alt-aside sidebar-alt';
+if ( is_amp_endpoint() ) {
+	$class = '';
+}
 
-<aside id="secondary-alt" class="widget-area sidebar-alt-aside sidebar-alt">
+?>
+<amp-sidebar id="drawermenu" layout="nodisplay" side="right">
+	<aside id="secondary-alt" class="<?php echo esc_attr( $class ); ?>">
 	<div class="aside-header-container">
 		<div class="widget aside-header">
 			<div class="site-branding">
@@ -27,7 +32,7 @@ get_theme_mod( 'sidebar_listing', 'right' );
 						?>
 						<p class="site-description"> 
 						<?php
-						echo $aaurora_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped.
+						echo esc_html( $aaurora_description ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped.
 						?>
 							</p>
 						<?php
@@ -35,7 +40,7 @@ get_theme_mod( 'sidebar_listing', 'right' );
 				endif;
 				?>
 			</div>
-			<div class="sidebar-close-btn">
+			<div class="sidebar-close-btn" on="tap:drawermenu.toggle" role="button" tabindex="1">
 				<button class="toggle sidebar-close desktop-sidebar-toggle" data-toggle-target=".sidebar-modal" data-toggle-body-class="closing-sidebar-modal" aria-expanded="false">
 									<span class="toggle-inner">
 										<?php load_inline_svg( 'close.svg' ); ?>
@@ -54,6 +59,7 @@ get_theme_mod( 'sidebar_listing', 'right' );
 		)
 	);
 	?>
-	<?php dynamic_sidebar( 'sidebar-alt' ); ?>
+	<?php dynamic_sidebar( 'aaurora-sidebar-alt' ); ?>
 </aside><!-- #secondary -->
+</amp-sidebar>
 <div class="sidebar-overlay"></div>

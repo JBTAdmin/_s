@@ -10,66 +10,22 @@
 get_header();
 
 $sidebar_page_class = '';
-if ( is_active_sidebar( 'sidebar-1' ) ) {
-	$sidebar_page_class = ' with-right-sidebar';
-}
-
-$sidebar_page_class = ' ' . get_theme_mod( 'sidebar_sticky', '0' );
-
-$sidebar_page_class = ' sidebar_position_' . get_theme_mod( 'sidebar_archive', 'right' );
 ?>
 
 	<div class="site-container">
 		<div class="wrap">
 			<div class="main-container">
-				<?php
-				get_sidebar( 'left' );
-				?>
+
+				<?php aaurora_main_content_before(); ?>
+
 				<main id="primary" class="site-main primary-content <?php echo esc_attr( $sidebar_page_class ); ?>">
-
-					<?php if ( have_posts() ) : ?>
-
-						<header class="page-header">
-							<?php
-							the_archive_title( '<h1 class="page-title">', '</h1>' );
-							the_archive_description( '<div class="archive-description">', '</div>' );
-							?>
-						</header><!-- .page-header -->
-						<div class="article-container">
-							<?php
-							/* Start the Loop */
-							while ( have_posts() ) :
-								the_post();
-
-								/*
-								 * Include the Post-Type-specific template for the content.
-								 * If you want to override this in a child theme, then include a file
-								 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-								 */
-								get_template_part( 'template-parts/blog/blog', get_theme_mod( 'blog_layout_setting', 'layout-3' ), get_post_type() );
-
-							endwhile;
-							?>
-						</div>
-						<?php
-
-						post_nav();
-
-						else :
-
-							get_template_part( 'template-parts/content', 'none' );
-
-						endif;
-						?>
-
+					<?php aaurora_entry_content(); ?>
 				</main><!-- #main -->
 
-				<?php
-				get_sidebar();
-				?>
+				<?php aaurora_main_content_after(); ?>
 			</div>
 		</div>
 	</div>
 <?php
-get_footer();
 get_sidebar( 'alt' );
+get_footer();

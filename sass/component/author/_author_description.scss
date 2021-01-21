@@ -2,12 +2,29 @@
   padding: 2rem 0;
   margin: 3rem 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: rgb(234, 234, 234) 7px 7px 0px 0px;
-  background-color: $theme__color;
+  //box-shadow: rgb(234, 234, 234) 7px 7px 0px 0px;
+  //background-color: $theme__color;
   border: 1px solid #dadce0 !important;
   border-radius: 10px;
+  position: relative;
+  background-color: #fff;
+}
+
+.author-bio::before {
+  content: "";
+  position: absolute;
+  background: #dadce0;
+  height: 100%;
+  width: calc(100% - 20px);
+  opacity: 0.45;
+  top: 15px;
+  left: 10px;
+  bottom: -15px;
+  z-index: -1;
+  border-radius: 12px;
 }
 
 @media screen and (max-width: 768px) {
@@ -30,8 +47,8 @@
 }
 
 .author_details {
-  margin-left: 30px;
-  margin-top: 0;
+  margin: 20px;
+  text-align: center;
 }
 .author_text {
   color: #c4c4c4;

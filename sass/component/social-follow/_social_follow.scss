@@ -6,16 +6,15 @@
 }
 
 .aaurora_social_follow {
+  font-size: 1.5rem;
   position: fixed;
-  height: 56px;
-  top: 0;
-  bottom: 0;
+  right: 34px;
+  top: 50%;
   font-weight: 600;
   z-index: 10;
   align-items: center;
   margin: auto;
-  right: 40px;
-  transform-origin: 100% 50%;
+  transform-origin: center right;
   transform: rotate(-90deg) translate(50%, -50%);
 }
 
@@ -30,7 +29,11 @@ ul.aaurora-social-holder > li {
 }
 
 .aaurora-social-holder li:not(:last-child) a:after {
-  content: "/";
+  content: ".";
   display: inline;
-  padding-left: 10px;
+  //padding-left: 10px;
+}
+
+.aaurora_social_follow.no_social_color > .aaurora-social-holder a {
+  color: #000;
 }

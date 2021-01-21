@@ -7,6 +7,15 @@
   flex-wrap: wrap;
 }
 
+.site-header + .site-container::before {
+  content: "";
+  display: block;
+  height: 8rem;
+  margin-top: -8rem;
+  pointer-events: none;
+  visibility: hidden;
+}
+
 main {
   flex: 3 1;
   //max-width: 140rem; // todo need to check if this can be removed as other width is there screen and (min-width: 992px)
@@ -19,6 +28,9 @@ aside:not(.sidebar-alt) {
 
 .article-container {
   justify-content: space-between;
+  align-items: stretch;
+  align-content: flex-start;
+
   //overflow-x: hidden; why we need this
   &:after {
     content: "";
@@ -33,14 +45,6 @@ main {
 
 article {
   min-width: 0;
-}
-
-// this is common for all the layout. Need to see which part can be here which all part can be specific scss.
-.post-thumbnail-container {
-  overflow: hidden;
-  border-radius: 1rem;
-  display: inline-block;
-  position: relative;
 }
 
 //@media screen and (min-width: 1200px){

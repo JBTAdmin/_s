@@ -1,0 +1,44 @@
+.blog-3 {
+  & > article {
+    flex-basis: 100%;
+  }
+
+  & .inner-entry {
+    display: flex;
+    margin: 2rem 0;
+    width: 100%;
+    border: none !important;
+
+    & > div {
+      flex: 1 1 50%;
+    }
+
+    &:hover a {
+      color: #00f;
+    }
+  }
+
+  & .entry-title {
+    font-size: 3.5rem;
+    line-height: 120%;
+    margin-right: 4rem;
+  }
+
+  & .posted-on {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  & .entry-excerpt {
+    margin-top: 3rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .blog-3 {
+    flex-direction: column;
+
+    & .post-excerpt {
+      margin: 0 0 3rem 0;
+    }
+  }
+}

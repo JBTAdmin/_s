@@ -7,26 +7,41 @@
  * @package aaurora
  */
 
-if ( ! function_exists( 'aaurora_posted_on' ) ) :
+if ( ! function_exists( 'wp_body_open' ) ) {
+	/**
+	 * Shim for sites older than 5.2.
+	 *
+	 * @link https://core.trac.wordpress.org/ticket/12563
+	 */
+	function wp_body_open() {
+		do_action( 'wp_body_open' );
+	}
+}
+
+if ( ! function_exists( 'aaurora_posted_on' ) ) {
 	/**
 	 * Prints HTML with meta information for the current post-date/time.
 	 *
 	 * @param boolean $date_only Optional. Return Date or echo date on screen. Default echo.
+	 * @param boolean $created_date Optional. Created or Updated Date. Default Updated Post Date.
 	 */
-	function aaurora_posted_on( $date_only = false ) {
-		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
-		}
+	function aaurora_posted_on( $date_only = false, $created_date = true ) {
 
-		$time_string = sprintf(
-			$time_string,
-			esc_attr( get_the_date( DATE_W3C ) ),
-			esc_html( get_the_date() )
-			// ,
-			// esc_attr( get_the_modified_date( DATE_W3C ) ),
-			// esc_html( get_the_modified_date() )
-		);
+		if ( $created_date ) {
+			$time_string = '<span class="posted-on"> <time class="entry-date published" datetime="%1$s">%2$s</time></span>';
+			$time_string = sprintf(
+				$time_string,
+				esc_attr( get_the_date( DATE_W3C ) ),
+				esc_html( get_the_date() )
+			);
+		} else {
+			$time_string = '<span class="updated-on"> <time class="entry-date updated" datetime="%1$s">%2$s</time></span>';
+			$time_string = sprintf(
+				$time_string,
+				esc_attr( get_the_modified_date( DATE_W3C ) ),
+				esc_html( get_the_modified_date() )
+			);
+		}
 
 		$posted_on = sprintf(
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
@@ -35,13 +50,22 @@ if ( ! function_exists( 'aaurora_posted_on' ) ) :
 		if ( $date_only ) {
 			return get_the_date( 'j M' );
 		} else {
-			echo '<span class="posted-on">' . $posted_on . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			echo $posted_on; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		}
 
 	}
-endif;
+}
 
-if ( ! function_exists( 'aaurora_posted_by' ) ) :
+if ( ! function_exists( 'aaurora_updated_on' ) ) {
+	/**
+	 * Prints HTML with meta information for the current post-date/time.
+	 */
+	function aaurora_updated_on() {
+		aaurora_posted_on( false, false );
+	}
+}
+
+if ( ! function_exists( 'aaurora_posted_by' ) ) {
 	/**
 	 * Prints HTML with meta information for the current author.
 	 */
@@ -53,43 +77,14 @@ if ( ! function_exists( 'aaurora_posted_by' ) ) :
 		echo '<span class="byline"> ' . $byline . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 	}
-endif;
+}
 
-if ( ! function_exists( 'aaurora_meta_category_list' ) ) :
-	/**
-	 * Prints meta information for the categories.
-	 */
-	function aaurora_meta_category_list() {
-		if ( 'post' === get_post_type() ) {
-			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', 'aaurora' ) );
-			if ( $categories_list ) {
-				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html( '%1$s ' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-			}
-		}
-	}
-endif;
-if ( ! function_exists( 'aaurora_meta_tag_list' ) ) :
-	/**
-	 * Prints meta information for the tags.
-	 */
-	function aaurora_meta_tag_list() {
-		if ( 'post' === get_post_type() ) {
-			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list();
-			if ( $tags_list ) {
-				printf( '<span class="tags-links">' . esc_html( ' %1$s' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-			}
-		}
-	}
-endif;
-if ( ! function_exists( 'aaurora_meta_comment' ) ) :
+if ( ! function_exists( 'aaurora_meta_comment' ) ) {
 	/**
 	 * Prints meta information for comment.
 	 */
 	function aaurora_meta_comment() {
-		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
+		if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 			echo '<span class="comments-link">';
 			comments_popup_link(
 				sprintf(
@@ -108,240 +103,117 @@ if ( ! function_exists( 'aaurora_meta_comment' ) ) :
 			echo '</span>';
 		}
 	}
-endif;
+}
 
-if ( ! function_exists( 'aaurora_post_thumbnail' ) ) :
+if ( ! function_exists( 'aaurora_post_thumbnail' ) ) {
 	/**
 	 * Displays an optional post thumbnail.
 	 *
 	 * Wraps the post thumbnail in an anchor element on index views, or a div
 	 * element when on single views.
 	 *
-	 * @param int $size Optional. Post Thumbnail Size.
-	 * @param int $date Optional. Post Date.
+	 * @param int     $size Optional. Post Thumbnail Size.
+	 * @param int     $date Optional. Post Date.
+	 * @param boolean $in_style Optional. Image is added as div or in style.
+	 * @param boolean $background_needed Optional. Should background be added in form of linear gradient.
 	 */
-	function aaurora_post_thumbnail( $size = 'post-thumbnail', $date = '' ) {
+	function aaurora_post_thumbnail( $size = 'post-thumbnail', $date = '', $in_style = false, $background_needed = true ) {
+	 
 		if ( post_password_required() || is_attachment() ) {
 			return;
 		}
 
 		if ( ! has_post_thumbnail() & ! is_singular() ) {
-			?>
-			<div class="post-thumbnail-container">
-				<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
-					<div class="no-post-thumbnail">
 
-						<div class="post-thumbnail-drop-case">
-							<?php
-							if ( ! empty( get_the_title() ) ) {
-								echo esc_html( get_the_title()[0] );
-							}
-							?>
-						</div>
-					</div><!-- .post-thumbnail -->
-					<?php if ( is_sticky() ) : ?>
-						<span class="badge">
-						<?php load_inline_svg( 'sticky.svg' ); ?>
-				</span>
-					<?php endif; ?>
-					<span class="post-date">
-					<?php echo esc_html( $date ); ?>
-				</span>
-				</a>
-			</div>
-			<?php
+			no_post_thumbnail( $date );
+
 			return;
 		}
-		if ( is_singular() ) :
-			?>
-
-			<div class="post-thumbnail">
-				<?php the_post_thumbnail( 'aaurora-blog-single-post-no-sidebar' ); ?>
-			</div><!-- .post-thumbnail -->
-		<?php else : ?>
-			<div class="post-thumbnail-container">
-				<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
-					<?php
-					the_post_thumbnail(
-						$size,
-						array(
-							'alt' => the_title_attribute(
-								array(
-									'echo' => false,
-								)
-							),
-						)
-					);
-					if ( is_sticky() ) :
-						?>
-						<span class="badge">
-						<?php load_inline_svg( 'sticky.svg' ); ?>
-				</span>
-					<?php endif; ?>
-					<span class="post-date">
-					<?php echo esc_html( $date ); ?>
-				</span>
-				</a>
-			</div>
-			<?php
-		endif; // End is_singular().
+		
+		blog_post_thumbnail( $date, $size, $in_style );
+		
 	}
-endif;
-
-if ( ! function_exists( 'wp_body_open' ) ) :
-	/**
-	 * Shim for sites older than 5.2.
-	 *
-	 * @link https://core.trac.wordpress.org/ticket/12563
-	 */
-	function wp_body_open() {
-		do_action( 'wp_body_open' );
-	}
-endif;
-
-
-/**
- * Load an inline SVG.
- *
- * @param string $filename The filename of the SVG.
- *
- * @return void
- */
-function load_inline_svg( $filename ) {
-
-	ob_start();
-
-	locate_template(
-		"assets/images/{$filename}",
-		true,
-		false
-	);
-
-	echo wp_kses(
-		ob_get_clean(),
-		array_merge(
-			wp_kses_allowed_html( 'post' ),
-			array(
-				'svg'      => array(
-					'role'            => true,
-					'width'           => true,
-					'height'          => true,
-					'fill'            => true,
-					'xmlns'           => true,
-					'viewbox'         => true,
-					'aria-hidden'     => true,
-					'stroke'          => true,
-					'stroke-width'    => true,
-					'stroke-linecap'  => true,
-					'stroke-linejoin' => true,
-					'rect'            => true,
-					'circle'          => true,
-					'path'            => true,
-					'polyline'        => true,
-				),
-				'path'     => array(
-					'd'              => true,
-					'fill'           => true,
-					'fill-rule'      => true,
-					'stroke'         => true,
-					'stroke-width'   => true,
-					'stroke-linecap' => true,
-				),
-				'line'     => array(
-					'x1' => true,
-					'y1' => true,
-					'x2' => true,
-					'y2' => true,
-				),
-				'polyline' => array(
-					'points' => true,
-				),
-				'rect'     => array(
-					'x'      => true,
-					'y'      => true,
-					'height' => true,
-					'width'  => true,
-					'rx'     => true,
-					'ry'     => true,
-				),
-				'circle'   => array(
-					'cx' => true,
-					'cy' => true,
-					'r'  => true,
-				),
-			)
-		)
-	);
 }
 
-// todo probably this method shold be moved to proper location. And remove unnecessary mapping.
+/**
+ * Include Text based post thumbnail in case no featured post is provided for given post.
+ *
+ * @param string $date Optional. Post date to be included in post thumbnail.
+ */
+function no_post_thumbnail( $date = '' ) {
+	?>
+	<div class="post-thumbnail no-post-thumbnail">
+		<a href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 
 
-if ( ! function_exists( 'aaurora_social_media' ) ) {
-	/**
-	 * Social Media.
-	 */
-	function aaurora_social_media( $social_class = '', $textOnly = false ) {
-		if ( 'top-bar-social' === $social_class && get_theme_mod( 'top_bar_social_media_button', true ) !== true ) :
-			return;
-		endif;
+				<div class="post-thumbnail-drop-case">
+					<?php
+					if ( ! empty( get_the_title() ) ) {
+						echo esc_html( get_the_title()[0] );
+					}
+					?>
+				</div>
+
+			<?php if ( is_sticky() ) : ?>
+				<span class="badge">
+						<?php load_inline_svg( 'sticky.svg' ); ?>
+				</span>
+			<?php endif; ?>
+			<span class="post-date">
+					<?php echo esc_html( $date ); ?>
+				</span>
+		</a>
+	</div>
+	<?php
+}
+
+/**
+ * Blog post thumbnail to be included for post.
+ *
+ * @param String  $date Post date to be included in featured image.
+ * @param String  $size Size of the featured image.
+ * @param boolean $in_style Should image be included as Div or In style.
+ */
+function blog_post_thumbnail( $date, $size, $in_style ) {
+	if ( $in_style ) {
 		?>
-
-		<div class="<?php echo esc_attr( $social_class ); ?>">
-            <ul class="aaurora-social-holder">
-                <li>Follow Us - </li>
-                <?php
-			if ( get_theme_mod( 'social_media_fb_url', '' ) !== '' ) :
-				?>
-            <li>
-				<a class="social-link facebook-social-icon"
-					href="<?php echo esc_url( get_theme_mod( 'social_media_fb_url' ) ); ?>" target="_blank">
-					<?php $textOnly ? print ' Fb.' : load_inline_svg( 'facebook.svg' ); ?>
-				</a>
-            </li>
-			<?php endif; ?>
-			<?php if ( get_theme_mod( 'social_media_tw_url', '' ) !== '' ) : ?>
-				<li>
-                <a class="social-link twitter-social-icon"
-					href="<?php echo esc_url( get_theme_mod( 'social_media_tw_url' ) ); ?>" target="_blank">
-	                <?php $textOnly ? print ' Tw.' : load_inline_svg( 'twitter.svg' ); ?>
-				</a>
-                </li>
-			<?php endif; ?>
-			<?php if ( get_theme_mod( 'social_media_in_url', '' ) !== '' ) : ?>
-				<li>
-                <a class="social-link instagram-social-icon"
-					href="<?php echo esc_url( get_theme_mod( 'social_media_in_url' ) ); ?>" target="_blank">
-	                <?php $textOnly ? print ' In.' : load_inline_svg( 'instagram.svg' ); ?>
-				</a>
-                </li>
-			<?php endif; ?>
-			<?php if ( get_theme_mod( 'social_media_ln_url', '' ) !== '' ) : ?>
-				<li>
-                <a class="social-link linkedin-social-icon"
-					href="<?php echo esc_url( get_theme_mod( 'social_media_ln_url' ) ); ?>" target="_blank">
-	                <?php $textOnly ? print ' Ln.' : load_inline_svg( 'linkedin.svg' ); ?>
-				</a>
-                </li>
-			<?php endif; ?>
-	            <?php if ( get_theme_mod( 'social_media_yt_url', '' ) !== '' ) : ?>
-                    <li>
-                        <a class="social-link youtube-social-icon"
-                           href="<?php echo esc_url( get_theme_mod( 'social_media_yt_url' ) ); ?>" target="_blank">
-				            <?php $textOnly ? print ' Yt.' : load_inline_svg( 'youtube.svg' ); ?>
-                        </a>
-                    </li>
-	            <?php endif; ?>
-	            <?php if ( get_theme_mod( 'social_media_gh_url', '' ) !== '' ) : ?>
-                    <li>
-                        <a class="social-link github-social-icon"
-                           href="<?php echo esc_url( get_theme_mod( 'social_media_gh_url' ) ); ?>" target="_blank">
-				            <?php $textOnly ? print ' Gh.' : load_inline_svg( 'github.svg' ); ?>
-                        </a>
-                    </li>
-	            <?php endif; ?>
-            </ul>
+		<div class="post-thumbnail in-style"
+			style="background-image:url('<?php the_post_thumbnail_url( $size ); ?>')">
+		</div>
+		<?php
+		return;
+	} elseif (is_singular()) {
+	    ?>
+        <div class="post-thumbnail">
+			<?php the_post_thumbnail( $size ); ?>
+        </div><!-- .post-thumbnail -->
+            <?php
+	} else {
+		?>
+		<div class="post-thumbnail">
+			<a href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
+				<?php
+				the_post_thumbnail(
+					$size,
+					array(
+						'alt' => the_title_attribute(
+							array(
+								'echo' => false,
+							)
+						),
+					)
+				);
+				if ( is_sticky() ) :
+					?>
+					<span class="badge">
+						<?php load_inline_svg( 'sticky.svg' ); ?>
+				</span>
+				<?php endif; ?>
+				<span class="post-date">
+					<?php echo esc_html( $date ); ?>
+				</span>
+			</a>
 		</div>
 		<?php
 	}
-} // aaurora_social_media.
+}

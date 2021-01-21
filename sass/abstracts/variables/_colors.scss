@@ -19,5 +19,12 @@ $color__text-main: #404040;
 $color__border-button: #17161a #ccc #bbb;
 $color__border-button-hover: #ccc #bbb #aaa;
 $color__border-button-focus: #aaa #bbb #bbb;
+
+$button__background: var(--button-background);
+$button__text-color: var(--button-text-color);
+$button__border-color: var(--button-border-color);
+$button__hover-background: var(--button-hover-background);
+$button__hover-text-color: var(--button-hover-text-color);
+
 $color__border-input: rgba(68, 64, 90, 0.1);
 $color__border-abbr: #666;

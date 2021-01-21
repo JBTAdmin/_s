@@ -7,7 +7,7 @@
 
 .aaurora-search {
   position: fixed;
-  left: 34px;
+  left: $left_position;
   bottom: 34px;
   display: inline-flex;
   //box-shadow: $theme__color 7px 7px 0px 0px;
@@ -17,9 +17,12 @@
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  box-shadow: 1px 1px 1px 1px $theme__color;
-  border: 1px solid #e7ebed;
+  //box-shadow: 1px 1px 1px 1px $theme__color;
+  //border: 1px solid #e7ebed;
+  //background: rgba(136, 136, 136, 0.06);
   background: #fff;
+  //mix-blend-mode: difference;
+  //color: #000;
 
   svg {
     //fill: #000;
@@ -29,7 +32,7 @@
 }
 
 .popup_search_modal {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(23, 22, 26, 0.99);
   width: 100%;
   height: 100%;
   position: fixed;
@@ -40,6 +43,7 @@
   overflow: hidden;
   opacity: 0;
   visibility: hidden;
+  transition: opacity 0s cubic-bezier(0.15, 0.2, 0.1, 1);
 }
 
 .popup_search_modal.visible {
@@ -61,21 +65,23 @@
 }
 
 .popup_search_modal .search-field {
-  &::placeholder {
-    color: #000;
+  &:focus {
+    color: #fff;
   }
-  font-size: 30px;
+  &::placeholder {
+    color: #fff;
+  }
+  font-size: 16px;
   display: block;
   width: 100%;
   padding: 15px 20px;
 
-  //background-color: rgba(255, 255, 255, 0.04);
+  background-color: rgba(255, 255, 255, 0.3);
   //border-color: rgba(0, 0, 0, 0.2);
   //border-radius: 5px;
-  //color: #fff;
+  color: #fff;
   //height: 56px;
   //width: 40rem;
-  text-align: center;
 }
 
 .popup_search_modal .search_holder {
@@ -84,13 +90,18 @@
   top: 20vh;
   overflow: hidden;
   width: calc(100% - 50px);
-  max-width: 900px;
+  max-width: 500px;
   margin: 0 auto;
   border-radius: 5px;
-  background-color: #fff;
 }
 
 .popup_search_modal > .popup_modal_close_button {
   color: #fff;
   padding: 4rem;
+  display: flex;
+  justify-content: flex-end;
+  & > svg {
+    width: 6rem;
+    height: 6rem;
+  }
 }
