@@ -1913,7 +1913,10 @@ div[class*="footer-sidebar-"] {
 
 .page article,
 .single-post article {
-  width: 100%; }
+  width: 100%;
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%; }
 
 .single-post .cat-links {
   border-radius: 0.5rem;
@@ -2605,9 +2608,13 @@ a.pt {
 ul.aaurora-social-holder > li {
   padding: 0 5px; }
 
+.aaurora-social-holder li > a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
 .aaurora-social-holder li:not(:last-child) a:after {
-  content: ".";
-  display: inline; }
+  content: "."; }
 
 .aaurora_social_follow.no_social_color > .aaurora-social-holder a {
   color: #000; }

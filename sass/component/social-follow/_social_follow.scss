@@ -28,10 +28,12 @@ ul.aaurora-social-holder > li {
   padding: 0 5px;
 }
 
+.aaurora-social-holder li > a {
+  display: flex;
+}
+
 .aaurora-social-holder li:not(:last-child) a:after {
   content: ".";
-  display: inline;
-  //padding-left: 10px;
 }
 
 .aaurora_social_follow.no_social_color > .aaurora-social-holder a {

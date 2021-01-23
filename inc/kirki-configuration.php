@@ -128,7 +128,7 @@ Kirki::add_field(
 	array(
 		'type'        => 'color',
 		'settings'    => 'color_theme',
-		'label'       => esc_attr__( 'Delete ME DUMMY', 'aaurora' ),
+		'label'       => esc_attr__( 'Theme Color', 'aaurora' ),
 		'description' => '',
 		'section'     => 'general',
 		'default'     => '#ffd01b',
@@ -239,7 +239,8 @@ Kirki::add_field(
 		'type'        => 'dimension',
 		'settings'    => 'button_border_radius',
 		'label'       => esc_html__( 'Dimension Control', 'aaurora' ),
-		'description' => esc_html__( 'Description Here.', 'aaurora' ),
+//		todo what is the use of this field
+		'description' => esc_html__( 'Description Here. TODO....', 'aaurora' ),
 		'section'     => 'general_button',
 		'default'     => '10px',
 		'output'      => array(
@@ -628,27 +629,6 @@ Kirki::add_field(
 	)
 );
 
-
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
-		'type'        => 'typography',
-		'settings'    => 'header_menu_font',
-		'label'       => esc_attr__( 'Header Menu Size', 'aaurora' ),
-		'section'     => 'header',
-		'default'     => array(
-			'font-family' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
-			'font-size'   => '1.6rem',
-		),
-		'description' => esc_attr__( 'Font used in Single Post Header .', 'aaurora' ),
-		'output'      => array(
-			array(
-				'element' => '.main-navigation',
-			),
-		),
-	)
-);
-
 Kirki::add_field(
 	'aaurora_theme_options',
 	array(
@@ -827,13 +807,32 @@ Kirki::add_field(
 				'property' => 'height',
 			),
 			array(
-				'element'  => '.site-container::before',
+				'element'  => '.site-header + .site-container::before',
 				'property' => 'height',
 			),
 		),
 	)
 );
 
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'        => 'typography',
+		'settings'    => 'header_menu_font',
+		'label'       => esc_attr__( 'Header Menu Size', 'aaurora' ),
+		'section'     => 'header',
+		'default'     => array(
+			'font-family' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
+			'font-size'   => '1.6rem',
+		),
+		'description' => esc_attr__( 'Font used in Single Post Header .', 'aaurora' ),
+		'output'      => array(
+			array(
+				'element' => '.main-navigation',
+			),
+		),
+	)
+);
 // END SECTION: Header.
 
 // SECTION: Footer.
@@ -925,35 +924,9 @@ Kirki::add_section(
 	'blog_post',
 	array(
 		'title'       => esc_attr__( 'Single Post', 'aaurora' ),
-		'description' => esc_attr__( 'This settings affect your blog single post display.', 'aaurora' ),
+		'description' => esc_attr__( 'These settings affect single post display.', 'aaurora' ),
 		'panel'       => 'theme_settings_panel',
 		'priority'    => 7,
-	)
-);
-
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
-		'type'        => 'typography',
-		'settings'    => 'blog_post_title_font',
-		'label'       => esc_attr__( 'Post Title Size', 'aaurora' ),
-		'section'     => 'blog_post',
-		'default'     => array(
-			'font-family' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
-			'font-size'   => '40px',
-		),
-		'description' => esc_attr__( 'Font used in Single Post Header .', 'aaurora' ),
-		'output'      => array(
-			array(
-				'choice'   => 'font-size',
-				'element'  => ':root',
-				'property' => '--font_size_post-title_mobile',
-			),
-			array(
-				'choice'  => 'font-family',
-				'element' => 'h1.entry-title',
-			),
-		),
 	)
 );
 
@@ -1023,30 +996,6 @@ Kirki::add_field(
 	)
 );
 
-
-Kirki::add_field(
-	'theme_config_id',
-	array(
-		'type'     => 'sortable',
-		'settings' => 'entry_header_metadata_element',
-		'label'    => esc_html__( 'Metadata Elements', 'aaurora' ),
-		'section'  => 'blog_post',
-		'default'  => array(
-			'category',
-			'updated_on',
-			'posted_by',
-		),
-		'choices'  => array(
-			'category'     => esc_html__( 'Category', 'aaurora' ),
-			'posted_on'    => esc_html__( 'Posted Date', 'aaurora' ),
-			'updated_on'   => esc_html__( 'Updated Date', 'aaurora' ),
-			'posted_by'    => esc_html__( 'Author', 'aaurora' ),
-			'meta_comment' => esc_html__( 'Comment', 'aaurora' ),
-		),
-		'priority' => 10,
-	)
-);
-
 Kirki::add_field(
 	'theme_config_id',
 	array(
@@ -1073,6 +1022,29 @@ Kirki::add_field(
 	'theme_config_id',
 	array(
 		'type'     => 'sortable',
+		'settings' => 'entry_header_metadata_element',
+		'label'    => esc_html__( 'Header Metadata Elements', 'aaurora' ),
+		'section'  => 'blog_post',
+		'default'  => array(
+			'category',
+			'updated_on',
+			'posted_by',
+		),
+		'choices'  => array(
+			'category'     => esc_html__( 'Category', 'aaurora' ),
+			'posted_on'    => esc_html__( 'Posted Date', 'aaurora' ),
+			'updated_on'   => esc_html__( 'Updated Date', 'aaurora' ),
+			'posted_by'    => esc_html__( 'Author', 'aaurora' ),
+			'meta_comment' => esc_html__( 'Comment', 'aaurora' ),
+		),
+		'priority' => 10,
+	)
+);
+
+Kirki::add_field(
+	'theme_config_id',
+	array(
+		'type'     => 'sortable',
 		'settings' => 'entry_footer_sequence',
 		'label'    => esc_html__( 'Footer Elements', 'aaurora' ),
 		'section'  => 'blog_post',
@@ -1087,6 +1059,32 @@ Kirki::add_field(
 			'post-navigation' => esc_html__( 'Post Navigation', 'aaurora' ),
 		),
 		'priority' => 10,
+	)
+);
+
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'        => 'typography',
+		'settings'    => 'blog_post_title_font',
+		'label'       => esc_attr__( 'Post Title Size', 'aaurora' ),
+		'section'     => 'blog_post',
+		'default'     => array(
+			'font-family' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
+			'font-size'   => '40px',
+		),
+		'description' => esc_attr__( 'Font used in Single Post Header .', 'aaurora' ),
+		'output'      => array(
+			array(
+				'choice'   => 'font-size',
+				'element'  => ':root',
+				'property' => '--font_size_post-title_mobile',
+			),
+			array(
+				'choice'  => 'font-family',
+				'element' => 'h1.entry-title',
+			),
+		),
 	)
 );
 // END SECTION: Blog Single Post.
@@ -1156,6 +1154,25 @@ Kirki::add_field(
 	'aaurora_theme_options',
 	array(
 		'type'        => 'typography',
+		'settings'    => 'body_font',
+		'label'       => esc_attr__( 'Body font', 'aaurora' ),
+		'section'     => 'fonts',
+		'default'     => array(   // TODO  In default can i use Initial as font-family.
+			'font-family' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
+		),
+		'description' => esc_attr__( 'Font used in text elements.', 'aaurora' ),
+		'output'      => array(
+			array(
+				'element' => 'body',
+			),
+		),
+	)
+);
+
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'        => 'typography',
 		'settings'    => 'font_header_h1',
 		'label'       => esc_attr__( 'H1 font', 'aaurora' ),
 		'section'     => 'fonts',
@@ -1208,25 +1225,6 @@ Kirki::add_field(
 		),
 	)
 );
-
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
-		'type'        => 'typography',
-		'settings'    => 'body_font',
-		'label'       => esc_attr__( 'Body font', 'aaurora' ),
-		'section'     => 'fonts',
-		'default'     => array(   // TODO  In default can i use Initial as font-family.
-			'font-family' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
-		),
-		'description' => esc_attr__( 'Font used in text elements.', 'aaurora' ),
-		'output'      => array(
-			array(
-				'element' => 'body',
-			),
-		),
-	)
-);
 // END SECTION: Fonts.
 
 
@@ -1271,7 +1269,7 @@ Kirki::add_field(
 		'type'        => 'toggle',
 		'settings'    => 'side_social_media_button_text',
 		'label'       => esc_attr__( 'Social text or Icons', 'aaurora' ),
-		'description' => esc_attr__( 'Disable to show social text insted of icon.', 'aaurora' ),
+		'description' => esc_attr__( 'Disable to show social icon insted of text.', 'aaurora' ),
 		'section'     => 'social_media',
 		'default'     => '1',
 	)
