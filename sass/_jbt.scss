@@ -32,7 +32,7 @@
 
 .jbt_intro_text {
   font-size: calc(
-    var(--font_size_post-title_mobile) + 74 * ((100vw - 300px) / (1400))
+    var(--font_size_post-title_mobile) + 44 * ((100vw - 300px) / (1400))
   );
   line-height: 90px;
 }
@@ -338,6 +338,15 @@ section.widget:not(.widget_seriestoc) {
   margin-bottom: 2rem;
 }
 
+//todo probably it is not needed anymore
 .page-template-full-width article {
   flex: 100%;
+}
+
+//todo temporary fix
+.entry-meta {
+  font-size: 1.5rem;
+  color: gray;
+  margin-bottom: 2rem;
+  margin-top: -2.5rem;
 }
