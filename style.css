@@ -1317,11 +1317,34 @@ li > ul.sub-menu {
           justify-content: space-between;
   position: relative; }
 
-.flex-dir-column {
+.flex-dir-column,
+.flex-dir-column-reverse {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
+  .flex-dir-column .main-header,
+  .flex-dir-column-reverse .main-header {
+    display: block; }
+  .flex-dir-column .aligned-menu-center,
+  .flex-dir-column-reverse .aligned-menu-center {
+    position: unset;
+    -webkit-transform: unset;
+        -ms-transform: unset;
+            transform: unset; }
+  .flex-dir-column .main-navigation,
+  .flex-dir-column-reverse .main-navigation {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .flex-dir-column .site-branding,
+  .flex-dir-column-reverse .site-branding {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
 
 .flex-dir-column-reverse {
   -webkit-box-orient: vertical;
@@ -1382,6 +1405,12 @@ li > ul.sub-menu {
 
 .linkedin-social-icon {
   color: #2867b2; }
+
+.github-social-icon {
+  color: #000; }
+
+.youtube-social-icon {
+  color: #ff0000; }
 
 /* Topbar
 --------------------------------------------- */
@@ -1634,7 +1663,8 @@ div[class*="footer-sidebar-"] {
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  z-index: 1; }
 
 .article-container .post-thumbnail .badge {
   font-size: 1.25rem;

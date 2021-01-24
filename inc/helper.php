@@ -67,6 +67,7 @@ function load_inline_svg( $filename ) {
 					'circle'          => true,
 					'path'            => true,
 					'polyline'        => true,
+					'polygon'         => true,
 				),
 				'path'     => array(
 					'd'              => true,
@@ -83,6 +84,9 @@ function load_inline_svg( $filename ) {
 					'y2' => true,
 				),
 				'polyline' => array(
+					'points' => true,
+				),
+				'polygon' => array(
 					'points' => true,
 				),
 				'rect'     => array(

@@ -175,23 +175,42 @@ function no_post_thumbnail( $date = '' ) {
  * @param boolean $in_style Should image be included as Div or In style.
  */
 function blog_post_thumbnail( $date, $size, $in_style ) {
-	if ( $in_style ) {
+	if ( $in_style && is_singular() ) {
 		?>
-		<div class="post-thumbnail in-style"
-			style="background-image:url('<?php the_post_thumbnail_url( $size ); ?>')">
-		</div>
+        <div class="post-thumbnail in-style"
+             style="background-image:url('<?php the_post_thumbnail_url( $size ); ?>')">
+        </div>
 		<?php
 		return;
-	} elseif (is_singular()) {
-	    ?>
+	} elseif ( $in_style && ! is_singular() ) {
+		?>
+
+        <a href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
+            <div class="post-thumbnail in-style"
+                 style="background-image:url('<?php the_post_thumbnail_url( $size ); ?>')">
+				<?php
+				if ( is_sticky() ) :
+					?>
+                    <span class="badge">
+						<?php load_inline_svg( 'sticky.svg' ); ?>
+				</span>
+				<?php endif; ?>
+                <span class="post-date">
+					<?php echo esc_html( $date ); ?>
+				</span>
+            </div>
+        </a>
+		<?php
+	} elseif ( is_singular() ) {
+		?>
         <div class="post-thumbnail">
 			<?php the_post_thumbnail( $size ); ?>
         </div><!-- .post-thumbnail -->
-            <?php
+		<?php
 	} else {
 		?>
-		<div class="post-thumbnail">
-			<a href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
+        <div class="post-thumbnail">
+            <a href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 				<?php
 				the_post_thumbnail(
 					$size,
@@ -205,15 +224,15 @@ function blog_post_thumbnail( $date, $size, $in_style ) {
 				);
 				if ( is_sticky() ) :
 					?>
-					<span class="badge">
+                    <span class="badge">
 						<?php load_inline_svg( 'sticky.svg' ); ?>
 				</span>
 				<?php endif; ?>
-				<span class="post-date">
+                <span class="post-date">
 					<?php echo esc_html( $date ); ?>
 				</span>
-			</a>
-		</div>
+            </a>
+        </div>
 		<?php
 	}
 }

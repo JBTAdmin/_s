@@ -101,8 +101,27 @@
   position: relative;
 }
 
-.flex-dir-column {
+.flex-dir-column,
+.flex-dir-column-reverse {
   flex-direction: column;
+
+  & .main-header {
+    display: block;
+  }
+
+  & .aligned-menu-center {
+    position: unset;
+    transform: unset;
+  }
+
+  & .main-navigation {
+    justify-content: center;
+    align-items: center;
+  }
+
+  & .site-branding {
+    justify-content: center;
+  }
 }
 
 .flex-dir-column-reverse {
