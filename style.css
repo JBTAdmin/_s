@@ -1419,7 +1419,7 @@ li > ul.sub-menu {
   -o-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
   position: fixed;
-  right: 3.4rem;
+  right: calc(5.4rem - 2rem);
   bottom: 3.4rem;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -1432,8 +1432,7 @@ li > ul.sub-menu {
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  padding: 2rem;
   background-color: #fff; }
   .top-link.show {
     visibility: visible;
@@ -2613,7 +2612,7 @@ a.pt {
 .aaurora_social_follow {
   font-size: 1.5rem;
   position: fixed;
-  right: 34px;
+  right: 5.4rem;
   top: 50%;
   font-weight: 600;
   z-index: 10;
