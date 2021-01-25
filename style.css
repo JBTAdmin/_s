@@ -2007,7 +2007,9 @@ div[class*="footer-sidebar-"] {
         -ms-flex: 1 1 50%;
             flex: 1 1 50%; }
     .column-2-title-image-compact .wrap > div img {
-      display: block; }
+      display: block;
+      border-bottom-left-radius: 1rem;
+      border-top-left-radius: 1rem; }
   .column-2-title-image-compact .wrap .meta-data {
     padding: 5rem; }
 

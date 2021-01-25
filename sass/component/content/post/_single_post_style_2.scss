@@ -11,6 +11,8 @@
       flex: 1 1 50%;
       & img {
         display: block;
+        border-bottom-left-radius: 1rem;
+        border-top-left-radius: 1rem;
       }
     }
     & .meta-data {
