@@ -131,10 +131,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
       sidebarOverlay.classList.toggle("open");
     });
 
+  searchButton &&
   searchButton.addEventListener("click", function() {
     popupSearchModal.classList.toggle("visible");
   });
 
+  headerSearchButton &&
   headerSearchButton.addEventListener("click", function() {
     popupSearchModal.classList.toggle("visible");
   });

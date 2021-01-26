@@ -67,7 +67,6 @@ Kirki::add_section(
 	)
 );
 
-
 Kirki::add_field(
 	'aaurora_theme_options',
 	array(
@@ -84,6 +83,49 @@ Kirki::add_field(
 				'property' => '--theme-color',
 			),
 		),
+	)
+);
+
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'        => 'toggle',
+		'settings'    => 'general_scroll_to_top',
+		'label'       => esc_attr__( 'Enable Scroll Top Button', 'aaurora' ),
+		'description' => esc_attr__( 'Enable to display go to Top Button.', 'aaurora' ),
+		'section'     => 'general',
+		'default'     => '1',
+	)
+);
+
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'        => 'toggle',
+		'settings'    => 'general_social_share',
+		'label'       => esc_attr__( 'Enable Social Share Button', 'aaurora' ),
+		'description' => esc_attr__( 'Enable to display Social Share Button.', 'aaurora' ),
+		'section'     => 'general',
+		'default'     => '1',
+	)
+);
+
+
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'        => 'select',
+		'settings'    => 'general_search_visibility',
+		'label'       => esc_attr__( 'Search Visibility', 'aaurora' ),
+		'section'     => 'general',
+		'default'     => 'fixed',
+		'multiple'    => 0,
+		'choices'     => array(
+			'none' => esc_attr__( 'None', 'aaurora' ),
+			'header' => esc_attr__( 'Header', 'aaurora' ),
+			'fixed' => esc_attr__( 'Fixed', 'aaurora' ),
+		),
+		'description' => esc_attr__( 'Select the Search button visibiity and position.', 'aaurora' ),
 	)
 );
 
@@ -251,8 +293,6 @@ Kirki::add_field(
 		),
 	)
 );
-// General Button END.
-
 // SECTION GENERAL END.
 
 // SECTION: General Layout.
