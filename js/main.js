@@ -132,14 +132,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
 
   searchButton &&
-  searchButton.addEventListener("click", function() {
-    popupSearchModal.classList.toggle("visible");
-  });
+    searchButton.addEventListener("click", function() {
+      popupSearchModal.classList.toggle("visible");
+    });
 
   headerSearchButton &&
-  headerSearchButton.addEventListener("click", function() {
-    popupSearchModal.classList.toggle("visible");
-  });
+    headerSearchButton.addEventListener("click", function() {
+      popupSearchModal.classList.toggle("visible");
+    });
 
   popupModalCloseBtn.addEventListener("click", function() {
     popupSearchModal.classList.toggle("visible");

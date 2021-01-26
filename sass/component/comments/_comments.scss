@@ -8,23 +8,29 @@
 
   .avatar {
     border-radius: 50%;
-    float: left;
-    margin-right: 15px;
+    //float: left;
+    //margin-right: 15px;
     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 0;
+    top: 0;
   }
 }
 
+// Comment section When Image is not available or dont want to display.
 .comment-content,
-.reply {
-  margin-left: 95px;
+.reply,
+.comment-meta {
+  margin-left: 10rem;
 }
 
 .comment-content p {
-  margin-bottom: 1.3rem;
+  margin-bottom: 0;
 }
 
 .comment-meta {
   margin-bottom: 2rem;
+  line-height: 1.2;
   a {
     color: #555;
     font-size: 12px;
@@ -79,11 +85,12 @@
 
 .reply a {
   text-transform: uppercase;
-  color: #222;
+  color: rgb(217, 10, 44);
   font-weight: 700;
   letter-spacing: 1px;
-  padding: 16px 0 6px 0;
+  padding: 0;
   font-size: 1.5rem;
+  border-bottom: 1px dashed;
 }
 
 //TODO SHOULD BE MOVED TO COMMON AREA
@@ -113,16 +120,10 @@ textarea:focus {
   background: #f9f9f9;
 }
 
-// Comment section When Image is not available or dont want to display.
-.comment-content,
-.reply,
-.comment-meta {
-  margin-left: 20px;
-}
-
 .comment-body {
-  border: 1px solid #eee;
+  //border: 1px solid #eee;
   padding: 5px;
-  border-radius: 5px;
-  border-left: 2px solid gold;
+  //border-radius: 5px;
+  //border-left: 2px solid gold;
+  position: relative;
 }
