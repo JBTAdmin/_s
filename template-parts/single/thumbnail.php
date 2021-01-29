@@ -19,6 +19,10 @@ $size = 'aaurora-single-post';
 if ('column-2-title-image' === get_theme_mod( 'blog_post_in_page_header_layout', 'column-2-title-image' )){
 	$in_style = true;
 }
+//todo need to combine above and below statement search in array.
+if ('column-2-title-image-compact' === get_theme_mod( 'blog_post_in_page_header_layout', 'column-2-title-image' )){
+	$in_style = true;
+}
 
 if('aaurora_site_container_before' === get_theme_mod( 'blog_post_header_location', 'aaurora_site_container_before' )){
 	$layout = get_theme_mod( 'blog_post_in_page_header_layout', 'column-2-title-image' );

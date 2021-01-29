@@ -133,8 +133,9 @@
 }
 
 .header-fixed .site-header {
-  position: fixed;
-  top: 0;
+  //position: fixed;
+  //top: 0;
+  margin: 1rem 0;
 }
 
 .header-fixed .site-container::before {

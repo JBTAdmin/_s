@@ -7,14 +7,14 @@
   flex-wrap: wrap;
 }
 
-.site-header + .site-container::before {
-  content: "";
-  display: block;
-  height: 8rem;
-  margin-top: -8rem;
-  pointer-events: none;
-  visibility: hidden;
-}
+//.site-header + .site-container::before {
+//  content: "";
+//  display: block;
+//  height: 8rem;
+//  margin-top: -8rem;
+//  pointer-events: none;
+//  visibility: hidden;
+//}
 
 main {
   flex: 3 1;

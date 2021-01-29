@@ -846,10 +846,10 @@ Kirki::add_field(
 				'element'  => '.header-menu-bar',
 				'property' => 'height',
 			),
-			array(
-				'element'  => '.site-header + .site-container::before',
-				'property' => 'height',
-			),
+//			array(
+//				'element'  => '.site-header + .site-container::before',
+//				'property' => 'height',
+//			),
 		),
 	)
 );
