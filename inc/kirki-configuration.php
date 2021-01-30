@@ -835,28 +835,6 @@ Kirki::add_field(
 Kirki::add_field(
 	'aaurora_theme_options',
 	array(
-		'type'        => 'dimension',
-		'settings'    => 'mainmenu_height',
-		'label'       => esc_attr__( 'Main Header Height', 'aaurora' ),
-		'description' => esc_attr__( 'Use this option to change header height. Default: 8rem', 'aaurora' ),
-		'section'     => 'header',
-		'default'     => '8rem',
-		'output'      => array(
-			array(
-				'element'  => '.header-menu-bar',
-				'property' => 'height',
-			),
-//			array(
-//				'element'  => '.site-header + .site-container::before',
-//				'property' => 'height',
-//			),
-		),
-	)
-);
-
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
 		'type'        => 'typography',
 		'settings'    => 'header_menu_font',
 		'label'       => esc_attr__( 'Header Menu Size', 'aaurora' ),

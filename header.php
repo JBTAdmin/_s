@@ -23,6 +23,8 @@ $header_class .= ' ' . get_theme_mod( 'header_layout_color', 'light' );
 
 $header_class .= ' ' . get_theme_mod( 'search_position', 'header' );
 
+$header_class .= ' ' . get_theme_mod( 'header_layout_setting' );
+
 $menu_class .= ' ' . get_theme_mod( 'main_menu_font_decoration', 'none' );
 
 $menu_class .= ' ' . get_theme_mod( 'main_menu_font_weight', 'regularfont' );
