@@ -348,7 +348,7 @@ Kirki::add_field(
 		'transport'   => 'auto',
 		'output'      => array(
 			array(
-				'element'  => 'aside',
+				'element'  => '#secondary-sidebar, #primary-sidebar',
 				'property' => 'max-width',
 				'units'    => 'px',
 			),
@@ -681,7 +681,7 @@ Kirki::add_field(
 		'transport'   => 'auto',
 		'output'      => array(
 			array(
-				'element'  => '.site-header, .aside-header-container',
+				'element'  => '.site-header',
 				'property' => 'background',
 			),
 		),

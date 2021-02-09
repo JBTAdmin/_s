@@ -105,3 +105,7 @@
     height: 6rem;
   }
 }
+
+.search-field:focus {
+  border: 1px solid #0a0909;
+}

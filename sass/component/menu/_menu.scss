@@ -33,18 +33,24 @@
   z-index: 1000;
 }
 
+.sidebar-menu {
+  padding: 5px 20px;
+}
+
 .sidebar-menu li {
   position: relative;
   list-style: none;
   text-decoration: none;
   //border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding-left: 0.6rem;
+  //padding-left: 0.6rem;
+  padding: 5px 0;
 }
 
 aside.sidebar-alt .widget-sidebar-menu a {
   // todo refine
-  line-height: 6.5rem;
-  color: #000;
+  //line-height: 6.5rem;
+
+  //color: #000;
 }
 
 aside .submenu a {
@@ -334,7 +340,8 @@ li > ul.sub-menu {
 }
 
 .drawer-dropdown-button {
-  height: 6.5rem;
+  //height: 100%;
+  padding: 2rem;
   width: 4rem;
   position: absolute;
   right: 0;

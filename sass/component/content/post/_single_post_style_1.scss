@@ -19,3 +19,14 @@
     }
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .column-2-title-image {
+    & .wrap {
+      flex-direction: column;
+      & .post-thumbnail {
+        min-height: 45rem;
+      }
+    }
+  }
+}

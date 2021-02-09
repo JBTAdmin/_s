@@ -481,6 +481,9 @@ p {
   margin: auto;
   height: 100%; }
 
+body.hide {
+  overflow: hidden; }
+
 hr {
   background-color: #ccc;
   border: 0;
@@ -540,7 +543,8 @@ object {
 
 img {
   height: auto;
-  max-width: 100%; }
+  max-width: 100%;
+  border-radius: 1rem; }
 
 figure {
   margin: 1em 0; }
@@ -805,15 +809,14 @@ select {
 .sub-menu {
   z-index: 1000; }
 
+.sidebar-menu {
+  padding: 5px 20px; }
+
 .sidebar-menu li {
   position: relative;
   list-style: none;
   text-decoration: none;
-  padding-left: 0.6rem; }
-
-aside.sidebar-alt .widget-sidebar-menu a {
-  line-height: 6.5rem;
-  color: #000; }
+  padding: 5px 0; }
 
 aside .submenu a {
   padding: 2rem 3rem;
@@ -1053,7 +1056,7 @@ li > ul.sub-menu {
   position: relative; }
 
 .drawer-dropdown-button {
-  height: 6.5rem;
+  padding: 2rem;
   width: 4rem;
   position: absolute;
   right: 0;
@@ -1222,10 +1225,6 @@ li > ul.sub-menu {
 
 .site-header {
   width: 100%;
-  z-index: 100;
-  -webkit-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
   height: 10rem; }
 
 .header-center .main-navigation {
@@ -1284,7 +1283,15 @@ li > ul.sub-menu {
     padding: 0 3rem; } }
 
 .header-menu-bar {
-  height: 100%; }
+  height: 10rem;
+  width: 100%;
+  background: #ffffff;
+  z-index: 9;
+  -webkit-box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 0.15), 0px 5px 17px -2px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 0.15), 0px 5px 17px -2px rgba(0, 0, 0, 0.15);
+  -webkit-transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
+  -o-transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
+  transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.4s; }
 
 .left {
   float: left; }
@@ -1326,7 +1333,16 @@ li > ul.sub-menu {
   position: fixed;
   top: 0;
   -webkit-box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 0.15), 0px 5px 17px -2px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 0.15), 0px 5px 17px -2px rgba(0, 0, 0, 0.15); }
+          box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 0.15), 0px 5px 17px -2px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.5s ease-in;
+  -o-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in; }
+
+.fixed-header.showed {
+  opacity: 1;
+  visibility: visible; }
 
 .flex-dir-column,
 .flex-dir-column-reverse {
@@ -1376,6 +1392,15 @@ li > ul.sub-menu {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse; }
+
+@media screen and (max-width: 1024px) {
+  .flex-dir-column-reverse .header-container,
+  .flex-dir-column .header-container,
+  .flex-dir-row-reverse .header-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; } }
 
 /* Topbar
 --------------------------------------------- */
@@ -2021,6 +2046,15 @@ div[class*="footer-sidebar-"] {
   .column-2-title-image .wrap .meta-data {
     padding: 10rem; }
 
+@media screen and (max-width: 1024px) {
+  .column-2-title-image .wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .column-2-title-image .wrap .post-thumbnail {
+      min-height: 45rem; } }
+
 .column-2-title-image-compact .wrap {
   width: 100%;
   display: -webkit-box;
@@ -2032,7 +2066,8 @@ div[class*="footer-sidebar-"] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #f5f5f5; }
+  background-color: #f5f5f5;
+  margin-top: 5rem; }
   .column-2-title-image-compact .wrap > div {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 50%;
@@ -2062,7 +2097,8 @@ div[class*="footer-sidebar-"] {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column; }
+          flex-direction: column;
+  margin-top: 5rem; }
   .column-2-title-image-column .wrap > div {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 50%;
@@ -2100,7 +2136,7 @@ div[class*="footer-sidebar-"] {
 /* Comment
 --------------------------------------------- */
 .comment-list li {
-  padding: 40px 0px 30px 40px;
+  padding-top: 40px;
   list-style: none; }
 
 .comment-list .avatar {
@@ -2271,24 +2307,30 @@ body.admin-bar aside {
  * Sidebar Alt
  */
 aside.sidebar-alt-aside {
+  -webkit-clip-path: circle(50px at 100% -10%);
+          clip-path: circle(50px at 100% -10%);
+  -webkit-transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  -o-transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
   background: #fff;
-  width: 600px;
-  max-width: 100%;
+  color: #000;
+  width: 100%;
   height: 100%;
   position: fixed;
   top: 0;
   right: 0;
   overflow: auto;
-  z-index: 9999;
-  -webkit-transform: translate(110%, 0);
-      -ms-transform: translate(110%, 0);
-          transform: translate(110%, 0);
-  -webkit-transition: width 0.5s ease-in-out, -webkit-transform 0.5s;
-  transition: width 0.5s ease-in-out, -webkit-transform 0.5s;
-  -o-transition: transform 0.5s, width 0.5s ease-in-out;
-  transition: transform 0.5s, width 0.5s ease-in-out;
-  transition: transform 0.5s, width 0.5s ease-in-out, -webkit-transform 0.5s;
+  z-index: 11;
   font-size: 1.9rem; }
+
+aside.open {
+  -webkit-clip-path: circle(2500px at 100% -10%);
+          clip-path: circle(2500px at 100% -10%);
+  -webkit-transform: translate3D(0, 0, 0);
+      -ms-transform: translate3D(0, 0, 0);
+          transform: translate3D(0, 0, 0);
+  -webkit-box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 100px rgba(0, 0, 0, 0.5); }
 
 .sidebar-alt .widget-title {
   font-size: 1.9rem;
@@ -2304,15 +2346,7 @@ aside.sidebar-alt-aside section {
 
 @media screen and (max-width: 48rem) {
   aside {
-    max-width: 32rem;
     padding: 10px 4px 4px; } }
-
-aside.open {
-  -webkit-transform: translate3D(0, 0, 0);
-      -ms-transform: translate3D(0, 0, 0);
-          transform: translate3D(0, 0, 0);
-  -webkit-box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0 100px rgba(0, 0, 0, 0.5); }
 
 .aside-header {
   margin-bottom: 0 !important;
@@ -2335,7 +2369,7 @@ aside.open {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 9998;
+  z-index: 10;
   background: rgba(0, 0, 0, 0.4);
   visibility: hidden;
   cursor: pointer;
@@ -2625,6 +2659,9 @@ a.pt {
     width: 6rem;
     height: 6rem; }
 
+.search-field:focus {
+  border: 1px solid #0a0909; }
+
 /* Social Follow
 --------------------------------------------- */
 @media only screen and (max-width: 786px) {
@@ -2638,7 +2675,7 @@ a.pt {
   right: 5.4rem;
   top: 50%;
   font-weight: 600;
-  z-index: 10;
+  z-index: 5;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;

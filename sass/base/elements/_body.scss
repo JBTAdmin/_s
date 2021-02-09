@@ -34,3 +34,7 @@ p {
   height: 100%;
   //max-width: 115rem;
 }
+
+body.hide {
+  overflow: hidden;
+}

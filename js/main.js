@@ -9,8 +9,9 @@
 document.addEventListener("DOMContentLoaded", function(event) {
   // Set a variable for our button element.
   const scrollToTopButton = document.getElementById("js-top");
-  const fixedHeader = document.querySelector(".header-fixed header");
-  let classList = fixedHeader.className;
+  const fixedHeaderContainer = document.querySelector(".header-fixed header");
+  const fixedHeader = document.querySelector(".header-fixed .header-menu-bar");
+  let classList = fixedHeaderContainer.className;
   // Let's set up a function that shows our scroll-to-top button if we scroll beyond the height of the initial window.
   const scrollFunc = () => {
     // Get the current scroll value
@@ -19,18 +20,20 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // alert(classList);
 
     // If the scroll value is greater than the window height, let's add a class to the scroll-to-top button to show it!
-    if (y > 200) {
+    if (y > 0) {
       scrollToTopButton.className = "top-link show";
-      fixedHeader.classList.add("fixed-header");
-      fixedHeader.classList.remove(
-        "flex-dir-row-reverse",
+      fixedHeaderContainer.classList.remove(
+        // "flex-dir-row-reverse",
         "flex-dir-column",
         "flex-dir-column-reverse"
       );
+      fixedHeader.classList.add("fixed-header");
+      fixedHeader.classList.add("showed");
     } else {
       scrollToTopButton.className = "top-link hide";
       fixedHeader.classList.remove("fixed-header");
-      fixedHeader.className = classList;
+      fixedHeader.classList.remove("showed");
+      fixedHeaderContainer.className = classList;
     }
   };
 
@@ -127,6 +130,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       // searchField.focus();
       altSidebar.classList.toggle("open");
       sidebarOverlay.classList.toggle("open");
+      document.body.classList.toggle("hide");
     });
 
   menuCloseBtn &&

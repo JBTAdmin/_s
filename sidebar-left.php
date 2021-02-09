@@ -15,6 +15,6 @@ if ( ! is_active_sidebar( 'aaurora-sidebar-left' ) || in_array( get_theme_mod( '
 }
 ?>
 
-<aside id="secondary" class="widget-area sidebar-left">
+<aside id="secondary-sidebar" class="widget-area sidebar-left">
 	<?php dynamic_sidebar( 'aaurora-sidebar-left' ); ?>
 </aside><!-- #secondary -->
