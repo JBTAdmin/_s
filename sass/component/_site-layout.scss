@@ -59,3 +59,12 @@ article {
   //margin: auto;
 }
 //}
+.primary-content {
+  padding: 0 3rem 0 1rem !important;
+}
+
+@media screen and (max-width: 768px) {
+  .primary-content {
+    padding: 0;
+  }
+}

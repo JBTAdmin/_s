@@ -138,6 +138,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       hamburgerBtn.focus();
       altSidebar.classList.toggle("open");
       sidebarOverlay.classList.toggle("open");
+      document.body.classList.toggle("hide");
     });
 
   sidebarOverlay &&
