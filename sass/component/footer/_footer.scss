@@ -23,10 +23,10 @@ div[class*="footer-sidebar-"] {
 }
 
 @media screen and (max-width: 768px) {
-  .site-info-holder .right {
-    text-align: left;
-    width: 100%;
-  }
+  //.site-info-holder .right {
+  //  text-align: left;
+  //  width: 100%;
+  //}
 
   div[class*="footer-sidebar-"] {
     flex-basis: 100%;

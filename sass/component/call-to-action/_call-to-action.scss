@@ -9,6 +9,15 @@
   margin: 0 auto;
 }
 
+@media only screen and (max-width: 768px) {
+  .aaurora-cta_wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .aaurora-cta-button input[type="button"] {
+    margin: 1rem 0;
+  }
+}
 .cta-heading {
   font-size: 4rem;
   color: #17161a;

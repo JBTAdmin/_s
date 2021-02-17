@@ -25,6 +25,18 @@
   justify-content: center;
 }
 
+@media screen and (max-width: 768px) {
+  .site-footer-2-info .site-info-holder,
+  .footer-menu--1 {
+    flex-direction: column;
+  }
+
+  .footer-menu--1 li,
+  .site-info-holder {
+    padding: 1rem 0;
+  }
+}
+
 .site-footer {
   padding: 75px 0;
 }
