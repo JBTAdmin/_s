@@ -121,9 +121,9 @@ Kirki::add_field(
 		'default'     => 'fixed',
 		'multiple'    => 0,
 		'choices'     => array(
-			'none' => esc_attr__( 'None', 'aaurora' ),
+			'none'   => esc_attr__( 'None', 'aaurora' ),
 			'header' => esc_attr__( 'Header', 'aaurora' ),
-			'fixed' => esc_attr__( 'Fixed', 'aaurora' ),
+			'fixed'  => esc_attr__( 'Fixed', 'aaurora' ),
 		),
 		'description' => esc_attr__( 'Select the Search button visibiity and position.', 'aaurora' ),
 	)
@@ -278,14 +278,14 @@ Kirki::add_field(
 Kirki::add_field(
 	'theme_config_id',
 	array(
-		'type'        => 'dimension',
-		'settings'    => 'button_border_radius',
-		'label'       => esc_html__( 'Dimension Control', 'aaurora' ),
-//		todo what is the use of this field
-		'description' => esc_html__( 'Description Here. TODO....', 'aaurora' ),
-		'section'     => 'general_button',
-		'default'     => '10px',
-		'output'      => array(
+		'type'                        => 'dimension',
+		'settings'                    => 'button_border_radius',
+		'label'                       => esc_html__( 'Dimension Control', 'aaurora' ),
+		// todo what is the use of this field.
+						'description' => esc_html__( 'Description Here. TODO....', 'aaurora' ),
+		'section'                     => 'general_button',
+		'default'                     => '10px',
+		'output'                      => array(
 			array(
 				'element'  => ':root',
 				'property' => '--button-border-radius',

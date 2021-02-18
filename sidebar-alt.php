@@ -13,20 +13,20 @@ $class = 'widget-area sidebar-alt-aside sidebar-alt';
 
 ?>
 <amp-sidebar id="drawermenu" layout="nodisplay" side="right">
-    <aside id="secondary-alt" class="<?php echo esc_attr( $class ); ?>">
-        <div class="wrap">
-            <div class="aside-header-container">
-                <div class="widget aside-header">
-                    <div class="sidebar-close-btn" on="tap:drawermenu.toggle" role="button" tabindex="1">
-                        <button class="toggle sidebar-close desktop-sidebar-toggle" data-toggle-target=".sidebar-modal"
-                                data-toggle-body-class="closing-sidebar-modal" aria-expanded="false">
+	<aside id="secondary-alt" class="<?php echo esc_attr( $class ); ?>">
+		<div class="wrap">
+			<div class="aside-header-container">
+				<div class="widget aside-header">
+					<div class="sidebar-close-btn" on="tap:drawermenu.toggle" role="button" tabindex="1">
+						<button class="toggle sidebar-close desktop-sidebar-toggle" data-toggle-target=".sidebar-modal"
+								data-toggle-body-class="closing-sidebar-modal" aria-expanded="false">
 									<span class="toggle-inner">
 										<?php load_inline_svg( 'close.svg' ); ?>
 									</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
+						</button>
+					</div>
+				</div>
+			</div>
 			<?php
 			wp_nav_menu(
 				array(
@@ -38,7 +38,7 @@ $class = 'widget-area sidebar-alt-aside sidebar-alt';
 			);
 			?>
 			<?php dynamic_sidebar( 'aaurora-sidebar-alt' ); ?>
-        </div>
-    </aside><!-- #secondary -->
+		</div>
+	</aside><!-- #secondary -->
 </amp-sidebar>
 <div class="sidebar-overlay"></div>

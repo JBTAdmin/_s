@@ -9,7 +9,7 @@
  * @since       1.0.0
  */
 
-// todo need to revisit the whle admin page code
+// todo need to revisit the whle admin page code.
 /**
  * Do not allow direct script access.
  */
@@ -87,7 +87,7 @@ if ( ! class_exists( 'Aaurora_Admin' ) ) :
 			 */
 			wp_enqueue_style(
 				'aaurora-admin-styles',
-				get_parent_theme_file_uri() . '/inc/admin/css/aaurora-admin' . '.css',
+				get_parent_theme_file_uri() . '/inc/admin/css/aaurora-admin.css',
 				false,
 				'1.0.0'
 			);
@@ -109,9 +109,9 @@ if ( ! class_exists( 'Aaurora_Admin' ) ) :
 				<div class="wrap-container">
 
 					<a href="<?php echo esc_url( admin_url( 'admin.php?page=aaurora-dashboard' ) ); ?>"
-					   class="aaurora-logo">
+						class="aaurora-logo">
 						<img src="<?php echo esc_url( get_parent_theme_file_uri() . '/assets/images/aaurora-logo.png' ); ?>"
-							 alt="<?php echo esc_html( 'Aaurora' ); ?>"/>
+							alt="<?php echo esc_html( 'Aaurora' ); ?>"/>
 					</a>
 
 				</div>
@@ -133,15 +133,15 @@ if ( ! class_exists( 'Aaurora_Admin' ) ) :
 			<div id="aaurora-footer">
 				<ul>
 					<li><a href="<?php echo esc_url( 'https://aaurorawp.com/docs/' ); ?>" target="_blank"
-						   rel="noopener noreferrer"><span><?php esc_html_e( 'Help Articles', 'aaurora' ); ?></span></span>
+							rel="noopener noreferrer"><span><?php esc_html_e( 'Help Articles', 'aaurora' ); ?></span></span>
 						</a></li>
 					<li>
 						<a href="<?php echo esc_url( 'https://wordpress.org/support/theme/aaurora/reviews/#new-post' ); ?>"
-						   target="_blank" rel="noopener noreferrer"><span>&#x1f494;<?php esc_html_e( 'Crafted without love', 'aaurora' ); ?></span></a>
+							target="_blank" rel="noopener noreferrer"><span>&#x1f494;<?php esc_html_e( 'Crafted without love', 'aaurora' ); ?></span></a>
 					</li>
 				</ul>
 			</div><!-- END #aaurora-footer -->
-			
+
 			<?php
 		}
 

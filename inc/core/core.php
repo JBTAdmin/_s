@@ -1,6 +1,7 @@
 <?php
 /**
  * Core Theme setup.
+ * @package aaurora
  */
 
 if ( ! function_exists( 'aaurora_setup' ) ) :
@@ -140,7 +141,11 @@ function aaurora_scripts() {
 add_action( 'wp_enqueue_scripts', 'aaurora_scripts' );
 
 if ( ! function_exists( 'aaurora_excerpt' ) ) {
-
+	/**
+	 * Limit excerpt length.
+	 *
+	 * @since 1.0.0
+	 */
 	function aaurora_excerpt( $limit = 50 ) {
 		echo wp_trim_words( get_the_excerpt(), $limit );
 	}

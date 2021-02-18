@@ -14,28 +14,28 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $in_style = false;
-$size = 'aaurora-single-post';
+$size     = 'aaurora-single-post';
 
-if ('column-2-title-image' === get_theme_mod( 'blog_post_in_page_header_layout', 'column-2-title-image' )){
+if ( 'column-2-title-image' === get_theme_mod( 'blog_post_in_page_header_layout', 'column-2-title-image' ) ) {
 	$in_style = true;
 }
-//todo need to combine above and below statement search in array.
-if ('column-2-title-image-compact' === get_theme_mod( 'blog_post_in_page_header_layout', 'column-2-title-image' )){
+// todo need to combine above and below statement search in array.
+if ( 'column-2-title-image-compact' === get_theme_mod( 'blog_post_in_page_header_layout', 'column-2-title-image' ) ) {
 	$in_style = true;
 }
 
-if('aaurora_site_container_before' === get_theme_mod( 'blog_post_header_location', 'aaurora_site_container_before' )){
+if ( 'aaurora_site_container_before' === get_theme_mod( 'blog_post_header_location', 'aaurora_site_container_before' ) ) {
 	$layout = get_theme_mod( 'blog_post_in_page_header_layout', 'column-2-title-image' );
-	if('column-2-title-image' === $layout){
+	if ( 'column-2-title-image' === $layout ) {
 		$size = 'column-2-title-image';
-	} else if ('column-2-title-image-compact' === $layout) {
+	} elseif ( 'column-2-title-image-compact' === $layout ) {
 		$size = 'column-2-title-image-compact';
-	} else{
+	} else {
 		$size = 'column-2-title-image-column';
 	}
-} else{
+} else {
 	$layout = get_theme_mod( 'blog_post_in_content_header_layout', 'layout-1' );
-	if('layout-1' === $layout){
+	if ( 'layout-1' === $layout ) {
 		$size = 'aaurora-single-post';
 	} else {
 		$size = 'aaurora-single-post';
@@ -43,4 +43,4 @@ if('aaurora_site_container_before' === get_theme_mod( 'blog_post_header_location
 }
 
 
-aaurora_post_thumbnail($size, '',  $in_style);
+aaurora_post_thumbnail( $size, '', $in_style );

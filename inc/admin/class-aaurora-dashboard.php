@@ -6,7 +6,8 @@
  * @author      Aaurora Team <hello@aaurorawp.com>
  * @since       1.0.0
  */
-// todo need to revisit the whle admin page code
+
+// todo need to revisit the whle admin page code.
 /**
  * Do not allow direct script access.
  */
@@ -143,8 +144,8 @@ if ( ! class_exists( 'Aaurora_Dashboard' ) ) :
 
 						<div class="aaurora-buttons">
 							<a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[control]=custom_logo' ) ); ?>"
-							   class="adm-btn secondary" target="_blank"
-							   rel="noopener noreferrer"><?php esc_html_e( 'Upload Logo', 'aaurora' ); ?></a>
+								class="adm-btn secondary" target="_blank"
+								rel="noopener noreferrer"><?php esc_html_e( 'Upload Logo', 'aaurora' ); ?></a>
 						</div><!-- END .aaurora-buttons -->
 					</div>
 
@@ -156,8 +157,8 @@ if ( ! class_exists( 'Aaurora_Dashboard' ) ) :
 
 						<div class="aaurora-buttons">
 							<a href="<?php echo esc_url( admin_url( 'nav-menus.php' ) ); ?>"
-							   class="adm-btn secondary" target="_blank"
-							   rel="noopener noreferrer"><?php esc_html_e( 'Go to Menus', 'aaurora' ); ?></a>
+								class="adm-btn secondary" target="_blank"
+								rel="noopener noreferrer"><?php esc_html_e( 'Go to Menus', 'aaurora' ); ?></a>
 						</div><!-- END .aaurora-buttons -->
 					</div>
 
@@ -169,8 +170,8 @@ if ( ! class_exists( 'Aaurora_Dashboard' ) ) :
 
 						<div class="aaurora-buttons">
 							<a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[section]=aaurora_section_colors' ) ); ?>"
-							   class="adm-btn secondary" target="_blank"
-							   rel="noopener noreferrer"><?php esc_html_e( 'Change Colors', 'aaurora' ); ?></a>
+								class="adm-btn secondary" target="_blank"
+								rel="noopener noreferrer"><?php esc_html_e( 'Change Colors', 'aaurora' ); ?></a>
 						</div><!-- END .aaurora-buttons -->
 					</div>
 
@@ -188,13 +189,13 @@ if ( ! class_exists( 'Aaurora_Dashboard' ) ) :
 
 					<div class="aaurora-buttons">
 						<a href="<?php echo esc_url( admin_url( 'customize.php' ) ); ?>"
-						   class="adm-btn primary large-button"><?php esc_html_e( 'Start Customizing', 'aaurora' ); ?></a>
+							class="adm-btn primary large-button"><?php esc_html_e( 'Start Customizing', 'aaurora' ); ?></a>
 					</div><!-- END .aaurora-buttons -->
 
 				</div><!-- END .aaurora-section -->
 
 			</div><!-- END .wrap-container -->
-			
+
 			<?php
 		}
 
@@ -264,7 +265,7 @@ if ( ! class_exists( 'Aaurora_Dashboard' ) ) :
 
 				<div class="aaurora-section aaurora-columns">
 					<div class="aaurora-changelog">
-					
+
 					</div>
 				</div><!-- END .aaurora-columns -->
 			</div><!-- END .wrap-container -->
@@ -327,7 +328,7 @@ if ( ! class_exists( 'Aaurora_Dashboard' ) ) :
 							<li class="<?php echo esc_attr( $current ); ?>">
 								<a href="<?php echo esc_url( $item['url'] ); ?>">
 									<?php echo esc_html( $item['name'] ); ?>
-									
+
 									<?php
 									if ( isset( $item['icon'] ) && $item['icon'] ) {
 										aaurora_print_admin_icon( $item['icon'] );
@@ -335,7 +336,7 @@ if ( ! class_exists( 'Aaurora_Dashboard' ) ) :
 									?>
 								</a>
 							</li>
-						
+
 						<?php } ?>
 					</ul>
 				</div><!-- END .aaurora-tabs -->
