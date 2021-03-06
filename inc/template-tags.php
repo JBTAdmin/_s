@@ -91,7 +91,7 @@ if ( ! function_exists( 'aaurora_meta_comment' ) ) {
 			comments_popup_link(
 				sprintf(
 					wp_kses(
-					/* translators: %s: post title */
+						/* translators: %s: post title */
 						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'aaurora' ),
 						array(
 							'span' => array(

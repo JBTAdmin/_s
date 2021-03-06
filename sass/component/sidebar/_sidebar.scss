@@ -49,7 +49,7 @@ body.admin-bar aside {
     letter-spacing: 0.8px;
     text-transform: uppercase;
     padding-bottom: 8px;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 16px;
     font-weight: 600;
     text-transform: uppercase;
@@ -84,6 +84,7 @@ body.admin-bar aside {
 
 .widget ul {
   list-style: none;
+  margin: 0;
 }
 
 //Sidebar Search field

@@ -73,6 +73,11 @@ if ( ! function_exists( 'aaurora_single_page_layout' ) ) {
 	 */
 	function aaurora_single_page_layout() {
 		get_template_part( 'template-parts/content-page' );
+
+		// If comments are open or we have at least one comment, load up the comment template.
+		if ( comments_open() || get_comments_number() ) :
+			comments_template();
+		endif;
 	}
 }
 
@@ -112,7 +117,7 @@ if ( ! function_exists( 'aaurora_post_content_before' ) ) {
 		if ( current_filter() === get_theme_mod( 'blog_post_header_location', 'aaurora_entry_content_before' ) ) {
 
 			if ( 'aaurora_site_container_before' === get_theme_mod( 'blog_post_header_location', 'aaurora_entry_content_before' ) ) {
-				get_template_part( 'template-parts/single/post-header/page-header-style' );
+				get_template_part( 'template-parts/single/post-header/in-header-style' );
 			} else {
 				get_template_part( 'template-parts/single/post-header/in-content-post-header' );
 			}
