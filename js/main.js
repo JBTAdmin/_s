@@ -11,7 +11,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
   const scrollToTopButton = document.getElementById("js-top");
   const fixedHeaderContainer = document.querySelector(".header-fixed header");
   const fixedHeader = document.querySelector(".header-fixed .header-menu-bar");
-  let classList = fixedHeaderContainer.className;
+  let classList;
+  if (fixedHeader) {
+    classList = fixedHeaderContainer.className;
+  }
+
   // Let's set up a function that shows our scroll-to-top button if we scroll beyond the height of the initial window.
   const scrollFunc = () => {
     // Get the current scroll value
@@ -22,18 +26,23 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // If the scroll value is greater than the window height, let's add a class to the scroll-to-top button to show it!
     if (y > 0) {
       scrollToTopButton.className = "top-link show";
-      fixedHeaderContainer.classList.remove(
-        // "flex-dir-row-reverse",
-        "flex-dir-column",
-        "flex-dir-column-reverse"
-      );
-      fixedHeader.classList.add("fixed-header");
-      fixedHeader.classList.add("showed");
+
+      if (fixedHeader) {
+        fixedHeaderContainer.classList.remove(
+          // "flex-dir-row-reverse",
+          "flex-dir-column",
+          "flex-dir-column-reverse"
+        );
+        fixedHeader.classList.add("fixed-header");
+        fixedHeader.classList.add("showed");
+      }
     } else {
       scrollToTopButton.className = "top-link hide";
-      fixedHeader.classList.remove("fixed-header");
-      fixedHeader.classList.remove("showed");
-      fixedHeaderContainer.className = classList;
+      if (fixedHeader) {
+        fixedHeader.classList.remove("fixed-header");
+        fixedHeader.classList.remove("showed");
+        fixedHeaderContainer.className = classList;
+      }
     }
   };
 

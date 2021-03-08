@@ -1,13 +1,22 @@
 .blog-3 {
   & > article {
     flex-basis: 100%;
+    margin-bottom: 5rem;
+  }
+
+  & .entry-meta {
+    color: inherit;
   }
 
   & .inner-entry {
     display: flex;
-    margin: 2rem 0;
+    //margin: 2rem 0;
     width: 100%;
     border: none !important;
+
+    & .posted-on {
+      color: rgba(0, 0, 0, 0.4);
+    }
 
     & > div {
       flex: 1 1 50%;
@@ -24,10 +33,6 @@
     margin-right: 4rem;
   }
 
-  & .posted-on {
-    color: rgba(0, 0, 0, 0.4);
-  }
-
   & .entry-excerpt {
     margin-top: 3rem;
   }
@@ -35,10 +40,12 @@
 
 @media screen and (max-width: 900px) {
   .blog-3 {
-    flex-direction: column;
+    & .inner-entry {
+      flex-direction: column;
+    }
 
-    & .post-excerpt {
-      margin: 0 0 3rem 0;
+    & .entry-excerpt {
+      margin-top: 0;
     }
   }
 }
