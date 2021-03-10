@@ -19,6 +19,7 @@ aside.sidebar-alt-aside {
   //transform: translate(110%, 0);
   //transition: transform 0.5s, width 0.5s ease-in-out;
   font-size: 1.9rem;
+  visibility: hidden;
 }
 
 aside.open {
@@ -26,6 +27,7 @@ aside.open {
 
   //transform: translate3D(0, 0, 0); // is it necessary
   box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+  visibility: visible;
   // TODO need to check if this section is getting copied two times in style.css????
 
   // New option

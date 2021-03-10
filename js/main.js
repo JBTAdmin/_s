@@ -159,11 +159,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
   searchButton &&
     searchButton.addEventListener("click", function() {
       popupSearchModal.classList.toggle("visible");
+      document.getElementById("search-field").focus();
     });
 
   headerSearchButton &&
     headerSearchButton.addEventListener("click", function() {
       popupSearchModal.classList.toggle("visible");
+      document.getElementById("search-field").focus();
     });
 
   popupModalCloseBtn.addEventListener("click", function() {

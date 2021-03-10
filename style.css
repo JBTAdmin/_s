@@ -1287,8 +1287,8 @@ li > ul.sub-menu {
   width: 100%;
   background: #ffffff;
   z-index: 9;
-  -webkit-box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 0.15), 0px 5px 17px -2px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 0.15), 0px 5px 17px -2px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 4px 10px rgba(37, 47, 63, 0.1);
+          box-shadow: 0px 4px 10px rgba(37, 47, 63, 0.1);
   -webkit-transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
   -o-transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
   transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.4s; }
@@ -1303,9 +1303,16 @@ li > ul.sub-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 .site-description {
   font-size: 1.4rem;
@@ -2030,7 +2037,7 @@ div[class*="footer-sidebar-"] {
   border-radius: 5px;
   width: 6px;
   height: 6px;
-  background-color: #ae364d;
+  background-color: var(--theme-color);
   top: -1px;
   position: relative; }
 
@@ -2340,13 +2347,15 @@ aside.sidebar-alt-aside {
   right: 0;
   overflow: auto;
   z-index: 11;
-  font-size: 1.9rem; }
+  font-size: 1.9rem;
+  visibility: hidden; }
 
 aside.open {
   -webkit-clip-path: circle(2500px at 100% -10%);
           clip-path: circle(2500px at 100% -10%);
   -webkit-box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0 100px rgba(0, 0, 0, 0.5); }
+          box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+  visibility: visible; }
 
 .sidebar-alt .widget-title {
   font-size: 1.9rem;
@@ -2613,13 +2622,13 @@ a.pt {
   z-index: 9999999;
   overflow: hidden;
   opacity: 0;
-  visibility: hidden;
+  display: none;
   -webkit-transition: opacity 0s cubic-bezier(0.15, 0.2, 0.1, 1);
   -o-transition: opacity 0s cubic-bezier(0.15, 0.2, 0.1, 1);
   transition: opacity 0s cubic-bezier(0.15, 0.2, 0.1, 1); }
 
 .popup_search_modal.visible {
-  visibility: visible;
+  display: block;
   opacity: 1; }
 
 .search.search-submit {

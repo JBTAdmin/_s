@@ -154,16 +154,17 @@ if ( ! function_exists( 'aaurora_excerpt' ) ) {
 /**
  * Theme Featured Image support.
  */
-add_image_size( 'aaurora-blog-single-post-navigation-featured-image', 80, 80, true ); // This is used for Blog Layout 1.
-add_image_size( 'aaurora-blog-1-featured-image', 530, 420, true ); // This is used for Blog Layout 1.
-add_image_size( 'aaurora-blog-2-featured-image', 540, 185, true ); // This is used for Blog Layout 2.
-add_image_size( 'aaurora-blog-3-featured-image', 340, 185, true ); // This is used for Blog Layout 2.
-add_image_size( 'aaurora-blog-single-post-sidebar', 400, 500, true );
-add_image_size( 'aaurora-blog-single-post-no-sidebar', 1000, 340, true );
 
+add_image_size( 'aaurora-blog-1-featured-image', 540, 320, true ); // This is used for Blog Layout 1.
+add_image_size( 'aaurora-blog-2-featured-image', 540, 185, true ); // This is used for Blog Layout 2.
+add_image_size( 'aaurora-blog-5-featured-image', 540, 585, true ); // This is used for Blog Layout 5.
 
 add_image_size( 'aaurora-single-post', 1140, 694, true );
+add_image_size( 'aaurora-blog-single-post-sidebar', 400, 500, true );
+add_image_size( 'aaurora-blog-single-post-no-sidebar', 1000, 340, true );
 
 add_image_size( 'column-2-title-image', 1140, 694, true );
 add_image_size( 'column-2-title-image-compact', 1140, 694, true );
 add_image_size( 'column-2-title-image-column', 1140, 500, true );
+
+add_image_size( 'aaurora-blog-single-post-navigation-featured-image', 80, 80, true ); // This is used for Post Navigation.

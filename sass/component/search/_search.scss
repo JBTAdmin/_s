@@ -42,12 +42,14 @@
   z-index: 9999999;
   overflow: hidden;
   opacity: 0;
-  visibility: hidden;
+  //visibility: hidden;
+  display: none;
   transition: opacity 0s cubic-bezier(0.15, 0.2, 0.1, 1);
 }
 
 .popup_search_modal.visible {
-  visibility: visible;
+  //visibility: visible;
+  display: block;
   opacity: 1;
 }
 
