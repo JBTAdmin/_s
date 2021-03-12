@@ -366,8 +366,8 @@ Kirki::add_field(
 		'default'     => '4',
 		'multiple'    => 0,
 		'choices'     => array(
-			'1' => esc_attr__( 'Layout 1', 'aaurora' ),
-			'2' => esc_attr__( 'Layout 2', 'aaurora' ),
+			'1' => esc_attr__( 'Layout 1-No', 'aaurora' ),
+			'2' => esc_attr__( 'Layout 2-No', 'aaurora' ),
 			'3' => esc_attr__( 'Layout 3', 'aaurora' ),
 			'4' => esc_attr__( 'Layout 4', 'aaurora' ),
 			'5' => esc_attr__( 'Layout 5', 'aaurora' ),
@@ -960,7 +960,7 @@ Kirki::add_field(
 		'multiple'    => 0,
 		'choices'     => array(
 			'aaurora-single-post' => esc_html__( 'Layout 1', 'aaurora' ),
-			'aaurora-single-post' => esc_html__( 'Layout 2-No', 'aaurora' ),
+			'layout-2' => esc_html__( 'Layout 2-No', 'aaurora' ),
 			'column-2-title-image'         => esc_html__( 'Layout 3-No', 'aaurora' ),
 			'column-2-title-image-compact' => esc_html__( 'Layout 4-No', 'aaurora' ),
 			'column-2-title-image-column'  => esc_html__( 'Layout 5', 'aaurora' ),
@@ -1044,6 +1044,10 @@ Kirki::add_field(
 		'default'     => array(
 			'font-family' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
 			'font-size'   => '40px',
+			'variant'        => 'regular',
+			'line-height'    => '1.5',
+			'letter-spacing' => '0',
+			'color'          => '#000',
 		),
 		'description' => esc_attr__( 'Font used in Single Post Header .', 'aaurora' ),
 		'output'      => array(
@@ -1112,6 +1116,11 @@ Kirki::add_field(
 		'section'     => 'fonts',
 		'default'     => array(
 			'font-family' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
+			'variant'        => 'regular',
+			'font-size'      => '14px',
+			'line-height'    => '1.5',
+			'letter-spacing' => '0',
+			'color'          => '#000',
 		),
 		'description' => esc_attr__( 'Font used in Blog Post Header on Home Page.', 'aaurora' ),
 		'output'      => array(
@@ -1131,6 +1140,11 @@ Kirki::add_field(
 		'section'     => 'fonts',
 		'default'     => array(   // TODO  In default can i use Initial as font-family.
 			'font-family' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
+			'variant'        => 'regular',
+			'font-size'      => '14px',
+			'line-height'    => '1.5',
+			'letter-spacing' => '0',
+			'color'          => '#000',
 		),
 		'description' => esc_attr__( 'Font used in text elements.', 'aaurora' ),
 		'output'      => array(
@@ -1150,6 +1164,11 @@ Kirki::add_field(
 		'section'     => 'fonts',
 		'default'     => array(
 			'font-family' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
+			'variant'        => 'regular',
+			'font-size'      => '14px',
+			'line-height'    => '1.5',
+			'letter-spacing' => '0',
+			'color'          => '#000',
 		),
 		'description' => esc_attr__( 'Font used in H1 Header .', 'aaurora' ),
 		'output'      => array(
@@ -1169,6 +1188,11 @@ Kirki::add_field(
 		'section'     => 'fonts',
 		'default'     => array(
 			'font-family' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
+			'variant'        => 'regular',
+			'font-size'      => '14px',
+			'line-height'    => '1.5',
+			'letter-spacing' => '0',
+			'color'          => '#000',
 		),
 		'description' => esc_attr__( 'Font used in H2 header.', 'aaurora' ),
 		'output'      => array(
@@ -1188,6 +1212,11 @@ Kirki::add_field(
 		'section'     => 'fonts',
 		'default'     => array(
 			'font-family' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
+			'variant'        => 'regular',
+			'font-size'      => '14px',
+			'line-height'    => '1.5',
+			'letter-spacing' => '0',
+			'color'          => '#000',
 		),
 		'description' => esc_attr__( 'Font used in H3 header.', 'aaurora' ),
 		'output'      => array(

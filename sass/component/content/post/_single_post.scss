@@ -35,16 +35,16 @@
 }
 
 .single-post .cat-links > a {
-  border-radius: 3rem;
-  padding: 3px 10px;
+  border-radius: 0.4rem;
+  padding: 1px 8px;
   display: inline-block;
   margin-bottom: 10px;
-  color: #000;
+  color: rgba(0, 0, 0, 0.8);
   background: #fff;
-  text-transform: uppercase;
-  letter-spacing: 0.3rem;
-  font-weight: 900;
-  font-size: 1.2rem;
+  //text-transform: uppercase;
+  //letter-spacing: 0.3rem;
+  font-weight: 400;
+  font-size: 1.6rem;
   border: 1px solid #e0dede;
 }
 
@@ -53,21 +53,21 @@
 }
 
 .entry-meta {
-  color: rgb(102, 94, 94);
+  color: rgba(0, 0, 0, 0.8);
   font-size: 1.6rem;
 }
 
 .single-post .entry-meta > span:after {
-  content: "";
+  content: "|";
   display: inline-block;
   margin-left: 7px;
   margin-right: 7px;
-  border-radius: 5px;
-  width: 6px;
-  height: 6px;
+  //border-radius: 5px;
+  //width: 6px;
+  //height: 6px;
   //border: 1px solid #909090;
-  background-color: $theme__color;
-  top: -1px;
+  color: $theme__color;
+  //top: -1px;
   position: relative;
 }
 

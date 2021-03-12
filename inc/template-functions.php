@@ -117,7 +117,7 @@ if ( ! function_exists( 'aaurora_post_content_before' ) ) {
 	 */
 	function aaurora_post_content_before() {
 	 
-		if ( in_array(get_theme_mod( 'blog_post_header_location', 'aaurora_entry_content_before' ), array( 'layout-1', 'layout-2' ), true) ) {
+		if ( in_array(get_theme_mod( 'blog_post_header_location', 'aaurora_entry_content_before' ), array( 'aaurora-single-post', 'layout-2' ), true) ) {
 				get_template_part( 'template-parts/single/post-header/in-content' );
 		}
 	}
