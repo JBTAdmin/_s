@@ -955,61 +955,15 @@ Kirki::add_field(
 		'settings'    => 'blog_post_header_location',
 		'label'       => esc_html__( 'Header Location', 'aaurora' ),
 		'section'     => 'blog_post',
-		'default'     => 'in-content',
+		'default'     => 'aaurora-single-post',
 		'placeholder' => esc_html__( 'Select an option to display header in Content or in Page Header.', 'aaurora' ),
 		'multiple'    => 0,
 		'choices'     => array(
-			'aaurora_entry_content_before'  => esc_html__( 'In Content', 'aaurora' ),
-			'aaurora_site_container_before' => esc_html__( 'Page Header', 'aaurora' ),
-		),
-	)
-);
-
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
-		'type'            => 'select',
-		'settings'        => 'blog_post_in_content_header_layout',
-		'label'           => esc_html__( 'Post Header Layout', 'aaurora' ),
-		'section'         => 'blog_post',
-		'default'         => 'in-content',
-		'placeholder'     => esc_html__( 'Select the layout.', 'aaurora' ),
-		'multiple'        => 0,
-		'choices'         => array(
-			'layout-1' => esc_html__( 'Layout 1', 'aaurora' ),
-			'layout-2' => esc_html__( 'Layout 2', 'aaurora' ),
-		),
-		'active_callback' => array(
-			array(
-				'setting'  => 'blog_post_header_location',
-				'operator' => '==',
-				'value'    => 'aaurora_entry_content_before',
-			),
-		),
-	)
-);
-
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
-		'type'            => 'select',
-		'settings'        => 'blog_post_in_page_header_layout',
-		'label'           => esc_html__( 'Post Header Layout', 'aaurora' ),
-		'section'         => 'blog_post',
-		'default'         => 'in-content',
-		'placeholder'     => esc_html__( 'Select the layout.', 'aaurora' ),
-		'multiple'        => 0,
-		'choices'         => array(
-			'column-2-title-image'         => esc_html__( 'Layout 3', 'aaurora' ),
-			'column-2-title-image-compact' => esc_html__( 'Layout 4', 'aaurora' ),
+			'aaurora-single-post' => esc_html__( 'Layout 1', 'aaurora' ),
+			'aaurora-single-post' => esc_html__( 'Layout 2-No', 'aaurora' ),
+			'column-2-title-image'         => esc_html__( 'Layout 3-No', 'aaurora' ),
+			'column-2-title-image-compact' => esc_html__( 'Layout 4-No', 'aaurora' ),
 			'column-2-title-image-column'  => esc_html__( 'Layout 5', 'aaurora' ),
-		),
-		'active_callback' => array(
-			array(
-				'setting'  => 'blog_post_header_location',
-				'operator' => '==',
-				'value'    => 'aaurora_site_container_before',
-			),
 		),
 	)
 );
