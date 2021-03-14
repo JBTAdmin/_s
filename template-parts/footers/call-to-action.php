@@ -1,3 +1,19 @@
+<?php
+/**
+ * Call to action elements.
+ * @package Aaurora
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
+if ( get_theme_mod( 'footer_call_to_action', false ) === false ) {
+	return;
+}
+
+?>
+
 <div id="colophon" class="site-footer-main">
     <div class="wrap">
         <div class="aaurora-cta_wrapper">
