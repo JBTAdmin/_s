@@ -151,8 +151,7 @@ if ( ! class_exists( 'Aaurora_Admin' ) ) :
 		 * @since 1.0.0
 		 * @return boolean
 		 */
-		function is_admin_page() {
-
+		public function is_admin_page() {
 			$base = get_current_screen()->base;
 			return false != strpos( $base, 'aaurora' );
 		}

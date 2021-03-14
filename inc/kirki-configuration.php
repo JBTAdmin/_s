@@ -190,9 +190,9 @@ Kirki::add_field(
 		),
 		'choices'     => [
 			'labels' => [
-				'padding-top'  => esc_html__( 'Padding Top', 'aaurora' ),
-				'padding-bottom'  => esc_html__( 'Padding Bottom', 'aaurora' ),
-				'padding-left'  => esc_html__( 'Padding Left', 'aaurora' ),
+				'padding-top'    => esc_html__( 'Padding Top', 'aaurora' ),
+				'padding-bottom' => esc_html__( 'Padding Bottom', 'aaurora' ),
+				'padding-left'   => esc_html__( 'Padding Left', 'aaurora' ),
 				'padding-right'  => esc_html__( 'Padding Right', 'aaurora' ),
 			],
 		],
@@ -220,9 +220,9 @@ Kirki::add_field(
 		),
 		'choices'     => [
 			'labels' => [
-				'margin-top'  => esc_html__( 'Margin Top', 'aaurora' ),
-				'margin-bottom'  => esc_html__( 'Margin Bottom', 'aaurora' ),
-				'margin-left'  => esc_html__( 'Margin Left', 'aaurora' ),
+				'margin-top'    => esc_html__( 'Margin Top', 'aaurora' ),
+				'margin-bottom' => esc_html__( 'Margin Bottom', 'aaurora' ),
+				'margin-left'   => esc_html__( 'Margin Left', 'aaurora' ),
 				'margin-right'  => esc_html__( 'Margin Right', 'aaurora' ),
 			],
 		],
@@ -250,9 +250,9 @@ Kirki::add_field(
 		),
 		'choices'     => [
 			'labels' => [
-				'padding-top'  => esc_html__( 'Padding Top', 'aaurora' ),
-				'padding-bottom'  => esc_html__( 'Padding Bottom', 'aaurora' ),
-				'padding-left'  => esc_html__( 'Padding Left', 'aaurora' ),
+				'padding-top'    => esc_html__( 'Padding Top', 'aaurora' ),
+				'padding-bottom' => esc_html__( 'Padding Bottom', 'aaurora' ),
+				'padding-left'   => esc_html__( 'Padding Left', 'aaurora' ),
 				'padding-right'  => esc_html__( 'Padding Right', 'aaurora' ),
 			],
 		],
@@ -280,9 +280,9 @@ Kirki::add_field(
 		),
 		'choices'     => [
 			'labels' => [
-				'margin-top'  => esc_html__( 'Margin Top', 'aaurora' ),
-				'margin-bottom'  => esc_html__( 'Margin Bottom', 'aaurora' ),
-				'margin-left'  => esc_html__( 'Margin Left', 'aaurora' ),
+				'margin-top'    => esc_html__( 'Margin Top', 'aaurora' ),
+				'margin-bottom' => esc_html__( 'Margin Bottom', 'aaurora' ),
+				'margin-left'   => esc_html__( 'Margin Left', 'aaurora' ),
 				'margin-right'  => esc_html__( 'Margin Right', 'aaurora' ),
 			],
 		],
@@ -310,9 +310,9 @@ Kirki::add_field(
 		),
 		'choices'     => [
 			'labels' => [
-				'padding-top'  => esc_html__( 'Padding Top', 'aaurora' ),
-				'padding-bottom'  => esc_html__( 'Padding Bottom', 'aaurora' ),
-				'padding-left'  => esc_html__( 'Padding Left', 'aaurora' ),
+				'padding-top'    => esc_html__( 'Padding Top', 'aaurora' ),
+				'padding-bottom' => esc_html__( 'Padding Bottom', 'aaurora' ),
+				'padding-left'   => esc_html__( 'Padding Left', 'aaurora' ),
 				'padding-right'  => esc_html__( 'Padding Right', 'aaurora' ),
 			],
 		],
@@ -340,9 +340,9 @@ Kirki::add_field(
 		),
 		'choices'     => [
 			'labels' => [
-				'margin-top'  => esc_html__( 'Margin Top', 'aaurora' ),
-				'margin-bottom'  => esc_html__( 'Margin Bottom', 'aaurora' ),
-				'margin-left'  => esc_html__( 'Margin Left', 'aaurora' ),
+				'margin-top'    => esc_html__( 'Margin Top', 'aaurora' ),
+				'margin-bottom' => esc_html__( 'Margin Bottom', 'aaurora' ),
+				'margin-left'   => esc_html__( 'Margin Left', 'aaurora' ),
 				'margin-right'  => esc_html__( 'Margin Right', 'aaurora' ),
 			],
 		],
@@ -708,8 +708,8 @@ Kirki::add_field(
 		'placeholder' => esc_html__( 'Select Single Post Layout.', 'aaurora' ),
 		'multiple'    => 0,
 		'choices'     => array(
-			'aaurora-single-post' => esc_html__( 'Layout 1', 'aaurora' ),
-			'layout-2' => esc_html__( 'Layout 2-No', 'aaurora' ),
+			'aaurora-single-post'          => esc_html__( 'Layout 1', 'aaurora' ),
+			'layout-2'                     => esc_html__( 'Layout 2-No', 'aaurora' ),
 			'column-2-title-image'         => esc_html__( 'Layout 3-No', 'aaurora' ),
 			'column-2-title-image-compact' => esc_html__( 'Layout 4-No', 'aaurora' ),
 			'column-2-title-image-column'  => esc_html__( 'Layout 5', 'aaurora' ),
@@ -720,23 +720,23 @@ Kirki::add_field(
 Kirki::add_field(
 	'theme_config_id',
 	array(
-		'type'     => 'sortable',
-		'settings' => 'entry_header_sequence',
-		'label'    => esc_html__( 'Post Elements', 'aaurora' ),
-		'section'  => 'blog_post',
-		'default'  => array(
+		'type'      => 'sortable',
+		'settings'  => 'entry_header_sequence',
+		'label'     => esc_html__( 'Post Elements', 'aaurora' ),
+		'section'   => 'blog_post',
+		'default'   => array(
 			'category',
 			'heading',
 			'thumbnail',
 		),
-		'transport'   => 'auto',
-		'choices'  => array(
+		'transport' => 'auto',
+		'choices'   => array(
 			'category'  => esc_html__( 'Category', 'aaurora' ),
 			'heading'   => esc_html__( 'Heading', 'aaurora' ),
 			'metadata'  => esc_html__( 'Metadata', 'aaurora' ),
 			'thumbnail' => esc_html__( 'Thumbnail', 'aaurora' ),
 		),
-		'priority' => 10,
+		'priority'  => 10,
 	)
 );
 
@@ -792,8 +792,8 @@ Kirki::add_field(
 		'label'       => esc_attr__( 'Title Typography', 'aaurora' ),
 		'section'     => 'blog_post',
 		'default'     => array(
-			'font-family' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
-			'font-size'   => '40px',
+			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
+			'font-size'      => '40px',
 			'variant'        => 'regular',
 			'line-height'    => '1.5',
 			'letter-spacing' => '0',
@@ -985,7 +985,7 @@ Kirki::add_field(
 		'label'       => esc_attr__( 'Blog Title Typography', 'aaurora' ),
 		'section'     => 'fonts',
 		'default'     => array(
-			'font-family' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
+			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
 			'variant'        => 'regular',
 			'font-size'      => '14px',
 			'line-height'    => '1.5',
@@ -1009,7 +1009,7 @@ Kirki::add_field(
 		'label'       => esc_attr__( 'Body Typography', 'aaurora' ),
 		'section'     => 'fonts',
 		'default'     => array(   // TODO  In default can i use Initial as font-family.
-			'font-family' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
+			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
 			'variant'        => 'regular',
 			'font-size'      => '14px',
 			'line-height'    => '1.5',
@@ -1033,7 +1033,7 @@ Kirki::add_field(
 		'label'       => esc_attr__( 'H1 Typography', 'aaurora' ),
 		'section'     => 'fonts',
 		'default'     => array(
-			'font-family' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
+			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
 			'variant'        => 'regular',
 			'font-size'      => '14px',
 			'line-height'    => '1.5',
@@ -1057,7 +1057,7 @@ Kirki::add_field(
 		'label'       => esc_attr__( 'H2 Typography', 'aaurora' ),
 		'section'     => 'fonts',
 		'default'     => array(
-			'font-family' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
+			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
 			'variant'        => 'regular',
 			'font-size'      => '14px',
 			'line-height'    => '1.5',
@@ -1081,7 +1081,7 @@ Kirki::add_field(
 		'label'       => esc_attr__( 'H3 Typography', 'aaurora' ),
 		'section'     => 'fonts',
 		'default'     => array(
-			'font-family' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
+			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
 			'variant'        => 'regular',
 			'font-size'      => '14px',
 			'line-height'    => '1.5',
@@ -1098,7 +1098,7 @@ Kirki::add_field(
 );
 // END SECTION: FONTS.
 
-// SECTION: COLORS
+// SECTION: COLORS.
 Kirki::add_section(
 	'general_color',
 	array(
@@ -1253,7 +1253,7 @@ Kirki::add_field(
 	)
 );
 
-//END SECTION: COLORS
+// END SECTION: COLORS.
 
 // SECTION: SOCIAL.
 Kirki::add_section(

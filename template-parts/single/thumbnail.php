@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $in_style = false;
 
-if(in_array(get_theme_mod( 'blog_post_header_location', 'column-2-title-image' ), array( 'column-2-title-image', 'column-2-title-image-compact' ), true)){
+if ( in_array( get_theme_mod( 'blog_post_header_location', 'column-2-title-image' ), array( 'column-2-title-image', 'column-2-title-image-compact' ), true ) ) {
 	$in_style = true;
 }
 

@@ -8,7 +8,7 @@
  */
 // todo Viveka where we are using this
 ( function( $ ) {
-	// Site title and description.
+// Site title and description.
 	wp.customize(
 		'blogname',
 		function( value ) {
@@ -30,7 +30,7 @@
 		}
 	);
 
-	// Header text color.
+// Header text color.
 	wp.customize(
 		'header_textcolor',
 		function( value ) {

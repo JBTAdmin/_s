@@ -1,6 +1,7 @@
 <?php
 /**
  * Core Theme setup.
+ *
  * @package aaurora
  */
 
