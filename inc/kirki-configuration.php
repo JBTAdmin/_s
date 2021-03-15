@@ -1117,7 +1117,7 @@ Kirki::add_field(
 		'label'       => esc_attr__( 'Theme Color', 'aaurora' ),
 		'description' => '',
 		'section'     => 'general',
-		'default'     => '#ffd01b',
+		'default'     => '#165df5',
 		'output'      => array(
 			array(
 				'element'  => ':root',
@@ -1140,6 +1140,24 @@ Kirki::add_field(
 			array(
 				'element'  => ':root',
 				'property' => '--theme-color',
+			),
+		),
+	)
+);
+
+Kirki::add_field(
+	'aaurora_theme_options',
+	array(
+		'type'        => 'color',
+		'settings'    => 'second_color_theme',
+		'label'       => esc_attr__( 'Secondary Theme color', 'aaurora' ),
+		'description' => '',
+		'section'     => 'general_color',
+		'default'     => '#fff',
+		'output'      => array(
+			array(
+				'element'  => ':root',
+				'property' => '--second-theme-color',
 			),
 		),
 	)

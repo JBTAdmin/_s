@@ -73,6 +73,8 @@
   font-size: 16px;
   font-weight: 700;
   line-height: 3;
+  border: 1px solid rgb(237, 238, 241);
+  transition: all 0.4s ease-in-out;
 }
 
 //.navigation li a,
@@ -83,14 +85,18 @@
   text-decoration: none;
 }
 
+.navigation li a.next {
+  background-color: rgb(247, 248, 250);
+}
+
 .navigation li a:hover,
 .navigation li span.current,  // todo there another style above
 .navigation li.disabled {
   background-color: $theme__color;
   border: 1px solid $theme__color;
-  font-size: 17px;
+  //font-size: 17px;
   cursor: pointer;
-  color: $body_text_dark_color;
+  color: $second__theme__color;
 }
 
 @media screen and (max-width: 768px) {

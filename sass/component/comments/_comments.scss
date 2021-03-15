@@ -89,7 +89,7 @@
 
 .reply a {
   text-transform: uppercase;
-  color: rgb(217, 10, 44);
+  color: $theme__color; //rgb(217, 10, 44);
   font-weight: 700;
   letter-spacing: 1px;
   padding: 0;
