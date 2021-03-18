@@ -57,7 +57,7 @@
   font-size: 1.6rem;
 }
 
-.single-post .entry-meta > span:after {
+.single-post .entry-meta > *:not(:last-child):after {
   content: "|";
   display: inline-block;
   margin-left: 7px;

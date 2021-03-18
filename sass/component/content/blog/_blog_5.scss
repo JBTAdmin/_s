@@ -1,13 +1,16 @@
-.blog-5 {
-  //& > article {
-  //  margin-bottom: 3rem;
-  //}
+.article-container.blog-5 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
 
+  & > article {
+    padding: unset;
+  }
   & .inner-entry {
     background: linear-gradient(to right, #0099f7, #f11712);
 
-    &:hover {
-      box-shadow: 0 7px 30px -10px rgba(133, 153, 162, 0.5);
+    &:hover a > img {
+      transform: scale(1.2);
     }
   }
 
@@ -27,24 +30,19 @@
     font-size: 3rem;
     line-height: 1.2;
   }
+  & .post-thumbnail {
+    min-height: 40rem;
+
+    & > a > img {
+      transition: transform 0.5s ease-in-out;
+    }
+  }
+
   //todo should be removed as it is not used
   & .post-thumbnail:not(.no-post-thumbnail) {
-    padding-top: 100%;
-    min-width: 100%;
-    border-radius: 1rem;
-    cursor: pointer;
-    flex: 1 0 100%;
-    overflow: hidden;
-    width: auto;
-    height: fit-content;
-    height: auto;
-    margin: unset;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     &::after {
       content: " ";
-      background-color: rgba(45, 45, 45, 0.35);
+      background-color: rgba(23, 22, 26, 0.45);
       position: absolute;
       top: 0;
       left: 0;
@@ -56,5 +54,17 @@
 
   & .post-thumbnail-drop-case {
     align-items: flex-end;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .article-container.blog-5 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .article-container.blog-5 {
+    grid-template-columns: repeat(1, 1fr);
   }
 }

@@ -158,7 +158,7 @@ if ( ! function_exists( 'aaurora_excerpt' ) ) {
 
 add_image_size( 'aaurora-blog-1-featured-image', 540, 320, true ); // This is used for Blog Layout 1.
 add_image_size( 'aaurora-blog-2-featured-image', 540, 185, true ); // This is used for Blog Layout 2.
-add_image_size( 'aaurora-blog-5-featured-image', 540, 585, true ); // This is used for Blog Layout 5.
+add_image_size( 'aaurora-blog-5-featured-image', 762, 898, true ); // This is used for Blog Layout 5.
 
 add_image_size( 'aaurora-single-post', 1140, 500, true );
 add_image_size( 'aaurora-blog-single-post-sidebar', 400, 500, true );

@@ -802,13 +802,7 @@ Kirki::add_field(
 		'description' => esc_attr__( 'Single Post Title Typography.', 'aaurora' ),
 		'output'      => array(
 			array(
-				'choice'   => 'font-size',
-				'element'  => ':root',
-				'property' => '--font_size_post-title_mobile',
-			),
-			array(
-				'choice'  => 'font-family',
-				'element' => 'h1.entry-title',
+				'element' => array( 'h1.entry-title' ),
 			),
 		),
 	)

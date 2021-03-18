@@ -13,7 +13,7 @@
 <article id="post-<?php the_ID(); ?>">
 	<div  class="inner-entry">
 
-		<?php aaurora_post_thumbnail( 'aaurora-blog-5-featured-image', aaurora_posted_on( true ), true ); ?>
+		<?php aaurora_post_thumbnail( 'aaurora-blog-5-featured-image', aaurora_posted_on( true ), false ); ?>
 
 		<div class="entry-header">
 			<div class="posted-on">
