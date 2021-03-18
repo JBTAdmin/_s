@@ -188,14 +188,14 @@ Kirki::add_field(
 			'padding-left'   => '1vh',
 			'padding-right'  => '1vh',
 		),
-		'choices'     => [
-			'labels' => [
+		'choices'     => array(
+			'labels' => array(
 				'padding-top'    => esc_html__( 'Padding Top', 'aaurora' ),
 				'padding-bottom' => esc_html__( 'Padding Bottom', 'aaurora' ),
 				'padding-left'   => esc_html__( 'Padding Left', 'aaurora' ),
 				'padding-right'  => esc_html__( 'Padding Right', 'aaurora' ),
-			],
-		],
+			),
+		),
 		'output'      => array(
 			array(
 				'element' => '.main-container',
@@ -218,14 +218,14 @@ Kirki::add_field(
 			'margin-left'   => '1vh',
 			'margin-right'  => '1vh',
 		),
-		'choices'     => [
-			'labels' => [
+		'choices'     => array(
+			'labels' => array(
 				'margin-top'    => esc_html__( 'Margin Top', 'aaurora' ),
 				'margin-bottom' => esc_html__( 'Margin Bottom', 'aaurora' ),
 				'margin-left'   => esc_html__( 'Margin Left', 'aaurora' ),
 				'margin-right'  => esc_html__( 'Margin Right', 'aaurora' ),
-			],
-		],
+			),
+		),
 		'output'      => array(
 			array(
 				'element' => '.main-container',
@@ -248,14 +248,14 @@ Kirki::add_field(
 			'padding-left'   => '1vh',
 			'padding-right'  => '1vh',
 		),
-		'choices'     => [
-			'labels' => [
+		'choices'     => array(
+			'labels' => array(
 				'padding-top'    => esc_html__( 'Padding Top', 'aaurora' ),
 				'padding-bottom' => esc_html__( 'Padding Bottom', 'aaurora' ),
 				'padding-left'   => esc_html__( 'Padding Left', 'aaurora' ),
 				'padding-right'  => esc_html__( 'Padding Right', 'aaurora' ),
-			],
-		],
+			),
+		),
 		'output'      => array(
 			array(
 				'element' => '.primary-content',
@@ -278,14 +278,14 @@ Kirki::add_field(
 			'margin-left'   => '1vh',
 			'margin-right'  => '1vh',
 		),
-		'choices'     => [
-			'labels' => [
+		'choices'     => array(
+			'labels' => array(
 				'margin-top'    => esc_html__( 'Margin Top', 'aaurora' ),
 				'margin-bottom' => esc_html__( 'Margin Bottom', 'aaurora' ),
 				'margin-left'   => esc_html__( 'Margin Left', 'aaurora' ),
 				'margin-right'  => esc_html__( 'Margin Right', 'aaurora' ),
-			],
-		],
+			),
+		),
 		'output'      => array(
 			array(
 				'element' => '.primary-content',
@@ -308,14 +308,14 @@ Kirki::add_field(
 			'padding-left'   => '1vh',
 			'padding-right'  => '1vh',
 		),
-		'choices'     => [
-			'labels' => [
+		'choices'     => array(
+			'labels' => array(
 				'padding-top'    => esc_html__( 'Padding Top', 'aaurora' ),
 				'padding-bottom' => esc_html__( 'Padding Bottom', 'aaurora' ),
 				'padding-left'   => esc_html__( 'Padding Left', 'aaurora' ),
 				'padding-right'  => esc_html__( 'Padding Right', 'aaurora' ),
-			],
-		],
+			),
+		),
 		'output'      => array(
 			array(
 				'element' => 'aside:not(.sidebar-alt)',
@@ -338,14 +338,14 @@ Kirki::add_field(
 			'margin-left'   => '1vh',
 			'margin-right'  => '1vh',
 		),
-		'choices'     => [
-			'labels' => [
+		'choices'     => array(
+			'labels' => array(
 				'margin-top'    => esc_html__( 'Margin Top', 'aaurora' ),
 				'margin-bottom' => esc_html__( 'Margin Bottom', 'aaurora' ),
 				'margin-left'   => esc_html__( 'Margin Left', 'aaurora' ),
 				'margin-right'  => esc_html__( 'Margin Right', 'aaurora' ),
-			],
-		],
+			),
+		),
 		'output'      => array(
 			array(
 				'element' => 'aside:not(.sidebar-alt)',
