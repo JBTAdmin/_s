@@ -31,6 +31,10 @@
     margin-bottom: 1.5rem;
   }
 
+  & .post-thumbnail {
+    margin: 0;
+  }
+
   & .post-thumbnail img {
     display: block;
   }
@@ -50,7 +54,7 @@
   }
 
   & .post-thumbnail-drop-case {
-    height: 25rem;
+    //height: 25rem;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -61,7 +65,7 @@
     //color: #fff;
     font-family: Serif;
     overflow: hidden;
-    transition: transform 1s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+    transition: transform 0.5s cubic-bezier(0.46, 0.03, 0.52, 0.96);
   }
 
   & .post-thumbnail .post-date {

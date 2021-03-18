@@ -27,6 +27,9 @@
   flex: 100%;
 }
 
+.post-thumbnail {
+  margin: 2rem 0;
+}
 .post-thumbnail.in-style {
   align-self: stretch;
   background-repeat: no-repeat;
@@ -72,5 +75,5 @@
 }
 
 .meta-data {
-  margin-bottom: 3rem;
+  margin: 3rem 0;
 }

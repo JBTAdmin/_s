@@ -1655,6 +1655,9 @@ div[class*="footer-sidebar-"] {
   font-weight: 700;
   margin-bottom: 1.5rem; }
 
+.article-container .post-thumbnail {
+  margin: 0; }
+
 .article-container .post-thumbnail img {
   display: block; }
 
@@ -1679,7 +1682,6 @@ div[class*="footer-sidebar-"] {
   line-height: 1; }
 
 .article-container .post-thumbnail-drop-case {
-  height: 25rem;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1694,11 +1696,11 @@ div[class*="footer-sidebar-"] {
   color: rgba(255, 255, 255, 0.3);
   font-family: Serif;
   overflow: hidden;
-  -webkit-transition: -webkit-transform 1s cubic-bezier(0.46, 0.03, 0.52, 0.96);
-  transition: -webkit-transform 1s cubic-bezier(0.46, 0.03, 0.52, 0.96);
-  -o-transition: transform 1s cubic-bezier(0.46, 0.03, 0.52, 0.96);
-  transition: transform 1s cubic-bezier(0.46, 0.03, 0.52, 0.96);
-  transition: transform 1s cubic-bezier(0.46, 0.03, 0.52, 0.96), -webkit-transform 1s cubic-bezier(0.46, 0.03, 0.52, 0.96); }
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  transition: -webkit-transform 0.5s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  -o-transition: transform 0.5s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  transition: transform 0.5s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  transition: transform 0.5s cubic-bezier(0.46, 0.03, 0.52, 0.96), -webkit-transform 0.5s cubic-bezier(0.46, 0.03, 0.52, 0.96); }
 
 .article-container .post-thumbnail .post-date {
   position: absolute;
@@ -1971,7 +1973,7 @@ div[class*="footer-sidebar-"] {
     font-size: 3rem;
     line-height: 1.2; }
   .article-container.blog-5 .post-thumbnail {
-    min-height: 40rem; }
+    min-height: 35rem; }
     .article-container.blog-5 .post-thumbnail > a > img {
       -webkit-transition: -webkit-transform 0.5s ease-in-out;
       transition: -webkit-transform 0.5s ease-in-out;
@@ -2007,6 +2009,9 @@ div[class*="footer-sidebar-"] {
       -ms-flex: 100%;
           flex: 100%; }
 
+.post-thumbnail {
+  margin: 2rem 0; }
+
 .post-thumbnail.in-style {
   -ms-flex-item-align: stretch;
       align-self: stretch;
@@ -2041,7 +2046,7 @@ div[class*="footer-sidebar-"] {
   position: relative; }
 
 .meta-data {
-  margin-bottom: 3rem; }
+  margin: 3rem 0; }
 
 .column-2-title-image .wrap {
   width: 100%;
@@ -2126,8 +2131,6 @@ div[class*="footer-sidebar-"] {
     .column-2-title-image-column .wrap > div img {
       display: block;
       border-radius: 1rem; }
-  .column-2-title-image-column .wrap .meta-data {
-    padding: 5rem; }
 
 .subscribe-form {
   display: -webkit-box;
