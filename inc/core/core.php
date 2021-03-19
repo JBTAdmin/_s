@@ -150,7 +150,7 @@ if ( ! function_exists( 'aaurora_excerpt' ) ) {
 	 * @since 1.0.0
 	 */
 	function aaurora_excerpt( $limit = 50 ) {
-		esc_html( wp_trim_words( get_the_excerpt(), $limit ) );
+		echo wp_trim_words( get_the_excerpt(), $limit );
 	}
 }
 

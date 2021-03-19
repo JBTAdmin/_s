@@ -2114,17 +2114,17 @@ div[class*="footer-sidebar-"] ul {
 	margin-bottom: 5rem;
 }
 
-.blog-3 > article {
+.blog-1 > article {
 	-ms-flex-preferred-size: 100%;
 	flex-basis: 100%;
 	margin-bottom: 5rem;
 }
 
-.blog-3 .entry-meta {
+.blog-1 .entry-meta {
 	color: inherit;
 }
 
-.blog-3 .inner-entry {
+.blog-1 .inner-entry {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -2132,27 +2132,27 @@ div[class*="footer-sidebar-"] ul {
 	border: none !important;
 }
 
-.blog-3 .inner-entry .posted-on {
+.blog-1 .inner-entry .posted-on {
 	color: rgba(0, 0, 0, 0.4);
 }
 
-.blog-3 .inner-entry > div {
+.blog-1 .inner-entry > div {
 	-webkit-box-flex: 1;
 	-ms-flex: 1 1 50%;
 	flex: 1 1 50%;
 }
 
-.blog-3 .inner-entry:hover a {
+.blog-1 .inner-entry:hover a {
 	color: #165df5;
 }
 
-.blog-3 .entry-title {
+.blog-1 .entry-title {
 	font-size: 3.5rem;
 	line-height: 120%;
 	margin-right: 4rem;
 }
 
-.blog-3 .entry-excerpt {
+.blog-1 .entry-excerpt {
 	margin-top: 3rem;
 }
 
@@ -2169,12 +2169,12 @@ div[class*="footer-sidebar-"] ul {
 	}
 }
 
-.blog-4 .inner-article {
+.blog-2 .inner-article {
 	position: relative;
 	height: 100%;
 }
 
-.blog-4 .inner-article::before {
+.blog-2 .inner-article::before {
 	content: "";
 	position: absolute;
 	background: #dadce0;
@@ -2186,17 +2186,17 @@ div[class*="footer-sidebar-"] ul {
 	border-radius: 12px;
 }
 
-.blog-4 .inner-entry {
+.blog-2 .inner-entry {
 	padding: 2rem;
 }
 
-.blog-4 .inner-entry:hover {
+.blog-2 .inner-entry:hover {
 	-webkit-transform: translate(-0.3rem, -0.3rem);
 	-ms-transform: translate(-0.3rem, -0.3rem);
 	transform: translate(-0.3rem, -0.3rem);
 }
 
-.blog-4 .entry-title {
+.blog-2 .entry-title {
 	font-weight: 500;
 }
 
@@ -2221,29 +2221,29 @@ div[class*="footer-sidebar-"] ul {
 	margin-bottom: 2rem;
 }
 
-.article-container.blog-5 {
+.article-container.blog-3 {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 2rem;
 }
 
-.article-container.blog-5 > article {
+.article-container.blog-3 > article {
 	padding: unset;
 }
 
-.article-container.blog-5 .inner-entry {
+.article-container.blog-3 .inner-entry {
 	background: -webkit-gradient(linear, left top, right top, from(#0099f7), to(#f11712));
 	background: -o-linear-gradient(left, #0099f7, #f11712);
 	background: linear-gradient(to right, #0099f7, #f11712);
 }
 
-.article-container.blog-5 .inner-entry:hover a > img {
+.article-container.blog-3 .inner-entry:hover a > img {
 	-webkit-transform: scale(1.2);
 	-ms-transform: scale(1.2);
 	transform: scale(1.2);
 }
 
-.article-container.blog-5 .entry-header {
+.article-container.blog-3 .entry-header {
 	padding: 1rem 3rem;
 	position: absolute;
 	bottom: 0;
@@ -2256,17 +2256,17 @@ div[class*="footer-sidebar-"] ul {
 	border-bottom-right-radius: 10px;
 }
 
-.article-container.blog-5 .entry-title {
+.article-container.blog-3 .entry-title {
 	font-weight: 900;
 	font-size: 3rem;
 	line-height: 1.2;
 }
 
-.article-container.blog-5 .post-thumbnail {
+.article-container.blog-3 .post-thumbnail {
 	min-height: 35rem;
 }
 
-.article-container.blog-5 .post-thumbnail > a > img {
+.article-container.blog-3 .post-thumbnail > a > img {
 	-webkit-transition: -webkit-transform 0.5s ease-in-out;
 	transition: -webkit-transform 0.5s ease-in-out;
 	-o-transition: transform 0.5s ease-in-out;
@@ -2274,7 +2274,7 @@ div[class*="footer-sidebar-"] ul {
 	transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
 
-.article-container.blog-5 .post-thumbnail:not(.no-post-thumbnail)::after {
+.article-container.blog-3 .post-thumbnail:not(.no-post-thumbnail)::after {
 	content: " ";
 	background-color: rgba(23, 22, 26, 0.45);
 	position: absolute;
@@ -2285,7 +2285,7 @@ div[class*="footer-sidebar-"] ul {
 	border-radius: 1rem;
 }
 
-.article-container.blog-5 .post-thumbnail-drop-case {
+.article-container.blog-3 .post-thumbnail-drop-case {
 	-webkit-box-align: end;
 	-ms-flex-align: end;
 	align-items: flex-end;
@@ -2303,36 +2303,36 @@ div[class*="footer-sidebar-"] ul {
 	}
 }
 
-.blog-1 .inner-entry:hover {
+.blog-4 .inner-entry:hover {
 	-webkit-box-shadow: 0 7px 30px -10px rgba(133, 153, 162, 0.5);
 	box-shadow: 0 7px 30px -10px rgba(133, 153, 162, 0.5);
 }
 
-.blog-1 .inner-entry:hover .read-more > a {
+.blog-4 .inner-entry:hover .read-more > a {
 	-webkit-transform: translateX(10px);
 	-ms-transform: translateX(10px);
 	transform: translateX(10px);
 }
 
-.blog-1 .inner-entry:hover .post-thumbnail img {
+.blog-4 .inner-entry:hover .post-thumbnail img {
 	-webkit-transform: scale3d(1.05, 1.05, 1.05);
 	transform: scale3d(1.05, 1.05, 1.05);
 }
 
-.blog-1 .entry-title {
+.blog-4 .entry-title {
 	margin-bottom: 0;
 }
 
-.blog-1 .no-post-thumbnail {
+.blog-4 .no-post-thumbnail {
 	border-radius: 1rem 1rem 0 0;
 }
 
-.blog-1 .post-thumbnail {
+.blog-4 .post-thumbnail {
 	width: 100%;
 	overflow: hidden;
 }
 
-.blog-1 .post-thumbnail img {
+.blog-4 .post-thumbnail img {
 	border-radius: 1rem 1rem 0 0;
 	height: 25rem;
 	-webkit-transition: -webkit-transform 500ms ease-in-out;
@@ -2342,13 +2342,13 @@ div[class*="footer-sidebar-"] ul {
 	transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
 }
 
-.blog-1 .entry-header,
-.blog-1 .entry-excerpt,
-.blog-1 .read-more {
+.blog-4 .entry-header,
+.blog-4 .entry-excerpt,
+.blog-4 .read-more {
 	padding: 1rem 2rem;
 }
 
-.blog-1 .read-more > a {
+.blog-4 .read-more > a {
 	font-size: 1.5rem;
 	text-transform: uppercase;
 	font-weight: 500;
@@ -2361,17 +2361,17 @@ div[class*="footer-sidebar-"] ul {
 	align-items: center;
 }
 
-.blog-2 > article:hover .post-thumbnail img {
+.blog-5 > article:hover .post-thumbnail img {
 	-webkit-transform: scale(1.05) translateZ(0);
 	transform: scale(1.05) translateZ(0);
 	border-radius: 1rem;
 }
 
-.blog-2 .inner-entry {
+.blog-5 .inner-entry {
 	padding: 2rem;
 }
 
-.blog-2 .post-thumbnail {
+.blog-5 .post-thumbnail {
 	display: block;
 	overflow: hidden;
 	border-radius: 1rem;
@@ -2379,7 +2379,7 @@ div[class*="footer-sidebar-"] ul {
 	width: 100%;
 }
 
-.blog-2 .post-thumbnail img {
+.blog-5 .post-thumbnail img {
 	height: 18.5rem;
 	-webkit-transition: -webkit-transform 1s cubic-bezier(0.46, 0.03, 0.52, 0.96);
 	transition: -webkit-transform 1s cubic-bezier(0.46, 0.03, 0.52, 0.96);
@@ -2388,7 +2388,7 @@ div[class*="footer-sidebar-"] ul {
 	transition: transform 1s cubic-bezier(0.46, 0.03, 0.52, 0.96), -webkit-transform 1s cubic-bezier(0.46, 0.03, 0.52, 0.96);
 }
 
-.blog-2 .no-post-thumbnail {
+.blog-5 .no-post-thumbnail {
 	height: 18.5rem;
 }
 
