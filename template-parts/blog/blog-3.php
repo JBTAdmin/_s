@@ -9,11 +9,13 @@
  */
 
 ?>
-<!--todo having some issues. Need to check. -->
-<article id="post-<?php the_ID(); ?>">
 
-<div class="inner-entry">
-		<div class="entry-meta">
+<article id="post-<?php the_ID(); ?>">
+	<div  class="inner-entry">
+
+		<?php aaurora_post_thumbnail( 'aaurora-blog-5-featured-image', aaurora_posted_on( true ), false ); ?>
+
+		<div class="entry-header">
 			<div class="posted-on">
 				<?php aaurora_posted_on(); ?>
 			</div>
@@ -21,12 +23,6 @@
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 			?>
 		</div>
+	</div>
 
-		<div class="entry-excerpt">
-			<a href="<?php echo esc_url( get_permalink() ); ?>">
-				<?php aaurora_excerpt( 20 ); ?>
-			</a>
-		</div>
-
-</div>
 </article><!-- #post-<?php the_ID(); ?> -->

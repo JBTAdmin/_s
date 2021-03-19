@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying posts in blog layout.
+ * Template part for displaying posts
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -11,29 +11,25 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>">
-	<div class="inner-article">
-		<div class="inner-entry">
-			<div class="entry-header">
-				<div class="entry-meta">
-					<div class="posted_on">
-						<?php echo aaurora_posted_on( true ); ?>
-					</div>
+	<div class="inner-entry">
+
+		<?php aaurora_post_thumbnail( 'aaurora-blog-1-featured-image', aaurora_posted_on( true ) ); ?>
+
+		<div class="entry-header">
+			<div class="entry-meta">
+				<div class="posted-on">
+					<?php aaurora_posted_on(); ?>
 				</div>
-				<?php
-				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-				?>
-			</div><!-- .entry-header -->
-			<div class="entry-footer">
-				<div class="entry-meta">
-					<span class="cat-links">
-						<?php
-						$categories = get_the_category();
-						if ( ! empty( $categories ) ) {
-							echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
-						}
-						?>
-					</span>
-				</div>
+			</div>
+			<?php
+			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			?>
+		</div>
+<!--         todo a better naming could be entry-excerpt-->
+		<div class="entry-excerpt">
+			<?php aaurora_excerpt( 20 ); ?>
+			<div class="read-more">
+				<a href="<?php echo esc_url( get_permalink() ); ?>"><?php esc_html_e( 'read more', 'aaurora' ); ?> <?php load_inline_svg( 'arrow-right-circle.svg' ); ?></a>
 			</div>
 		</div>
 	</div>

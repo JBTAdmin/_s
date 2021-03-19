@@ -672,14 +672,14 @@ Kirki::add_field(
 		'settings'    => 'blog_layout_setting',
 		'label'       => esc_attr__( 'Blog Layout', 'aaurora' ),
 		'section'     => 'blog_settings',
-		'default'     => '4',
+		'default'     => '2',
 		'multiple'    => 0,
 		'choices'     => array(
-			'1' => esc_attr__( 'Layout 1-No', 'aaurora' ),
-			'2' => esc_attr__( 'Layout 2-No', 'aaurora' ),
+			'1' => esc_attr__( 'Layout 1', 'aaurora' ),
+			'2' => esc_attr__( 'Layout 2', 'aaurora' ),
 			'3' => esc_attr__( 'Layout 3', 'aaurora' ),
-			'4' => esc_attr__( 'Layout 4', 'aaurora' ),
-			'5' => esc_attr__( 'Layout 5', 'aaurora' ),
+			'4' => esc_attr__( 'Layout 4-No', 'aaurora' ),
+			'5' => esc_attr__( 'Layout 5-No', 'aaurora' ),
 		),
 		'description' => esc_attr__( 'Here you can select which layout will be used to display the blog posts on Home or Index pages.', 'aaurora' ),
 	)
@@ -709,10 +709,11 @@ Kirki::add_field(
 		'multiple'    => 0,
 		'choices'     => array(
 			'aaurora-single-post'          => esc_html__( 'Layout 1', 'aaurora' ),
-			'layout-2'                     => esc_html__( 'Layout 2-No', 'aaurora' ),
+			'column-2-title-image-column'  => esc_html__( 'Layout 2', 'aaurora' ),
 			'column-2-title-image'         => esc_html__( 'Layout 3-No', 'aaurora' ),
 			'column-2-title-image-compact' => esc_html__( 'Layout 4-No', 'aaurora' ),
-			'column-2-title-image-column'  => esc_html__( 'Layout 5', 'aaurora' ),
+			'layout-2'                     => esc_html__( 'Layout 5-No', 'aaurora' ),
+			
 		),
 	)
 );
@@ -899,7 +900,7 @@ Kirki::add_field(
 		'settings'    => 'footer_layout_setting',
 		'label'       => esc_attr__( 'Layout', 'aaurora' ),
 		'section'     => 'footer',
-		'default'     => '4',
+		'default'     => '2',
 		'multiple'    => 0,
 		'choices'     => array(
 			'1' => esc_attr__( 'Layout 1', 'aaurora' ),

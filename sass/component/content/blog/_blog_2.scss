@@ -1,30 +1,56 @@
-.blog-2 {
-  & > article {
-    &:hover .post-thumbnail img {
-      transform: scale(1.05) translateZ(0);
-      border-radius: 1rem;
-    }
+.blog-4 {
+  //& > article {
+  //  margin-bottom: 3rem;
+  //}
+
+  & .inner-article {
+    position: relative;
+    height: 100%;
+  }
+
+  & .inner-article::before {
+    content: "";
+    position: absolute;
+    background: #dadce0;
+    height: 100%;
+    width: 100%;
+    top: 5px;
+    left: 5px;
+    z-index: -1;
+    border-radius: 12px;
   }
 
   & .inner-entry {
     padding: 2rem;
+
+    &:hover {
+      transform: translate(-0.3rem, -0.3rem);
+    }
   }
 
-  & .post-thumbnail {
-    display: block;
-    overflow: hidden;
-    border-radius: 1rem;
-    position: relative;
-    width: 100%;
+  & .entry-title {
+    font-weight: 500;
   }
+}
 
-  & .post-thumbnail img {
-    height: 18.5rem;
-    transition: transform 1s cubic-bezier(0.46, 0.03, 0.52, 0.96);
-  }
+.entry-meta > .cat-links {
+  background-color: #f5f7f8;
+  //color: #546e7a;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 0.5rem;
+}
 
-  // todo is it needed?
-  & .no-post-thumbnail {
-    height: 18.5rem;
-  }
+.entry-meta > .posted_on {
+  color: #263238;
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+  margin-bottom: 2rem;
 }

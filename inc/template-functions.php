@@ -479,7 +479,7 @@ if ( ! function_exists( 'aaurora_footer_main_layout' ) ) {
 	 * Footer Main Layout Hookds in Footer Content.
 	 */
 	function aaurora_footer_main_layout() {
-		get_template_part( 'template-parts/footers/footer', get_theme_mod( 'footer_layout_setting', '3' ), get_post_type() );
+		get_template_part( 'template-parts/footers/footer', get_theme_mod( 'footer_layout_setting', '2' ), get_post_type() );
 	}
 }
 

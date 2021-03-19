@@ -1,21 +1,30 @@
-.column-2-title-image-column {
+.column-2-title-image-compact {
   & .wrap {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    background-color: #f5f5f5;
     margin-top: 5rem;
     & > div {
       //flex-basis: 50%;
       flex: 1 1 50%;
-      & img {
-        display: block;
-        border-radius: 1rem;
-      }
     }
-    //& .meta-data {
-    //  padding: 5rem;
-    //}
+
+    & .post-thumbnail {
+      border-bottom-left-radius: 1rem;
+      border-top-left-radius: 1rem;
+    }
+
+    & .meta-data {
+      padding: 5rem;
+      border-bottom-right-radius: 1rem;
+      border-top-right-radius: 1rem;
+    }
+  }
+
+  //todo combine some css
+  & .entry-title {
+    font-size: 5rem;
   }
 }

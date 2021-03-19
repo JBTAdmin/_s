@@ -1,70 +1,30 @@
-.article-container.blog-5 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2rem;
-
+.blog-2 {
   & > article {
-    padding: unset;
-  }
-  & .inner-entry {
-    background: linear-gradient(to right, #0099f7, #f11712);
-
-    &:hover a > img {
-      transform: scale(1.2);
-    }
-  }
-
-  & .entry-header {
-    padding: 1rem 3rem;
-    position: absolute;
-    bottom: 0;
-    color: #fff;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 1), transparent);
-    width: 100%;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-  }
-
-  & .entry-title {
-    font-weight: 900;
-    font-size: 3rem;
-    line-height: 1.2;
-  }
-  & .post-thumbnail {
-    min-height: 35rem;
-
-    & > a > img {
-      transition: transform 0.5s ease-in-out;
-    }
-  }
-
-  //todo should be removed as it is not used
-  & .post-thumbnail:not(.no-post-thumbnail) {
-    &::after {
-      content: " ";
-      background-color: rgba(23, 22, 26, 0.45);
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
+    &:hover .post-thumbnail img {
+      transform: scale(1.05) translateZ(0);
       border-radius: 1rem;
     }
   }
 
-  & .post-thumbnail-drop-case {
-    align-items: flex-end;
+  & .inner-entry {
+    padding: 2rem;
   }
-}
 
-@media screen and (max-width: 1200px) {
-  .article-container.blog-5 {
-    grid-template-columns: repeat(2, 1fr);
+  & .post-thumbnail {
+    display: block;
+    overflow: hidden;
+    border-radius: 1rem;
+    position: relative;
+    width: 100%;
   }
-}
 
-@media screen and (max-width: 900px) {
-  .article-container.blog-5 {
-    grid-template-columns: repeat(1, 1fr);
+  & .post-thumbnail img {
+    height: 18.5rem;
+    transition: transform 1s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  }
+
+  // todo is it needed?
+  & .no-post-thumbnail {
+    height: 18.5rem;
   }
 }
