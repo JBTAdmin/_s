@@ -7,6 +7,19 @@
   flex-wrap: wrap;
 }
 
+.single,
+.page {
+  & .main-container a {
+    color: $theme__color;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: none;
+    }
+  }
+}
 //.site-header + .site-container::before {
 //  content: "";
 //  display: block;
