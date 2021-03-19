@@ -1,6 +1,6 @@
 <?php
 /**
- * Footer elements.
+ * Footer 3 Layout elements.
  *
  * @package Aaurora
  */
@@ -20,28 +20,52 @@ $site_info_text_right = 'Crafted with &#10084; by <a href=""></a> Team';
 			<?php if ( is_active_sidebar( 'aaurora-footer-1' ) ) : ?>
 				<div class="footer-sidebar-1-wrapper">
 					<div class="sidebar footer-sidebar-1-container">
-							<?php dynamic_sidebar( 'aaurora-footer-1' ); ?>
+						<?php dynamic_sidebar( 'aaurora-footer-1' ); ?>
 					</div>
 				</div>
 			<?php endif; ?>
-			<?php if ( is_active_sidebar( 'aaurora-footer-2' ) ) : ?>
+			<?php if ( has_nav_menu( 'footer-1' ) ) : ?>
 				<div class="footer-sidebar-2-wrapper">
-					<div class="sidebar footer-sidebar-2-container">
-							<?php dynamic_sidebar( 'aaurora-footer-2' ); ?>
+					<div class="sidebar footer-sidebar-1-container">
+						<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'footer-1',
+								'menu_class'     => 'footer-menu list-reset',
+								'depth'          => 1,
+							)
+						);
+						?>
 					</div>
 				</div>
 			<?php endif; ?>
-			<?php if ( is_active_sidebar( 'aaurora-footer-3' ) ) : ?>
+			<?php if ( has_nav_menu( 'footer-2' ) ) : ?>
 				<div class="footer-sidebar-3-wrapper">
-					<div class="sidebar footer-sidebar-3-container">
-							<?php dynamic_sidebar( 'aaurora-footer-3' ); ?>
+					<div class="sidebar footer-sidebar-2-container">
+						<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'footer-2',
+								'menu_class'     => 'footer-menu list-reset',
+								'depth'          => 1,
+							)
+						);
+						?>
 					</div>
 				</div>
 			<?php endif; ?>
-			<?php if ( is_active_sidebar( 'aaurora-footer-4' ) ) : ?>
+			<?php if ( has_nav_menu( 'footer-3' ) ) : ?>
 				<div class="footer-sidebar-4-wrapper">
-					<div class="sidebar footer-sidebar-4-container">
-							<?php dynamic_sidebar( 'aaurora-footer-4' ); ?>
+					<div class="sidebar footer-sidebar-3-container">
+						<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'footer-3',
+								'menu_class'     => 'footer-menu list-reset',
+								'depth'          => 1,
+							)
+						);
+						?>
 					</div>
 				</div>
 			<?php endif; ?>
