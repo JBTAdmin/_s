@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Pagination Buttons
  */
-function post_nav() {
+function aaurora_post_nav() {
 	echo "<div class='aaurora-pagination'>";
 	the_posts_pagination(
 		array(
@@ -36,7 +36,7 @@ function post_nav() {
  *
  * @return void
  */
-function load_inline_svg( $filename ) {
+function aaurora_load_inline_svg( $filename ) {
 
 	ob_start();
 

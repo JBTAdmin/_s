@@ -226,7 +226,7 @@ if ( ! function_exists( 'aaurora_content' ) ) {
 				?>
 			</div>
 			<?php
-			post_nav();
+			aaurora_post_nav();
 		} else {
 			get_template_part( 'template-parts/content', 'none' );
 		}
@@ -416,7 +416,7 @@ if ( ! function_exists( 'aaurora_header_search' ) ) {
 		if ( 'header' === get_theme_mod( 'general_search_visibility', 'fixed' ) ) {
 			?>
 			<div class="aaurora-header-search" role="button" tabindex="1">
-				<?php load_inline_svg( 'search.svg' ); ?>
+				<?php aaurora_load_inline_svg( 'search.svg' ); ?>
 			</div>
 			<?php
 		}
@@ -438,7 +438,7 @@ if ( ! function_exists( 'aaurora_hamburger_menu' ) ) {
 			<div class="toggle sidebar-open desktop-sidebar-toggle" data-toggle-target=".sidebar-modal"
 				data-toggle-body-class="showing-sidebar-modal" aria-expanded="false">
 									<span class="toggle-inner">
-										<?php load_inline_svg( 'hamburger.svg' ); ?>
+										<?php aaurora_load_inline_svg( 'hamburger.svg' ); ?>
 									</span>
 			</div>
 		</div>
@@ -499,22 +499,22 @@ if ( ! function_exists( 'aaurora_footer_share_layout' ) ) {
 			?>
 			<div class="aaurora-share fixed visible">
 				<a href="#">
-					<?php load_inline_svg( 'share.svg' ); ?>
+					<?php aaurora_load_inline_svg( 'share.svg' ); ?>
 				</a>
 				<div class="aaurora-share-inner">
 					<a href="https://www.facebook.com/sharer.php?u=<?php echo esc_attr( get_permalink( get_the_ID() ) ); ?>"
 						target="blank" class="fb" rel="nofollow" data-social_name="facebook">
-						<?php load_inline_svg( 'facebook.svg' ); ?>
+						<?php aaurora_load_inline_svg( 'facebook.svg' ); ?>
 					</a>
 
 					<a href="https://twitter.com/intent/tweet?text=<?php echo esc_attr( get_permalink( get_the_ID() ) ); ?>"
 						target="blank" class="tw" rel="nofollow" data-social_name="twitter">
-						<?php load_inline_svg( 'twitter.svg' ); ?>
+						<?php aaurora_load_inline_svg( 'twitter.svg' ); ?>
 					</a>
 
 					<a href="https://www.linkedin.com/cws/share?url=<?php echo esc_attr( get_permalink( get_the_ID() ) ); ?>"
 						target="blank" class="ln" rel="nofollow" data-social_name="linkedin">
-						<?php load_inline_svg( 'linkedin.svg' ); ?>
+						<?php aaurora_load_inline_svg( 'linkedin.svg' ); ?>
 					</a>
 				</div>
 			</div>
@@ -532,7 +532,7 @@ if ( ! function_exists( 'aaurora_footer_popup_search_modal_layout' ) ) {
 		?>
 		<div class="popup_search_modal" tabindex="1">
 			<div class="popup_modal_close_button">
-				<?php load_inline_svg( 'close.svg' ); ?>
+				<?php aaurora_load_inline_svg( 'close.svg' ); ?>
 			</div>
 			<div class="search_holder">
 				<!--        todo hard coding should be removed-->
@@ -558,7 +558,7 @@ if ( ! function_exists( 'aaurora_footer_go_to_top_layout' ) ) {
 		if ( get_theme_mod( 'general_scroll_to_top', 1 ) ) {
 			?>
 			<a class="top-link" href="#" id="js-top" on="tap:masthead.scrollTo" role="button" tabindex="1">
-				<?php load_inline_svg( 'arrow-up.svg' ); ?>
+				<?php aaurora_load_inline_svg( 'arrow-up.svg' ); ?>
 				<span class="screen-reader-text">Back to top</span>
 			</a>
 			<?php
@@ -575,7 +575,7 @@ if ( ! function_exists( 'aaurora_footer_search_layout' ) ) {
 		if ( 'fixed' === get_theme_mod( 'general_search_visibility', 'fixed' ) ) {
 			?>
 			<a class="aaurora-search" href="#">
-				<?php load_inline_svg( 'search.svg' ); ?>
+				<?php aaurora_load_inline_svg( 'search.svg' ); ?>
 				<span class="screen-reader-text">Search</span>
 			</a>
 
@@ -618,7 +618,7 @@ if ( ! function_exists( 'aaurora_social_media' ) ) {
 					<li>
 						<a class="social-link facebook-social-icon"
 							href="<?php echo esc_url( get_theme_mod( 'social_media_fb_url' ) ); ?>" target="_blank">
-							<?php $text_only ? esc_html_e( ' facebook', 'aaurora' ) : load_inline_svg( 'facebook.svg' ); ?>
+							<?php $text_only ? esc_html_e( ' facebook', 'aaurora' ) : aaurora_load_inline_svg( 'facebook.svg' ); ?>
 						</a>
 					</li>
 				<?php endif; ?>
@@ -626,7 +626,7 @@ if ( ! function_exists( 'aaurora_social_media' ) ) {
 					<li>
 						<a class="social-link twitter-social-icon"
 							href="<?php echo esc_url( get_theme_mod( 'social_media_tw_url' ) ); ?>" target="_blank">
-							<?php $text_only ? esc_html_e( ' twitter', 'aaurora' ) : load_inline_svg( 'twitter.svg' ); ?>
+							<?php $text_only ? esc_html_e( ' twitter', 'aaurora' ) : aaurora_load_inline_svg( 'twitter.svg' ); ?>
 						</a>
 					</li>
 				<?php endif; ?>
@@ -634,7 +634,7 @@ if ( ! function_exists( 'aaurora_social_media' ) ) {
 					<li>
 						<a class="social-link instagram-social-icon"
 							href="<?php echo esc_url( get_theme_mod( 'social_media_in_url' ) ); ?>" target="_blank">
-							<?php $text_only ? esc_html_e( ' instagram', 'aaurora' ) : load_inline_svg( 'instagram.svg' ); ?>
+							<?php $text_only ? esc_html_e( ' instagram', 'aaurora' ) : aaurora_load_inline_svg( 'instagram.svg' ); ?>
 						</a>
 					</li>
 				<?php endif; ?>
@@ -642,7 +642,7 @@ if ( ! function_exists( 'aaurora_social_media' ) ) {
 					<li>
 						<a class="social-link linkedin-social-icon"
 							href="<?php echo esc_url( get_theme_mod( 'social_media_ln_url' ) ); ?>" target="_blank">
-							<?php $text_only ? esc_html_e( ' linkedin', 'aaurora' ) : load_inline_svg( 'linkedin.svg' ); ?>
+							<?php $text_only ? esc_html_e( ' linkedin', 'aaurora' ) : aaurora_load_inline_svg( 'linkedin.svg' ); ?>
 						</a>
 					</li>
 				<?php endif; ?>
@@ -650,7 +650,7 @@ if ( ! function_exists( 'aaurora_social_media' ) ) {
 					<li>
 						<a class="social-link youtube-social-icon"
 							href="<?php echo esc_url( get_theme_mod( 'social_media_yt_url' ) ); ?>" target="_blank">
-							<?php $text_only ? esc_html_e( ' youtube', 'aaurora' ) : load_inline_svg( 'youtube.svg' ); ?>
+							<?php $text_only ? esc_html_e( ' youtube', 'aaurora' ) : aaurora_load_inline_svg( 'youtube.svg' ); ?>
 						</a>
 					</li>
 				<?php endif; ?>
@@ -658,7 +658,7 @@ if ( ! function_exists( 'aaurora_social_media' ) ) {
 					<li>
 						<a class="social-link github-social-icon"
 							href="<?php echo esc_url( get_theme_mod( 'social_media_gh_url' ) ); ?>" target="_blank">
-							<?php $text_only ? esc_html_e( ' github', 'aaurora' ) : load_inline_svg( 'github.svg' ); ?>
+							<?php $text_only ? esc_html_e( ' github', 'aaurora' ) : aaurora_load_inline_svg( 'github.svg' ); ?>
 						</a>
 					</li>
 				<?php endif; ?>

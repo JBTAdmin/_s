@@ -29,7 +29,7 @@
 		<div class="entry-excerpt">
 			<?php aaurora_excerpt( 20 ); ?>
 			<div class="read-more">
-				<a href="<?php echo esc_url( get_permalink() ); ?>"><?php esc_html_e( 'read more', 'aaurora' ); ?> <?php load_inline_svg( 'arrow-right-circle.svg' ); ?></a>
+				<a href="<?php echo esc_url( get_permalink() ); ?>"><?php esc_html_e( 'read more', 'aaurora' ); ?> <?php aaurora_load_inline_svg( 'arrow-right-circle.svg' ); ?></a>
 			</div>
 		</div>
 	</div>

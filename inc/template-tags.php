@@ -127,12 +127,12 @@ if ( ! function_exists( 'aaurora_post_thumbnail' ) ) {
 
 		if ( ! has_post_thumbnail() & ! is_singular() ) {
 
-			no_post_thumbnail( $date );
+			aaurora_no_post_thumbnail( $date );
 
 			return;
 		}
 
-		blog_post_thumbnail( $date, $size, $in_style );
+		aaurora_blog_post_thumbnail( $date, $size, $in_style );
 
 	}
 }
@@ -142,7 +142,7 @@ if ( ! function_exists( 'aaurora_post_thumbnail' ) ) {
  *
  * @param string $date Optional. Post date to be included in post thumbnail.
  */
-function no_post_thumbnail( $date = '' ) {
+function aaurora_no_post_thumbnail( $date = '' ) {
 	?>
 	<div class="post-thumbnail no-post-thumbnail">
 		<a href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
@@ -158,7 +158,7 @@ function no_post_thumbnail( $date = '' ) {
 
 			<?php if ( is_sticky() ) : ?>
 				<span class="badge">
-						<?php load_inline_svg( 'sticky.svg' ); ?>
+						<?php aaurora_load_inline_svg( 'sticky.svg' ); ?>
 				</span>
 			<?php endif; ?>
 			<span class="post-date">
@@ -176,7 +176,7 @@ function no_post_thumbnail( $date = '' ) {
  * @param String  $size Size of the featured image.
  * @param boolean $in_style Should image be included as Div or In style.
  */
-function blog_post_thumbnail( $date, $size, $in_style ) {
+function aaurora_blog_post_thumbnail( $date, $size, $in_style ) {
 	if ( $in_style && is_singular() ) {
 		?>
 		<div class="post-thumbnail in-style"
@@ -194,7 +194,7 @@ function blog_post_thumbnail( $date, $size, $in_style ) {
 				if ( is_sticky() ) :
 					?>
 					<span class="badge">
-						<?php load_inline_svg( 'sticky.svg' ); ?>
+						<?php aaurora_load_inline_svg( 'sticky.svg' ); ?>
 				</span>
 				<?php endif; ?>
 				<span class="post-date">
@@ -227,7 +227,7 @@ function blog_post_thumbnail( $date, $size, $in_style ) {
 				if ( is_sticky() ) :
 					?>
 					<span class="badge">
-						<?php load_inline_svg( 'sticky.svg' ); ?>
+						<?php aaurora_load_inline_svg( 'sticky.svg' ); ?>
 				</span>
 				<?php endif; ?>
 				<span class="post-date">

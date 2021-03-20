@@ -21,7 +21,7 @@ $class = 'widget-area sidebar-alt-aside sidebar-alt';
 						<button class="toggle sidebar-close desktop-sidebar-toggle" data-toggle-target=".sidebar-modal"
 								data-toggle-body-class="closing-sidebar-modal" aria-expanded="false">
 									<span class="toggle-inner">
-										<?php load_inline_svg( 'close.svg' ); ?>
+										<?php aaurora_load_inline_svg( 'close.svg' ); ?>
 									</span>
 						</button>
 					</div>
