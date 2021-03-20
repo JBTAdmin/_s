@@ -388,7 +388,7 @@ Kirki::add_field(
 			'menu-left'  => esc_attr__( 'Menu Left, Social Icon Right', 'aaurora' ),
 			'menu-right' => esc_attr__( 'Social Icon Right, Menu Right', 'aaurora' ),
 		),
-		'description' => esc_attr__( 'Select Top Bar Layout.', 'aaurora' ),
+		'description' => esc_attr__( 'Select Top Bar Layout. Menu should be assigned to top bar menu location', 'aaurora' ),
 	)
 );
 

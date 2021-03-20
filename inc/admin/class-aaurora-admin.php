@@ -111,7 +111,7 @@ if ( ! class_exists( 'Aaurora_Admin' ) ) :
 					<a href="<?php echo esc_url( admin_url( 'admin.php?page=aaurora-dashboard' ) ); ?>"
 						class="aaurora-logo">
 						<img src="<?php echo esc_url( get_parent_theme_file_uri() . '/assets/images/aaurora-logo.png' ); ?>"
-							alt="<?php echo esc_html( 'Aaurora' ); ?>"/>
+							alt="<?php esc_html_e( 'Aaurora' ); ?>"/>
 					</a>
 
 				</div>

@@ -13,7 +13,6 @@
  * @since       1.0.0
  */
 
-$sidebar_page_class = '';
 ?>
 
 <?php get_header(); ?>
@@ -28,7 +27,7 @@ $sidebar_page_class = '';
 
 				<?php aaurora_main_content_before(); ?>
 
-				<main id="primary" class="site-main primary-content <?php echo esc_attr( $sidebar_page_class ); ?>">
+				<main id="primary" class="site-main primary-content">
 
 					<?php aaurora_singular_content_before(); ?>
 

@@ -24,7 +24,7 @@
 
 		<div class="entry-excerpt">
 			<a href="<?php echo esc_url( get_permalink() ); ?>">
-				<?php aaurora_excerpt( 20 ); ?>
+				<?php esc_html_e(aaurora_excerpt( 20 )); ?>
 			</a>
 		</div>
 

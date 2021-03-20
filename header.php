@@ -49,8 +49,8 @@ $menu_class .= ' ' . get_theme_mod( 'main_menu_arrow_style', 'noarrow' );
 		<?php esc_html_e( 'Skip to content', 'aaurora' ); ?></a>
 	<header id="masthead" class="site-header
 	<?php
-	echo esc_attr( $header_class );
-	echo esc_attr( $menu_class );
+	esc_attr_e( $header_class );
+	esc_attr_e( $menu_class );
 	?>
 	">
 		<?php aaurora_header_before(); ?>

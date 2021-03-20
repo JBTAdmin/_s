@@ -163,7 +163,7 @@ function aaurora_no_post_thumbnail( $date = '' ) {
 				<div class="post-thumbnail-drop-case">
 					<?php
 					if ( ! empty( get_the_title() ) ) {
-						echo esc_html( get_the_title()[0] );
+					    esc_html_e( get_the_title()[0] );
 					}
 					?>
 				</div>
@@ -174,7 +174,7 @@ function aaurora_no_post_thumbnail( $date = '' ) {
 				</span>
 			<?php endif; ?>
 			<span class="post-date">
-					<?php echo esc_html( $date ); ?>
+					<?php esc_html_e( $date ); ?>
 				</span>
 		</a>
 	</div>

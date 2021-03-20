@@ -13,7 +13,7 @@ $class = 'widget-area sidebar-alt-aside sidebar-alt';
 
 ?>
 <amp-sidebar id="drawermenu" layout="nodisplay" side="right">
-	<aside id="secondary-alt" class="<?php echo esc_attr( $class ); ?>">
+	<aside id="secondary-alt" class="<?php esc_attr_e( $class ); ?>">
 		<div class="wrap">
 			<div class="aside-header-container">
 				<div class="widget aside-header">

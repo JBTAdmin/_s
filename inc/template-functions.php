@@ -222,7 +222,7 @@ if ( ! function_exists( 'aaurora_content' ) ) {
 				}
 				?>
 			</header><!-- .page-header -->
-			<div class="article-container <?php echo esc_attr( $container_class ); ?>">
+			<div class="article-container <?php esc_attr_e( $container_class ); ?>">
 				<?php
 				while ( have_posts() ) :
 					the_post();
@@ -399,7 +399,7 @@ if ( ! function_exists( 'aaurora_site_branding' ) ) {
 					?>
 					<p class="site-description">
 						<?php
-						echo esc_html( $aaurora_description ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped.
+						esc_html_e( $aaurora_description ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped.
 						?>
 					</p>
 					<?php
@@ -440,7 +440,7 @@ if ( ! function_exists( 'aaurora_hamburger_menu' ) ) {
 			$sidebar_alt_class = 'menu_only';
 		}
 		?>
-		<div class="hamburger-menu <?php echo esc_attr( $sidebar_alt_class ); ?>" on="tap:drawermenu.toggle"
+		<div class="hamburger-menu <?php esc_attr_e( $sidebar_alt_class ); ?>" on="tap:drawermenu.toggle"
 			role="button" tabindex="1">
 			<div class="toggle sidebar-open desktop-sidebar-toggle" data-toggle-target=".sidebar-modal"
 				data-toggle-body-class="showing-sidebar-modal" aria-expanded="false">
@@ -510,17 +510,17 @@ if ( ! function_exists( 'aaurora_footer_share_layout' ) ) {
 					<?php aaurora_load_inline_svg( 'share.svg' ); ?>
 				</a>
 				<div class="aaurora-share-inner">
-					<a href="https://www.facebook.com/sharer.php?u=<?php echo esc_attr( get_permalink( get_the_ID() ) ); ?>"
+					<a href="https://www.facebook.com/sharer.php?u=<?php esc_attr_e( get_permalink( get_the_ID() ) ); ?>"
 						target="blank" class="fb" rel="nofollow" data-social_name="facebook">
 						<?php aaurora_load_inline_svg( 'facebook.svg' ); ?>
 					</a>
 
-					<a href="https://twitter.com/intent/tweet?text=<?php echo esc_attr( get_permalink( get_the_ID() ) ); ?>"
+					<a href="https://twitter.com/intent/tweet?text=<?php esc_attr_e( get_permalink( get_the_ID() ) ); ?>"
 						target="blank" class="tw" rel="nofollow" data-social_name="twitter">
 						<?php aaurora_load_inline_svg( 'twitter.svg' ); ?>
 					</a>
 
-					<a href="https://www.linkedin.com/cws/share?url=<?php echo esc_attr( get_permalink( get_the_ID() ) ); ?>"
+					<a href="https://www.linkedin.com/cws/share?url=<?php esc_attr_e( get_permalink( get_the_ID() ) ); ?>"
 						target="blank" class="ln" rel="nofollow" data-social_name="linkedin">
 						<?php aaurora_load_inline_svg( 'linkedin.svg' ); ?>
 					</a>
@@ -549,7 +549,7 @@ if ( ! function_exists( 'aaurora_footer_popup_search_modal_layout' ) ) {
 						method="GET" >
 					<label> <span class="screen-reader-text">Search for</span>
 						<input autocomplete="off" type="text" id="search-field" class="search-field" name="s"
-								placeholder="Search..." value="" autofocus>
+								placeholder="<?php esc_attr_e( 'Search..', 'placeholder', 'aaurora' ); ?>" value="" autofocus>
 					</label>
 				</form>
 			</div>
@@ -605,24 +605,28 @@ if ( ! function_exists( 'aaurora_social_media' ) ) {
 	 * @since 1.0.0
 	 */
 	function aaurora_social_media( $social_class = 'aaurora_social_follow', $text_only = true ) {
-		if ( 'top-bar-social' === $social_class && get_theme_mod( 'top_bar_social_media_button', true ) !== true ) :
+		if ( 'top-bar-social' === $social_class && get_theme_mod( 'top_bar_social_media_button', true ) !== true ) {
 			return;
-		endif;
+		}
 
 		if ( get_theme_mod( 'side_social_media_button', true ) !== true ) {
 			return;
 		}
-
-		$text_only = get_theme_mod( 'side_social_media_button_text', true );
-
-		if ( get_theme_mod( 'side_social_media_button_color', false ) === false ) {
-			$social_class .= ' no_social_color';
-		}
-
-		$social_class .= ' aaurora_social_follow';  // todo need to revisit this. passing parameter to Actions.
+		
+		if('top-bar-social' !== $social_class){
+            $text_only = get_theme_mod( 'side_social_media_button_text', true );
+			
+			if ( get_theme_mod( 'side_social_media_button_color', false ) === false ) {
+				$social_class .= ' no_social_color';
+			}
+			
+			$social_class .= ' aaurora_social_follow';  // todo Default method arguments are ignore in case add_action call.
+		} else {
+		    $text_only = false;
+        }
 		?>
 
-		<div class="<?php echo esc_attr( $social_class ); ?>">
+		<div class="<?php esc_attr_e( $social_class ); ?>">
 			<ul class="aaurora-social-holder">
 				<?php
 				if ( get_theme_mod( 'social_media_fb_url', '' ) !== '' ) :

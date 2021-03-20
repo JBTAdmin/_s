@@ -232,13 +232,13 @@ if ( ! class_exists( 'Aaurora_Dashboard' ) ) :
 				<div class="aaurora-section-title">
 					<h2 class="aaurora-section-title">
 						<span><?php esc_html_e( 'Changelog', 'aaurora' ); ?></span>
-						<span class="changelog-version"><?php echo esc_html( sprintf( 'v%1$s', '1.0.0' ) ); ?></span>
+						<span class="changelog-version"><?php esc_html_e( sprintf( 'v%1$s', '1.0.0' ) ); ?></span>
 					</h2>
 				</div><!-- END .aaurora-section-title -->
 
 				<div class="aaurora-section aaurora-columns">
 					<div class="aaurora-changelog">
-						<pre><?php echo esc_html( $changelog ); ?></pre>
+						<pre><?php esc_html_e( $changelog ); ?></pre>
 					</div>
 				</div><!-- END .aaurora-columns -->
 			</div><!-- END .wrap-container -->
@@ -325,9 +325,9 @@ if ( ! class_exists( 'Aaurora_Dashboard' ) ) :
 							$current = false !== strpos( $base, $item['id'] ) ? 'current-item' : '';
 							?>
 
-							<li class="<?php echo esc_attr( $current ); ?>">
+							<li class="<?php esc_attr_e( $current ); ?>">
 								<a href="<?php echo esc_url( $item['url'] ); ?>">
-									<?php echo esc_html( $item['name'] ); ?>
+									<?php esc_html_e( $item['name'] ); ?>
 
 									<?php
 									if ( isset( $item['icon'] ) && $item['icon'] ) {
