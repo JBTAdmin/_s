@@ -154,6 +154,14 @@ Kirki::add_field(
 		'label'       => esc_attr__( 'Body Background', 'aaurora' ),
 		'description' => esc_attr__( 'Change your site background settings.', 'aaurora' ),
 		'section'     => 'general',
+		'default'     => [
+			'background-color'      => '#fff',
+			'background-image'      => '',
+			'background-repeat'     => 'repeat',
+			'background-position'   => 'center center',
+			'background-size'       => 'cover',
+			'background-attachment' => 'scroll',
+		],
 		'output'      => array(
 			array(
 				'element' => 'body',
@@ -391,6 +399,7 @@ Kirki::add_field(
 		'settings'    => 'top_bar_color',
 		'label'       => esc_attr__( 'Color', 'aaurora' ),
 		'description' => esc_attr__( 'Change Top Bar color settings.', 'aaurora' ),
+		'default'     => '#fff',
 		'section'     => 'top_bar',
 		'output'      => array(
 			array(
@@ -409,7 +418,14 @@ Kirki::add_field(
 		'label'       => esc_attr__( 'Background', 'aaurora' ),
 		'description' => esc_attr__( 'Change Top Bar site main background settings.', 'aaurora' ),
 		'section'     => 'top_bar',
-		'default'     => '#2b2d32',
+		'default'     => [
+			'background-color'      => '#000',
+			'background-image'      => '',
+			'background-repeat'     => 'repeat',
+			'background-position'   => 'center center',
+			'background-size'       => 'cover',
+			'background-attachment' => 'scroll',
+		],
 		'output'      => array(
 			array(
 				'element' => '.aaurora-top-bar',
@@ -477,16 +493,22 @@ Kirki::add_field(
 Kirki::add_field(
 	'aaurora_theme_options',
 	array(
-		'type'        => 'color',
+		'type'        => 'background',
 		'settings'    => 'color_site_header',
 		'label'       => esc_attr__( 'Header Background Color', 'aaurora' ),
 		'description' => '',
 		'section'     => 'header',
-		'default'     => '#fff',
+		'default'     => [
+			'background-color'      => '#fff',
+			'background-image'      => '',
+			'background-repeat'     => 'repeat',
+			'background-position'   => 'center center',
+			'background-size'       => 'cover',
+			'background-attachment' => 'scroll',
+		],
 		'output'      => array(
 			array(
 				'element'  => '.site-header',
-				'property' => 'background',
 			),
 		),
 	)
