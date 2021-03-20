@@ -2,20 +2,11 @@
 /**
  * Theme Hook Alliance hook stub list.
  *
- * @package  themehookalliance
- * @version  1.0-draft
- * @since    1.0-draft
- * @license  http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU General Public License, v2 (or newer)
+ * @see  https://github.com/zamoose/themehookalliance
  *
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
+ * @package  aaurora
+ * @version  1.0.0
+ * @since 1.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

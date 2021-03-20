@@ -24,6 +24,8 @@ if ( ! function_exists( 'aaurora_posted_on' ) ) {
 	 *
 	 * @param boolean $date_only Optional. Return Date or echo date on screen. Default echo.
 	 * @param boolean $created_date Optional. Created or Updated Date. Default Updated Post Date.
+	 *
+	 * @since 1.0.0
 	 */
 	function aaurora_posted_on( $date_only = false, $created_date = true ) {
 
@@ -59,6 +61,8 @@ if ( ! function_exists( 'aaurora_posted_on' ) ) {
 if ( ! function_exists( 'aaurora_updated_on' ) ) {
 	/**
 	 * Prints HTML with meta information for the current post-date/time.
+	 *
+	 * @since 1.0.0
 	 */
 	function aaurora_updated_on() {
 		aaurora_posted_on( false, false );
@@ -68,6 +72,8 @@ if ( ! function_exists( 'aaurora_updated_on' ) ) {
 if ( ! function_exists( 'aaurora_posted_by' ) ) {
 	/**
 	 * Prints HTML with meta information for the current author.
+	 *
+	 * @since 1.0.0
 	 */
 	function aaurora_posted_by() {
 		global $post;
@@ -84,6 +90,8 @@ if ( ! function_exists( 'aaurora_posted_by' ) ) {
 if ( ! function_exists( 'aaurora_meta_comment' ) ) {
 	/**
 	 * Prints meta information for comment.
+	 *
+	 * @since 1.0.0
 	 */
 	function aaurora_meta_comment() {
 		if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
@@ -118,6 +126,8 @@ if ( ! function_exists( 'aaurora_post_thumbnail' ) ) {
 	 * @param int     $date Optional. Post Date.
 	 * @param boolean $in_style Optional. Image is added as div or in style.
 	 * @param boolean $background_needed Optional. Should background be added in form of linear gradient.
+	 *
+	 * @since 1.0.0
 	 */
 	function aaurora_post_thumbnail( $size = 'post-thumbnail', $date = '', $in_style = false, $background_needed = true ) {
 
@@ -141,6 +151,8 @@ if ( ! function_exists( 'aaurora_post_thumbnail' ) ) {
  * Include Text based post thumbnail in case no featured post is provided for given post.
  *
  * @param string $date Optional. Post date to be included in post thumbnail.
+ *
+ * @since 1.0.0
  */
 function aaurora_no_post_thumbnail( $date = '' ) {
 	?>

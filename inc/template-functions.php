@@ -16,19 +16,15 @@ add_action( 'wp_head', 'aaurora_pingback_header' );
 add_action( 'aaurora_header_before', 'aaurora_top_bar_layout' );
 add_action( 'aaurora_header', 'aaurora_header_branding_layout' );
 add_action( 'aaurora_header_after', 'aaurora_header_main_menu_layout' );
-
 add_action( 'aaurora_singular_content', 'aaurora_singular_content_layout' );
 add_action( 'aaurora_content_page', 'aaurora_single_page_layout' );
 add_action( 'aaurora_content_post', 'aaurora_single_post_layout' );
 add_action( 'aaurora_entry_content_before', 'aaurora_post_content_before' );
 add_action( 'aaurora_entry_content', 'aaurora_content' );
 add_action( 'aaurora_entry_content_after', 'aaurora_post_content_after' );
-
 add_action( 'aaurora_site_container_before', 'aaurora_post_container_before' );
-
 add_action( 'aaurora_main_content_before', 'aaurora_sidebar_left_output' );
 add_action( 'aaurora_main_content_after', 'aaurora_sidebar_right_output' );
-
 add_action( 'aaurora_footer_before', 'aaurora_footer_call_to_action' );
 add_action( 'aaurora_footer', 'aaurora_footer_section' );
 add_action( 'aaurora_footer_content', 'aaurora_footer_main_layout' );
@@ -37,7 +33,6 @@ add_action( 'aaurora_footer_after', 'aaurora_footer_popup_search_modal_layout' )
 add_action( 'aaurora_footer_after', 'aaurora_footer_go_to_top_layout' );
 add_action( 'aaurora_footer_after', 'aaurora_footer_search_layout' );
 add_action( 'aaurora_footer_after', 'aaurora_social_media' );
-
 add_filter( 'body_class', 'aaurora_body_classes' );
 
 
@@ -68,6 +63,8 @@ if ( ! function_exists( 'aaurora_singular_content_layout' ) ) {
 if ( ! function_exists( 'aaurora_single_page_layout' ) ) {
 	/**
 	 * Outputs the theme single page.
+	 *
+	 * @since 1.0.0
 	 */
 	function aaurora_single_page_layout() {
 		get_template_part( 'template-parts/content-page' );
@@ -112,6 +109,8 @@ if ( ! function_exists( 'aaurora_single_post_layout' ) ) {
 if ( ! function_exists( 'aaurora_post_content_before' ) ) {
 	/**
 	 * Output Metadata of Posts.
+	 *
+	 * @since 1.0.0
 	 */
 	function aaurora_post_content_before() {
 
@@ -128,6 +127,8 @@ if ( ! function_exists( 'aaurora_post_container_before' ) ) {
 
 	/**
 	 * Display Post Header as per selection in customizer.
+	 *
+	 * @since 1.0.0
 	 */
 	function aaurora_post_container_before() {
 
@@ -140,6 +141,8 @@ if ( ! function_exists( 'aaurora_post_container_before' ) ) {
 if ( ! function_exists( 'aaurora_post_content_after' ) ) {
 	/**
 	 * Outputs Footer sections.
+	 *
+	 * @since 1.0.0
 	 */
 	function aaurora_post_content_after() {
 		$template_parts = get_theme_mod( 'entry_footer_sequence', array( 'tag', 'author', 'post-navigation' ) );
@@ -157,6 +160,7 @@ if ( ! function_exists( 'aaurora_body_classes' ) ) {
 	 * @param array $classes Classes for the body element.
 	 *
 	 * @return array
+	 * @since 1.0.0
 	 */
 	function aaurora_body_classes( $classes ) {
 		// Adds a class of hfeed to non-singular pages.
@@ -173,10 +177,11 @@ if ( ! function_exists( 'aaurora_body_classes' ) ) {
 	}
 }
 
-
 if ( ! function_exists( 'aaurora_pingback_header' ) ) {
 	/**
 	 * Add a pingback url auto-discovery header for single posts, pages, or attachments.
+	 *
+	 * @since 1.0.0
 	 */
 	function aaurora_pingback_header() {
 		if ( is_singular() && pings_open() ) {
@@ -252,6 +257,7 @@ if ( ! function_exists( 'aaurora_sidebar_right_output' ) ) {
 	 * Sidebar related checks.
 	 *
 	 * @return false|void
+	 * @since 1.0.0
 	 */
 	function aaurora_sidebar_right_output() {
 		$option = array( 'sidebar-both', 'sidebar-right' );
@@ -261,15 +267,11 @@ if ( ! function_exists( 'aaurora_sidebar_right_output' ) ) {
 	}
 }
 
-/**
- * Header Related Action and Hooks.
- *
- * @since 1.0.0
- */
 if ( ! function_exists( 'aaurora_top_bar_layout' ) ) {
-
 	/**
 	 * Top Bar Layout.
+	 *
+	 * @since 1.0.0
 	 */
 	function aaurora_top_bar_layout() {
 		// Return if no top bar.
@@ -306,14 +308,13 @@ if ( ! function_exists( 'aaurora_top_bar_layout' ) ) {
 }
 
 if ( ! function_exists( 'aaurora_header_branding_layout' ) ) {
-
 	/**
-	 * Aaurora Branding Layout.
+	 * Aaurora Header Branding Layout.
+	 *
+	 * @since 1.0.0
 	 */
 	function aaurora_header_branding_layout() {
-		/**
-		 * Return if no Header Branding Bar.
-		 */
+		// Return if no Header Branding Bar.
 		if ( true !== get_theme_mod( 'aaurora_site_branding', true ) ) {
 			return;
 		}
@@ -360,9 +361,10 @@ if ( ! function_exists( 'aaurora_header_branding_layout' ) ) {
 }
 
 if ( ! function_exists( 'aaurora_header_main_menu_layout' ) ) {
-
 	/**
 	 * Header Main Layout.
+	 *
+	 * @since 1.0.0
 	 */
 	function aaurora_header_main_menu_layout() {
 
@@ -379,6 +381,7 @@ if ( ! function_exists( 'aaurora_site_branding' ) ) {
 	 * Displays Site Branding.
 	 *
 	 * @param string $location Needs to remove this todo.
+	 * @since 1.0.0
 	 */
 	function aaurora_site_branding( $location ) {
 		?>
@@ -411,6 +414,8 @@ if ( ! function_exists( 'aaurora_site_branding' ) ) {
 if ( ! function_exists( 'aaurora_header_search' ) ) {
 	/**
 	 * Displays Search Button in Header.
+	 *
+	 * @since 1.0.0
 	 */
 	function aaurora_header_search() {
 		if ( 'header' === get_theme_mod( 'general_search_visibility', 'fixed' ) ) {
@@ -426,6 +431,8 @@ if ( ! function_exists( 'aaurora_header_search' ) ) {
 if ( ! function_exists( 'aaurora_hamburger_menu' ) ) {
 	/**
 	 * Displays Hamburger Menu.
+	 *
+	 * @since 1.0.0
 	 */
 	function aaurora_hamburger_menu() {
 		$sidebar_alt_class = '';
@@ -448,7 +455,9 @@ if ( ! function_exists( 'aaurora_hamburger_menu' ) ) {
 
 if ( ! function_exists( 'aaurora_footer_call_to_action' ) ) {
 	/**
-	 * Displayes call to Action.
+	 * Displays call to Action.
+	 *
+	 * @since 1.0.0
 	 */
 	function aaurora_footer_call_to_action() {
 		get_template_part( 'template-parts/footers/call-to-action', get_post_type() );
@@ -457,7 +466,9 @@ if ( ! function_exists( 'aaurora_footer_call_to_action' ) ) {
 
 if ( ! function_exists( 'aaurora_footer_section' ) ) {
 	/**
-	 * Displayes Footer Section.
+	 * Displays Footer Section.
+	 *
+	 * @since 1.0.0
 	 */
 	function aaurora_footer_section() {
 		?>
@@ -476,23 +487,20 @@ if ( ! function_exists( 'aaurora_footer_section' ) ) {
 
 if ( ! function_exists( 'aaurora_footer_main_layout' ) ) {
 	/**
-	 * Footer Main Layout Hookds in Footer Content.
+	 * Footer Main Layout Hooked in Footer Content.
+	 *
+	 * @since 1.0.0
 	 */
 	function aaurora_footer_main_layout() {
 		get_template_part( 'template-parts/footers/footer', get_theme_mod( 'footer_layout_setting', '2' ), get_post_type() );
 	}
 }
 
-/**
- * Footer Related Action and Hooks.
- *
- * @since 1.0.0
- */
-
 if ( ! function_exists( 'aaurora_footer_share_layout' ) ) {
-
 	/**
-	 * Add Share button.
+	 * Add Social Share button in footer.
+	 *
+	 * @since 1.0.0
 	 */
 	function aaurora_footer_share_layout() {
 		if ( get_theme_mod( 'general_social_share', 1 ) ) {
@@ -524,9 +532,10 @@ if ( ! function_exists( 'aaurora_footer_share_layout' ) ) {
 }
 
 if ( ! function_exists( 'aaurora_footer_popup_search_modal_layout' ) ) {
-
 	/**
-	 * Displays Modal Search.
+	 * Displays Search Modal.
+	 *
+	 * @since 1.0.0
 	 */
 	function aaurora_footer_popup_search_modal_layout() {
 		?>
@@ -549,10 +558,11 @@ if ( ! function_exists( 'aaurora_footer_popup_search_modal_layout' ) ) {
 	}
 }
 
-
 if ( ! function_exists( 'aaurora_footer_go_to_top_layout' ) ) {
 	/**
-	 * Displayes Go to top button.
+	 * Displays Go to top button in footer.
+	 *
+	 * @since 1.0.0
 	 */
 	function aaurora_footer_go_to_top_layout() {
 		if ( get_theme_mod( 'general_scroll_to_top', 1 ) ) {
@@ -566,10 +576,11 @@ if ( ! function_exists( 'aaurora_footer_go_to_top_layout' ) ) {
 	}
 }
 
-
 if ( ! function_exists( 'aaurora_footer_search_layout' ) ) {
 	/**
-	 * Displayes Search button in footer.
+	 * Displays Search button in footer.
+	 *
+	 * @since 1.0.0
 	 */
 	function aaurora_footer_search_layout() {
 		if ( 'fixed' === get_theme_mod( 'general_search_visibility', 'fixed' ) ) {
@@ -584,13 +595,14 @@ if ( ! function_exists( 'aaurora_footer_search_layout' ) ) {
 	}
 }
 
-
 if ( ! function_exists( 'aaurora_social_media' ) ) {
 	/**
 	 * Displays Social Media Button.
 	 *
 	 * @param string  $social_class Class that needs to be applied.
-	 * @param boolean $text_only Social Button or Text shuold be displayed.
+	 * @param boolean $text_only Social Button or Text should be displayed.
+	 *
+	 * @since 1.0.0
 	 */
 	function aaurora_social_media( $social_class = 'aaurora_social_follow', $text_only = true ) {
 		if ( 'top-bar-social' === $social_class && get_theme_mod( 'top_bar_social_media_button', true ) !== true ) :

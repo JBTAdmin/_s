@@ -127,7 +127,7 @@ function aaurora_content_width() {
 add_action( 'after_setup_theme', 'aaurora_content_width', 0 );
 
 /**
- * Enqueue scripts and styles.
+ * Enqueue scripts/styles.
  */
 function aaurora_scripts() {
 	wp_enqueue_style( 'aaurora-style', get_stylesheet_uri(), array(), AAURORA_VERSION );

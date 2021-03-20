@@ -1,7 +1,6 @@
 === Aaurora ===
 Contributors: ipoweruser
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments
-Requires at least: 4.5
 Tested up to: 5.5
 Requires PHP: 5.6
 Stable tag: 1.0.0
@@ -70,7 +69,6 @@ https://pxhere.com/en/photo/863788
 https://pxhere.com/en/photo/1153069
 https://pxhere.com/en/photo/1171605
 
-
 == Frequently Asked Questions ==
 
 = Does this theme support any plugins? =
@@ -79,7 +77,7 @@ aaurora includes support for WooCommerce and for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
-= 1.0 - May 12 2015 =
+= 1.0.0 - March 30 2021 =
 * Initial release
 
 == Credits ==

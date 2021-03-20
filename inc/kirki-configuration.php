@@ -713,7 +713,7 @@ Kirki::add_field(
 			'column-2-title-image'         => esc_html__( 'Layout 3-No', 'aaurora' ),
 			'column-2-title-image-compact' => esc_html__( 'Layout 4-No', 'aaurora' ),
 			'layout-2'                     => esc_html__( 'Layout 5-No', 'aaurora' ),
-			
+
 		),
 	)
 );
