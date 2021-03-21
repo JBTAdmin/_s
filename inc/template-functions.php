@@ -114,7 +114,7 @@ if ( ! function_exists( 'aaurora_post_content_before' ) ) {
 	 */
 	function aaurora_post_content_before() {
 
-		if ( in_array( get_theme_mod( 'blog_post_header_location', 'aaurora_entry_content_before' ), array( 'aaurora-single-post', 'layout-2' ), true ) ) {
+		if ( in_array( get_theme_mod( 'blog_post_header_location', 'aaurora-single-post' ), array( 'aaurora-single-post', 'layout-2' ), true ) ) {
 				get_template_part( 'template-parts/single/post-header/in-content' );
 		}
 	}
@@ -132,7 +132,7 @@ if ( ! function_exists( 'aaurora_post_container_before' ) ) {
 	 */
 	function aaurora_post_container_before() {
 
-		if ( in_array( get_theme_mod( 'blog_post_header_location', 'aaurora_entry_content_before' ), array( 'column-2-title-image', 'column-2-title-image-compact', 'column-2-title-image-column' ), true ) ) {
+		if ( in_array( get_theme_mod( 'blog_post_header_location', 'aaurora-single-post' ), array( 'column-2-title-image', 'column-2-title-image-compact', 'column-2-title-image-column' ), true ) ) {
 			get_template_part( 'template-parts/single/post-header/in-header' );
 		}
 	}
@@ -199,7 +199,7 @@ if ( ! function_exists( 'aaurora_content' ) ) {
 	function aaurora_content() {
 
 		if ( have_posts() ) {
-			$container_class = ' blog-' . get_theme_mod( 'blog_layout_setting', '4' );
+			$container_class = ' blog-' . get_theme_mod( 'blog_layout_setting', '2' );
 			?>
 			<header class="page-header">
 				<?php
@@ -214,10 +214,6 @@ if ( ! function_exists( 'aaurora_content' ) ) {
 						printf( esc_html__( 'Search Results for: %s', 'aaurora' ), '<span>' . get_search_query() . '</span>' );
 						?>
 					</h1>
-					<?php
-				} else {
-					?>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 					<?php
 				}
 				?>
@@ -324,7 +320,7 @@ if ( ! function_exists( 'aaurora_header_branding_layout' ) ) {
 			$numbering_class = 'numbered';
 		}
 
-		$container_alignment_class = 'header-menu-container ' . $numbering_class . ' aligned-menu-' . get_theme_mod( 'main_menu_align', 'right' );
+		$container_alignment_class = 'header-menu-container ' . $numbering_class . ' aligned-menu-' . get_theme_mod( 'main_menu_align', 'center' );
 		?>
 		<div class="header-menu-bar">
 			<div class="wrap">

@@ -85,8 +85,8 @@ Kirki::add_field(
 	array(
 		'type'        => 'slider',
 		'settings'    => 'sidebar_width_setting',
-		'label'       => esc_attr__( 'Sidebar Width (px)', 'aaurora' ),
-		'description' => '',
+		'label'       => esc_attr__( 'Max Sidebar Width (px)', 'aaurora' ),
+		'description' => 'Sidebar Width is capped to 25% of container width.',
 		'section'     => 'general',
 		'default'     => '250',
 		'choices'     => array(
@@ -115,7 +115,7 @@ Kirki::add_field(
 		'default'     => '10',
 		'choices'     => array(
 			'min'  => 0,
-			'max'  => 40,
+			'max'  => 30,
 			'step' => 5,
 		),
 		'output'      => array(
@@ -188,13 +188,13 @@ Kirki::add_field(
 		'type'        => 'dimensions',
 		'settings'    => 'container_padding_setting',
 		'label'       => esc_attr__( 'Container Padding', 'aaurora' ),
-		'description' => '',
+		'description' => 'Content + Sidebar',
 		'section'     => 'padding_margin',
 		'default'     => array(
-			'padding-top'    => '3rem',
-			'padding-bottom' => '3rem',
-			'padding-left'   => '1vh',
-			'padding-right'  => '1vh',
+			'padding-top'    => '0',
+			'padding-bottom' => '0',
+			'padding-left'   => '0',
+			'padding-right'  => '0',
 		),
 		'choices'     => array(
 			'labels' => array(
@@ -218,13 +218,13 @@ Kirki::add_field(
 		'type'        => 'dimensions',
 		'settings'    => 'container_margin_setting',
 		'label'       => esc_attr__( 'Container Margin', 'aaurora' ),
-		'description' => '',
+		'description' => 'Content + Sidebar',
 		'section'     => 'padding_margin',
 		'default'     => array(
-			'margin-top'    => '3rem',
-			'margin-bottom' => '3rem',
-			'margin-left'   => '1vh',
-			'margin-right'  => '1vh',
+			'margin-top'    => '5rem',
+			'margin-bottom' => '2rem',
+			'margin-left'   => '0',
+			'margin-right'  => '0',
 		),
 		'choices'     => array(
 			'labels' => array(
@@ -248,13 +248,13 @@ Kirki::add_field(
 		'type'        => 'dimensions',
 		'settings'    => 'article_container_padding_setting',
 		'label'       => esc_attr__( 'Content Padding', 'aaurora' ),
-		'description' => '',
+		'description' => 'Content Only',
 		'section'     => 'padding_margin',
 		'default'     => array(
 			'padding-top'    => '0',
 			'padding-bottom' => '0',
-			'padding-left'   => '1vh',
-			'padding-right'  => '1vh',
+			'padding-left'   => '0',
+			'padding-right'  => '0',
 		),
 		'choices'     => array(
 			'labels' => array(
@@ -278,13 +278,13 @@ Kirki::add_field(
 		'type'        => 'dimensions',
 		'settings'    => 'article_container_margin_setting',
 		'label'       => esc_attr__( 'Content Margin', 'aaurora' ),
-		'description' => '',
+		'description' => 'Content Only',
 		'section'     => 'padding_margin',
 		'default'     => array(
-			'margin-top'    => '3rem',
-			'margin-bottom' => '3rem',
-			'margin-left'   => '1vh',
-			'margin-right'  => '1vh',
+			'margin-top'    => '0',
+			'margin-bottom' => '0',
+			'margin-left'   => '0',
+			'margin-right'  => '0',
 		),
 		'choices'     => array(
 			'labels' => array(
@@ -308,13 +308,13 @@ Kirki::add_field(
 		'type'        => 'dimensions',
 		'settings'    => 'sidebar_padding_setting',
 		'label'       => esc_attr__( 'Sidebar Padding', 'aaurora' ),
-		'description' => '',
+		'description' => 'Sidebar Only',
 		'section'     => 'padding_margin',
 		'default'     => array(
-			'padding-top'    => '3rem',
-			'padding-bottom' => '3rem',
-			'padding-left'   => '1vh',
-			'padding-right'  => '1vh',
+			'padding-top'    => '0',
+			'padding-bottom' => '0',
+			'padding-left'   => '0',
+			'padding-right'  => '0',
 		),
 		'choices'     => array(
 			'labels' => array(
@@ -338,13 +338,13 @@ Kirki::add_field(
 		'type'        => 'dimensions',
 		'settings'    => 'sidebar_margin_setting',
 		'label'       => esc_attr__( 'Sidebar Margin', 'aaurora' ),
-		'description' => '',
+		'description' => 'Sidebar Only',
 		'section'     => 'padding_margin',
 		'default'     => array(
-			'margin-top'    => '3rem',
-			'margin-bottom' => '3rem',
-			'margin-left'   => '1vh',
-			'margin-right'  => '1vh',
+			'margin-top'    => '0',
+			'margin-bottom' => '0',
+			'margin-left'   => '3rem',
+			'margin-right'  => '0',
 		),
 		'choices'     => array(
 			'labels' => array(
@@ -750,6 +750,7 @@ Kirki::add_field(
 		'default'   => array(
 			'category',
 			'heading',
+			'metadata',
 			'thumbnail',
 		),
 		'transport' => 'auto',
@@ -1028,7 +1029,7 @@ Kirki::add_field(
 		'default'     => array(   // TODO  In default can i use Initial as font-family.
 			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
 			'variant'        => 'regular',
-			'font-size'      => '14px',
+			'font-size'      => '20px',
 			'line-height'    => '1.5',
 			'letter-spacing' => '0',
 			'color'          => '#000',
@@ -1051,8 +1052,8 @@ Kirki::add_field(
 		'section'     => 'fonts',
 		'default'     => array(
 			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
-			'variant'        => 'regular',
-			'font-size'      => '14px',
+			'variant'        => '500',
+			'font-size'      => '44px',
 			'line-height'    => '1.5',
 			'letter-spacing' => '0',
 			'color'          => '#000',
@@ -1076,7 +1077,7 @@ Kirki::add_field(
 		'default'     => array(
 			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
 			'variant'        => 'regular',
-			'font-size'      => '14px',
+			'font-size'      => '40px',
 			'line-height'    => '1.5',
 			'letter-spacing' => '0',
 			'color'          => '#000',
@@ -1100,7 +1101,7 @@ Kirki::add_field(
 		'default'     => array(
 			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
 			'variant'        => 'regular',
-			'font-size'      => '14px',
+			'font-size'      => '34px',
 			'line-height'    => '1.5',
 			'letter-spacing' => '0',
 			'color'          => '#000',
@@ -1131,28 +1132,10 @@ Kirki::add_field(
 	array(
 		'type'        => 'color',
 		'settings'    => 'color_theme',
-		'label'       => esc_attr__( 'Theme Color', 'aaurora' ),
-		'description' => '',
-		'section'     => 'general',
-		'default'     => '#165df5',
-		'output'      => array(
-			array(
-				'element'  => ':root',
-				'property' => '--theme-color',
-			),
-		),
-	)
-);
-
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
-		'type'        => 'color',
-		'settings'    => 'color_theme',
 		'label'       => esc_attr__( 'Theme color', 'aaurora' ),
 		'description' => '',
 		'section'     => 'general_color',
-		'default'     => '#ffd01b',
+		'default'     => '#165df5',
 		'output'      => array(
 			array(
 				'element'  => ':root',
@@ -1278,7 +1261,7 @@ Kirki::add_field(
 		'label'       => esc_attr__( 'Button Border Color', 'aaurora' ),
 		'description' => '',
 		'section'     => 'general_color',
-		'default'     => '#fff',
+		'default'     => '#000',
 		'output'      => array(
 			array(
 				'element'  => ':root',

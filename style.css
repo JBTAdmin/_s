@@ -1238,8 +1238,7 @@ li > ul.sub-menu {
   line-height: 0; }
 
 .site-header {
-  width: 100%;
-  height: 10rem; }
+  width: 100%; }
 
 .header-center .main-navigation {
   position: absolute;
@@ -1283,9 +1282,6 @@ li > ul.sub-menu {
       -ms-flex-align: center;
           align-items: center;
   padding: 1rem; }
-
-.aligned-menu-right {
-  margin: 0 1rem; }
 
 .header-wrap,
 .footer-wrap {
@@ -1640,7 +1636,6 @@ div[class*="footer-sidebar-"] {
   transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out; }
 
 .article-container .inner-entry {
-  background-color: #fff;
   border: 1px solid #ededed;
   border-radius: 10px;
   height: 100%;
@@ -1791,9 +1786,6 @@ div[class*="footer-sidebar-"] {
     -ms-flex-preferred-size: 100% !important;
         flex-basis: 100% !important; } }
 
-.page-header {
-  margin-bottom: 5rem; }
-
 .blog-1 > article {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
@@ -1850,6 +1842,7 @@ div[class*="footer-sidebar-"] {
   border-radius: 12px; }
 
 .blog-2 .inner-entry {
+  background: #fff;
   padding: 2rem; }
   .blog-2 .inner-entry:hover {
     -webkit-transform: translate(-0.3rem, -0.3rem);
@@ -2289,11 +2282,9 @@ body.admin-bar aside {
 .sidebar-right .widget:not(.widget_seriestoc),
 .sidebar-left .widget:not(.widget_seriestoc) {
   margin-bottom: 5rem;
-  background-color: #fff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  overflow: hidden;
-  padding: 0 10px; }
+  overflow: hidden; }
 
 .sidebar-right .widget-title,
 .sidebar-left .widget-title {
@@ -2448,8 +2439,7 @@ main {
 aside:not(.sidebar-alt) {
   -webkit-box-flex: 1;
       -ms-flex: 1 1;
-          flex: 1 1;
-  margin: 6rem auto; }
+          flex: 1 1; }
 
 .article-container {
   -webkit-box-pack: justify;
@@ -2466,9 +2456,6 @@ aside:not(.sidebar-alt) {
         -ms-flex: auto;
             flex: auto; }
 
-main {
-  margin: 6rem auto; }
-
 article {
   min-width: 0; }
 
@@ -2476,9 +2463,6 @@ article {
 .page .primary-content {
   max-width: 100%;
   min-width: 0; }
-
-.primary-content {
-  padding: 0 3rem 0 1rem !important; }
 
 @media screen and (max-width: 768px) {
   .primary-content {

@@ -5,7 +5,7 @@
  * @package aaurora
  */
 
-$template_parts = get_theme_mod( 'entry_header_sequence', array( 'category', 'heading', 'metadata' ) );
+$template_parts = get_theme_mod( 'entry_header_sequence', array( 'category', 'heading', 'metadata', 'thumbnail' ) );
 ?>
 <div class="meta-data">
 	<?php

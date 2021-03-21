@@ -36,7 +36,7 @@ main {
 
 aside:not(.sidebar-alt) {
   flex: 1 1;
-  margin: 6rem auto;
+  //margin: 6rem auto;
 }
 
 .article-container {
@@ -53,7 +53,7 @@ aside:not(.sidebar-alt) {
 
 // todo Need to differentiate between logic for Single Post / Page and Archives
 main {
-  margin: 6rem auto;
+  //margin: 6rem auto;
 }
 
 article {
@@ -75,7 +75,7 @@ article {
 
 //todo why we need this???
 .primary-content {
-  padding: 0 3rem 0 1rem !important;
+  //padding: 0 3rem 0 1rem !important;
 }
 
 @media screen and (max-width: 768px) {
