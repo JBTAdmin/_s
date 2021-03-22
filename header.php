@@ -50,7 +50,7 @@ $menu_class .= ' ' . get_theme_mod( 'main_menu_arrow_style', 'noarrow' );
 	<header id="masthead" class="site-header
 	<?php
 	echo esc_attr( $header_class );
-	esc_attr_e( $menu_class );
+	echo esc_attr( $menu_class );
 	?>
 	">
 		<?php aaurora_header_before(); ?>
