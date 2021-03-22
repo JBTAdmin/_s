@@ -40,3 +40,7 @@ ul.aaurora-social-holder > li {
 .aaurora_social_follow.no_social_color > .aaurora-social-holder a {
   color: #000;
 }
+
+.aaurora_social_follow.no_social_color > .aaurora-social-holder a:hover {
+  color: $theme__color;
+}

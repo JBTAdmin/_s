@@ -77,7 +77,7 @@ Kirki::add_field(
 		'label'       => esc_attr__( 'Container Width (px)', 'aaurora' ),
 		'description' => '',
 		'section'     => 'general',
-		'default'     => '1150',
+		'default'     => '1300',
 		'choices'     => array(
 			'min'  => 900,
 			'max'  => 1900,

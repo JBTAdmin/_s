@@ -9,7 +9,7 @@
   position: fixed;
   left: $left_position;
   bottom: 5vh;
-  padding-bottom: 10rem;
+  margin-bottom: 8rem;
   display: inline-flex;
   //box-shadow: $theme__color 7px 7px 0px 0px;
   cursor: pointer;
@@ -107,8 +107,4 @@
     width: 6rem;
     height: 6rem;
   }
-}
-
-.search-field:focus {
-  border: 1px solid #0a0909;
 }
