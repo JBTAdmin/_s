@@ -830,7 +830,7 @@ Kirki::add_field(
 		'section'     => 'blog_post',
 		'default'     => array(
 			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
-			'font-size'      => '40px',
+			'font-size'      => '44px',
 			'variant'        => 'regular',
 			'line-height'    => '1.5',
 			'letter-spacing' => '0',

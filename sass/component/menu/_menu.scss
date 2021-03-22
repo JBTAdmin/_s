@@ -179,13 +179,9 @@ li > ul.sub-menu {
     text-decoration: none;
   }
 
-  .header-menu > li:hover,
-  .current_menu_item {
+  .current-menu-item,
+  .header-menu > li:hover {
     background-color: rgba(32, 33, 36, 0.04);
-  }
-
-  .current_menu_item > a {
-    color: $theme__color;
   }
 
   .header-menu > li {
