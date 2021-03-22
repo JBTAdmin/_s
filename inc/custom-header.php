@@ -10,7 +10,7 @@
  *
  * @package aaurora
  */
-//todo what is the use of this class??
+// todo what is the use of this class??
 /**
  * Set up the WordPress core custom header feature.
  *

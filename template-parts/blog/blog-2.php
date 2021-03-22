@@ -16,7 +16,7 @@
 			<div class="entry-header">
 				<div class="entry-meta">
 					<div class="posted_on">
-						<?php echo aaurora_posted_on( true ); ?>
+						<?php echo esc_html( aaurora_posted_on( true ) ); ?>
 					</div>
 				</div>
 				<?php

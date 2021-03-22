@@ -154,14 +154,14 @@ Kirki::add_field(
 		'label'       => esc_attr__( 'Body Background', 'aaurora' ),
 		'description' => esc_attr__( 'Change your site background settings.', 'aaurora' ),
 		'section'     => 'general',
-		'default'     => [
+		'default'     => array(
 			'background-color'      => '#fff',
 			'background-image'      => '',
 			'background-repeat'     => 'repeat',
 			'background-position'   => 'center center',
 			'background-size'       => 'cover',
 			'background-attachment' => 'scroll',
-		],
+		),
 		'output'      => array(
 			array(
 				'element' => 'body',
@@ -418,14 +418,14 @@ Kirki::add_field(
 		'label'       => esc_attr__( 'Background', 'aaurora' ),
 		'description' => esc_attr__( 'Change Top Bar site main background settings.', 'aaurora' ),
 		'section'     => 'top_bar',
-		'default'     => [
+		'default'     => array(
 			'background-color'      => '#000',
 			'background-image'      => '',
 			'background-repeat'     => 'repeat',
 			'background-position'   => 'center center',
 			'background-size'       => 'cover',
 			'background-attachment' => 'scroll',
-		],
+		),
 		'output'      => array(
 			array(
 				'element' => '.aaurora-top-bar',
@@ -498,17 +498,17 @@ Kirki::add_field(
 		'label'       => esc_attr__( 'Header Background Color', 'aaurora' ),
 		'description' => '',
 		'section'     => 'header',
-		'default'     => [
+		'default'     => array(
 			'background-color'      => '#fff',
 			'background-image'      => '',
 			'background-repeat'     => 'repeat',
 			'background-position'   => 'center center',
 			'background-size'       => 'cover',
 			'background-attachment' => 'scroll',
-		],
+		),
 		'output'      => array(
 			array(
-				'element'  => '.site-header',
+				'element' => '.site-header',
 			),
 		),
 	)
