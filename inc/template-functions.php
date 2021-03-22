@@ -323,7 +323,7 @@ if ( ! function_exists( 'aaurora_header_branding_layout' ) ) {
 		$container_alignment_class = 'header-menu-container ' . $numbering_class . ' aligned-menu-' . get_theme_mod( 'main_menu_align', 'center' );
 		?>
 		<div class="header-menu-bar">
-			<div class="wrap">
+<!--			<div class="wrap">-->
 				<div class="header-container">
 					<?php
 					aaurora_site_branding( 'left' );
@@ -349,7 +349,7 @@ if ( ! function_exists( 'aaurora_header_branding_layout' ) ) {
 							?>
 						</nav>
 					</div>
-				</div>
+<!--				</div>-->
 			</div>
 		</div>
 		<?php

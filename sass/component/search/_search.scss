@@ -8,7 +8,8 @@
 .aaurora-search {
   position: fixed;
   left: $left_position;
-  bottom: 104px;
+  bottom: 5vh;
+  padding-bottom: 10rem;
   display: inline-flex;
   //box-shadow: $theme__color 7px 7px 0px 0px;
   cursor: pointer;

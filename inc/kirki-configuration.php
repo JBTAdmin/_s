@@ -28,6 +28,19 @@ if ( ! function_exists( 'aaurora_theme_customize_register' ) ) :
 endif;
 add_action( 'customize_register', 'aaurora_theme_customize_register' );
 
+function aaurora_fonts_load_all_variants() {
+	if (class_exists('Kirki_Fonts_Google')) {
+		if(get_theme_mod('fonts_load_all_variant', false)) {
+			Kirki_Fonts_Google::$force_load_all_variants = true;
+			Kirki_Fonts_Google::$force_load_all_subsets = true;
+		} else {
+			Kirki_Fonts_Google::$force_load_all_variants = false;
+			Kirki_Fonts_Google::$force_load_all_subsets = false;
+		}
+	}
+}
+add_action('init', 'aaurora_fonts_load_all_variants');
+
 Kirki::add_config(
 	'aaurora_theme_options',
 	array(
@@ -1004,8 +1017,8 @@ Kirki::add_field(
 		'section'     => 'fonts',
 		'default'     => array(
 			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
-			'variant'        => 'regular',
-			'font-size'      => '14px',
+			'variant'        => '800',
+			'font-size'      => '25px',
 			'line-height'    => '1.5',
 			'letter-spacing' => '0',
 			'color'          => '#000',
@@ -1114,6 +1127,16 @@ Kirki::add_field(
 		),
 	)
 );
+
+Kirki::add_field( 'aaurora_theme_options',
+	array(
+	'type'        => 'toggle',
+	'settings'    => 'fonts_load_all_variant',
+	'label'       => esc_attr__( 'Load all Google Fonts variants', 'aaurora' ),
+	'description' => esc_attr__( 'Enable to load all available google font variants and subsets.', 'aaurora' ),
+	'section'     => 'fonts',
+	'default'     => '0',
+) );
 // END SECTION: FONTS.
 
 // SECTION: COLORS.
