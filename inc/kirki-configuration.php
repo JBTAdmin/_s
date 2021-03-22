@@ -28,18 +28,21 @@ if ( ! function_exists( 'aaurora_theme_customize_register' ) ) :
 endif;
 add_action( 'customize_register', 'aaurora_theme_customize_register' );
 
+/**
+ * Load all Google font variants.
+ */
 function aaurora_fonts_load_all_variants() {
-	if (class_exists('Kirki_Fonts_Google')) {
-		if(get_theme_mod('fonts_load_all_variant', false)) {
+	if ( class_exists( 'Kirki_Fonts_Google' ) ) {
+		if ( get_theme_mod( 'fonts_load_all_variant', false ) ) {
 			Kirki_Fonts_Google::$force_load_all_variants = true;
-			Kirki_Fonts_Google::$force_load_all_subsets = true;
+			Kirki_Fonts_Google::$force_load_all_subsets  = true;
 		} else {
 			Kirki_Fonts_Google::$force_load_all_variants = false;
-			Kirki_Fonts_Google::$force_load_all_subsets = false;
+			Kirki_Fonts_Google::$force_load_all_subsets  = false;
 		}
 	}
 }
-add_action('init', 'aaurora_fonts_load_all_variants');
+add_action( 'init', 'aaurora_fonts_load_all_variants' );
 
 Kirki::add_config(
 	'aaurora_theme_options',
@@ -1128,15 +1131,17 @@ Kirki::add_field(
 	)
 );
 
-Kirki::add_field( 'aaurora_theme_options',
+Kirki::add_field(
+	'aaurora_theme_options',
 	array(
-	'type'        => 'toggle',
-	'settings'    => 'fonts_load_all_variant',
-	'label'       => esc_attr__( 'Load all Google Fonts variants', 'aaurora' ),
-	'description' => esc_attr__( 'Enable to load all available google font variants and subsets.', 'aaurora' ),
-	'section'     => 'fonts',
-	'default'     => '0',
-) );
+		'type'        => 'toggle',
+		'settings'    => 'fonts_load_all_variant',
+		'label'       => esc_attr__( 'Load all Google Fonts variants', 'aaurora' ),
+		'description' => esc_attr__( 'Enable to load all available google font variants and subsets.', 'aaurora' ),
+		'section'     => 'fonts',
+		'default'     => '0',
+	)
+);
 // END SECTION: FONTS.
 
 // SECTION: COLORS.
