@@ -739,14 +739,14 @@ Kirki::add_field(
 	'aaurora_theme_options',
 	array(
 		'type'        => 'select',
-		'settings'    => 'blog_post_header_location',
+		'settings'    => 'single_post_layout',
 		'label'       => esc_html__( 'Layout', 'aaurora' ),
 		'section'     => 'blog_post',
-		'default'     => 'aaurora-single-post',
+		'default'     => 'single-in-content-1',
 		'placeholder' => esc_html__( 'Select Single Post Layout.', 'aaurora' ),
 		'multiple'    => 0,
 		'choices'     => array(
-			'aaurora-single-post'          => esc_html__( 'Layout 1', 'aaurora' ),
+			'single-in-content-1'          => esc_html__( 'Layout 1', 'aaurora' ),
 			'column-2-title-image-column'  => esc_html__( 'Layout 2', 'aaurora' ),
 			'column-2-title-image'         => esc_html__( 'Layout 3-No', 'aaurora' ),
 			'column-2-title-image-compact' => esc_html__( 'Layout 4-No', 'aaurora' ),

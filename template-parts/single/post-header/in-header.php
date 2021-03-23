@@ -6,7 +6,7 @@
  */
 
 ?>
-<div class="site-container <?php echo esc_attr( get_theme_mod( 'blog_post_header_location', 'aaurora-single-post' ) ); ?>">
+<div class="site-container <?php echo esc_attr( get_theme_mod( 'single_post_layout', 'single-in-content-1' ) ); ?>">
 	<div class="wrap">
 		<?php get_template_part( 'template-parts/single/thumbnail' ); ?>
 

@@ -114,7 +114,7 @@ if ( ! function_exists( 'aaurora_post_content_before' ) ) {
 	 */
 	function aaurora_post_content_before() {
 
-		if ( in_array( get_theme_mod( 'blog_post_header_location', 'aaurora-single-post' ), array( 'aaurora-single-post', 'layout-2' ), true ) ) {
+		if ( in_array( get_theme_mod( 'single_post_layout', 'single-in-content-1' ), array( 'single-in-content-1', 'layout-2' ), true ) ) {
 				get_template_part( 'template-parts/single/post-header/in-content' );
 		}
 	}
@@ -132,7 +132,7 @@ if ( ! function_exists( 'aaurora_post_container_before' ) ) {
 	 */
 	function aaurora_post_container_before() {
 
-		if ( in_array( get_theme_mod( 'blog_post_header_location', 'aaurora-single-post' ), array( 'column-2-title-image', 'column-2-title-image-compact', 'column-2-title-image-column' ), true ) ) {
+		if ( in_array( get_theme_mod( 'single_post_layout', 'single-in-content-1' ), array( 'column-2-title-image', 'column-2-title-image-compact', 'column-2-title-image-column' ), true ) ) {
 			get_template_part( 'template-parts/single/post-header/in-header' );
 		}
 	}

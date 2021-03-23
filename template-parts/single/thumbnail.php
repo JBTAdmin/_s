@@ -15,10 +15,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $in_style = false;
 
-if ( in_array( get_theme_mod( 'blog_post_header_location', 'aaurora-single-post' ), array( 'column-2-title-image', 'column-2-title-image-compact' ), true ) ) {
+if ( in_array( get_theme_mod( 'single_post_layout', 'single-in-content-1' ), array( 'column-2-title-image', 'column-2-title-image-compact' ), true ) ) {
 	$in_style = true;
 }
 
-$size = get_theme_mod( 'blog_post_header_location', 'aaurora-single-post' );
+$size = get_theme_mod( 'single_post_layout', 'single-in-content-1' );
 
 aaurora_post_thumbnail( $size, '', $in_style );
