@@ -2475,7 +2475,7 @@ div[class*="footer-sidebar-"] ul {
 	}
 }
 
-.column-2-title-image-column .wrap {
+.single-in-header-1 .wrap {
 	width: 100%;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -2493,13 +2493,13 @@ div[class*="footer-sidebar-"] ul {
 	margin-top: 5rem;
 }
 
-.column-2-title-image-column .wrap > div {
+.single-in-header-1 .wrap > div {
 	-webkit-box-flex: 1;
 	-ms-flex: 1 1 50%;
 	flex: 1 1 50%;
 }
 
-.column-2-title-image-column .wrap > div img {
+.single-in-header-1 .wrap > div img {
 	display: block;
 	border-radius: 1rem;
 }

@@ -132,7 +132,7 @@ if ( ! function_exists( 'aaurora_post_container_before' ) ) {
 	 */
 	function aaurora_post_container_before() {
 
-		if ( in_array( get_theme_mod( 'single_post_layout', 'single-in-content-1' ), array( 'column-2-title-image', 'column-2-title-image-compact', 'column-2-title-image-column' ), true ) ) {
+		if ( in_array( get_theme_mod( 'single_post_layout', 'single-in-content-1' ), array( 'column-2-title-image', 'column-2-title-image-compact', 'single-in-header-1' ), true ) ) {
 			get_template_part( 'template-parts/single/post-header/in-header' );
 		}
 	}
