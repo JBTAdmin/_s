@@ -770,12 +770,11 @@ Kirki::add_field(
 		'label'    => esc_html__( 'Post Metadata Elements', 'aaurora' ),
 		'section'  => 'blog_post',
 		'default'  => array(
-			'category',
 			'updated_on',
 			'posted_by',
+			'meta_comment',
 		),
 		'choices'  => array(
-			'category'     => esc_html__( 'Category', 'aaurora' ),
 			'posted_on'    => esc_html__( 'Posted Date', 'aaurora' ),
 			'updated_on'   => esc_html__( 'Updated Date', 'aaurora' ),
 			'posted_by'    => esc_html__( 'Author', 'aaurora' ),

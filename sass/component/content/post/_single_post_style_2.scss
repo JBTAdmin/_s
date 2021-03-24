@@ -16,9 +16,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -2;
+    z-index: 2;
     margin: 0;
-    background-color: $theme__color;
     & img {
       border-radius: unset;
     }
@@ -42,9 +41,9 @@
     position: relative;
     display: flex;
     justify-content: center;
-    //z-index: -3;
-    //todo instead of rem use vh here and change in header css also
-    padding-top: 10rem;
+    z-index: 1;
+    padding-top: 10vh;
+    background-color: $theme__color;
     &:after {
       content: "";
       width: 100%;
@@ -52,8 +51,11 @@
       position: absolute;
       top: 0;
       left: 0;
-      z-index: -1;
+      z-index: 3;
       background-color: rgba(17, 17, 17, 0.5);
+    }
+    & .wrap {
+      z-index: 4;
     }
   }
 
@@ -69,7 +71,6 @@
 
   & .meta-data {
     margin: 10vh 0;
-    z-index: 2;
   }
 }
 

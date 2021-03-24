@@ -20,9 +20,9 @@ if ( 'post' === get_post_type() ) :
 		$aaurora_meta_elements = get_theme_mod(
 			'entry_header_metadata_element',
 			array(
-				'category',
 				'updated_on',
 				'posted_by',
+				'meta_comment',
 			)
 		);
 
