@@ -729,7 +729,7 @@ Kirki::add_field(
 		'multiple'    => 0,
 		'choices'     => array(
 			'single-in-content-1'          => esc_html__( 'Layout 1', 'aaurora' ),
-			'single-in-header-1'  => esc_html__( 'Layout 2', 'aaurora' ),
+			'single-in-header-1'           => esc_html__( 'Layout 2', 'aaurora' ),
 			'column-2-title-image'         => esc_html__( 'Layout 3-No', 'aaurora' ),
 			'column-2-title-image-compact' => esc_html__( 'Layout 4-No', 'aaurora' ),
 			'layout-2'                     => esc_html__( 'Layout 5-No', 'aaurora' ),
