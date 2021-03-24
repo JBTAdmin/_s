@@ -108,3 +108,9 @@
     height: 6rem;
   }
 }
+
+.no-results.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

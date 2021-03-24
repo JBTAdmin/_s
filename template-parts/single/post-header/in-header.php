@@ -6,10 +6,9 @@
  */
 
 ?>
-<div class="site-container <?php echo esc_attr( get_theme_mod( 'single_post_layout', 'single-in-content-1' ) ); ?>">
-	<div class="wrap">
+<div class="in-header-container ">
 		<?php get_template_part( 'template-parts/single/thumbnail' ); ?>
-
+    	<div class="wrap">
 		<div class="meta-data">
 			<?php
 			$template_parts = get_theme_mod( 'entry_header_sequence', array( 'category', 'heading', 'metadata' ) );

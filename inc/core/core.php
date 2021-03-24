@@ -168,6 +168,6 @@ add_image_size( 'aaurora-blog-single-post-no-sidebar', 1000, 340, true );
 
 add_image_size( 'column-2-title-image', 1140, 694, true );
 add_image_size( 'column-2-title-image-compact', 1140, 694, true );
-add_image_size( 'single-in-header-1', 1140, 500, true );
+add_image_size( 'single-in-header-1', 1840, 500, true );
 
 add_image_size( 'aaurora-blog-single-post-navigation-featured-image', 80, 80, true ); // This is used for Post Navigation.

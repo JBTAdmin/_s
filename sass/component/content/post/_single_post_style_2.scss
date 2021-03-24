@@ -1,21 +1,78 @@
-.single-in-header-1 {
+.single.single-in-header-1 {
   & .wrap {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 5rem;
+    margin: 0 auto;
     & > div {
-      //flex-basis: 50%;
       flex: 1 1 50%;
       & img {
         display: block;
         border-radius: 1rem;
       }
     }
-    //& .meta-data {
-    //  padding: 5rem;
-    //}
   }
+
+  & .post-thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    margin: 0;
+    background-color: $theme__color;
+    & img {
+      border-radius: unset;
+    }
+  }
+
+  & .site-header {
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  & .header-menu-bar {
+    box-shadow: unset;
+    background: transparent;
+    color: #fff;
+    z-index: 10;
+  }
+
+  & .in-header-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    //z-index: -3;
+    //todo instead of rem use vh here and change in header css also
+    padding-top: 10rem;
+    &:after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background-color: rgba(17, 17, 17, 0.5);
+    }
+  }
+
+  & h1.entry-title,
+  & .entry-meta {
+    color: #fff;
+  }
+  & h1.entry-title {
+    font-size: calc(45px + 26 * ((100vw - 576px) / 1024));
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  & .meta-data {
+    margin: 10vh 0;
+    z-index: 2;
+  }
+}
+
+.archive-description {
+  margin-bottom: 4rem;
 }

@@ -10,7 +10,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
   // Set a variable for our button element.
   const scrollToTopButton = document.getElementById("js-top");
   const fixedHeaderContainer = document.querySelector(".header-fixed header");
-  const fixedHeader = document.querySelector(".header-fixed .header-menu-bar");
+  const fixedHeader = document.querySelector(".header-fixed");
+  const siteContainer = document.querySelector(".site-container");
+  const inHeader = document.querySelector(".single.in-header");
   let classList;
   if (fixedHeader) {
     classList = fixedHeaderContainer.className;
@@ -32,6 +34,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
         );
         fixedHeader.classList.add("fixed-header");
         fixedHeader.classList.add("showed");
+        if (!inHeader) {
+          siteContainer.style.paddingTop = "10vh";
+        }
       }
     } else {
       scrollToTopButton.className = "top-link hide";
@@ -39,6 +44,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
         fixedHeader.classList.remove("fixed-header");
         fixedHeader.classList.remove("showed");
         fixedHeaderContainer.className = classList;
+        if (!inHeader) {
+          siteContainer.style.paddingTop = 0;
+        }
       }
     }
   };

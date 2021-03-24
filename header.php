@@ -15,6 +15,12 @@ $header_class = '';
 
 $body_class = '';
 
+$body_class .= ' ' . get_theme_mod( 'single_post_layout', 'single-in-header-1' );
+
+if(in_array( get_theme_mod( 'single_post_layout', 'single-in-header-1' ), array( 'single-in-header-1' ), true )){
+	$body_class .= ' in-header';
+}
+
 if ( true === get_theme_mod( 'fixed-header' ) ) {
 	$body_class .= ' header-fixed';
 }

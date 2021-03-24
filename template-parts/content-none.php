@@ -12,7 +12,7 @@
 
 <section class="no-results not-found">
 	<div class="page-header">
-		<h2 class="page-title"><?php esc_html_e( 'Nothing Found', 'aaurora' ); ?></h2>
+		<h3 class="page-title"><?php esc_html_e( 'Nothing Found', 'aaurora' ); ?></h3>
 	</div><!-- .page-header -->
 
 	<div class="page-content">

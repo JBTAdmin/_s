@@ -80,7 +80,7 @@ Kirki::add_field(
 		'label'       => esc_attr__( 'Container Width (px)', 'aaurora' ),
 		'description' => '',
 		'section'     => 'general',
-		'default'     => '1300',
+		'default'     => '1150',
 		'choices'     => array(
 			'min'  => 900,
 			'max'  => 1900,
@@ -535,31 +535,13 @@ Kirki::add_field(
 	array(
 		'type'        => 'color',
 		'settings'    => 'color_site_title_text',
-		'label'       => esc_attr__( 'Site Title Color', 'aaurora' ),
+		'label'       => esc_attr__( 'Header Color', 'aaurora' ),
 		'description' => '',
 		'section'     => 'header',
 		'default'     => '#333333',
 		'output'      => array(
 			array(
-				'element'  => '.site-branding',
-				'property' => 'color',
-			),
-		),
-	)
-);
-
-Kirki::add_field(
-	'aaurora_theme_options',
-	array(
-		'type'        => 'color',
-		'settings'    => 'color_main_menu_link',
-		'label'       => esc_attr__( 'Mainmenu link color', 'aaurora' ),
-		'description' => '',
-		'section'     => 'header',
-		'default'     => '#000000',
-		'output'      => array(
-			array(
-				'element'  => '.main-navigation, .sidebar-close-btn',
+				'element'  => '.header-menu-bar',
 				'property' => 'color',
 			),
 		),
@@ -742,7 +724,7 @@ Kirki::add_field(
 		'settings'    => 'single_post_layout',
 		'label'       => esc_html__( 'Layout', 'aaurora' ),
 		'section'     => 'blog_post',
-		'default'     => 'single-in-content-1',
+		'default'     => 'single-in-header-1',
 		'placeholder' => esc_html__( 'Select Single Post Layout.', 'aaurora' ),
 		'multiple'    => 0,
 		'choices'     => array(
@@ -1163,7 +1145,7 @@ Kirki::add_field(
 		'label'       => esc_attr__( 'Theme color', 'aaurora' ),
 		'description' => '',
 		'section'     => 'general_color',
-		'default'     => '#165df5',
+		'default'     => '#c62641',
 		'output'      => array(
 			array(
 				'element'  => ':root',
