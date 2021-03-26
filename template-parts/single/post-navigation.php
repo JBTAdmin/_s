@@ -6,10 +6,6 @@
  * @since 1.0
  */
 
-// Do not show if post is password protected or Navigation is disabled.
-if ( post_password_required() ) {
-	return;
-}
 
 $next_post     = get_next_post();
 $previous_post = get_previous_post();

@@ -114,9 +114,10 @@
 .tags-links,
 .tagcloud {
   margin-top: 3rem;
-
+  display: block;
+  clear: both;
   & a {
-    border: 1px solid #eee;
+    border: 1px solid #dadce0;
     //color: #0f0e0e;
     padding: 5px 10px;
     margin-right: 5px;

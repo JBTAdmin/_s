@@ -168,8 +168,9 @@ li > ul.sub-menu {
   .header-menu {
     display: flex;
     align-items: stretch;
-    justify-content: space-evenly;
+    //justify-content: space-evenly;
     margin: 0;
+    flex-wrap: wrap;
     //height: 10vh;
   }
 

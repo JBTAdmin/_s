@@ -1,12 +1,32 @@
-.wp-block-quote {
+.wp-block-quote,
+blockquote {
   border-left: 4px solid $theme__color;
+  padding-left: 3rem;
 }
 
 .wp-block-quote.has-text-align-right {
-  border-right: 4px solid $theme__color;
+  border-left: 4px solid $theme__color;
+  border-right: none;
 }
 
 .wp-block-pullquote {
   border-top: 4px solid $theme__color;
   border-bottom: 4px solid $theme__color;
+}
+
+.wp-block-quote.is-large,
+.wp-block-quote.is-style-large {
+  border-left: 4px solid $theme__color;
+}
+
+.blocks-gallery-grid .blocks-gallery-image figcaption,
+.blocks-gallery-grid .blocks-gallery-item figcaption,
+.wp-block-gallery .blocks-gallery-image figcaption,
+.wp-block-gallery .blocks-gallery-item figcaption {
+  border-radius: 1rem;
+}
+
+.wp-block-latest-comments .avatar,
+.wp-block-latest-comments__comment-avatar {
+  border-radius: 50% !important;
 }

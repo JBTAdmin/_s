@@ -8,6 +8,16 @@
     height: 100%;
   }
 
+  & .badge {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: black;
+    color: white;
+    border-bottom-left-radius: 1rem;
+    padding: 1rem 1rem 0 1rem;
+  }
+
   & .inner-article::before {
     content: "";
     position: absolute;

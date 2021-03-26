@@ -25,6 +25,7 @@ textarea {
   outline: 0;
   transition: all 0.2s ease-out;
   cursor: text;
+  background-color: rgba(23, 22, 26, 0.03);
   &:focus {
     color: $color__text-input-focus;
   }
@@ -32,4 +33,6 @@ textarea {
 
 select {
   border: 1px solid $color__border-input;
+  padding: 8px 5px;
+  border-radius: 4px;
 }

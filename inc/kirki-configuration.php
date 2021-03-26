@@ -1026,7 +1026,7 @@ Kirki::add_field(
 		'default'     => array(   // TODO  In default can i use Initial as font-family.
 			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
 			'variant'        => 'regular',
-			'font-size'      => '20px',
+			'font-size'      => '16px',
 			'line-height'    => '1.5',
 			'letter-spacing' => '0',
 			'color'          => '#000',
@@ -1049,9 +1049,9 @@ Kirki::add_field(
 		'section'     => 'fonts',
 		'default'     => array(
 			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
-			'variant'        => '500',
-			'font-size'      => '44px',
-			'line-height'    => '1.5',
+			'variant'        => '700',
+			'font-size'      => 'calc(#{$font_size_h1_mobile} + 34 * ((100vw - 300px) / (1400)))',
+			'line-height'    => '1',
 			'letter-spacing' => '0',
 			'color'          => '#000',
 		),
@@ -1073,9 +1073,9 @@ Kirki::add_field(
 		'section'     => 'fonts',
 		'default'     => array(
 			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
-			'variant'        => 'regular',
-			'font-size'      => '40px',
-			'line-height'    => '1.5',
+			'variant'        => '700',
+			'font-size'      => 'calc(40px + 14 * ((100vw - 576px) / 1024))',
+			'line-height'    => '1.05',
 			'letter-spacing' => '0',
 			'color'          => '#000',
 		),
@@ -1097,9 +1097,9 @@ Kirki::add_field(
 		'section'     => 'fonts',
 		'default'     => array(
 			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
-			'variant'        => 'regular',
-			'font-size'      => '34px',
-			'line-height'    => '1.5',
+			'variant'        => '700',
+			'font-size'      => 'calc(36px + 4 * ((100vw - 576px) / 1024))',
+			'line-height'    => '1.1',
 			'letter-spacing' => '0',
 			'color'          => '#000',
 		),
@@ -1180,7 +1180,7 @@ Kirki::add_field(
 		'label'       => esc_attr__( 'Text Color', 'aaurora' ),
 		'description' => '',
 		'section'     => 'general_color',
-		'default'     => '#333333',
+		'default'     => '#000',
 		'output'      => array(
 			array(
 				'element'  => 'body',

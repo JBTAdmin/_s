@@ -7,24 +7,30 @@
  * @package aaurora
  * @since 1.0
  */
-
 ?>
 
 <article id="post-<?php the_ID(); ?>">
-	<div class="inner-article">
-		<div class="inner-entry">
-			<div class="entry-header">
-				<div class="entry-meta">
-					<div class="posted_on">
+    <div class="inner-article">
+        <div class="inner-entry">
+			<?php
+			if ( is_sticky() ) :
+				?>
+                <span class="badge">
+						<?php aaurora_load_inline_svg( 'sticky.svg' ); ?>
+				</span>
+			<?php endif; ?>
+            <div class="entry-header">
+                <div class="entry-meta">
+                    <div class="posted_on">
 						<?php echo esc_html( aaurora_posted_on( true ) ); ?>
-					</div>
-				</div>
+                    </div>
+                </div>
 				<?php
 				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 				?>
-			</div><!-- .entry-header -->
-			<div class="entry-footer">
-				<div class="entry-meta">
+            </div><!-- .entry-header -->
+            <div class="entry-footer">
+                <div class="entry-meta">
 					<span class="cat-links">
 						<?php
 						$categories = get_the_category();
@@ -33,8 +39,8 @@
 						}
 						?>
 					</span>
-				</div>
-			</div>
-		</div>
-	</div>
+                </div>
+            </div>
+        </div>
+    </div>
 </article><!-- #post-<?php the_ID(); ?> -->

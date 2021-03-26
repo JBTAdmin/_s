@@ -30,6 +30,10 @@
     left: 0;
   }
 
+  &.admin-bar .site-header {
+    top: 32px;
+  }
+
   & .header-menu-bar {
     box-shadow: unset;
     background: transparent;

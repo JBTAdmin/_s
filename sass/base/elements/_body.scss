@@ -25,7 +25,12 @@ body {
 }
 
 p {
-  margin: 0 0 3.6rem;
+  margin: 1rem 0;
+}
+
+.entry-content > * {
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .wrap {
@@ -37,4 +42,9 @@ p {
 
 body.hide {
   overflow: hidden;
+}
+
+//todo may be it can be moved to some proper place.
+.entry-content > *:first-child {
+  margin-top: 0;
 }
