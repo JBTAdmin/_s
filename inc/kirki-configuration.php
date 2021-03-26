@@ -814,9 +814,9 @@ Kirki::add_field(
 		'section'     => 'blog_post',
 		'default'     => array(
 			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
-			'font-size'      => '44px',
-			'variant'        => 'regular',
-			'line-height'    => '1.5',
+			'font-size'      => 'calc(#{$font_size_h1_mobile} + 34 * ((100vw - 300px) / (1400)))',
+			'variant'        => '700',
+			'line-height'    => '1',
 			'letter-spacing' => '0',
 			'color'          => '#000',
 		),

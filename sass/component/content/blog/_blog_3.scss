@@ -3,6 +3,10 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
 
+  & h2.entry-title {
+    color: #fff;
+  }
+
   & > article {
     padding: unset;
   }
@@ -15,7 +19,7 @@
   }
 
   & .entry-header {
-    padding: 1rem 3rem;
+    padding: 3rem 3rem;
     position: absolute;
     bottom: 0;
     color: #fff;
