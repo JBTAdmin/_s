@@ -6,7 +6,6 @@
  * @since 1.0
  */
 
-
 $next_post     = get_next_post();
 $previous_post = get_previous_post();
 
