@@ -80,11 +80,6 @@
   order: 4;
 }
 
-.comment-form input[type="text"],
-.comment-form textarea {
-  padding: 20px; // todo probably we can use the default 15px which is inherited
-}
-
 .comment-form-comment textarea {
   padding: 20px;
   border: 1px solid #ebebf7;

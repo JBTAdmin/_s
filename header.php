@@ -21,7 +21,7 @@ if ( in_array( get_theme_mod( 'single_post_layout', 'single-in-header-1' ), arra
 	$body_class .= ' in-header';
 }
 
-if ( true === get_theme_mod( 'fixed-header' ) ) {
+if ( true === get_theme_mod( 'fixed-header', true ) ) {
 	$body_class .= ' header-fixed';
 }
 

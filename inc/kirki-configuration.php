@@ -102,7 +102,7 @@ Kirki::add_field(
 		'type'        => 'slider',
 		'settings'    => 'sidebar_width_setting',
 		'label'       => esc_attr__( 'Max Sidebar Width (px)', 'aaurora' ),
-		'description' => 'Sidebar Width is capped to 25% of container width.',
+		'description' => 'Capped to 25% of container width.',
 		'section'     => 'general',
 		'default'     => '250',
 		'choices'     => array(
@@ -126,7 +126,7 @@ Kirki::add_field(
 		'type'        => 'slider',
 		'settings'    => 'button_border_radius',
 		'label'       => esc_attr__( 'Button Border Radius (px)', 'aaurora' ),
-		'description' => 'Select Button Border Radius',
+		'description' => 'Choose Button Border Radius',
 		'section'     => 'general',
 		'default'     => '10',
 		'choices'     => array(
@@ -524,7 +524,7 @@ Kirki::add_field(
 		),
 		'output'      => array(
 			array(
-				'element' => '.site-header',
+				'element' => '.header-menu-bar',
 			),
 		),
 	)
@@ -1349,7 +1349,7 @@ Kirki::add_field(
 		'label'       => esc_attr__( 'Social Media Color Code', 'aaurora' ),
 		'description' => esc_attr__( 'Enable to use Social Media color code.', 'aaurora' ),
 		'section'     => 'social_media',
-		'default'     => '1',
+		'default'     => '0',
 	)
 );
 
