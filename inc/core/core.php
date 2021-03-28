@@ -131,6 +131,10 @@ add_action( 'after_setup_theme', 'aaurora_content_width', 0 );
  */
 function aaurora_scripts() {
 	wp_enqueue_style( 'aaurora-style', get_stylesheet_uri(), array(), AAURORA_VERSION );
+	
+	// FontAwesome Icons
+	wp_enqueue_style( 'fontawesome', get_theme_file_uri( '/assets/css/font-awesome.css' ) );
+	
 	wp_style_add_data( 'aaurora-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'aaurora-main', get_template_directory_uri() . '/js/main.js', array(), AAURORA_VERSION, true );
