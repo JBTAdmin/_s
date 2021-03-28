@@ -203,7 +203,7 @@ Kirki::add_field(
 	array(
 		'type'        => 'dimensions',
 		'settings'    => 'container_padding_setting',
-		'label'       => esc_attr__( 'Container Padding', 'aaurora' ),
+		'label'       => esc_attr__( 'Container Padding (Use CSS units)', 'aaurora' ),
 		'description' => 'Content + Sidebar',
 		'section'     => 'padding_margin',
 		'default'     => array(
@@ -233,7 +233,7 @@ Kirki::add_field(
 	array(
 		'type'        => 'dimensions',
 		'settings'    => 'container_margin_setting',
-		'label'       => esc_attr__( 'Container Margin', 'aaurora' ),
+		'label'       => esc_attr__( 'Container Margin (Use CSS units)', 'aaurora' ),
 		'description' => 'Content + Sidebar',
 		'section'     => 'padding_margin',
 		'default'     => array(
@@ -263,7 +263,7 @@ Kirki::add_field(
 	array(
 		'type'        => 'dimensions',
 		'settings'    => 'article_container_padding_setting',
-		'label'       => esc_attr__( 'Content Padding', 'aaurora' ),
+		'label'       => esc_attr__( 'Content Padding (Use CSS units)', 'aaurora' ),
 		'description' => 'Content Only',
 		'section'     => 'padding_margin',
 		'default'     => array(
@@ -293,7 +293,7 @@ Kirki::add_field(
 	array(
 		'type'        => 'dimensions',
 		'settings'    => 'article_container_margin_setting',
-		'label'       => esc_attr__( 'Content Margin', 'aaurora' ),
+		'label'       => esc_attr__( 'Content Margin (Use CSS units)', 'aaurora' ),
 		'description' => 'Content Only',
 		'section'     => 'padding_margin',
 		'default'     => array(
@@ -323,7 +323,7 @@ Kirki::add_field(
 	array(
 		'type'        => 'dimensions',
 		'settings'    => 'sidebar_padding_setting',
-		'label'       => esc_attr__( 'Sidebar Padding', 'aaurora' ),
+		'label'       => esc_attr__( 'Sidebar Padding (Use CSS units)', 'aaurora' ),
 		'description' => 'Sidebar Only',
 		'section'     => 'padding_margin',
 		'default'     => array(
@@ -353,7 +353,7 @@ Kirki::add_field(
 	array(
 		'type'        => 'dimensions',
 		'settings'    => 'sidebar_margin_setting',
-		'label'       => esc_attr__( 'Sidebar Margin', 'aaurora' ),
+		'label'       => esc_attr__( 'Sidebar Margin (Use CSS units)', 'aaurora' ),
 		'description' => 'Sidebar Only',
 		'section'     => 'padding_margin',
 		'default'     => array(
@@ -455,13 +455,13 @@ Kirki::add_field(
 	array(
 		'type'        => 'typography',
 		'settings'    => 'top_bar_font',
-		'label'       => esc_attr__( 'Typography', 'aaurora' ),
+		'label'       => esc_attr__( 'Typography (Use CSS units)', 'aaurora' ),
 		'section'     => 'top_bar',
 		'default'     => array(
 			'font-family' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
 			'font-size'   => '1.3rem',
 		),
-		'description' => esc_attr__( 'Font used in Single Post Header .', 'aaurora' ),
+		'description' => esc_attr__( 'Font used in Single Post Header.', 'aaurora' ),
 		'output'      => array(
 			array(
 				'choice'  => 'font-size',
@@ -658,7 +658,7 @@ Kirki::add_field(
 	array(
 		'type'        => 'typography',
 		'settings'    => 'header_menu_font',
-		'label'       => esc_attr__( 'Navigation Typography', 'aaurora' ),
+		'label'       => esc_attr__( 'Navigation Typography (Use CSS units)', 'aaurora' ),
 		'section'     => 'header',
 		'default'     => array(
 			'font-family' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
@@ -810,7 +810,7 @@ Kirki::add_field(
 	array(
 		'type'        => 'typography',
 		'settings'    => 'blog_post_title_font',
-		'label'       => esc_attr__( 'Title Typography', 'aaurora' ),
+		'label'       => esc_attr__( 'Title Typography (Use CSS units)', 'aaurora' ),
 		'section'     => 'blog_post',
 		'default'     => array(
 			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
@@ -997,7 +997,7 @@ Kirki::add_field(
 	array(
 		'type'        => 'typography',
 		'settings'    => 'font_header_blog',
-		'label'       => esc_attr__( 'Blog Title Typography', 'aaurora' ),
+		'label'       => esc_attr__( 'Blog Title Typography (Use CSS units)', 'aaurora' ),
 		'section'     => 'fonts',
 		'default'     => array(
 			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
@@ -1021,7 +1021,7 @@ Kirki::add_field(
 	array(
 		'type'        => 'typography',
 		'settings'    => 'body_font',
-		'label'       => esc_attr__( 'Body Typography', 'aaurora' ),
+		'label'       => esc_attr__( 'Body Typography (Use CSS units)', 'aaurora' ),
 		'section'     => 'fonts',
 		'default'     => array(   // TODO  In default can i use Initial as font-family.
 			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
@@ -1045,7 +1045,7 @@ Kirki::add_field(
 	array(
 		'type'        => 'typography',
 		'settings'    => 'font_header_h1',
-		'label'       => esc_attr__( 'H1 Typography', 'aaurora' ),
+		'label'       => esc_attr__( 'H1 Typography (Use CSS units)', 'aaurora' ),
 		'section'     => 'fonts',
 		'default'     => array(
 			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
@@ -1069,7 +1069,7 @@ Kirki::add_field(
 	array(
 		'type'        => 'typography',
 		'settings'    => 'font_header_h2',
-		'label'       => esc_attr__( 'H2 Typography', 'aaurora' ),
+		'label'       => esc_attr__( 'H2 Typography (Use CSS units)', 'aaurora' ),
 		'section'     => 'fonts',
 		'default'     => array(
 			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
@@ -1093,7 +1093,7 @@ Kirki::add_field(
 	array(
 		'type'        => 'typography',
 		'settings'    => 'font_header_h3',
-		'label'       => esc_attr__( 'H3 Typography', 'aaurora' ),
+		'label'       => esc_attr__( 'H3 Typography (Use CSS units)', 'aaurora' ),
 		'section'     => 'fonts',
 		'default'     => array(
 			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',

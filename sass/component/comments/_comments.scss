@@ -19,6 +19,11 @@
     left: 0;
     top: 0;
   }
+
+  .bypostauthor img {
+    border: 2px solid $theme__color;
+    padding: 1px;
+  }
 }
 
 // Comment section When Image is not available or dont want to display.

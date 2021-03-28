@@ -41,6 +41,15 @@ body.admin-bar aside {
   }
 
   & .widget-title {
+    &:after {
+      content: "";
+      width: 5rem;
+      height: 0.3rem;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: $theme__color;
+    }
     color: #000;
     //margin-bottom: 1.5rem;
     //padding-bottom: 0.4rem;
