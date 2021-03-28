@@ -1981,7 +1981,7 @@ div[class*="footer-sidebar-"] {
       transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out; }
   .article-container.blog-3 .post-thumbnail:not(.no-post-thumbnail)::after {
     content: " ";
-    background-color: rgba(23, 22, 26, 0.45);
+    background-color: rgba(23, 22, 26, 0.35);
     position: absolute;
     top: 0;
     left: 0;
