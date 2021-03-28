@@ -814,7 +814,7 @@ Kirki::add_field(
 		'section'     => 'blog_post',
 		'default'     => array(
 			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
-			'font-size'      => 'calc(#{$font_size_h1_mobile} + 34 * ((100vw - 300px) / (1400)))',
+			'font-size'      => '40px',
 			'variant'        => '700',
 			'line-height'    => '1',
 			'letter-spacing' => '0',
@@ -824,6 +824,28 @@ Kirki::add_field(
 		'output'      => array(
 			array(
 				'element' => array( 'h1.entry-title' ),
+				'choice'  => 'font-size',
+				'value_pattern' => 'calc($ + 34 * ((100vw - 300px) / (1400)))'
+			),
+			array(
+				'element' => array( 'h1.entry-title' ),
+				'choice'  => 'variant'
+			),
+			array(
+				'element' => array( 'h1.entry-title' ),
+				'choice'  => 'font-family'
+			),
+			array(
+				'element' => array( 'h1.entry-title' ),
+				'choice'  => 'line-height',
+			),
+			array(
+				'element' => array( 'h1.entry-title' ),
+				'choice'  => 'letter-spacing',
+			),
+			array(
+				'element' => array( 'h1.entry-title' ),
+				'choice'  => 'color',
 			),
 		),
 	)
@@ -1050,7 +1072,7 @@ Kirki::add_field(
 		'default'     => array(
 			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
 			'variant'        => '700',
-			'font-size'      => 'calc(#{$font_size_h1_mobile} + 34 * ((100vw - 300px) / (1400)))',
+			'font-size'      => '40px',
 			'line-height'    => '1',
 			'letter-spacing' => '0',
 			'color'          => '#000',
@@ -1059,6 +1081,28 @@ Kirki::add_field(
 		'output'      => array(
 			array(
 				'element' => array( 'h1' ),
+				'choice'  => 'font-size',
+				'value_pattern' => 'calc($ + 34 * ((100vw - 300px) / (1400)))'
+			),
+			array(
+				'element' => array( 'h1' ),
+				'choice'  => 'variant'
+			),
+			array(
+				'element' => array( 'h1' ),
+				'choice'  => 'font-family'
+			),
+			array(
+				'element' => array( 'h1' ),
+				'choice'  => 'line-height',
+			),
+			array(
+				'element' => array( 'h1' ),
+				'choice'  => 'letter-spacing',
+			),
+			array(
+				'element' => array( 'h1' ),
+				'choice'  => 'color',
 			),
 		),
 	)
@@ -1074,7 +1118,7 @@ Kirki::add_field(
 		'default'     => array(
 			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
 			'variant'        => '700',
-			'font-size'      => 'calc(40px + 14 * ((100vw - 576px) / 1024))',
+			'font-size'      => '40px',
 			'line-height'    => '1.05',
 			'letter-spacing' => '0',
 			'color'          => '#000',
@@ -1083,6 +1127,28 @@ Kirki::add_field(
 		'output'      => array(
 			array(
 				'element' => array( 'h2' ),
+				'choice'  => 'font-size',
+				'value_pattern' => 'calc($ + 14 * ((100vw - 576px) / (1024)))'
+			),
+			array(
+				'element' => array( 'h2' ),
+				'choice'  => 'variant'
+			),
+			array(
+				'element' => array( 'h2' ),
+				'choice'  => 'font-family'
+			),
+			array(
+				'element' => array( 'h2' ),
+				'choice'  => 'line-height',
+			),
+			array(
+				'element' => array( 'h2' ),
+				'choice'  => 'letter-spacing',
+			),
+			array(
+				'element' => array( 'h2' ),
+				'choice'  => 'color',
 			),
 		),
 	)
@@ -1098,7 +1164,7 @@ Kirki::add_field(
 		'default'     => array(
 			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
 			'variant'        => '700',
-			'font-size'      => 'calc(36px + 4 * ((100vw - 576px) / 1024))',
+			'font-size'      => '36px',
 			'line-height'    => '1.1',
 			'letter-spacing' => '0',
 			'color'          => '#000',
@@ -1107,6 +1173,28 @@ Kirki::add_field(
 		'output'      => array(
 			array(
 				'element' => array( 'h3' ),
+				'choice'  => 'font-size',
+				'value_pattern' => 'calc($ + 4 * ((100vw - 576px) / (1024)))'
+			),
+			array(
+				'element' => array( 'h3' ),
+				'choice'  => 'variant'
+			),
+			array(
+				'element' => array( 'h3' ),
+				'choice'  => 'font-family'
+			),
+			array(
+				'element' => array( 'h3' ),
+				'choice'  => 'line-height',
+			),
+			array(
+				'element' => array( 'h3' ),
+				'choice'  => 'letter-spacing',
+			),
+			array(
+				'element' => array( 'h3' ),
+				'choice'  => 'color',
 			),
 		),
 	)
