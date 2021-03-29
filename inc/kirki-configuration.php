@@ -823,17 +823,17 @@ Kirki::add_field(
 		'description' => esc_attr__( 'Single Post Title Typography.', 'aaurora' ),
 		'output'      => array(
 			array(
-				'element' => array( 'h1.entry-title' ),
-				'choice'  => 'font-size',
-				'value_pattern' => 'calc($ + 34 * ((100vw - 300px) / (1400)))'
+				'element'       => array( 'h1.entry-title' ),
+				'choice'        => 'font-size',
+				'value_pattern' => 'calc($ + 34 * ((100vw - 300px) / (1400)))',
 			),
 			array(
 				'element' => array( 'h1.entry-title' ),
-				'choice'  => 'variant'
+				'choice'  => 'variant',
 			),
 			array(
 				'element' => array( 'h1.entry-title' ),
-				'choice'  => 'font-family'
+				'choice'  => 'font-family',
 			),
 			array(
 				'element' => array( 'h1.entry-title' ),
@@ -1080,17 +1080,17 @@ Kirki::add_field(
 		'description' => esc_attr__( 'Font used in H1 Header .', 'aaurora' ),
 		'output'      => array(
 			array(
-				'element' => array( 'h1' ),
-				'choice'  => 'font-size',
-				'value_pattern' => 'calc($ + 34 * ((100vw - 300px) / (1400)))'
+				'element'       => array( 'h1' ),
+				'choice'        => 'font-size',
+				'value_pattern' => 'calc($ + 34 * ((100vw - 300px) / (1400)))',
 			),
 			array(
 				'element' => array( 'h1' ),
-				'choice'  => 'variant'
+				'choice'  => 'variant',
 			),
 			array(
 				'element' => array( 'h1' ),
-				'choice'  => 'font-family'
+				'choice'  => 'font-family',
 			),
 			array(
 				'element' => array( 'h1' ),
@@ -1126,17 +1126,17 @@ Kirki::add_field(
 		'description' => esc_attr__( 'Font used in H2 header.', 'aaurora' ),
 		'output'      => array(
 			array(
-				'element' => array( 'h2' ),
-				'choice'  => 'font-size',
-				'value_pattern' => 'calc($ + 14 * ((100vw - 576px) / (1024)))'
+				'element'       => array( 'h2' ),
+				'choice'        => 'font-size',
+				'value_pattern' => 'calc($ + 14 * ((100vw - 576px) / (1024)))',
 			),
 			array(
 				'element' => array( 'h2' ),
-				'choice'  => 'variant'
+				'choice'  => 'variant',
 			),
 			array(
 				'element' => array( 'h2' ),
-				'choice'  => 'font-family'
+				'choice'  => 'font-family',
 			),
 			array(
 				'element' => array( 'h2' ),
@@ -1172,17 +1172,17 @@ Kirki::add_field(
 		'description' => esc_attr__( 'Font used in H3 header.', 'aaurora' ),
 		'output'      => array(
 			array(
-				'element' => array( 'h3' ),
-				'choice'  => 'font-size',
-				'value_pattern' => 'calc($ + 4 * ((100vw - 576px) / (1024)))'
+				'element'       => array( 'h3' ),
+				'choice'        => 'font-size',
+				'value_pattern' => 'calc($ + 4 * ((100vw - 576px) / (1024)))',
 			),
 			array(
 				'element' => array( 'h3' ),
-				'choice'  => 'variant'
+				'choice'  => 'variant',
 			),
 			array(
 				'element' => array( 'h3' ),
-				'choice'  => 'font-family'
+				'choice'  => 'font-family',
 			),
 			array(
 				'element' => array( 'h3' ),
