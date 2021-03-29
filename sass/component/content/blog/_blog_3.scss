@@ -62,13 +62,13 @@
 }
 
 @media screen and (max-width: 1200px) {
-  .article-container.blog-5 {
+  .article-container.blog-3 {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (max-width: 900px) {
-  .article-container.blog-5 {
+  .article-container.blog-3 {
     grid-template-columns: repeat(1, 1fr);
   }
 }
