@@ -17,7 +17,7 @@ $class = 'widget-area sidebar-alt-aside sidebar-alt';
 		<div class="wrap">
 			<div class="aside-header-container">
 				<div class="widget aside-header">
-					<div class="sidebar-close-btn" on="tap:drawermenu.toggle" role="button" tabindex="1">
+					<div class="sidebar-close-btn" on="tap:drawermenu.toggle" role="button">
 						<button class="toggle sidebar-close desktop-sidebar-toggle" data-toggle-target=".sidebar-modal"
 								data-toggle-body-class="closing-sidebar-modal" aria-expanded="false">
 									<span class="toggle-inner">

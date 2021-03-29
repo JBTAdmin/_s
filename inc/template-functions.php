@@ -30,8 +30,8 @@ add_action( 'aaurora_footer', 'aaurora_footer_section' );
 add_action( 'aaurora_footer_content', 'aaurora_footer_main_layout' );
 add_action( 'aaurora_footer_after', 'aaurora_footer_share_layout' );
 add_action( 'aaurora_footer_after', 'aaurora_footer_popup_search_modal_layout' );
-add_action( 'aaurora_footer_after', 'aaurora_footer_go_to_top_layout' );
 add_action( 'aaurora_footer_after', 'aaurora_footer_search_layout' );
+add_action( 'aaurora_footer_after', 'aaurora_footer_go_to_top_layout' );
 add_action( 'aaurora_footer_after', 'aaurora_social_media' );
 add_filter( 'body_class', 'aaurora_body_classes' );
 
@@ -416,7 +416,7 @@ if ( ! function_exists( 'aaurora_header_search' ) ) {
 	function aaurora_header_search() {
 		if ( 'header' === get_theme_mod( 'general_search_visibility', 'fixed' ) ) {
 			?>
-			<div class="aaurora-header-search" role="button" tabindex="1">
+			<div class="aaurora-header-search" role="button" tabindex="0">
 				<?php aaurora_load_inline_svg( 'search.svg' ); ?>
 			</div>
 			<?php
@@ -437,7 +437,7 @@ if ( ! function_exists( 'aaurora_hamburger_menu' ) ) {
 		}
 		?>
 		<div class="hamburger-menu <?php echo esc_attr( $sidebar_alt_class ); ?>" on="tap:drawermenu.toggle"
-			role="button" tabindex="1">
+			role="button" tabindex="0">
 			<div class="toggle sidebar-open desktop-sidebar-toggle" data-toggle-target=".sidebar-modal"
 				data-toggle-body-class="showing-sidebar-modal" aria-expanded="false">
 									<span class="toggle-inner">
@@ -501,8 +501,8 @@ if ( ! function_exists( 'aaurora_footer_share_layout' ) ) {
 	function aaurora_footer_share_layout() {
 		if ( get_theme_mod( 'general_social_share', 1 ) ) {
 			?>
-			<div class="aaurora-share fixed visible">
-				<a href="#">
+			<div class="aaurora-share fixed visible" tabindex="0">
+				<a href="#" tabindex="-1">
 					<?php aaurora_load_inline_svg( 'share.svg' ); ?>
 				</a>
 				<div class="aaurora-share-inner">
@@ -535,7 +535,7 @@ if ( ! function_exists( 'aaurora_footer_popup_search_modal_layout' ) ) {
 	 */
 	function aaurora_footer_popup_search_modal_layout() {
 		?>
-		<div class="popup_search_modal" tabindex="1">
+		<div class="popup_search_modal">
 			<div class="popup_modal_close_button">
 				<?php aaurora_load_inline_svg( 'close.svg' ); ?>
 			</div>
@@ -563,7 +563,7 @@ if ( ! function_exists( 'aaurora_footer_go_to_top_layout' ) ) {
 	function aaurora_footer_go_to_top_layout() {
 		if ( get_theme_mod( 'general_scroll_to_top', 1 ) ) {
 			?>
-			<a class="top-link" href="#" id="js-top" on="tap:masthead.scrollTo" role="button" tabindex="1">
+			<a class="top-link" href="#" id="js-top" on="tap:masthead.scrollTo" role="button">
 				<?php aaurora_load_inline_svg( 'arrow-up.svg' ); ?>
 				<span class="screen-reader-text">Back to top</span>
 			</a>

@@ -44,6 +44,12 @@ body.hide {
   overflow: hidden;
 }
 
+:focus {
+  outline-width: 2px;
+  outline-style: dashed;
+  outline-color: currentColor;
+}
+
 //todo may be it can be moved to some proper place.
 .entry-content > *:first-child {
   margin-top: 0;
