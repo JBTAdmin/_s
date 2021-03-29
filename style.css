@@ -2332,12 +2332,10 @@ div[class*="footer-sidebar-"] {
 .comment-form .comment-notes,
 .form-submit,
 .comments-area {
-  width: 100%; }
+  width: 100%;
+  clear: both; }
 
 .comment-form-comment {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
   width: 100%; }
 
 .comment-form-cookies-consent {

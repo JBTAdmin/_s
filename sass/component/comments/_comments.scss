@@ -70,10 +70,11 @@
 .form-submit,
 .comments-area {
   width: 100%;
+  clear: both;
 }
 
 .comment-form-comment {
-  order: 2;
+  //order: 2;
   width: 100%;
 }
 
