@@ -1,11 +1,11 @@
 @media only screen and (max-width: 768px) {
-  .aaurora-search {
+  .aaurora-search.footer-search {
     opacity: 0;
     visibility: hidden;
   }
 }
 
-.aaurora-search {
+.aaurora-search.footer-search {
   position: fixed;
   left: $left_position;
   bottom: 5vh;

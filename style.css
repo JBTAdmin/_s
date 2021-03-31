@@ -1345,7 +1345,7 @@ li > ul.sub-menu {
   border-radius: 0.4rem;
   padding: 1rem; }
 
-.aaurora-header-search {
+.aaurora-search.header-search {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2728,11 +2728,11 @@ a.pt {
 /* Search
 --------------------------------------------- */
 @media only screen and (max-width: 768px) {
-  .aaurora-search {
+  .aaurora-search.footer-search {
     opacity: 0;
     visibility: hidden; } }
 
-.aaurora-search {
+.aaurora-search.footer-search {
   position: fixed;
   left: 5vh;
   bottom: 5vh;
@@ -2751,7 +2751,7 @@ a.pt {
   width: 60px;
   height: 60px;
   background: #fff; }
-  .aaurora-search svg {
+  .aaurora-search.footer-search svg {
     width: 24px;
     height: 24px; }
 

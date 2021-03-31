@@ -29,8 +29,8 @@ add_action( 'aaurora_footer_before', 'aaurora_footer_call_to_action' );
 add_action( 'aaurora_footer', 'aaurora_footer_section' );
 add_action( 'aaurora_footer_content', 'aaurora_footer_main_layout' );
 add_action( 'aaurora_footer_after', 'aaurora_footer_share_layout' );
-add_action( 'aaurora_footer_after', 'aaurora_footer_popup_search_modal_layout' );
 add_action( 'aaurora_footer_after', 'aaurora_footer_search_layout' );
+//add_action( 'aaurora_footer_after', 'aaurora_footer_popup_search_modal_layout' );
 add_action( 'aaurora_footer_after', 'aaurora_footer_go_to_top_layout' );
 add_action( 'aaurora_footer_after', 'aaurora_social_media' );
 add_filter( 'body_class', 'aaurora_body_classes' );
@@ -416,10 +416,12 @@ if ( ! function_exists( 'aaurora_header_search' ) ) {
 	function aaurora_header_search() {
 		if ( 'header' === get_theme_mod( 'general_search_visibility', 'fixed' ) ) {
 			?>
-			<div class="aaurora-header-search" role="button" tabindex="0">
+			<div class="aaurora-search header-search" role="button" tabindex="0">
 				<?php aaurora_load_inline_svg( 'search.svg' ); ?>
+                <span class="screen-reader-text">Search</span>
 			</div>
 			<?php
+			aaurora_footer_popup_search_modal_layout();
 		}
 	}
 }
@@ -437,9 +439,9 @@ if ( ! function_exists( 'aaurora_hamburger_menu' ) ) {
 		}
 		?>
 		<div class="hamburger-menu <?php echo esc_attr( $sidebar_alt_class ); ?>" on="tap:drawermenu.toggle"
-			role="button" tabindex="0">
+			role="button" >
 			<div class="toggle sidebar-open desktop-sidebar-toggle" data-toggle-target=".sidebar-modal"
-				data-toggle-body-class="showing-sidebar-modal" aria-expanded="false">
+				data-toggle-body-class="showing-sidebar-modal" aria-expanded="false" tabindex="0">
 									<span class="toggle-inner">
 										<?php aaurora_load_inline_svg( 'hamburger.svg' ); ?>
 									</span>
@@ -527,31 +529,29 @@ if ( ! function_exists( 'aaurora_footer_share_layout' ) ) {
 	}
 }
 
-if ( ! function_exists( 'aaurora_footer_popup_search_modal_layout' ) ) {
-	/**
-	 * Displays Search Modal.
-	 *
-	 * @since 1.0.0
-	 */
-	function aaurora_footer_popup_search_modal_layout() {
-		?>
-		<div class="popup_search_modal">
-			<div class="popup_modal_close_button">
-				<?php aaurora_load_inline_svg( 'close.svg' ); ?>
-			</div>
-			<div class="search_holder">
-				<!--        todo hard coding should be removed-->
-				<form role="search" class="search search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>"
-						method="GET" >
-					<label> <span class="screen-reader-text">Search for</span>
-						<input autocomplete="off" type="text" id="search-field" class="search-field" name="s"
-								placeholder="<?php esc_attr_e( 'Search..', 'aaurora' ); ?>" value="" autofocus>
-					</label>
-				</form>
-			</div>
-		</div>
-		<?php
-	}
+/**
+ * Displays Search Modal.
+ *
+ * @since 1.0.0
+ */
+function aaurora_footer_popup_search_modal_layout() {
+    ?>
+    <div class="popup_search_modal">
+        <div class="popup_modal_close_button">
+            <?php aaurora_load_inline_svg( 'close.svg' ); ?>
+        </div>
+        <div class="search_holder">
+            <!--        todo hard coding should be removed-->
+            <form role="search" class="search search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>"
+                    method="GET" >
+                <label> <span class="screen-reader-text">Search for</span>
+                    <input autocomplete="off" type="text" id="search-field" class="search-field" name="s"
+                            placeholder="<?php esc_attr_e( 'Search..', 'aaurora' ); ?>" value="" autofocus>
+                </label>
+            </form>
+        </div>
+    </div>
+    <?php
 }
 
 if ( ! function_exists( 'aaurora_footer_go_to_top_layout' ) ) {
@@ -581,12 +581,12 @@ if ( ! function_exists( 'aaurora_footer_search_layout' ) ) {
 	function aaurora_footer_search_layout() {
 		if ( 'fixed' === get_theme_mod( 'general_search_visibility', 'fixed' ) ) {
 			?>
-			<a class="aaurora-search" href="#">
+			<a class="aaurora-search footer-search" href="#">
 				<?php aaurora_load_inline_svg( 'search.svg' ); ?>
 				<span class="screen-reader-text">Search</span>
 			</a>
-
 			<?php
+			aaurora_footer_popup_search_modal_layout();
 		}
 	}
 }

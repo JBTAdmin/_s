@@ -73,7 +73,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   const popupSearchModal = document.querySelector(".popup_search_modal");
   const searchButton = document.querySelector(".aaurora-search");
-  const headerSearchButton = document.querySelector(".aaurora-header-search");
   const popupModalCloseBtn = document.querySelector(
     ".popup_modal_close_button"
   );
@@ -132,15 +131,27 @@ document.addEventListener("DOMContentLoaded", function(event) {
   });
 
   hamburgerBtn &&
-    hamburgerBtn.addEventListener("click", function() {
-      altSidebar.classList.toggle("open");
-      sidebarOverlay.classList.toggle("open");
-      document.body.classList.toggle("hide");
-    });
+    hamburgerBtn.addEventListener("click", hamburgerMenu);
+
+  // hamburgerBtn &&
+  // hamburgerBtn.addEventListener("focus", hamburgerMenu);
+
+  hamburgerBtn &&
+  hamburgerBtn.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      hamburgerMenu();
+    }
+  });
+
+  function hamburgerMenu() {
+    altSidebar.classList.toggle("open");
+    sidebarOverlay.classList.toggle("open");
+    document.body.classList.toggle("hide");
+  }
 
   menuCloseBtn &&
     menuCloseBtn.addEventListener("click", function() {
-      hamburgerBtn.focus();
+      // hamburgerBtn.focus();
       altSidebar.classList.toggle("open");
       sidebarOverlay.classList.toggle("open");
       document.body.classList.toggle("hide");
@@ -152,19 +163,21 @@ document.addEventListener("DOMContentLoaded", function(event) {
       sidebarOverlay.classList.toggle("open");
     });
 
-  searchButton &&
-    searchButton.addEventListener("click", function() {
-      popupSearchModal.classList.toggle("visible");
-      document.getElementById("search-field").focus();
-    });
+  searchButton && searchButton.addEventListener("click", openSearchModal);
 
-  headerSearchButton &&
-    headerSearchButton.addEventListener("click", function() {
-      popupSearchModal.classList.toggle("visible");
-      document.getElementById("search-field").focus();
-    });
+  searchButton && searchButton.addEventListener("focus", openSearchModal);
 
-  popupModalCloseBtn.addEventListener("click", function() {
+  function openSearchModal(event) {
+    popupSearchModal.classList.toggle("visible");
+    searchField.focus();
+  }
+
+  searchField && searchField.addEventListener("blur", function(event){
     popupSearchModal.classList.toggle("visible");
   });
+
+  popupModalCloseBtn.addEventListener("click", function(event) {
+    popupSearchModal.classList.toggle("visible");
+  });
+
 });
