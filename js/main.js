@@ -92,17 +92,35 @@ document.addEventListener("DOMContentLoaded", function(event) {
     return false;
   }
 
-  const menuBtn = document.querySelector(".menu-btn");
+  // const menuBtn = document.querySelector(".menu-btn");
+  // todo what is the use of below??????
   const menu = document.querySelector(".menu");
+
+  const headerMenu = document.querySelector(".header-menu");
   const header = document.querySelector("header");
+
+  // combine these two
+  const hamburgerBtn1 = document.querySelector(".hamburger-menu");
   const hamburgerBtn = document.querySelector(".sidebar-open");
+
   const altSidebar = document.querySelector(".sidebar-alt");
-  const menuCloseBtn = document.querySelector(".sidebar-close");
+  const menuCloseBtn = document.querySelector(".mobile-cls-btn");
   const sidebarOverlay = document.querySelector(".sidebar-overlay");
 
   const searchField = document.querySelector(".search-field");
 
   const subMenu = document.querySelectorAll(".sidebar-menu  .sub-menu");
+  const headerSubMenu = document.querySelectorAll(".header-menu  .sub-menu");
+
+  // Holding temp class name when mobile menu is open
+  let clsList;
+
+  headerSubMenu.forEach(el =>
+    el.insertAdjacentHTML(
+      "beforebegin",
+      '<span class="drawer-dropdown-button" ></span>'
+    )
+  );
 
   subMenu.forEach(el =>
     el.insertAdjacentHTML(
@@ -112,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   );
 
   const sidebarMenu = Array.prototype.slice.call(
-    document.querySelectorAll(".widget-area .drawer-dropdown-button")
+    document.querySelectorAll(".drawer-dropdown-button")
   );
 
   sidebarMenu.forEach(function(el) {
@@ -124,60 +142,110 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
   });
 
-  menuBtn.addEventListener("click", function() {
-    menuBtn.classList.toggle("open");
-    menu.classList.toggle("open");
-    header.classList.toggle("open");
-  });
+  // menuBtn.addEventListener("click", function() {
+  //   menuBtn.classList.toggle("open");
+  //   menu.classList.toggle("open");
+  //   header.classList.toggle("open");
+  // });
 
-  hamburgerBtn &&
-    hamburgerBtn.addEventListener("click", hamburgerMenu);
+  hamburgerBtn && hamburgerBtn.addEventListener("click", hamburgerMenu);
 
   // hamburgerBtn &&
   // hamburgerBtn.addEventListener("focus", hamburgerMenu);
 
+  //todo combine below two.!!!!!!!!!!!!!
   hamburgerBtn &&
-  hamburgerBtn.addEventListener('keypress', function (e) {
-    if (e.key === 'Enter' || e.key === ' ') {
-      hamburgerMenu();
-    }
-  });
+    hamburgerBtn.addEventListener("keypress", function(e) {
+      if (e.key === "Enter" || e.key === " ") {
+        hamburgerMenu();
+      }
+    });
+
+  hamburgerBtn1 &&
+    hamburgerBtn1.addEventListener("keypress", function(e) {
+      if (e.key === "Enter" || e.key === " ") {
+        hamburgerMenu();
+      }
+    });
 
   function hamburgerMenu() {
-    altSidebar.classList.toggle("open");
+    //todo move to top
+    let headerMenuContainer = document.querySelector(".header-menu-container");
+    const primaryMenu = document.getElementById("primary-menu");
+
+    menuCloseBtn.classList.toggle("visible");
     sidebarOverlay.classList.toggle("open");
     document.body.classList.toggle("hide");
+    hamburgerBtn1.classList.toggle("hide");
+
+    if (primaryMenu.className == "header-menu") {
+      primaryMenu.className = "sidebar-menu";
+      clsList = headerMenuContainer.className;
+      headerMenuContainer.className = "header-menu-container";
+      trapFocus(".mobile-menu-container");
+    } else {
+      primaryMenu.className = "header-menu";
+      headerMenuContainer.className = clsList;
+      clsList = "";
+      hamburgerBtn.focus();
+    }
   }
 
-  menuCloseBtn &&
-    menuCloseBtn.addEventListener("click", function() {
-      // hamburgerBtn.focus();
-      altSidebar.classList.toggle("open");
-      sidebarOverlay.classList.toggle("open");
-      document.body.classList.toggle("hide");
-    });
+  menuCloseBtn && menuCloseBtn.addEventListener("click", hamburgerMenu);
 
-  sidebarOverlay &&
-    sidebarOverlay.addEventListener("click", function() {
-      altSidebar.classList.toggle("open");
-      sidebarOverlay.classList.toggle("open");
-    });
+  // sidebarOverlay &&
+  //   sidebarOverlay.addEventListener("click", function() {
+  //     altSidebar.classList.toggle("open");
+  //     sidebarOverlay.classList.toggle("open");
+  //   });
 
   searchButton && searchButton.addEventListener("click", openSearchModal);
+  // searchButton && searchButton.addEventListener("focus", openSearchModal);
+  searchButton &&
+    searchButton.addEventListener("keypress", function(e) {
+      // alert('inside key');
+      if (e.key === "Enter" || e.key === " ") {
+        // alert('inside if  ');
+        openSearchModal();
+      }
+    });
 
-  searchButton && searchButton.addEventListener("focus", openSearchModal);
+  function trapFocus(ele) {
+    const matches = document
+      .querySelector(ele)
+      .querySelectorAll("a, input, button");
 
-  function openSearchModal(event) {
+    let firstElement = matches[0];
+    let lastElement = matches[matches.length - 1];
+
+    firstElement.focus();
+
+    lastElement.addEventListener("keydown", function(e) {
+      if (e.key == "Tab" && !e.shiftKey) {
+        e.preventDefault();
+        firstElement.focus();
+      }
+    });
+
+    firstElement.addEventListener("keydown", function(e) {
+      if (e.key == "Tab" && e.shiftKey) {
+        e.preventDefault();
+        lastElement.focus();
+      }
+    });
+  }
+
+  function openSearchModal() {
     popupSearchModal.classList.toggle("visible");
     searchField.focus();
   }
 
-  searchField && searchField.addEventListener("blur", function(event){
-    popupSearchModal.classList.toggle("visible");
-  });
+  searchField &&
+    searchField.addEventListener("blur", function(event) {
+      popupSearchModal.classList.toggle("visible");
+    });
 
   popupModalCloseBtn.addEventListener("click", function(event) {
     popupSearchModal.classList.toggle("visible");
   });
-
 });

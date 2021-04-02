@@ -1,3 +1,5 @@
+//todo sidebar-menu and header-menu try to combine them.
+
 .header-menu {
   //color: rgb(51, 51, 51);
   //font-size: 1.4rem;
@@ -11,11 +13,11 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 2;
+  //z-index: 2;
   height: 100%;
 }
 
-#primary-menu > li > a:after {
+.header-menu > li > a:after {
   content: "";
   width: 0;
   height: 2px;
@@ -26,7 +28,7 @@
   transition: width 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-#primary-menu > li:hover > a:after {
+.header-menu > li:hover > a:after {
   width: 100%;
 }
 
@@ -36,6 +38,10 @@
 
 .sub-menu {
   z-index: 1000;
+}
+
+.mobile-menu-container .sidebar-menu {
+  color: #000;
 }
 
 .sidebar-menu {
@@ -48,7 +54,7 @@
   text-decoration: none;
   //border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   //padding-left: 0.6rem;
-  padding: 5px 0;
+  padding: 0.8rem 2rem;
 }
 
 aside.sidebar-alt .widget-sidebar-menu a {
@@ -65,12 +71,10 @@ aside .submenu a {
   letter-spacing: 0.1rem;
 }
 
-.sidebar-menu li:hover > a {
-  color: $theme__color;
-}
-
+.sidebar-menu li:hover > a,
 .sidebar-menu li:active > a {
   color: $theme__color;
+  font-weight: 600;
 }
 
 li > ul.sub-menu {
@@ -80,17 +84,42 @@ li > ul.sub-menu {
   display: none;
 }
 
+.mobile-cls-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 1000;
+  color: #000;
+  & svg {
+    z-index: 3;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .hamburger-menu.menu_only {
     display: flex;
   }
+  // todo Combine all sidebar meny css in one place.
   .sidebar-menu {
     display: block;
+    font-size: 1.6rem;
+    font-weight: 600;
+    background-color: #fff;
+    z-index: 1000;
   }
 
   .header-menu,
   .aaurora-top-bar {
     display: none;
+  }
+
+  .mobile-cls-btn.visible {
+    display: flex;
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    padding: 1rem;
   }
 
   .menu-btn {
@@ -259,6 +288,23 @@ li > ul.sub-menu {
     visibility: visible;
     opacity: 1;
     transition: opacity ease-in-out 0.3s;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  nav .sub-menu li:hover {
+    background-color: #ececec94;
+    padding-left: 5px;
+  }
+
+  /* All the properties should not be here*/
+  .sidebar-menu li:hover > ul,
+  .sidebar-menu li:focus > ul,
+  .sidebar-menu li:focus-within > ul {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity ease-in-out 0.3s;
+    max-height: 100rem !important;
   }
 }
 

@@ -38,26 +38,30 @@
 }
 
 .single-post .cat-links > a {
-  border-radius: 0.4rem;
-  padding: 1px 8px;
+  //border-radius: 0.4rem;
+  //padding: 1px 8px;
   display: inline-block;
   margin-bottom: 10px;
   //color: rgba(0, 0, 0, 0.8);
-  background: #fff;
+  //background: #fff;
   //text-transform: uppercase;
   //letter-spacing: 0.3rem;
-  font-weight: 400;
-  font-size: 1.6rem;
-  border: 1px solid #e0dede;
+  font-weight: 500;
+  font-size: 1.9rem;
+  opacity: 0.9;
+  padding-right: 1rem;
+  //border: 1px solid #e0dede;
 }
 
 .entry-title {
   margin-bottom: 1.5rem;
+  color: inherit;
 }
 
 .entry-meta {
-  color: rgba(0, 0, 0, 0.8);
+  //color: rgba(0, 0, 0, 0.8);
   font-size: 1.6rem;
+  opacity: 0.8;
 }
 
 .single-post .entry-meta > *:not(:last-child):after {

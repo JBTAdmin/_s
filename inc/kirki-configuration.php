@@ -535,7 +535,7 @@ Kirki::add_field(
 	array(
 		'type'        => 'color',
 		'settings'    => 'color_site_title_text',
-		'label'       => esc_attr__( 'Header Color', 'aaurora' ),
+		'label'       => esc_attr__( 'Color', 'aaurora' ),
 		'description' => '',
 		'section'     => 'header',
 		'default'     => '#333333',
@@ -756,7 +756,7 @@ Kirki::add_field(
 			'category'  => esc_html__( 'Category', 'aaurora' ),
 			'heading'   => esc_html__( 'Heading', 'aaurora' ),
 			'metadata'  => esc_html__( 'Metadata', 'aaurora' ),
-			'thumbnail' => esc_html__( 'Thumbnail', 'aaurora' ),
+			'thumbnail' => esc_html__( 'Featured Image', 'aaurora' ),
 		),
 		'priority'  => 10,
 	)
@@ -844,7 +844,11 @@ Kirki::add_field(
 				'choice'  => 'letter-spacing',
 			),
 			array(
-				'element' => array( 'h1.entry-title' ),
+				'element' => array( '.meta-data' ),
+				'choice'  => 'color',
+			),
+			array(
+				'element' => array( '.single-post.single-in-header-1 .header-menu-bar' ),
 				'choice'  => 'color',
 			),
 		),
