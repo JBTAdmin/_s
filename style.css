@@ -2188,7 +2188,7 @@ div[class*="footer-sidebar-"] {
 
 .entry-meta {
   font-size: 1.6rem;
-  opacity: 0.8; }
+  font-weight: 600; }
 
 .single-post .entry-meta > *:not(:last-child):after {
   content: "|";
@@ -2233,17 +2233,17 @@ div[class*="footer-sidebar-"] {
     .column-2-title-image .wrap .post-thumbnail {
       min-height: 45rem; } }
 
-.single.single-in-header-1 .wrap {
+.single.in-header .wrap {
   margin: 0 auto; }
-  .single.single-in-header-1 .wrap > div {
+  .single.in-header .wrap > div {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 50%;
             flex: 1 1 50%; }
-    .single.single-in-header-1 .wrap > div img {
+    .single.in-header .wrap > div img {
       display: block;
       border-radius: 1rem; }
 
-.single.single-in-header-1 .post-thumbnail {
+.single.in-header .post-thumbnail {
   position: absolute;
   top: 0;
   left: 0;
@@ -2252,7 +2252,7 @@ div[class*="footer-sidebar-"] {
   z-index: -20;
   margin: 0;
   background-color: var(--theme-color); }
-  .single.single-in-header-1 .post-thumbnail:after {
+  .single.in-header .post-thumbnail:after {
     content: "";
     width: 100%;
     height: 100%;
@@ -2261,25 +2261,25 @@ div[class*="footer-sidebar-"] {
     left: 0;
     z-index: -10;
     background-color: rgba(17, 17, 17, 0.5); }
-  .single.single-in-header-1 .post-thumbnail img {
+  .single.in-header .post-thumbnail img {
     border-radius: unset; }
 
-.single.single-in-header-1 .site-header {
+.single.in-header .site-header {
   background: transparent;
   position: absolute;
   top: 0;
   left: 0; }
 
-.single.single-in-header-1.admin-bar .site-header {
+.single.in-header.admin-bar .site-header {
   top: 32px; }
 
-.single.single-in-header-1 .header-menu-bar {
+.single.in-header .header-menu-bar {
   -webkit-box-shadow: unset;
           box-shadow: unset; }
 
-.single.single-in-header-1 .in-header-container {
+.single.in-header .in-header-container {
   padding-top: 10vh; }
-  .single.single-in-header-1 .in-header-container.thumbnail {
+  .single.in-header .in-header-container.thumbnail {
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2288,7 +2288,7 @@ div[class*="footer-sidebar-"] {
         -ms-flex-pack: center;
             justify-content: center; }
 
-.single.single-in-header-1 .meta-data {
+.single.in-header .meta-data {
   margin: 10vh 0; }
 
 .archive-description {

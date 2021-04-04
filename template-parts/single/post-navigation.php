@@ -22,11 +22,11 @@ if ( empty( $next_post ) && empty( $previous_post ) ) {
 	$next_post_thumbnail     = '';
 
 	if ( is_a( $previous_post, 'WP_Post' ) ) :
-		$previous_post_thumbnail = get_the_post_thumbnail( $previous_post->ID, 'aaurora-blog-single-post-navigation-featured-image' );
+		$previous_post_thumbnail = get_the_post_thumbnail( $previous_post->ID, 'aaurora-post-navigation-featured-image' );
 	endif;
 
 	if ( is_a( $next_post, 'WP_Post' ) ) :
-		$next_post_thumbnail = get_the_post_thumbnail( $next_post->ID, 'aaurora-blog-single-post-navigation-featured-image' );
+		$next_post_thumbnail = get_the_post_thumbnail( $next_post->ID, 'aaurora-post-navigation-featured-image' );
 	endif;
 
 	the_post_navigation(

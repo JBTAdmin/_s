@@ -724,15 +724,15 @@ Kirki::add_field(
 		'settings'    => 'single_post_layout',
 		'label'       => esc_html__( 'Layout', 'aaurora' ),
 		'section'     => 'blog_post',
-		'default'     => 'single-in-header-1',
+		'default'     => 'in-header',
 		'placeholder' => esc_html__( 'Select Single Post Layout.', 'aaurora' ),
 		'multiple'    => 0,
 		'choices'     => array(
-			'single-in-content-1'          => esc_html__( 'Layout 1', 'aaurora' ),
-			'single-in-header-1'           => esc_html__( 'Layout 2', 'aaurora' ),
+			'in-content'          => esc_html__( 'Layout 1', 'aaurora' ),
+			'in-header'           => esc_html__( 'Layout 2', 'aaurora' ),
 			'column-2-title-image'         => esc_html__( 'Layout 3-No', 'aaurora' ),
 			'column-2-title-image-compact' => esc_html__( 'Layout 4-No', 'aaurora' ),
-			'layout-2'                     => esc_html__( 'Layout 5-No', 'aaurora' ),
+			'layout-5'                     => esc_html__( 'Layout 5-No', 'aaurora' ),
 
 		),
 	)
@@ -848,7 +848,7 @@ Kirki::add_field(
 				'choice'  => 'color',
 			),
 			array(
-				'element' => array( '.single-post.single-in-header-1 .header-menu-bar' ),
+				'element' => array( '.single-post.in-header .header-menu-bar' ),
 				'choice'  => 'color',
 			),
 		),
