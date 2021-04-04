@@ -16,8 +16,13 @@
 		<?php aaurora_post_thumbnail( 'aaurora-blog-5-featured-image', aaurora_posted_on( true ), false ); ?>
 
 		<div class="entry-header">
-			<div class="posted-on">
-				<?php aaurora_posted_on(); ?>
+			<div class="cat-links">
+				<?php
+				$categories = get_the_category();
+				if ( ! empty( $categories ) ) {
+					echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
+				}
+				?>
 			</div>
 			<?php
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );

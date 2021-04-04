@@ -72,7 +72,8 @@
     position: absolute;
     left: 1rem;
     top: 1rem;
-    width: 8rem;
+    //width: 8rem;
+    padding: 1rem;
     height: 2rem;
     background: #fff;
     border-radius: 0.3rem;
@@ -83,6 +84,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    //todo try to remove it. Only first post is having effect of this.
     z-index: 1;
   }
 
@@ -133,11 +135,13 @@
 
 // Responsive Layout.
 @media screen and (max-width: 900px) {
-  .blog-1 article,
   .blog-2 article,
   .blog-4 article,
   .blog-5 article {
     flex-basis: 50% !important;
+  }
+  .blog-1 .inner-entry {
+    flex-direction: column;
   }
 }
 

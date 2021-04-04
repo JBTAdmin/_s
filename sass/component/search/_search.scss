@@ -40,7 +40,9 @@
   top: 0;
   left: 0;
   bottom: 0;
-  z-index: 9999999;
+  justify-content: center;
+  align-items: enter;
+  //z-index: 9999999;
   overflow: hidden;
   opacity: 0;
   //visibility: hidden;
@@ -50,21 +52,8 @@
 
 .popup_search_modal.visible {
   //visibility: visible;
-  display: block;
+  display: flex;
   opacity: 1;
-}
-
-//todo need to see how to remove !important
-.search.search-submit {
-  padding: 0 !important;
-  margin: 0 !important;
-  width: 100% !important;
-  min-height: 30px !important;
-  height: 35px !important;
-  border-radius: 0 0 4px 4px !important;
-  text-transform: uppercase;
-  color: #000;
-  font-size: medium;
 }
 
 .popup_search_modal .search-field {
@@ -89,8 +78,8 @@
 
 .popup_search_modal .search_holder {
   position: relative;
-  z-index: 999;
-  top: 20vh;
+  //z-index: 999;
+  top: 40vh;
   overflow: hidden;
   width: calc(100% - 50px);
   max-width: 500px;
@@ -100,9 +89,12 @@
 
 .popup_search_modal > .popup_modal_close_button {
   color: #fff;
-  padding: 4rem;
-  display: flex;
-  justify-content: flex-end;
+  position: absolute;
+  right: 5rem;
+  top: 5rem;
+  //padding: 4rem;
+  //display: flex;
+  //justify-content: flex-end;
   & > svg {
     width: 6rem;
     height: 6rem;

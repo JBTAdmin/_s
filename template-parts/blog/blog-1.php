@@ -23,7 +23,7 @@
 		</div>
 
 		<div class="entry-excerpt">
-			<a href="<?php echo esc_url( get_permalink() ); ?>">
+			<a href="<?php echo esc_url( get_permalink() ); ?>" tabindex="-1">
 				<?php echo esc_html( aaurora_excerpt( 50 ) ); ?>
 			</a>
 		</div>

@@ -452,9 +452,9 @@ if ( ! function_exists( 'aaurora_hamburger_menu' ) ) {
 		}
 		?>
         <div class="hamburger-menu <?php echo esc_attr( $sidebar_alt_class ); ?>" on="tap:drawermenu.toggle"
-             role="button">
+             role="button" tabindex="0">
             <button class="toggle sidebar-open desktop-sidebar-toggle" data-toggle-target=".sidebar-modal"
-                    data-toggle-body-class="showing-sidebar-modal" aria-expanded="false" tabindex="0">
+                    data-toggle-body-class="showing-sidebar-modal" aria-expanded="false" tabindex="-1">
 									<span class="toggle-inner">
 										<?php aaurora_load_inline_svg( 'hamburger.svg' ); ?>
 									</span>
@@ -550,11 +550,10 @@ if ( ! function_exists( 'aaurora_footer_share_layout' ) ) {
 function aaurora_footer_popup_search_modal_layout() {
 	?>
     <div class="popup_search_modal">
-        <div class="popup_modal_close_button">
+        <a href="#" class="popup_modal_close_button">
 			<?php aaurora_load_inline_svg( 'close.svg' ); ?>
-        </div>
+        </a>
         <div class="search_holder">
-            <!--        todo hard coding should be removed-->
             <form role="search" class="search search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>"
                   method="GET">
                 <label> <span class="screen-reader-text">Search for</span>

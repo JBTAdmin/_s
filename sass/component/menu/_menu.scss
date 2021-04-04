@@ -54,7 +54,10 @@
   text-decoration: none;
   //border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   //padding-left: 0.6rem;
-  padding: 0.8rem 2rem;
+  padding: 1.7rem 0 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 aside.sidebar-alt .widget-sidebar-menu a {
@@ -94,6 +97,15 @@ li > ul.sub-menu {
   & svg {
     z-index: 3;
   }
+}
+
+.main-header {
+  //min-height: 10vh;
+  //height: 10rem;
+  // todo need to check if it still need with new layout
+  //margin: auto;
+  //justify-content: space-between;
+  //align-items: center;
 }
 
 @media screen and (max-width: 1024px) {
@@ -178,15 +190,23 @@ li > ul.sub-menu {
   .header-menu .sub-menu > li {
     padding: 0.6rem 1.3vw;
   }
-}
 
-.main-header {
-  //min-height: 10vh;
-  //height: 10rem;
-  // todo need to check if it still need with new layout
-  //margin: auto;
-  //justify-content: space-between;
-  //align-items: center;
+  nav .sub-menu li:hover {
+    background-color: #ececec94;
+    padding-left: 5px;
+  }
+
+  /* All the properties should not be here*/
+  .sidebar-menu li:hover > ul,
+  .sidebar-menu ul.visible
+  //.sidebar-menu li:focus > ul,
+  //.sidebar-menu li:focus-within > ul
+ {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity ease-in-out 0.3s;
+    max-height: 100rem !important;
+  }
 }
 
 @media screen and (min-width: 1025px) {
@@ -272,8 +292,10 @@ li > ul.sub-menu {
   }
 
   nav .sub-menu li {
-    padding: 5px 0;
+    padding: 0.5rem 1.3vw;
     transition: padding-left 0.07s;
+    display: flex;
+    justify-content: space-between;
   }
 
   nav .sub-menu li:hover {
@@ -283,38 +305,54 @@ li > ul.sub-menu {
 
   /* All the properties should not be here*/
   .header-menu li:hover > ul,
-  .header-menu li:focus > ul,
-  .header-menu li:focus-within > ul {
+  .header-menu ul.visible
+  //.header-menu li:focus > ul,
+  //.header-menu li:focus-within > ul
+ {
     visibility: visible;
     opacity: 1;
     transition: opacity ease-in-out 0.3s;
   }
 }
 
-@media screen and (max-width: 1025px) {
-  nav .sub-menu li:hover {
-    background-color: #ececec94;
-    padding-left: 5px;
-  }
+.header-menu li:hover > .drawer-dropdown-button,
+//.header-menu li:focus > .drawer-dropdown-button,
+//.header-menu li:focus-within > .drawer-dropdown-button,
+.sidebar-menu li:hover > .drawer-dropdown-button,
+//.sidebar-menu li:focus > .drawer-dropdown-button,
+//.sidebar-menu li:focus-within > .drawer-dropdown-button
+ {
+  transform: rotate(90deg);
+}
 
-  /* All the properties should not be here*/
-  .sidebar-menu li:hover > ul,
-  .sidebar-menu li:focus > ul,
-  .sidebar-menu li:focus-within > ul {
-    visibility: visible;
-    opacity: 1;
-    transition: opacity ease-in-out 0.3s;
-    max-height: 100rem !important;
-  }
+.header-menu li:hover > .drawer-dropdown-button:before,
+//.header-menu li:focus > .drawer-dropdown-button:before,
+//.header-menu li:focus-within > .drawer-dropdown-button:before,
+.sidebar-menu li:hover > .drawer-dropdown-button:before,
+//.sidebar-menu li:focus > .drawer-dropdown-button:before,
+//.sidebar-menu li:focus-within > .drawer-dropdown-button:before
+ {
+  opacity: 0;
+}
+
+.sidebar-menu .drawer-dropdown-button.active:before,
+.header-menu .drawer-dropdown-button.active:before {
+  opacity: 0;
+}
+
+.sidebar-menu .drawer-dropdown-button.active,
+.header-menu .drawer-dropdown-button.active {
+  transform: rotate(90deg);
 }
 
 /** SIDEBAR MENU */
 .sidebar-menu .sub-menu a {
-  padding-left: 2rem;
+  //padding-left: 2rem;
   font-size: 1.5rem;
 }
 
 .sidebar-menu .sub-menu {
+  width: 100%;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease-in-out;
@@ -333,10 +371,10 @@ li > ul.sub-menu {
 }
 
 .sub-menu li > a {
-  padding: 0 2rem;
-  position: relative;
-  display: block;
-  line-height: 3rem;
+  //padding: 0 2rem;
+  //position: relative;
+  //display: block;
+  line-height: 3rem; //todo try to combine somewhere else.
 }
 .sub-menu li:hover > a {
   color: #000;
@@ -395,21 +433,24 @@ li > ul.sub-menu {
 
 .drawer-dropdown-button {
   //height: 100%;
-  padding: 2rem;
-  width: 4rem;
-  position: absolute;
-  right: 0;
-  top: 0;
+  padding: 1rem;
+  color: inherit;
+  //width: 1rem;
+  //height: 1rem;
+  //position: absolute;
+  //right: 0;
+  //top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   border: none;
   background: none;
+  opacity: 0.7;
   transition: transform 0.5s ease-in-out;
 }
 
 .drawer-dropdown-button:before {
-  width: 14px;
+  width: 10px;
   height: 2px;
   opacity: 1;
   transition: opacity 0.4s ease-in-out;
@@ -419,20 +460,19 @@ li > ul.sub-menu {
 .drawer-dropdown-button:before {
   position: absolute;
   display: inline-block;
-  background: #096ffa;
+  background: currentColor;
   content: "";
 }
 
 .drawer-dropdown-button:after {
   width: 2px;
-  height: 14px;
-  background: green;
+  height: 10px;
 }
 
-.drawer-dropdown-button.active:before {
+.drawer-dropdown-button:hover:before {
   opacity: 0;
 }
 
-.drawer-dropdown-button.active {
+.drawer-dropdown-button:hover {
   transform: rotate(90deg);
 }

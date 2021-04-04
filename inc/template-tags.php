@@ -50,7 +50,7 @@ if ( ! function_exists( 'aaurora_posted_on' ) ) {
 		);
 
 		if ( $date_only ) {
-			return get_the_date( 'j M' );
+			return get_the_date();
 		} else {
 			echo $posted_on; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		}
