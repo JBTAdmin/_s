@@ -728,8 +728,8 @@ Kirki::add_field(
 		'placeholder' => esc_html__( 'Select Single Post Layout.', 'aaurora' ),
 		'multiple'    => 0,
 		'choices'     => array(
-			'in-content'          => esc_html__( 'Layout 1', 'aaurora' ),
-			'in-header'           => esc_html__( 'Layout 2', 'aaurora' ),
+			'in-content'                   => esc_html__( 'Layout 1', 'aaurora' ),
+			'in-header'                    => esc_html__( 'Layout 2', 'aaurora' ),
 			'column-2-title-image'         => esc_html__( 'Layout 3-No', 'aaurora' ),
 			'column-2-title-image-compact' => esc_html__( 'Layout 4-No', 'aaurora' ),
 			'layout-5'                     => esc_html__( 'Layout 5-No', 'aaurora' ),

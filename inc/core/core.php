@@ -131,10 +131,10 @@ add_action( 'after_setup_theme', 'aaurora_content_width', 0 );
  */
 function aaurora_scripts() {
 	wp_enqueue_style( 'aaurora-style', get_stylesheet_uri(), array(), AAURORA_VERSION );
-	
-	// FontAwesome Icons
-	wp_enqueue_style( 'fontawesome', get_theme_file_uri( '/assets/css/font-awesome.css' ) );
-	
+
+	// FontAwesome Icons.
+	wp_enqueue_style( 'fontawesome', get_theme_file_uri( '/assets/css/font-awesome.css' ), array(), '4.7.0' );
+
 	wp_style_add_data( 'aaurora-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'aaurora-main', get_template_directory_uri() . '/js/main.js', array(), AAURORA_VERSION, true );
@@ -166,11 +166,11 @@ add_image_size( 'aaurora-blog-4-featured-image', 540, 320, true ); // Used for B
 add_image_size( 'aaurora-blog-5-featured-image', 540, 185, true ); // Used for Blog Layout 5.
 add_image_size( 'aaurora-post-navigation-featured-image', 80, 80, true ); // Used for Post Navigation.
 add_image_size( 'aaurora-post-in-content-featured-image', 1140, 500, true );// Used for Single Post In Content Featured Image.
-add_image_size( 'aaurora-post-in-header-featured-image', 1840, 500, true );// Used for Single Post In Header Featured Image
+add_image_size( 'aaurora-post-in-header-featured-image', 1840, 500, true );// Used for Single Post In Header Featured Image.
 
 
 
-// todo remove all these and options related to them
+// todo remove all these and options related to them.
 add_image_size( 'aaurora-blog-single-post-sidebar', 400, 500, true );
 add_image_size( 'aaurora-blog-single-post-no-sidebar', 1000, 340, true );
 add_image_size( 'column-2-title-image', 1140, 694, true );

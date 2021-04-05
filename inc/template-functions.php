@@ -30,7 +30,6 @@ add_action( 'aaurora_footer', 'aaurora_footer_section' );
 add_action( 'aaurora_footer_content', 'aaurora_footer_main_layout' );
 add_action( 'aaurora_footer_after', 'aaurora_footer_share_layout' );
 add_action( 'aaurora_footer_after', 'aaurora_footer_search_layout' );
-//add_action( 'aaurora_footer_after', 'aaurora_footer_popup_search_modal_layout' );
 add_action( 'aaurora_footer_after', 'aaurora_footer_go_to_top_layout' );
 add_action( 'aaurora_footer_after', 'aaurora_social_media' );
 add_filter( 'body_class', 'aaurora_body_classes' );
@@ -84,18 +83,18 @@ if ( ! function_exists( 'aaurora_single_post_layout' ) ) {
 	 */
 	function aaurora_single_post_layout() {
 		?>
-		
+
 		<?php aaurora_content_before(); ?>
 
-        <article id="post-<?php the_ID(); ?>" <?php post_class( 'post-article' ); ?>>
-			
+		<article id="post-<?php the_ID(); ?>" <?php post_class( 'post-article' ); ?>>
+
 			<?php get_template_part( 'template-parts/single/layout' ); ?>
 
-        </article><!-- #post-<?php the_ID(); ?> -->
-		
+		</article><!-- #post-<?php the_ID(); ?> -->
+
 		<?php
 		aaurora_content_after();
-		
+
 		// If comments are open or we have at least one comment, load up the comment template.
 		if ( comments_open() || get_comments_number() ) :
 			comments_template();
@@ -113,11 +112,15 @@ if ( ! function_exists( 'aaurora_post_content_before' ) ) {
 	 * @since 1.0.0
 	 */
 	function aaurora_post_content_before() {
-		
-		if ( in_array( get_theme_mod( 'single_post_layout', 'in-header' ), array(
-			'in-content',
-			'layout-5'
-		), true ) ) {
+
+		if ( in_array(
+			get_theme_mod( 'single_post_layout', 'in-header' ),
+			array(
+				'in-content',
+				'layout-5',
+			),
+			true
+		) ) {
 			get_template_part( 'template-parts/single/post-header/in-content' );
 		}
 	}
@@ -127,19 +130,23 @@ if ( ! function_exists( 'aaurora_post_content_before' ) ) {
  * It will handle thumbnail In Header.
  */
 if ( ! function_exists( 'aaurora_post_container_before' ) ) {
-	
+
 	/**
 	 * Display Post Header as per selection in customizer.
 	 *
 	 * @since 1.0.0
 	 */
 	function aaurora_post_container_before() {
-		
-		if ( in_array( get_theme_mod( 'single_post_layout', 'in-header' ), array(
-			'column-2-title-image',
-			'column-2-title-image-compact',
-			'in-header'
-		), true ) ) {
+
+		if ( in_array(
+			get_theme_mod( 'single_post_layout', 'in-header' ),
+			array(
+				'column-2-title-image',
+				'column-2-title-image-compact',
+				'in-header',
+			),
+			true
+		) ) {
 			get_template_part( 'template-parts/single/post-header/in-header' );
 		}
 	}
@@ -153,7 +160,7 @@ if ( ! function_exists( 'aaurora_post_content_after' ) ) {
 	 */
 	function aaurora_post_content_after() {
 		$template_parts = get_theme_mod( 'entry_footer_sequence', array( 'tag', 'author', 'post-navigation' ) );
-		
+
 		foreach ( $template_parts as $template_part ) {
 			get_template_part( 'template-parts/single/' . $template_part );
 		}
@@ -174,12 +181,12 @@ if ( ! function_exists( 'aaurora_body_classes' ) ) {
 		if ( ! is_singular() ) {
 			$classes[] = 'hfeed';
 		}
-		
+
 		// Adds a class of no-sidebar when there is no sidebar present.
 		if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 			$classes[] = 'no-sidebar';
 		}
-		
+
 		return $classes;
 	}
 }
@@ -204,35 +211,35 @@ if ( ! function_exists( 'aaurora_content' ) ) {
 	 * @since 1.0.0
 	 */
 	function aaurora_content() {
-		
+
 		if ( have_posts() ) {
 			$container_class = ' blog-' . get_theme_mod( 'blog_layout_setting', '2' );
 			?>
-            <header class="page-header">
+			<header class="page-header">
 				<?php
 				if ( is_archive() ) {
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
 					the_archive_description( '<div class="archive-description">', '</div>' );
 				} elseif ( is_search() ) {
 					?>
-                    <h1 class="page-title">
+					<h1 class="page-title">
 						<?php
 						/* translators: %s: search query. */
 						printf( esc_html__( 'Search Results for: %s', 'aaurora' ), '<span>' . get_search_query() . '</span>' );
 						?>
-                    </h1>
+					</h1>
 					<?php
 				}
 				?>
-            </header><!-- .page-header -->
-            <div class="article-container <?php echo esc_attr( $container_class ); ?>">
+			</header><!-- .page-header -->
+			<div class="article-container <?php echo esc_attr( $container_class ); ?>">
 				<?php
 				while ( have_posts() ) :
 					the_post();
 					aaurora_get_content_layout();
 				endwhile;
 				?>
-            </div>
+			</div>
 			<?php
 			aaurora_post_nav();
 		} else {
@@ -282,10 +289,10 @@ if ( ! function_exists( 'aaurora_top_bar_layout' ) ) {
 			return;
 		}
 		?>
-        <div id="top-bar" class="top-menu aaurora-top-bar <?php get_theme_mod( 'top_bar_layout_setting' ); ?>">
-            <div class="wrap">
-                <div class="header-top-bar">
-                    <nav id="top-bar-navigation" class="secondary-navigation ">
+		<div id="top-bar" class="top-menu aaurora-top-bar <?php get_theme_mod( 'top_bar_layout_setting' ); ?>">
+			<div class="wrap">
+				<div class="header-top-bar">
+					<nav id="top-bar-navigation" class="secondary-navigation ">
 						<?php
 						wp_nav_menu(
 							array(
@@ -298,14 +305,14 @@ if ( ! function_exists( 'aaurora_top_bar_layout' ) ) {
 							)
 						);
 						?>
-                    </nav><!-- #top-bar-navigation -->
+					</nav><!-- #top-bar-navigation -->
 					<?php
 					// Social Icons.
 					aaurora_social_media( 'top-bar-social' );
 					?>
-                </div>
-            </div>
-        </div>
+				</div>
+			</div>
+		</div>
 		<?php
 	}
 }
@@ -321,26 +328,26 @@ if ( ! function_exists( 'aaurora_header_branding_layout' ) ) {
 		if ( true !== get_theme_mod( 'aaurora_site_branding', true ) ) {
 			return;
 		}
-		
+
 		$numbering_class = '';
 		if ( true === get_theme_mod( 'main_menu_numbering', true ) ) {
 			$numbering_class = 'numbered';
 		}
-		
+
 		$container_alignment_class = 'header-menu-container ' . $numbering_class . ' aligned-menu-' . get_theme_mod( 'main_menu_align', 'center' );
 		?>
-        <div class="header-menu-bar">
-            <!--			<div class="wrap">-->
-            <div class="header-container">
+		<div class="header-menu-bar">
+			<!--			<div class="wrap">-->
+			<div class="header-container">
 				<?php
 				aaurora_site_branding( 'left' );
 				?>
-                <div class="main-header">
-                    <nav id="site-navigation" class="main-navigation ">
+				<div class="main-header">
+					<nav id="site-navigation" class="main-navigation ">
 						<?php
 						aaurora_hamburger_menu();
 						?>
-                        <div class="mobile-menu-container">
+						<div class="mobile-menu-container">
 							<?php
 
 							wp_nav_menu(
@@ -353,18 +360,18 @@ if ( ! function_exists( 'aaurora_header_branding_layout' ) ) {
 								)
 							);
 							?>
-                            <a href="#" class="mobile-cls-btn">
+							<a href="#" class="mobile-cls-btn">
 								<?php aaurora_load_inline_svg( 'close.svg' ); ?>
-                            </a>
-                        </div>
+							</a>
+						</div>
 						<?php
 						aaurora_header_search();
 						?>
-                    </nav>
-                </div>
-                <!--				</div>-->
-            </div>
-        </div>
+					</nav>
+				</div>
+				<!--				</div>-->
+			</div>
+		</div>
 		<?php
 	}
 }
@@ -376,7 +383,7 @@ if ( ! function_exists( 'aaurora_header_main_menu_layout' ) ) {
 	 * @since 1.0.0
 	 */
 	function aaurora_header_main_menu_layout() {
-		
+
 		if ( true !== get_theme_mod( 'aaurora_header_main_menu_layout', true ) ) {
 			return;
 		}
@@ -390,32 +397,33 @@ if ( ! function_exists( 'aaurora_site_branding' ) ) {
 	 * Displays Site Branding.
 	 *
 	 * @param string $location Needs to remove this todo.
+	 *
 	 * @since 1.0.0
 	 */
 	function aaurora_site_branding( $location ) {
 		?>
-        <div class="site-branding">
+		<div class="site-branding">
 			<?php
 			the_custom_logo();
-			
+
 			if ( ! get_theme_mod( 'custom_logo' ) ) :
 				?>
-                <div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"
-                                           rel="home"><?php bloginfo( 'name' ); ?></a></div>
+				<div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"
+											rel="home"><?php bloginfo( 'name' ); ?></a></div>
 				<?php
 				$aaurora_description = get_bloginfo( 'description', 'display' );
 				if ( $aaurora_description || is_customize_preview() ) :
 					?>
-                    <p class="site-description">
+					<p class="site-description">
 						<?php
 						echo esc_html( $aaurora_description ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped.
 						?>
-                    </p>
-				<?php
+					</p>
+					<?php
 				endif;
 			endif;
 			?>
-        </div>
+		</div>
 		<?php
 	}
 }
@@ -429,10 +437,10 @@ if ( ! function_exists( 'aaurora_header_search' ) ) {
 	function aaurora_header_search() {
 		if ( 'header' === get_theme_mod( 'general_search_visibility', 'fixed' ) ) {
 			?>
-            <i class="aaurora-search header-search" role="button" tabindex="0">
+			<i class="aaurora-search header-search" role="button" tabindex="0">
 				<?php aaurora_load_inline_svg( 'search.svg' ); ?>
-                <span class="screen-reader-text">Search</span>
-            </i>
+				<span class="screen-reader-text">Search</span>
+			</i>
 			<?php
 			aaurora_footer_popup_search_modal_layout();
 		}
@@ -451,15 +459,15 @@ if ( ! function_exists( 'aaurora_hamburger_menu' ) ) {
 			$sidebar_alt_class = 'menu_only';
 		}
 		?>
-        <div class="hamburger-menu <?php echo esc_attr( $sidebar_alt_class ); ?>" on="tap:drawermenu.toggle"
-             role="button" tabindex="0">
-            <button class="toggle sidebar-open desktop-sidebar-toggle" data-toggle-target=".sidebar-modal"
-                    data-toggle-body-class="showing-sidebar-modal" aria-expanded="false" tabindex="-1">
+		<div class="hamburger-menu <?php echo esc_attr( $sidebar_alt_class ); ?>" on="tap:drawermenu.toggle"
+			role="button" tabindex="0">
+			<button class="toggle sidebar-open desktop-sidebar-toggle" data-toggle-target=".sidebar-modal"
+					data-toggle-body-class="showing-sidebar-modal" aria-expanded="false" tabindex="-1">
 									<span class="toggle-inner">
 										<?php aaurora_load_inline_svg( 'hamburger.svg' ); ?>
 									</span>
-            </button>
-        </div>
+			</button>
+		</div>
 		<?php
 	}
 }
@@ -483,15 +491,15 @@ if ( ! function_exists( 'aaurora_footer_section' ) ) {
 	 */
 	function aaurora_footer_section() {
 		?>
-        <footer class="site-footer">
-			
+		<footer class="site-footer">
+
 			<?php aaurora_footer_content_top(); ?>
-			
+
 			<?php aaurora_footer_content(); ?>
-			
+
 			<?php aaurora_footer_content_bottom(); ?>
 
-        </footer>
+		</footer>
 		<?php
 	}
 }
@@ -516,27 +524,27 @@ if ( ! function_exists( 'aaurora_footer_share_layout' ) ) {
 	function aaurora_footer_share_layout() {
 		if ( get_theme_mod( 'general_social_share', 1 ) ) {
 			?>
-            <div class="aaurora-share fixed visible" tabindex="0">
-                <a href="#" tabindex="-1">
+			<div class="aaurora-share fixed visible" tabindex="0">
+				<a href="#" tabindex="-1">
 					<?php aaurora_load_inline_svg( 'share.svg' ); ?>
-                </a>
-                <div class="aaurora-share-inner">
-                    <a href="https://www.facebook.com/sharer.php?u=<?php echo esc_attr( get_permalink( get_the_ID() ) ); ?>"
-                       target="blank" class="fb" rel="nofollow" data-social_name="facebook">
+				</a>
+				<div class="aaurora-share-inner">
+					<a href="https://www.facebook.com/sharer.php?u=<?php echo esc_attr( get_permalink( get_the_ID() ) ); ?>"
+						target="blank" class="fb" rel="nofollow" data-social_name="facebook">
 						<?php aaurora_load_inline_svg( 'facebook.svg' ); ?>
-                    </a>
+					</a>
 
-                    <a href="https://twitter.com/intent/tweet?text=<?php echo esc_attr( get_permalink( get_the_ID() ) ); ?>"
-                       target="blank" class="tw" rel="nofollow" data-social_name="twitter">
+					<a href="https://twitter.com/intent/tweet?text=<?php echo esc_attr( get_permalink( get_the_ID() ) ); ?>"
+						target="blank" class="tw" rel="nofollow" data-social_name="twitter">
 						<?php aaurora_load_inline_svg( 'twitter.svg' ); ?>
-                    </a>
+					</a>
 
-                    <a href="https://www.linkedin.com/cws/share?url=<?php echo esc_attr( get_permalink( get_the_ID() ) ); ?>"
-                       target="blank" class="ln" rel="nofollow" data-social_name="linkedin">
+					<a href="https://www.linkedin.com/cws/share?url=<?php echo esc_attr( get_permalink( get_the_ID() ) ); ?>"
+						target="blank" class="ln" rel="nofollow" data-social_name="linkedin">
 						<?php aaurora_load_inline_svg( 'linkedin.svg' ); ?>
-                    </a>
-                </div>
-            </div>
+					</a>
+				</div>
+			</div>
 			<?php
 		}
 	}
@@ -549,20 +557,20 @@ if ( ! function_exists( 'aaurora_footer_share_layout' ) ) {
  */
 function aaurora_footer_popup_search_modal_layout() {
 	?>
-    <div class="popup_search_modal">
-        <a href="#" class="popup_modal_close_button">
+	<div class="popup_search_modal">
+		<a href="#" class="popup_modal_close_button">
 			<?php aaurora_load_inline_svg( 'close.svg' ); ?>
-        </a>
-        <div class="search_holder">
-            <form role="search" class="search search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>"
-                  method="GET">
-                <label> <span class="screen-reader-text">Search for</span>
-                    <input autocomplete="off" type="text" id="search-field" class="search-field" name="s"
-                           placeholder="<?php esc_attr_e( 'Search..', 'aaurora' ); ?>" value="" autofocus>
-                </label>
-            </form>
-        </div>
-    </div>
+		</a>
+		<div class="search_holder">
+			<form role="search" class="search search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>"
+					method="GET">
+				<label> <span class="screen-reader-text">Search for</span>
+					<input autocomplete="off" type="text" id="search-field" class="search-field" name="s"
+							placeholder="<?php esc_attr_e( 'Search..', 'aaurora' ); ?>" value="" autofocus>
+				</label>
+			</form>
+		</div>
+	</div>
 	<?php
 }
 
@@ -575,10 +583,10 @@ if ( ! function_exists( 'aaurora_footer_go_to_top_layout' ) ) {
 	function aaurora_footer_go_to_top_layout() {
 		if ( get_theme_mod( 'general_scroll_to_top', 1 ) ) {
 			?>
-            <a class="top-link" href="#" id="js-top" on="tap:masthead.scrollTo" role="button">
+			<a class="top-link" href="#" id="js-top" on="tap:masthead.scrollTo" role="button">
 				<?php aaurora_load_inline_svg( 'arrow-up.svg' ); ?>
-                <span class="screen-reader-text">Back to top</span>
-            </a>
+				<span class="screen-reader-text">Back to top</span>
+			</a>
 			<?php
 		}
 	}
@@ -593,10 +601,10 @@ if ( ! function_exists( 'aaurora_footer_search_layout' ) ) {
 	function aaurora_footer_search_layout() {
 		if ( 'fixed' === get_theme_mod( 'general_search_visibility', 'fixed' ) ) {
 			?>
-            <a class="aaurora-search footer-search" href="#">
+			<a class="aaurora-search footer-search" href="#">
 				<?php aaurora_load_inline_svg( 'search.svg' ); ?>
-                <span class="screen-reader-text">Search</span>
-            </a>
+				<span class="screen-reader-text">Search</span>
+			</a>
 			<?php
 			aaurora_footer_popup_search_modal_layout();
 		}
@@ -607,7 +615,7 @@ if ( ! function_exists( 'aaurora_social_media' ) ) {
 	/**
 	 * Displays Social Media Button.
 	 *
-	 * @param string $social_class Class that needs to be applied.
+	 * @param string  $social_class Class that needs to be applied.
 	 * @param boolean $text_only Social Button or Text should be displayed.
 	 *
 	 * @since 1.0.0
@@ -616,78 +624,78 @@ if ( ! function_exists( 'aaurora_social_media' ) ) {
 		if ( 'top-bar-social' === $social_class && get_theme_mod( 'top_bar_social_media_button', true ) !== true ) {
 			return;
 		}
-		
+
 		if ( get_theme_mod( 'side_social_media_button', true ) !== true ) {
 			return;
 		}
-		
+
 		if ( 'top-bar-social' !== $social_class ) {
 			$text_only = get_theme_mod( 'side_social_media_button_text', true );
-			
+
 			if ( get_theme_mod( 'side_social_media_button_color', false ) === false ) {
 				$social_class .= ' no_social_color';
 			}
-			
+
 			$social_class .= ' aaurora_social_follow';  // todo Default method arguments are ignore in case add_action call.
 		} else {
 			$text_only = false;
 		}
 		?>
 
-        <div class="<?php echo esc_attr( $social_class ); ?>">
-            <ul class="aaurora-social-holder">
+		<div class="<?php echo esc_attr( $social_class ); ?>">
+			<ul class="aaurora-social-holder">
 				<?php
 				if ( get_theme_mod( 'social_media_fb_url', '' ) !== '' ) :
 					?>
-                    <li>
-                        <a class="social-link facebook-social-icon"
-                           href="<?php echo esc_url( get_theme_mod( 'social_media_fb_url' ) ); ?>" target="_blank">
+					<li>
+						<a class="social-link facebook-social-icon"
+							href="<?php echo esc_url( get_theme_mod( 'social_media_fb_url' ) ); ?>" target="_blank">
 							<?php $text_only ? esc_html_e( ' facebook', 'aaurora' ) : aaurora_load_inline_svg( 'facebook.svg' ); ?>
-                        </a>
-                    </li>
+						</a>
+					</li>
 				<?php endif; ?>
 				<?php if ( get_theme_mod( 'social_media_tw_url', '' ) !== '' ) : ?>
-                    <li>
-                        <a class="social-link twitter-social-icon"
-                           href="<?php echo esc_url( get_theme_mod( 'social_media_tw_url' ) ); ?>" target="_blank">
+					<li>
+						<a class="social-link twitter-social-icon"
+							href="<?php echo esc_url( get_theme_mod( 'social_media_tw_url' ) ); ?>" target="_blank">
 							<?php $text_only ? esc_html_e( ' twitter', 'aaurora' ) : aaurora_load_inline_svg( 'twitter.svg' ); ?>
-                        </a>
-                    </li>
+						</a>
+					</li>
 				<?php endif; ?>
 				<?php if ( get_theme_mod( 'social_media_in_url', '' ) !== '' ) : ?>
-                    <li>
-                        <a class="social-link instagram-social-icon"
-                           href="<?php echo esc_url( get_theme_mod( 'social_media_in_url' ) ); ?>" target="_blank">
+					<li>
+						<a class="social-link instagram-social-icon"
+							href="<?php echo esc_url( get_theme_mod( 'social_media_in_url' ) ); ?>" target="_blank">
 							<?php $text_only ? esc_html_e( ' instagram', 'aaurora' ) : aaurora_load_inline_svg( 'instagram.svg' ); ?>
-                        </a>
-                    </li>
+						</a>
+					</li>
 				<?php endif; ?>
 				<?php if ( get_theme_mod( 'social_media_ln_url', '' ) !== '' ) : ?>
-                    <li>
-                        <a class="social-link linkedin-social-icon"
-                           href="<?php echo esc_url( get_theme_mod( 'social_media_ln_url' ) ); ?>" target="_blank">
+					<li>
+						<a class="social-link linkedin-social-icon"
+							href="<?php echo esc_url( get_theme_mod( 'social_media_ln_url' ) ); ?>" target="_blank">
 							<?php $text_only ? esc_html_e( ' linkedin', 'aaurora' ) : aaurora_load_inline_svg( 'linkedin.svg' ); ?>
-                        </a>
-                    </li>
+						</a>
+					</li>
 				<?php endif; ?>
 				<?php if ( get_theme_mod( 'social_media_yt_url', '' ) !== '' ) : ?>
-                    <li>
-                        <a class="social-link youtube-social-icon"
-                           href="<?php echo esc_url( get_theme_mod( 'social_media_yt_url' ) ); ?>" target="_blank">
+					<li>
+						<a class="social-link youtube-social-icon"
+							href="<?php echo esc_url( get_theme_mod( 'social_media_yt_url' ) ); ?>" target="_blank">
 							<?php $text_only ? esc_html_e( ' youtube', 'aaurora' ) : aaurora_load_inline_svg( 'youtube.svg' ); ?>
-                        </a>
-                    </li>
+						</a>
+					</li>
 				<?php endif; ?>
 				<?php if ( get_theme_mod( 'social_media_gh_url', '' ) !== '' ) : ?>
-                    <li>
-                        <a class="social-link github-social-icon"
-                           href="<?php echo esc_url( get_theme_mod( 'social_media_gh_url' ) ); ?>" target="_blank">
+					<li>
+						<a class="social-link github-social-icon"
+							href="<?php echo esc_url( get_theme_mod( 'social_media_gh_url' ) ); ?>" target="_blank">
 							<?php $text_only ? esc_html_e( ' github', 'aaurora' ) : aaurora_load_inline_svg( 'github.svg' ); ?>
-                        </a>
-                    </li>
+						</a>
+					</li>
 				<?php endif; ?>
-            </ul>
-        </div>
+			</ul>
+		</div>
 		<?php
 	}
 }

@@ -18,12 +18,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   searchButton && searchButton.addEventListener("click", openSearchModal);
   // searchButton && searchButton.addEventListener("focus", openSearchModal);
-  searchButton &&
-    searchButton.addEventListener("keypress", function(e) {
-      if (e.key === "Enter" || e.key === " ") {
-        openSearchModal();
-      }
-    });
+  // searchButton &&
+  //   searchButton.addEventListener("keypress", function(e) {
+  //     if (e.key === "Enter" || e.key === " ") {
+  //       openSearchModal();
+  //     }
+  //   });
 
   // todo need to be sure if we want to enable this feature. It will close search window on blur of search-field.
   // searchField &&
@@ -31,10 +31,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
   //   searchModal.classList.toggle("visible");
   // });
 
-  searchCloseBtn.addEventListener("click", function(event) {
+  searchCloseBtn && searchCloseBtn.addEventListener("click", closeSearchModal);
+
+  // searchCloseBtn && searchCloseBtn.addEventListener("keypress", function(event) {
+  //   if (e.key === "Enter" || e.key === " ") {
+  //     closeSearchModal();
+  //   }
+  // });
+
+  function closeSearchModal() {
     searchModal.classList.toggle("visible");
     searchButton.focus();
-  });
+  }
 
   function openSearchModal() {
     searchModal.classList.toggle("visible");
