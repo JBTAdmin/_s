@@ -883,7 +883,7 @@ blockquote {
   width: 100% !important; }
 
 .sub-menu {
-  z-index: 1000; }
+  z-index: 100; }
 
 .mobile-menu-container .sidebar-menu {
   color: #000; }
@@ -2832,6 +2832,7 @@ a.pt {
   -webkit-box-align: enter;
       -ms-flex-align: enter;
           align-items: enter;
+  z-index: 1000;
   overflow: hidden;
   opacity: 0;
   display: none;

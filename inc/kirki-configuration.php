@@ -515,7 +515,7 @@ Kirki::add_field(
 		'description' => '',
 		'section'     => 'header',
 		'default'     => array(
-			'background-color'      => '#fff',
+			'background-color'      => 'transparent',
 			'background-image'      => '',
 			'background-repeat'     => 'repeat',
 			'background-position'   => 'center center',

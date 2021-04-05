@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   function openSearchModal() {
     searchModal.classList.toggle("visible");
     searchField.focus();
-    trapFocus(".popup_search_modal");
+    trapFocus(".popup_search_modal", 1);
   }
 
   //2- Share Button**************************************************************************************
@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
   }
 
-  function trapFocus(ele) {
+  function trapFocus(ele, focusEle = 0) {
     const matches = document
       .querySelector(ele)
       .querySelectorAll("a, input, button");
@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     let firstElement = matches[0];
     let lastElement = matches[matches.length - 1];
 
-    firstElement.focus();
+    matches[focusEle].focus();
 
     lastElement.addEventListener("keydown", function(e) {
       if (e.key == "Tab" && !e.shiftKey) {
