@@ -1624,7 +1624,7 @@ li > ul.sub-menu {
   transition: all 0.25s ease-in-out;
   position: fixed;
   right: calc(5vh - 2rem);
-  bottom: 3.4rem;
+  bottom: 5vh;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
