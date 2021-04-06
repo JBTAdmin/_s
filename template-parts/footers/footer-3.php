@@ -2,7 +2,7 @@
 /**
  * Footer elements.
  *
- * @package Aaurora
+ * @package Gautam
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -17,31 +17,31 @@ $site_info_text_right = 'Crafted with &#10084; by <a href=""></a> Team';
 <div id="colophon" class="site-footer-main">
 	<div class="wrap">
 		<div class="main-footer">
-			<?php if ( is_active_sidebar( 'aaurora-footer-1' ) ) : ?>
+			<?php if ( is_active_sidebar( 'gautam-footer-1' ) ) : ?>
 				<div class="footer-sidebar-1-wrapper">
 					<div class="sidebar footer-sidebar-1-container">
-							<?php dynamic_sidebar( 'aaurora-footer-1' ); ?>
+							<?php dynamic_sidebar( 'gautam-footer-1' ); ?>
 					</div>
 				</div>
 			<?php endif; ?>
-			<?php if ( is_active_sidebar( 'aaurora-footer-2' ) ) : ?>
+			<?php if ( is_active_sidebar( 'gautam-footer-2' ) ) : ?>
 				<div class="footer-sidebar-2-wrapper">
 					<div class="sidebar footer-sidebar-2-container">
-							<?php dynamic_sidebar( 'aaurora-footer-2' ); ?>
+							<?php dynamic_sidebar( 'gautam-footer-2' ); ?>
 					</div>
 				</div>
 			<?php endif; ?>
-			<?php if ( is_active_sidebar( 'aaurora-footer-3' ) ) : ?>
+			<?php if ( is_active_sidebar( 'gautam-footer-3' ) ) : ?>
 				<div class="footer-sidebar-3-wrapper">
 					<div class="sidebar footer-sidebar-3-container">
-							<?php dynamic_sidebar( 'aaurora-footer-3' ); ?>
+							<?php dynamic_sidebar( 'gautam-footer-3' ); ?>
 					</div>
 				</div>
 			<?php endif; ?>
-			<?php if ( is_active_sidebar( 'aaurora-footer-4' ) ) : ?>
+			<?php if ( is_active_sidebar( 'gautam-footer-4' ) ) : ?>
 				<div class="footer-sidebar-4-wrapper">
 					<div class="sidebar footer-sidebar-4-container">
-							<?php dynamic_sidebar( 'aaurora-footer-4' ); ?>
+							<?php dynamic_sidebar( 'gautam-footer-4' ); ?>
 					</div>
 				</div>
 			<?php endif; ?>

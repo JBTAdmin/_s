@@ -4,7 +4,7 @@
  *
  * This file is centrally included from `wp-content/mu-plugins/wpcom-theme-compat.php`.
  *
- * @package aaurora
+ * @package gautam
  */
 
 /**
@@ -12,7 +12,7 @@
  *
  * @global array $themecolors
  */
-function aaurora_wpcom_setup() {
+function gautam_wpcom_setup() {
 	global $themecolors;
 
 	// Set theme colors for third party services.
@@ -28,4 +28,4 @@ function aaurora_wpcom_setup() {
 		);
 	}
 }
-add_action( 'after_setup_theme', 'aaurora_wpcom_setup' );
+add_action( 'after_setup_theme', 'gautam_wpcom_setup' );

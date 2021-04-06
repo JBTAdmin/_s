@@ -2,7 +2,7 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: aaurora 1.0.0\n"
+"Project-Id-Version: gautam 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/_s\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,10 +12,10 @@ msgstr ""
 "POT-Creation-Date: 2020-04-17T21:03:15+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
-"X-Domain: aaurora\n"
+"X-Domain: gautam\n"
 
 #. Theme Name of the theme
-msgid "aaurora"
+msgid "gautam"
 msgstr ""
 
 #. Theme URI of the theme
@@ -23,7 +23,7 @@ msgid "https://ipoweruser.com/"
 msgstr ""
 
 #. Description of the theme
-msgid "Hi. I'm a starter theme called <em>aaurora</em>"
+msgid "Hi. I'm a starter theme called <em>gautam</em>"
 msgstr ""
 
 #. Author of the theme

@@ -2,7 +2,7 @@
 /**
  * Template part for displaying Header Section in Content.
  *
- * @package aaurora
+ * @package gautam
  */
 
 $template_parts = get_theme_mod( 'entry_header_sequence', array( 'category', 'heading', 'metadata', 'thumbnail' ) );

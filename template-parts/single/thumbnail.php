@@ -2,7 +2,7 @@
 /**
  * Displayes Thumbnails.
  *
- * @package Aaurora
+ * @package Gautam
  * @since 1.0
  */
 
@@ -15,8 +15,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $in_style       = false;
 $featured_image = array(
-	'in-header'  => 'aaurora-post-in-header-featured-image',
-	'in-content' => 'aaurora-post-in-content-featured-image',
+	'in-header'  => 'gautam-post-in-header-featured-image',
+	'in-content' => 'gautam-post-in-content-featured-image',
 	'column-2-title-image',
 	'column-2-title-image-compact',
 );
@@ -27,4 +27,4 @@ if ( in_array( get_theme_mod( 'single_post_layout', 'in-header' ), array( 'colum
 
 $size = $featured_image[ get_theme_mod( 'single_post_layout', 'in-header' ) ];
 
-aaurora_post_thumbnail( $size, '', $in_style );
+gautam_post_thumbnail( $size, '', $in_style );

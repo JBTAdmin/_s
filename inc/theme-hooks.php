@@ -4,7 +4,7 @@
  *
  * @see  https://github.com/zamoose/themehookalliance
  *
- * @package  aaurora
+ * @package  gautam
  * @version  1.0.0
  * @since 1.0.0
  */
@@ -14,20 +14,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Themes and Plugins can check for aaurora_hooks using current_theme_supports( 'aaurora_hooks', $hook )
+ * Themes and Plugins can check for gautam_hooks using current_theme_supports( 'gautam_hooks', $hook )
  * to determine whether a theme declares itself to support this specific hook type.
  *
  * Example:
  * <code>
  *      // Declare support for all hook types
- *      add_theme_support( 'aaurora_hooks', array( 'all' ) );
+ *      add_theme_support( 'gautam_hooks', array( 'all' ) );
  *
  *      // Declare support for certain hook types only
- *      add_theme_support( 'aaurora_hooks', array( 'header', 'content', 'footer' ) );
+ *      add_theme_support( 'gautam_hooks', array( 'header', 'content', 'footer' ) );
  * </code>
  */
 add_theme_support(
-	'aaurora_hooks',
+	'gautam_hooks',
 	array(
 
 		/**
@@ -74,8 +74,8 @@ add_theme_support(
  *
  * Example:
  * <code>
- *      if ( current_theme_supports( 'aaurora_hooks', 'header' ) )
- *          add_action( 'aaurora_head_top', 'prefix_header_top' );
+ *      if ( current_theme_supports( 'gautam_hooks', 'header' ) )
+ *          add_action( 'gautam_head_top', 'prefix_header_top' );
  * </code>
  *
  * @param bool  $bool true.
@@ -84,87 +84,87 @@ add_theme_support(
  *
  * @return bool
  */
-function aaurora_current_theme_supports( $bool, $args, $registered ) {
+function gautam_current_theme_supports( $bool, $args, $registered ) {
 	return in_array( $args[0], $registered[0] ) || in_array( 'all', $registered[0] );
 }
 
-add_filter( 'current_theme_supports-aaurora_hooks', 'aaurora_current_theme_supports', 10, 3 );
+add_filter( 'current_theme_supports-gautam_hooks', 'gautam_current_theme_supports', 10, 3 );
 
 /**
  * HTML <html> hook
  * Special case, useful for <DOCTYPE>, etc.
- * $aaurora_supports[] = 'html;
+ * $gautam_supports[] = 'html;
  */
-function aaurora_html_before() {
-	do_action( 'aaurora_html_before' );
+function gautam_html_before() {
+	do_action( 'gautam_html_before' );
 }
 
 /**
  * HTML <body> hooks
- * $aaurora_supports[] = 'body';
+ * $gautam_supports[] = 'body';
  */
-function aaurora_body_top() {
-	do_action( 'aaurora_body_top' );
+function gautam_body_top() {
+	do_action( 'gautam_body_top' );
 }
 
 /**
  * Body Bottom.
  */
-function aaurora_body_bottom() {
-	do_action( 'aaurora_body_bottom' );
+function gautam_body_bottom() {
+	do_action( 'gautam_body_bottom' );
 }
 
 /**
  * HTML <head> hooks
  *
- * $aaurora_supports[] = 'head';
+ * $gautam_supports[] = 'head';
  */
-function aaurora_head_top() {
-	do_action( 'aaurora_head_top' );
+function gautam_head_top() {
+	do_action( 'gautam_head_top' );
 }
 
 /**
  * Head Bottom.
  */
-function aaurora_head_bottom() {
-	do_action( 'aaurora_head_bottom' );
+function gautam_head_bottom() {
+	do_action( 'gautam_head_bottom' );
 }
 
 /**
  * Semantic <header> hooks
  *
- * $aaurora_supports[] = 'header';
+ * $gautam_supports[] = 'header';
  */
-function aaurora_header_before() {
-	do_action( 'aaurora_header_before' );
+function gautam_header_before() {
+	do_action( 'gautam_header_before' );
 }
 
 /**
  * Header.
  */
-function aaurora_header() {
-	do_action( 'aaurora_header' );
+function gautam_header() {
+	do_action( 'gautam_header' );
 }
 
 /**
  * Header After.
  */
-function aaurora_header_after() {
-	do_action( 'aaurora_header_after' );
+function gautam_header_after() {
+	do_action( 'gautam_header_after' );
 }
 
 /**
  * Header Top.
  */
-function aaurora_header_top() {
-	do_action( 'aaurora_header_top' );
+function gautam_header_top() {
+	do_action( 'gautam_header_top' );
 }
 
 /**
  * Header Bottom.
  */
-function aaurora_header_bottom() {
-	do_action( 'aaurora_header_bottom' );
+function gautam_header_bottom() {
+	do_action( 'gautam_header_bottom' );
 }
 
 
@@ -172,185 +172,185 @@ function aaurora_header_bottom() {
 /**
  * Content Top.
  */
-function aaurora_content_top() {
-	do_action( 'aaurora_content_top' );
+function gautam_content_top() {
+	do_action( 'gautam_content_top' );
 }
 
 /**
  * Content Bottom.
  */
-function aaurora_content_bottom() {
-	do_action( 'aaurora_content_bottom' );
+function gautam_content_bottom() {
+	do_action( 'gautam_content_bottom' );
 }
 
 /**
  * Content While Before.
  */
-function aaurora_content_while_before() {
-	do_action( 'aaurora_content_while_before' );
+function gautam_content_while_before() {
+	do_action( 'gautam_content_while_before' );
 }
 
 /**
  * Content While After.
  */
-function aaurora_content_while_after() {
-	do_action( 'aaurora_content_while_after' );
+function gautam_content_while_after() {
+	do_action( 'gautam_content_while_after' );
 }
 
 /**
  * Semantic <entry> hooks
  *
- * $aaurora_supports[] = 'entry';
+ * $gautam_supports[] = 'entry';
  */
-function aaurora_entry_before() {
-	do_action( 'aaurora_entry_before' );
+function gautam_entry_before() {
+	do_action( 'gautam_entry_before' );
 }
 
 /**
  * Entry After.
  */
-function aaurora_entry_after() {
-	do_action( 'aaurora_entry_after' );
+function gautam_entry_after() {
+	do_action( 'gautam_entry_after' );
 }
 
 
 /**
  * Entry Top.
  */
-function aaurora_entry_top() {
-	do_action( 'aaurora_entry_top' );
+function gautam_entry_top() {
+	do_action( 'gautam_entry_top' );
 }
 
 /**
  * Entry Bottom.
  */
-function aaurora_entry_bottom() {
-	do_action( 'aaurora_entry_bottom' );
+function gautam_entry_bottom() {
+	do_action( 'gautam_entry_bottom' );
 }
 
 /**
  * Comments block hooks
  *
- * $aaurora_supports[] = 'comments';
+ * $gautam_supports[] = 'comments';
  */
-function aaurora_comments_before() {
-	do_action( 'aaurora_comments_before' );
+function gautam_comments_before() {
+	do_action( 'gautam_comments_before' );
 }
 
 /**
  * Comments After.
  */
-function aaurora_comments_after() {
-	do_action( 'aaurora_comments_after' );
+function gautam_comments_after() {
+	do_action( 'gautam_comments_after' );
 }
 
 /**
  * Semantic <sidebar> hooks
  *
- * $aaurora_supports[] = 'sidebar';
+ * $gautam_supports[] = 'sidebar';
  */
-function aaurora_sidebars_before() {
-	do_action( 'aaurora_sidebars_before' );
+function gautam_sidebars_before() {
+	do_action( 'gautam_sidebars_before' );
 }
 
 /**
  * Right Sidebar.
  */
-function aaurora_right_sidebar() {
-	do_action( 'aaurora_right_sidebar' );
+function gautam_right_sidebar() {
+	do_action( 'gautam_right_sidebar' );
 }
 
 /**
  * Left Sidebar.
  */
-function aaurora_left_sidebar() {
-	do_action( 'aaurora_left_sidebar' );
+function gautam_left_sidebar() {
+	do_action( 'gautam_left_sidebar' );
 }
 
 /**
  * Sidebar After.
  */
-function aaurora_sidebars_after() {
-	do_action( 'aaurora_sidebars_after' );
+function gautam_sidebars_after() {
+	do_action( 'gautam_sidebars_after' );
 }
 
 /**
  * Sidebar Top.
  */
-function aaurora_sidebar_top() {
-	do_action( 'aaurora_sidebar_top' );
+function gautam_sidebar_top() {
+	do_action( 'gautam_sidebar_top' );
 }
 
 /**
  * Sidebar Bottom.
  */
-function aaurora_sidebar_bottom() {
-	do_action( 'aaurora_sidebar_bottom' );
+function gautam_sidebar_bottom() {
+	do_action( 'gautam_sidebar_bottom' );
 }
 
 /**
  * Semantic <footer> hooks
  *
- * $aaurora_supports[] = 'footer';
+ * $gautam_supports[] = 'footer';
  */
-function aaurora_footer_before() {
-	do_action( 'aaurora_footer_before' );
+function gautam_footer_before() {
+	do_action( 'gautam_footer_before' );
 }
 
 /**
  * Footer After.
  */
-function aaurora_footer() {
-	do_action( 'aaurora_footer' );
+function gautam_footer() {
+	do_action( 'gautam_footer' );
 }
 
 /**
  * Footer After.
  */
-function aaurora_footer_after() {
-	do_action( 'aaurora_footer_after' );
+function gautam_footer_after() {
+	do_action( 'gautam_footer_after' );
 }
 
 /**
  * Entry Content After.
  */
-function aaurora_entry_tag_before() {
-	do_action( 'aaurora_entry_tag_before' );
+function gautam_entry_tag_before() {
+	do_action( 'gautam_entry_tag_before' );
 }
 
 /**
  * Entry Content After.
  */
-function aaurora_entry_tag_after() {
-	do_action( 'aaurora_entry_tag_after' );
+function gautam_entry_tag_after() {
+	do_action( 'gautam_entry_tag_after' );
 }
 
 /**
  * Entry Content After.
  */
-function aaurora_entry_author_before() {
-	do_action( 'aaurora_entry_author_before' );
+function gautam_entry_author_before() {
+	do_action( 'gautam_entry_author_before' );
 }
 
 /**
  * Entry Content After.
  */
-function aaurora_entry_author_after() {
-	do_action( 'aaurora_entry_author_after' );
+function gautam_entry_author_after() {
+	do_action( 'gautam_entry_author_after' );
 }
 
 /**
  * Entry Content After.
  */
-function aaurora_entry_navigation_before() {
-	do_action( 'aaurora_entry_navigation_before' );
+function gautam_entry_navigation_before() {
+	do_action( 'gautam_entry_navigation_before' );
 }
 
 /**
  * Entry Content After.
  */
-function aaurora_entry_navigation_after() {
-	do_action( 'aaurora_entry_navigation_after' );
+function gautam_entry_navigation_after() {
+	do_action( 'gautam_entry_navigation_after' );
 }
 
 
@@ -358,106 +358,106 @@ function aaurora_entry_navigation_after() {
 /**
  * Before Main Content
  */
-function aaurora_main_content_before() {
-	do_action( 'aaurora_main_content_before' );
+function gautam_main_content_before() {
+	do_action( 'gautam_main_content_before' );
 }
 
 /**
  * After Main Content.
  */
-function aaurora_main_content_after() {
-	do_action( 'aaurora_main_content_after' );
+function gautam_main_content_after() {
+	do_action( 'gautam_main_content_after' );
 }
 
 /**
  * Before Content.
  */
-function aaurora_content_before() {
-	do_action( 'aaurora_content_before' );
+function gautam_content_before() {
+	do_action( 'gautam_content_before' );
 }
 
 /**
  * After Content.
  */
-function aaurora_content_after() {
-	do_action( 'aaurora_content_after' );
+function gautam_content_after() {
+	do_action( 'gautam_content_after' );
 }
 
 /**
  * Before Entry Content.
  */
-function aaurora_entry_content_before() {
-	do_action( 'aaurora_entry_content_before' );
+function gautam_entry_content_before() {
+	do_action( 'gautam_entry_content_before' );
 }
 
 /**
  * Entry Content.
  */
-function aaurora_entry_content() {
-	do_action( 'aaurora_entry_content' );
+function gautam_entry_content() {
+	do_action( 'gautam_entry_content' );
 }
 
 /**
  * After Entry Content
  */
-function aaurora_entry_content_after() {
-	do_action( 'aaurora_entry_content_after' );
+function gautam_entry_content_after() {
+	do_action( 'gautam_entry_content_after' );
 }
 
 /**
  * Before Site Container
  */
-function aaurora_site_container_before() {
-	do_action( 'aaurora_site_container_before' );
+function gautam_site_container_before() {
+	do_action( 'gautam_site_container_before' );
 }
 
 
 /**
  * After Site Container
  */
-function aaurora_site_container_after() {
-	do_action( 'aaurora_site_container_after' );
+function gautam_site_container_after() {
+	do_action( 'gautam_site_container_after' );
 }
 
 /**
  * Before Footer Content.
  */
-function aaurora_footer_content_top() {
-	do_action( 'aaurora_footer_content_top' );
+function gautam_footer_content_top() {
+	do_action( 'gautam_footer_content_top' );
 }
 
 /**
  * Footer Content.
  */
-function aaurora_footer_content() {
-	do_action( 'aaurora_footer_content' );
+function gautam_footer_content() {
+	do_action( 'gautam_footer_content' );
 }
 
 /**
  * After Footer Content.
  */
-function aaurora_footer_content_bottom() {
-	do_action( 'aaurora_footer_content_bottom' );
+function gautam_footer_content_bottom() {
+	do_action( 'gautam_footer_content_bottom' );
 }
 
 
 /**
  * Before Singular Content.
  */
-function aaurora_singular_content_before() {
-	do_action( 'aaurora_singular_content_before' );
+function gautam_singular_content_before() {
+	do_action( 'gautam_singular_content_before' );
 }
 
 /**
  * Singular Content.
  */
-function aaurora_singular_content() {
-	do_action( 'aaurora_singular_content' );
+function gautam_singular_content() {
+	do_action( 'gautam_singular_content' );
 }
 
 /**
  * After Singular Content.
  */
-function aaurora_singular_content_after() {
-	do_action( 'aaurora_singular_content_after' );
+function gautam_singular_content_after() {
+	do_action( 'gautam_singular_content_after' );
 }

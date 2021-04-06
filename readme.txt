@@ -1,4 +1,4 @@
-=== Aaurora ===
+=== Gautam ===
 Contributors: ipoweruser
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments
 Tested up to: 5.5
@@ -7,11 +7,11 @@ Stable tag: 1.0.0
 License: GPL-2.0-only
 License URI: https://www.gnu.org/licenses/license-list.html#GPLv2
 
-Aaurora is fast, customizable & beautiful WordPress theme mainly suitable for blog. But it can also be used for personal portfolio, business website.
+Gautam is fast, customizable & beautiful WordPress theme mainly suitable for blog. But it can also be used for personal portfolio, business website.
 
 == Description ==
 
-Aaurora is fast, customizable & beautiful WordPress theme suitable mainly for blog. But it also be used for personal portfolio, business website. It is very lightweight (less than 50KB on frontend). Built with SEO in mind.
+Gautam is fast, customizable & beautiful WordPress theme suitable mainly for blog. But it also be used for personal portfolio, business website. It is very lightweight (less than 50KB on frontend). Built with SEO in mind.
 
 **Features**
 
@@ -31,10 +31,10 @@ Aaurora is fast, customizable & beautiful WordPress theme suitable mainly for bl
 
 == License ==
 
-Aaurora WordPress Theme, Copyright 2020 iPowerUser.com.
-Aaurora is distributed under the terms of the GNU GPL.
+Gautam WordPress Theme, Copyright 2020 iPowerUser.com.
+Gautam is distributed under the terms of the GNU GPL.
 
-Aaurora is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Gautam is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 This program is free software: you can redistribute it and/or modify
@@ -73,7 +73,7 @@ https://pxhere.com/en/photo/1171605
 
 = Does this theme support any plugins? =
 
-aaurora includes support for WooCommerce and for Infinite Scroll in Jetpack.
+gautam includes support for WooCommerce and for Infinite Scroll in Jetpack.
 
 == Changelog ==
 

@@ -2,7 +2,7 @@
 /**
  * Do not allow direct script access.
  *
- * @package Aaurora
+ * @package Gautam
  * @since 1.0
  */
 

@@ -3,7 +3,7 @@
  *
  * Contains events and methods to handle menus and sidebars.
  *
- * @package aaurora
+ * @package gautam
  */
 
 document.addEventListener("DOMContentLoaded", function(event) {
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   //1- Search**************************************************************************************
 
-  const searchButton = document.querySelector(".aaurora-search");
+  const searchButton = document.querySelector(".gautam-search");
   const searchModal = document.querySelector(".popup_search_modal");
   const searchCloseBtn = document.querySelector(".popup_modal_close_button");
   const searchField = document.querySelector(".search-field");

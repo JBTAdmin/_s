@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package aaurora
+ * @package gautam
  */
 
 if ( ! function_exists( 'wp_body_open' ) ) {
@@ -18,7 +18,7 @@ if ( ! function_exists( 'wp_body_open' ) ) {
 	}
 }
 
-if ( ! function_exists( 'aaurora_posted_on' ) ) {
+if ( ! function_exists( 'gautam_posted_on' ) ) {
 	/**
 	 * Prints HTML with meta information for the current post-date/time.
 	 *
@@ -27,7 +27,7 @@ if ( ! function_exists( 'aaurora_posted_on' ) ) {
 	 *
 	 * @since 1.0.0
 	 */
-	function aaurora_posted_on( $date_only = false, $created_date = true ) {
+	function gautam_posted_on( $date_only = false, $created_date = true ) {
 
 		if ( $created_date ) {
 			$time_string = '<span class="posted-on"> <time class="entry-date published" datetime="%1$s">%2$s</time></span>';
@@ -58,24 +58,24 @@ if ( ! function_exists( 'aaurora_posted_on' ) ) {
 	}
 }
 
-if ( ! function_exists( 'aaurora_updated_on' ) ) {
+if ( ! function_exists( 'gautam_updated_on' ) ) {
 	/**
 	 * Prints HTML with meta information for the current post-date/time.
 	 *
 	 * @since 1.0.0
 	 */
-	function aaurora_updated_on() {
-		aaurora_posted_on( false, false );
+	function gautam_updated_on() {
+		gautam_posted_on( false, false );
 	}
 }
 
-if ( ! function_exists( 'aaurora_posted_by' ) ) {
+if ( ! function_exists( 'gautam_posted_by' ) ) {
 	/**
 	 * Prints HTML with meta information for the current author.
 	 *
 	 * @since 1.0.0
 	 */
-	function aaurora_posted_by() {
+	function gautam_posted_by() {
 		global $post;
 		$author_id = $post->post_author;
 		$byline    = sprintf(
@@ -87,20 +87,20 @@ if ( ! function_exists( 'aaurora_posted_by' ) ) {
 	}
 }
 
-if ( ! function_exists( 'aaurora_meta_comment' ) ) {
+if ( ! function_exists( 'gautam_meta_comment' ) ) {
 	/**
 	 * Prints meta information for comment.
 	 *
 	 * @since 1.0.0
 	 */
-	function aaurora_meta_comment() {
+	function gautam_meta_comment() {
 		if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 			echo '<span class="comments-link">';
 			comments_popup_link(
 				sprintf(
 					wp_kses(
 						/* translators: %s: post title */
-						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'aaurora' ),
+						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'gautam' ),
 						array(
 							'span' => array(
 								'class' => array(),
@@ -115,7 +115,7 @@ if ( ! function_exists( 'aaurora_meta_comment' ) ) {
 	}
 }
 
-if ( ! function_exists( 'aaurora_post_thumbnail' ) ) {
+if ( ! function_exists( 'gautam_post_thumbnail' ) ) {
 	/**
 	 * Displays an optional post thumbnail.
 	 *
@@ -129,7 +129,7 @@ if ( ! function_exists( 'aaurora_post_thumbnail' ) ) {
 	 *
 	 * @since 1.0.0
 	 */
-	function aaurora_post_thumbnail( $size = 'post-thumbnail', $date = '', $in_style = false, $background_needed = true ) {
+	function gautam_post_thumbnail( $size = 'post-thumbnail', $date = '', $in_style = false, $background_needed = true ) {
 
 		if ( post_password_required() || is_attachment() ) {
 			return;
@@ -137,12 +137,12 @@ if ( ! function_exists( 'aaurora_post_thumbnail' ) ) {
 
 		if ( ! has_post_thumbnail() & ! is_singular() ) {
 
-			aaurora_no_post_thumbnail( $date );
+			gautam_no_post_thumbnail( $date );
 
 			return;
 		}
 
-		aaurora_blog_post_thumbnail( $date, $size, $in_style );
+		gautam_blog_post_thumbnail( $date, $size, $in_style );
 
 	}
 }
@@ -154,7 +154,7 @@ if ( ! function_exists( 'aaurora_post_thumbnail' ) ) {
  *
  * @since 1.0.0
  */
-function aaurora_no_post_thumbnail( $date = '' ) {
+function gautam_no_post_thumbnail( $date = '' ) {
 	?>
 	<div class="post-thumbnail no-post-thumbnail">
 		<a href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
@@ -170,7 +170,7 @@ function aaurora_no_post_thumbnail( $date = '' ) {
 
 			<?php if ( is_sticky() ) : ?>
 				<span class="badge">
-						<?php aaurora_load_inline_svg( 'sticky.svg' ); ?>
+						<?php gautam_load_inline_svg( 'sticky.svg' ); ?>
 				</span>
 			<?php endif; ?>
 			<span class="post-date">
@@ -188,7 +188,7 @@ function aaurora_no_post_thumbnail( $date = '' ) {
  * @param String  $size Size of the featured image.
  * @param boolean $in_style Should image be included as Div or In style.
  */
-function aaurora_blog_post_thumbnail( $date, $size, $in_style ) {
+function gautam_blog_post_thumbnail( $date, $size, $in_style ) {
 	if ( $in_style && is_singular() ) {
 		?>
 		<div class="post-thumbnail in-style"
@@ -206,7 +206,7 @@ function aaurora_blog_post_thumbnail( $date, $size, $in_style ) {
 				if ( is_sticky() ) :
 					?>
 					<span class="badge">
-						<?php aaurora_load_inline_svg( 'sticky.svg' ); ?>
+						<?php gautam_load_inline_svg( 'sticky.svg' ); ?>
 				</span>
 				<?php endif; ?>
 				<span class="post-date">
@@ -239,7 +239,7 @@ function aaurora_blog_post_thumbnail( $date, $size, $in_style ) {
 				if ( is_sticky() ) :
 					?>
 					<span class="badge">
-						<?php aaurora_load_inline_svg( 'sticky.svg' ); ?>
+						<?php gautam_load_inline_svg( 'sticky.svg' ); ?>
 				</span>
 				<?php endif; ?>
 				<span class="post-date">

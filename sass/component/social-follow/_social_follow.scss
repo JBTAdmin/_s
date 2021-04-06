@@ -1,11 +1,11 @@
 @media only screen and (max-width: 786px) {
-  .aaurora_social_follow {
+  .gautam_social_follow {
     opacity: 0;
     visibility: hidden;
   }
 }
 
-.aaurora_social_follow {
+.gautam_social_follow {
   font-size: 1.5rem;
   position: fixed;
   right: $right_position;
@@ -18,29 +18,29 @@
   transform: rotate(-90deg) translate(50%, -50%);
 }
 
-.aaurora-social-holder {
+.gautam-social-holder {
   white-space: nowrap;
   display: flex;
   list-style: none;
   margin: 0;
 }
 
-ul.aaurora-social-holder > li {
+ul.gautam-social-holder > li {
   padding: 0 5px;
 }
 
-.aaurora-social-holder li > a {
+.gautam-social-holder li > a {
   display: flex;
 }
 
-.aaurora-social-holder li:not(:last-child) a:after {
+.gautam-social-holder li:not(:last-child) a:after {
   content: ".";
 }
 
-.aaurora_social_follow.no_social_color > .aaurora-social-holder a {
+.gautam_social_follow.no_social_color > .gautam-social-holder a {
   color: #000;
 }
 
-.aaurora_social_follow.no_social_color > .aaurora-social-holder a:hover {
+.gautam_social_follow.no_social_color > .gautam-social-holder a:hover {
   color: $theme__color;
 }

@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package aaurora
+ * @package gautam
  */
 
 ?>
@@ -14,7 +14,7 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</div><!-- .entry-header -->
 
-	<?php aaurora_post_thumbnail(); ?>
+	<?php gautam_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
@@ -22,7 +22,7 @@
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'aaurora' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'gautam' ),
 				'after'  => '</div>',
 			)
 		);

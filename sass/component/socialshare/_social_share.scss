@@ -1,5 +1,5 @@
 @media screen and (max-width: 768px) {
-  .aaurora-share {
+  .gautam-share {
     display: none;
   }
 
@@ -9,12 +9,12 @@
   //}
 }
 
-.aaurora-share.fixed a > svg {
+.gautam-share.fixed a > svg {
   width: 18px;
   height: 18px;
 }
 
-.aaurora-share.fixed > a {
+.gautam-share.fixed > a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,7 +39,7 @@
   }
 }
 
-.aaurora-share.fixed {
+.gautam-share.fixed {
   position: fixed;
   left: $left_position;
   bottom: 5vh;
@@ -51,12 +51,12 @@
 }
 
 // Focus withing is not working need to take help of the js
-.aaurora-share.fixed:hover,
-.aaurora-share.fixed:focus {
+.gautam-share.fixed:hover,
+.gautam-share.fixed:focus {
   height: 340px;
 }
 
-.aaurora-share.fixed .aaurora-share-inner {
+.gautam-share.fixed .gautam-share-inner {
   position: absolute;
   height: 60px;
   width: 60px;
@@ -68,7 +68,7 @@
   justify-content: center;
 }
 
-.aaurora-share.fixed .aaurora-share-inner a {
+.gautam-share.fixed .gautam-share-inner a {
   line-height: 45px;
   height: 40px;
   width: 40px;
@@ -83,33 +83,33 @@
   transition: all 0.45s cubic-bezier(0.15, 0.2, 0.1, 1);
 }
 
-.aaurora-share.fixed:hover,
-.aaurora-share.fixed:focus {
-  .aaurora-share-inner a:nth-child(1) {
+.gautam-share.fixed:hover,
+.gautam-share.fixed:focus {
+  .gautam-share-inner a:nth-child(1) {
     transform: translateY(-56px) scale(1);
     opacity: 1;
   }
 }
 
-.aaurora-share.fixed:hover,
-.aaurora-share.fixed:focus {
-  .aaurora-share-inner a:nth-child(2) {
+.gautam-share.fixed:hover,
+.gautam-share.fixed:focus {
+  .gautam-share-inner a:nth-child(2) {
     transform: translateY(-106px) scale(1);
     opacity: 1;
   }
 }
 
-.aaurora-share.fixed:hover,
-.aaurora-share.fixed:focus {
-  .aaurora-share-inner a:nth-child(3) {
+.gautam-share.fixed:hover,
+.gautam-share.fixed:focus {
+  .gautam-share-inner a:nth-child(3) {
     transform: translateY(-156px) scale(1);
     opacity: 1;
   }
 }
 
-.aaurora-share.fixed:hover,
-.aaurora-share.fixed:focus {
-  .aaurora-share-inner a:nth-child(4) {
+.gautam-share.fixed:hover,
+.gautam-share.fixed:focus {
+  .gautam-share-inner a:nth-child(4) {
     transform: translateY(-206px) scale(1);
     opacity: 1;
   }

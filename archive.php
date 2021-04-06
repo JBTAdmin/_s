@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package aaurora
+ * @package gautam
  */
 
 get_header();
@@ -15,13 +15,13 @@ get_header();
 		<div class="wrap">
 			<div class="main-container">
 
-				<?php aaurora_main_content_before(); ?>
+				<?php gautam_main_content_before(); ?>
 
 				<main id="primary" class="site-main primary-content">
-					<?php aaurora_entry_content(); ?>
+					<?php gautam_entry_content(); ?>
 				</main><!-- #main -->
 
-				<?php aaurora_main_content_after(); ?>
+				<?php gautam_main_content_after(); ?>
 			</div>
 		</div>
 	</div>

@@ -11,7 +11,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package aaurora
+ * @package gautam
  */
 
 get_header();

@@ -2,7 +2,7 @@
 /**
  * Sidebar widget areas.
  *
- * @package Aaurora
+ * @package Gautam
  * @since   1.0.0
  */
 
@@ -12,18 +12,18 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-if ( ! function_exists( 'aaurora_widgets_init' ) ) :
+if ( ! function_exists( 'gautam_widgets_init' ) ) :
 	/**
 	 * Register widget area.
 	 *
 	 * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
 	 */
-	function aaurora_widgets_init() {
+	function gautam_widgets_init() {
 		register_sidebar(
 			array(
-				'name'          => esc_html__( 'Sidebar Right', 'aaurora' ),
-				'id'            => 'aaurora-sidebar-right',
-				'description'   => esc_html__( 'Add widgets here.', 'aaurora' ),
+				'name'          => esc_html__( 'Sidebar Right', 'gautam' ),
+				'id'            => 'gautam-sidebar-right',
+				'description'   => esc_html__( 'Add widgets here.', 'gautam' ),
 				'before_widget' => '<section id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</section>',
 				'before_title'  => '<h2 class="widget-title">',
@@ -33,9 +33,9 @@ if ( ! function_exists( 'aaurora_widgets_init' ) ) :
 
 		register_sidebar(
 			array(
-				'name'          => esc_html__( 'Sidebar Left', 'aaurora' ),
-				'id'            => 'aaurora-sidebar-left',
-				'description'   => esc_html__( 'Add widgets here.', 'aaurora' ),
+				'name'          => esc_html__( 'Sidebar Left', 'gautam' ),
+				'id'            => 'gautam-sidebar-left',
+				'description'   => esc_html__( 'Add widgets here.', 'gautam' ),
 				'before_widget' => '<section id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</section>',
 				'before_title'  => '<h2 class="widget-title">',
@@ -45,9 +45,9 @@ if ( ! function_exists( 'aaurora_widgets_init' ) ) :
 
 		register_sidebar(
 			array(
-				'name'          => esc_html__( 'Sidebar Alt', 'aaurora' ),
-				'id'            => 'aaurora-sidebar-alt',
-				'description'   => esc_html__( 'Add widgets here.', 'aaurora' ),
+				'name'          => esc_html__( 'Sidebar Alt', 'gautam' ),
+				'id'            => 'gautam-sidebar-alt',
+				'description'   => esc_html__( 'Add widgets here.', 'gautam' ),
 				'before_widget' => '<section id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</section>',
 				'before_title'  => '<h2 class="widget-title">',
@@ -57,9 +57,9 @@ if ( ! function_exists( 'aaurora_widgets_init' ) ) :
 
 		register_sidebar(
 			array(
-				'name'          => esc_html__( 'Footer 1', 'aaurora' ),
-				'id'            => 'aaurora-footer-1',
-				'description'   => esc_html__( 'Add widgets here.', 'aaurora' ),
+				'name'          => esc_html__( 'Footer 1', 'gautam' ),
+				'id'            => 'gautam-footer-1',
+				'description'   => esc_html__( 'Add widgets here.', 'gautam' ),
 				'before_widget' => '<div id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</div>',
 				'before_title'  => '<h3 class="widget-title"><span>',
@@ -69,9 +69,9 @@ if ( ! function_exists( 'aaurora_widgets_init' ) ) :
 
 		register_sidebar(
 			array(
-				'name'          => esc_html__( 'Footer 2', 'aaurora' ),
-				'id'            => 'aaurora-footer-2',
-				'description'   => esc_html__( 'Add widgets here.', 'aaurora' ),
+				'name'          => esc_html__( 'Footer 2', 'gautam' ),
+				'id'            => 'gautam-footer-2',
+				'description'   => esc_html__( 'Add widgets here.', 'gautam' ),
 				'before_widget' => '<div id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</div>',
 				'before_title'  => '<h3 class="widget-title"><span>',
@@ -81,9 +81,9 @@ if ( ! function_exists( 'aaurora_widgets_init' ) ) :
 
 		register_sidebar(
 			array(
-				'name'          => esc_html__( 'Footer 3', 'aaurora' ),
-				'id'            => 'aaurora-footer-3',
-				'description'   => esc_html__( 'Add widgets here.', 'aaurora' ),
+				'name'          => esc_html__( 'Footer 3', 'gautam' ),
+				'id'            => 'gautam-footer-3',
+				'description'   => esc_html__( 'Add widgets here.', 'gautam' ),
 				'before_widget' => '<div id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</div>',
 				'before_title'  => '<h3 class="widget-title"><span>',
@@ -93,9 +93,9 @@ if ( ! function_exists( 'aaurora_widgets_init' ) ) :
 
 		register_sidebar(
 			array(
-				'name'          => esc_html__( 'Footer 4', 'aaurora' ),
-				'id'            => 'aaurora-footer-4',
-				'description'   => esc_html__( 'Add widgets here.', 'aaurora' ),
+				'name'          => esc_html__( 'Footer 4', 'gautam' ),
+				'id'            => 'gautam-footer-4',
+				'description'   => esc_html__( 'Add widgets here.', 'gautam' ),
 				'before_widget' => '<div id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</div>',
 				'before_title'  => '<h3 class="widget-title"><span>',
@@ -104,4 +104,4 @@ if ( ! function_exists( 'aaurora_widgets_init' ) ) :
 		);
 	}
 endif;
-add_action( 'widgets_init', 'aaurora_widgets_init' );
+add_action( 'widgets_init', 'gautam_widgets_init' );

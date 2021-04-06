@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package aaurora
+ * @package gautam
  */
 
 $menu_class = '';
@@ -48,14 +48,14 @@ $menu_class .= ' ' . get_theme_mod( 'main_menu_arrow_style', 'noarrow' );
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary">
-		<?php esc_html_e( 'Skip to content', 'aaurora' ); ?></a>
+		<?php esc_html_e( 'Skip to content', 'gautam' ); ?></a>
 	<header id="masthead" class="site-header
 	<?php
 	echo esc_attr( $header_class );
 	echo esc_attr( $menu_class );
 	?>
 	">
-		<?php aaurora_header_before(); ?>
-		<?php aaurora_header(); ?>
-		<?php aaurora_header_after(); ?>
+		<?php gautam_header_before(); ?>
+		<?php gautam_header(); ?>
+		<?php gautam_header_after(); ?>
 	</header><!-- #masthead -->

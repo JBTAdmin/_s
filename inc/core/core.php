@@ -2,10 +2,10 @@
 /**
  * Core Theme setup.
  *
- * @package aaurora
+ * @package gautam
  */
 
-if ( ! function_exists( 'aaurora_setup' ) ) :
+if ( ! function_exists( 'gautam_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -13,14 +13,14 @@ if ( ! function_exists( 'aaurora_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function aaurora_setup() {
+	function gautam_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on aaurora_, use a find and replace
-		 * to change 'AAURORA' to the name of your theme in all the template files.
+		 * If you're building a theme based on gautam_, use a find and replace
+		 * to change 'GAUTAM' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'AAURORA', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'GAUTAM', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -43,11 +43,11 @@ if ( ! function_exists( 'aaurora_setup' ) ) :
 		// This theme uses wp_nav_menu() in two location.
 		register_nav_menus(
 			array(
-				'menu-1'       => esc_html__( 'Primary', 'aaurora' ),
-				'top-bar-menu' => esc_html__( 'Top Bar', 'aaurora' ),
-				'footer-1'     => esc_html__( 'Footer Menu 1', 'aaurora' ),
-				'footer-2'     => esc_html__( 'Footer Menu 2', 'aaurora' ),
-				'footer-3'     => esc_html__( 'Footer Menu 3', 'aaurora' ),
+				'menu-1'       => esc_html__( 'Primary', 'gautam' ),
+				'top-bar-menu' => esc_html__( 'Top Bar', 'gautam' ),
+				'footer-1'     => esc_html__( 'Footer Menu 1', 'gautam' ),
+				'footer-2'     => esc_html__( 'Footer Menu 2', 'gautam' ),
+				'footer-3'     => esc_html__( 'Footer Menu 3', 'gautam' ),
 			)
 		);
 
@@ -72,7 +72,7 @@ if ( ! function_exists( 'aaurora_setup' ) ) :
 		add_theme_support(
 			'custom-background',
 			apply_filters(
-				'aaurora_custom_background_args',
+				'gautam_custom_background_args',
 				array(
 					'default-color' => 'ffffff',
 					'default-image' => '',
@@ -107,7 +107,7 @@ if ( ! function_exists( 'aaurora_setup' ) ) :
 		);
 	}
 endif;
-add_action( 'after_setup_theme', 'aaurora_setup' );
+add_action( 'after_setup_theme', 'gautam_setup' );
 
 
 /**
@@ -117,35 +117,35 @@ add_action( 'after_setup_theme', 'aaurora_setup' );
  *
  * @global int $content_width
  */
-function aaurora_content_width() {
+function gautam_content_width() {
 	// This variable is intended to be overruled from themes.
 	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
 	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-	$GLOBALS['content_width'] = apply_filters( 'aaurora_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'gautam_content_width', 640 );
 }
 
-add_action( 'after_setup_theme', 'aaurora_content_width', 0 );
+add_action( 'after_setup_theme', 'gautam_content_width', 0 );
 
 /**
  * Enqueue scripts/styles.
  */
-function aaurora_scripts() {
-	wp_enqueue_style( 'aaurora-style', get_stylesheet_uri(), array(), AAURORA_VERSION );
+function gautam_scripts() {
+	wp_enqueue_style( 'gautam-style', get_stylesheet_uri(), array(), GAUTAM_VERSION );
 
 	// FontAwesome Icons.
 	wp_enqueue_style( 'fontawesome', get_theme_file_uri( '/assets/css/font-awesome.css' ), array(), '4.7.0' );
 
-	wp_style_add_data( 'aaurora-style', 'rtl', 'replace' );
+	wp_style_add_data( 'gautam-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'aaurora-main', get_template_directory_uri() . '/js/main.js', array(), AAURORA_VERSION, true );
+	wp_enqueue_script( 'gautam-main', get_template_directory_uri() . '/js/main.js', array(), GAUTAM_VERSION, true );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 
-add_action( 'wp_enqueue_scripts', 'aaurora_scripts' );
+add_action( 'wp_enqueue_scripts', 'gautam_scripts' );
 
-if ( ! function_exists( 'aaurora_excerpt' ) ) {
+if ( ! function_exists( 'gautam_excerpt' ) ) {
 	/**
 	 * Limit excerpt length.
 	 *
@@ -153,7 +153,7 @@ if ( ! function_exists( 'aaurora_excerpt' ) ) {
 	 *
 	 * @since 1.0.0
 	 */
-	function aaurora_excerpt( $limit = 50 ) {
+	function gautam_excerpt( $limit = 50 ) {
 		return wp_trim_words( get_the_excerpt(), $limit );
 	}
 }
@@ -161,18 +161,18 @@ if ( ! function_exists( 'aaurora_excerpt' ) ) {
 /**
  * Theme Featured Image support.
  */
-add_image_size( 'aaurora-blog-3-featured-image', 762, 898, true ); // Used for Blog Layout 3.
-add_image_size( 'aaurora-blog-4-featured-image', 540, 320, true ); // Used for Blog Layout 4.
-add_image_size( 'aaurora-blog-5-featured-image', 540, 185, true ); // Used for Blog Layout 5.
-add_image_size( 'aaurora-post-navigation-featured-image', 80, 80, true ); // Used for Post Navigation.
-add_image_size( 'aaurora-post-in-content-featured-image', 1140, 500, true );// Used for Single Post In Content Featured Image.
-add_image_size( 'aaurora-post-in-header-featured-image', 1840, 500, true );// Used for Single Post In Header Featured Image.
+add_image_size( 'gautam-blog-3-featured-image', 762, 898, true ); // Used for Blog Layout 3.
+add_image_size( 'gautam-blog-4-featured-image', 540, 320, true ); // Used for Blog Layout 4.
+add_image_size( 'gautam-blog-5-featured-image', 540, 185, true ); // Used for Blog Layout 5.
+add_image_size( 'gautam-post-navigation-featured-image', 80, 80, true ); // Used for Post Navigation.
+add_image_size( 'gautam-post-in-content-featured-image', 1140, 500, true );// Used for Single Post In Content Featured Image.
+add_image_size( 'gautam-post-in-header-featured-image', 1840, 500, true );// Used for Single Post In Header Featured Image.
 
 
 
 // todo remove all these and options related to them.
-add_image_size( 'aaurora-blog-single-post-sidebar', 400, 500, true );
-add_image_size( 'aaurora-blog-single-post-no-sidebar', 1000, 340, true );
+add_image_size( 'gautam-blog-single-post-sidebar', 400, 500, true );
+add_image_size( 'gautam-blog-single-post-no-sidebar', 1000, 340, true );
 add_image_size( 'column-2-title-image', 1140, 694, true );
 add_image_size( 'column-2-title-image-compact', 1140, 694, true );
 

@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package aaurora
+ * @package gautam
  * @since 1.0
  */
 
@@ -15,7 +15,7 @@
 <div class="inner-entry">
 		<div class="entry-meta">
 			<div class="posted-on">
-				<?php aaurora_posted_on(); ?>
+				<?php gautam_posted_on(); ?>
 			</div>
 			<?php
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
@@ -24,7 +24,7 @@
 
 		<div class="entry-excerpt">
 			<a href="<?php echo esc_url( get_permalink() ); ?>" tabindex="-1">
-				<?php echo esc_html( aaurora_excerpt( 50 ) ); ?>
+				<?php echo esc_html( gautam_excerpt( 50 ) ); ?>
 			</a>
 		</div>
 

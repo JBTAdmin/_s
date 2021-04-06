@@ -1,15 +1,15 @@
 <?php
 /**
- * Aaurora_ functions and definitions
+ * Gautam_ functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package aaurora
+ * @package gautam
  */
 
-if ( ! defined( 'AAURORA_VERSION' ) ) {
+if ( ! defined( 'GAUTAM_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'AAURORA_VERSION', '1.0.0' );
+	define( 'GAUTAM_VERSION', '1.0.0' );
 }
 
 // todo Check this????.
@@ -35,7 +35,7 @@ if ( class_exists( 'WooCommerce' ) ) {
 
 // Admin.
 if ( is_admin() ) {
-	require dirname( __FILE__ ) . '/inc/admin/class-aaurora-admin.php';
+	require dirname( __FILE__ ) . '/inc/admin/class-gautam-admin.php';
 }
 
 /**

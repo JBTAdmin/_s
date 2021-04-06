@@ -2,7 +2,7 @@
 /**
  * Footer elements.
  *
- * @package Aaurora
+ * @package Gautam
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

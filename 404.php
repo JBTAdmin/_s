@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @package aaurora
+ * @package gautam
  */
 
 get_header();
@@ -17,7 +17,7 @@ get_header();
 
 		<section class="error-404 not-found">
 			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'aaurora' ); ?></h1>
+				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'gautam' ); ?></h1>
 			</header><!-- .page-header -->
 
 			<div class="page-content">
@@ -25,7 +25,7 @@ get_header();
 				<?php
 				esc_html_e(
 					'It looks like nothing was found at this location. Maybe try one of the links below or a search?',
-					'aaurora'
+					'gautam'
 				);
 				?>
 				</p>
@@ -37,7 +37,7 @@ get_header();
 				?>
 
 				<div class="widget widget_categories">
-					<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'aaurora' ); ?></h2>
+					<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'gautam' ); ?></h2>
 					<ul>
 						<?php
 						wp_list_categories(
@@ -54,15 +54,15 @@ get_header();
 				</div><!-- .widget -->
 
 				<?php
-				$aaurora_archive_content = '<p>' . sprintf(
+				$gautam_archive_content = '<p>' . sprintf(
 					/* translators: %1$s: smiley */
 					esc_html__(
 						'Try looking in the monthly archives. %1$s',
-						'aaurora'
+						'gautam'
 					),
 					convert_smilies( ':)' )
 				) . '</p>';
-				the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$aaurora_archive_content" );
+				the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$gautam_archive_content" );
 
 				the_widget( 'WP_Widget_Tag_Cloud' );
 				?>

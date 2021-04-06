@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package aaurora
+ * @package gautam
  */
 
 get_theme_mod( 'sidebar_listing', 'right' );
@@ -21,7 +21,7 @@ $class = 'widget-area sidebar-alt-aside sidebar-alt';
 						<button class="toggle sidebar-close desktop-sidebar-toggle" data-toggle-target=".sidebar-modal"
 								data-toggle-body-class="closing-sidebar-modal" aria-expanded="false">
 									<span class="toggle-inner">
-										<?php aaurora_load_inline_svg( 'close.svg' ); ?>
+										<?php gautam_load_inline_svg( 'close.svg' ); ?>
 									</span>
 						</button>
 					</div>
@@ -39,7 +39,7 @@ $class = 'widget-area sidebar-alt-aside sidebar-alt';
 			);
 
 			?>
-			<?php dynamic_sidebar( 'aaurora-sidebar-alt' ); ?>
+			<?php dynamic_sidebar( 'gautam-sidebar-alt' ); ?>
 		</div>
 	</aside><!-- #secondary -->
 </amp-sidebar>

@@ -2,7 +2,7 @@
 /**
  * Call to action elements.
  *
- * @package Aaurora
+ * @package Gautam
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -17,9 +17,9 @@ if ( get_theme_mod( 'footer_call_to_action', true ) === false ) {
 
 <div id="colophon" class="site-footer-main">
 	<div class="wrap">
-		<div class="aaurora-cta_wrapper">
+		<div class="gautam-cta_wrapper">
 
-			<div class="aaurora-cta-text">
+			<div class="gautam-cta-text">
 				<div class="cta-heading">
 					Want to set up <br>your business today?
 				</div>
@@ -28,7 +28,7 @@ if ( get_theme_mod( 'footer_call_to_action', true ) === false ) {
 				</div>
 			</div>
 
-			<div class="aaurora-cta-button">
+			<div class="gautam-cta-button">
 				<input type="button" value="Click Me" href="#">
 			</div>
 

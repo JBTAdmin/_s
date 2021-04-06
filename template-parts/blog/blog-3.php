@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package aaurora
+ * @package gautam
  * @since 1.0
  */
 
@@ -13,7 +13,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div  class="inner-entry">
 
-		<?php aaurora_post_thumbnail( 'aaurora-blog-3-featured-image', aaurora_posted_on( true ), false ); ?>
+		<?php gautam_post_thumbnail( 'gautam-blog-3-featured-image', gautam_posted_on( true ), false ); ?>
 
 		<div class="entry-header">
 			<div class="cat-links">

@@ -6,16 +6,16 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package aaurora
+ * @package gautam
  */
 
 ?>
 
-<?php aaurora_footer_before(); ?>
+<?php gautam_footer_before(); ?>
 
-<?php aaurora_footer(); ?>
+<?php gautam_footer(); ?>
 
-<?php aaurora_footer_after(); ?>
+<?php gautam_footer_after(); ?>
 
 </div>
 <?php wp_footer(); ?>

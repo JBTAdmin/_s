@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package aaurora
+ * @package gautam
  * @since 1.0
  */
 
@@ -17,13 +17,13 @@
 			if ( is_sticky() ) :
 				?>
 				<span class="badge">
-						<?php aaurora_load_inline_svg( 'sticky.svg' ); ?>
+						<?php gautam_load_inline_svg( 'sticky.svg' ); ?>
 				</span>
 			<?php endif; ?>
 			<div class="entry-header">
 				<div class="entry-meta">
 					<div class="posted_on">
-						<?php echo esc_html( aaurora_posted_on( true ) ); ?>
+						<?php echo esc_html( gautam_posted_on( true ) ); ?>
 					</div>
 				</div>
 				<?php

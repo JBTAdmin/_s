@@ -46,7 +46,7 @@
 	-->
 
 	<rule ref="WordPress">
-		<!-- This rule does not apply here since the aaurora prefix should be changed by the theme author. -->
+		<!-- This rule does not apply here since the gautam prefix should be changed by the theme author. -->
 		<exclude name="WordPress.NamingConventions.PrefixAllGlobals.ShortPrefixPassed"/>
 	</rule>
 	<rule ref="WPThemeReview"/>
@@ -61,7 +61,7 @@
 		 Multiple valid text domains can be provided as a comma-delimited list. -->
 	<rule ref="WordPress.WP.I18n">
 		<properties>
-			<property name="text_domain" type="array" value="aaurora"/>
+			<property name="text_domain" type="array" value="gautam"/>
 		</properties>
 	</rule>
 

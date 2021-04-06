@@ -2,7 +2,7 @@
 /**
  * Displayes Metadata Informations.
  *
- * @package Aaurora
+ * @package Gautam
  * @since 1.0
  */
 
@@ -17,7 +17,7 @@ if ( 'post' === get_post_type() ) :
 	?>
 	<div class="entry-meta">
 		<?php
-		$aaurora_meta_elements = get_theme_mod(
+		$gautam_meta_elements = get_theme_mod(
 			'entry_header_metadata_element',
 			array(
 				'updated_on',
@@ -27,11 +27,11 @@ if ( 'post' === get_post_type() ) :
 		);
 
 		// Loop through meta items.
-		foreach ( $aaurora_meta_elements as $aaurora_meta_item ) {
+		foreach ( $gautam_meta_elements as $gautam_meta_item ) {
 
 			// Call a template tag function.
-			if ( function_exists( 'aaurora_' . $aaurora_meta_item ) ) {
-				call_user_func( 'aaurora_' . $aaurora_meta_item );
+			if ( function_exists( 'gautam_' . $gautam_meta_item ) ) {
+				call_user_func( 'gautam_' . $gautam_meta_item );
 			}
 		}
 		?>

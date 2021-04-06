@@ -2,7 +2,7 @@
 /**
  * Core Theme Helper Function Used throughout Themes.
  *
- * @package Aaurora
+ * @package Gautam
  * @since 1.0.0
  */
 
@@ -16,12 +16,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Pagination Buttons
  */
-function aaurora_post_nav() {
-	echo "<div class='aaurora-pagination'>";
+function gautam_post_nav() {
+	echo "<div class='gautam-pagination'>";
 	the_posts_pagination(
 		array(
-			'prev_text' => __( '&lt;', 'aaurora' ),
-			'next_text' => __( '&gt;', 'aaurora' ),
+			'prev_text' => __( '&lt;', 'gautam' ),
+			'next_text' => __( '&gt;', 'gautam' ),
 			'type'      => 'list',
 		)
 	);
@@ -36,7 +36,7 @@ function aaurora_post_nav() {
  *
  * @return void
  */
-function aaurora_load_inline_svg( $filename ) {
+function gautam_load_inline_svg( $filename ) {
 
 	ob_start();
 
@@ -113,7 +113,7 @@ function aaurora_load_inline_svg( $filename ) {
  * @return boolean, if current page is front page.
  * @since 1.0.0
  */
-function aaurora_is_frontpage() {
+function gautam_is_frontpage() {
 	return is_front_page() && ! is_home();
 }
 
@@ -122,7 +122,7 @@ function aaurora_is_frontpage() {
  *
  * @since 1.0.0
  */
-function aaurora_get_content_layout() {
+function gautam_get_content_layout() {
 
 	if ( is_home() || is_archive() || is_search() ) {
 		get_template_part( 'template-parts/blog/blog', get_theme_mod( 'blog_layout_setting', '2' ), get_post_type() );

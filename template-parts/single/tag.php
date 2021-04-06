@@ -2,7 +2,7 @@
 /**
  * Displayes Tags.
  *
- * @package Aaurora
+ * @package Gautam
  * @since 1.0
  */
 

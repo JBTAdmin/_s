@@ -1,5 +1,5 @@
 /* ==========================================================================
-*  aaurora admin page related styles.
+*  gautam admin page related styles.
 *  ========================================================================== */
 
 /*todo need to revisit this css files*/
@@ -27,13 +27,13 @@ body {
 	margin: 0 auto;
 }
 
-/*Aaurora Header*/
-#aaurora-header {
+/*Gautam Header*/
+#gautam-header {
 	padding: 12px 35px;
 	margin: 30px 0;
 }
 
-#aaurora-header > .wrap-container {
+#gautam-header > .wrap-container {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -41,14 +41,14 @@ body {
 	justify-content: center;
 }
 
-#aaurora-header .aaurora-logo img {
+#gautam-header .gautam-logo img {
 	height: 26px;
 	width: auto;
 	display: block;
 }
 
-/*Aaurora Tabs*/
-.aaurora-tabs > ul {
+/*Gautam Tabs*/
+.gautam-tabs > ul {
 	background-color: #f1f5fa;
 	display: flex;
 	flex-wrap: wrap;
@@ -58,7 +58,7 @@ body {
 	border-radius: 20px;
 }
 
-.aaurora-tabs > ul > li {
+.gautam-tabs > ul > li {
 	flex-basis: 0;
 	flex-grow: 1;
 	text-align: center;
@@ -72,7 +72,7 @@ body {
 	-webkit-tap-highlight-color: transparent;
 }
 
-.aaurora-tabs > ul > li > a {
+.gautam-tabs > ul > li > a {
 	display: block;
 	padding: .5rem 1rem;
 	color: #303e67;
@@ -80,25 +80,25 @@ body {
 	text-decoration: none;
 }
 
-.aaurora-tabs > ul > li.current-item > a {
+.gautam-tabs > ul > li.current-item > a {
 	background: #1761fd;
 	color: #fff;
 }
 
-/*Aaurora Main Section*/
-#wpbody-content .aaurora-section {
+/*Gautam Main Section*/
+#wpbody-content .gautam-section {
 	display: flex;
 	margin-bottom: 50px !important;
 }
 
-#wpbody-content .aaurora-columns {
+#wpbody-content .gautam-columns {
 	display: flex;
 	flex-wrap: wrap;
 	padding: 0;
 	align-items: stretch;
 }
 
-#wpbody-content .aaurora-section.aaurora-columns {
+#wpbody-content .gautam-section.gautam-columns {
 	display: flex;
 	flex-wrap: wrap;
 	padding: 0;
@@ -107,7 +107,7 @@ body {
 	justify-content: space-between;
 }
 
-#wpbody-content .aaurora-card {
+#wpbody-content .gautam-card {
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
@@ -125,7 +125,7 @@ body {
 	position: relative;
 }
 
-#wpbody-content .aaurora-card h4 {
+#wpbody-content .gautam-card h4 {
 	border-bottom: 1px solid #d9e3f1;
 	padding: 12px 16px;
 	text-transform: capitalize;
@@ -139,7 +139,7 @@ body {
 	font-family: "Poppins", sans-serif;
 }
 
-#wpbody-content .aaurora-card p {
+#wpbody-content .gautam-card p {
 	padding: 10px;
 	color: #8b91a9;
 	ine-height: 1.6;
@@ -147,11 +147,11 @@ body {
 	font-weight: 400;
 }
 
-#wpbody-content .aaurora-card .aaurora-buttons {
+#wpbody-content .gautam-card .gautam-buttons {
 	padding: 10px;
 }
 
-#wpbody-content .aaurora-card .aaurora-buttons .adm-btn {
+#wpbody-content .gautam-card .gautam-buttons .adm-btn {
 	cursor: pointer;
 	padding: 8px 13px;
 	font-size: 11px;
@@ -186,11 +186,11 @@ body {
 	margin-top: 1px;
 }
 
-#wpbody-content .aaurora-core-changelog {
+#wpbody-content .gautam-core-changelog {
 	margin-top: -30px !important;
 }
 
-#wpbody-content .aaurora-columns .aaurora-changelog {
+#wpbody-content .gautam-columns .gautam-changelog {
 	max-height: 500px;
 	overflow: scroll;
 	padding: 0 20px;
@@ -199,8 +199,8 @@ body {
 }
 
 
-/*Aaurora Large Section*/
-#wpbody-content .aaurora-section.large-section {
+/*Gautam Large Section*/
+#wpbody-content .gautam-section.large-section {
 	padding: 40px 35px;
 	display: flex;
 	flex-direction: column;
@@ -213,8 +213,8 @@ body {
 }
 
 
-/*Aaurora Footer*/
-#aaurora-footer {
+/*Gautam Footer*/
+#gautam-footer {
 	border-top: 1px #d6e1e8 solid;
 	border-bottom: 1px #d6e1e8 solid;
 	margin: 0 -35px 18px -35px;
@@ -224,7 +224,7 @@ body {
 }
 
 
-#aaurora-footer ul {
+#gautam-footer ul {
 	margin: 0 35px;
 	padding: 0;
 	display: flex;
@@ -232,11 +232,11 @@ body {
 	justify-content: space-between;
 }
 
-#aaurora-footer ul li {
+#gautam-footer ul li {
 	margin: 0;
 }
 
-#aaurora-footer ul li a {
+#gautam-footer ul li a {
 	text-decoration: none;
 	display: flex;
 	align-items: center;
@@ -251,19 +251,19 @@ body {
 	}
 
 	/*#filter-container .theme,*/
-	#wpbody-content .aaurora-card {
+	#wpbody-content .gautam-card {
 		flex-basis: 50% !important;
 		max-width: 50% !important;
 	}
 }
 
 @media screen and (max-width: 670px) {
-	#wpbody-content .aaurora-section.large-section p {
+	#wpbody-content .gautam-section.large-section p {
 		flex-basis: 100% !important;
 		max-width: 100% !important;
 	}
 
-	#wpbody-content .aaurora-card {
+	#wpbody-content .gautam-card {
 		flex-basis: 100% !important;
 		max-width: 100% !important;
 	}
@@ -275,13 +275,13 @@ body {
 }
 
 /*// See if we can remove belows. */
-#wpbody-content .aaurora-section.large-section h2 {
+#wpbody-content .gautam-section.large-section h2 {
 	padding-top: 18px;
 	text-align: center;
 	line-height: 1.4;
 }
 
-#wpbody-content .aaurora-section.large-section p {
+#wpbody-content .gautam-section.large-section p {
 	max-width: 480px;
 	font-size: 15px;
 	line-height: 1.7;
@@ -289,6 +289,6 @@ body {
 	color: #79879a;
 }
 
-#wpbody-content .aaurora-section .aaurora-hero img {
+#wpbody-content .gautam-section .gautam-hero img {
 	height: 140px;
 }

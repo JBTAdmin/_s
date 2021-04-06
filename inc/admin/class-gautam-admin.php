@@ -4,8 +4,8 @@
  *
  * This class ties together all admin classes.
  *
- * @package     Aaurora
- * @author      Aaurora Team <hello@aaurorawp.com>
+ * @package     Gautam
+ * @author      Gautam Team <hello@gautamwp.com>
  * @since       1.0.0
  */
 
@@ -17,12 +17,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! class_exists( 'Aaurora_Admin' ) ) :
+if ( ! class_exists( 'Gautam_Admin' ) ) :
 
 	/**
 	 * Admin Class
 	 */
-	class Aaurora_Admin {
+	class Gautam_Admin {
 
 		/**
 		 * Primary class constructor.
@@ -61,9 +61,9 @@ if ( ! class_exists( 'Aaurora_Admin' ) ) :
 		private function includes() {
 
 			/**
-			 * Include Aaurora welcome page.
+			 * Include Gautam welcome page.
 			 */
-			require_once dirname( __FILE__ ) . '/class-aaurora-dashboard.php'; // phpcs:ignore
+			require_once dirname( __FILE__ ) . '/class-gautam-dashboard.php'; // phpcs:ignore
 		}
 
 		/**
@@ -86,8 +86,8 @@ if ( ! class_exists( 'Aaurora_Admin' ) ) :
 			 * Enqueue admin pages stylesheet.
 			 */
 			wp_enqueue_style(
-				'aaurora-admin-styles',
-				get_parent_theme_file_uri() . '/inc/admin/css/aaurora-admin.css',
+				'gautam-admin-styles',
+				get_parent_theme_file_uri() . '/inc/admin/css/gautam-admin.css',
 				false,
 				'1.0.0'
 			);
@@ -105,17 +105,17 @@ if ( ! class_exists( 'Aaurora_Admin' ) ) :
 			}
 			?>
 
-			<div id="aaurora-header">
+			<div id="gautam-header">
 				<div class="wrap-container">
 
-					<a href="<?php echo esc_url( admin_url( 'admin.php?page=aaurora-dashboard' ) ); ?>"
-						class="aaurora-logo">
-						<img src="<?php echo esc_url( get_parent_theme_file_uri() . '/assets/images/aaurora-logo.png' ); ?>"
-							alt="<?php esc_html_e( 'Aaurora', 'aaurora' ); ?>"/>
+					<a href="<?php echo esc_url( admin_url( 'admin.php?page=gautam-dashboard' ) ); ?>"
+						class="gautam-logo">
+						<img src="<?php echo esc_url( get_parent_theme_file_uri() . '/assets/images/gautam-logo.png' ); ?>"
+							alt="<?php esc_html_e( 'Gautam', 'gautam' ); ?>"/>
 					</a>
 
 				</div>
-			</div><!-- END #aaurora-header -->
+			</div><!-- END #gautam-header -->
 			<?php
 		}
 
@@ -130,17 +130,17 @@ if ( ! class_exists( 'Aaurora_Admin' ) ) :
 				return;
 			}
 			?>
-			<div id="aaurora-footer">
+			<div id="gautam-footer">
 				<ul>
-					<li><a href="<?php echo esc_url( 'https://aaurorawp.com/docs/' ); ?>" target="_blank"
-							rel="noopener noreferrer"><span><?php esc_html_e( 'Help Articles', 'aaurora' ); ?></span></span>
+					<li><a href="<?php echo esc_url( 'https://gautamwp.com/docs/' ); ?>" target="_blank"
+							rel="noopener noreferrer"><span><?php esc_html_e( 'Help Articles', 'gautam' ); ?></span></span>
 						</a></li>
 					<li>
-						<a href="<?php echo esc_url( 'https://wordpress.org/support/theme/aaurora/reviews/#new-post' ); ?>"
-							target="_blank" rel="noopener noreferrer"><span>&#x1f494;<?php esc_html_e( 'Crafted without love', 'aaurora' ); ?></span></a>
+						<a href="<?php echo esc_url( 'https://wordpress.org/support/theme/gautam/reviews/#new-post' ); ?>"
+							target="_blank" rel="noopener noreferrer"><span>&#x1f494;<?php esc_html_e( 'Crafted without love', 'gautam' ); ?></span></a>
 					</li>
 				</ul>
-			</div><!-- END #aaurora-footer -->
+			</div><!-- END #gautam-footer -->
 
 			<?php
 		}
@@ -153,10 +153,10 @@ if ( ! class_exists( 'Aaurora_Admin' ) ) :
 		 */
 		public function is_admin_page() {
 			$base = get_current_screen()->base;
-			return false != strpos( $base, 'aaurora' );
+			return false != strpos( $base, 'gautam' );
 		}
 
 	}
 endif;
 
-new Aaurora_Admin();
+new Gautam_Admin();
