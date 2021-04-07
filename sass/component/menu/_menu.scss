@@ -9,6 +9,10 @@
   //font-weight: 500;
 }
 
+.mobile-menu-container {
+  display: flex;
+}
+
 .aligned-menu-center {
   position: absolute;
   left: 50%;
@@ -192,7 +196,6 @@ li > ul.sub-menu {
   }
 
   nav .sub-menu li:hover {
-    background-color: #ececec94;
     padding-left: 5px;
   }
 

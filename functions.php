@@ -17,11 +17,9 @@ if ( ! defined( 'GAUTAM_VERSION' ) ) {
 require get_template_directory() . '/inc/core/core.php';
 require get_template_directory() . '/inc/helper.php';
 require get_template_directory() . '/inc/widgets.php';
-require get_template_directory() . '/inc/custom-header.php';
 require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/theme-hooks.php';
 require get_template_directory() . '/inc/template-functions.php';
-require get_template_directory() . '/inc/customizer.php';
 
 
 // Compatibility.
@@ -40,7 +38,7 @@ if ( is_admin() ) {
 
 /**
  * Disable JQuery.
- * todo
+ * todo REMOVE THIS
  */
 function deregister_jquery() {
 	if ( ! is_admin() ) {
@@ -62,3 +60,31 @@ add_action(
 		add_theme_support( 'html5', array( 'script', 'style' ) );
 	}
 );
+
+
+
+
+// Kirki Related.
+// todo See if below options related to kirki needs to be enabled or not.
+/**
+ * Uses Embedded Kirki.
+ */
+require_once get_parent_theme_file_path( '/inc/kirki/kirki.php' );
+
+/**
+ * Embedded Kirki location.  // todo need to check if it really required
+ */
+function gautam_kirki_configuration() {
+	return array( 'url_path' => get_stylesheet_directory_uri() . '/inc/kirki/' );
+}
+add_filter( 'kirki/config', 'gautam_kirki_configuration' );
+
+/**
+ * Use CDN Font instead of hosted fonts in Kirki.
+ */
+add_filter( 'kirki_use_local_fonts', '__return_false' );
+
+/**
+ * Kirki Customization File Location.
+ */
+require get_template_directory() . '/inc/kirki-configuration.php';

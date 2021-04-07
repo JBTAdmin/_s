@@ -4,7 +4,7 @@
  *
  * @package gautam
  */
-
+//todo need to check how customizer worls and how o make it work.
 /**
  * Add postMessage support for site title and description for the Theme Customizer.
  *
@@ -61,28 +61,3 @@ function gautam_customize_preview_js() {
 add_action( 'customize_preview_init', 'gautam_customize_preview_js' );
 
 
-
-// Kirki Related.
-// todo See if below options related to kirki needs to be enabled or not.
-/**
- * Uses Embedded Kirki.
- */
-require_once get_parent_theme_file_path( '/inc/kirki/kirki.php' );
-
-/**
- * Embedded Kirki location.  // todo need to check if it really required
- */
-function gautam_kirki_configuration() {
-	return array( 'url_path' => get_stylesheet_directory_uri() . '/inc/kirki/' );
-}
-add_filter( 'kirki/config', 'gautam_kirki_configuration' );
-
-/**
- * Use CDN Font instead of hosted fonts in Kirki.
- */
-add_filter( 'kirki_use_local_fonts', '__return_false' );
-
-/**
- * Kirki Customization File Location.
- */
-require get_template_directory() . '/inc/kirki-configuration.php';

@@ -10,27 +10,28 @@ var PrettierPlugin            = require( "prettier-webpack-plugin" );
 module.exports = {
 	context: __dirname,
 	entry: {
-		frontend: ['./js/main.js', './sass/style.scss']
+		// frontend: ['./js/main.js', './sass/style.scss']
+		frontend: ['./sass/style.scss']
 		// customizer: './js/customizer.js'
 	},
-	output: {
-		path: path.resolve( __dirname, 'assets/' ),
-		filename: './js/main.js'
-	},
+	// output: {
+	// 	path: path.resolve( __dirname, 'assets/' ),
+	// 	filename: './js/main.js'
+	// },
 	mode: 'development',
 	devtool: 'cheap-eval-source-map',
 	module: {
 		rules: [
-			{
-				enforce: 'pre',
-				exclude: /node_modules/,
-				test: /\.jsx$/,
-				loader: 'eslint-loader'
-		},
-			{
-				test: /\.jsx?$/,
-				loader: 'babel-loader'
-		},
+		// 	{
+		// 		enforce: 'pre',
+		// 		exclude: /node_modules/,
+		// 		test: /\.jsx$/,
+		// 		loader: 'eslint-loader'
+		// },
+		// 	{
+		// 		test: /\.jsx?$/,
+		// 		loader: 'babel-loader'
+		// },
 			// {
 			// test: /\.s?css$/,
 			// use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
