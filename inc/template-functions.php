@@ -652,7 +652,7 @@ if ( ! function_exists( 'gautam_social_media' ) ) {
 							href="<?php echo esc_url( get_theme_mod( 'social_media_fb_url' ) ); ?>" target="_blank">
 							<?php
 							if ( $text_only ) {
-								esc_html_e( ' facebook', 'aaurora' );
+								esc_html_e( ' facebook', 'gautam' );
 							} else {
 								?>
 								<i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
@@ -668,7 +668,7 @@ if ( ! function_exists( 'gautam_social_media' ) ) {
 							href="<?php echo esc_url( get_theme_mod( 'social_media_tw_url' ) ); ?>" target="_blank">
 							<?php
 							if ( $text_only ) {
-								esc_html_e( ' twitter', 'aaurora' );
+								esc_html_e( ' twitter', 'gautam' );
 							} else {
 								?>
 								<i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
@@ -684,7 +684,7 @@ if ( ! function_exists( 'gautam_social_media' ) ) {
 							href="<?php echo esc_url( get_theme_mod( 'social_media_in_url' ) ); ?>" target="_blank">
 							<?php
 							if ( $text_only ) {
-								esc_html_e( ' instagram', 'aaurora' );
+								esc_html_e( ' instagram', 'gautam' );
 							} else {
 								?>
 								<i class="fa fa-instagram fa-lg" aria-hidden="true"></i>
@@ -700,7 +700,7 @@ if ( ! function_exists( 'gautam_social_media' ) ) {
 							href="<?php echo esc_url( get_theme_mod( 'social_media_ln_url' ) ); ?>" target="_blank">
 							<?php
 							if ( $text_only ) {
-								esc_html_e( ' linkedin', 'aaurora' );
+								esc_html_e( ' linkedin', 'gautam' );
 							} else {
 								?>
 								<i class="fa fa-linkedin fa-lg" aria-hidden="true"></i>
@@ -716,7 +716,7 @@ if ( ! function_exists( 'gautam_social_media' ) ) {
 							href="<?php echo esc_url( get_theme_mod( 'social_media_yt_url' ) ); ?>" target="_blank">
 							<?php
 							if ( $text_only ) {
-								esc_html_e( ' youtube', 'aaurora' );
+								esc_html_e( ' youtube', 'gautam' );
 							} else {
 								?>
 								<i class="fa fa-youtube fa-lg" aria-hidden="true"></i>
@@ -732,7 +732,7 @@ if ( ! function_exists( 'gautam_social_media' ) ) {
 							href="<?php echo esc_url( get_theme_mod( 'social_media_gh_url' ) ); ?>" target="_blank">
 							<?php
 							if ( $text_only ) {
-								esc_html_e( ' github', 'aaurora' );
+								esc_html_e( ' github', 'gautam' );
 							} else {
 								?>
 								<i class="fa fa-github fa-lg" aria-hidden="true"></i>

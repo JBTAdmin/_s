@@ -2368,7 +2368,7 @@ div[class*="footer-sidebar-"] ul {
 	background: black;
 	color: white;
 	border-bottom-left-radius: 1rem;
-	padding: 1rem 1rem 0 1rem;
+	padding: 1rem;
 }
 
 .blog-2 .inner-article::before {
