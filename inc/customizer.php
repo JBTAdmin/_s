@@ -4,7 +4,8 @@
  *
  * @package gautam
  */
-//todo need to check how customizer worls and how o make it work.
+
+// todo need to check how customizer worls and how o make it work.
 /**
  * Add postMessage support for site title and description for the Theme Customizer.
  *

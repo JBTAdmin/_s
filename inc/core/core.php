@@ -155,7 +155,7 @@ if ( ! function_exists( 'gautam_excerpt' ) ) {
 	 */
 	function gautam_excerpt( $limit = 50 ) {
 		return wp_trim_words( get_the_excerpt(), $limit );
-		//todo incorrect usage of wp_trim_words -filter the excerpt instead. from one review
+		// todo incorrect usage of wp_trim_words -filter the excerpt instead. from one review.
 	}
 }
 
