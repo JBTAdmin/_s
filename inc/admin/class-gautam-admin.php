@@ -111,7 +111,7 @@ if ( ! class_exists( 'Gautam_Admin' ) ) :
 					<a href="<?php echo esc_url( admin_url( 'admin.php?page=gautam-dashboard' ) ); ?>"
 						class="gautam-logo">
 						<img src="<?php echo esc_url( get_parent_theme_file_uri() . '/assets/images/gautam-logo.png' ); ?>"
-							alt="<?php esc_html_e( 'Gautam', 'gautam' ); ?>"/>
+							alt="Gautam"/>
 					</a>
 
 				</div>

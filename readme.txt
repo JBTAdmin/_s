@@ -1,6 +1,6 @@
 === Gautam ===
 Contributors: ipoweruser
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments
+Tags: custom-background, custom-logo, custom-menu, custom-colors, featured-images, threaded-comments, two-columns, right-sidebar, left-sidebar, blog, news, featured-images, theme-options
 Tested up to: 5.6
 Requires PHP: 5.6
 Stable tag: 1.0.0

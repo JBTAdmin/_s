@@ -12,7 +12,7 @@ if ( in_array( 'thumbnail', $template_parts, true ) ) {
     $container_class = 'thumbnail' ;
 }
 ?>
-<div class="in-header-container <?php esc_attr_e($container_class) ?>">
+<div class="in-header-container <?php echo esc_attr($container_class) ?>">
 	<?php
 	if ( in_array( 'thumbnail', $template_parts, true ) ) {
 		get_template_part( 'template-parts/single/thumbnail' );
