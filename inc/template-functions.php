@@ -361,7 +361,8 @@ if ( ! function_exists( 'gautam_header_branding_layout' ) ) {
 							);
 							?>
 							<a href="#" class="mobile-cls-btn">
-								<?php gautam_load_inline_svg( 'close.svg' ); ?>
+<!--								--><?php //gautam_load_inline_svg( 'close.svg' ); ?>
+                                <i class="fa fa-times fa-lg" aria-hidden="true"></i>
 							</a>
 						</div>
 						<?php
@@ -438,7 +439,8 @@ if ( ! function_exists( 'gautam_header_search' ) ) {
 		if ( 'header' === get_theme_mod( 'general_search_visibility', 'fixed' ) ) {
 			?>
 			<i class="gautam-search header-search" role="button" tabindex="0">
-				<?php gautam_load_inline_svg( 'search.svg' ); ?>
+<!--				--><?php //gautam_load_inline_svg( 'search.svg' ); ?>
+                <i class="fa fa-search fa-lg"></i>
 				<span class="screen-reader-text">Search</span>
 			</i>
 			<?php
@@ -464,7 +466,8 @@ if ( ! function_exists( 'gautam_hamburger_menu' ) ) {
 			<button class="toggle sidebar-open desktop-sidebar-toggle" data-toggle-target=".sidebar-modal"
 					data-toggle-body-class="showing-sidebar-modal" aria-expanded="false" tabindex="-1">
 									<span class="toggle-inner">
-										<?php gautam_load_inline_svg( 'hamburger.svg' ); ?>
+<!--										--><?php //gautam_load_inline_svg( 'hamburger.svg' ); ?>
+                                        <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
 									</span>
 			</button>
 		</div>
@@ -526,22 +529,26 @@ if ( ! function_exists( 'gautam_footer_share_layout' ) ) {
 			?>
 			<div class="gautam-share fixed visible" tabindex="0">
 				<a href="#" tabindex="-1">
-					<?php gautam_load_inline_svg( 'share.svg' ); ?>
+<!--					--><?php //gautam_load_inline_svg( 'share.svg' ); ?>
+                    <i class="fa fa-share fa-lg" aria-hidden="true"></i>
 				</a>
 				<div class="gautam-share-inner">
 					<a href="https://www.facebook.com/sharer.php?u=<?php echo esc_attr( get_permalink( get_the_ID() ) ); ?>"
 						target="blank" class="fb" rel="nofollow" data-social_name="facebook">
-						<?php gautam_load_inline_svg( 'facebook.svg' ); ?>
+<!--						--><?php //gautam_load_inline_svg( 'facebook.svg' ); ?>
+                        <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
 					</a>
 
 					<a href="https://twitter.com/intent/tweet?text=<?php echo esc_attr( get_permalink( get_the_ID() ) ); ?>"
 						target="blank" class="tw" rel="nofollow" data-social_name="twitter">
-						<?php gautam_load_inline_svg( 'twitter.svg' ); ?>
+<!--						--><?php //gautam_load_inline_svg( 'twitter.svg' ); ?>
+                        <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
 					</a>
 
 					<a href="https://www.linkedin.com/cws/share?url=<?php echo esc_attr( get_permalink( get_the_ID() ) ); ?>"
 						target="blank" class="ln" rel="nofollow" data-social_name="linkedin">
-						<?php gautam_load_inline_svg( 'linkedin.svg' ); ?>
+<!--						--><?php //gautam_load_inline_svg( 'linkedin.svg' ); ?>
+                        <i class="fa fa-linkedin fa-lg" aria-hidden="true"></i>
 					</a>
 				</div>
 			</div>
@@ -559,7 +566,8 @@ function gautam_footer_popup_search_modal_layout() {
 	?>
 	<div class="popup_search_modal">
 		<a href="#" class="popup_modal_close_button">
-			<?php gautam_load_inline_svg( 'close.svg' ); ?>
+<!--			--><?php //gautam_load_inline_svg( 'close.svg' ); ?>
+            <i class="fa fa-times fa-lg" aria-hidden="true"></i>
 		</a>
 		<div class="search_holder">
 			<form role="search" class="search search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>"
@@ -584,7 +592,8 @@ if ( ! function_exists( 'gautam_footer_go_to_top_layout' ) ) {
 		if ( get_theme_mod( 'general_scroll_to_top', 1 ) ) {
 			?>
 			<a class="top-link" href="#" id="js-top" on="tap:masthead.scrollTo" role="button">
-				<?php gautam_load_inline_svg( 'arrow-up.svg' ); ?>
+<!--				--><?php //gautam_load_inline_svg( 'arrow-up.svg' ); ?>
+                <i class="fa fa-long-arrow-up fa-lg" aria-hidden="true"></i>
 				<span class="screen-reader-text">Back to top</span>
 			</a>
 			<?php
@@ -602,7 +611,8 @@ if ( ! function_exists( 'gautam_footer_search_layout' ) ) {
 		if ( 'fixed' === get_theme_mod( 'general_search_visibility', 'fixed' ) ) {
 			?>
 			<a class="gautam-search footer-search" href="#">
-				<?php gautam_load_inline_svg( 'search.svg' ); ?>
+<!--				--><?php //gautam_load_inline_svg( 'search.svg' ); ?>
+                <i class="fa fa-search fa-lg"></i>
 				<span class="screen-reader-text">Search</span>
 			</a>
 			<?php
@@ -650,7 +660,16 @@ if ( ! function_exists( 'gautam_social_media' ) ) {
 					<li>
 						<a class="social-link facebook-social-icon"
 							href="<?php echo esc_url( get_theme_mod( 'social_media_fb_url' ) ); ?>" target="_blank">
-							<?php $text_only ? esc_html_e( ' facebook', 'gautam' ) : gautam_load_inline_svg( 'facebook.svg' ); ?>
+<!--							--><?php //$text_only ? esc_html_e( ' facebook', 'gautam' ) : gautam_load_inline_svg( 'facebook.svg' ); ?>
+							<?php
+							if ( $text_only ) {
+								esc_html_e( ' facebook', 'aaurora' );
+							} else {
+								?>
+                                <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+								<?php
+							}
+							?>
 						</a>
 					</li>
 				<?php endif; ?>
@@ -658,7 +677,16 @@ if ( ! function_exists( 'gautam_social_media' ) ) {
 					<li>
 						<a class="social-link twitter-social-icon"
 							href="<?php echo esc_url( get_theme_mod( 'social_media_tw_url' ) ); ?>" target="_blank">
-							<?php $text_only ? esc_html_e( ' twitter', 'gautam' ) : gautam_load_inline_svg( 'twitter.svg' ); ?>
+<!--							--><?php //$text_only ? esc_html_e( ' twitter', 'gautam' ) : gautam_load_inline_svg( 'twitter.svg' ); ?>
+							<?php
+							if ( $text_only ) {
+								esc_html_e( ' twitter', 'aaurora' );
+							} else {
+								?>
+                                <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+								<?php
+							}
+							?>
 						</a>
 					</li>
 				<?php endif; ?>
@@ -666,7 +694,16 @@ if ( ! function_exists( 'gautam_social_media' ) ) {
 					<li>
 						<a class="social-link instagram-social-icon"
 							href="<?php echo esc_url( get_theme_mod( 'social_media_in_url' ) ); ?>" target="_blank">
-							<?php $text_only ? esc_html_e( ' instagram', 'gautam' ) : gautam_load_inline_svg( 'instagram.svg' ); ?>
+<!--							--><?php //$text_only ? esc_html_e( ' instagram', 'gautam' ) : gautam_load_inline_svg( 'instagram.svg' ); ?>
+							<?php
+							if ( $text_only ) {
+								esc_html_e( ' instagram', 'aaurora' );
+							} else {
+								?>
+                                <i class="fa fa-instagram fa-lg" aria-hidden="true"></i>
+								<?php
+							}
+							?>
 						</a>
 					</li>
 				<?php endif; ?>
@@ -674,7 +711,16 @@ if ( ! function_exists( 'gautam_social_media' ) ) {
 					<li>
 						<a class="social-link linkedin-social-icon"
 							href="<?php echo esc_url( get_theme_mod( 'social_media_ln_url' ) ); ?>" target="_blank">
-							<?php $text_only ? esc_html_e( ' linkedin', 'gautam' ) : gautam_load_inline_svg( 'linkedin.svg' ); ?>
+<!--							--><?php //$text_only ? esc_html_e( ' linkedin', 'gautam' ) : gautam_load_inline_svg( 'linkedin.svg' ); ?>
+							<?php
+							if ( $text_only ) {
+								esc_html_e( ' linkedin', 'aaurora' );
+							} else {
+								?>
+                                <i class="fa fa-linkedin fa-lg" aria-hidden="true"></i>
+								<?php
+							}
+							?>
 						</a>
 					</li>
 				<?php endif; ?>
@@ -682,7 +728,16 @@ if ( ! function_exists( 'gautam_social_media' ) ) {
 					<li>
 						<a class="social-link youtube-social-icon"
 							href="<?php echo esc_url( get_theme_mod( 'social_media_yt_url' ) ); ?>" target="_blank">
-							<?php $text_only ? esc_html_e( ' youtube', 'gautam' ) : gautam_load_inline_svg( 'youtube.svg' ); ?>
+<!--							--><?php //$text_only ? esc_html_e( ' youtube', 'gautam' ) : gautam_load_inline_svg( 'youtube.svg' ); ?>
+							<?php
+							if ( $text_only ) {
+								esc_html_e( ' youtube', 'aaurora' );
+							} else {
+								?>
+                                <i class="fa fa-youtube fa-lg" aria-hidden="true"></i>
+								<?php
+							}
+							?>
 						</a>
 					</li>
 				<?php endif; ?>
@@ -690,7 +745,16 @@ if ( ! function_exists( 'gautam_social_media' ) ) {
 					<li>
 						<a class="social-link github-social-icon"
 							href="<?php echo esc_url( get_theme_mod( 'social_media_gh_url' ) ); ?>" target="_blank">
-							<?php $text_only ? esc_html_e( ' github', 'gautam' ) : gautam_load_inline_svg( 'github.svg' ); ?>
+<!--							--><?php //$text_only ? esc_html_e( ' github', 'gautam' ) : gautam_load_inline_svg( 'github.svg' ); ?>
+							<?php
+							if ( $text_only ) {
+								esc_html_e( ' github', 'aaurora' );
+							} else {
+								?>
+                                <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+								<?php
+							}
+							?>
 						</a>
 					</li>
 				<?php endif; ?>

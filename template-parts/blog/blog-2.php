@@ -17,7 +17,8 @@
 			if ( is_sticky() ) :
 				?>
 				<span class="badge">
-						<?php gautam_load_inline_svg( 'sticky.svg' ); ?>
+<!--						--><?php //gautam_load_inline_svg( 'sticky.svg' ); ?>
+                    <i class="fa fa-tags fa-lg" aria-hidden="true"></i>
 				</span>
 			<?php endif; ?>
 			<div class="entry-header">

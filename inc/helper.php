@@ -36,76 +36,76 @@ function gautam_post_nav() {
  *
  * @return void
  */
-function gautam_load_inline_svg( $filename ) {
-
-	ob_start();
-
-	locate_template(
-		"assets/images/{$filename}",
-		true,
-		false
-	);
-
-	echo wp_kses(
-		ob_get_clean(),
-		array_merge(
-			wp_kses_allowed_html( 'post' ),
-			array(
-				'svg'      => array(
-					'role'            => true,
-					'width'           => true,
-					'height'          => true,
-					'fill'            => true,
-					'xmlns'           => true,
-					'viewbox'         => true,
-					'aria-hidden'     => true,
-					'stroke'          => true,
-					'stroke-width'    => true,
-					'stroke-linecap'  => true,
-					'stroke-linejoin' => true,
-					'rect'            => true,
-					'circle'          => true,
-					'path'            => true,
-					'polyline'        => true,
-					'polygon'         => true,
-				),
-				'path'     => array(
-					'd'              => true,
-					'fill'           => true,
-					'fill-rule'      => true,
-					'stroke'         => true,
-					'stroke-width'   => true,
-					'stroke-linecap' => true,
-				),
-				'line'     => array(
-					'x1' => true,
-					'y1' => true,
-					'x2' => true,
-					'y2' => true,
-				),
-				'polyline' => array(
-					'points' => true,
-				),
-				'polygon'  => array(
-					'points' => true,
-				),
-				'rect'     => array(
-					'x'      => true,
-					'y'      => true,
-					'height' => true,
-					'width'  => true,
-					'rx'     => true,
-					'ry'     => true,
-				),
-				'circle'   => array(
-					'cx' => true,
-					'cy' => true,
-					'r'  => true,
-				),
-			)
-		)
-	);
-}
+//function gautam_load_inline_svg( $filename ) {
+//
+//	ob_start();
+//
+//	locate_template(
+//		"assets/images/{$filename}",
+//		true,
+//		false
+//	);
+//
+//	echo wp_kses(
+//		ob_get_clean(),
+//		array_merge(
+//			wp_kses_allowed_html( 'post' ),
+//			array(
+//				'svg'      => array(
+//					'role'            => true,
+//					'width'           => true,
+//					'height'          => true,
+//					'fill'            => true,
+//					'xmlns'           => true,
+//					'viewbox'         => true,
+//					'aria-hidden'     => true,
+//					'stroke'          => true,
+//					'stroke-width'    => true,
+//					'stroke-linecap'  => true,
+//					'stroke-linejoin' => true,
+//					'rect'            => true,
+//					'circle'          => true,
+//					'path'            => true,
+//					'polyline'        => true,
+//					'polygon'         => true,
+//				),
+//				'path'     => array(
+//					'd'              => true,
+//					'fill'           => true,
+//					'fill-rule'      => true,
+//					'stroke'         => true,
+//					'stroke-width'   => true,
+//					'stroke-linecap' => true,
+//				),
+//				'line'     => array(
+//					'x1' => true,
+//					'y1' => true,
+//					'x2' => true,
+//					'y2' => true,
+//				),
+//				'polyline' => array(
+//					'points' => true,
+//				),
+//				'polygon'  => array(
+//					'points' => true,
+//				),
+//				'rect'     => array(
+//					'x'      => true,
+//					'y'      => true,
+//					'height' => true,
+//					'width'  => true,
+//					'rx'     => true,
+//					'ry'     => true,
+//				),
+//				'circle'   => array(
+//					'cx' => true,
+//					'cy' => true,
+//					'r'  => true,
+//				),
+//			)
+//		)
+//	);
+//}
 
 /**
  * Checks to see if homepage or not.

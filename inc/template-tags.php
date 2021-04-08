@@ -170,7 +170,8 @@ function gautam_no_post_thumbnail( $date = '' ) {
 
 			<?php if ( is_sticky() ) : ?>
 				<span class="badge">
-						<?php gautam_load_inline_svg( 'sticky.svg' ); ?>
+<!--						--><?php //gautam_load_inline_svg( 'sticky.svg' ); ?>
+                    <i class="fa fa-tags fa-lg" aria-hidden="true"></i>
 				</span>
 			<?php endif; ?>
 			<span class="post-date">
@@ -206,7 +207,8 @@ function gautam_blog_post_thumbnail( $date, $size, $in_style ) {
 				if ( is_sticky() ) :
 					?>
 					<span class="badge">
-						<?php gautam_load_inline_svg( 'sticky.svg' ); ?>
+<!--						--><?php //gautam_load_inline_svg( 'sticky.svg' ); ?>
+                        <i class="fa fa-tags fa-lg" aria-hidden="true"></i>
 				</span>
 				<?php endif; ?>
 				<span class="post-date">
@@ -239,7 +241,8 @@ function gautam_blog_post_thumbnail( $date, $size, $in_style ) {
 				if ( is_sticky() ) :
 					?>
 					<span class="badge">
-						<?php gautam_load_inline_svg( 'sticky.svg' ); ?>
+<!--						--><?php //gautam_load_inline_svg( 'sticky.svg' ); ?>
+                        <i class="fa fa-tags fa-lg" aria-hidden="true"></i>
 				</span>
 				<?php endif; ?>
 				<span class="post-date">

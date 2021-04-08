@@ -29,7 +29,7 @@
 		<div class="entry-excerpt">
 			<?php gautam_excerpt( 20 ); ?>
 			<div class="read-more">
-				<a href="<?php echo esc_url( get_permalink() ); ?>"><?php esc_html_e( 'read more', 'gautam' ); ?> <?php gautam_load_inline_svg( 'arrow-right-circle.svg' ); ?></a>
+				<a href="<?php echo esc_url( get_permalink() ); ?>"><?php esc_html_e( 'read more', 'gautam' ); ?> <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
 			</div>
 		</div>
 	</div>

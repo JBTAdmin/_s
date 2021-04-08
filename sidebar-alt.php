@@ -21,7 +21,8 @@ $class = 'widget-area sidebar-alt-aside sidebar-alt';
 						<button class="toggle sidebar-close desktop-sidebar-toggle" data-toggle-target=".sidebar-modal"
 								data-toggle-body-class="closing-sidebar-modal" aria-expanded="false">
 									<span class="toggle-inner">
-										<?php gautam_load_inline_svg( 'close.svg' ); ?>
+<!--										--><?php //gautam_load_inline_svg( 'close.svg' ); ?>
+                                        <i class="fa fa-times fa-lg" aria-hidden="true"></i>
 									</span>
 						</button>
 					</div>

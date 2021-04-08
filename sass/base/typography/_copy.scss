@@ -1,7 +1,7 @@
 dfn,
 cite,
 em,
-i {
+i:not(.fa) {
   font-style: italic;
   color: $theme__color !important;
 }
@@ -47,4 +47,8 @@ ins {
 
 big {
   font-size: 125%;
+}
+
+.fa {
+  font-size: 2rem;
 }
