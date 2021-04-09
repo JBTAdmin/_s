@@ -1,24 +1,17 @@
 === Gautam ===
 Contributors: ipoweruser
-Tags: custom-background, custom-logo, custom-menu, custom-colors, featured-images, threaded-comments, two-columns, right-sidebar, left-sidebar, blog, news, featured-images, theme-options
 Tested up to: 5.6
 Requires PHP: 5.6
 Stable tag: 1.0.0
-License: GNU General Public License v2 or later
+License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: custom-background, custom-logo, custom-menu, custom-colors, featured-images, threaded-comments, two-columns, right-sidebar, left-sidebar, blog, news, featured-images, theme-options
 
 Gautam is fast, customizable & beautiful WordPress theme mainly suitable for blog. But it can also be used for personal portfolio, business website.
 
 == Description ==
 
 Gautam is fast, customizable & beautiful WordPress theme suitable mainly for blog. But it also be used for personal portfolio, business website. Built with SEO in mind.
-
-**Features**
-
-* Responsive Layout
-* Customize Colors
-* Customize Fonts
-* Lightweight
 
 == Installation ==
 
@@ -27,12 +20,6 @@ Gautam is fast, customizable & beautiful WordPress theme suitable mainly for blo
 3. Click Activate to use your new theme right away.
 4. In your admin panel, navigate to 'Appearance > Customize'.
 5. Change the logo, theme colors and other feature in customization.
-
-== License ==
-
-Gautam WordPress Theme, Copyright (C) 2021 iPowerUser.com.
-Gautam is distributed under the terms of the GNU GPL.
-
 
 == Frequently Asked Questions ==
 
@@ -45,6 +32,11 @@ Gautam is distributed under the terms of the GNU GPL.
 = Does this theme support any plugins? =
 
 gautam includes support for WooCommerce and for Infinite Scroll in Jetpack.  ????????
+
+== License ==
+
+Gautam WordPress Theme, Copyright (C) 2021 iPowerUser.com.
+Gautam is distributed under the terms of the GNU GPL.
 
 == Changelog ==
 
@@ -61,8 +53,6 @@ Font Awesome, maintained by Dave Gandy: SIL OFL 1.1
 License: https://github.com/FortAwesome/Font-Awesome FontAwesome 4.7.0 Copyright 2012 Dave Gandy Font License: SIL OFL 1.1 Code License: MIT License
 License Url: http://fontawesome.io/license/
 
-
-????Credit for all the images used in screenshot.
 Image for theme screenshot, Creative Commons CC0
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://pxhere.com/en/photo/1193302
@@ -86,9 +76,3 @@ Source: https://pxhere.com/en/photo/877703
 Image for theme screenshot, Creative Commons CC0
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://pxhere.com/en/photo/1294878
-
-
-
-
-
-
