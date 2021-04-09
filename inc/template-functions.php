@@ -437,10 +437,10 @@ if ( ! function_exists( 'gautam_header_search' ) ) {
 	function gautam_header_search() {
 		if ( 'header' === get_theme_mod( 'general_search_visibility', 'fixed' ) ) {
 			?>
-			<i class="gautam-search header-search" role="button" tabindex="0">
+			<div class="gautam-search header-search" role="button" tabindex="0">
 				<i class="fa fa-search fa-lg"></i>
 				<span class="screen-reader-text">Search</span>
-			</i>
+			</div>
 			<?php
 			gautam_footer_popup_search_modal_layout();
 		}

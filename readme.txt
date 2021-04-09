@@ -63,9 +63,31 @@ License Url: http://fontawesome.io/license/
 
 
 ????Credit for all the images used in screenshot.
-Image for theme screenshot, Copyright Chuttersnap
+Image for theme screenshot, Creative Commons CC0
 License: CC0 1.0 Universal (CC0 1.0)
-Source:
+Source: https://pxhere.com/en/photo/1193302
+
+Image for theme screenshot, Creative Commons CC0
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://pxhere.com/en/photo/1363202
+
+Image for theme screenshot, Creative Commons CC0
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://pxhere.com/en/photo/760384
+
+Image for theme screenshot, Creative Commons CC0
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://pxhere.com/en/photo/906441
+
+Image for theme screenshot, Creative Commons CC0
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://pxhere.com/en/photo/877703
+
+Image for theme screenshot, Creative Commons CC0
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://pxhere.com/en/photo/1294878
+
+
 
 
 

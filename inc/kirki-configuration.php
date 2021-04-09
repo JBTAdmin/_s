@@ -538,7 +538,7 @@ Kirki::add_field(
 		'label'       => esc_attr__( 'Color', 'gautam' ),
 		'description' => '',
 		'section'     => 'header',
-		'default'     => '#333333',
+		'default'     => '#000',
 		'output'      => array(
 			array(
 				'element'  => '.header-menu-bar',
@@ -1236,7 +1236,7 @@ Kirki::add_field(
 		'label'       => esc_attr__( 'Theme color', 'gautam' ),
 		'description' => '',
 		'section'     => 'general_color',
-		'default'     => '#c62641',
+		'default'     => '#d90a2c',
 		'output'      => array(
 			array(
 				'element'  => ':root',

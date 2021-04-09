@@ -158,15 +158,14 @@ function gautam_no_post_thumbnail( $date = '' ) {
 	?>
 	<div class="post-thumbnail no-post-thumbnail">
 		<a href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
-
-
-				<div class="post-thumbnail-drop-case">
-					<?php
-					if ( ! empty( get_the_title() ) ) {
-						echo esc_html( get_the_title()[0] );
-					}
-					?>
-				</div>
+<!--todo remove this as text should not be displayed in featured image.-->
+<!--				<div class="post-thumbnail-drop-case">-->
+<!--					--><?php
+//					if ( ! empty( get_the_title() ) ) {
+//						echo esc_html( get_the_title()[0] );
+//					}
+//					?>
+<!--				</div>-->
 
 			<?php if ( is_sticky() ) : ?>
 				<span class="badge">
@@ -174,8 +173,8 @@ function gautam_no_post_thumbnail( $date = '' ) {
 				</span>
 			<?php endif; ?>
 			<span class="post-date">
-					<?php echo esc_html( $date ); ?>
-				</span>
+				<?php echo esc_html( $date ); ?>
+			</span>
 		</a>
 	</div>
 	<?php
