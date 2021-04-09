@@ -2,9 +2,11 @@
 Theme Name: Gautam
 Author: iPowerUser
 Author URI: https://ipoweruser.com/
-Description: Hi. I'm a theme called <code>Gautam</code>, if you like. Gautam is fast, customizable & beautiful WordPress Blog theme mainly suitable for blog. But it can also be used for personal portfolio, business website.
+Description: Gautam is a text-based, clean minimal WordPress blog theme created for writers. It has a unique minimalist design, which will make your blog look good with or without featured images.
+It is fully responsive, supports custom menus and widgets, and comes with a social profile link feature. This theme uses the WordPress customizer to see the changes you have made to your blog.
+This theme is appropriate for personal and technical blogs, as well as magazine-style blogs and lifestyle websites.
 Version: 1.0.0
-Tested up to: 5.5
+Tested up to: 5.6
 Requires PHP: 5.6 or higher
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -523,8 +525,8 @@ body.hide {
 
 :focus {
   outline-width: 2px;
-  outline-style: dashed;
-  outline-color: currentColor; }
+  outline-style: auto;
+  outline-color: #005fcc; }
 
 .entry-content > *:first-child {
   margin-top: 0; }
@@ -1824,9 +1826,6 @@ div[class*="footer-sidebar-"] {
   cursor: pointer;
   width: inherit;
   max-height: 28.2rem;
-  background: -webkit-gradient(linear, left top, right top, from(#0099f7), to(#f11712));
-  background: -o-linear-gradient(left, #0099f7, #f11712);
-  background: linear-gradient(to right, #0099f7, #f11712);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2045,11 +2044,13 @@ div[class*="footer-sidebar-"] {
   .article-container.blog-3 h2.entry-title {
     color: #fff; }
   .article-container.blog-3 > article {
-    padding: unset; }
+    padding: unset;
+    background: -webkit-gradient(linear, left top, right top, from(#1565c0), to(#b92b27));
+    background: -o-linear-gradient(left, #1565c0, #b92b27);
+    background: linear-gradient(to right, #1565c0, #b92b27);
+    border-radius: 1rem; }
   .article-container.blog-3 .inner-entry {
-    background: -webkit-gradient(linear, left top, right top, from(#0099f7), to(#f11712));
-    background: -o-linear-gradient(left, #0099f7, #f11712);
-    background: linear-gradient(to right, #0099f7, #f11712); }
+    border: none; }
     .article-container.blog-3 .inner-entry:hover a > img {
       -webkit-transform: scale(1.2);
           -ms-transform: scale(1.2);
@@ -2065,6 +2066,8 @@ div[class*="footer-sidebar-"] {
     width: 100%;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px; }
+    .article-container.blog-3 .entry-header a:hover, .article-container.blog-3 .entry-header a:focus, .article-container.blog-3 .entry-header a:active {
+      color: inherit; }
   .article-container.blog-3 .post-thumbnail {
     min-height: 35rem; }
     .article-container.blog-3 .post-thumbnail > a > img {
@@ -2072,7 +2075,9 @@ div[class*="footer-sidebar-"] {
       transition: -webkit-transform 0.5s ease-in-out;
       -o-transition: transform 0.5s ease-in-out;
       transition: transform 0.5s ease-in-out;
-      transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out; }
+      transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+      width: 100%;
+      height: 100%; }
   .article-container.blog-3 .post-thumbnail:not(.no-post-thumbnail)::after {
     content: " ";
     background-color: rgba(23, 22, 26, 0.35);

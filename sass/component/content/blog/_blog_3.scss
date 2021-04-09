@@ -9,9 +9,11 @@
 
   & > article {
     padding: unset;
+    background: linear-gradient(to right, #1565c0, #b92b27);
+    border-radius: 1rem;
   }
   & .inner-entry {
-    background: linear-gradient(to right, #0099f7, #f11712);
+    border: none; //todo probably set border only to thise blog layout where it is needed.
 
     &:hover a > img {
       transform: scale(1.2);
@@ -27,6 +29,11 @@
     width: 100%;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    & a:hover,
+    a:focus,
+    a:active {
+      color: inherit;
+    }
   }
 
   & .entry-title {
@@ -39,6 +46,8 @@
 
     & > a > img {
       transition: transform 0.5s ease-in-out;
+      width: 100%;
+      height: 100%;
     }
   }
 

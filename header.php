@@ -17,9 +17,10 @@ $body_class = '';
 
 $body_class .= ' ' . get_theme_mod( 'single_post_layout', 'in-header' );
 
-if ( true === get_theme_mod( 'fixed-header', true ) ) {
-	$body_class .= ' header-fixed';
-}
+// todo  Fixed Header option needs to be removed. As there is some issue with navigation if it is enabled.
+//if ( true === get_theme_mod( 'fixed-header', true ) ) {
+//	$body_class .= ' header-fixed';
+//}
 
 $header_class .= ' ' . get_theme_mod( 'header_layout_color', 'light' );
 

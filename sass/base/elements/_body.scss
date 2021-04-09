@@ -46,8 +46,8 @@ body.hide {
 
 :focus {
   outline-width: 2px;
-  outline-style: dashed;
-  outline-color: currentColor;
+  outline-style: auto;
+  outline-color: rgb(0, 95, 204);
 }
 
 //todo may be it can be moved to some proper place.

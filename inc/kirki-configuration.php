@@ -128,7 +128,7 @@ Kirki::add_field(
 		'label'       => esc_attr__( 'Button Border Radius (px)', 'gautam' ),
 		'description' => 'Choose Button Border Radius',
 		'section'     => 'general',
-		'default'     => '10',
+		'default'     => '5',
 		'choices'     => array(
 			'min'  => 0,
 			'max'  => 30,
@@ -547,18 +547,18 @@ Kirki::add_field(
 		),
 	)
 );
-
-Kirki::add_field(
-	'gautam_theme_options',
-	array(
-		'type'        => 'toggle',
-		'settings'    => 'fixed-header',
-		'label'       => esc_attr__( 'Fixed Header', 'gautam' ),
-		'description' => esc_attr__( 'Enable to fix header.', 'gautam' ),
-		'section'     => 'header',
-		'default'     => '1',
-	)
-);
+//todo remove this in gautam.
+//Kirki::add_field(
+//	'gautam_theme_options',
+//	array(
+//		'type'        => 'toggle',
+//		'settings'    => 'fixed-header',
+//		'label'       => esc_attr__( 'Fixed Header', 'gautam' ),
+//		'description' => esc_attr__( 'Enable to fix header.', 'gautam' ),
+//		'section'     => 'header',
+//		'default'     => '0',
+//	)
+//);
 
 Kirki::add_field(
 	'gautam_theme_options',
@@ -724,7 +724,7 @@ Kirki::add_field(
 		'settings'    => 'single_post_layout',
 		'label'       => esc_html__( 'Layout', 'gautam' ),
 		'section'     => 'blog_post',
-		'default'     => 'in-header',
+		'default'     => 'in-content',
 		'placeholder' => esc_html__( 'Select Single Post Layout.', 'gautam' ),
 		'multiple'    => 0,
 		'choices'     => array(

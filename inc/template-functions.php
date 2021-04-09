@@ -471,7 +471,7 @@ if ( ! function_exists( 'gautam_hamburger_menu' ) ) {
 		<?php
 	}
 }
-
+//todo remove this call to action call and also the file.
 if ( ! function_exists( 'gautam_footer_call_to_action' ) ) {
 	/**
 	 * Displays call to Action.
