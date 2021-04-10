@@ -3,11 +3,15 @@
     margin: 0 auto;
     & > div {
       flex: 1 1 50%;
-      & img {
-        display: block;
-        border-radius: 1rem;
-      }
+      //& img {
+      //  display: block;
+      //  border-radius: 1rem;
+      //}
     }
+  }
+
+  &.has-featured-image .meta-data {
+    color: #fff;
   }
 
   & .post-thumbnail {
@@ -78,7 +82,7 @@
   //}
 
   & .meta-data {
-    margin: 10vh 0;
+    margin: 10vh 0 5vh 0;
   }
 }
 

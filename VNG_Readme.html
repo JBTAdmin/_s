@@ -351,71 +351,53 @@ Kirki Example
 
 
 **Gautam Issues to be fixed
-1- Body Background is not working for whole page.
-2- Sidebar length doesnt seem to be working as expected.
-3- Header, Sidebar Background color needs to be checked.
-4- Site title and tagline with logo is not working.
-5- Logo with cropping is not working in some heading condition (Logo tip menu below)
-6- call to action should be removed.
-7- Top Bar social follow is having some issue. If enabled social follow is getting displayed on right side.
-8- Check if custom header file can be deleted.
-9- Custim Header needs to be removed.
-10- Keep only those part of footer which is needed.
+Things to be removed in final Theme.
+    1-VNG file and other unused files.
+    2- Remvoe Call-to-Action and Top Bar and all associated files.
+    3- Disable some functionality like sidebar Alt, sidebar both widget in Footers.
+    4- Remove Customizer.php. Check before removing.
 
-11- http://localhost:10013/block-image/ (Issues) navigation and author section is having some issues.Clearing is not done properly... !!!!!!!!******
-15- http://localhost:10013/markup-image-alignment/ (look at the bottom for image alignment it is going to author section) !!!!!!!!!!!********
-26- http://localhost:10013/template-password-protected/   (Post Navigation is not working ) !!!!!!!!!!!!!!************
-28- http://localhost:10013/template-more-tag/  (Check for the more tag in different bog Type) !!!!!!!!!!!***********
-32- http://localhost:10013/block-button/   (Button is not centered )!!!!!!!!!!!!!!!**************
-20- When used is logged-in header is hiding behind. !!!!!!!!!!!!**********
-29- http://localhost:10013/markup-html-tags-and-formatting/   (Block quote style is not there.) !!!!!!!*********
-31- Large Bockquote is not working. (http://localhost:10013/block-quotes/)!!!!!!!!!************
-25- http://localhost:10013/template-password-protected/  (Password Field should be grayed out in a way that it can be identified.)!!!!!!!!********
-18- http://localhost:10013/template-sticky/   (Sticky session is not identified uniquely)!!!!!!!!!!!!!!!!
-21- http://localhost:10013/post-format-quote/  (Quote format is not designed.)  !!!!!!!!!!!********
-22- http://localhost:10013/post-format-gallery-tiled/  &&  http://localhost:10013/post-format-gallery/   (Text Below Images are not aligned properly.)
-12- http://localhost:10013/block-category-common/   && http://localhost:10013/block-gallery/  (Look at the image corners)!!!!!!!!!********
--- Menus are not aligned properly. Check how hio is handling  it.  !!!!!!!!*******
-----Header Background Color is not working.!!!!!!!!!!!!!!!!!!!****************
+Problems:
+ REPLY button is not available for all comments.!!!!!!!!!!!!!!! Confirm with standard Theme. Looks like behaviour is same for others too.
+    1- While replacing the logo in customizer page is not getting reflected.
+    2- Look for content options provided by jenkins.
+    4- skip-to-content when user is login or header is fixed.
+    5- Kirki Customizer is redirecting to the home page.
+    6- Sidebar Menu is not working with tabs.
+    8- Close button in sidebar-menu when user is logged-in is nt visible.
 
-----Remove "Content Options" from customizer!!!!!!!!!!!!!!!!!!!!!
-----Look in the Font size option in TYPOGRAPHY inside CUSTOMIZER.!!!!!!!!!!!!!!!!!
-----See customizer.php is needed or not!!!!!!!!!!!!
+Improvement
+    1- Tagged with: tag should be displayed for identificaiton
+    2- http://localhost:10013/template-comments/comment-page-1/#comments   (Older && Newer comments are nt highlighted properly )
+    3- http://localhost:10013/template-pingbacks-an-trackbacks/   (Ping Back links are not highlighted.)!!!!!!!!!!!!
+    4- Excerpt functionality needs to be implemented using filter and wp-trip. For the time being it is removed from the Theme.
+    5- When there is no featured image currently displaying linear-gradient but can be improved.
+    6- skip-to-content when user is login or header is fixed.
+    7- z-index and !improvement should be checked again.
+    8- Go to top needs some improvement.
+    9- http://localhost:10013/template-password-protected/   : Needs alignment of field and button.
+
+Testing
+1- With Blank WP setup check if featuredimage is working properly or not.
 
 
--- Tagged with: tag should be displayed for identificaiton
-24- http://localhost:10013/template-comments/comment-page-1/#comments   (Older && Newer comments are nt highlighted properly )
-30- http://localhost:10013/blocks-widgets/  (Dropdown button needs styling. && Shortcode widget needs styling   && RSS Feed widget - radio button styling)
-23- http://localhost:10013/template-pingbacks-an-trackbacks/   (Ping Back links are not highlighted.)!!!!!!!!!!!!
 
-
+----Look in the Font size option in TYPOGRAPHY inside CUSTOMIZER.!!!!!!!!!!!!!!!!!???????
 14- http://localhost:10013/blocks-widgets/ (Check if it correct or not, Links are not underlined.)!!!!!
-19- http://localhost:10013/edge-case-no-title/  (No Title ) (Read the content of the post and make changes.)
-17- http://localhost:10013/template-excerpt-generated/  && http://localhost:10013/template-excerpt-defined/   (Excerpt is displayed properly. Length needs to be verified.)****
+
 
 
 
 Problems to be solved
-Sharing functionality can be copied from "public blog" theme.
 
-1- Incorrect usage of wp_trim_words -filter the excerpt instead. from one review.!!!!!!!!!!!!!!!!!
-2- Be ready for replacing the Text displayed for featured image with camera icon. Probably something needs to be used which is bundled. Not like Font Awesome.!!!!
-3- Skip to content is not workign as expected. (Probbaly Fixed Header should be removed.)
-
-1- Prefixing everything including image size : https://themereview.co/prefix-all-the-things/
  - aria-label : understand what is this and where it should be used.
 2- Proper Readme.txt
-3- Give credit to Go theme for loan inline SVG option or change it properly.
 4- By default change the color of post title from customizer whe in header option is selected.
-5- Font-Awesome
-7- Remove all !important as much as possible.*****************
-8- Check for all the z-index. In header there are 2.
+
 9- sidebar-menu and header-menu should be aligned.
-10- Go to top might have some performance issues.
-11- Look at the twenty twenty one theme which works based on the aria-collapse property. Probably that would be best way to collapse or expand the menu.
-12- With blank Theme, Check if featured image is working properly or not.
+
+
 13- http://localhost:10013/template-password-protected/ for this post if layout is in-header then layout will have issue while password is not entered.!!!!!!!!!!!!
-14- Kirki Customizer is redirecting to the home page.
 
 
 IMP KeyCode :

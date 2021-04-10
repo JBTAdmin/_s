@@ -547,18 +547,18 @@ Kirki::add_field(
 		),
 	)
 );
-//todo remove this in gautam.
-//Kirki::add_field(
-//	'gautam_theme_options',
-//	array(
-//		'type'        => 'toggle',
-//		'settings'    => 'fixed-header',
-//		'label'       => esc_attr__( 'Fixed Header', 'gautam' ),
-//		'description' => esc_attr__( 'Enable to fix header.', 'gautam' ),
-//		'section'     => 'header',
-//		'default'     => '0',
-//	)
-//);
+
+Kirki::add_field(
+	'gautam_theme_options',
+	array(
+		'type'        => 'toggle',
+		'settings'    => 'fixed-header',
+		'label'       => esc_attr__( 'Fixed Header', 'gautam' ),
+		'description' => esc_attr__( 'Enable to fix header.', 'gautam' ),
+		'section'     => 'header',
+		'default'     => '0',
+	)
+);
 
 Kirki::add_field(
 	'gautam_theme_options',
@@ -847,10 +847,10 @@ Kirki::add_field(
 				'element' => array( '.meta-data' ),
 				'choice'  => 'color',
 			),
-			array(
-				'element' => array( '.single-post.in-header .header-menu-bar' ),
-				'choice'  => 'color',
-			),
+//			array(
+//				'element' => array( '.single-post.in-header .header-menu-bar' ),
+//				'choice'  => 'color',
+//			),
 		),
 	)
 );

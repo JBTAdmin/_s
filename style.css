@@ -662,7 +662,7 @@ input[type="submit"] {
   color: var(--button-text-color);
   border: 1px solid var(--button-border-color);
   border-radius: var(--button-border-radius);
-  padding: 15px 25px;
+  padding: 10px 25px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -709,7 +709,7 @@ textarea {
   border: 1px solid rgba(68, 64, 90, 0.1);
   border-radius: 0.4rem;
   width: 100%;
-  padding: 15px;
+  padding: 10px;
   vertical-align: middle;
   outline: 0;
   -webkit-transition: all 0.2s ease-out;
@@ -1451,6 +1451,9 @@ li > ul.sub-menu {
   .header-wrap,
   .footer-wrap {
     padding: 0 3rem; } }
+
+.single-post.in-header.has-featured-image .header-menu-bar {
+  color: #fff; }
 
 .header-menu-bar {
   height: 10vh;
@@ -2218,7 +2221,7 @@ div[class*="footer-sidebar-"] {
   position: relative; }
 
 .meta-data {
-  margin: 3rem 0; }
+  margin-bottom: 3rem; }
 
 .column-2-title-image .wrap {
   width: 100%;
@@ -2258,9 +2261,9 @@ div[class*="footer-sidebar-"] {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 50%;
             flex: 1 1 50%; }
-    .single.in-header .wrap > div img {
-      display: block;
-      border-radius: 1rem; }
+
+.single.in-header.has-featured-image .meta-data {
+  color: #fff; }
 
 .single.in-header .post-thumbnail {
   position: absolute;
@@ -2308,7 +2311,7 @@ div[class*="footer-sidebar-"] {
             justify-content: center; }
 
 .single.in-header .meta-data {
-  margin: 10vh 0; }
+  margin: 10vh 0 5vh 0; }
 
 .archive-description {
   margin-bottom: 4rem; }
@@ -2398,7 +2401,11 @@ div[class*="footer-sidebar-"] {
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 1.2px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    text-decoration: underline; }
+
+.edit-link {
+  padding-left: 2rem; }
 
 .comment-reply-title,
 .comments-title {
@@ -2434,7 +2441,7 @@ div[class*="footer-sidebar-"] {
           order: 4; }
 
 .comment-form-comment textarea {
-  padding: 20px;
+  padding: 10px;
   border: 1px solid #ebebf7;
   border-radius: 4px;
   -webkit-transition: border-color 0.25s ease-in-out, -webkit-box-shadow 0.25s ease-in-out;

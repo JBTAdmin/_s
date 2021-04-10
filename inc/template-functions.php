@@ -177,16 +177,24 @@ if ( ! function_exists( 'gautam_body_classes' ) ) {
 	 * @since 1.0.0
 	 */
 	function gautam_body_classes( $classes ) {
+		global $post;
 		// Adds a class of hfeed to non-singular pages.
 		if ( ! is_singular() ) {
 			$classes[] = 'hfeed';
 		}
-
-		// Adds a class of no-sidebar when there is no sidebar present.
-		if ( ! is_active_sidebar( 'sidebar-1' ) ) {
-			$classes[] = 'no-sidebar';
+		
+		if ( true === get_theme_mod( 'fixed-header', true ) ) {
+			$classes[] = 'header-fixed';
+        }
+		
+		if ( isset ( $post->ID ) && get_the_post_thumbnail($post->ID)) {
+			$classes[] = 'has-featured-image';
 		}
-
+		
+		$classes[] = get_theme_mod( 'single_post_layout', 'in-header' );
+		
+		$classes[] = get_theme_mod( 'header_layout_setting' );
+		
 		return $classes;
 	}
 }
