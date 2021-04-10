@@ -14,8 +14,7 @@ if ( ! defined( 'GAUTAM_VERSION' ) ) {
 
 // todo Check this????.
 
-require get_template_directory() . '/inc/core/core.php';
-require get_template_directory() . '/inc/helper.php';
+require get_template_directory() . '/inc/core.php';
 require get_template_directory() . '/inc/widgets.php';
 require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/theme-hooks.php';

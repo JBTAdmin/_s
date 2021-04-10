@@ -2066,7 +2066,9 @@ div[class*="footer-sidebar-"] {
     width: 100%;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px; }
-    .article-container.blog-3 .entry-header a:hover, .article-container.blog-3 .entry-header a:focus, .article-container.blog-3 .entry-header a:active {
+    .article-container.blog-3 .entry-header a:hover,
+    .article-container.blog-3 .entry-header a:focus,
+    .article-container.blog-3 .entry-header a:active {
       color: inherit; }
   .article-container.blog-3 .post-thumbnail {
     min-height: 35rem; }
@@ -2172,6 +2174,9 @@ div[class*="footer-sidebar-"] {
 .blog-5 .no-post-thumbnail {
   height: 18.5rem; }
 
+.in-content .entry-content {
+  padding-top: 3rem; }
+
 .page article,
 .single-post article {
   width: 100%;
@@ -2191,9 +2196,8 @@ div[class*="footer-sidebar-"] {
 
 .single-post .cat-links > a {
   display: inline-block;
-  margin-bottom: 10px;
   font-weight: 500;
-  font-size: 1.9rem;
+  font-size: 1.6rem;
   opacity: 0.9;
   padding-right: 1rem; }
 
@@ -2202,7 +2206,7 @@ div[class*="footer-sidebar-"] {
   color: inherit; }
 
 .entry-meta {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 600; }
 
 .single-post .entry-meta > *:not(:last-child):after {
@@ -2747,13 +2751,15 @@ article {
           justify-content: center; }
 
 .gautam-share.fixed .gautam-share-inner a {
-  line-height: 45px;
+  line-height: 40px;
   height: 40px;
   width: 40px;
   position: absolute;
   opacity: 0;
   border: none;
   top: 0;
+  background: #000;
+  color: #fff;
   border-radius: 50%;
   -webkit-transition: all 0.45s cubic-bezier(0.15, 0.2, 0.1, 1);
   -o-transition: all 0.45s cubic-bezier(0.15, 0.2, 0.1, 1);

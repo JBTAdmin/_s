@@ -21,6 +21,10 @@
 //  }
 //}
 
+.in-content .entry-content {
+  padding-top: 3rem;
+}
+
 .page article,
 .single-post article {
   width: 100%;
@@ -41,13 +45,13 @@
   //border-radius: 0.4rem;
   //padding: 1px 8px;
   display: inline-block;
-  margin-bottom: 10px;
+  //margin-bottom: 10px;
   //color: rgba(0, 0, 0, 0.8);
   //background: #fff;
   //text-transform: uppercase;
   //letter-spacing: 0.3rem;
   font-weight: 500;
-  font-size: 1.9rem;
+  font-size: 1.6rem;
   opacity: 0.9;
   padding-right: 1rem;
   //border: 1px solid #e0dede;
@@ -60,7 +64,7 @@
 
 .entry-meta {
   //color: rgba(0, 0, 0, 0.8);
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 600;
   //opacity: 0.8;
 }

@@ -523,25 +523,27 @@ if ( ! function_exists( 'gautam_footer_share_layout' ) ) {
 	 */
 	function gautam_footer_share_layout() {
 		if ( get_theme_mod( 'general_social_share', 1 ) ) {
+			$link_url = get_the_permalink(get_the_ID());
+			$link_title = get_the_title(get_the_ID());
 			?>
 			<div class="gautam-share fixed visible" tabindex="0">
 				<a href="#" tabindex="-1">
 					<i class="fa fa-share fa-lg" aria-hidden="true"></i>
 				</a>
 				<div class="gautam-share-inner">
-					<a href="https://www.facebook.com/sharer.php?u=<?php echo esc_attr( get_permalink( get_the_ID() ) ); ?>"
-						target="blank" class="fb" rel="nofollow" data-social_name="facebook">
-						<i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+					<a href="<?php echo esc_url("https://www.facebook.com/sharer/sharer.php?u=" . get_permalink( get_the_ID() ) ) ?>"
+						target="_blank"  rel="nofollow">
+						<i class="fa fa-facebook" aria-hidden="true"></i>
 					</a>
 
-					<a href="https://twitter.com/intent/tweet?text=<?php echo esc_attr( get_permalink( get_the_ID() ) ); ?>"
-						target="blank" class="tw" rel="nofollow" data-social_name="twitter">
-						<i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+					<a href="<?php echo esc_url('http://twitter.com/share?text=' . $link_title . '&url=' . $link_url) ?>"
+						target="_blank"  rel="nofollow">
+						<i class="fa fa-twitter" aria-hidden="true"></i>
 					</a>
 
-					<a href="https://www.linkedin.com/cws/share?url=<?php echo esc_attr( get_permalink( get_the_ID() ) ); ?>"
-						target="blank" class="ln" rel="nofollow" data-social_name="linkedin">
-						<i class="fa fa-linkedin fa-lg" aria-hidden="true"></i>
+					<a href="<?php echo esc_url('http://www.linkedin.com/shareArticle?mini=true&title=' . $link_title . '&url=' . $link_url)  ?>"
+						target="_blank"  rel="nofollow">
+						<i class="fa fa-linkedin" aria-hidden="true"></i>
 					</a>
 				</div>
 			</div>
