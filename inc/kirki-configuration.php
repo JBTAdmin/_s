@@ -237,7 +237,7 @@ Kirki::add_field(
 		'description' => 'Content + Sidebar',
 		'section'     => 'padding_margin',
 		'default'     => array(
-			'margin-top'    => '5rem',
+			'margin-top'    => '0',
 			'margin-bottom' => '2rem',
 			'margin-left'   => '0',
 			'margin-right'  => '0',
@@ -267,7 +267,7 @@ Kirki::add_field(
 		'description' => 'Content Only',
 		'section'     => 'padding_margin',
 		'default'     => array(
-			'padding-top'    => '0',
+			'padding-top'    => '8rem',
 			'padding-bottom' => '0',
 			'padding-left'   => '0',
 			'padding-right'  => '0',
@@ -327,7 +327,7 @@ Kirki::add_field(
 		'description' => 'Sidebar Only',
 		'section'     => 'padding_margin',
 		'default'     => array(
-			'padding-top'    => '0',
+			'padding-top'    => '8rem',
 			'padding-bottom' => '0',
 			'padding-left'   => '0',
 			'padding-right'  => '0',

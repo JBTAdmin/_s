@@ -58,24 +58,7 @@ document.addEventListener(
 			trapFocus( ".popup_search_modal", 1 );
 		}
 
-		// 2- Share Button**************************************************************************************
-
-		// todo probably rewriting is required removed till not understood properly.
-		function fbs_click() {
-			u = location.href;
-			t = document.title;
-			window.open(
-				"http://www.facebook.com/sharer.php?u=" +
-				encodeURIComponent( u ) +
-				"&t=" +
-				encodeURIComponent( t ),
-				"sharer",
-				"toolbar=0,status=0,width=626,height=436"
-			);
-			return false;
-		}
-
-		// 3- Go To Top Button**************************************************************************************
+		// 2- Go To Top Button**************************************************************************************
 
 		const scrollToTopButton    = document.getElementById( "js-top" );
 		const fixedHeader          = document.querySelector( ".header-fixed" );
@@ -142,7 +125,7 @@ document.addEventListener(
 			}
 		}
 
-		// 4- Hamburger Menu (Mobile)**************************************************************************************
+		// 3- Hamburger Menu (Mobile)**************************************************************************************
 		const hamburgerBtn = document.querySelector( ".hamburger-menu" );
 		const menuCloseBtn = document.querySelector( ".mobile-cls-btn" );
 
@@ -221,7 +204,7 @@ document.addEventListener(
 			);
 		}
 
-		// 5- Menu*************************************************
+		// 4- Menu*************************************************
 		// todo instead of taking class probably use id and then only section would be needed.
 		const subMenu = document.querySelectorAll( "#primary-menu .sub-menu" );
 
@@ -239,30 +222,6 @@ document.addEventListener(
 			".drawer-dropdown-button"
 		);
 
-		const firstDropDownBtn = subMenuDropDownBtn[0];
-		firstDropDownBtn.parentNode
-		.querySelectorAll(
-			".sub-menu > li:last-child > a, .sub-menu > li > .drawer-dropdown-button"
-		)
-		.forEach(
-			function(ele) {
-				ele.addEventListener(
-					"blur",
-					function(event) {
-						if ( ! firstDropDownBtn.parentNode.contains( event.relatedTarget )) {
-							firstDropDownBtn.parentNode
-							.querySelectorAll( ".sub-menu" )
-							.forEach( elem1 => elem1.classList.remove( "visible" ) );
-							subMenuDropDownBtn.forEach(
-								submenu1 =>
-								submenu1.classList.remove( "active" )
-							);
-						}
-					}
-				);
-			}
-		);
-
 		subMenuDropDownBtn.forEach(
 			function(el) {
 				el.addEventListener(
@@ -274,6 +233,33 @@ document.addEventListener(
 				);
 			}
 		);
+
+		subMenuDropDownBtn.forEach( onBlurCall );
+
+		function onBlurCall(firstDropDownBtn, index){
+			firstDropDownBtn.parentNode
+				.querySelectorAll(
+					".sub-menu > li:last-child > a, .sub-menu > li > .drawer-dropdown-button"
+				)
+				.forEach(
+					function(ele) {
+						ele.addEventListener(
+							"blur",
+							function(event) {
+								if ( ! firstDropDownBtn.parentNode.contains( event.relatedTarget )) {
+									firstDropDownBtn.parentNode
+										.querySelectorAll( ".sub-menu" )
+										.forEach( elem1 => elem1.classList.remove( "visible" ) );
+									subMenuDropDownBtn.forEach(
+										submenu1 =>
+											submenu1.classList.remove( "active" )
+									);
+								}
+							}
+						);
+					}
+				);
+		}
 
 		// What is this******************************????????????????????????????
 

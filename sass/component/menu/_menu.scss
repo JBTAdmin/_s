@@ -136,6 +136,7 @@ li > ul.sub-menu {
     position: fixed;
     top: 0;
     padding: 1rem;
+    margin-top: 32px;
   }
 
   .menu-btn {
@@ -200,11 +201,12 @@ li > ul.sub-menu {
   }
 
   /* All the properties should not be here*/
-  .sidebar-menu li:hover > ul,
+  //.sidebar-menu li:hover > ul,
   .sidebar-menu ul.visible
   //.sidebar-menu li:focus > ul,
   //.sidebar-menu li:focus-within > ul
  {
+    display: block;
     visibility: visible;
     opacity: 1;
     transition: opacity ease-in-out 0.3s;
@@ -321,7 +323,7 @@ li > ul.sub-menu {
 .header-menu li:hover > .drawer-dropdown-button,
 //.header-menu li:focus > .drawer-dropdown-button,
 //.header-menu li:focus-within > .drawer-dropdown-button,
-.sidebar-menu li:hover > .drawer-dropdown-button,
+//.sidebar-menu li:hover > .drawer-dropdown-button,
 //.sidebar-menu li:focus > .drawer-dropdown-button,
 //.sidebar-menu li:focus-within > .drawer-dropdown-button
  {
@@ -331,7 +333,7 @@ li > ul.sub-menu {
 .header-menu li:hover > .drawer-dropdown-button:before,
 //.header-menu li:focus > .drawer-dropdown-button:before,
 //.header-menu li:focus-within > .drawer-dropdown-button:before,
-.sidebar-menu li:hover > .drawer-dropdown-button:before,
+//.sidebar-menu li:hover > .drawer-dropdown-button:before,
 //.sidebar-menu li:focus > .drawer-dropdown-button:before,
 //.sidebar-menu li:focus-within > .drawer-dropdown-button:before
  {
@@ -355,6 +357,7 @@ li > ul.sub-menu {
 }
 
 .sidebar-menu .sub-menu {
+  display: none;
   width: 100%;
   max-height: 0;
   overflow: hidden;
@@ -472,10 +475,10 @@ li > ul.sub-menu {
   height: 10px;
 }
 
-.drawer-dropdown-button:hover:before {
+.header-menu .drawer-dropdown-button:hover:before {
   opacity: 0;
 }
 
-.drawer-dropdown-button:hover {
+.header-menu .drawer-dropdown-button:hover {
   transform: rotate(90deg);
 }
