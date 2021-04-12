@@ -135,7 +135,7 @@ if ( ! function_exists( 'gautam_post_thumbnail' ) ) {
 
 		if ( ! has_post_thumbnail() & ! is_singular() ) {
 			gautam_no_post_thumbnail( $date );
-		} else if( has_post_thumbnail() ){
+		} else if( has_post_thumbnail() && gautam_jetpack_featured_image_display() ){
 			gautam_blog_post_thumbnail( $date, $size, $in_style );
         }
 

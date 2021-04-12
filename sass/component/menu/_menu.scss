@@ -1,5 +1,5 @@
 //todo sidebar-menu and header-menu try to combine them.
-
+//todo menu-btn__burger can be removed as we are not using it.
 .header-menu {
   //color: rgb(51, 51, 51);
   //font-size: 1.4rem;
@@ -320,36 +320,6 @@ li > ul.sub-menu {
   }
 }
 
-.header-menu li:hover > .drawer-dropdown-button,
-//.header-menu li:focus > .drawer-dropdown-button,
-//.header-menu li:focus-within > .drawer-dropdown-button,
-//.sidebar-menu li:hover > .drawer-dropdown-button,
-//.sidebar-menu li:focus > .drawer-dropdown-button,
-//.sidebar-menu li:focus-within > .drawer-dropdown-button
- {
-  transform: rotate(90deg);
-}
-
-.header-menu li:hover > .drawer-dropdown-button:before,
-//.header-menu li:focus > .drawer-dropdown-button:before,
-//.header-menu li:focus-within > .drawer-dropdown-button:before,
-//.sidebar-menu li:hover > .drawer-dropdown-button:before,
-//.sidebar-menu li:focus > .drawer-dropdown-button:before,
-//.sidebar-menu li:focus-within > .drawer-dropdown-button:before
- {
-  opacity: 0;
-}
-
-.sidebar-menu .drawer-dropdown-button.active:before,
-.header-menu .drawer-dropdown-button.active:before {
-  opacity: 0;
-}
-
-.sidebar-menu .drawer-dropdown-button.active,
-.header-menu .drawer-dropdown-button.active {
-  transform: rotate(90deg);
-}
-
 /** SIDEBAR MENU */
 .sidebar-menu .sub-menu a {
   //padding-left: 2rem;
@@ -406,11 +376,12 @@ li > ul.sub-menu {
   transform: scaleX(1.7) rotate(90deg);
   padding: 0 2rem;
 }
-
-.sidebar-menu li.menu-item-has-children.active .sub-menu-btn-icon {
-  right: 2%;
-  transform: scaleX(1.7) rotate(270deg);
-}
+//
+//// todo what is this for????
+//.sidebar-menu li.menu-item-has-children.active .sub-menu-btn-icon {
+//  right: 2%;
+//  transform: scaleX(1.7) rotate(270deg);
+//}
 
 //Menu Numbering
 .header-menu-container.numbered .header-menu > li > a:before {
@@ -438,47 +409,54 @@ li > ul.sub-menu {
 }
 
 .drawer-dropdown-button {
-  //height: 100%;
   padding: 1rem;
   color: inherit;
-  //width: 1rem;
-  //height: 1rem;
-  //position: absolute;
-  //right: 0;
-  //top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   border: none;
   background: none;
   opacity: 0.8;
+  position: relative;
+  font-size: 9px;
+  cursor: pointer;
   transition: transform 0.5s ease-in-out;
 }
 
-.drawer-dropdown-button:before {
-  width: 10px;
-  height: 2px;
-  opacity: 1;
-  transition: opacity 0.4s ease-in-out;
-}
-
-.drawer-dropdown-button:after,
-.drawer-dropdown-button:before {
+.plus,
+.minus {
+  display: flex;
   position: absolute;
-  display: inline-block;
-  background: currentColor;
-  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  transition: 0.5s all ease-out;
+}
+.plus {
+  opacity: 1;
+  transform: rotate(0deg);
 }
 
-.drawer-dropdown-button:after {
-  width: 2px;
-  height: 10px;
-}
-
-.header-menu .drawer-dropdown-button:hover:before {
+.minus {
   opacity: 0;
+  transform: rotate(-90deg);
 }
 
-.header-menu .drawer-dropdown-button:hover {
+.header-menu li:hover > .drawer-dropdown-button .plus,
+.sidebar-menu .drawer-dropdown-button.active .plus,
+.header-menu .drawer-dropdown-button.active .plus {
+  opacity: 0;
   transform: rotate(90deg);
+}
+
+.header-menu li:hover > .drawer-dropdown-button .minus,
+.sidebar-menu .drawer-dropdown-button.active .minus,
+.header-menu .drawer-dropdown-button.active .minus {
+  opacity: 1;
+  transform: rotate(0deg);
 }

@@ -187,7 +187,9 @@ if ( ! function_exists( 'gautam_body_classes' ) ) {
 			$classes[] = 'header-fixed';
         }
 		
-		if ( isset ( $post->ID ) && get_the_post_thumbnail($post->ID)) {
+		$template_parts = get_theme_mod( 'entry_header_sequence', array( 'category', 'heading', 'metadata', 'thumbnail' ) );
+  
+		if ( isset ( $post->ID ) && get_the_post_thumbnail($post->ID) && in_array( 'thumbnail', $template_parts, true ) && gautam_jetpack_featured_image_display()) {
 			$classes[] = 'has-featured-image';
 		}
 		

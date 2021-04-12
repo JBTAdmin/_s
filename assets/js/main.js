@@ -213,7 +213,7 @@ document.addEventListener(
 			el =>
 			el.insertAdjacentHTML(
 				"beforebegin",
-				'<button class="drawer-dropdown-button toggle" ></button>'
+				'<button class="drawer-dropdown-button toggle" ><span class="plus"><i class="fa fa-plus"></i></span><span class="minus"><i class="fa fa-minus"></i></span></button>'
 			)
 		);
 
