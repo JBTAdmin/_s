@@ -67,7 +67,7 @@ if ( ! function_exists( 'gautam_setup' ) ) :
 				'script',
 			)
 		);
-		//todo do be need this???.
+		// todo do be need this???.
 		// Set up the WordPress core custom background feature.
 		add_theme_support(
 			'custom-background',
@@ -158,7 +158,7 @@ if ( ! function_exists( 'gautam_excerpt' ) ) {
 		// todo incorrect usage of wp_trim_words -filter the excerpt instead. from one review.
 	}
 }
-//todo moved from helper.php.
+// todo moved from helper.php.
 /**
  * Pagination Buttons
  */
@@ -174,7 +174,7 @@ function gautam_post_nav() {
 	echo '</div>';
 }
 
-//todo not used anywhere remove it.
+// todo not used anywhere remove it.
 /**
  * Checks to see if homepage or not.
  *
@@ -191,7 +191,7 @@ function gautam_is_frontpage() {
  * @since 1.0.0
  */
 function gautam_get_content_layout() {
-	
+
 	if ( is_home() || is_archive() || is_search() ) {
 		get_template_part( 'template-parts/blog/blog', get_theme_mod( 'blog_layout_setting', '2' ), get_post_type() );
 	} else {

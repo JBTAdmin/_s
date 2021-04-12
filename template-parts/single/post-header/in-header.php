@@ -9,10 +9,10 @@ $template_parts = get_theme_mod( 'entry_header_sequence', array( 'category', 'he
 
 $container_class = '';
 if ( in_array( 'thumbnail', $template_parts, true ) ) {
-    $container_class = 'thumbnail' ;
+	$container_class = 'thumbnail';
 }
 ?>
-<div class="in-header-container <?php echo esc_attr($container_class) ?>">
+<div class="in-header-container <?php echo esc_attr( $container_class ); ?>">
 	<?php
 	if ( in_array( 'thumbnail', $template_parts, true ) ) {
 		get_template_part( 'template-parts/single/thumbnail' );

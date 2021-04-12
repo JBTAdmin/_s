@@ -44,7 +44,7 @@ if ( ! function_exists( 'gautam_posted_on' ) ) {
 				esc_html( get_the_modified_date() )
 			);
 		}
-		
+
 		$posted_on = '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>';
 
 		if ( $date_only ) {
@@ -135,9 +135,9 @@ if ( ! function_exists( 'gautam_post_thumbnail' ) ) {
 
 		if ( ! has_post_thumbnail() & ! is_singular() ) {
 			gautam_no_post_thumbnail( $date );
-		} else if( has_post_thumbnail() && gautam_jetpack_featured_image_display() ){
+		} elseif ( has_post_thumbnail() && gautam_jetpack_featured_image_display() ) {
 			gautam_blog_post_thumbnail( $date, $size, $in_style );
-        }
+		}
 
 	}
 }
@@ -155,11 +155,13 @@ function gautam_no_post_thumbnail( $date = '' ) {
 		<a href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 <!--todo remove this as text should not be displayed in featured image.-->
 <!--				<div class="post-thumbnail-drop-case">-->
-<!--					--><?php
-//					if ( ! empty( get_the_title() ) ) {
-//						echo esc_html( get_the_title()[0] );
-//					}
-//					?>
+<!--					-->
+	<?php
+	// if ( ! empty( get_the_title() ) ) {
+	// echo esc_html( get_the_title()[0] );
+	// }
+	//
+	?>
 <!--				</div>-->
 
 			<?php if ( is_sticky() ) : ?>

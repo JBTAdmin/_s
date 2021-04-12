@@ -182,21 +182,21 @@ if ( ! function_exists( 'gautam_body_classes' ) ) {
 		if ( ! is_singular() ) {
 			$classes[] = 'hfeed';
 		}
-		
+
 		if ( true === get_theme_mod( 'fixed-header', true ) ) {
 			$classes[] = 'header-fixed';
-        }
-		
+		}
+
 		$template_parts = get_theme_mod( 'entry_header_sequence', array( 'category', 'heading', 'metadata', 'thumbnail' ) );
-  
-		if ( isset ( $post->ID ) && get_the_post_thumbnail($post->ID) && in_array( 'thumbnail', $template_parts, true ) && gautam_jetpack_featured_image_display()) {
+
+		if ( isset( $post->ID ) && get_the_post_thumbnail( $post->ID ) && in_array( 'thumbnail', $template_parts, true ) && gautam_jetpack_featured_image_display() ) {
 			$classes[] = 'has-featured-image';
 		}
-		
+
 		$classes[] = get_theme_mod( 'single_post_layout', 'in-header' );
-		
+
 		$classes[] = get_theme_mod( 'header_layout_setting' );
-		
+
 		return $classes;
 	}
 }
@@ -481,7 +481,7 @@ if ( ! function_exists( 'gautam_hamburger_menu' ) ) {
 		<?php
 	}
 }
-//todo remove this call to action call and also the file.
+// todo remove this call to action call and also the file.
 if ( ! function_exists( 'gautam_footer_call_to_action' ) ) {
 	/**
 	 * Displays call to Action.
@@ -533,25 +533,25 @@ if ( ! function_exists( 'gautam_footer_share_layout' ) ) {
 	 */
 	function gautam_footer_share_layout() {
 		if ( get_theme_mod( 'general_social_share', 1 ) ) {
-			$link_url = get_the_permalink(get_the_ID());
-			$link_title = get_the_title(get_the_ID());
+			$link_url   = get_the_permalink( get_the_ID() );
+			$link_title = get_the_title( get_the_ID() );
 			?>
 			<div class="gautam-share fixed visible" tabindex="0">
 				<a href="#" tabindex="-1">
 					<i class="fa fa-share fa-lg" aria-hidden="true"></i>
 				</a>
 				<div class="gautam-share-inner">
-					<a href="<?php echo esc_url("https://www.facebook.com/sharer/sharer.php?u=" . get_permalink( get_the_ID() ) ) ?>"
+					<a href="<?php echo esc_url( 'https://www.facebook.com/sharer/sharer.php?u=' . get_permalink( get_the_ID() ) ); ?>"
 						target="_blank"  rel="nofollow">
 						<i class="fa fa-facebook" aria-hidden="true"></i>
 					</a>
 
-					<a href="<?php echo esc_url('http://twitter.com/share?text=' . $link_title . '&url=' . $link_url) ?>"
+					<a href="<?php echo esc_url( 'http://twitter.com/share?text=' . $link_title . '&url=' . $link_url ); ?>"
 						target="_blank"  rel="nofollow">
 						<i class="fa fa-twitter" aria-hidden="true"></i>
 					</a>
 
-					<a href="<?php echo esc_url('http://www.linkedin.com/shareArticle?mini=true&title=' . $link_title . '&url=' . $link_url)  ?>"
+					<a href="<?php echo esc_url( 'http://www.linkedin.com/shareArticle?mini=true&title=' . $link_title . '&url=' . $link_url ); ?>"
 						target="_blank"  rel="nofollow">
 						<i class="fa fa-linkedin" aria-hidden="true"></i>
 					</a>

@@ -847,10 +847,6 @@ Kirki::add_field(
 				'element' => array( '.meta-data' ),
 				'choice'  => 'color',
 			),
-//			array(
-//				'element' => array( '.single-post.in-header .header-menu-bar' ),
-//				'choice'  => 'color',
-//			),
 		),
 	)
 );
