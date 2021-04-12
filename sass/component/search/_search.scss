@@ -90,8 +90,11 @@
 .popup_search_modal > .popup_modal_close_button {
   color: #fff;
   position: absolute;
-  right: 5rem;
-  top: 5rem;
+  right: 5vw;
+  top: 0;
+  padding: 1rem;
+  margin-top: 35px;
+  height: 10vh;
   //padding: 4rem;
   //display: flex;
   //justify-content: flex-end;

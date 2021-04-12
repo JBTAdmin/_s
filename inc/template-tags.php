@@ -44,10 +44,8 @@ if ( ! function_exists( 'gautam_posted_on' ) ) {
 				esc_html( get_the_modified_date() )
 			);
 		}
-
-		$posted_on = sprintf(
-			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
-		);
+		
+		$posted_on = '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>';
 
 		if ( $date_only ) {
 			return get_the_date();

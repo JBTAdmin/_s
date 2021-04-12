@@ -618,7 +618,7 @@ Kirki::add_field(
 		'section'     => 'header',
 		'default'     => '500',
 		'choices'     => array(
-			'500' => esc_attr__( 'Regular', 'gautam' ),
+			'400' => esc_attr__( 'Regular', 'gautam' ),
 			'700' => esc_attr__( 'Bold', 'gautam' ),
 		),
 		'description' => '',

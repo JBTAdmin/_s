@@ -218,11 +218,11 @@ document.addEventListener(
 		);
 
 		// todo Need to make it work for both Desktop and Mobile Menu (header-menu, sidebar-menu) for click and focus both.
-		const subMenuDropDownBtn = document.querySelectorAll(
+		const subMenuDropDownBtns = document.querySelectorAll(
 			".drawer-dropdown-button"
 		);
 
-		subMenuDropDownBtn.forEach(
+		subMenuDropDownBtns.forEach(
 			function(el) {
 				el.addEventListener(
 					"click",
@@ -234,10 +234,10 @@ document.addEventListener(
 			}
 		);
 
-		subMenuDropDownBtn.forEach( onBlurCall );
+		subMenuDropDownBtns.forEach( onBlurCall );
 
-		function onBlurCall(firstDropDownBtn, index){
-			firstDropDownBtn.parentNode
+		function onBlurCall(dropDownBtn, index){
+			dropDownBtn.parentNode
 				.querySelectorAll(
 					".sub-menu > li:last-child > a, .sub-menu > li > .drawer-dropdown-button"
 				)
@@ -246,11 +246,11 @@ document.addEventListener(
 						ele.addEventListener(
 							"blur",
 							function(event) {
-								if ( ! firstDropDownBtn.parentNode.contains( event.relatedTarget )) {
-									firstDropDownBtn.parentNode
+								if ( ! dropDownBtn.parentNode.contains( event.relatedTarget) && primaryMenu.className == "header-menu") {
+									dropDownBtn.parentNode
 										.querySelectorAll( ".sub-menu" )
 										.forEach( elem1 => elem1.classList.remove( "visible" ) );
-									subMenuDropDownBtn.forEach(
+									subMenuDropDownBtns.forEach(
 										submenu1 =>
 											submenu1.classList.remove( "active" )
 									);

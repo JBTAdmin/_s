@@ -135,8 +135,9 @@ li > ul.sub-menu {
     height: 10vh;
     position: fixed;
     top: 0;
+    right: 5vw;
     padding: 1rem;
-    margin-top: 32px;
+    margin-top: 35px;
   }
 
   .menu-btn {
@@ -257,7 +258,7 @@ li > ul.sub-menu {
     visibility: hidden;
     //border-radius: 1rem;
     box-shadow: 0 7px 32px 0 rgba(0, 0, 0, 0.12);
-    width: 30rem;
+    min-width: 21rem;
     transition: opacity 0.4s ease-in-out;
     //border: 1px solid #eee;
     background-color: #fff;
@@ -305,7 +306,6 @@ li > ul.sub-menu {
 
   nav .sub-menu li:hover {
     background-color: #ececec94;
-    padding-left: 5px;
   }
 
   /* All the properties should not be here*/
@@ -382,9 +382,9 @@ li > ul.sub-menu {
   //display: block;
   line-height: 3rem; //todo try to combine somewhere else.
 }
-.sub-menu li:hover > a {
-  color: #000;
-}
+//.sub-menu li:hover > a {
+//  color: #000;
+//}
 
 .sub-menu li:hover > a:after {
   content: "";
