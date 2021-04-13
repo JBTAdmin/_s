@@ -158,7 +158,7 @@ Kirki::add_field(
 			'header' => esc_attr__( 'Header', 'gautam' ),
 			'fixed'  => esc_attr__( 'Fixed', 'gautam' ),
 		),
-		'description' => esc_attr__( 'Select the Search button visibiity and position.', 'gautam' ),
+		'description' => esc_attr__( 'Select the Search button visibility and position.', 'gautam' ),
 	)
 );
 
@@ -379,103 +379,6 @@ Kirki::add_field(
 );
 // END SECTION: PADDING AND MARGIN.
 
-// SECTION: TOP-BAR.
-Kirki::add_section(
-	'top_bar',
-	array(
-		'title'       => esc_attr__( 'Top Bar', 'gautam' ),
-		'description' => '',
-		'panel'       => 'theme_settings_panel',
-		'priority'    => 3,
-	)
-);
-
-Kirki::add_field(
-	'gautam_theme_options',
-	array(
-		'type'        => 'select',
-		'settings'    => 'top_bar_layout_setting',
-		'label'       => esc_attr__( 'Layout', 'gautam' ),
-		'section'     => 'top_bar',
-		'default'     => 'disabled',
-		'multiple'    => 0,
-		'choices'     => array(
-			'disabled'   => esc_attr__( 'Disabled', 'gautam' ),
-			'menu-left'  => esc_attr__( 'Menu Left, Social Icon Right', 'gautam' ),
-			'menu-right' => esc_attr__( 'Social Icon Right, Menu Right', 'gautam' ),
-		),
-		'description' => esc_attr__( 'Select Top Bar Layout. Menu should be assigned to top bar menu location', 'gautam' ),
-	)
-);
-
-Kirki::add_field(
-	'gautam_theme_options',
-	array(
-		'type'        => 'color',
-		'settings'    => 'top_bar_color',
-		'label'       => esc_attr__( 'Color', 'gautam' ),
-		'description' => esc_attr__( 'Change Top Bar color settings.', 'gautam' ),
-		'default'     => '#fff',
-		'section'     => 'top_bar',
-		'output'      => array(
-			array(
-				'element'  => '.gautam-top-bar',
-				'property' => 'color',
-			),
-		),
-	)
-);
-
-Kirki::add_field(
-	'gautam_theme_options',
-	array(
-		'type'        => 'background',
-		'settings'    => 'top_bar_background',
-		'label'       => esc_attr__( 'Background', 'gautam' ),
-		'description' => esc_attr__( 'Change Top Bar site main background settings.', 'gautam' ),
-		'section'     => 'top_bar',
-		'default'     => array(
-			'background-color'      => '#000',
-			'background-image'      => '',
-			'background-repeat'     => 'repeat',
-			'background-position'   => 'center center',
-			'background-size'       => 'cover',
-			'background-attachment' => 'scroll',
-		),
-		'output'      => array(
-			array(
-				'element' => '.gautam-top-bar',
-			),
-		),
-	)
-);
-
-Kirki::add_field(
-	'gautam_theme_options',
-	array(
-		'type'        => 'typography',
-		'settings'    => 'top_bar_font',
-		'label'       => esc_attr__( 'Typography (Use CSS units)', 'gautam' ),
-		'section'     => 'top_bar',
-		'default'     => array(
-			'font-family' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
-			'font-size'   => '1.3rem',
-		),
-		'description' => esc_attr__( 'Font used in Single Post Header.', 'gautam' ),
-		'output'      => array(
-			array(
-				'choice'  => 'font-size',
-				'element' => '.gautam-top-bar .header-menu',
-			),
-			array(
-				'choice'  => 'font-family',
-				'element' => '.gautam-top-bar',
-			),
-		),
-	)
-);
-// SECTION: TOP-BAR END.
-
 // SECTION: Header.
 Kirki::add_section(
 	'header',
@@ -497,10 +400,8 @@ Kirki::add_field(
 		'default'     => '',
 		'multiple'    => 0,
 		'choices'     => array(
-			''                        => esc_attr__( 'Logo Left, Menu Right', 'gautam' ),
-			'flex-dir-row-reverse'    => esc_attr__( 'Logo Right, Menu Left', 'gautam' ),
-			'flex-dir-column'         => esc_attr__( 'Logo Top, Menu Below', 'gautam' ),
-			'flex-dir-column-reverse' => esc_attr__( 'Logo Below, Menu Top', 'gautam' ),
+			''                     => esc_attr__( 'Logo Left, Menu Right', 'gautam' ),
+			'flex-dir-row-reverse' => esc_attr__( 'Logo Right, Menu Left', 'gautam' ),
 		),
 		'description' => esc_attr__( 'Here you can select which Header layout will be used.', 'gautam' ),
 	)
@@ -565,7 +466,7 @@ Kirki::add_field(
 	array(
 		'type'        => 'toggle',
 		'settings'    => 'main_menu_numbering',
-		'label'       => esc_attr__( 'Main Menu Numbering', 'gautam' ),
+		'label'       => esc_attr__( 'Menu Numbering', 'gautam' ),
 		'description' => esc_attr__( 'Enable to add Numbering to Main Menu.', 'gautam' ),
 		'section'     => 'header',
 		'default'     => '1',
@@ -577,7 +478,7 @@ Kirki::add_field(
 	array(
 		'type'     => 'radio-buttonset',
 		'settings' => 'main_menu_align',
-		'label'    => esc_attr__( 'Main menu align', 'gautam' ),
+		'label'    => esc_attr__( 'Menu alignment', 'gautam' ),
 		'section'  => 'header',
 		'default'  => 'center',
 		'choices'  => array(
@@ -592,7 +493,7 @@ Kirki::add_field(
 	array(
 		'type'        => 'radio-buttonset',
 		'settings'    => 'main_menu_font_decoration',
-		'label'       => esc_attr__( 'Main menu font decoration', 'gautam' ),
+		'label'       => esc_attr__( 'Menu font decoration', 'gautam' ),
 		'section'     => 'header',
 		'default'     => 'none',
 		'choices'     => array(
@@ -614,12 +515,13 @@ Kirki::add_field(
 	array(
 		'type'        => 'radio-buttonset',
 		'settings'    => 'main_menu_font_weight',
-		'label'       => esc_attr__( 'Main menu font weight', 'gautam' ),
+		'label'       => esc_attr__( 'Menu font weight', 'gautam' ),
 		'section'     => 'header',
 		'default'     => '500',
 		'choices'     => array(
-			'400' => esc_attr__( 'Regular', 'gautam' ),
-			'700' => esc_attr__( 'Bold', 'gautam' ),
+			'400' => esc_attr__( '400', 'gautam' ),
+			'500' => esc_attr__( '500', 'gautam' ),
+			'700' => esc_attr__( '700', 'gautam' ),
 		),
 		'description' => '',
 		'output'      => array(
@@ -636,7 +538,7 @@ Kirki::add_field(
 	array(
 		'type'        => 'radio-buttonset',
 		'settings'    => 'main_menu_font_style',
-		'label'       => esc_attr__( 'Main menu font style', 'gautam' ),
+		'label'       => esc_attr__( 'Menu font style', 'gautam' ),
 		'section'     => 'header',
 		'default'     => 'normal',
 		'choices'     => array(
@@ -658,13 +560,13 @@ Kirki::add_field(
 	array(
 		'type'        => 'typography',
 		'settings'    => 'header_menu_font',
-		'label'       => esc_attr__( 'Navigation Typography (Use CSS units)', 'gautam' ),
+		'label'       => esc_attr__( 'Menu Typography (Use CSS units)', 'gautam' ),
 		'section'     => 'header',
 		'default'     => array(
 			'font-family' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
 			'font-size'   => '1.6rem',
 		),
-		'description' => esc_attr__( 'Font used in Single Post Header .', 'gautam' ),
+		'description' => esc_attr__( 'Font used in Single Post Header.', 'gautam' ),
 		'output'      => array(
 			array(
 				'element' => '.main-navigation',
@@ -698,8 +600,6 @@ Kirki::add_field(
 			'1' => esc_attr__( 'Layout 1', 'gautam' ),
 			'2' => esc_attr__( 'Layout 2', 'gautam' ),
 			'3' => esc_attr__( 'Layout 3', 'gautam' ),
-			'4' => esc_attr__( 'Layout 4-No', 'gautam' ),
-			'5' => esc_attr__( 'Layout 5-No', 'gautam' ),
 		),
 		'description' => esc_attr__( 'Here you can select which layout will be used to display the blog posts on Home or Index pages.', 'gautam' ),
 	)
@@ -724,16 +624,12 @@ Kirki::add_field(
 		'settings'    => 'single_post_layout',
 		'label'       => esc_html__( 'Layout', 'gautam' ),
 		'section'     => 'blog_post',
-		'default'     => 'in-content',
+		'default'     => 'in-header',
 		'placeholder' => esc_html__( 'Select Single Post Layout.', 'gautam' ),
 		'multiple'    => 0,
 		'choices'     => array(
-			'in-content'                   => esc_html__( 'Layout 1', 'gautam' ),
-			'in-header'                    => esc_html__( 'Layout 2', 'gautam' ),
-			'column-2-title-image'         => esc_html__( 'Layout 3-No', 'gautam' ),
-			'column-2-title-image-compact' => esc_html__( 'Layout 4-No', 'gautam' ),
-			'layout-5'                     => esc_html__( 'Layout 5-No', 'gautam' ),
-
+			'in-content' => esc_html__( 'Layout 1', 'gautam' ),
+			'in-header'  => esc_html__( 'Layout 2', 'gautam' ),
 		),
 	)
 );
@@ -882,22 +778,6 @@ Kirki::add_field(
 	)
 );
 
-Kirki::add_field(
-	'gautam_theme_options',
-	array(
-		'type'        => 'radio-buttonset',
-		'settings'    => 'sidebar_listing',
-		'label'       => esc_attr__( 'Sidebar Alt listing', 'gautam' ),
-		'section'     => 'sidebars',
-		'default'     => 'right',
-		'choices'     => array(
-			'right'   => esc_attr__( 'Right', 'gautam' ),
-			'left'    => esc_attr__( 'Left', 'gautam' ),
-			'disable' => esc_attr__( 'Disable', 'gautam' ),
-		),
-		'description' => '',
-	)
-);
 // END SECTION: SIDEBAR.
 
 // SECTION: FOOTER.
@@ -926,18 +806,6 @@ Kirki::add_field(
 Kirki::add_field(
 	'gautam_theme_options',
 	array(
-		'type'        => 'toggle',
-		'settings'    => 'footer_call_to_action',
-		'label'       => esc_attr__( 'Call To Action', 'gautam' ),
-		'description' => esc_attr__( 'Enable to display call to action.', 'gautam' ),
-		'section'     => 'footer',
-		'default'     => '1',
-	)
-);
-
-Kirki::add_field(
-	'gautam_theme_options',
-	array(
 		'type'        => 'select',
 		'settings'    => 'footer_layout_setting',
 		'label'       => esc_attr__( 'Layout', 'gautam' ),
@@ -945,10 +813,7 @@ Kirki::add_field(
 		'default'     => '2',
 		'multiple'    => 0,
 		'choices'     => array(
-			'1' => esc_attr__( 'Layout 1', 'gautam' ),
 			'2' => esc_attr__( 'Layout 2', 'gautam' ),
-			'3' => esc_attr__( 'Layout 3', 'gautam' ),
-			'4' => esc_attr__( 'Layout 4', 'gautam' ),
 		),
 		'description' => esc_attr__( 'Here you can select which layout will be used to display the blog posts on Home or Index pages.', 'gautam' ),
 	)
@@ -1045,7 +910,7 @@ Kirki::add_field(
 		'settings'    => 'body_font',
 		'label'       => esc_attr__( 'Body Typography (Use CSS units)', 'gautam' ),
 		'section'     => 'fonts',
-		'default'     => array(   // TODO  In default can i use Initial as font-family.
+		'default'     => array(
 			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
 			'variant'        => 'regular',
 			'font-size'      => '16px',
@@ -1388,18 +1253,6 @@ Kirki::add_field(
 		'settings'    => 'general_social_share',
 		'label'       => esc_attr__( 'Social Share', 'gautam' ),
 		'description' => esc_attr__( 'Enable to display Social Share Button.', 'gautam' ),
-		'section'     => 'social_media',
-		'default'     => '1',
-	)
-);
-
-Kirki::add_field(
-	'gautam_theme_options',
-	array(
-		'type'        => 'toggle',
-		'settings'    => 'top_bar_social_media_button',
-		'label'       => esc_attr__( 'Top Bar Social Follow', 'gautam' ),
-		'description' => esc_attr__( 'Disable to hide Social Media Button on Top Bar..', 'gautam' ),
 		'section'     => 'social_media',
 		'default'     => '1',
 	)

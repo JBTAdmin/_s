@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 add_action( 'wp_head', 'gautam_pingback_header' );
-add_action( 'gautam_header_before', 'gautam_top_bar_layout' );
+add_filter( 'body_class', 'gautam_body_classes' );
 add_action( 'gautam_header', 'gautam_header_branding_layout' );
 add_action( 'gautam_header_after', 'gautam_header_main_menu_layout' );
 add_action( 'gautam_singular_content', 'gautam_singular_content_layout' );
@@ -25,15 +25,134 @@ add_action( 'gautam_entry_content_after', 'gautam_post_content_after' );
 add_action( 'gautam_site_container_before', 'gautam_post_container_before' );
 add_action( 'gautam_main_content_before', 'gautam_sidebar_left_output' );
 add_action( 'gautam_main_content_after', 'gautam_sidebar_right_output' );
-add_action( 'gautam_footer_before', 'gautam_footer_call_to_action' );
 add_action( 'gautam_footer', 'gautam_footer_section' );
 add_action( 'gautam_footer_content', 'gautam_footer_main_layout' );
 add_action( 'gautam_footer_after', 'gautam_footer_share_layout' );
 add_action( 'gautam_footer_after', 'gautam_footer_search_layout' );
 add_action( 'gautam_footer_after', 'gautam_footer_go_to_top_layout' );
 add_action( 'gautam_footer_after', 'gautam_social_media' );
-add_filter( 'body_class', 'gautam_body_classes' );
 
+if ( ! function_exists( 'gautam_pingback_header' ) ) {
+	/**
+	 * Add a pingback url auto-discovery header for single posts, pages, or attachments.
+	 *
+	 * @since 1.0.0
+	 */
+	function gautam_pingback_header() {
+		if ( is_singular() && pings_open() ) {
+			printf( '<link rel="pingback" href="%s">', esc_url( get_bloginfo( 'pingback_url' ) ) );
+		}
+	}
+}
+
+if ( ! function_exists( 'gautam_body_classes' ) ) {
+	/**
+	 * Adds custom classes to the array of body classes.
+	 *
+	 * @param array $classes Classes for the body element.
+	 *
+	 * @return array
+	 * @since 1.0.0
+	 */
+	function gautam_body_classes( $classes ) {
+		global $post;
+		// Adds a class of hfeed to non-singular pages.
+		if ( ! is_singular() ) {
+			$classes[] = 'hfeed';
+		}
+
+		if ( true === get_theme_mod( 'fixed-header', false ) ) {
+			$classes[] = 'header-fixed';
+		}
+
+		$template_parts = get_theme_mod( 'entry_header_sequence', array( 'category', 'heading', 'metadata', 'thumbnail' ) );
+
+		if ( isset( $post->ID ) && get_the_post_thumbnail( $post->ID ) && in_array( 'thumbnail', $template_parts, true ) && gautam_jetpack_featured_image_display() ) {
+			$classes[] = 'has-featured-image';
+		}
+
+		$classes[] = get_theme_mod( 'single_post_layout', 'in-header' );
+
+		$classes[] = get_theme_mod( 'header_layout_setting' );
+
+		return $classes;
+	}
+}
+
+if ( ! function_exists( 'gautam_header_branding_layout' ) ) {
+	/**
+	 * Gautam Header Branding Layout.
+	 *
+	 * @since 1.0.0
+	 */
+	function gautam_header_branding_layout() {
+		// Return if no Header Branding Bar.
+		if ( true !== get_theme_mod( 'gautam_site_branding', true ) ) {
+			return;
+		}
+
+		$numbering_class = '';
+		if ( true === get_theme_mod( 'main_menu_numbering', true ) ) {
+			$numbering_class = 'numbered';
+		}
+
+		$container_alignment_class = 'header-menu-container ' . $numbering_class . ' aligned-menu-' . get_theme_mod( 'main_menu_align', 'center' );
+		?>
+		<div class="header-menu-bar">
+			<!--			<div class="wrap">-->
+			<div class="header-container">
+				<?php
+				gautam_site_branding();
+				?>
+				<div class="main-header">
+					<nav id="site-navigation" class="main-navigation ">
+						<?php
+						gautam_hamburger_menu();
+						?>
+						<div class="mobile-menu-container">
+							<?php
+
+							wp_nav_menu(
+								array(
+									'theme_location'  => 'menu-1',
+									'menu_id'         => 'primary-menu',
+									'menu_class'      => 'header-menu',
+									'container_class' => $container_alignment_class,
+									'fallback_cb'     => false,
+								)
+							);
+							?>
+							<a href="#" class="mobile-cls-btn">
+								<i class="fa fa-times fa-lg" aria-hidden="true"></i>
+							</a>
+						</div>
+						<?php
+						gautam_header_search();
+						?>
+					</nav>
+				</div>
+				<!--				</div>-->
+			</div>
+		</div>
+		<?php
+	}
+}
+
+if ( ! function_exists( 'gautam_header_main_menu_layout' ) ) {
+	/**
+	 * Header Main Layout.
+	 *
+	 * @since 1.0.0
+	 */
+	function gautam_header_main_menu_layout() {
+
+		if ( true !== get_theme_mod( 'gautam_header_main_menu_layout', true ) ) {
+			return;
+		}
+		?>
+		<?php
+	}
+}
 
 if ( ! function_exists( 'gautam_singular_content_layout' ) ) {
 	/**
@@ -117,99 +236,10 @@ if ( ! function_exists( 'gautam_post_content_before' ) ) {
 			get_theme_mod( 'single_post_layout', 'in-header' ),
 			array(
 				'in-content',
-				'layout-5',
 			),
 			true
 		) ) {
 			get_template_part( 'template-parts/single/post-header/in-content' );
-		}
-	}
-}
-
-/**
- * It will handle thumbnail In Header.
- */
-if ( ! function_exists( 'gautam_post_container_before' ) ) {
-
-	/**
-	 * Display Post Header as per selection in customizer.
-	 *
-	 * @since 1.0.0
-	 */
-	function gautam_post_container_before() {
-
-		if ( in_array(
-			get_theme_mod( 'single_post_layout', 'in-header' ),
-			array(
-				'column-2-title-image',
-				'column-2-title-image-compact',
-				'in-header',
-			),
-			true
-		) ) {
-			get_template_part( 'template-parts/single/post-header/in-header' );
-		}
-	}
-}
-
-if ( ! function_exists( 'gautam_post_content_after' ) ) {
-	/**
-	 * Outputs Footer sections.
-	 *
-	 * @since 1.0.0
-	 */
-	function gautam_post_content_after() {
-		$template_parts = get_theme_mod( 'entry_footer_sequence', array( 'tag', 'author', 'post-navigation' ) );
-
-		foreach ( $template_parts as $template_part ) {
-			get_template_part( 'template-parts/single/' . $template_part );
-		}
-	}
-}
-
-if ( ! function_exists( 'gautam_body_classes' ) ) {
-	/**
-	 * Adds custom classes to the array of body classes.
-	 *
-	 * @param array $classes Classes for the body element.
-	 *
-	 * @return array
-	 * @since 1.0.0
-	 */
-	function gautam_body_classes( $classes ) {
-		global $post;
-		// Adds a class of hfeed to non-singular pages.
-		if ( ! is_singular() ) {
-			$classes[] = 'hfeed';
-		}
-
-		if ( true === get_theme_mod( 'fixed-header', true ) ) {
-			$classes[] = 'header-fixed';
-		}
-
-		$template_parts = get_theme_mod( 'entry_header_sequence', array( 'category', 'heading', 'metadata', 'thumbnail' ) );
-
-		if ( isset( $post->ID ) && get_the_post_thumbnail( $post->ID ) && in_array( 'thumbnail', $template_parts, true ) && gautam_jetpack_featured_image_display() ) {
-			$classes[] = 'has-featured-image';
-		}
-
-		$classes[] = get_theme_mod( 'single_post_layout', 'in-header' );
-
-		$classes[] = get_theme_mod( 'header_layout_setting' );
-
-		return $classes;
-	}
-}
-
-if ( ! function_exists( 'gautam_pingback_header' ) ) {
-	/**
-	 * Add a pingback url auto-discovery header for single posts, pages, or attachments.
-	 *
-	 * @since 1.0.0
-	 */
-	function gautam_pingback_header() {
-		if ( is_singular() && pings_open() ) {
-			printf( '<link rel="pingback" href="%s">', esc_url( get_bloginfo( 'pingback_url' ) ) );
 		}
 	}
 }
@@ -258,6 +288,45 @@ if ( ! function_exists( 'gautam_content' ) ) {
 	}
 }
 
+if ( ! function_exists( 'gautam_post_content_after' ) ) {
+	/**
+	 * Outputs Footer sections.
+	 *
+	 * @since 1.0.0
+	 */
+	function gautam_post_content_after() {
+		$template_parts = get_theme_mod( 'entry_footer_sequence', array( 'tag', 'author', 'post-navigation' ) );
+
+		foreach ( $template_parts as $template_part ) {
+			get_template_part( 'template-parts/single/' . $template_part );
+		}
+	}
+}
+
+/**
+ * It will handle thumbnail In Header.
+ */
+if ( ! function_exists( 'gautam_post_container_before' ) ) {
+
+	/**
+	 * Display Post Header as per selection in customizer.
+	 *
+	 * @since 1.0.0
+	 */
+	function gautam_post_container_before() {
+
+		if ( in_array(
+			get_theme_mod( 'single_post_layout', 'in-header' ),
+			array(
+				'in-header',
+			),
+			true
+		) ) {
+			get_template_part( 'template-parts/single/post-header/in-header' );
+		}
+	}
+}
+
 if ( ! function_exists( 'gautam_sidebar_left_output' ) ) {
 	/**
 	 * Display Sidebar.
@@ -284,212 +353,6 @@ if ( ! function_exists( 'gautam_sidebar_right_output' ) ) {
 		if ( is_active_sidebar( 'gautam-sidebar-right' ) && in_array( get_theme_mod( 'sidebar_layout_setting', 'content-only' ), $option, true ) ) {
 			return get_sidebar();
 		}
-	}
-}
-
-if ( ! function_exists( 'gautam_top_bar_layout' ) ) {
-	/**
-	 * Top Bar Layout.
-	 *
-	 * @since 1.0.0
-	 */
-	function gautam_top_bar_layout() {
-		// Return if no top bar.
-		if ( 'disabled' === get_theme_mod( 'top_bar_layout_setting', 'disabled' ) ) {
-			return;
-		}
-		?>
-		<div id="top-bar" class="top-menu gautam-top-bar <?php get_theme_mod( 'top_bar_layout_setting' ); ?>">
-			<div class="wrap">
-				<div class="header-top-bar">
-					<nav id="top-bar-navigation" class="secondary-navigation ">
-						<?php
-						wp_nav_menu(
-							array(
-								'theme_location'  => 'top-bar-menu',
-								'menu_id'         => 'top-bar-menu',
-								'menu_class'      => 'header-menu',
-								'container_class' => 'header-menu-container',
-								'fallback_cb'     => false,
-								'depth'           => 1,
-							)
-						);
-						?>
-					</nav><!-- #top-bar-navigation -->
-					<?php
-					// Social Icons.
-					gautam_social_media( 'top-bar-social' );
-					?>
-				</div>
-			</div>
-		</div>
-		<?php
-	}
-}
-
-if ( ! function_exists( 'gautam_header_branding_layout' ) ) {
-	/**
-	 * Gautam Header Branding Layout.
-	 *
-	 * @since 1.0.0
-	 */
-	function gautam_header_branding_layout() {
-		// Return if no Header Branding Bar.
-		if ( true !== get_theme_mod( 'gautam_site_branding', true ) ) {
-			return;
-		}
-
-		$numbering_class = '';
-		if ( true === get_theme_mod( 'main_menu_numbering', true ) ) {
-			$numbering_class = 'numbered';
-		}
-
-		$container_alignment_class = 'header-menu-container ' . $numbering_class . ' aligned-menu-' . get_theme_mod( 'main_menu_align', 'center' );
-		?>
-		<div class="header-menu-bar">
-			<!--			<div class="wrap">-->
-			<div class="header-container">
-				<?php
-				gautam_site_branding( 'left' );
-				?>
-				<div class="main-header">
-					<nav id="site-navigation" class="main-navigation ">
-						<?php
-						gautam_hamburger_menu();
-						?>
-						<div class="mobile-menu-container">
-							<?php
-
-							wp_nav_menu(
-								array(
-									'theme_location'  => 'menu-1',
-									'menu_id'         => 'primary-menu',
-									'menu_class'      => 'header-menu',
-									'container_class' => $container_alignment_class,
-									'fallback_cb'     => false,
-								)
-							);
-							?>
-							<a href="#" class="mobile-cls-btn">
-								<i class="fa fa-times fa-lg" aria-hidden="true"></i>
-							</a>
-						</div>
-						<?php
-						gautam_header_search();
-						?>
-					</nav>
-				</div>
-				<!--				</div>-->
-			</div>
-		</div>
-		<?php
-	}
-}
-
-if ( ! function_exists( 'gautam_header_main_menu_layout' ) ) {
-	/**
-	 * Header Main Layout.
-	 *
-	 * @since 1.0.0
-	 */
-	function gautam_header_main_menu_layout() {
-
-		if ( true !== get_theme_mod( 'gautam_header_main_menu_layout', true ) ) {
-			return;
-		}
-		?>
-		<?php
-	}
-}
-
-if ( ! function_exists( 'gautam_site_branding' ) ) {
-	/**
-	 * Displays Site Branding.
-	 *
-	 * @param string $location Needs to remove this todo.
-	 *
-	 * @since 1.0.0
-	 */
-	function gautam_site_branding( $location ) {
-		?>
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-
-			if ( ! get_theme_mod( 'custom_logo' ) ) :
-				?>
-				<div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"
-											rel="home"><?php bloginfo( 'name' ); ?></a></div>
-				<?php
-				$gautam_description = get_bloginfo( 'description', 'display' );
-				if ( $gautam_description || is_customize_preview() ) :
-					?>
-					<p class="site-description">
-						<?php
-						echo esc_html( $gautam_description ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped.
-						?>
-					</p>
-					<?php
-				endif;
-			endif;
-			?>
-		</div>
-		<?php
-	}
-}
-
-if ( ! function_exists( 'gautam_header_search' ) ) {
-	/**
-	 * Displays Search Button in Header.
-	 *
-	 * @since 1.0.0
-	 */
-	function gautam_header_search() {
-		if ( 'header' === get_theme_mod( 'general_search_visibility', 'fixed' ) ) {
-			?>
-			<div class="gautam-search header-search" role="button" tabindex="0">
-				<i class="fa fa-search fa-lg"></i>
-				<span class="screen-reader-text">Search</span>
-			</div>
-			<?php
-			gautam_footer_popup_search_modal_layout();
-		}
-	}
-}
-
-if ( ! function_exists( 'gautam_hamburger_menu' ) ) {
-	/**
-	 * Displays Hamburger Menu.
-	 *
-	 * @since 1.0.0
-	 */
-	function gautam_hamburger_menu() {
-		$sidebar_alt_class = '';
-		if ( ! is_active_sidebar( 'gautam-sidebar-alt' ) ) {
-			$sidebar_alt_class = 'menu_only';
-		}
-		?>
-		<div class="hamburger-menu <?php echo esc_attr( $sidebar_alt_class ); ?>" on="tap:drawermenu.toggle"
-			role="button" tabindex="0">
-			<button class="toggle sidebar-open desktop-sidebar-toggle" data-toggle-target=".sidebar-modal"
-					data-toggle-body-class="showing-sidebar-modal" aria-expanded="false" tabindex="-1">
-									<span class="toggle-inner">
-										<i class="fa fa-bars fa-lg" aria-hidden="true"></i>
-									</span>
-			</button>
-		</div>
-		<?php
-	}
-}
-// todo remove this call to action call and also the file.
-if ( ! function_exists( 'gautam_footer_call_to_action' ) ) {
-	/**
-	 * Displays call to Action.
-	 *
-	 * @since 1.0.0
-	 */
-	function gautam_footer_call_to_action() {
-		get_template_part( 'template-parts/footers/call-to-action', get_post_type() );
 	}
 }
 
@@ -562,28 +425,23 @@ if ( ! function_exists( 'gautam_footer_share_layout' ) ) {
 	}
 }
 
-/**
- * Displays Search Modal.
- *
- * @since 1.0.0
- */
-function gautam_footer_popup_search_modal_layout() {
-	?>
-	<div class="popup_search_modal">
-		<a href="#" class="popup_modal_close_button">
-			<i class="fa fa-times fa-lg" aria-hidden="true"></i>
-		</a>
-		<div class="search_holder">
-			<form role="search" class="search search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>"
-					method="GET">
-				<label> <span class="screen-reader-text">Search for</span>
-					<input autocomplete="off" type="text" id="search-field" class="search-field" name="s"
-							placeholder="<?php esc_attr_e( 'Search..', 'gautam' ); ?>" value="" autofocus>
-				</label>
-			</form>
-		</div>
-	</div>
-	<?php
+if ( ! function_exists( 'gautam_footer_search_layout' ) ) {
+	/**
+	 * Displays Search button in footer.
+	 *
+	 * @since 1.0.0
+	 */
+	function gautam_footer_search_layout() {
+		if ( 'fixed' === get_theme_mod( 'general_search_visibility', 'fixed' ) ) {
+			?>
+			<a class="gautam-search footer-search" href="#">
+				<i class="fa fa-search fa-lg"></i>
+				<span class="screen-reader-text">Search</span>
+			</a>
+			<?php
+			gautam_footer_popup_search_modal_layout();
+		}
+	}
 }
 
 if ( ! function_exists( 'gautam_footer_go_to_top_layout' ) ) {
@@ -604,35 +462,15 @@ if ( ! function_exists( 'gautam_footer_go_to_top_layout' ) ) {
 	}
 }
 
-if ( ! function_exists( 'gautam_footer_search_layout' ) ) {
-	/**
-	 * Displays Search button in footer.
-	 *
-	 * @since 1.0.0
-	 */
-	function gautam_footer_search_layout() {
-		if ( 'fixed' === get_theme_mod( 'general_search_visibility', 'fixed' ) ) {
-			?>
-			<a class="gautam-search footer-search" href="#">
-				<i class="fa fa-search fa-lg"></i>
-				<span class="screen-reader-text">Search</span>
-			</a>
-			<?php
-			gautam_footer_popup_search_modal_layout();
-		}
-	}
-}
-
 if ( ! function_exists( 'gautam_social_media' ) ) {
 	/**
 	 * Displays Social Media Button.
 	 *
-	 * @param string  $social_class Class that needs to be applied.
-	 * @param boolean $text_only Social Button or Text should be displayed.
+	 * @param string $social_class Class that needs to be applied.
 	 *
 	 * @since 1.0.0
 	 */
-	function gautam_social_media( $social_class = 'gautam_social_follow', $text_only = true ) {
+	function gautam_social_media( $social_class = 'gautam_social_follow' ) {
 		if ( 'top-bar-social' === $social_class && get_theme_mod( 'top_bar_social_media_button', true ) !== true ) {
 			return;
 		}
@@ -648,7 +486,7 @@ if ( ! function_exists( 'gautam_social_media' ) ) {
 				$social_class .= ' no_social_color';
 			}
 
-			$social_class .= ' gautam_social_follow';  // todo Default method arguments are ignore in case add_action call.
+			$social_class .= ' gautam_social_follow';
 		} else {
 			$text_only = false;
 		}
@@ -757,5 +595,118 @@ if ( ! function_exists( 'gautam_social_media' ) ) {
 			</ul>
 		</div>
 		<?php
+	}
+}
+
+/**
+ * Displays Site Branding.
+ *
+ * @since 1.0.0
+ */
+function gautam_site_branding() {
+	?>
+	<div class="site-branding">
+		<?php
+		the_custom_logo();
+
+		if ( ! get_theme_mod( 'custom_logo' ) ) :
+			?>
+			<div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"
+										rel="home"><?php bloginfo( 'name' ); ?></a></div>
+			<?php
+			$gautam_description = get_bloginfo( 'description', 'display' );
+			if ( $gautam_description || is_customize_preview() ) :
+				?>
+				<p class="site-description">
+					<?php
+					echo esc_html( $gautam_description ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped.
+					?>
+				</p>
+				<?php
+			endif;
+		endif;
+		?>
+	</div>
+	<?php
+}
+
+/**
+ * Displays Search Button in Header.
+ *
+ * @since 1.0.0
+ */
+function gautam_header_search() {
+	if ( 'header' === get_theme_mod( 'general_search_visibility', 'fixed' ) ) {
+		?>
+		<div class="gautam-search header-search" role="button" tabindex="0">
+			<i class="fa fa-search fa-lg"></i>
+			<span class="screen-reader-text">Search</span>
+		</div>
+		<?php
+		gautam_footer_popup_search_modal_layout();
+	}
+}
+
+/**
+ * Displays Hamburger Menu.
+ *
+ * @since 1.0.0
+ */
+function gautam_hamburger_menu() {
+	$sidebar_alt_class = '';
+	if ( ! is_active_sidebar( 'gautam-sidebar-alt' ) ) {
+		$sidebar_alt_class = 'menu_only';
+	}
+	?>
+	<div class="hamburger-menu <?php echo esc_attr( $sidebar_alt_class ); ?>" on="tap:drawermenu.toggle"
+		role="button" tabindex="0">
+		<button class="toggle sidebar-open desktop-sidebar-toggle" data-toggle-target=".sidebar-modal"
+				data-toggle-body-class="showing-sidebar-modal" aria-expanded="false" tabindex="-1">
+								<span class="toggle-inner">
+									<i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+								</span>
+		</button>
+	</div>
+	<?php
+}
+
+/**
+ * Displays Search Modal.
+ *
+ * @since 1.0.0
+ */
+function gautam_footer_popup_search_modal_layout() {
+	?>
+	<div class="popup_search_modal">
+		<a href="#" class="popup_modal_close_button">
+			<i class="fa fa-times fa-lg" aria-hidden="true"></i>
+		</a>
+		<div class="search_holder">
+			<form role="search" class="search search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>"
+					method="GET">
+                    <label> <span class="screen-reader-text">Search for</span>
+                        <input autocomplete="off" type="text" id="search-field" class="search-field" name="s"
+                                placeholder="<?php esc_attr_e( 'Search..', 'gautam' ); ?>" value="" autofocus>
+                        <button type="submit" class="search search-submit">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
+                    </label>
+			</form>
+		</div>
+	</div>
+	<?php
+}
+
+/**
+ * Use Specific Article Layout.
+ *
+ * @since 1.0.0
+ */
+function gautam_get_content_layout() {
+
+	if ( is_home() || is_archive() || is_search() ) {
+		get_template_part( 'template-parts/blog/blog', get_theme_mod( 'blog_layout_setting', '2' ), get_post_type() );
+	} else {
+		get_template_part( 'template-parts/single/single', 'layout', get_post_type() );
 	}
 }

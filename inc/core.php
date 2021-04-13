@@ -43,11 +43,8 @@ if ( ! function_exists( 'gautam_setup' ) ) :
 		// This theme uses wp_nav_menu() in two location.
 		register_nav_menus(
 			array(
-				'menu-1'       => esc_html__( 'Primary', 'gautam' ),
-				'top-bar-menu' => esc_html__( 'Top Bar', 'gautam' ),
-				'footer-1'     => esc_html__( 'Footer Menu 1', 'gautam' ),
-				'footer-2'     => esc_html__( 'Footer Menu 2', 'gautam' ),
-				'footer-3'     => esc_html__( 'Footer Menu 3', 'gautam' ),
+				'menu-1'   => esc_html__( 'Primary', 'gautam' ),
+				'footer-1' => esc_html__( 'Footer Menu 1', 'gautam' ),
 			)
 		);
 
@@ -123,100 +120,67 @@ function gautam_content_width() {
 	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 	$GLOBALS['content_width'] = apply_filters( 'gautam_content_width', 640 );
 }
-
 add_action( 'after_setup_theme', 'gautam_content_width', 0 );
 
 /**
  * Enqueue scripts/styles.
  */
 function gautam_scripts() {
+
+	// Theme Stylesheet.
 	wp_enqueue_style( 'gautam-style', get_stylesheet_uri(), array(), GAUTAM_VERSION );
+
+	// Theme RTL Stylesheet.
+	wp_style_add_data( 'gautam-style', 'rtl', 'replace' );
 
 	// FontAwesome Icons.
 	wp_enqueue_style( 'fontawesome', get_theme_file_uri( '/assets/css/font-awesome.css' ), array(), '4.7.0' );
 
-	wp_style_add_data( 'gautam-style', 'rtl', 'replace' );
-
+	// Custom Scripts.
 	wp_enqueue_script( 'gautam-main', get_template_directory_uri() . '/assets/js/main.js', array(), GAUTAM_VERSION, true );
+
+	// Comment Reply Script.
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-
 add_action( 'wp_enqueue_scripts', 'gautam_scripts' );
 
-if ( ! function_exists( 'gautam_excerpt' ) ) {
-	/**
-	 * Limit excerpt length.
-	 *
-	 * @param int $limit Excerpt Length.
-	 *
-	 * @since 1.0.0
-	 */
-	function gautam_excerpt( $limit = 50 ) {
-		return wp_trim_words( get_the_excerpt(), $limit );
-		// todo incorrect usage of wp_trim_words -filter the excerpt instead. from one review.
-	}
-}
-// todo moved from helper.php.
 /**
- * Pagination Buttons
+ * Load Jetpack compatibility file.
  */
-function gautam_post_nav() {
-	echo "<div class='gautam-pagination'>";
-	the_posts_pagination(
-		array(
-			'prev_text' => __( '&lt;', 'gautam' ),
-			'next_text' => __( '&gt;', 'gautam' ),
-			'type'      => 'list',
-		)
-	);
-	echo '</div>';
+if ( defined( 'JETPACK__VERSION' ) ) {
+	require get_template_directory() . '/inc/jetpack.php';
 }
 
-// todo not used anywhere remove it.
 /**
- * Checks to see if homepage or not.
+ * Load WooCommerce compatibility file.
+ */
+if ( class_exists( 'WooCommerce' ) ) {
+	require get_template_directory() . '/inc/woocommerce.php';
+}
+
+/**
+ * Load Embedded Kirki Configuration.
+ */
+require_once get_parent_theme_file_path( '/inc/kirki/kirki.php' );
+
+require get_template_directory() . '/inc/kirki-configuration.php';
+
+/**
+ * Provides the proper file location while kirki is in customizer view.
  *
- * @return boolean, if current page is front page.
- * @since 1.0.0
+ * @return string[] kirki files location.
  */
-function gautam_is_frontpage() {
-	return is_front_page() && ! is_home();
+function gautam_kirki_configuration() {
+	return array( 'url_path' => get_stylesheet_directory_uri() . '/inc/kirki/' );
 }
+add_filter( 'kirki/config', 'gautam_kirki_configuration' );
 
 /**
- * Use Specific Article Layout.
- *
- * @since 1.0.0
- */
-function gautam_get_content_layout() {
-
-	if ( is_home() || is_archive() || is_search() ) {
-		get_template_part( 'template-parts/blog/blog', get_theme_mod( 'blog_layout_setting', '2' ), get_post_type() );
-	} else {
-		get_template_part( 'template-parts/single/single', 'layout', get_post_type() );
-	}
-}
-
-
-/**
- * Theme Featured Image support.
+ * Theme Featured Image sizes.
  */
 add_image_size( 'gautam-blog-3-featured-image', 762, 898, true ); // Used for Blog Layout 3.
-add_image_size( 'gautam-blog-4-featured-image', 540, 320, true ); // Used for Blog Layout 4.
-add_image_size( 'gautam-blog-5-featured-image', 540, 185, true ); // Used for Blog Layout 5.
 add_image_size( 'gautam-post-navigation-featured-image', 80, 80, true ); // Used for Post Navigation.
 add_image_size( 'gautam-post-in-content-featured-image', 1140, 500, true );// Used for Single Post In Content Featured Image.
 add_image_size( 'gautam-post-in-header-featured-image', 1840, 500, true );// Used for Single Post In Header Featured Image.
-
-
-
-// todo remove all these and options related to them.
-add_image_size( 'gautam-blog-single-post-sidebar', 400, 500, true );
-add_image_size( 'gautam-blog-single-post-no-sidebar', 1000, 340, true );
-add_image_size( 'column-2-title-image', 1140, 694, true );
-add_image_size( 'column-2-title-image-compact', 1140, 694, true );
-
-
-

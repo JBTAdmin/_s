@@ -39,6 +39,9 @@
 
   & .entry-excerpt {
     margin-top: 3rem;
+    & p {
+      margin: 0;
+    }
   }
 }
 

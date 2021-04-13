@@ -354,7 +354,6 @@ function gautam_entry_navigation_after() {
 }
 
 
-// todo viveka.
 /**
  * Before Main Content
  */
@@ -411,7 +410,6 @@ function gautam_site_container_before() {
 	do_action( 'gautam_site_container_before' );
 }
 
-
 /**
  * After Site Container
  */
@@ -439,7 +437,6 @@ function gautam_footer_content() {
 function gautam_footer_content_bottom() {
 	do_action( 'gautam_footer_content_bottom' );
 }
-
 
 /**
  * Before Singular Content.

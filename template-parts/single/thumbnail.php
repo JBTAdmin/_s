@@ -17,11 +17,9 @@ $in_style       = false;
 $featured_image = array(
 	'in-header'  => 'gautam-post-in-header-featured-image',
 	'in-content' => 'gautam-post-in-content-featured-image',
-	'column-2-title-image',
-	'column-2-title-image-compact',
 );
 
-if ( in_array( get_theme_mod( 'single_post_layout', 'in-header' ), array( 'column-2-title-image', 'column-2-title-image-compact', 'in-header' ), true ) ) {
+if ( in_array( get_theme_mod( 'single_post_layout', 'in-header' ), array( 'in-header' ), true ) ) {
 	$in_style = true;
 }
 

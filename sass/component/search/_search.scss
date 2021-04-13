@@ -56,6 +56,26 @@
   opacity: 1;
 }
 
+.search-form {
+  position: relative;
+}
+//.popup_search_modal button.search-submit {
+.search-form button.search-submit {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #fff;
+  background: transparent;
+  border: none;
+  padding: 2rem;
+  display: flex;
+  cursor: pointer;
+  //height: 100%;
+  &:hover {
+    background: none;
+  }
+}
+
 .popup_search_modal .search-field {
   &:focus {
     color: #fff;

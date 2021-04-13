@@ -153,17 +153,6 @@ function gautam_no_post_thumbnail( $date = '' ) {
 	?>
 	<div class="post-thumbnail no-post-thumbnail">
 		<a href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
-<!--todo remove this as text should not be displayed in featured image.-->
-<!--				<div class="post-thumbnail-drop-case">-->
-<!--					-->
-	<?php
-	// if ( ! empty( get_the_title() ) ) {
-	// echo esc_html( get_the_title()[0] );
-	// }
-	//
-	?>
-<!--				</div>-->
-
 			<?php if ( is_sticky() ) : ?>
 				<span class="badge">
 					<i class="fa fa-tags fa-lg" aria-hidden="true"></i>
@@ -178,7 +167,7 @@ function gautam_no_post_thumbnail( $date = '' ) {
 }
 
 /**
- * Blog post thumbnail to be included for post.
+ * Post thumbnail to be included for Blog or Single Post.
  *
  * @param String  $date Post date to be included in featured image.
  * @param String  $size Size of the featured image.
@@ -244,5 +233,52 @@ function gautam_blog_post_thumbnail( $date, $size, $in_style ) {
 			</a>
 		</div>
 		<?php
+	}
+}
+
+/**
+ * Pagination Buttons
+ */
+function gautam_post_nav() {
+	echo "<div class='gautam-pagination'>";
+	the_posts_pagination(
+		array(
+			'prev_text' => __( '&lt;', 'gautam' ),
+			'next_text' => __( '&gt;', 'gautam' ),
+			'type'      => 'list',
+		)
+	);
+	echo '</div>';
+}
+
+/**
+ * Show/Hide Featured Image outside of the loop in Jetpack.
+ */
+function gautam_jetpack_featured_image_display() {
+	if ( ! function_exists( 'jetpack_featured_images_remove_post_thumbnail' ) ) {
+		return true;
+	} else {
+		$options         = get_theme_support( 'jetpack-content-options' );
+		$featured_images = ( ! empty( $options[0]['featured-images'] ) ) ? $options[0]['featured-images'] : null;
+
+		$settings = array(
+			'post-default' => ( isset( $featured_images['post-default'] ) && false === $featured_images['post-default'] ) ? '' : 1,
+			'page-default' => ( isset( $featured_images['page-default'] ) && false === $featured_images['page-default'] ) ? '' : 1,
+		);
+
+		$settings = array_merge(
+			$settings,
+			array(
+				'post-option' => get_option( 'jetpack_content_featured_images_post', $settings['post-default'] ),
+				'page-option' => get_option( 'jetpack_content_featured_images_page', $settings['page-default'] ),
+			)
+		);
+
+		if ( ( ! $settings['post-option'] && is_single() )
+			|| ( ! $settings['page-option'] && is_singular() && is_page() ) ) {
+			return false;
+		} else {
+			return true;
+		}
 	}
 }

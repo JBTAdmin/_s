@@ -420,7 +420,6 @@ li > ul.sub-menu {
   position: relative;
   font-size: 9px;
   cursor: pointer;
-  transition: transform 0.5s ease-in-out;
 }
 
 .plus,
@@ -435,7 +434,7 @@ li > ul.sub-menu {
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  transition: 0.5s all ease-out;
+  transition: 0.1s all ease-out;
 }
 .plus {
   opacity: 1;

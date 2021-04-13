@@ -9,9 +9,13 @@
 
 ?>
 
-<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-	<label for="search-field">
-		<span class="screen-reader-text"><?php echo esc_html__( 'Search for:', 'gautam' ); ?></span>
+<form role="search" class="search search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>"
+	method="GET">
+	<label> <span class="screen-reader-text">Search for</span>
+		<input autocomplete="off" type="text" id="search-field" class="search-field" name="s"
+				placeholder="<?php esc_attr_e( 'Search..', 'gautam' ); ?>" value="" autofocus>
+		<button type="submit" class="search search-submit">
+			<i class="fa fa-search" aria-hidden="true"></i>
+		</button>
 	</label>
-	<input type="search" id="search-field" class="search-field" placeholder="<?php echo esc_attr__( 'Search..', 'gautam' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
 </form>

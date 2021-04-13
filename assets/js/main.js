@@ -8,39 +8,55 @@
 
 document.addEventListener(
 	"DOMContentLoaded",
-	function(event) {
-		// Different Sections.
+	function (event) {
 
-		// 1- Search**************************************************************************************
+		const searchButton         = document.querySelector( ".gautam-search" );
+		const searchModal          = document.querySelector( ".popup_search_modal" );
+		const searchCloseBtn       = document.querySelector( ".popup_modal_close_button" );
+		const searchField          = document.querySelector( ".search-field" );
+		const scrollToTopButton    = document.getElementById( "js-top" );
+		const fixedHeader          = document.querySelector( ".header-fixed" );
+		const fixedHeaderContainer = document.querySelector( ".header-fixed header" );
+		const siteContainer        = document.querySelector( ".site-container" );
+		const inHeader             = document.querySelector( ".single.in-header" );
+		const hamburgerBtn         = document.querySelector( ".hamburger-menu" );
+		const menuCloseBtn         = document.querySelector( ".mobile-cls-btn" );
+		const headerMenuContainer  = document.querySelector( ".header-menu-container" );
+		const primaryMenu          = document.getElementById( "primary-menu" );
+		const subMenu              = document.querySelectorAll( "#primary-menu .sub-menu" );
 
-		const searchButton   = document.querySelector( ".gautam-search" );
-		const searchModal    = document.querySelector( ".popup_search_modal" );
-		const searchCloseBtn = document.querySelector( ".popup_modal_close_button" );
-		const searchField    = document.querySelector( ".search-field" );
+		// Adding the dropdown button.
+		subMenu.forEach(
+			el =>
+				el.insertAdjacentHTML(
+					"beforebegin",
+					'<button class="drawer-dropdown-button toggle" ><span class="plus"><i class="fa fa-plus"></i></span><span class="minus"><i class="fa fa-minus"></i></span></button>'
+				)
+		);
+
+		// Holding temp class name when mobile menu is open.
+		let tempClassMobileMenu;
+
+		// Holding temp class name whe header is fixed.
+		let tempClassFixedHeader;
 
 		searchButton && searchButton.addEventListener( "click", openSearchModal );
-		// searchButton && searchButton.addEventListener("focus", openSearchModal);.
+
 		searchButton &&
 		searchButton.addEventListener(
 			"keypress",
-			function(e) {
+			function (e) {
 				if (e.key === "Enter" || e.key === " ") {
-						openSearchModal();
+					openSearchModal();
 				}
 			}
 		);
-
-		// todo need to be sure if we want to enable this feature. It will close search window on blur of search-field.
-		// searchField &&
-		// searchField.addEventListener("blur", function(event) {
-		// searchModal.classList.toggle("visible");
-		// });
 
 		searchCloseBtn && searchCloseBtn.addEventListener( "click", closeSearchModal );
 
 		searchCloseBtn && searchCloseBtn.addEventListener(
 			"keypress",
-			function(event) {
+			function (event) {
 				if (e.key === "Enter" || e.key === " ") {
 					closeSearchModal();
 				}
@@ -58,17 +74,8 @@ document.addEventListener(
 			trapFocus( ".popup_search_modal", 1 );
 		}
 
-		// 2- Go To Top Button**************************************************************************************
-
-		const scrollToTopButton    = document.getElementById( "js-top" );
-		const fixedHeader          = document.querySelector( ".header-fixed" );
-		const fixedHeaderContainer = document.querySelector( ".header-fixed header" );
-		const siteContainer        = document.querySelector( ".site-container" );
-		const inHeader             = document.querySelector( ".single.in-header" );
-
-		let classList;
 		if (fixedHeader) {
-			classList = fixedHeaderContainer.className;
+			tempClassFixedHeader = fixedHeaderContainer.className;
 		}
 
 		window.addEventListener( "scroll", scrollFunc );
@@ -76,7 +83,7 @@ document.addEventListener(
 		// When the button is clicked, run our ScrolltoTop function above!
 		scrollToTopButton.addEventListener(
 			"click",
-			function(e) {
+			function (e) {
 				e.preventDefault();
 				scrollToTop();
 			}
@@ -105,7 +112,7 @@ document.addEventListener(
 				scrollToTopButton.className = "top-link hide";
 				if (fixedHeader) {
 					fixedHeader.classList.remove( "fixed-header", "showed" );
-					fixedHeaderContainer.className = classList;
+					fixedHeaderContainer.className = tempClassFixedHeader;
 					if ( ! inHeader) {
 						siteContainer.style.paddingTop = 0;
 					}
@@ -125,30 +132,14 @@ document.addEventListener(
 			}
 		}
 
-		// 3- Hamburger Menu (Mobile)**************************************************************************************
-		const hamburgerBtn = document.querySelector( ".hamburger-menu" );
-		const menuCloseBtn = document.querySelector( ".mobile-cls-btn" );
-
-		// todo it can be removed. Will be required when menu is part of sidebar Alt
-		// const sidebarOverlay = document.querySelector(".sidebar-overlay");
-
-		let headerMenuContainer = document.querySelector( ".header-menu-container" );
-		const primaryMenu       = document.getElementById( "primary-menu" );
-
-		// Holding temp class name when mobile menu is open
-		let clsList;
-
 		hamburgerBtn && hamburgerBtn.addEventListener( "click", hamburgerMenu );
-
-		// hamburgerBtn && hamburgerBtn.addEventListener("focus", hamburgerMenu);
 
 		menuCloseBtn && menuCloseBtn.addEventListener( "click", hamburgerMenu );
 
-		// todo combine below two.!!!!!!!!!!!!!
 		hamburgerBtn &&
 		hamburgerBtn.addEventListener(
 			"keypress",
-			function(e) {
+			function (e) {
 				if (e.key === "Enter" || e.key === " ") {
 					hamburgerMenu();
 				}
@@ -158,25 +149,24 @@ document.addEventListener(
 		function hamburgerMenu() {
 			document.body.classList.toggle( "hide" );
 			menuCloseBtn.classList.toggle( "visible" );
-			// sidebarOverlay.classList.toggle("open");
 
 			if (primaryMenu.className == "header-menu") {
 				primaryMenu.className         = "sidebar-menu";
-				clsList                       = headerMenuContainer.className;
+				tempClassMobileMenu           = headerMenuContainer.className;
 				headerMenuContainer.className = "header-menu-container";
 				trapFocus( ".mobile-menu-container" );
 			} else {
 				primaryMenu.className         = "header-menu";
-				headerMenuContainer.className = clsList;
-				clsList                       = "";
+				headerMenuContainer.className = tempClassMobileMenu;
+				tempClassMobileMenu           = "";
 				hamburgerBtn.focus();
 			}
 		}
 
 		function trapFocus(ele, focusEle = 0) {
 			const matches = document
-			.querySelector( ele )
-			.querySelectorAll( "a, input, button" );
+				.querySelector( ele )
+				.querySelectorAll( "a, input, button" );
 
 			let firstElement = matches[0];
 			let lastElement  = matches[matches.length - 1];
@@ -185,7 +175,7 @@ document.addEventListener(
 
 			lastElement.addEventListener(
 				"keydown",
-				function(e) {
+				function (e) {
 					if (e.key == "Tab" && ! e.shiftKey) {
 						e.preventDefault();
 						firstElement.focus();
@@ -195,7 +185,7 @@ document.addEventListener(
 
 			firstElement.addEventListener(
 				"keydown",
-				function(e) {
+				function (e) {
 					if (e.key == "Tab" && e.shiftKey) {
 						e.preventDefault();
 						lastElement.focus();
@@ -204,29 +194,12 @@ document.addEventListener(
 			);
 		}
 
-		// 4- Menu*************************************************
-		// todo instead of taking class probably use id and then only section would be needed.
-		const subMenu = document.querySelectorAll( "#primary-menu .sub-menu" );
-
-		// Adding the dropdown button.
-		subMenu.forEach(
-			el =>
-			el.insertAdjacentHTML(
-				"beforebegin",
-				'<button class="drawer-dropdown-button toggle" ><span class="plus"><i class="fa fa-plus"></i></span><span class="minus"><i class="fa fa-minus"></i></span></button>'
-			)
-		);
-
-		// todo Need to make it work for both Desktop and Mobile Menu (header-menu, sidebar-menu) for click and focus both.
-		const subMenuDropDownBtns = document.querySelectorAll(
-			".drawer-dropdown-button"
-		);
-
+		const subMenuDropDownBtns  = document.querySelectorAll(".drawer-dropdown-button");
 		subMenuDropDownBtns.forEach(
-			function(el) {
+			function (el) {
 				el.addEventListener(
 					"click",
-					function(event) {
+					function (event) {
 						this.parentNode.querySelector( ".sub-menu" ).classList.toggle( "visible" );
 						el.classList.toggle( "active" );
 					}
@@ -236,23 +209,23 @@ document.addEventListener(
 
 		subMenuDropDownBtns.forEach( onBlurCall );
 
-		function onBlurCall(dropDownBtn, index){
+		function onBlurCall(dropDownBtn, index) {
 			dropDownBtn.parentNode
 				.querySelectorAll(
 					".sub-menu > li:last-child > a, .sub-menu > li > .drawer-dropdown-button"
 				)
 				.forEach(
-					function(ele) {
+					function (ele) {
 						ele.addEventListener(
 							"blur",
-							function(event) {
-								if ( ! dropDownBtn.parentNode.contains( event.relatedTarget) && primaryMenu.className == "header-menu") {
+							function (event) {
+								if ( ! dropDownBtn.parentNode.contains( event.relatedTarget ) && primaryMenu.className == "header-menu") {
 									dropDownBtn.parentNode
 										.querySelectorAll( ".sub-menu" )
 										.forEach( elem1 => elem1.classList.remove( "visible" ) );
 									subMenuDropDownBtns.forEach(
 										submenu1 =>
-											submenu1.classList.remove( "active" )
+										submenu1.classList.remove( "active" )
 									);
 								}
 							}
@@ -260,25 +233,5 @@ document.addEventListener(
 					}
 				);
 		}
-
-		// What is this******************************????????????????????????????
-
-		// const menu = document.querySelector(".menu");
-		// const header = document.querySelector("header");
-		// const headerMenu = document.querySelector(".header-menu");
-		// const menuBtn = document.querySelector(".menu-btn");
-		//
-		// menuBtn.addEventListener("click", function() {
-		// menuBtn.classList.toggle("open");
-		// menu.classList.toggle("open");
-		// header.classList.toggle("open");
-		// });
-
-		// const altSidebar = document.querySelector(".sidebar-alt");
-		// sidebarOverlay &&
-		// sidebarOverlay.addEventListener("click", function() {
-		// altSidebar.classList.toggle("open");
-		// sidebarOverlay.classList.toggle("open");
-		// });
 	}
 );
