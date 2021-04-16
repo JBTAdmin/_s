@@ -62,12 +62,13 @@
 //.popup_search_modal button.search-submit {
 .search-form button.search-submit {
   position: absolute;
-  right: 0;
+  right: 4%;
   top: 0;
-  color: #fff;
+  height: 100%;
+  //color: #fff;
   background: transparent;
   border: none;
-  padding: 2rem;
+  padding: 0;
   display: flex;
   cursor: pointer;
   //height: 100%;
