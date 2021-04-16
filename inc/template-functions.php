@@ -17,7 +17,7 @@ add_filter( 'body_class', 'gautam_body_classes' );
 add_action( 'gautam_header', 'gautam_header_branding_layout' );
 add_action( 'gautam_header_after', 'gautam_header_main_menu_layout' );
 add_action( 'gautam_singular_content', 'gautam_singular_content_layout' );
-add_action( 'gautam_content_page', 'gautam_single_page_layout' );
+add_action( 'gautam_content_page', 'gautam_single_post_layout' );
 add_action( 'gautam_content_post', 'gautam_single_post_layout' );
 add_action( 'gautam_entry_content_before', 'gautam_post_content_before' );
 add_action( 'gautam_entry_content', 'gautam_content' );
@@ -138,6 +138,7 @@ if ( ! function_exists( 'gautam_header_branding_layout' ) ) {
 	}
 }
 
+//todo not getting used anywhere so needs to be removed.
 if ( ! function_exists( 'gautam_header_main_menu_layout' ) ) {
 	/**
 	 * Header Main Layout.
@@ -177,7 +178,7 @@ if ( ! function_exists( 'gautam_singular_content_layout' ) ) {
 		}
 	}
 }
-
+//todo may this part can be merged with the template itself. Currently it is not being used so may be we can remove it.
 if ( ! function_exists( 'gautam_single_page_layout' ) ) {
 	/**
 	 * Outputs the theme single page.

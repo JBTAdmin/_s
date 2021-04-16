@@ -95,7 +95,8 @@
     padding: 0 3rem;
   }
 }
-.single-post.in-header.has-featured-image .header-menu-bar {
+.single.in-header.has-featured-image .header-menu-bar,
+.page.in-header.has-featured-image .header-menu-bar {
   color: #fff;
 }
 
