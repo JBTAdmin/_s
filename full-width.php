@@ -14,31 +14,38 @@
  * @package gautam
  */
 
-get_header();
 
 ?>
-	<div class="site-container">
-		<div class="wrap">
-			<div class="main-container">
-				<main id="primary" class="site-main primary-content">
-					<?php
-					while ( have_posts() ) :
-						the_post();
 
-						get_template_part( 'template-parts/content', 'page' );
+<?php get_header(); ?>
+    <!--todo may be name of the hooks can be revisited-->
+<?php gautam_site_container_before(); ?>
 
-						// If comments are open or we have at least one comment, load up the comment template.
-						if ( comments_open() || get_comments_number() ) :
-							comments_template();
-						endif;
+    <div class="site-container">
 
-					endwhile; // End of the loop.
-					?>
+        <div class="wrap">
 
-				</main><!-- #main -->
-			</div>
-		</div>
-	</div> <!-- #container -->
+            <div class="main-container">
+				
+<!--				--><?php //gautam_main_content_before(); ?>
+
+                <main id="primary" class="site-main primary-content">
+					
+					<?php gautam_singular_content_before(); ?>
+					
+					<?php gautam_singular_content(); ?>
+					
+					<?php gautam_singular_content_after(); ?>
+
+                </main><!-- #content .site-content -->
+				
+<!--				--><?php //gautam_main_content_after(); ?>
+
+            </div><!-- #primary .content-area -->
+
+        </div><!-- END .wrap -->
+
+    </div>
 <?php
-get_sidebar( 'alt' );
+gautam_site_container_after();
 get_footer();

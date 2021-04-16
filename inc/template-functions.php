@@ -85,6 +85,7 @@ if ( ! function_exists( 'gautam_header_branding_layout' ) ) {
 	 *
 	 * @since 1.0.0
 	 */
+	//todo probably moving classes from here to body will make sense.
 	function gautam_header_branding_layout() {
 		// Return if no Header Branding Bar.
 		if ( true !== get_theme_mod( 'gautam_site_branding', true ) ) {
@@ -654,20 +655,16 @@ function gautam_header_search() {
  * @since 1.0.0
  */
 function gautam_hamburger_menu() {
-	$sidebar_alt_class = '';
-	if ( ! is_active_sidebar( 'gautam-sidebar-alt' ) ) {
-		$sidebar_alt_class = 'menu_only';
-	}
 	?>
-	<div class="hamburger-menu <?php echo esc_attr( $sidebar_alt_class ); ?>" on="tap:drawermenu.toggle"
-		role="button" tabindex="0">
-		<button class="toggle sidebar-open desktop-sidebar-toggle" data-toggle-target=".sidebar-modal"
-				data-toggle-body-class="showing-sidebar-modal" aria-expanded="false" tabindex="-1">
+    <div class="hamburger-menu menu_only" on="tap:drawermenu.toggle"
+         role="button" tabindex="0">
+        <button class="toggle sidebar-open desktop-sidebar-toggle" data-toggle-target=".sidebar-modal"
+                data-toggle-body-class="showing-sidebar-modal" aria-expanded="false" tabindex="-1">
 								<span class="toggle-inner">
 									<i class="fa fa-bars fa-lg" aria-hidden="true"></i>
 								</span>
-		</button>
-	</div>
+        </button>
+    </div>
 	<?php
 }
 

@@ -32,5 +32,4 @@ get_header();
 		</div>
 	</div>
 <?php
-get_sidebar( 'alt' );
 get_footer();

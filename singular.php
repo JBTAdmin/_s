@@ -46,5 +46,4 @@
 	</div>
 <?php
 gautam_site_container_after();
-get_sidebar( 'alt' );
 get_footer();

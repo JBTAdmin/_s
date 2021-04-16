@@ -31,5 +31,4 @@ $sidebar_page_class = '';
 		</div>
 	</div>
 <?php
-get_sidebar( 'alt' );
 get_footer();
