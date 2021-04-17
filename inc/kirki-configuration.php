@@ -810,10 +810,10 @@ Kirki::add_field(
 		'settings'    => 'footer_layout_setting',
 		'label'       => esc_attr__( 'Layout', 'gautam' ),
 		'section'     => 'footer',
-		'default'     => '2',
+		'default'     => '1',
 		'multiple'    => 0,
 		'choices'     => array(
-			'2' => esc_attr__( 'Layout 2', 'gautam' ),
+			'1' => esc_attr__( 'Layout 1', 'gautam' ),
 		),
 		'description' => esc_attr__( 'Here you can select which layout will be used to display the blog posts on Home or Index pages.', 'gautam' ),
 	)

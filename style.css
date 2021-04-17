@@ -1517,6 +1517,9 @@ li > ul.sub-menu {
   background: #fff !important;
   color: #000 !important; }
 
+.admin-bar.fixed-header .header-menu-bar {
+  margin-top: 3.2rem; }
+
 .fixed-header.showed .header-menu-bar {
   opacity: 1;
   visibility: visible; }

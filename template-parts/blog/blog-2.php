@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying posts in blog layout.
+ * Template part for displaying posts.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *

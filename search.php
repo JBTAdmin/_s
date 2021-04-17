@@ -9,8 +9,6 @@
  */
 
 get_header();
-
-$sidebar_page_class = '';
 ?>
 
 	<div class="site-container">
@@ -19,7 +17,7 @@ $sidebar_page_class = '';
 
 				<?php gautam_main_content_before(); ?>
 
-				<main id="primary" class="site-main primary-content <?php echo esc_attr( $sidebar_page_class ); ?>">
+				<main id="primary" class="site-main primary-content">
 
 					<?php gautam_entry_content(); ?>
 

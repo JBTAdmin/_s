@@ -14,21 +14,15 @@
  * @package gautam
  */
 
-
+get_header();
+gautam_site_container_before();
 ?>
-
-<?php get_header(); ?>
-    <!--todo may be name of the hooks can be revisited-->
-<?php gautam_site_container_before(); ?>
-
     <div class="site-container">
 
         <div class="wrap">
 
             <div class="main-container">
 				
-<!--				--><?php //gautam_main_content_before(); ?>
-
                 <main id="primary" class="site-main primary-content">
 					
 					<?php gautam_singular_content_before(); ?>
@@ -39,8 +33,6 @@
 
                 </main><!-- #content .site-content -->
 				
-<!--				--><?php //gautam_main_content_after(); ?>
-
             </div><!-- #primary .content-area -->
 
         </div><!-- END .wrap -->

@@ -9,9 +9,8 @@
  */
 
 ?>
-<!--todo having some issues. Need to check. -->
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="inner-entry">
 		<div class="entry-meta">
 			<div class="posted-on">

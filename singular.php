@@ -13,11 +13,9 @@
  * @since       1.0.0
  */
 
+get_header();
+gautam_site_container_before();
 ?>
-
-<?php get_header(); ?>
-<!--todo may be name of the hooks can be revisited-->
-<?php gautam_site_container_before(); ?>
 
 	<div class="site-container">
 

@@ -9,7 +9,6 @@
 
 ?>
 
-<!--search form dispalayed whereever get_search_form() is called.-->
 <div class="search_holder">
     <form role="search" class="search search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>"
           method="GET">

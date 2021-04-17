@@ -167,8 +167,6 @@ function gautam_header_bottom() {
 	do_action( 'gautam_header_bottom' );
 }
 
-
-
 /**
  * Content Top.
  */
@@ -212,7 +210,6 @@ function gautam_entry_before() {
 function gautam_entry_after() {
 	do_action( 'gautam_entry_after' );
 }
-
 
 /**
  * Entry Top.
@@ -352,7 +349,6 @@ function gautam_entry_navigation_before() {
 function gautam_entry_navigation_after() {
 	do_action( 'gautam_entry_navigation_after' );
 }
-
 
 /**
  * Before Main Content

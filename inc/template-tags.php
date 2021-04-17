@@ -237,7 +237,7 @@ function gautam_blog_post_thumbnail( $date, $size, $in_style ) {
 }
 
 /**
- * Pagination Buttons
+ * Post Pagination Buttons.
  */
 function gautam_post_nav() {
 	echo "<div class='gautam-pagination'>";

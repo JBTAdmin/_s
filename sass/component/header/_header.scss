@@ -169,6 +169,10 @@
   //transition: all 0.5s ease-in;
 }
 
+.admin-bar.fixed-header .header-menu-bar {
+  margin-top: 3.2rem;
+}
+
 .fixed-header.showed .header-menu-bar {
   opacity: 1;
   visibility: visible;

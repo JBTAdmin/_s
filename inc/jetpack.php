@@ -25,7 +25,7 @@ function gautam_jetpack_setup() {
 		)
 	);
 
-	// todo it adds CONTENT OPTIONS in customization check if it should be there or not.
+
 	// Add theme support for Responsive Videos.
 	add_theme_support( 'jetpack-responsive-videos' );
 

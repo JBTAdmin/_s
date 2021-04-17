@@ -23,12 +23,12 @@ require get_template_directory() . '/inc/core.php';
 require get_template_directory() . '/inc/template-functions.php';
 
 /**
- * Custom template tags for this theme.
+ * Custom template tags for the theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
 
 /**
- * Registered Theme Sidebars.
+ * Registered Theme widgets.
  */
 require get_template_directory() . '/inc/widgets.php';
 
