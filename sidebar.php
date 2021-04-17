@@ -16,5 +16,5 @@ if ( ! is_active_sidebar( 'gautam-sidebar-right' ) || in_array( get_theme_mod( '
 
 <aside id="primary-sidebar" class="widget-area sidebar-right">
 	<?php dynamic_sidebar( 'gautam-sidebar-right' ); ?>
-</aside><!-- #secondary -->
+</aside><!-- #primary-sidebar -->
 

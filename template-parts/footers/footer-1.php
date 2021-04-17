@@ -45,8 +45,8 @@ $site_info_text_right = 'Crafted with &#10084; by <a href="ipoweruser.com">iPowe
 						<div class="right">
 							<?php echo wp_kses( $site_info_text_right, 'post' ); ?>
 						</div>
-					</div>
-				</div>
+					</div><!-- .site-info-holder -->
+				</div><!-- .row -->
 			</div><!-- .site-info -->
 		</div>
 	</div>

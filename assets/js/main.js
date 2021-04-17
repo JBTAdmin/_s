@@ -80,7 +80,6 @@ document.addEventListener(
 
 		window.addEventListener( "scroll", scrollFunc );
 
-		// When the button is clicked, run our ScrolltoTop function above!
 		scrollToTopButton.addEventListener(
 			"click",
 			function (e) {
@@ -89,12 +88,10 @@ document.addEventListener(
 			}
 		);
 
-		// Let's set up a function that shows our scroll-to-top button if we scroll beyond the height of the initial window.
 		function scrollFunc() {
-			// Get the current scroll value.
+
 			let y = window.scrollY;
 
-			// If the scroll value is greater than the window height, let's add a class to the scroll-to-top button to show it!
 			if (y > 0) {
 				scrollToTopButton.className = "top-link show";
 
@@ -121,11 +118,8 @@ document.addEventListener(
 		}
 
 		function scrollToTop() {
-			// Let's set a variable for the number of pixels we are from the top of the document.
 			const c = document.documentElement.scrollTop || document.body.scrollTop;
 
-			// If that number is greater than 0, we'll scroll back to 0, or the top of the document.
-			// We'll also animate that scroll with requestAnimationFrame.
 			if (c > 0) {
 				window.requestAnimationFrame( scrollToTop );
 				window.scrollTo( 0, c - c / 10 );

@@ -32,11 +32,11 @@ gautam_site_container_before();
 
 					<?php gautam_singular_content_after(); ?>
 
-				</main><!-- #content .site-content -->
+				</main><!-- #primary .primary-content -->
 
 				<?php gautam_main_content_after(); ?>
 
-			</div><!-- #primary .content-area -->
+			</div><!-- .main-container  -->
 
 		</div><!-- END .wrap -->
 
