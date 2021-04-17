@@ -1,10 +1,8 @@
 <?php
 /**
- * Template for displaying search forms in Gautam in widgets.
+ * Template for displaying custom search forms in different places of theme.
  *
  * @package gautam
- *
- * @since 1.0
  */
 
 ?>

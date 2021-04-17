@@ -10,7 +10,6 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package gautam
- * @since 1.0
  */
 
 get_header();

@@ -7,7 +7,11 @@
  * @package gautam
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 ?>
+
 <div id="author-bio" class="author-bio">
 
 	<div id="author-avatar" class="author-avatar"><?php echo get_avatar( get_the_author_meta( 'ID' ), 100 ); ?></div>

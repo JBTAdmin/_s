@@ -2088,6 +2088,10 @@ div[class*="footer-sidebar-"] ul {
 	display: unset;
 }
 
+.site-footer-2-info i {
+	padding: 1rem 2rem;
+}
+
 .site-footer-2-info .site-info-holder {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -2095,6 +2099,9 @@ div[class*="footer-sidebar-"] ul {
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
 	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
 }
 
 @media screen and (max-width: 768px) {

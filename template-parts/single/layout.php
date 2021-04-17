@@ -1,9 +1,8 @@
 <?php
 /**
- * Displayes Content Part.
+ * Template to display single post content part.
  *
- * @package Gautam
- * @since 1.0
+ * @package gautam
  */
 
 gautam_entry_content_before();

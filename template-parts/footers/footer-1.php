@@ -1,18 +1,14 @@
 <?php
 /**
- * Footer #3
+ * Template for displaying the footer
  *
- * @package Gautam
- * @since 1.0
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package gautam
  */
-
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
 
 $site_info_text_left  = get_theme_mod( 'footer_copyright', 'Powered by <a href="https://www.wordpress.org">WordPress</a>' );
 $site_info_text_right = 'Crafted with &#10084; by <a href="ipoweruser.com">iPowerUser</a> Team';
-
 ?>
 
 <div id="colophon" class="site-footer-2-main">
@@ -45,7 +41,7 @@ $site_info_text_right = 'Crafted with &#10084; by <a href="ipoweruser.com">iPowe
 						<div class="left">
 							<?php echo wp_kses( $site_info_text_left, 'post' ); ?>
 						</div>
-						&nbsp; • &nbsp;
+						<i class="fa fa-ellipsis-h" aria-hidden="true"></i>
 						<div class="right">
 							<?php echo wp_kses( $site_info_text_right, 'post' ); ?>
 						</div>

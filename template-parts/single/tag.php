@@ -1,14 +1,10 @@
 <?php
 /**
- * Displayes Tags.
+ * Template to display post tags.
  *
- * @package Gautam
- * @since 1.0
+ * @package gautam
  */
 
-/**
- * Do not allow direct script access.
- */
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }

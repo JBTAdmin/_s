@@ -3,9 +3,6 @@
  * Functions which enhance the theme by hooking into WordPress.
  *
  * @package gautam
- * @author ipower
- * @copyright   Copyright (c) 2021, Gautam
- * @since       1.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

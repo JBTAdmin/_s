@@ -9,8 +9,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-page
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#attachment
  *
- * @package     Gautam
- * @since       1.0.0
+ * @package     gautam
  */
 
 get_header();

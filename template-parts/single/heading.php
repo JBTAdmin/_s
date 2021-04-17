@@ -1,9 +1,8 @@
 <?php
 /**
- * Do not allow direct script access.
+ * Template to display post title.
  *
- * @package Gautam
- * @since 1.0
+ * @package gautam
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

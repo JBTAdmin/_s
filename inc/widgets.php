@@ -2,8 +2,7 @@
 /**
  * Sidebar widget areas.
  *
- * @package Gautam
- * @since   1.0.0
+ * @package gautam
  */
 
 /**

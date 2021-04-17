@@ -1,11 +1,13 @@
 <?php
 /**
- * Display Post Navigation.
+ * Template to display post navigation.
  *
- * @package Gautam
- * @since 1.0
+ * @package gautam
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 $next_post     = get_next_post();
 $previous_post = get_previous_post();
 

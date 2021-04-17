@@ -20,9 +20,14 @@
 //  padding: 0;
 //}
 
+.site-footer-2-info i {
+  padding: 1rem 2rem;
+}
+
 .site-footer-2-info .site-info-holder {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 @media screen and (max-width: 768px) {
