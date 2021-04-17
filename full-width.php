@@ -17,27 +17,27 @@
 get_header();
 gautam_site_container_before();
 ?>
-    <div class="site-container">
+	<div class="site-container">
 
-        <div class="wrap">
+		<div class="wrap">
 
-            <div class="main-container">
-				
-                <main id="primary" class="site-main primary-content">
-					
+			<div class="main-container">
+
+				<main id="primary" class="site-main primary-content">
+
 					<?php gautam_singular_content_before(); ?>
-					
+
 					<?php gautam_singular_content(); ?>
-					
+
 					<?php gautam_singular_content_after(); ?>
 
-                </main><!-- #content .site-content -->
-				
-            </div><!-- #primary .content-area -->
+				</main><!-- #content .site-content -->
 
-        </div><!-- END .wrap -->
+			</div><!-- #primary .content-area -->
 
-    </div>
+		</div><!-- END .wrap -->
+
+	</div>
 <?php
 gautam_site_container_after();
 get_footer();
