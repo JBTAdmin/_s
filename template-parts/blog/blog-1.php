@@ -17,7 +17,7 @@
 				<?php
 				if ( is_sticky() ) :
 					?>
-					<span class="badge">
+					<span class="sticky-badge">
 					<i class="fa fa-tags fa-lg" aria-hidden="true"></i>
 					</span>
 					<?php

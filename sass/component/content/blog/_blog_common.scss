@@ -88,7 +88,7 @@
     z-index: 1;
   }
 
-  & .sticky .post-thumbnail .badge {
+  & .post-thumbnail .sticky-badge {
     font-size: 1.25rem;
     position: absolute;
     z-index: 1;
@@ -156,4 +156,9 @@
 
 .page-header {
   //margin-bottom: 5rem;
+}
+
+//Posts Navigation
+.gautam-pagination .page-numbers {
+  margin: 0;
 }

@@ -114,3 +114,15 @@ body.admin-bar aside {
     order: 1;
   }
 }
+
+.widget ul li:before {
+  content: "\f105";
+  padding-right: 10px;
+  color: #111;
+  font: normal normal normal 14px/1 FontAwesome;
+  text-rendering: auto;
+}
+
+.widget ul li a {
+  color: #111;
+}

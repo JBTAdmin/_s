@@ -7,7 +7,6 @@
  * @package gautam
  */
 
-get_theme_mod( 'sidebar_listing', 'right' );
 $option = array( 'content-only', 'sidebar-right' );
 
 if ( ! is_active_sidebar( 'gautam-sidebar-left' ) || in_array( get_theme_mod( 'sidebar_layout_setting', 'content-only' ), $option, true ) ) {

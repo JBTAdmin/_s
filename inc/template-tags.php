@@ -154,7 +154,7 @@ function gautam_no_post_thumbnail( $date = '' ) {
 	<div class="post-thumbnail no-post-thumbnail">
 		<a href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 			<?php if ( is_sticky() ) : ?>
-				<span class="badge">
+				<span class="sticky-badge">
 					<i class="fa fa-tags fa-lg" aria-hidden="true"></i>
 				</span>
 			<?php endif; ?>
@@ -190,7 +190,7 @@ function gautam_blog_post_thumbnail( $date, $size, $in_style ) {
 				<?php
 				if ( is_sticky() ) :
 					?>
-					<span class="badge">
+					<span class="sticky-badge">
 						<i class="fa fa-tags fa-lg" aria-hidden="true"></i>
 				</span>
 				<?php endif; ?>
@@ -223,7 +223,7 @@ function gautam_blog_post_thumbnail( $date, $size, $in_style ) {
 				);
 				if ( is_sticky() ) :
 					?>
-					<span class="badge">
+					<span class="sticky-badge">
 						<i class="fa fa-tags fa-lg" aria-hidden="true"></i>
 					</span>
 				<?php endif; ?>
@@ -243,8 +243,9 @@ function gautam_post_nav() {
 	echo "<div class='gautam-pagination'>";
 	the_posts_pagination(
 		array(
-			'prev_text' => __( '&lt;', 'gautam' ),
-			'next_text' => __( '&gt;', 'gautam' ),
+			'mid_size'           => 0,
+			'prev_text' => '<i class="fa fa-angle-left"></i>' . '<span class="screen-reader-text">' . __( 'Previous Page', 'gautam' ) . '</span>',
+			'next_text' => '<i class="fa fa-angle-right"></i>' . '<span class="screen-reader-text">' . __( 'Next Page', 'gautam' ) . '</span>',
 			'type'      => 'list',
 		)
 	);
