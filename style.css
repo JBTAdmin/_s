@@ -2615,8 +2615,8 @@ body.admin-bar aside {
 @media screen and (max-width: 1000px) {
   .primary-content,
   aside {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%; }
+    -ms-flex-preferred-size: 100% !important;
+        flex-basis: 100% !important; }
   aside {
     max-width: 100%;
     -webkit-box-ordinal-group: 2;

@@ -107,7 +107,7 @@ body.admin-bar aside {
 @media screen and (max-width: 1000px) {
   .primary-content,    // todo see where it can be moved and is it needed.
   aside {
-    flex-basis: 100%;
+    flex-basis: 100% !important;
   }
   aside {
     max-width: 100%;

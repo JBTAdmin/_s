@@ -322,9 +322,9 @@ Kirki::add_field(
 	'gautam_theme_options',
 	array(
 		'type'        => 'dimensions',
-		'settings'    => 'sidebar_padding_setting',
-		'label'       => esc_attr__( 'Sidebar Padding (Use CSS units)', 'gautam' ),
-		'description' => 'Sidebar Only',
+		'settings'    => 'right_sidebar_padding_setting',
+		'label'       => esc_attr__( 'Right Sidebar Padding (Use CSS units)', 'gautam' ),
+		'description' => 'Right Sidebar Only',
 		'section'     => 'padding_margin',
 		'default'     => array(
 			'padding-top'    => '8rem',
@@ -342,7 +342,7 @@ Kirki::add_field(
 		),
 		'output'      => array(
 			array(
-				'element' => 'aside:not(.sidebar-alt)',
+				'element' => '.sidebar-right',
 			),
 		),
 	)
@@ -352,9 +352,9 @@ Kirki::add_field(
 	'gautam_theme_options',
 	array(
 		'type'        => 'dimensions',
-		'settings'    => 'sidebar_margin_setting',
-		'label'       => esc_attr__( 'Sidebar Margin (Use CSS units)', 'gautam' ),
-		'description' => 'Sidebar Only',
+		'settings'    => 'right_sidebar_margin_setting',
+		'label'       => esc_attr__( 'Right Sidebar Margin (Use CSS units)', 'gautam' ),
+		'description' => 'Right Sidebar Only',
 		'section'     => 'padding_margin',
 		'default'     => array(
 			'margin-top'    => '0',
@@ -372,7 +372,68 @@ Kirki::add_field(
 		),
 		'output'      => array(
 			array(
-				'element' => 'aside:not(.sidebar-alt)',
+				'element' => '.sidebar-right',
+			),
+		),
+	)
+);
+
+
+Kirki::add_field(
+	'gautam_theme_options',
+	array(
+		'type'        => 'dimensions',
+		'settings'    => 'left_sidebar_padding_setting',
+		'label'       => esc_attr__( 'Left Sidebar Padding (Use CSS units)', 'gautam' ),
+		'description' => 'Left Sidebar Only',
+		'section'     => 'padding_margin',
+		'default'     => array(
+			'padding-top'    => '8rem',
+			'padding-bottom' => '0',
+			'padding-left'   => '0',
+			'padding-right'  => '0',
+		),
+		'choices'     => array(
+			'labels' => array(
+				'padding-top'    => esc_html__( 'Padding Top', 'gautam' ),
+				'padding-bottom' => esc_html__( 'Padding Bottom', 'gautam' ),
+				'padding-left'   => esc_html__( 'Padding Left', 'gautam' ),
+				'padding-right'  => esc_html__( 'Padding Right', 'gautam' ),
+			),
+		),
+		'output'      => array(
+			array(
+				'element' => '.sidebar-left',
+			),
+		),
+	)
+);
+
+Kirki::add_field(
+	'gautam_theme_options',
+	array(
+		'type'        => 'dimensions',
+		'settings'    => 'left_sidebar_margin_setting',
+		'label'       => esc_attr__( 'Left Sidebar Margin (Use CSS units)', 'gautam' ),
+		'description' => 'Left Sidebar Only',
+		'section'     => 'padding_margin',
+		'default'     => array(
+			'margin-top'    => '0',
+			'margin-bottom' => '0',
+			'margin-left'   => '0',
+			'margin-right'  => '3rem',
+		),
+		'choices'     => array(
+			'labels' => array(
+				'margin-top'    => esc_html__( 'Margin Top', 'gautam' ),
+				'margin-bottom' => esc_html__( 'Margin Bottom', 'gautam' ),
+				'margin-left'   => esc_html__( 'Margin Left', 'gautam' ),
+				'margin-right'  => esc_html__( 'Margin Right', 'gautam' ),
+			),
+		),
+		'output'      => array(
+			array(
+				'element' => '.sidebar-left',
 			),
 		),
 	)
