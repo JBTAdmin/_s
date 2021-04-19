@@ -12,35 +12,36 @@
  * @package     gautam
  */
 
-get_header();
-gautam_site_container_before();
 ?>
+<?php get_header(); ?>
+<?php gautam_site_container_before(); ?>
 
-	<div class="site-container">
+<div class="site-container">
 
-		<div class="wrap">
+	<div class="wrap">
 
-			<div class="main-container">
+		<div class="main-container">
 
-				<?php gautam_main_content_before(); ?>
+			<?php gautam_main_content_before(); ?>
 
-				<main id="primary" class="site-main primary-content">
+			<main id="primary" class="site-main primary-content">
 
-					<?php gautam_singular_content_before(); ?>
+				<?php gautam_singular_content_before(); ?>
 
-					<?php gautam_singular_content(); ?>
+				<?php gautam_singular_content(); ?>
 
-					<?php gautam_singular_content_after(); ?>
+				<?php gautam_singular_content_after(); ?>
 
-				</main><!-- #primary .primary-content -->
+			</main><!-- #primary .primary-content -->
 
-				<?php gautam_main_content_after(); ?>
+			<?php gautam_main_content_after(); ?>
 
-			</div><!-- .main-container  -->
+		</div><!-- .main-container  -->
 
-		</div><!-- END .wrap -->
+	</div><!-- END .wrap -->
 
-	</div>
+</div>
+
+<?php gautam_site_container_after(); ?>
 <?php
-gautam_site_container_after();
 get_footer();

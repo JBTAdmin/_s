@@ -17,7 +17,7 @@
 
 <?php gautam_footer_after(); ?>
 
-</div>
+</div><!-- END #page -->
 <?php wp_footer(); ?>
 </body>
 </html>

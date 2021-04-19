@@ -31,14 +31,14 @@ if ( post_password_required() ) {
 			$gautam_comment_count = get_comments_number();
 			if ( '1' === $gautam_comment_count ) {
 				printf(
-					/* translators: 1: title. */
+				/* translators: 1: title. */
 					esc_html__( 'One thought', 'gautam' )
 					// ,
 					// '<span>' . wp_kses_post( get_the_title() ) . '</span>'
 				);
 			} else {
 				printf(
-					/* translators: 1: comment count number, 2: title. */
+				/* translators: 1: comment count number, 2: title. */
 					esc_html( _nx( '%1$s thought ', '%1$s thoughts ', $gautam_comment_count, 'comments title', 'gautam' ) ),
 					number_format_i18n( $gautam_comment_count ) // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 					// '<span>' . wp_kses_post( get_the_title() ) . '</span>'
@@ -70,24 +70,39 @@ if ( post_password_required() ) {
 			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'gautam' ); ?></p>
 			<?php
 		endif;
-
 	endif; // Check for have_comments().
 
 	$commenter = wp_get_current_commenter();
 	$req       = get_option( 'require_name_email' );
-	$aria_req  = ( $req ? " aria-required='true'" : '' );
+	$aria_req  = $req ? " aria-required='true'" : '';
 	$fields    = array(
-		'author' => '<p class="comment-form-author">' .
-					'<input id="author" name="author" type="text" placeholder="Name*" required value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></p>',
-		'email'  => '<p class="comment-form-email">' .
-					'<input id="email" name="email" type="text" placeholder="Email*" required value="' . esc_attr( $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></p>',
-		'url'    => '<p class="comment-form-url">' .
-					'<input id="url" name="url" type="text" placeholder="Website" required value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30"' . $aria_req . ' /></p>',
+		'author' =>
+			'<p class="comment-form-author">' .
+			'<input id="author" name="author" type="text" placeholder="Name*" required value="' .
+			esc_attr( $commenter['comment_author'] ) .
+			'" size="30"' .
+			$aria_req .
+			' /></p>',
+		'email'  =>
+			'<p class="comment-form-email">' .
+			'<input id="email" name="email" type="text" placeholder="Email*" required value="' .
+			esc_attr( $commenter['comment_author_email'] ) .
+			'" size="30"' .
+			$aria_req .
+			' /></p>',
+		'url'    =>
+			'<p class="comment-form-url">' .
+			'<input id="url" name="url" type="text" placeholder="Website" required value="' .
+			esc_attr( $commenter['comment_author_url'] ) .
+			'" size="30"' .
+			$aria_req .
+			' /></p>',
 	);
 
-	$comment_field = '<p class="comment-form-comment">' .
-					'<textarea id="comment" name="comment" placeholder="Express your thoughts" cols="45" rows="8" aria-required="true"></textarea>' .
-					'</p>';
+	$comment_field =
+		'<p class="comment-form-comment">' .
+		'<textarea id="comment" name="comment" placeholder="Express your thoughts" cols="45" rows="8" aria-required="true"></textarea>' .
+		'</p>';
 
 	$comments_args = array(
 		'fields'        => $fields,

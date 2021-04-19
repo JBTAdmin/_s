@@ -7,25 +7,31 @@
  * @package gautam
  */
 
-get_header();
 ?>
 
-	<div class="site-container">
-		<div class="wrap">
-			<div class="main-container">
+<?php get_header(); ?>
 
-				<?php gautam_main_content_before(); ?>
+<div class="site-container">
 
-				<main id="primary" class="site-main primary-content">
+	<div class="wrap">
 
-					<?php gautam_entry_content(); ?>
+		<div class="main-container">
 
-				</main><!-- #main -->
+			<?php gautam_main_content_before(); ?>
 
-				<?php gautam_main_content_after(); ?>
+			<main id="primary" class="site-main primary-content">
 
-			</div>
+				<?php gautam_entry_content(); ?>
+
+			</main><!-- #main -->
+
+			<?php gautam_main_content_after(); ?>
+
 		</div>
+
 	</div>
+
+</div>
+
 <?php
 get_footer();

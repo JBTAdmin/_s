@@ -5,8 +5,9 @@
  * @package gautam
  */
 
-gautam_entry_content_before();
 ?>
+
+<?php gautam_entry_content_before(); ?>
 
 <div class="entry-content">
 	<?php

@@ -10,7 +10,7 @@
  */
 
 ?>
-<!doctype html>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -20,12 +20,20 @@
 </head>
 
 <body <?php body_class(); ?>>
+
 <?php wp_body_open(); ?>
+
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary">
+
 		<?php esc_html_e( 'Skip to content', 'gautam' ); ?></a>
+
 	<header id="masthead" class="site-header">
+
 		<?php gautam_header_before(); ?>
+
 		<?php gautam_header(); ?>
+
 		<?php gautam_header_after(); ?>
+
 	</header><!-- #masthead -->

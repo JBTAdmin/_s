@@ -12,10 +12,15 @@ $site_info_text_right = 'Crafted with &#10084; by <a href="ipoweruser.com">iPowe
 ?>
 
 <div id="colophon" class="site-footer-2-main">
+
 	<div class="wrap">
+
 		<div class="main-footer-2">
+
 			<?php if ( has_nav_menu( 'footer-1' ) || is_customize_preview() ) : ?>
+
 				<nav class="footer-navigation" aria-label="<?php esc_attr_e( 'Footer Menu', 'gautam' ); ?>">
+
 					<?php
 					wp_nav_menu(
 						array(
@@ -25,11 +30,15 @@ $site_info_text_right = 'Crafted with &#10084; by <a href="ipoweruser.com">iPowe
 						)
 					);
 					?>
+
 				</nav>
+
 			<?php endif; ?>
 
 		</div>
+
 	</div>
+
 </div>
 
 <div class="site-footer-2-info">

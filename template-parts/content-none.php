@@ -10,6 +10,7 @@
 ?>
 
 <section class="no-results not-found">
+
 	<div class="page-header">
 		<h3 class="page-title"><?php esc_html_e( 'Nothing Found', 'gautam' ); ?></h3>
 	</div><!-- .page-header -->
@@ -48,4 +49,5 @@
 		endif;
 		?>
 	</div><!-- .page-content -->
+
 </section><!-- .no-results -->
