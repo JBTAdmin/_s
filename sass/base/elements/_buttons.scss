@@ -1,4 +1,4 @@
-button:not(.toggle):not(.customize-partial-edit-shortcut-button),
+button:not(.toggle),
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -17,10 +17,21 @@ input[type="submit"] {
   font-weight: 600;
 
   &:hover,
-  &:active,
-  &:focus {
+  &:active {
     border-color: $button__hover-background;
     background-color: $button__hover-background;
     color: $button__hover-text-color;
+  }
+}
+
+.mejs-button > button {
+  &:hover,
+  &:active,
+  &:focus {
+    border-color: unset;
+    background-color: unset;
+    color: unset;
+    transition: unset;
+    border-radius: unset;
   }
 }
