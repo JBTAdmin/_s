@@ -1,2 +1,5 @@
+= 1.0.1 =
+* Updated: WordPress 5.7 compatibility.
+
 = 1.0.0 =
 * Initial release
