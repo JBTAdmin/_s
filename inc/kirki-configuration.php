@@ -151,7 +151,7 @@ Kirki::add_field(
 		'settings'    => 'general_search_visibility',
 		'label'       => esc_attr__( 'Search Visibility', 'gautam' ),
 		'section'     => 'general',
-		'default'     => 'fixed',
+		'default'     => 'header',
 		'multiple'    => 0,
 		'choices'     => array(
 			'none'   => esc_attr__( 'None', 'gautam' ),

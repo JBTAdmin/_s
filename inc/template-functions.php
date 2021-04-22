@@ -393,7 +393,7 @@ if ( ! function_exists( 'gautam_footer_search_layout' ) ) {
 	 * @since 1.0.0
 	 */
 	function gautam_footer_search_layout() {
-		if ( 'fixed' === get_theme_mod( 'general_search_visibility', 'fixed' ) ) {
+		if ( 'fixed' === get_theme_mod( 'general_search_visibility', 'header' ) ) {
 			?>
 			<a class="gautam-search footer-search" href="#">
 				<i class="fa fa-search fa-lg"></i>
@@ -597,7 +597,7 @@ function gautam_site_branding() {
  * @since 1.0.0
  */
 function gautam_header_search() {
-	if ( 'header' === get_theme_mod( 'general_search_visibility', 'fixed' ) ) {
+	if ( 'header' === get_theme_mod( 'general_search_visibility', 'header' ) ) {
 		?>
 		<div class="gautam-search header-search" role="button" tabindex="0">
 			<i class="fa fa-search fa-lg"></i>

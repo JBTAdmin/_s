@@ -1548,6 +1548,8 @@ li > ul.sub-menu {
 .nav-links h2 {
 	margin-bottom: 0;
 	font-size: 2.5rem;
+	color: inherit;
+	text-decoration: underline;
 }
 
 .navigation li {
@@ -3705,8 +3707,7 @@ ul.gautam-social-holder > li {
 /* Author Description
 --------------------------------------------- */
 .author-bio {
-	padding: 2rem 0;
-	margin: 3rem 0;
+	margin: 8rem 0;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -3751,6 +3752,7 @@ ul.gautam-social-holder > li {
 }
 
 .author-avatar {
+	margin-top: -5rem;
 	-webkit-box-flex: 0;
 	-ms-flex: 0 0 100px;
 	flex: 0 0 100px;
