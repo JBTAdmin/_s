@@ -243,9 +243,9 @@ function gautam_post_nav() {
 	echo "<div class='gautam-pagination'>";
 	the_posts_pagination(
 		array(
-			'mid_size'           => 0,
-			'prev_text' => '<i class="fa fa-angle-left"></i>' . '<span class="screen-reader-text">' . __( 'Previous Page', 'gautam' ) . '</span>',
-			'next_text' => '<i class="fa fa-angle-right"></i>' . '<span class="screen-reader-text">' . __( 'Next Page', 'gautam' ) . '</span>',
+			'mid_size'  => 0,
+			'prev_text' => '<i class="fa fa-angle-left"></i><span class="screen-reader-text">' . __( 'Previous Page', 'gautam' ) . '</span>',
+			'next_text' => '<i class="fa fa-angle-right"></i><span class="screen-reader-text">' . __( 'Next Page', 'gautam' ) . '</span>',
 			'type'      => 'list',
 		)
 	);

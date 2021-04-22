@@ -31,17 +31,14 @@ if ( post_password_required() ) {
 			$gautam_comment_count = get_comments_number();
 			if ( '1' === $gautam_comment_count ) {
 				printf(
-				/* translators: 1: title. */
+					/* translators: 1: title. */
 					esc_html__( 'One thought', 'gautam' )
-					// ,
-					// '<span>' . wp_kses_post( get_the_title() ) . '</span>'
 				);
 			} else {
 				printf(
-				/* translators: 1: comment count number, 2: title. */
+					/* translators: 1: comment count number, 2: title. */
 					esc_html( _nx( '%1$s thought ', '%1$s thoughts ', $gautam_comment_count, 'comments title', 'gautam' ) ),
 					number_format_i18n( $gautam_comment_count ) // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-					// '<span>' . wp_kses_post( get_the_title() ) . '</span>'
 				);
 			}
 			?>
