@@ -7,11 +7,11 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: custom-background, custom-logo, custom-menu, custom-colors, featured-images, threaded-comments, two-columns, right-sidebar, left-sidebar, blog, news, featured-images, theme-options
 
-Gautam is fast, customizable & beautiful WordPress theme mainly suitable for blog. But it can also be used for personal portfolio, business website.
+Gautam is a fast, minimal, clean & customizable WordPress theme suitable mainly for the blog. But it can be used for personal portfolios, business websites also, and it is built with SEO in mind.
 
 == Description ==
 
-Gautam is fast, customizable & beautiful WordPress theme suitable mainly for blog. But it also be used for personal portfolio, business website. Built with SEO in mind.
+Gautam is a fast, minimal, clean & customizable WordPress theme suitable mainly for the blog. But it can be used for personal portfolios, business websites also, and it is built with SEO in mind.
 
 == Installation ==
 
@@ -23,15 +23,9 @@ Gautam is fast, customizable & beautiful WordPress theme suitable mainly for blo
 
 == Frequently Asked Questions ==
 
-= How to Install Theme =
-
-1. In your admin panel, go to Appearance > Themes and click the Add New button and Search for construc, OR
-2. If you have theme zip file, click Upload and choose File, then select the theme's .zip file. Click Install Now.
-3. Click Activate to use your new theme right away.
-
 = Does this theme support any plugins? =
 
-gautam includes support for WooCommerce and for Infinite Scroll in Jetpack.  ????????
+gautam includes support for Jetpack (Excluding Infinite Scroll).
 
 == License ==
 
@@ -40,7 +34,7 @@ Gautam is distributed under the terms of the GNU GPL.
 
 == Changelog ==
 
-= 1.0.0 - March 30 2021 =
+= 1.0.0 - Apr 20 2021 =
 * Initial release
 
 == Credits ==
