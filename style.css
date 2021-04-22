@@ -1282,7 +1282,7 @@ li > ul.sub-menu {
 		visibility: hidden;
 		-webkit-box-shadow: 0 7px 32px 0 rgba(0, 0, 0, 0.12);
 		box-shadow: 0 7px 32px 0 rgba(0, 0, 0, 0.12);
-		min-width: 21rem;
+		min-width: 24rem;
 		-webkit-transition: opacity 0.4s ease-in-out;
 		-o-transition: opacity 0.4s ease-in-out;
 		transition: opacity 0.4s ease-in-out;
