@@ -23,7 +23,8 @@ if ( ! function_exists( 'gautam_theme_customize_register' ) ) :
 
 		$wp_customize->get_section( 'title_tagline' )->panel = 'theme_settings_panel';
 
-		$wp_customize->get_section( 'title_tagline' )->title = esc_html__( 'Site Identity', 'gautam' );
+		$wp_customize->get_section( 'title_tagline' )->title    = esc_html__( 'Site Identity', 'gautam' );
+		$wp_customize->get_section( 'title_tagline' )->priority = 10;
 	}
 endif;
 add_action( 'customize_register', 'gautam_theme_customize_register' );
@@ -68,7 +69,7 @@ Kirki::add_section(
 		'title'       => esc_attr__( 'General', 'gautam' ),
 		'description' => '',
 		'panel'       => 'theme_settings_panel',
-		'priority'    => 1,
+		'priority'    => 20,
 	)
 );
 
@@ -194,7 +195,7 @@ Kirki::add_section(
 		'title'       => esc_attr__( 'Padding & Margin', 'gautam' ),
 		'description' => '',
 		'panel'       => 'theme_settings_panel',
-		'priority'    => 2,
+		'priority'    => 30,
 	)
 );
 
@@ -447,7 +448,7 @@ Kirki::add_section(
 		'title'       => esc_attr__( 'Header', 'gautam' ),
 		'description' => '',
 		'panel'       => 'theme_settings_panel',
-		'priority'    => 4,
+		'priority'    => 40,
 	)
 );
 
@@ -644,7 +645,7 @@ Kirki::add_section(
 		'title'       => esc_attr__( 'Blog', 'gautam' ),
 		'description' => '',
 		'panel'       => 'theme_settings_panel',
-		'priority'    => 5,
+		'priority'    => 50,
 	)
 );
 
@@ -674,7 +675,7 @@ Kirki::add_section(
 		'title'       => esc_attr__( 'Single Post', 'gautam' ),
 		'description' => esc_attr__( 'These settings affect single post display.', 'gautam' ),
 		'panel'       => 'theme_settings_panel',
-		'priority'    => 6,
+		'priority'    => 60,
 	)
 );
 
@@ -816,7 +817,7 @@ Kirki::add_section(
 		'title'       => esc_attr__( 'Sidebars', 'gautam' ),
 		'description' => esc_attr__( 'Select Sidebar Position for Site.', 'gautam' ),
 		'panel'       => 'theme_settings_panel',
-		'priority'    => 7,
+		'priority'    => 70,
 	)
 );
 
@@ -848,7 +849,7 @@ Kirki::add_section(
 		'title'       => esc_attr__( 'Footer', 'gautam' ),
 		'description' => '',
 		'panel'       => 'theme_settings_panel',
-		'priority'    => 8,
+		'priority'    => 80,
 	)
 );
 
@@ -936,7 +937,7 @@ Kirki::add_section(
 		'title'       => esc_attr__( 'Typography', 'gautam' ),
 		'description' => '',
 		'panel'       => 'theme_settings_panel',
-		'priority'    => 9,
+		'priority'    => 90,
 	)
 );
 
@@ -1146,7 +1147,7 @@ Kirki::add_section(
 		'title'       => esc_attr__( 'Colors', 'gautam' ),
 		'description' => '',
 		'panel'       => 'theme_settings_panel',
-		'priority'    => 10,
+		'priority'    => 100,
 	)
 );
 
@@ -1303,7 +1304,7 @@ Kirki::add_section(
 		'title'       => esc_attr__( 'Social Media', 'gautam' ),
 		'description' => '',
 		'panel'       => 'theme_settings_panel',
-		'priority'    => 10,
+		'priority'    => 110,
 	)
 );
 
