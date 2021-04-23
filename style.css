@@ -922,6 +922,7 @@ blockquote {
 	max-width: 17rem;
 	max-height: 10rem;
 	vertical-align: middle;
+	border-radius: unset;
 }
 
 /* Captions

@@ -568,15 +568,14 @@ function gautam_site_branding() {
 	?>
 	<div class="site-branding">
 		<?php
-		the_custom_logo();
-
-		if ( ! get_theme_mod( 'custom_logo' ) ) :
+		if ( get_theme_mod( 'logo_text_toggle', true ) ) {
 			?>
-			<div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"
-										rel="home"><?php bloginfo( 'name' ); ?></a></div>
+			<div class="site-title">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+			</div>
 			<?php
 			$gautam_description = get_bloginfo( 'description', 'display' );
-			if ( $gautam_description || is_customize_preview() ) :
+			if ( $gautam_description || is_customize_preview() ) {
 				?>
 				<p class="site-description">
 					<?php
@@ -584,8 +583,10 @@ function gautam_site_branding() {
 					?>
 				</p>
 				<?php
-			endif;
-		endif;
+			}
+		} else {
+			the_custom_logo();
+		}
 		?>
 	</div>
 	<?php

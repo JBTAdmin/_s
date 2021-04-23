@@ -62,6 +62,39 @@ Kirki::add_panel(
 	)
 );
 
+// SECTION: Site Identity (default WordPress title_tagline modified).
+Kirki::add_field(
+	'gautam_theme_options',
+	array(
+		'type'        => 'number',
+		'settings'    => 'logo_width',
+		'label'       => esc_attr__( 'Logo width (px)', 'gautam' ),
+		'description' => esc_attr__( 'example: 150', 'gautam' ),
+		'section'     => 'title_tagline',
+		'default'     => '170',
+		'output'      => array(
+			array(
+				'element'  => '.custom-logo-link img',
+				'property' => 'max-width',
+				'units'    => 'px',
+			),
+		),
+	)
+);
+
+Kirki::add_field(
+	'gautam_theme_options',
+	array(
+		'type'        => 'toggle',
+		'settings'    => 'logo_text_toggle',
+		'label'       => esc_attr__( 'Text logo', 'gautam' ),
+		'description' => esc_attr__( 'Enable to use text logo instead of image.', 'gautam' ),
+		'section'     => 'title_tagline',
+		'default'     => '1',
+	)
+);
+// SECTION: SITE IDENTITY.
+
 // SECTION: GENERAL.
 Kirki::add_section(
 	'general',
