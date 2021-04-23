@@ -99,28 +99,26 @@ Kirki::add_field(
 Kirki::add_section(
 	'general',
 	array(
-		'title'       => esc_attr__( 'General', 'gautam' ),
-		'description' => '',
-		'panel'       => 'theme_settings_panel',
-		'priority'    => 20,
+		'title'    => esc_attr__( 'General', 'gautam' ),
+		'panel'    => 'theme_settings_panel',
+		'priority' => 20,
 	)
 );
 
 Kirki::add_field(
 	'gautam_theme_options',
 	array(
-		'type'        => 'slider',
-		'settings'    => 'slider_setting',
-		'label'       => esc_attr__( 'Container Width (px)', 'gautam' ),
-		'description' => '',
-		'section'     => 'general',
-		'default'     => '1150',
-		'choices'     => array(
+		'type'     => 'slider',
+		'settings' => 'slider_setting',
+		'label'    => esc_attr__( 'Container Width (px)', 'gautam' ),
+		'section'  => 'general',
+		'default'  => '1150',
+		'choices'  => array(
 			'min'  => 900,
 			'max'  => 1900,
 			'step' => 10,
 		),
-		'output'      => array(
+		'output'   => array(
 			array(
 				'element'  => '.wrap',
 				'property' => 'max-width',
@@ -225,10 +223,9 @@ Kirki::add_field(
 Kirki::add_section(
 	'padding_margin',
 	array(
-		'title'       => esc_attr__( 'Padding & Margin', 'gautam' ),
-		'description' => '',
-		'panel'       => 'theme_settings_panel',
-		'priority'    => 30,
+		'title'    => esc_attr__( 'Padding & Margin', 'gautam' ),
+		'panel'    => 'theme_settings_panel',
+		'priority' => 30,
 	)
 );
 
@@ -478,10 +475,9 @@ Kirki::add_field(
 Kirki::add_section(
 	'header',
 	array(
-		'title'       => esc_attr__( 'Header', 'gautam' ),
-		'description' => '',
-		'panel'       => 'theme_settings_panel',
-		'priority'    => 40,
+		'title'    => esc_attr__( 'Header', 'gautam' ),
+		'panel'    => 'theme_settings_panel',
+		'priority' => 40,
 	)
 );
 
@@ -505,12 +501,11 @@ Kirki::add_field(
 Kirki::add_field(
 	'gautam_theme_options',
 	array(
-		'type'        => 'background',
-		'settings'    => 'color_site_header',
-		'label'       => esc_attr__( 'Header Background Color', 'gautam' ),
-		'description' => '',
-		'section'     => 'header',
-		'default'     => array(
+		'type'     => 'background',
+		'settings' => 'color_site_header',
+		'label'    => esc_attr__( 'Header Background Color', 'gautam' ),
+		'section'  => 'header',
+		'default'  => array(
 			'background-color'      => 'transparent',
 			'background-image'      => '',
 			'background-repeat'     => 'repeat',
@@ -518,7 +513,7 @@ Kirki::add_field(
 			'background-size'       => 'cover',
 			'background-attachment' => 'scroll',
 		),
-		'output'      => array(
+		'output'   => array(
 			array(
 				'element' => '.header-menu-bar',
 			),
@@ -529,13 +524,12 @@ Kirki::add_field(
 Kirki::add_field(
 	'gautam_theme_options',
 	array(
-		'type'        => 'color',
-		'settings'    => 'color_site_title_text',
-		'label'       => esc_attr__( 'Color', 'gautam' ),
-		'description' => '',
-		'section'     => 'header',
-		'default'     => '#000',
-		'output'      => array(
+		'type'     => 'color',
+		'settings' => 'color_site_title_text',
+		'label'    => esc_attr__( 'Color', 'gautam' ),
+		'section'  => 'header',
+		'default'  => '#000',
+		'output'   => array(
 			array(
 				'element'  => '.header-menu-bar',
 				'property' => 'color',
@@ -586,17 +580,16 @@ Kirki::add_field(
 Kirki::add_field(
 	'gautam_theme_options',
 	array(
-		'type'        => 'radio-buttonset',
-		'settings'    => 'main_menu_font_decoration',
-		'label'       => esc_attr__( 'Menu font decoration', 'gautam' ),
-		'section'     => 'header',
-		'default'     => 'none',
-		'choices'     => array(
+		'type'     => 'radio-buttonset',
+		'settings' => 'main_menu_font_decoration',
+		'label'    => esc_attr__( 'Menu font decoration', 'gautam' ),
+		'section'  => 'header',
+		'default'  => 'none',
+		'choices'  => array(
 			'uppercase' => esc_attr__( 'UPPERCASE', 'gautam' ),
 			'none'      => esc_attr__( 'None', 'gautam' ),
 		),
-		'description' => '',
-		'output'      => array(
+		'output'   => array(
 			array(
 				'element'  => '.header-menu',
 				'property' => 'text-transform',
@@ -608,18 +601,17 @@ Kirki::add_field(
 Kirki::add_field(
 	'gautam_theme_options',
 	array(
-		'type'        => 'radio-buttonset',
-		'settings'    => 'main_menu_font_weight',
-		'label'       => esc_attr__( 'Menu font weight', 'gautam' ),
-		'section'     => 'header',
-		'default'     => '500',
-		'choices'     => array(
+		'type'     => 'radio-buttonset',
+		'settings' => 'main_menu_font_weight',
+		'label'    => esc_attr__( 'Menu font weight', 'gautam' ),
+		'section'  => 'header',
+		'default'  => '500',
+		'choices'  => array(
 			'400' => esc_attr__( '400', 'gautam' ),
 			'500' => esc_attr__( '500', 'gautam' ),
 			'700' => esc_attr__( '700', 'gautam' ),
 		),
-		'description' => '',
-		'output'      => array(
+		'output'   => array(
 			array(
 				'element'  => '.header-menu',
 				'property' => 'font-weight',
@@ -631,17 +623,16 @@ Kirki::add_field(
 Kirki::add_field(
 	'gautam_theme_options',
 	array(
-		'type'        => 'radio-buttonset',
-		'settings'    => 'main_menu_font_style',
-		'label'       => esc_attr__( 'Menu font style', 'gautam' ),
-		'section'     => 'header',
-		'default'     => 'normal',
-		'choices'     => array(
+		'type'     => 'radio-buttonset',
+		'settings' => 'main_menu_font_style',
+		'label'    => esc_attr__( 'Menu font style', 'gautam' ),
+		'section'  => 'header',
+		'default'  => 'normal',
+		'choices'  => array(
 			'normal' => esc_attr__( 'Regular', 'gautam' ),
 			'italic' => esc_attr__( 'Italic', 'gautam' ),
 		),
-		'description' => '',
-		'output'      => array(
+		'output'   => array(
 			array(
 				'element'  => '.header-menu',
 				'property' => 'font-style',
@@ -675,10 +666,9 @@ Kirki::add_field(
 Kirki::add_section(
 	'blog_settings',
 	array(
-		'title'       => esc_attr__( 'Blog', 'gautam' ),
-		'description' => '',
-		'panel'       => 'theme_settings_panel',
-		'priority'    => 50,
+		'title'    => esc_attr__( 'Blog', 'gautam' ),
+		'panel'    => 'theme_settings_panel',
+		'priority' => 50,
 	)
 );
 
@@ -879,10 +869,9 @@ Kirki::add_field(
 Kirki::add_section(
 	'footer',
 	array(
-		'title'       => esc_attr__( 'Footer', 'gautam' ),
-		'description' => '',
-		'panel'       => 'theme_settings_panel',
-		'priority'    => 80,
+		'title'    => esc_attr__( 'Footer', 'gautam' ),
+		'panel'    => 'theme_settings_panel',
+		'priority' => 80,
 	)
 );
 
@@ -967,10 +956,9 @@ Kirki::add_field(
 Kirki::add_section(
 	'fonts',
 	array(
-		'title'       => esc_attr__( 'Typography', 'gautam' ),
-		'description' => '',
-		'panel'       => 'theme_settings_panel',
-		'priority'    => 90,
+		'title'    => esc_attr__( 'Typography', 'gautam' ),
+		'panel'    => 'theme_settings_panel',
+		'priority' => 90,
 	)
 );
 
@@ -1177,23 +1165,21 @@ Kirki::add_field(
 Kirki::add_section(
 	'general_color',
 	array(
-		'title'       => esc_attr__( 'Colors', 'gautam' ),
-		'description' => '',
-		'panel'       => 'theme_settings_panel',
-		'priority'    => 100,
+		'title'    => esc_attr__( 'Colors', 'gautam' ),
+		'panel'    => 'theme_settings_panel',
+		'priority' => 100,
 	)
 );
 
 Kirki::add_field(
 	'gautam_theme_options',
 	array(
-		'type'        => 'color',
-		'settings'    => 'color_theme',
-		'label'       => esc_attr__( 'Theme color', 'gautam' ),
-		'description' => '',
-		'section'     => 'general_color',
-		'default'     => '#d90a2c',
-		'output'      => array(
+		'type'     => 'color',
+		'settings' => 'color_theme',
+		'label'    => esc_attr__( 'Theme color', 'gautam' ),
+		'section'  => 'general_color',
+		'default'  => '#d90a2c',
+		'output'   => array(
 			array(
 				'element'  => ':root',
 				'property' => '--theme-color',
@@ -1205,13 +1191,12 @@ Kirki::add_field(
 Kirki::add_field(
 	'gautam_theme_options',
 	array(
-		'type'        => 'color',
-		'settings'    => 'second_color_theme',
-		'label'       => esc_attr__( 'Secondary Theme color', 'gautam' ),
-		'description' => '',
-		'section'     => 'general_color',
-		'default'     => '#fff',
-		'output'      => array(
+		'type'     => 'color',
+		'settings' => 'second_color_theme',
+		'label'    => esc_attr__( 'Secondary Theme color', 'gautam' ),
+		'section'  => 'general_color',
+		'default'  => '#fff',
+		'output'   => array(
 			array(
 				'element'  => ':root',
 				'property' => '--second-theme-color',
@@ -1223,13 +1208,12 @@ Kirki::add_field(
 Kirki::add_field(
 	'gautam_theme_options',
 	array(
-		'type'        => 'color',
-		'settings'    => 'color_body_text',
-		'label'       => esc_attr__( 'Text Color', 'gautam' ),
-		'description' => '',
-		'section'     => 'general_color',
-		'default'     => '#000',
-		'output'      => array(
+		'type'     => 'color',
+		'settings' => 'color_body_text',
+		'label'    => esc_attr__( 'Text Color', 'gautam' ),
+		'section'  => 'general_color',
+		'default'  => '#000',
+		'output'   => array(
 			array(
 				'element'  => 'body',
 				'property' => 'color',
@@ -1241,13 +1225,12 @@ Kirki::add_field(
 Kirki::add_field(
 	'gautam_theme_options',
 	array(
-		'type'        => 'color',
-		'settings'    => 'button_bkg_clr',
-		'label'       => esc_attr__( 'Button Background Color', 'gautam' ),
-		'description' => '',
-		'section'     => 'general_color',
-		'default'     => '#fff',
-		'output'      => array(
+		'type'     => 'color',
+		'settings' => 'button_bkg_clr',
+		'label'    => esc_attr__( 'Button Background Color', 'gautam' ),
+		'section'  => 'general_color',
+		'default'  => '#fff',
+		'output'   => array(
 			array(
 				'element'  => ':root',
 				'property' => '--button-background',
@@ -1259,13 +1242,12 @@ Kirki::add_field(
 Kirki::add_field(
 	'gautam_theme_options',
 	array(
-		'type'        => 'color',
-		'settings'    => 'button_bkg_hover_clr',
-		'label'       => esc_attr__( 'Button Background Hover Color', 'gautam' ),
-		'description' => '',
-		'section'     => 'general_color',
-		'default'     => '#d90a2c',
-		'output'      => array(
+		'type'     => 'color',
+		'settings' => 'button_bkg_hover_clr',
+		'label'    => esc_attr__( 'Button Background Hover Color', 'gautam' ),
+		'section'  => 'general_color',
+		'default'  => '#d90a2c',
+		'output'   => array(
 			array(
 				'element'  => ':root',
 				'property' => '--button-hover-background',
@@ -1277,13 +1259,12 @@ Kirki::add_field(
 Kirki::add_field(
 	'gautam_theme_options',
 	array(
-		'type'        => 'color',
-		'settings'    => 'button_text_clr',
-		'label'       => esc_attr__( 'Button Text Color', 'gautam' ),
-		'description' => '',
-		'section'     => 'general_color',
-		'default'     => '#000',
-		'output'      => array(
+		'type'     => 'color',
+		'settings' => 'button_text_clr',
+		'label'    => esc_attr__( 'Button Text Color', 'gautam' ),
+		'section'  => 'general_color',
+		'default'  => '#000',
+		'output'   => array(
 			array(
 				'element'  => ':root',
 				'property' => '--button-text-color',
@@ -1295,13 +1276,12 @@ Kirki::add_field(
 Kirki::add_field(
 	'gautam_theme_options',
 	array(
-		'type'        => 'color',
-		'settings'    => 'button_text_hover_clr',
-		'label'       => esc_attr__( 'Button Text Hover Color', 'gautam' ),
-		'description' => '',
-		'section'     => 'general_color',
-		'default'     => '#fff',
-		'output'      => array(
+		'type'     => 'color',
+		'settings' => 'button_text_hover_clr',
+		'label'    => esc_attr__( 'Button Text Hover Color', 'gautam' ),
+		'section'  => 'general_color',
+		'default'  => '#fff',
+		'output'   => array(
 			array(
 				'element'  => ':root',
 				'property' => '--button-hover-text-color',
@@ -1313,13 +1293,12 @@ Kirki::add_field(
 Kirki::add_field(
 	'gautam_theme_options',
 	array(
-		'type'        => 'color',
-		'settings'    => 'button_border_clr',
-		'label'       => esc_attr__( 'Button Border Color', 'gautam' ),
-		'description' => '',
-		'section'     => 'general_color',
-		'default'     => '#000',
-		'output'      => array(
+		'type'     => 'color',
+		'settings' => 'button_border_clr',
+		'label'    => esc_attr__( 'Button Border Color', 'gautam' ),
+		'section'  => 'general_color',
+		'default'  => '#000',
+		'output'   => array(
 			array(
 				'element'  => ':root',
 				'property' => '--button-border-color',
@@ -1334,10 +1313,9 @@ Kirki::add_field(
 Kirki::add_section(
 	'social_media',
 	array(
-		'title'       => esc_attr__( 'Social Media', 'gautam' ),
-		'description' => '',
-		'panel'       => 'theme_settings_panel',
-		'priority'    => 110,
+		'title'    => esc_attr__( 'Social Media', 'gautam' ),
+		'panel'    => 'theme_settings_panel',
+		'priority' => 110,
 	)
 );
 
