@@ -36,6 +36,8 @@ Gautam is distributed under the terms of the GNU GPL.
 
 = 1.0.1 =
 * Updated: WordPress 5.7 compatibility.
+* Updated: Customizer Section Priotity Updated.
+* Added: New Site Logo configuraiton added.
 
 = 1.0.0 - Apr 20 2021 =
 * Initial release
