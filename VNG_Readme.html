@@ -276,24 +276,14 @@ FONT's
 
 5- Things to fix
     1- Block category: Embeds - Here while displaying on home page or archive displaying code from youtube or Twitter. *****(Not Valid as now we are displaying title only)
-    2- After enabling overflow hove effect is not good as it should be. May be increasing marging or padding will work. ******DONE
-    3- Basic Layout like pre, blockquote should be defined.                     Good TO Have*****
     4- Why there is a call to gravatar. Hpw to stop the gravatar call at all?? Or should be dont in the settings? (*****Not a Theme Part)
     5- Whenever we change the Theme. There is a problem with Featured Image. It needs to be created to work properly. (**Not Reproducible)
-    6- Check for Mobile. Enough padding is not there.                           DONE***
     7- Remove Jquery and Block related CSS and JS script.                       Later Version*****
     8- How to handle Menu when it is going beyond the visual screen? How to handle this situation? (Will fix in next version***)
-    9- 404 is not handled properly.                                             DONE***
-    10- Height of the Text Fetured Image is fixed which will create problem when size of the screen decreased. ******DONE (Handled)
-    11- JS needs to be enqued properly in footer.                               DONE****
-    12- CSS needs to be enqued properly.                                        DONE****
     13- Why this page title is breaked??
-    14: website fields needs to be added in comment section.                    DONE****
     15. In tab image for no  featured image is proper.
-    16. Look for logo image width and height.                                   DONE****
     17. Remove unused main.js.                                                  Later Version****8
     18. See how many js files are used. remove those files accordingly.
-    19. Remove Jquery from loading.                                             DONE*****
     20. Before Theme submission look here : https://make.wordpress.org/themes/handbook/review/required/
     21. Aria Navigation : https://codeable.io/wordpress-accessibility-creating-accessible-dropdown-menus/
     22. UL and LI element is not properly aligned. Look for other elements too.                                             (Medium Issue***)
@@ -301,8 +291,6 @@ FONT's
     24. Sidebar text color should be a bit light so that title can easily be differentiated from it.                        (Good to Have****)
     25. Problem with featured image on Home page. When on hover it is crossing the date section specially in Safari browser.  (Minor***)
     26. In customizer section after changing site title color if we change the header height, site title color doesnt take effect. (Major Issue****)
-    27. Non Featured image dropcase should also align with theme color.                 DONE**
-    28. Make Read More visible on archive page without hover.                           DONE*
     29. Sticky Post icon is not there when no Featured image is present on archive page.
     30. on this page inside aside no site name is available. ('http://localhost:10013/category/uncategorized/')
     31. In case JS is disabled. Probably aside sidebar can be on the left side and not on the popup side. Look for 'Twenty Twenty' theme
@@ -366,18 +354,11 @@ Problems:
 1- In mobile fixed header for login user is having blank space above the header.
 2- When updating Header background color and text color it is not getting refreshed in preview.
 3- Edit button is having effect of button default layout.
-
-
-
-i-See if infinite scroll can be supported or else remove that configuraiton.
 ii-Responsive video on jetpack support needs to check if it works or not.If not remove it from jetpack.php.
-iii- Code in post navigation needs to be revisited.
-Check if sharing is working on the final screen or not
-
-    2- Center Menu is occupying the area available?!!!!!!
-    3- Look for content options provided by jenkins.
-    4- While replacing the logo in customizer page is not getting reflected
-    5- When Single Post Layout is "layout-2". Logo will create problem as in that case light logo needs to be used.
+2- Center Menu is occupying the area available?!!!!!!
+3- Look for content options provided by jenkins.
+4- While replacing the logo in customizer page is not getting reflected
+5- When Single Post Layout is "layout-2". Logo will create problem as in that case light logo needs to be used.
 
 
 Improvement
@@ -397,28 +378,18 @@ Improvement
     12- Add configuration for local google fonts via kirki.
     13- Remove unused transition and !important.
     14- Page and Post have same output. If it needs to be different difference action can be used. for the timebeing it is being removed.
+    ----Look in the Font size option in TYPOGRAPHY inside CUSTOMIZER.!!!!!!!!!!!!!!!!!???????
+    14- http://localhost:10013/blocks-widgets/ (Check if it correct or not, Links are not underlined.)!!!!!
+    - aria-label : understand what is this and where it should be used.
+    2- Proper Readme.txt
+    4- By default change the color of post title from customizer when in header option is selected.
+    9- sidebar-menu and header-menu should be aligned.
+    13- http://localhost:10013/template-password-protected/ for this post if layout is in-header then layout will have issue while password is not entered.!!!!!!!!!!!!
+
 
 Testing
-1- With Blank WP setup check if featuredimage is working properly or not.
+1- With Blank WP setup check if featured image is working properly or not.
 
-
-
-----Look in the Font size option in TYPOGRAPHY inside CUSTOMIZER.!!!!!!!!!!!!!!!!!???????
-14- http://localhost:10013/blocks-widgets/ (Check if it correct or not, Links are not underlined.)!!!!!
-
-
-
-
-Problems to be solved
-
- - aria-label : understand what is this and where it should be used.
-2- Proper Readme.txt
-4- By default change the color of post title from customizer whe in header option is selected.
-
-9- sidebar-menu and header-menu should be aligned.
-
-
-13- http://localhost:10013/template-password-protected/ for this post if layout is in-header then layout will have issue while password is not entered.!!!!!!!!!!!!
 
 
 IMP KeyCode :
