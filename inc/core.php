@@ -168,7 +168,10 @@ add_filter( 'kirki/config', 'gautam_kirki_configuration' );
 /**
  * Theme Featured Image sizes.
  */
-add_image_size( 'gautam-blog-3-featured-image', 762, 898, true ); // Used for Blog Layout 3.
-add_image_size( 'gautam-post-navigation-featured-image', 80, 80, true ); // Used for Post Navigation.
-add_image_size( 'gautam-post-in-content-featured-image', 1140, 500, true );// Used for Single Post In Content Featured Image.
-add_image_size( 'gautam-post-in-header-featured-image', 1840, 500, true );// Used for Single Post In Header Featured Image.
+function gautam_add_image_sizes() {
+	add_image_size( 'gautam-blog-3-featured-image', 762, 898, true ); // Used for Blog Layout 3.
+	add_image_size( 'gautam-post-navigation-featured-image', 80, 80, true ); // Used for Post Navigation.
+	add_image_size( 'gautam-post-in-content-featured-image', 1140, 500, true );// Used for Single Post In Content Featured Image.
+	add_image_size( 'gautam-post-in-header-featured-image', 1840, 500, true );// Used for Single Post In Header Featured Image.
+}
+add_action( 'after_setup_theme', 'gautam_add_image_sizes' );

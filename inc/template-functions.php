@@ -416,7 +416,7 @@ if ( ! function_exists( 'gautam_footer_go_to_top_layout' ) ) {
 			?>
 			<a class="top-link" href="#" id="js-top" on="tap:masthead.scrollTo" role="button">
 				<i class="fa fa-long-arrow-up fa-lg" aria-hidden="true"></i>
-				<span class="screen-reader-text">Back to top</span>
+				<span class="screen-reader-text"><?php esc_html_e( 'Back to top', 'gautam' ); ?></span>
 			</a>
 			<?php
 		}
@@ -602,7 +602,7 @@ function gautam_header_search() {
 		?>
 		<div class="gautam-search header-search" role="button" tabindex="0">
 			<i class="fa fa-search fa-lg"></i>
-			<span class="screen-reader-text">Search</span>
+			<span class="screen-reader-text"><?php esc_html_e( 'Search', 'gautam' ); ?></span>
 		</div>
 		<?php
 		gautam_footer_popup_search_modal_layout();

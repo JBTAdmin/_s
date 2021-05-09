@@ -33,6 +33,8 @@ Gautam WordPress Theme, Copyright (C) 2021 iPowerUser.com.
 Gautam is distributed under the terms of the GNU GPL.
 
 == Changelog ==
+= 1.0.2 =
+* Updated: Fixed Review Comment.
 
 = 1.0.1 =
 * Updated: WordPress 5.7 compatibility.
