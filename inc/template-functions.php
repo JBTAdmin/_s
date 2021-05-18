@@ -397,7 +397,7 @@ if ( ! function_exists( 'gautam_footer_search_layout' ) ) {
 			?>
 			<a class="gautam-search footer-search" href="#">
 				<i class="fa fa-search fa-lg"></i>
-				<span class="screen-reader-text">Search</span>
+				<span class="screen-reader-text"><?php esc_html_e( 'Search', 'gautam' ); ?></span>
 			</a>
 			<?php
 			gautam_footer_popup_search_modal_layout();

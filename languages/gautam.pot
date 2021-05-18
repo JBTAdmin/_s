@@ -1,0 +1,322 @@
+# Copyright (C) 2020 Ipoweruser
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: gautam 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/_s\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-04-17T21:03:15+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.4.0\n"
+"X-Domain: gautam\n"
+
+#. Theme Name of the theme
+msgid "gautam"
+msgstr ""
+
+#. Theme URI of the theme
+msgid "https://ipoweruser.com/"
+msgstr ""
+
+#. Description of the theme
+msgid "Hi. I'm a starter theme called <em>gautam</em>"
+msgstr ""
+
+#. Author of the theme
+msgid "IpowerUser"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://ipoweruser.com/"
+msgstr ""
+
+--Viveka 404
+
+#: 404.php:18
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:22
+msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgstr ""
+
+#: 404.php:31
+msgid "Most Used Categories"
+msgstr ""
+
+#. translators: %1$s: smiley
+#: 404.php:49
+msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+--viveka Comments
+
+#. translators: 1: title.
+#: comments.php:35
+msgid "One thought"
+msgstr ""
+
+#. translators: 1: comment count number, 2: title.
+#: comments.php:41
+msgctxt "comments title"
+msgid "%1$s thought"
+msgid_plural "%1$s thoughts"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:68
+msgid "Comments are closed."
+msgstr ""
+
+--viveka Footer
+#: footer.php:18
+msgid "https://wordpress.org/"
+msgstr ""
+
+#. translators: %s: CMS name, i.e. WordPress.
+#: footer.php:21
+msgid "Proudly powered by %s"
+msgstr ""
+
+#. translators: 1: Theme name, 2: Theme author.
+#: footer.php:27
+msgid "Theme: %1$s by %2$s."
+msgstr ""
+
+#: header.php:26
+msgid "Skip to content"
+msgstr ""
+
+#: header.php:49
+msgid "Primary Menu"
+msgstr ""
+
+--viveka : template parts
+#. translators: %s: Name of current post. Only visible to screen readers
+#: template-parts/single/layout.php:18
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: template-parts/single/layout.php:31
+#: template-parts/content-page.php:26
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/single/post-navigation.php:20
+msgid "Post navigation"
+msgstr ""
+
+#: template-parts/content-none.php:15
+msgid "Nothing Found"
+msgstr ""
+
+#. translators: 1: link to WP admin new post page.
+#: template-parts/content-none.php:25
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:38
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:45
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr ""
+
+--viveka inc/core.php
+#: inc/core.php:46
+msgid "Primary"
+msgstr ""
+
+#: inc/core.php:47
+msgid "Footer Menu 1"
+msgstr ""
+
+
+//Viveka template-function (Do i need to provide translation for facebook like social networks??)
+#. translators: %s: search query.
+#: inc/template-functions.php:231
+msgid "Search Results for: %s"
+msgstr ""
+
+#: inc/template-functions.php:400
+#: inc/template-functions.php:605
+msgid "Search"
+msgstr ""
+
+#: inc/template-functions.php:419
+msgid "Back to top"
+msgstr ""
+
+--viveka templatetags.
+#. translators: %s: post title
+#: inc/template-tags.php:101
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#: inc/template-tags.php:247
+msgid "Previous Page"
+msgstr ""
+
+#: inc/template-tags.php:248
+msgid "Next Page"
+msgstr ""
+
+--viveka widget.php
+#: inc/widgets.php:23
+msgid "Right Sidebar"
+msgstr ""
+
+#: inc/widgets.php:25
+#: inc/widgets.php:37
+msgid "Add widgets here."
+msgstr ""
+
+#: inc/widgets.php:35
+msgid "Left Sidebar"
+msgstr ""
+
+--viveka woocommerce.php
+#: inc/woocommerce.php:184
+msgid "View your shopping cart"
+msgstr ""
+
+#. translators: number of items in the mini cart.
+#: inc/woocommerce.php:188
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] ""
+msgstr[1] ""
+
+
+---viveka kirki-configuraiton.php
+#: inc/kirki-configuration.php:26
+msgid "Site Identity"
+msgstr ""
+
+#: inc/kirki-configuration.php:60
+msgid "Theme Settings"
+msgstr ""
+
+#: inc/kirki-configuration.php:61
+msgid "Manage theme settings"
+msgstr ""
+
+#: inc/kirki-configuration.php:71
+msgid "Logo width (px)"
+msgstr ""
+
+#: inc/kirki-configuration.php:72
+msgid "example: 150"
+msgstr ""
+
+#: inc/kirki-configuration.php:90
+msgid "Text logo"
+msgstr ""
+
+#: inc/kirki-configuration.php:91
+msgid "Enable to use text logo instead of image."
+msgstr ""
+
+#: inc/kirki-configuration.php:102
+msgid "General"
+msgstr ""
+
+#: inc/kirki-configuration.php:113
+msgid "Container Width (px)"
+msgstr ""
+
+#: inc/kirki-configuration.php:136
+msgid "Max Sidebar Width (px)"
+msgstr ""
+
+#: inc/kirki-configuration.php:160
+msgid "Button Border Radius (px)"
+msgstr ""
+
+#: inc/kirki-configuration.php:184
+msgid "Search Visibility"
+msgstr ""
+
+#: inc/kirki-configuration.php:189
+msgid "None"
+msgstr ""
+
+#: inc/kirki-configuration.php:190
+msgid "Header"
+msgstr ""
+
+#: inc/kirki-configuration.php:191
+msgid "Fixed"
+msgstr ""
+
+#: inc/kirki-configuration.php:193
+msgid "Select the Search button visibility and position."
+msgstr ""
+
+#: inc/kirki-configuration.php:202
+msgid "Body Background"
+msgstr ""
+
+#: inc/kirki-configuration.php:203
+msgid "Change your site background settings."
+msgstr ""
+
+#: inc/kirki-configuration.php:226
+msgid "Padding & Margin"
+msgstr ""
+
+#: inc/kirki-configuration.php:237
+msgid "Container Padding (Use CSS units)"
+msgstr ""
+
+
+
+
+
+
+=================
+
+===============
+//viveka Need to check why these below are not in our .pot files
+
+#. translators: %s: post date.
+#: inc/template-tags.php:30
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr ""
+
+#. translators: %s: post author.
+#: inc/template-tags.php:46
+msgctxt "post author"
+msgid "by %s"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:63
+msgid ", "
+msgstr ""
+
+#. translators: 1: list of categories.
+#: inc/template-tags.php:66
+msgid "Posted in %1$s"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:70
+msgctxt "list item separator"
+msgid ", "
+msgstr ""
+
+#. translators: 1: list of tags.
+#: inc/template-tags.php:73
+msgid "Tagged %1$s"
+msgstr ""
+
+
+
+
