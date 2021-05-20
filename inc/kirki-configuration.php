@@ -1025,7 +1025,7 @@ Kirki::add_field(
 			'letter-spacing' => '0',
 			'color'          => '#000',
 		),
-		'description' => esc_attr__( 'Font used in H1 Header .', 'gautam' ),
+		'description' => esc_attr__( 'Font used in H1 Header.', 'gautam' ),
 		'output'      => array(
 			array(
 				'element'       => array( 'h1' ),

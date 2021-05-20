@@ -37,3 +37,7 @@ require get_template_directory() . '/inc/widgets.php';
  */
 require get_template_directory() . '/inc/theme-hooks.php';
 
+// Admin.
+if ( is_admin() ) {
+	require dirname( __FILE__ ) . '/inc/admin/class-gautam-admin.php';
+}
