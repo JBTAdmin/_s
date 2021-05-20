@@ -13,7 +13,7 @@ add_action( 'wp_head', 'gautam_pingback_header' );
 add_filter( 'body_class', 'gautam_body_classes' );
 add_action( 'gautam_header', 'gautam_header_branding_layout' );
 add_action( 'gautam_singular_content', 'gautam_singular_content_layout' );
-add_action( 'gautam_content_page', 'gautam_single_post_layout' );
+add_action( 'gautam_content_page', 'gautam_single_page_layout' );
 add_action( 'gautam_content_post', 'gautam_single_post_layout' );
 add_action( 'gautam_entry_content_before', 'gautam_post_content_before' );
 add_action( 'gautam_entry_content', 'gautam_content' );
@@ -157,6 +157,22 @@ if ( ! function_exists( 'gautam_singular_content_layout' ) ) {
 		} else {
 			get_template_part( 'template-parts/content', 'none' );
 		}
+	}
+}
+
+if ( ! function_exists( 'gautam_single_page_layout' ) ) {
+	/**
+	 * Outputs the theme single page.
+	 *
+	 * @since 1.0.3
+	 */
+	function gautam_single_page_layout() {
+		get_template_part( 'template-parts/content-page' );
+
+		// If comments are open or we have at least one comment, load up the comment template.
+		if ( comments_open() || get_comments_number() ) :
+			comments_template();
+		endif;
 	}
 }
 

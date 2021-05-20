@@ -3,7 +3,7 @@ cite,
 em,
 i:not(.fa) {
   font-style: italic;
-  color: $theme__color !important;
+  color: $theme__color !important;   // Adding a color doesnt seems good.
 }
 
 blockquote {
