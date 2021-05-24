@@ -1,9 +1,12 @@
 dfn,
 cite,
-em,
-i:not(.fa) {
+em {
   font-style: italic;
-  color: $theme__color !important;   // Adding a color doesnt seems good.
+  color: $theme__color !important;
+}
+
+i {
+  font-style: italic;
 }
 
 blockquote {

@@ -5,7 +5,7 @@ Author URI: https://ipoweruser.com/
 Description: Gautam is a text-based, clean minimal WordPress blog theme created for writers. It has a unique minimalist design, which will make your blog look good with or without featured images.
 It is fully responsive, supports custom menus and widgets, and comes with a social profile link feature. This theme uses the WordPress customizer to see the changes you have made to your blog.
 This theme is appropriate for personal and technical blogs, as well as magazine-style blogs and lifestyle websites.
-Version: 1.0.1
+Version: 1.0.3
 Tested up to: 5.7
 Requires PHP: 5.6 or higher
 License: GNU General Public License v2 or later
@@ -472,6 +472,7 @@ h6 {
 }
 
 @media screen and (min-width: 1600px) {
+
 	h1.entry-title,
 	h1 {
 		font-size: 70px;
@@ -754,11 +755,13 @@ a {
 	cursor: pointer;
 }
 
-a:hover, a:active {
+a:hover,
+a:active {
 	color: var(--theme-color);
 }
 
-a:hover, a:active {
+a:hover,
+a:active {
 	outline: 0;
 }
 
@@ -787,7 +790,8 @@ input[type="submit"] {
 	font-weight: 600;
 }
 
-button:not(.toggle):hover, button:not(.toggle):active,
+button:not(.toggle):hover,
+button:not(.toggle):active,
 input[type="button"]:hover,
 input[type="button"]:active,
 input[type="reset"]:hover,
@@ -799,7 +803,9 @@ input[type="submit"]:active {
 	color: var(--button-hover-text-color);
 }
 
-.mejs-button > button:hover, .mejs-button > button:active, .mejs-button > button:focus {
+.mejs-button > button:hover,
+.mejs-button > button:active,
+.mejs-button > button:focus {
 	border-color: unset;
 	background-color: unset;
 	color: unset;
@@ -1393,7 +1399,7 @@ li > ul.sub-menu {
 }
 
 .header-menu-container.numbered .header-menu > li > a:before {
-	content: "0" counter(number);
+	content: "0"counter(number);
 	display: inline-block;
 	opacity: 1;
 	font-weight: 700;
@@ -1715,6 +1721,7 @@ li > ul.sub-menu {
 }
 
 @media screen and (max-width: 600px) {
+
 	.header-wrap,
 	.footer-wrap {
 		padding: 0 3rem;
@@ -1870,6 +1877,7 @@ li > ul.sub-menu {
 }
 
 @media screen and (max-width: 1024px) {
+
 	.flex-dir-column-reverse .header-container,
 	.flex-dir-column .header-container,
 	.flex-dir-row-reverse .header-container {
@@ -2114,6 +2122,7 @@ div[class*="footer-sidebar-"] ul {
 }
 
 @media screen and (max-width: 768px) {
+
 	.site-footer-2-info .site-info-holder,
 	.footer-menu--1 {
 		-webkit-box-orient: vertical;
@@ -2300,6 +2309,7 @@ div[class*="footer-sidebar-"] ul {
 }
 
 @media screen and (max-width: 900px) {
+
 	.blog-2 article,
 	.blog-4 article,
 	.blog-5 article {
@@ -2316,6 +2326,7 @@ div[class*="footer-sidebar-"] ul {
 }
 
 @media screen and (max-width: 500px) {
+
 	.blog-1 article,
 	.blog-2 article,
 	.blog-4 article,
@@ -2928,7 +2939,9 @@ div[class*="footer-sidebar-"] ul {
 	transform: translateX(100%);
 }
 
-.subscribe-form input[type="button"]:hover, .subscribe-form input[type="button"]:active, .subscribe-form input[type="button"]:focus,
+.subscribe-form input[type="button"]:hover,
+.subscribe-form input[type="button"]:active,
+.subscribe-form input[type="button"]:focus,
 .subscribe-form input[type="reset"]:hover,
 .subscribe-form input[type="reset"]:active,
 .subscribe-form input[type="reset"]:focus,
@@ -3060,6 +3073,7 @@ textarea:focus {
 }
 
 @media screen and (max-width: 700px) {
+
 	.comment-form-author,
 	.comment-form-email,
 	.comment-form-url {
@@ -3130,6 +3144,7 @@ body.admin-bar aside {
 }
 
 @media screen and (max-width: 768px) {
+
 	.sidebar-right .widget:not(.widget_seriestoc),
 	.sidebar-left .widget:not(.widget_seriestoc) {
 		padding: 0;
@@ -3149,6 +3164,7 @@ body.admin-bar aside {
 }
 
 @media screen and (max-width: 1000px) {
+
 	.primary-content,
 	aside {
 		-ms-flex-preferred-size: 100% !important;
@@ -3289,7 +3305,9 @@ aside.sidebar-alt-aside section {
 	font-weight: 500;
 }
 
-.single .entry-content a:hover, .single .entry-content a:focus, .single .entry-content a:active,
+.single .entry-content a:hover,
+.single .entry-content a:focus,
+.single .entry-content a:active,
 .page .entry-content a:hover,
 .page .entry-content a:focus,
 .page .entry-content a:active {
@@ -3973,6 +3991,7 @@ ul.gautam-social-holder > li {
 		transform: scale(1);
 		border-radius: 50%;
 	}
+
 	100% {
 		-webkit-transform: scale(2);
 		transform: scale(2);
@@ -3987,6 +4006,7 @@ ul.gautam-social-holder > li {
 		transform: scale(1);
 		border-radius: 50%;
 	}
+
 	100% {
 		-webkit-transform: scale(2);
 		transform: scale(2);

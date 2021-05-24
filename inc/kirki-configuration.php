@@ -689,6 +689,23 @@ Kirki::add_field(
 		'description' => esc_attr__( 'Here you can select which layout will be used to display the blog posts on Home or Index pages.', 'gautam' ),
 	)
 );
+
+Kirki::add_field(
+	'gautam_theme_options',
+	array(
+		'type'     => 'number',
+		'settings' => 'blog_excerpt_length',
+		'label'    => esc_attr__( 'Excerpt length', 'gautam' ),
+		'section'  => 'blog_settings',
+		'default'  => 20,
+		'priority' => 10,
+		'choices'  => array(
+			'min'  => 5,
+			'max'  => 60,
+			'step' => 1,
+		),
+	)
+);
 // END SECTION: BLOG.
 
 // SECTION: SINGLE POST.

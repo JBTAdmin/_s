@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<div class="inne-article">
+	<div class="inner-article">
 
 		<div class="inner-entry">
 

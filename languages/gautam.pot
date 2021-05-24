@@ -755,3 +755,134 @@ msgstr ""
 #: inc/kirki-configuration.php:1430
 msgid "Github Url"
 msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:64
+msgid "Gautam Dashboard"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:75
+#: inc/admin/class-gautam-dashboard.php:241
+#: inc/admin/class-gautam-dashboard.php:406
+msgid "Changelog"
+msgstr ""   
+
+#: inc/admin/class-gautam-dashboard.php:89
+msgid "Useful Plugins"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:103
+#: inc/admin/class-gautam-dashboard.php:418
+msgid "Support"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:128
+msgid "Gautam Theme"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:129
+msgid "Thank you for using Gautam Theme. Theme is now installed and ready to use. Below are the list of option that you might be interested in using before your site is fully ready to serve user."
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:136
+msgid "Change Site Title & Logo"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:140
+msgid "Customize Identity"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:148
+msgid "Change Menus"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:152
+msgid "Customize Menu"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:160
+msgid "Change Header"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:164
+msgid "Customize Header"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:172
+msgid "Change Blog Layout"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:176
+msgid "Customize Layout"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:184
+msgid "Change Fonts"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:188
+msgid "Customize Fonts"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:196
+msgid "Change Colors"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:200
+msgid "Customize Colors"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:223
+msgid "Changelog file not found."
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:225
+msgid "Changelog file not readable."
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:269
+msgid "Plugins Coming."
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:293
+msgid "Need Help?"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:298
+msgid "Have a question or found a bug? Get the help you need from us."
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:269
+msgid "Contact Us"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:306
+msgid "Theme Review"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:308
+msgid "If you like Gautam Theme Please leave us a review. We would love to hear from you."
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:311
+msgid "Write a Review"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:319
+msgid "Improvement Idea"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:321
+msgid "Have any feature suggestion or improvement for the theme?"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:324
+msgid "Suggest an Idea"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:324
+msgid "Welcome"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:412
+msgid "Plugins"
+msgstr ""

@@ -283,3 +283,34 @@ function gautam_jetpack_featured_image_display() {
 		}
 	}
 }
+
+if ( ! function_exists( 'gautam_excerpt' ) ) :
+	/**
+	 * Get excerpt.
+	 *
+	 * @since 1.0.3
+	 * @param int    $length the length of the excerpt.
+	 * @param string $more Optional. What to append if $text needs to be trimmed.
+	 */
+	function gautam_excerpt( $length = null, $more = null ) {
+
+		// Check if this post has a custom excerpt.
+		if ( has_excerpt() ) {
+			$output = get_the_excerpt();
+		} else {
+			// Check for more tag.
+			if ( strpos( get_the_content(), '<!--more-->' ) ) {
+				$output = apply_filters( 'the_content', get_the_content() ); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound
+			} else {
+
+				if ( null === $length ) {
+					$length = apply_filters( 'excerpt_length', get_theme_mod( 'blog_excerpt_length', '20' ) ); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound
+				}
+
+				$output = wp_trim_words( get_the_content(), $length );
+			}
+		}
+
+		echo $output; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	}
+endif;

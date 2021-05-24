@@ -2,7 +2,6 @@
 *  gautam admin page related styles.
 *  ========================================================================== */
 
-/*todo need to revisit this css files*/
 body {
 	background-color: #fff;
 }
@@ -11,8 +10,7 @@ body {
 	padding: 0;
 	box-sizing: border-box;
 	font-size: 14px;
-	line-height: 1.8;
-	background-color: #fff;
+	-webkit-font-smoothing: subpixel-antialiased;
 }
 
 #wpbody-content {
@@ -22,40 +20,36 @@ body {
 }
 
 .wrap-container {
-	width: 100%;
-	max-width: 940px;
 	margin: 0 auto;
+	padding: 2% 2%;
 }
 
-/*Gautam Header*/
-#gautam-header {
-	padding: 12px 35px;
-	margin: 30px 0;
+.gautam-section-title {
+	max-width: 500px;
+	padding-left: 1%;
 }
 
-#gautam-header > .wrap-container {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: center;
+h2.gautam-section-title {
+	font-size: 60px;
+	margin: 0 0 3rem 0;
+	padding-left: 0;
 }
 
-#gautam-header .gautam-logo img {
-	height: 26px;
-	width: auto;
-	display: block;
+.gautam-section-title p {
+	font-size: 17px;
+	color: #000;
 }
 
 /*Gautam Tabs*/
+.gautam-tabs {
+	border-bottom: 2px solid #E1E1E4;
+	margin-left: 1%;
+}
+
 .gautam-tabs > ul {
-	background-color: #f1f5fa;
 	display: flex;
 	flex-wrap: wrap;
-	padding-left: 0;
-	margin-bottom: 0;
-	list-style: none;
-	border-radius: 20px;
+	margin: 0;
 }
 
 .gautam-tabs > ul > li {
@@ -64,28 +58,40 @@ body {
 	text-align: center;
 	position: relative;
 	cursor: pointer;
-	display: inline-block;
-	overflow: hidden;
-	-webkit-user-select: none;
-	   -moz-user-select: none;
-	    -ms-user-select: none;
-	        user-select: none;
-	margin-bottom: 0;
-	border-radius: 20px;
-	-webkit-tap-highlight-color: transparent;
 }
 
 .gautam-tabs > ul > li > a {
-	display: block;
 	padding: .5rem 1rem;
-	color: #303e67;
+	color: #000;
 	background-color: transparent;
 	text-decoration: none;
+	position: relative;
 }
 
 .gautam-tabs > ul > li.current-item > a {
-	background: #1761fd;
-	color: #fff;
+	font-weight: bold;
+}
+
+.gautam-tabs > ul > li > a::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	left: 0;
+	bottom: -1px;
+	background-color: #FF4433;
+	transform: scaleX(0);
+	transform-origin: right center;
+	transition: transform 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.gautam-tabs > ul > li.current-item > a::after {
+	transform: scaleX(1);
+}
+
+.gautam-tabs > ul > li > a:hover::after {
+	transform: scaleX(1);
+	transform-origin: left center;
 }
 
 /*Gautam Main Section*/
@@ -104,50 +110,33 @@ body {
 #wpbody-content .gautam-section.gautam-columns {
 	display: flex;
 	flex-wrap: wrap;
-	padding: 0;
-	align-items: stretch;
-	margin-bottom: 50px;
 	justify-content: space-between;
+	padding: 0;
 }
 
 #wpbody-content .gautam-card {
-	box-sizing: border-box;
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	border-radius: 5px;
-	border: 1px solid #d9e3f1;
-	background-color: #fff;
-	margin-bottom: 16px;
-	background-clip: border-box;
+	padding: 2% 1%;
+	flex: 1 1 30%;
+}
+
+#wpbody-content .gautam-card .card-inner-box {
+	padding: 10% 8%;
 	text-align: center;
-	max-width: 33%;
-	flex: 1 1;
-	height: 100%;
-	overflow: hidden;
-	position: relative;
+	border-radius: 3px;
+	border: 1px solid #E1E1E4;
 }
 
 #wpbody-content .gautam-card h4 {
-	border-bottom: 1px solid #d9e3f1;
-	padding: 12px 16px;
-	text-transform: capitalize;
-	letter-spacing: 0.02em;
-	font-size: 13px;
-	font-weight: 500;
-	margin: 0;
-	color: #fff;
-	background: #1761fd;
-	text-shadow: 0 0 1px rgba(241, 245, 250, 0.1);
-	font-family: "Poppins", sans-serif;
+	font-size: 20px;
+	line-height: 24px;
+	margin-bottom: 12px;
+	margin-top: 0;
 }
 
 #wpbody-content .gautam-card p {
-	padding: 10px;
-	color: #8b91a9;
-	ine-height: 1.6;
-	font-size: .8125rem;
-	font-weight: 400;
+	font-size: 14px;
+	line-height: 22px;
+	margin-bottom: 36px;
 }
 
 #wpbody-content .gautam-card .gautam-buttons {
@@ -155,27 +144,15 @@ body {
 }
 
 #wpbody-content .gautam-card .gautam-buttons .adm-btn {
-	cursor: pointer;
-	padding: 8px 13px;
-	font-size: 11px;
-	line-height: 1.8;
-	border-radius: 20px;
-	color: #fff;
-	background-color: #1761fd;
-	border-color: #1761fd;
-	display: inline-block;
-	font-weight: 400;
-	text-align: center;
-	vertical-align: middle;
-	-webkit-user-select: none;
-	   -moz-user-select: none;
-	    -ms-user-select: none;
-	        user-select: none;
-	box-shadow: none;
 	text-decoration: none;
-	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 700;
+	position: relative;
+	outline: none;
+	box-shadow: none;
+	color: #FF4433;
 }
-
 
 #wpbody-content .changelog-version {
 	font-size: 11px;
@@ -204,59 +181,7 @@ body {
 	width: 100%;
 }
 
-
-/*Gautam Large Section*/
-#wpbody-content .gautam-section.large-section {
-	padding: 40px 35px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	border-radius: 3px;
-	border: 1px solid #d6e1e8;
-	background-color: #ffffff;
-	margin: 38px 0;
-}
-
-
-/*Gautam Footer*/
-#gautam-footer {
-	border-top: 1px #d6e1e8 solid;
-	border-bottom: 1px #d6e1e8 solid;
-	margin: 0 -35px 18px -35px;
-	text-align: center;
-	font-size: 13px;
-	color: #66717f;
-}
-
-
-#gautam-footer ul {
-	margin: 0 35px;
-	padding: 0;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-
-#gautam-footer ul li {
-	margin: 0;
-}
-
-#gautam-footer ul li a {
-	text-decoration: none;
-	display: flex;
-	align-items: center;
-	padding: 15px 10px;
-	color: inherit;
-}
-
-
 @media screen and (max-width: 1000px) {
-	.auto-fold #wpcontent {
-		padding-left: 0;
-	}
-
-	/*#filter-container .theme,*/
 	#wpbody-content .gautam-card {
 		flex-basis: 50% !important;
 		max-width: 50% !important;
@@ -278,23 +203,4 @@ body {
 		padding-top: 46px;
 	}
 
-}
-
-/*// See if we can remove belows. */
-#wpbody-content .gautam-section.large-section h2 {
-	padding-top: 18px;
-	text-align: center;
-	line-height: 1.4;
-}
-
-#wpbody-content .gautam-section.large-section p {
-	max-width: 480px;
-	font-size: 15px;
-	line-height: 1.7;
-	text-align: center;
-	color: #79879a;
-}
-
-#wpbody-content .gautam-section .gautam-hero img {
-	height: 140px;
 }

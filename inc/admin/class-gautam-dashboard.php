@@ -3,11 +3,9 @@
  * Gautam About page class.
  *
  * @package     Gautam
- * @author      Gautam Team <hello@gautamwp.com>
- * @since       1.0.0
+ * @since       1.0.3
  */
 
-// todo need to revisit the whle admin page code.
 /**
  * Do not allow direct script access.
  */
@@ -21,10 +19,10 @@ if ( ! class_exists( 'Gautam_Dashboard' ) ) :
 	 */
 	final class Gautam_Dashboard {
 
+
 		/**
 		 * Singleton instance of the class.
 		 *
-		 * @since 1.0.0
 		 * @var object
 		 */
 		private static $instance;
@@ -33,7 +31,6 @@ if ( ! class_exists( 'Gautam_Dashboard' ) ) :
 		 * Main Gautam Dashboard Instance.
 		 *
 		 * @return Gautam_Dashboard
-		 * @since 1.0.0
 		 */
 		public static function instance() {
 
@@ -46,8 +43,6 @@ if ( ! class_exists( 'Gautam_Dashboard' ) ) :
 
 		/**
 		 * Primary class constructor.
-		 *
-		 * @since 1.0.0
 		 */
 		public function __construct() {
 
@@ -59,8 +54,6 @@ if ( ! class_exists( 'Gautam_Dashboard' ) ) :
 
 		/**
 		 * Register our custom admin menu item.
-		 *
-		 * @since 1.0.0
 		 */
 		public function add_to_menu() {
 
@@ -68,8 +61,8 @@ if ( ! class_exists( 'Gautam_Dashboard' ) ) :
 			 * Dashboard page.
 			 */
 			add_theme_page(
-				esc_html__( 'About Gautam', 'gautam' ),
-				'About Gautam',
+				esc_html__( 'Gautam Dashboard', 'gautam' ),
+				'Gautam Dashboard',
 				apply_filters( 'gautam_manage_cap', 'edit_theme_options' ),
 				'gautam-dashboard',
 				array( $this, 'render_dashboard' )
@@ -132,73 +125,87 @@ if ( ! class_exists( 'Gautam_Dashboard' ) ) :
 			<div class="wrap-container">
 
 				<div class="gautam-section-title">
-					<h2 class="gautam-section-title"><?php esc_html_e( 'Getting Started', 'gautam' ); ?></h2>
+					<h2 class="gautam-section-title"><?php esc_html_e( 'Gautam Theme', 'gautam' ); ?></h2>
+					<p><?php esc_html_e( 'Thank you for using Gautam Theme. Theme is now installed and ready to use. Below are the list of option that you might be interested in using before your site is fully ready to serve user.', 'gautam' ); ?></p>
 				</div><!-- END .gautam-section-title -->
 
 				<div class="gautam-section gautam-columns">
 					<div class="gautam-card">
-						<h4>
-							<?php esc_html_e( 'Upload Your Logo', 'gautam' ); ?>
-						</h4>
-						<p><?php esc_html_e( 'Kick off branding your new site by uploading your logo. Simply upload your logo and customize as you need.', 'gautam' ); ?></p>
+						<div class="card-inner-box">
+							<h4>
+								<?php esc_html_e( 'Change Site Title & Logo', 'gautam' ); ?>
+							</h4>
 
-						<div class="gautam-buttons">
-							<a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[control]=custom_logo' ) ); ?>"
-								class="adm-btn secondary" target="_blank"
-								rel="noopener noreferrer"><?php esc_html_e( 'Upload Logo', 'gautam' ); ?></a>
-						</div><!-- END .gautam-buttons -->
+							<div class="gautam-buttons">
+								<a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[control]=custom_logo' ) ); ?>" class="adm-btn secondary" target="_blank"><?php esc_html_e( 'Customize Identity', 'gautam' ); ?></a>
+							</div><!-- END .gautam-buttons -->
+						</div>
 					</div>
 
 					<div class="gautam-card">
-						<h4>
-							<?php esc_html_e( 'Change Menus', 'gautam' ); ?>
-						</h4>
-						<p><?php esc_html_e( 'Customize menu links and choose what&rsquo;s displayed in available theme menu locations.Customize menu links and ', 'gautam' ); ?></p>
+						<div class="card-inner-box">
+							<h4>
+								<?php esc_html_e( 'Change Menus', 'gautam' ); ?>
+							</h4>
 
-						<div class="gautam-buttons">
-							<a href="<?php echo esc_url( admin_url( 'nav-menus.php' ) ); ?>"
-								class="adm-btn secondary" target="_blank"
-								rel="noopener noreferrer"><?php esc_html_e( 'Go to Menus', 'gautam' ); ?></a>
-						</div><!-- END .gautam-buttons -->
+							<div class="gautam-buttons">
+								<a href="<?php echo esc_url( admin_url( 'nav-menus.php' ) ); ?>" class="adm-btn secondary" target="_blank"><?php esc_html_e( 'Customize Menu', 'gautam' ); ?></a>
+							</div><!-- END .gautam-buttons -->
+						</div>
 					</div>
 
 					<div class="gautam-card">
-						<h4>
-							<?php esc_html_e( 'Change Colors', 'gautam' ); ?>
-						</h4>
-						<p><?php esc_html_e( 'Replace the default theme colors and make your website color scheme match your brand design.', 'gautam' ); ?></p>
+						<div class="card-inner-box">
+							<h4>
+								<?php esc_html_e( 'Change Header', 'gautam' ); ?>
+							</h4>
 
-						<div class="gautam-buttons">
-							<a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[section]=gautam_section_colors' ) ); ?>"
-								class="adm-btn secondary" target="_blank"
-								rel="noopener noreferrer"><?php esc_html_e( 'Change Colors', 'gautam' ); ?></a>
-						</div><!-- END .gautam-buttons -->
+							<div class="gautam-buttons">
+								<a href="<?php echo esc_url( admin_url( 'nav-menus.php' ) ); ?>" class="adm-btn secondary" target="_blank"><?php esc_html_e( 'Customize Header', 'gautam' ); ?></a>
+							</div><!-- END .gautam-buttons -->
+						</div>
 					</div>
 
-				</div><!-- END .gautam-section -->
+					<div class="gautam-card">
+						<div class="card-inner-box">
+							<h4>
+								<?php esc_html_e( 'Change Blog Layout', 'gautam' ); ?>
+							</h4>
 
-				<div class="gautam-section large-section">
-					<div class="gautam-hero">
-						<!--						<img src="-->
-						<?php // echo esc_url( GAUTAM_THEME_URI . '/assets/images/si-customize.svg' ); ?><!--" alt="-->
-						<?php // echo esc_html( 'Customize' ); ?><!--" />-->
+							<div class="gautam-buttons">
+								<a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[section]=gautam_section_colors' ) ); ?>" class="adm-btn secondary" target="_blank"><?php esc_html_e( 'Customize Layout', 'gautam' ); ?></a>
+							</div><!-- END .gautam-buttons -->
+						</div>
 					</div>
 
-					<h2><?php esc_html_e( 'Let‘s customize your website', 'gautam' ); ?></h2>
-					<p><?php esc_html_e( 'There are many changes you can make to customize your website. Explore Gautam customization options and make it unique. ', 'gautam' ); ?></p>
+					<div class="gautam-card">
+						<div class="card-inner-box">
+							<h4>
+								<?php esc_html_e( 'Change Fonts', 'gautam' ); ?>
+							</h4>
 
-					<div class="gautam-buttons">
-						<a href="<?php echo esc_url( admin_url( 'customize.php' ) ); ?>"
-							class="adm-btn primary large-button"><?php esc_html_e( 'Start Customizing', 'gautam' ); ?></a>
-					</div><!-- END .gautam-buttons -->
+							<div class="gautam-buttons">
+								<a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[section]=gautam_section_colors' ) ); ?>" class="adm-btn secondary" target="_blank"><?php esc_html_e( 'Customize Fonts', 'gautam' ); ?></a>
+							</div><!-- END .gautam-buttons -->
+						</div>
+					</div>
 
+					<div class="gautam-card">
+						<div class="card-inner-box">
+							<h4>
+								<?php esc_html_e( 'Change Colors', 'gautam' ); ?>
+							</h4>
+
+							<div class="gautam-buttons">
+								<a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[section]=gautam_section_colors' ) ); ?>" class="adm-btn secondary" target="_blank"><?php esc_html_e( 'Customize Colors', 'gautam' ); ?></a>
+							</div><!-- END .gautam-buttons -->
+						</div>
+					</div>
 				</div><!-- END .gautam-section -->
-
 			</div><!-- END .wrap-container -->
 
 			<?php
 		}
-
 
 		/**
 		 * Render the changelog page.
@@ -232,13 +239,13 @@ if ( ! class_exists( 'Gautam_Dashboard' ) ) :
 				<div class="gautam-section-title">
 					<h2 class="gautam-section-title">
 						<span><?php esc_html_e( 'Changelog', 'gautam' ); ?></span>
-						<span class="changelog-version"><?php esc_html_e( sprintf( 'v%1$s', '1.0.0' ), 'gautam' ); ?></span>
+						<span class="changelog-version">1.0.3</span>
 					</h2>
 				</div><!-- END .gautam-section-title -->
 
 				<div class="gautam-section gautam-columns">
 					<div class="gautam-changelog">
-						<pre><?php esc_html_e( $changelog , 'gautam'); ?></pre>
+						<pre><?php echo esc_html( $changelog ); ?></pre>
 					</div>
 				</div><!-- END .gautam-columns -->
 			</div><!-- END .wrap-container -->
@@ -259,15 +266,9 @@ if ( ! class_exists( 'Gautam_Dashboard' ) ) :
 			<div class="wrap-container">
 				<div class="gautam-section-title">
 					<h2 class="gautam-section-title">
-						<span><?php esc_html_e( 'Plugins', 'gautam' ); ?></span>
+						<span><?php esc_html_e( 'Plugins Coming.', 'gautam' ); ?></span>
 					</h2>
 				</div><!-- END .gautam-section-title -->
-
-				<div class="gautam-section gautam-columns">
-					<div class="gautam-changelog">
-
-					</div>
-				</div><!-- END .gautam-columns -->
 			</div><!-- END .wrap-container -->
 			<?php
 		}
@@ -284,17 +285,48 @@ if ( ! class_exists( 'Gautam_Dashboard' ) ) :
 
 			?>
 			<div class="wrap-container">
-				<div class="gautam-section-title">
-					<h2 class="gautam-section-title">
-						<span><?php esc_html_e( 'Support', 'gautam' ); ?></span>
-					</h2>
-				</div><!-- END .gautam-section-title -->
 
 				<div class="gautam-section gautam-columns">
-					<div class="gautam-changelog">
+					<div class="gautam-card">
+						<div class="card-inner-box">
+							<h4>
+								<?php esc_html_e( 'Need Help?', 'gautam' ); ?>
+							</h4>
+							<p><?php esc_html_e( 'Have a question or found a bug? Get the help you need from us.', 'gautam' ); ?></p>
 
+							<div class="gautam-buttons">
+								<a href="<?php echo esc_url( 'https://wordpress.org/support/theme/gautam/' ); ?>" class="adm-btn secondary" target="_blank"><?php esc_html_e( 'Contact Us', 'gautam' ); ?></a>
+							</div><!-- END .gautam-buttons -->
+						</div>
 					</div>
-				</div><!-- END .gautam-columns -->
+
+					<div class="gautam-card">
+						<div class="card-inner-box">
+							<h4>
+								<?php esc_html_e( 'Theme Review', 'gautam' ); ?>
+							</h4>
+							<p><?php esc_html_e( 'If you like Gautam Theme Please leave us a review. We would love to hear from you.', 'gautam' ); ?></p>
+
+							<div class="gautam-buttons">
+								<a href="<?php echo esc_url( 'https://wordpress.org/support/theme/gautam/reviews/#new-post' ); ?>" class="adm-btn secondary" target="_blank"><?php esc_html_e( 'Write a Review', 'gautam' ); ?></a>
+							</div><!-- END .gautam-buttons -->
+						</div>
+					</div>
+
+					<div class="gautam-card">
+						<div class="card-inner-box">
+							<h4>
+								<?php esc_html_e( 'Improvement Idea', 'gautam' ); ?>
+							</h4>
+							<p><?php esc_html_e( 'Have any feature suggestion or improvement for the theme?', 'gautam' ); ?></p>
+
+							<div class="gautam-buttons">
+								<a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[control]=custom_logo' ) ); ?>" class="adm-btn secondary" target="_blank"><?php esc_html_e( 'Suggest an Idea', 'gautam' ); ?></a>
+							</div><!-- END .gautam-buttons -->
+						</div>
+					</div>
+				</div>
+
 			</div><!-- END .wrap-container -->
 			<?php
 		}
@@ -325,15 +357,9 @@ if ( ! class_exists( 'Gautam_Dashboard' ) ) :
 							$current = false !== strpos( $base, $item['id'] ) ? 'current-item' : '';
 							?>
 
-							<li class="<?php esc_attr_e( $current, 'gautam' ); ?>">
+							<li class="<?php echo esc_attr( $current ); ?>">
 								<a href="<?php echo esc_url( $item['url'] ); ?>">
-									<?php esc_html_e( $item['name'], 'gautam' ); ?>
-
-									<?php
-									if ( isset( $item['icon'] ) && $item['icon'] ) {
-										gautam_print_admin_icon( $item['icon'] );
-									}
-									?>
+									<?php echo esc_html( $item['name'] ); ?>
 								</a>
 							</li>
 
@@ -353,7 +379,7 @@ if ( ! class_exists( 'Gautam_Dashboard' ) ) :
 		 */
 		public function get_current_page() {
 
-			$page = isset( $_GET['page'] ) ? sanitize_text_field( wp_unslash( $_GET['page'] ) ) : 'dashboard'; // phpcs:ignore
+            $page = isset($_GET['page']) ? sanitize_text_field(wp_unslash($_GET['page'])) : 'dashboard'; // phpcs:ignore
 			$page = str_replace( 'gautam-', '', $page );
 			$page = apply_filters( 'gautam_dashboard_current_page', $page );
 
@@ -371,7 +397,7 @@ if ( ! class_exists( 'Gautam_Dashboard' ) ) :
 			$items = array(
 				'dashboard' => array(
 					'id'   => 'dashboard',
-					'name' => esc_html__( 'About', 'gautam' ),
+					'name' => esc_html__( 'Welcome', 'gautam' ),
 					'icon' => '',
 					'url'  => menu_page_url( 'gautam-dashboard', false ),
 				),
@@ -397,7 +423,6 @@ if ( ! class_exists( 'Gautam_Dashboard' ) ) :
 
 			return $items;
 		}
-
 	}
 endif;
 
@@ -410,7 +435,6 @@ endif;
  * Example: <?php $gautam_dashboard = gautam_dashboard(); ?>
  *
  * @return object
- * @since 1.0.0
  */
 function gautam_dashboard() {
 	return Gautam_Dashboard::instance();

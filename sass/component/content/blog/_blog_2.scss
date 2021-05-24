@@ -1,7 +1,7 @@
-.blog-2 {
-  //& > article {
-  //  margin-bottom: 3rem;
-  //}
+.article-container.blog-2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
 
   & .inner-article {
     position: relative;
@@ -24,8 +24,8 @@
     background: #dadce0;
     height: 100%;
     width: 100%;
-    top: 5px;
-    left: 5px;
+    top: 3px;
+    left: 3px;
     z-index: -1;
     border-radius: 12px;
   }
@@ -35,12 +35,8 @@
     padding: 2rem;
 
     &:hover {
-      transform: translate(-0.3rem, -0.3rem);
+      transform: translate(-0.2rem, -0.2rem);
     }
-  }
-
-  & .entry-title {
-    //font-weight: 500;
   }
 }
 

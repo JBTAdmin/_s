@@ -631,7 +631,8 @@ function gautam_header_search() {
  * @since 1.0.0
  */
 function gautam_hamburger_menu() {
-	?>
+	if ( has_nav_menu( 'menu-1' ) ) {
+		?>
 	<div class="hamburger-menu menu_only" on="tap:drawermenu.toggle"
 		role="button" tabindex="0">
 		<button class="toggle sidebar-open desktop-sidebar-toggle" data-toggle-target=".sidebar-modal"
@@ -641,7 +642,8 @@ function gautam_hamburger_menu() {
 								</span>
 		</button>
 	</div>
-	<?php
+		<?php
+	}
 }
 
 /**
