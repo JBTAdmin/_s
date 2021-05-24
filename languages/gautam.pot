@@ -468,6 +468,10 @@ msgid "Here you can select which layout will be used to display the blog posts o
 msgstr ""
 
 #: inc/kirki-configuration.php:698
+msgid "Excerpt length"
+msgstr ""
+
+#: inc/kirki-configuration.php:698
 msgid "Single Post"
 msgstr ""
 
