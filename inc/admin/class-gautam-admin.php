@@ -8,7 +8,6 @@
  * @since       1.0.3
  */
 
-// todo need to revisit the whle admin page code.
 /**
  * Do not allow direct script access.
  */
@@ -74,8 +73,6 @@ if ( ! class_exists( 'Gautam_Admin' ) ) :
 				'1.0.0'
 			);
 		}
-
-
 
 		/**
 		 * Check if we're on a Gautam admin page.
