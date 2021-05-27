@@ -2907,7 +2907,7 @@ div[class*="footer-sidebar-"] ul {
 	justify-content: center;
 }
 
-.single.in-header .meta-data {
+.single.in-header.has-featured-image .meta-data {
 	margin: 20vh 0 10vh 0;
 }
 
@@ -3716,11 +3716,11 @@ a.pt {
 }
 
 .gautam_social_follow {
-	font-size: 1.5rem;
+	font-size: 1.4rem;
 	position: fixed;
 	right: 5vh;
 	top: 50%;
-	font-weight: 600;
+	font-weight: 500;
 	z-index: 5;
 	-webkit-box-align: center;
 	-ms-flex-align: center;
