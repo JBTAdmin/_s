@@ -75,7 +75,9 @@ if ( ! function_exists( 'gautam_body_classes' ) ) {
 			$classes[] = 'has-featured-image';
 		}
 
-		$classes[] = get_theme_mod( 'single_post_layout', 'in-header' );
+		if ( is_singular( 'post' ) ) {
+			$classes[] = get_theme_mod( 'single_post_layout', 'in-header' );
+		}
 
 		$classes[] = get_theme_mod( 'header_layout_setting' );
 
@@ -217,7 +219,7 @@ if ( ! function_exists( 'gautam_post_content_before' ) ) {
 				'in-content',
 			),
 			true
-		) ) {
+		) && is_singular( 'post' ) ) {
 			get_template_part( 'template-parts/single/post-header/in-content' );
 		}
 	}
@@ -298,7 +300,7 @@ if ( ! function_exists( 'gautam_post_container_before' ) ) {
 				'in-header',
 			),
 			true
-		) ) {
+		) && is_singular( 'post' ) ) {
 			get_template_part( 'template-parts/single/post-header/in-header' );
 		}
 	}
