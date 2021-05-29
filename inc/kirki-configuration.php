@@ -816,7 +816,6 @@ Kirki::add_field(
 			'variant'        => '700',
 			'line-height'    => '1',
 			'letter-spacing' => '0',
-			'color'          => '#000',
 		),
 		'description' => esc_attr__( 'Single Post Title Typography.', 'gautam' ),
 		'output'      => array(
@@ -842,7 +841,7 @@ Kirki::add_field(
 				'choice'  => 'letter-spacing',
 			),
 			array(
-				'element' => array( '.meta-data' ),
+				'element' => array( 'h1.entry-title' ),
 				'choice'  => 'color',
 			),
 		),
@@ -992,7 +991,6 @@ Kirki::add_field(
 			'font-size'      => '25px',
 			'line-height'    => '1.5',
 			'letter-spacing' => '0',
-			'color'          => '#000',
 		),
 		'description' => esc_attr__( 'Font used in Blog Post Header on Home Page.', 'gautam' ),
 		'output'      => array(
@@ -1016,7 +1014,6 @@ Kirki::add_field(
 			'font-size'      => '16px',
 			'line-height'    => '1.5',
 			'letter-spacing' => '0',
-			'color'          => '#000',
 		),
 		'description' => esc_attr__( 'Font used in text elements.', 'gautam' ),
 		'output'      => array(
@@ -1036,11 +1033,10 @@ Kirki::add_field(
 		'section'     => 'fonts',
 		'default'     => array(
 			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
-			'variant'        => '700',
+			'variant'        => '500',
 			'font-size'      => '40px',
 			'line-height'    => '1',
 			'letter-spacing' => '0',
-			'color'          => '#000',
 		),
 		'description' => esc_attr__( 'Font used in H1 Header.', 'gautam' ),
 		'output'      => array(
@@ -1082,11 +1078,10 @@ Kirki::add_field(
 		'section'     => 'fonts',
 		'default'     => array(
 			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
-			'variant'        => '700',
+			'variant'        => '500',
 			'font-size'      => '40px',
 			'line-height'    => '1.05',
 			'letter-spacing' => '0',
-			'color'          => '#000',
 		),
 		'description' => esc_attr__( 'Font used in H2 header.', 'gautam' ),
 		'output'      => array(
@@ -1128,11 +1123,10 @@ Kirki::add_field(
 		'section'     => 'fonts',
 		'default'     => array(
 			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
-			'variant'        => '700',
+			'variant'        => '500',
 			'font-size'      => '36px',
 			'line-height'    => '1.1',
 			'letter-spacing' => '0',
-			'color'          => '#000',
 		),
 		'description' => esc_attr__( 'Font used in H3 header.', 'gautam' ),
 		'output'      => array(
@@ -1226,10 +1220,44 @@ Kirki::add_field(
 	'gautam_theme_options',
 	array(
 		'type'     => 'color',
+		'settings' => 'blog_title_color',
+		'label'    => esc_attr__( 'Blog Title Color', 'gautam' ),
+		'section'  => 'general_color',
+		'default'  => '#000',
+		'output'   => array(
+			array(
+				'element'  => 'h2.entry-title',
+				'property' => 'color',
+			),
+		),
+	)
+);
+
+Kirki::add_field(
+	'gautam_theme_options',
+	array(
+		'type'     => 'color',
+		'settings' => 'heading_color',
+		'label'    => esc_attr__( 'Heading Color', 'gautam' ),
+		'section'  => 'general_color',
+		'default'  => '#000',
+		'output'   => array(
+			array(
+				'element'  => array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' ),
+				'property' => 'color',
+			),
+		),
+	)
+);
+
+Kirki::add_field(
+	'gautam_theme_options',
+	array(
+		'type'     => 'color',
 		'settings' => 'color_body_text',
 		'label'    => esc_attr__( 'Text Color', 'gautam' ),
 		'section'  => 'general_color',
-		'default'  => '#000',
+		'default'  => '#454545',
 		'output'   => array(
 			array(
 				'element'  => 'body',

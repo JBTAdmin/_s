@@ -33,6 +33,11 @@
 
 .post-thumbnail {
   margin: 2rem 0;
+
+  & img {
+    display: block;
+    margin: auto;
+  }
 }
 .post-thumbnail.in-style {
   align-self: stretch;
@@ -59,7 +64,7 @@
 
 .entry-title {
   margin-bottom: 1.5rem;
-  color: inherit;
+  //   color: inherit;
 }
 
 .entry-meta {

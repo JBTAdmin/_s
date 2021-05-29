@@ -54,11 +54,12 @@
   border-radius: 0.5rem;
 }
 
+// it can be merged with .post-thumbnail .post-date  .
 .entry-meta > .posted_on {
   //color: #263238;
   font-size: 14px;
-  font-size: 1.4rem;
-  font-weight: 700;
+  font-size: 1.3rem;
+  font-weight: 600;
   text-decoration: none;
   margin-bottom: 2rem;
   opacity: 0.8;
