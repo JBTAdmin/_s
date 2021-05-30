@@ -650,7 +650,7 @@ Kirki::add_field(
 		'section'     => 'header',
 		'default'     => array(
 			'font-family' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
-			'font-size'   => '1.6rem',
+			'font-size'   => '1.5rem',
 		),
 		'description' => esc_attr__( 'Font used in Single Post Header.', 'gautam' ),
 		'output'      => array(
@@ -812,8 +812,8 @@ Kirki::add_field(
 		'section'     => 'blog_post',
 		'default'     => array(
 			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
-			'font-size'      => '35px',
-			'variant'        => '700',
+			'font-size'      => '30px',
+			'variant'        => '500',
 			'line-height'    => '1',
 			'letter-spacing' => '0',
 		),
@@ -822,7 +822,7 @@ Kirki::add_field(
 			array(
 				'element'       => array( 'h1.entry-title' ),
 				'choice'        => 'font-size',
-				'value_pattern' => 'calc($ + 34 * ((100vw - 300px) / (1400)))',
+				'value_pattern' => 'calc($ + 20 * ((100vw - 300px) / (1300)))',
 			),
 			array(
 				'element' => array( 'h1.entry-title' ),
@@ -1034,7 +1034,7 @@ Kirki::add_field(
 		'default'     => array(
 			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
 			'variant'        => '500',
-			'font-size'      => '40px',
+			'font-size'      => '30px',
 			'line-height'    => '1',
 			'letter-spacing' => '0',
 		),
@@ -1043,7 +1043,7 @@ Kirki::add_field(
 			array(
 				'element'       => array( 'h1' ),
 				'choice'        => 'font-size',
-				'value_pattern' => 'calc($ + 34 * ((100vw - 300px) / (1400)))',
+				'value_pattern' => 'calc($ + 15 * ((100vw - 300px) / (1300)))',
 			),
 			array(
 				'element' => array( 'h1' ),
@@ -1079,7 +1079,7 @@ Kirki::add_field(
 		'default'     => array(
 			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
 			'variant'        => '500',
-			'font-size'      => '40px',
+			'font-size'      => '25px',
 			'line-height'    => '1.05',
 			'letter-spacing' => '0',
 		),
@@ -1088,7 +1088,7 @@ Kirki::add_field(
 			array(
 				'element'       => array( 'h2' ),
 				'choice'        => 'font-size',
-				'value_pattern' => 'calc($ + 14 * ((100vw - 576px) / (1024)))',
+				'value_pattern' => 'calc($ + 15 * ((100vw - 300px) / (1300)))',
 			),
 			array(
 				'element' => array( 'h2' ),
@@ -1124,7 +1124,7 @@ Kirki::add_field(
 		'default'     => array(
 			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
 			'variant'        => '500',
-			'font-size'      => '36px',
+			'font-size'      => '20px',
 			'line-height'    => '1.1',
 			'letter-spacing' => '0',
 		),
@@ -1133,7 +1133,7 @@ Kirki::add_field(
 			array(
 				'element'       => array( 'h3' ),
 				'choice'        => 'font-size',
-				'value_pattern' => 'calc($ + 4 * ((100vw - 576px) / (1024)))',
+				'value_pattern' => 'calc($ + 15 * ((100vw - 300px) / (1300)))',
 			),
 			array(
 				'element' => array( 'h3' ),

@@ -55,12 +55,10 @@ body.admin-bar aside {
     //padding-bottom: 0.4rem;
 
     letter-spacing: 0.8px;
-    text-transform: uppercase;
     padding-bottom: 8px;
     font-size: 16px;
     line-height: 17px;
-    font-weight: 700;
-    text-transform: uppercase;
+    font-weight: 500;
     letter-spacing: 1px;
     margin-bottom: 24px;
     border-bottom: 1px solid #e7eaec;
@@ -121,8 +119,4 @@ body.admin-bar aside {
   color: #111;
   font: normal normal normal 14px/1 FontAwesome;
   text-rendering: auto;
-}
-
-.widget ul li a {
-  color: #111;
 }

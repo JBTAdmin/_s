@@ -637,7 +637,7 @@ function gautam_hamburger_menu() {
 		?>
 	<div class="hamburger-menu menu_only" on="tap:drawermenu.toggle"
 		role="button" tabindex="0">
-		<button class="toggle sidebar-open desktop-sidebar-toggle" data-toggle-target=".sidebar-modal"
+		<button class="toggle sidebar-open desktop-sidebar-toggle" data-toggle-target=".sidebar-modal" aria-label="Menu"
 				data-toggle-body-class="showing-sidebar-modal" aria-expanded="false" tabindex="-1">
 								<span class="toggle-inner">
 									<i class="fa fa-bars fa-lg" aria-hidden="true"></i>

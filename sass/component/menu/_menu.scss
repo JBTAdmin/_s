@@ -246,6 +246,9 @@ li > ul.sub-menu {
     align-items: center;
     //font-style: italic;
     //line-height: 8rem;
+    &:hover > a {
+      color: inherit;
+    }
   }
 
   .header-menu > li > a {
@@ -351,6 +354,10 @@ li > ul.sub-menu {
   //position: relative;
   //display: block;
   line-height: 3rem; //todo try to combine somewhere else.
+  width: 100%;
+  &:hover {
+    color: inherit;
+  }
 }
 //.sub-menu li:hover > a {
 //  color: #000;
