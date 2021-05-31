@@ -3,7 +3,7 @@
  * Gautam About page class.
  *
  * @package     Gautam
- * @since       1.0.3
+ * @since       1.1.0
  */
 
 /**
@@ -113,8 +113,6 @@ if ( ! class_exists( 'Gautam_Dashboard' ) ) :
 
 		/**
 		 * Render dashboard page.
-		 *
-		 * @since 1.0.0
 		 */
 		public function render_dashboard() {
 
@@ -161,7 +159,7 @@ if ( ! class_exists( 'Gautam_Dashboard' ) ) :
 							</h4>
 
 							<div class="gautam-buttons">
-								<a href="<?php echo esc_url( admin_url( 'nav-menus.php' ) ); ?>" class="adm-btn secondary" target="_blank"><?php esc_html_e( 'Customize Header', 'gautam' ); ?></a>
+								<a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[section]=header' ) ); ?>" class="adm-btn secondary" target="_blank"><?php esc_html_e( 'Customize Header', 'gautam' ); ?></a>
 							</div><!-- END .gautam-buttons -->
 						</div>
 					</div>
@@ -173,7 +171,7 @@ if ( ! class_exists( 'Gautam_Dashboard' ) ) :
 							</h4>
 
 							<div class="gautam-buttons">
-								<a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[section]=gautam_section_colors' ) ); ?>" class="adm-btn secondary" target="_blank"><?php esc_html_e( 'Customize Layout', 'gautam' ); ?></a>
+								<a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[section]=blog_settings' ) ); ?>" class="adm-btn secondary" target="_blank"><?php esc_html_e( 'Customize Layout', 'gautam' ); ?></a>
 							</div><!-- END .gautam-buttons -->
 						</div>
 					</div>
@@ -185,7 +183,7 @@ if ( ! class_exists( 'Gautam_Dashboard' ) ) :
 							</h4>
 
 							<div class="gautam-buttons">
-								<a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[section]=gautam_section_colors' ) ); ?>" class="adm-btn secondary" target="_blank"><?php esc_html_e( 'Customize Fonts', 'gautam' ); ?></a>
+								<a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[section]=fonts' ) ); ?>" class="adm-btn secondary" target="_blank"><?php esc_html_e( 'Customize Fonts', 'gautam' ); ?></a>
 							</div><!-- END .gautam-buttons -->
 						</div>
 					</div>
@@ -197,7 +195,7 @@ if ( ! class_exists( 'Gautam_Dashboard' ) ) :
 							</h4>
 
 							<div class="gautam-buttons">
-								<a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[section]=gautam_section_colors' ) ); ?>" class="adm-btn secondary" target="_blank"><?php esc_html_e( 'Customize Colors', 'gautam' ); ?></a>
+								<a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[section]=general_color' ) ); ?>" class="adm-btn secondary" target="_blank"><?php esc_html_e( 'Customize Colors', 'gautam' ); ?></a>
 							</div><!-- END .gautam-buttons -->
 						</div>
 					</div>
@@ -209,8 +207,6 @@ if ( ! class_exists( 'Gautam_Dashboard' ) ) :
 
 		/**
 		 * Render the changelog page.
-		 *
-		 * @since 1.0.0
 		 */
 		public function render_changelog() {
 
@@ -239,7 +235,7 @@ if ( ! class_exists( 'Gautam_Dashboard' ) ) :
 				<div class="gautam-section-title">
 					<h2 class="gautam-section-title">
 						<span><?php esc_html_e( 'Changelog', 'gautam' ); ?></span>
-						<span class="changelog-version">1.0.3</span>
+						<span class="changelog-version">1.1.0</span>
 					</h2>
 				</div><!-- END .gautam-section-title -->
 
@@ -254,8 +250,6 @@ if ( ! class_exists( 'Gautam_Dashboard' ) ) :
 
 		/**
 		 * Render the plugin page.
-		 *
-		 * @since 1.0.0
 		 */
 		public function render_plugins() {
 
@@ -275,8 +269,6 @@ if ( ! class_exists( 'Gautam_Dashboard' ) ) :
 
 		/**
 		 * Render the support page.
-		 *
-		 * @since 1.0.0
 		 */
 		public function render_support() {
 
@@ -321,7 +313,7 @@ if ( ! class_exists( 'Gautam_Dashboard' ) ) :
 							<p><?php esc_html_e( 'Have any feature suggestion or improvement for the theme?', 'gautam' ); ?></p>
 
 							<div class="gautam-buttons">
-								<a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[control]=custom_logo' ) ); ?>" class="adm-btn secondary" target="_blank"><?php esc_html_e( 'Suggest an Idea', 'gautam' ); ?></a>
+								<a href="<?php echo esc_url( 'https://wordpress.org/support/theme/gautam/' ); ?>" class="adm-btn secondary" target="_blank"><?php esc_html_e( 'Suggest an Idea', 'gautam' ); ?></a>
 							</div><!-- END .gautam-buttons -->
 						</div>
 					</div>
@@ -333,8 +325,6 @@ if ( ! class_exists( 'Gautam_Dashboard' ) ) :
 
 		/**
 		 * Render admin page navigation tabs.
-		 *
-		 * @since 1.0.0
 		 */
 		public function render_navigation() {
 
@@ -375,7 +365,6 @@ if ( ! class_exists( 'Gautam_Dashboard' ) ) :
 		 * Return the current Gautam Dashboard page.
 		 *
 		 * @return string $page Current dashboard page slug.
-		 * @since 1.0.0
 		 */
 		public function get_current_page() {
 
@@ -390,7 +379,6 @@ if ( ! class_exists( 'Gautam_Dashboard' ) ) :
 		 * Print admin page navigation items.
 		 *
 		 * @return array $items Array of navigation items.
-		 * @since 1.0.0
 		 */
 		public function get_navigation_items() {
 

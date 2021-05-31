@@ -288,7 +288,7 @@ if ( ! function_exists( 'gautam_excerpt' ) ) :
 	/**
 	 * Get excerpt.
 	 *
-	 * @since 1.0.3
+	 * @since 1.1.0
 	 * @param int    $length the length of the excerpt.
 	 * @param string $more Optional. What to append if $text needs to be trimmed.
 	 */

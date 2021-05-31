@@ -5,7 +5,7 @@
  * This class ties together all admin classes.
  *
  * @package     Gautam
- * @since       1.0.3
+ * @since       1.1.0
  */
 
 /**
@@ -57,7 +57,7 @@ if ( ! class_exists( 'Gautam_Admin' ) ) :
 		public function load_assets( $hook ) {
 
 			/**
-			 * Do not enqueue if we are not on one of our pages.
+			 * Do not enqueue in case of no admin pages.
 			 */
 			if ( ! $this->is_admin_page() ) {
 				return;
@@ -70,7 +70,7 @@ if ( ! class_exists( 'Gautam_Admin' ) ) :
 				'gautam-admin-styles',
 				get_parent_theme_file_uri() . '/inc/admin/css/gautam-admin.css',
 				false,
-				'1.0.0'
+				'1.1.0'
 			);
 		}
 

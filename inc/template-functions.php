@@ -166,7 +166,7 @@ if ( ! function_exists( 'gautam_single_page_layout' ) ) {
 	/**
 	 * Outputs the theme single page.
 	 *
-	 * @since 1.0.3
+	 * @since 1.1.0
 	 */
 	function gautam_single_page_layout() {
 		get_template_part( 'template-parts/content-page' );
