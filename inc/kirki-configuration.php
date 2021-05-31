@@ -650,7 +650,7 @@ Kirki::add_field(
 		'section'     => 'header',
 		'default'     => array(
 			'font-family' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
-			'font-size'   => '1.6rem',
+			'font-size'   => '1.5rem',
 		),
 		'description' => esc_attr__( 'Font used in Single Post Header.', 'gautam' ),
 		'output'      => array(
@@ -687,6 +687,23 @@ Kirki::add_field(
 			'3' => esc_attr__( 'Layout 3', 'gautam' ),
 		),
 		'description' => esc_attr__( 'Here you can select which layout will be used to display the blog posts on Home or Index pages.', 'gautam' ),
+	)
+);
+
+Kirki::add_field(
+	'gautam_theme_options',
+	array(
+		'type'     => 'number',
+		'settings' => 'blog_excerpt_length',
+		'label'    => esc_attr__( 'Excerpt length', 'gautam' ),
+		'section'  => 'blog_settings',
+		'default'  => 20,
+		'priority' => 10,
+		'choices'  => array(
+			'min'  => 5,
+			'max'  => 60,
+			'step' => 1,
+		),
 	)
 );
 // END SECTION: BLOG.
@@ -795,18 +812,17 @@ Kirki::add_field(
 		'section'     => 'blog_post',
 		'default'     => array(
 			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
-			'font-size'      => '35px',
-			'variant'        => '700',
+			'font-size'      => '30px',
+			'variant'        => '500',
 			'line-height'    => '1',
 			'letter-spacing' => '0',
-			'color'          => '#000',
 		),
 		'description' => esc_attr__( 'Single Post Title Typography.', 'gautam' ),
 		'output'      => array(
 			array(
 				'element'       => array( 'h1.entry-title' ),
 				'choice'        => 'font-size',
-				'value_pattern' => 'calc($ + 34 * ((100vw - 300px) / (1400)))',
+				'value_pattern' => 'calc($ + 20 * ((100vw - 300px) / (1300)))',
 			),
 			array(
 				'element' => array( 'h1.entry-title' ),
@@ -825,7 +841,7 @@ Kirki::add_field(
 				'choice'  => 'letter-spacing',
 			),
 			array(
-				'element' => array( '.meta-data' ),
+				'element' => array( 'h1.entry-title' ),
 				'choice'  => 'color',
 			),
 		),
@@ -975,7 +991,6 @@ Kirki::add_field(
 			'font-size'      => '25px',
 			'line-height'    => '1.5',
 			'letter-spacing' => '0',
-			'color'          => '#000',
 		),
 		'description' => esc_attr__( 'Font used in Blog Post Header on Home Page.', 'gautam' ),
 		'output'      => array(
@@ -999,7 +1014,6 @@ Kirki::add_field(
 			'font-size'      => '16px',
 			'line-height'    => '1.5',
 			'letter-spacing' => '0',
-			'color'          => '#000',
 		),
 		'description' => esc_attr__( 'Font used in text elements.', 'gautam' ),
 		'output'      => array(
@@ -1019,18 +1033,17 @@ Kirki::add_field(
 		'section'     => 'fonts',
 		'default'     => array(
 			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
-			'variant'        => '700',
-			'font-size'      => '40px',
+			'variant'        => '500',
+			'font-size'      => '30px',
 			'line-height'    => '1',
 			'letter-spacing' => '0',
-			'color'          => '#000',
 		),
-		'description' => esc_attr__( 'Font used in H1 Header .', 'gautam' ),
+		'description' => esc_attr__( 'Font used in H1 Header.', 'gautam' ),
 		'output'      => array(
 			array(
 				'element'       => array( 'h1' ),
 				'choice'        => 'font-size',
-				'value_pattern' => 'calc($ + 34 * ((100vw - 300px) / (1400)))',
+				'value_pattern' => 'calc($ + 15 * ((100vw - 300px) / (1300)))',
 			),
 			array(
 				'element' => array( 'h1' ),
@@ -1065,18 +1078,17 @@ Kirki::add_field(
 		'section'     => 'fonts',
 		'default'     => array(
 			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
-			'variant'        => '700',
-			'font-size'      => '40px',
+			'variant'        => '500',
+			'font-size'      => '25px',
 			'line-height'    => '1.05',
 			'letter-spacing' => '0',
-			'color'          => '#000',
 		),
 		'description' => esc_attr__( 'Font used in H2 header.', 'gautam' ),
 		'output'      => array(
 			array(
 				'element'       => array( 'h2' ),
 				'choice'        => 'font-size',
-				'value_pattern' => 'calc($ + 14 * ((100vw - 576px) / (1024)))',
+				'value_pattern' => 'calc($ + 15 * ((100vw - 300px) / (1300)))',
 			),
 			array(
 				'element' => array( 'h2' ),
@@ -1111,18 +1123,17 @@ Kirki::add_field(
 		'section'     => 'fonts',
 		'default'     => array(
 			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;',
-			'variant'        => '700',
-			'font-size'      => '36px',
+			'variant'        => '500',
+			'font-size'      => '20px',
 			'line-height'    => '1.1',
 			'letter-spacing' => '0',
-			'color'          => '#000',
 		),
 		'description' => esc_attr__( 'Font used in H3 header.', 'gautam' ),
 		'output'      => array(
 			array(
 				'element'       => array( 'h3' ),
 				'choice'        => 'font-size',
-				'value_pattern' => 'calc($ + 4 * ((100vw - 576px) / (1024)))',
+				'value_pattern' => 'calc($ + 15 * ((100vw - 300px) / (1300)))',
 			),
 			array(
 				'element' => array( 'h3' ),
@@ -1209,10 +1220,44 @@ Kirki::add_field(
 	'gautam_theme_options',
 	array(
 		'type'     => 'color',
+		'settings' => 'blog_title_color',
+		'label'    => esc_attr__( 'Blog Title Color', 'gautam' ),
+		'section'  => 'general_color',
+		'default'  => '#000',
+		'output'   => array(
+			array(
+				'element'  => 'h2.entry-title',
+				'property' => 'color',
+			),
+		),
+	)
+);
+
+Kirki::add_field(
+	'gautam_theme_options',
+	array(
+		'type'     => 'color',
+		'settings' => 'heading_color',
+		'label'    => esc_attr__( 'Heading Color', 'gautam' ),
+		'section'  => 'general_color',
+		'default'  => '#000',
+		'output'   => array(
+			array(
+				'element'  => array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' ),
+				'property' => 'color',
+			),
+		),
+	)
+);
+
+Kirki::add_field(
+	'gautam_theme_options',
+	array(
+		'type'     => 'color',
 		'settings' => 'color_body_text',
 		'label'    => esc_attr__( 'Text Color', 'gautam' ),
 		'section'  => 'general_color',
-		'default'  => '#000',
+		'default'  => '#454545',
 		'output'   => array(
 			array(
 				'element'  => 'body',

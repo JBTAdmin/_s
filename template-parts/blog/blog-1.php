@@ -40,7 +40,7 @@
 
 		<div class="entry-excerpt">
 			<a href="<?php echo esc_url( get_permalink() ); ?>" tabindex="-1">
-				<?php the_excerpt(); ?>
+				<?php gautam_excerpt(); ?>
 			</a>
 		</div>
 

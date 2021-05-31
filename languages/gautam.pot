@@ -1,0 +1,892 @@
+# Copyright (C) 2020 Ipoweruser
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: gautam 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/_s\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-04-17T21:03:15+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.4.0\n"
+"X-Domain: gautam\n"
+
+#. Theme Name of the theme
+msgid "gautam"
+msgstr ""
+
+#. Theme URI of the theme
+msgid "https://ipoweruser.com/"
+msgstr ""
+
+#. Description of the theme
+msgid "Hi. I'm a starter theme called <em>gautam</em>"
+msgstr ""
+
+#. Author of the theme
+msgid "IpowerUser"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://ipoweruser.com/"
+msgstr ""
+
+#: 404.php:18
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:22
+msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgstr ""
+
+#: 404.php:31
+msgid "Most Used Categories"
+msgstr ""
+
+#. translators: %1$s: smiley
+#: 404.php:49
+msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+#. translators: 1: title.
+#: comments.php:35
+msgid "One thought"
+msgstr ""
+
+#. translators: 1: comment count number, 2: title.
+#: comments.php:41
+msgctxt "comments title"
+msgid "%1$s thought"
+msgid_plural "%1$s thoughts"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:68
+msgid "Comments are closed."
+msgstr ""
+
+#: footer.php:18
+msgid "https://wordpress.org/"
+msgstr ""
+
+#. translators: %s: CMS name, i.e. WordPress.
+#: footer.php:21
+msgid "Proudly powered by %s"
+msgstr ""
+
+#. translators: 1: Theme name, 2: Theme author.
+#: footer.php:27
+msgid "Theme: %1$s by %2$s."
+msgstr ""
+
+#: header.php:26
+msgid "Skip to content"
+msgstr ""
+
+#: header.php:49
+msgid "Primary Menu"
+msgstr ""
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: template-parts/single/layout.php:18
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: template-parts/single/layout.php:31
+#: template-parts/content-page.php:26
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/single/post-navigation.php:20
+msgid "Post navigation"
+msgstr ""
+
+#: template-parts/content-none.php:15
+msgid "Nothing Found"
+msgstr ""
+
+#. translators: 1: link to WP admin new post page.
+#: template-parts/content-none.php:25
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:38
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:45
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr ""
+
+#: inc/core.php:46
+msgid "Primary"
+msgstr ""
+
+#: inc/core.php:47
+msgid "Footer Menu 1"
+msgstr ""
+
+#. translators: %s: search query.
+#: inc/template-functions.php:231
+msgid "Search Results for: %s"
+msgstr ""
+
+#: inc/template-functions.php:400
+#: inc/template-functions.php:605
+msgid "Search"
+msgstr ""
+
+#: inc/template-functions.php:419
+msgid "Back to top"
+msgstr ""
+
+#. translators: %s: post title
+#: inc/template-tags.php:101
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#: inc/template-tags.php:247
+msgid "Previous Page"
+msgstr ""
+
+#: inc/template-tags.php:248
+msgid "Next Page"
+msgstr ""
+
+#: inc/widgets.php:23
+msgid "Right Sidebar"
+msgstr ""
+
+#: inc/widgets.php:25
+#: inc/widgets.php:37
+msgid "Add widgets here."
+msgstr ""
+
+#: inc/widgets.php:35
+msgid "Left Sidebar"
+msgstr ""
+
+#: inc/woocommerce.php:184
+msgid "View your shopping cart"
+msgstr ""
+
+#. translators: number of items in the mini cart.
+#: inc/woocommerce.php:188
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/kirki-configuration.php:26
+msgid "Site Identity"
+msgstr ""
+
+#: inc/kirki-configuration.php:60
+msgid "Theme Settings"
+msgstr ""
+
+#: inc/kirki-configuration.php:61
+msgid "Manage theme settings"
+msgstr ""
+
+#: inc/kirki-configuration.php:71
+msgid "Logo width (px)"
+msgstr ""
+
+#: inc/kirki-configuration.php:72
+msgid "example: 150"
+msgstr ""
+
+#: inc/kirki-configuration.php:90
+msgid "Text logo"
+msgstr ""
+
+#: inc/kirki-configuration.php:91
+msgid "Enable to use text logo instead of image."
+msgstr ""
+
+#: inc/kirki-configuration.php:102
+msgid "General"
+msgstr ""
+
+#: inc/kirki-configuration.php:113
+msgid "Container Width (px)"
+msgstr ""
+
+#: inc/kirki-configuration.php:136
+msgid "Max Sidebar Width (px)"
+msgstr ""
+
+#: inc/kirki-configuration.php:160
+msgid "Button Border Radius (px)"
+msgstr ""
+
+#: inc/kirki-configuration.php:184
+msgid "Search Visibility"
+msgstr ""
+
+#: inc/kirki-configuration.php:189
+msgid "None"
+msgstr ""
+
+#: inc/kirki-configuration.php:190
+msgid "Header"
+msgstr ""
+
+#: inc/kirki-configuration.php:191
+msgid "Fixed"
+msgstr ""
+
+#: inc/kirki-configuration.php:193
+msgid "Select the Search button visibility and position."
+msgstr ""
+
+#: inc/kirki-configuration.php:202
+msgid "Body Background"
+msgstr ""
+
+#: inc/kirki-configuration.php:203
+msgid "Change your site background settings."
+msgstr ""
+
+#: inc/kirki-configuration.php:226
+msgid "Padding & Margin"
+msgstr ""
+
+#: inc/kirki-configuration.php:237
+msgid "Container Padding (Use CSS units)"
+msgstr ""
+
+#: inc/kirki-configuration.php:248
+#: inc/kirki-configuration.php:308
+#: inc/kirki-configuration.php:368
+#: inc/kirki-configuration.php:429
+msgid "Padding Top"
+msgstr ""
+
+#: inc/kirki-configuration.php:249
+#: inc/kirki-configuration.php:309
+#: inc/kirki-configuration.php:369
+#: inc/kirki-configuration.php:430
+msgid "Padding Bottom"
+msgstr ""
+
+#: inc/kirki-configuration.php:250
+#: inc/kirki-configuration.php:310
+#: inc/kirki-configuration.php:370
+#: inc/kirki-configuration.php:431
+msgid "Padding Left"
+msgstr ""
+
+#: inc/kirki-configuration.php:251
+#: inc/kirki-configuration.php:311
+#: inc/kirki-configuration.php:371
+#: inc/kirki-configuration.php:432
+msgid "Padding Right"
+msgstr ""
+
+#: inc/kirki-configuration.php:267
+msgid "Container Margin (Use CSS units)"
+msgstr ""
+
+#: inc/kirki-configuration.php:278
+#: inc/kirki-configuration.php:338
+#: inc/kirki-configuration.php:398
+#: inc/kirki-configuration.php:459
+msgid "Margin Top"
+msgstr ""
+
+#: inc/kirki-configuration.php:279
+#: inc/kirki-configuration.php:339
+#: inc/kirki-configuration.php:399
+#: inc/kirki-configuration.php:460
+msgid "Margin Bottom"
+msgstr ""
+
+#: inc/kirki-configuration.php:280
+#: inc/kirki-configuration.php:340
+#: inc/kirki-configuration.php:400
+#: inc/kirki-configuration.php:461
+msgid "Margin Left"
+msgstr ""
+
+#: inc/kirki-configuration.php:281
+#: inc/kirki-configuration.php:341
+#: inc/kirki-configuration.php:401
+#: inc/kirki-configuration.php:462
+msgid "Margin Right"
+msgstr ""
+
+#: inc/kirki-configuration.php:297
+msgid "Content Padding (Use CSS units)"
+msgstr ""
+
+#: inc/kirki-configuration.php:327
+msgid "Content Margin (Use CSS units)"
+msgstr ""
+
+#: inc/kirki-configuration.php:357
+msgid "Right Sidebar Padding (Use CSS units)"
+msgstr ""
+
+#: inc/kirki-configuration.php:387
+msgid "Right Sidebar Margin (Use CSS units)"
+msgstr ""
+
+#: inc/kirki-configuration.php:418
+msgid "Left Sidebar Padding (Use CSS units)"
+msgstr ""
+
+#: inc/kirki-configuration.php:448
+msgid "Left Sidebar Margin (Use CSS units)"
+msgstr ""
+
+#: inc/kirki-configuration.php:478
+msgid "Header"
+msgstr ""
+
+#: inc/kirki-configuration.php:489
+msgid "Select Header Layout"
+msgstr ""
+
+#: inc/kirki-configuration.php:494
+msgid "Logo Left, Menu Right"
+msgstr ""
+
+#: inc/kirki-configuration.php:495
+msgid "Logo Right, Menu Left"
+msgstr ""
+
+#: inc/kirki-configuration.php:497
+msgid "Here you can select which Header layout will be used."
+msgstr ""
+
+#: inc/kirki-configuration.php:506
+msgid "Header Background Color"
+msgstr ""
+
+#: inc/kirki-configuration.php:529
+msgid "Color"
+msgstr ""
+
+#: inc/kirki-configuration.php:546
+msgid "Fixed Header"
+msgstr ""
+
+#: inc/kirki-configuration.php:558
+msgid "Menu Numbering"
+msgstr ""
+
+#: inc/kirki-configuration.php:559
+msgid "Enable to add Numbering to Main Menu."
+msgstr ""
+
+#: inc/kirki-configuration.php:570
+msgid "Menu alignment"
+msgstr ""
+
+#: inc/kirki-configuration.php:574
+msgid "Center"
+msgstr ""
+
+#: inc/kirki-configuration.php:575
+msgid "Right"
+msgstr ""
+
+#: inc/kirki-configuration.php:585
+msgid "Menu font decoration"
+msgstr ""
+
+#: inc/kirki-configuration.php:589
+msgid "UPPERCASE"
+msgstr ""
+
+#: inc/kirki-configuration.php:590
+msgid "None"
+msgstr ""
+
+#: inc/kirki-configuration.php:606
+msgid "Menu font weight"
+msgstr ""
+
+#: inc/kirki-configuration.php:610
+msgid "400"
+msgstr ""
+
+#: inc/kirki-configuration.php:611
+msgid "500"
+msgstr ""
+
+#: inc/kirki-configuration.php:612
+msgid "700"
+msgstr ""
+
+#: inc/kirki-configuration.php:632
+msgid "Regular"
+msgstr ""
+
+#: inc/kirki-configuration.php:633
+msgid "Italic"
+msgstr ""
+
+#: inc/kirki-configuration.php:649
+msgid "Menu Typography (Use CSS units)"
+msgstr ""
+
+#: inc/kirki-configuration.php:655
+msgid "Font used in Single Post Header."
+msgstr ""
+
+#: inc/kirki-configuration.php:669
+msgid "Blog"
+msgstr ""
+
+#: inc/kirki-configuration.php:680
+msgid "Blog Layout"
+msgstr ""
+
+#: inc/kirki-configuration.php:685
+#: inc/kirki-configuration.php:716
+#: inc/kirki-configuration.php:900
+msgid "Layout 1"
+msgstr ""
+
+#: inc/kirki-configuration.php:686
+#: inc/kirki-configuration.php:717
+msgid "Layout 2"
+msgstr ""
+
+#: inc/kirki-configuration.php:687
+msgid "Layout 3"
+msgstr ""
+
+#: inc/kirki-configuration.php:689
+msgid "Here you can select which layout will be used to display the blog posts on Home or Index pages."
+msgstr ""
+
+#: inc/kirki-configuration.php:698
+msgid "Excerpt length"
+msgstr ""
+
+#: inc/kirki-configuration.php:698
+msgid "Single Post"
+msgstr ""
+
+#: inc/kirki-configuration.php:699
+msgid "These settings affect single post display."
+msgstr ""
+
+#: inc/kirki-configuration.php:727
+msgid "Post Elements"
+msgstr ""
+
+#: inc/kirki-configuration.php:737
+msgid "Category"
+msgstr ""
+
+#: inc/kirki-configuration.php:738
+msgid "Heading"
+msgstr ""
+
+#: inc/kirki-configuration.php:739
+msgid "Metadata"
+msgstr ""
+
+#: inc/kirki-configuration.php:740
+msgid "Featured Image"
+msgstr ""
+
+#: inc/kirki-configuration.php:751
+msgid "Post Metadata Elements"
+msgstr ""
+
+#: inc/kirki-configuration.php:759
+msgid "Posted Date"
+msgstr ""
+
+#: inc/kirki-configuration.php:760
+msgid "Updated Date"
+msgstr ""
+
+#: inc/kirki-configuration.php:761
+#: inc/kirki-configuration.php:782
+msgid "Author"
+msgstr ""
+
+#: inc/kirki-configuration.php:762
+msgid "Comment"
+msgstr ""
+
+#: inc/kirki-configuration.php:781
+msgid "Tag"
+msgstr ""
+
+#: inc/kirki-configuration.php:783
+msgid "Post Navigation"
+msgstr ""
+
+#: inc/kirki-configuration.php:794
+msgid "Title Typography (Use CSS units)"
+msgstr ""
+
+#: inc/kirki-configuration.php:804
+msgid "Single Post Title Typography."
+msgstr ""
+
+#: inc/kirki-configuration.php:840
+msgid "Sidebars"
+msgstr ""
+
+#: inc/kirki-configuration.php:841
+msgid "Select Sidebar Position for Site."
+msgstr ""
+
+#: inc/kirki-configuration.php:852
+msgid "Sidebar Layout"
+msgstr ""
+
+#: inc/kirki-configuration.php:857
+msgid "Left"
+msgstr ""
+
+#: inc/kirki-configuration.php:858
+msgid "Disable"
+msgstr ""
+
+#: inc/kirki-configuration.php:859
+msgid "Right"
+msgstr ""
+
+#: inc/kirki-configuration.php:860
+msgid "Both"
+msgstr ""
+
+#: inc/kirki-configuration.php:862
+msgid "Select Sidebar Layout."
+msgstr ""
+
+#: inc/kirki-configuration.php:872
+msgid "Footer"
+msgstr ""
+
+#: inc/kirki-configuration.php:883
+msgid "Scroll Top Button"
+msgstr ""
+
+#: inc/kirki-configuration.php:884
+msgid "Enable to display go to Top Button."
+msgstr ""
+
+#: inc/kirki-configuration.php:895
+msgid "Layout"
+msgstr ""
+
+#: inc/kirki-configuration.php:895
+msgid "Here you can select which layout will be used to display the blog posts on Home or Index pages."
+msgstr ""
+
+#: inc/kirki-configuration.php:911
+msgid "Text Color"
+msgstr ""
+
+#: inc/kirki-configuration.php:912
+msgid "Change text color in footer HTML block"
+msgstr ""
+
+#: inc/kirki-configuration.php:929
+msgid "Background"
+msgstr ""
+
+#: inc/kirki-configuration.php:930
+msgid "Change Background color of the footer section."
+msgstr ""
+
+#: inc/kirki-configuration.php:947
+msgid "Footer copyright text"
+msgstr ""
+
+#: inc/kirki-configuration.php:948
+msgid "Change your footer copyright text."
+msgstr ""
+
+#: inc/kirki-configuration.php:959
+msgid "Typography"
+msgstr ""
+
+#: inc/kirki-configuration.php:970
+msgid "Blog Title Typography (Use CSS units)"
+msgstr ""
+
+#: inc/kirki-configuration.php:980
+msgid "Font used in Blog Post Header on Home Page."
+msgstr ""
+
+#: inc/kirki-configuration.php:994
+msgid "Body Typography (Use CSS units)"
+msgstr ""
+
+#: inc/kirki-configuration.php:1004
+msgid "Font used in text elements."
+msgstr ""
+
+#: inc/kirki-configuration.php:1018
+msgid "H1 Typography (Use CSS units)"
+msgstr ""
+
+#: inc/kirki-configuration.php:1028
+msgid "Font used in H1 Header."
+msgstr ""
+
+#: inc/kirki-configuration.php:1064
+msgid "H2 Typography (Use CSS units)"
+msgstr ""
+
+#: inc/kirki-configuration.php:1074
+msgid "Font used in H2 Header."
+msgstr ""
+
+#: inc/kirki-configuration.php:1110
+msgid "H3 Typography (Use CSS units)"
+msgstr ""
+
+#: inc/kirki-configuration.php:1120
+msgid "Font used in H3 Header."
+msgstr ""
+
+#: inc/kirki-configuration.php:1156
+msgid "Load all Google Fonts variants"
+msgstr ""
+
+#: inc/kirki-configuration.php:1157
+msgid "Enable to load all available google font variants and subsets."
+msgstr ""
+
+#: inc/kirki-configuration.php:1168
+msgid "Colors"
+msgstr ""
+
+#: inc/kirki-configuration.php:1179
+msgid "Theme color"
+msgstr ""
+
+#: inc/kirki-configuration.php:1196
+msgid "Secondary Theme color"
+msgstr ""
+
+#: inc/kirki-configuration.php:1213
+msgid "Text Color"
+msgstr ""
+
+#: inc/kirki-configuration.php:1230
+msgid "Button Background Color"
+msgstr ""
+
+#: inc/kirki-configuration.php:1247
+msgid "Button Background Hover Color"
+msgstr ""
+
+#: inc/kirki-configuration.php:1264
+msgid "Button Text Color"
+msgstr ""
+
+#: inc/kirki-configuration.php:1281
+msgid "Button Text Hover Color"
+msgstr ""
+
+#: inc/kirki-configuration.php:1298
+msgid "Button Border Color"
+msgstr ""
+
+#: inc/kirki-configuration.php:1316
+msgid "Social Media"
+msgstr ""
+
+#: inc/kirki-configuration.php:1327
+msgid "Social Share"
+msgstr ""
+
+#: inc/kirki-configuration.php:1328
+msgid "Enable to display Social Share Button."
+msgstr ""
+
+#: inc/kirki-configuration.php:1339
+msgid "Social Follow"
+msgstr ""
+
+#: inc/kirki-configuration.php:1340
+msgid "Enable to show Social Media Button on side."
+msgstr ""
+
+#: inc/kirki-configuration.php:1351
+msgid "Social Text vs Icons"
+msgstr ""
+
+#: inc/kirki-configuration.php:1352
+msgid "Enable to show social text instead of icon."
+msgstr ""
+
+#: inc/kirki-configuration.php:1363
+msgid "Social Media Color Code"
+msgstr ""
+
+#: inc/kirki-configuration.php:1364
+msgid "Enable to use Social Media color code."
+msgstr ""
+
+#: inc/kirki-configuration.php:1375
+msgid "Facebook Url"
+msgstr ""
+
+#: inc/kirki-configuration.php:1386
+msgid "Twitter Url"
+msgstr ""
+
+#: inc/kirki-configuration.php:1397
+msgid "LinkedIn Url"
+msgstr ""
+
+#: inc/kirki-configuration.php:1408
+msgid "Instagram Url"
+msgstr ""
+
+#: inc/kirki-configuration.php:1419
+msgid "YouTube Url"
+msgstr ""
+
+#: inc/kirki-configuration.php:1430
+msgid "Github Url"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:64
+msgid "Gautam Dashboard"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:75
+#: inc/admin/class-gautam-dashboard.php:241
+#: inc/admin/class-gautam-dashboard.php:406
+msgid "Changelog"
+msgstr ""   
+
+#: inc/admin/class-gautam-dashboard.php:89
+msgid "Useful Plugins"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:103
+#: inc/admin/class-gautam-dashboard.php:418
+msgid "Support"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:128
+msgid "Gautam Theme"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:129
+msgid "Thank you for using Gautam Theme. Theme is now installed and ready to use. Below are the list of option that you might be interested in using before your site is fully ready to serve user."
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:136
+msgid "Change Site Title & Logo"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:140
+msgid "Customize Identity"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:148
+msgid "Change Menus"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:152
+msgid "Customize Menu"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:160
+msgid "Change Header"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:164
+msgid "Customize Header"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:172
+msgid "Change Blog Layout"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:176
+msgid "Customize Layout"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:184
+msgid "Change Fonts"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:188
+msgid "Customize Fonts"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:196
+msgid "Change Colors"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:200
+msgid "Customize Colors"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:223
+msgid "Changelog file not found."
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:225
+msgid "Changelog file not readable."
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:269
+msgid "Plugins Coming."
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:293
+msgid "Need Help?"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:298
+msgid "Have a question or found a bug? Get the help you need from us."
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:269
+msgid "Contact Us"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:306
+msgid "Theme Review"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:308
+msgid "If you like Gautam Theme Please leave us a review. We would love to hear from you."
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:311
+msgid "Write a Review"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:319
+msgid "Improvement Idea"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:321
+msgid "Have any feature suggestion or improvement for the theme?"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:324
+msgid "Suggest an Idea"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:324
+msgid "Welcome"
+msgstr ""
+
+#: inc/admin/class-gautam-dashboard.php:412
+msgid "Plugins"
+msgstr ""

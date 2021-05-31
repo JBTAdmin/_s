@@ -161,7 +161,7 @@ require get_template_directory() . '/inc/kirki-configuration.php';
  * @return string[] kirki files location.
  */
 function gautam_kirki_configuration() {
-	return array( 'url_path' => get_stylesheet_directory_uri() . '/inc/kirki/' );
+	return array( 'url_path' => get_template_directory_uri() . '/inc/kirki/' );
 }
 add_filter( 'kirki/config', 'gautam_kirki_configuration' );
 
@@ -173,5 +173,6 @@ function gautam_add_image_sizes() {
 	add_image_size( 'gautam-post-navigation-featured-image', 80, 80, true ); // Used for Post Navigation.
 	add_image_size( 'gautam-post-in-content-featured-image', 1140, 500, true );// Used for Single Post In Content Featured Image.
 	add_image_size( 'gautam-post-in-header-featured-image', 1840, 500, true );// Used for Single Post In Header Featured Image.
+	add_image_size( 'gautam-page-in-content-featured-image', 1140, 500, true );// Used for Single Post In Content Featured Image.
 }
 add_action( 'after_setup_theme', 'gautam_add_image_sizes' );

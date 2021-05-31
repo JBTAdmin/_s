@@ -13,7 +13,7 @@ add_action( 'wp_head', 'gautam_pingback_header' );
 add_filter( 'body_class', 'gautam_body_classes' );
 add_action( 'gautam_header', 'gautam_header_branding_layout' );
 add_action( 'gautam_singular_content', 'gautam_singular_content_layout' );
-add_action( 'gautam_content_page', 'gautam_single_post_layout' );
+add_action( 'gautam_content_page', 'gautam_single_page_layout' );
 add_action( 'gautam_content_post', 'gautam_single_post_layout' );
 add_action( 'gautam_entry_content_before', 'gautam_post_content_before' );
 add_action( 'gautam_entry_content', 'gautam_content' );
@@ -75,7 +75,9 @@ if ( ! function_exists( 'gautam_body_classes' ) ) {
 			$classes[] = 'has-featured-image';
 		}
 
-		$classes[] = get_theme_mod( 'single_post_layout', 'in-header' );
+		if ( is_singular( 'post' ) ) {
+			$classes[] = get_theme_mod( 'single_post_layout', 'in-header' );
+		}
 
 		$classes[] = get_theme_mod( 'header_layout_setting' );
 
@@ -160,6 +162,22 @@ if ( ! function_exists( 'gautam_singular_content_layout' ) ) {
 	}
 }
 
+if ( ! function_exists( 'gautam_single_page_layout' ) ) {
+	/**
+	 * Outputs the theme single page.
+	 *
+	 * @since 1.1.0
+	 */
+	function gautam_single_page_layout() {
+		get_template_part( 'template-parts/content-page' );
+
+		// If comments are open or we have at least one comment, load up the comment template.
+		if ( comments_open() || get_comments_number() ) :
+			comments_template();
+		endif;
+	}
+}
+
 if ( ! function_exists( 'gautam_single_post_layout' ) ) {
 	/**
 	 * Outputs the theme single post.
@@ -201,7 +219,7 @@ if ( ! function_exists( 'gautam_post_content_before' ) ) {
 				'in-content',
 			),
 			true
-		) ) {
+		) && is_singular( 'post' ) ) {
 			get_template_part( 'template-parts/single/post-header/in-content' );
 		}
 	}
@@ -282,7 +300,7 @@ if ( ! function_exists( 'gautam_post_container_before' ) ) {
 				'in-header',
 			),
 			true
-		) ) {
+		) && is_singular( 'post' ) ) {
 			get_template_part( 'template-parts/single/post-header/in-header' );
 		}
 	}
@@ -397,7 +415,7 @@ if ( ! function_exists( 'gautam_footer_search_layout' ) ) {
 			?>
 			<a class="gautam-search footer-search" href="#">
 				<i class="fa fa-search fa-lg"></i>
-				<span class="screen-reader-text">Search</span>
+				<span class="screen-reader-text"><?php esc_html_e( 'Search', 'gautam' ); ?></span>
 			</a>
 			<?php
 			gautam_footer_popup_search_modal_layout();
@@ -615,17 +633,19 @@ function gautam_header_search() {
  * @since 1.0.0
  */
 function gautam_hamburger_menu() {
-	?>
+	if ( has_nav_menu( 'menu-1' ) ) {
+		?>
 	<div class="hamburger-menu menu_only" on="tap:drawermenu.toggle"
 		role="button" tabindex="0">
-		<button class="toggle sidebar-open desktop-sidebar-toggle" data-toggle-target=".sidebar-modal"
+		<button class="toggle sidebar-open desktop-sidebar-toggle" data-toggle-target=".sidebar-modal" aria-label="Menu"
 				data-toggle-body-class="showing-sidebar-modal" aria-expanded="false" tabindex="-1">
 								<span class="toggle-inner">
 									<i class="fa fa-bars fa-lg" aria-hidden="true"></i>
 								</span>
 		</button>
 	</div>
-	<?php
+		<?php
+	}
 }
 
 /**

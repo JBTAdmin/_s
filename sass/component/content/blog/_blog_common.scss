@@ -1,5 +1,11 @@
 // TODO NEED TO DIFFERENTIATE BETWEEN BLOG 1 AND BLOG 2 AND PROBABLY BLOG 1 CAN BE DISCARDED.
 
+#page {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
 .article-container {
   & > article {
     flex: 1 1 33.33%;
@@ -25,10 +31,6 @@
 
   & .entry-title {
     cursor: pointer;
-    //font-size: 2.4rem; // todo can these two thing be centralized?
-    //line-height: 1.4;
-    //font-weight: 700;
-    //margin-bottom: 1.5rem;
   }
 
   & .post-thumbnail {
@@ -43,8 +45,6 @@
     cursor: pointer;
     width: inherit;
     max-height: 28.2rem;
-    //background: $theme__color;
-    //background: linear-gradient(to right, #0099f7, #f11712);
     display: flex; // todo See if this is the right way to do this.
     justify-content: center;
     align-items: center;
@@ -54,15 +54,12 @@
   }
 
   & .post-thumbnail-drop-case {
-    //height: 25rem;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 10vw;
-    //font-size: 20rem;
     color: rgba(255, 255, 255, 0.3);
-    //color: #fff;
     font-family: Serif;
     overflow: hidden;
     transition: transform 0.5s cubic-bezier(0.46, 0.03, 0.52, 0.96);
@@ -72,14 +69,13 @@
     position: absolute;
     left: 1rem;
     top: 1rem;
-    //width: 8rem;
     padding: 1rem;
     height: 2rem;
     background: #fff;
     border-radius: 0.3rem;
     color: #000;
-    font-size: 1.3rem;
-    font-weight: 700;
+    font-size: 1.2rem;
+    font-weight: 600;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -120,6 +116,7 @@
   clear: both;
   & a {
     border: 1px solid #dadce0;
+    background-color: #fff;
     //color: #0f0e0e;
     padding: 5px 10px;
     margin-right: 5px;
@@ -147,15 +144,24 @@
 
 @media screen and (max-width: 500px) {
   .blog-1 article,
-  .blog-2 article,
   .blog-4 article,
   .blog-5 article {
     flex-basis: 100% !important;
   }
 }
 
-.page-header {
-  //margin-bottom: 5rem;
+@media screen and (max-width: 1200px) {
+  .article-container.blog-2,
+  .article-container.blog-3 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .article-container.blog-2,
+  .article-container.blog-3 {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
 }
 
 //Posts Navigation

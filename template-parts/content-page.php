@@ -15,7 +15,7 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</div><!-- .entry-header -->
 
-	<?php gautam_post_thumbnail(); ?>
+	<?php gautam_post_thumbnail( 'gautam-page-in-content-featured-image' ); ?>
 
 	<div class="entry-content">
 		<?php

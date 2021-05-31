@@ -33,6 +33,13 @@ Gautam WordPress Theme, Copyright (C) 2021 iPowerUser.com.
 Gautam is distributed under the terms of the GNU GPL.
 
 == Changelog ==
+= 1.1.0 =
+* Added: Admin Deshboard.
+* Added: Configuration for Blog Excerpt.
+* Added: Translation added.
+* Fixed: Hamburger Menu issue.
+* Fixed: Other UI Issues fixed.
+
 = 1.0.2 =
 * Updated: Fixed Review Comment.
 

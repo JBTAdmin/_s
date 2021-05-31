@@ -21,14 +21,14 @@
     }
   }
 }
-//.site-header + .site-container::before {
-//  content: "";
-//  display: block;
-//  height: 8rem;
-//  margin-top: -8rem;
-//  pointer-events: none;
-//  visibility: hidden;
-//}
+
+.site-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
 
 main {
   flex: 3 1;
@@ -37,7 +37,6 @@ main {
 
 aside:not(.sidebar-alt) {
   flex: 1 1;
-  //margin: 6rem auto;
 }
 
 .article-container {
@@ -45,16 +44,10 @@ aside:not(.sidebar-alt) {
   align-items: stretch;
   align-content: flex-start;
 
-  //overflow-x: hidden; why we need this
   &:after {
     content: "";
     flex: auto;
   }
-}
-
-// todo Need to differentiate between logic for Single Post / Page and Archives
-main {
-  //margin: 6rem auto;
 }
 
 article {
@@ -64,19 +57,8 @@ article {
 //@media screen and (min-width: 1200px){
 .single-post .primary-content,
 .page .primary-content {
-  // todo can be applied on article
   max-width: 100%;
   min-width: 0;
-
-  // todo problem when sidebar is large and content is small it auto margin height too
-  // Should be enabled when there is no sidebar
-  //margin: auto;
-}
-//}
-
-//todo why we need this???
-.primary-content {
-  //padding: 0 3rem 0 1rem !important;
 }
 
 @media screen and (max-width: 768px) {

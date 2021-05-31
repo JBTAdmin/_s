@@ -9,7 +9,7 @@
 
 if ( ! defined( 'GAUTAM_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'GAUTAM_VERSION', '1.0.0' );
+	define( 'GAUTAM_VERSION', '1.1.0' );
 }
 
 /**
@@ -37,3 +37,7 @@ require get_template_directory() . '/inc/widgets.php';
  */
 require get_template_directory() . '/inc/theme-hooks.php';
 
+// Admin.
+if ( is_admin() ) {
+	require dirname( __FILE__ ) . '/inc/admin/class-gautam-admin.php';
+}
