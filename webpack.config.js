@@ -11,7 +11,7 @@ module.exports = {
 	context: __dirname,
 	entry: {
 		// frontend: ['./js/main.js', './sass/style.scss']
-		frontend: ['./sass/style.scss']
+		frontend: ['./sass/style_tailwind.scss']
 		// customizer: './js/customizer.js'
 	},
 	// output: {
@@ -42,12 +42,13 @@ module.exports = {
 				test: /\.(sass|scss)$/,
 				use: [MiniCssExtractPlugin.loader,
 					'css-loader',
-					{
-						loader: 'postcss-loader',
-						options: {
-							plugins: () => [autoprefixer()]
-						}
-				},
+                    'postcss-loader',
+				// 	{
+				// 		loader: 'postcss-loader',
+				// 		options: {
+				// 			plugins: () => [autoprefixer()]
+				// 		}
+				// },
 					'sass-loader']
 		},
 			{
@@ -78,7 +79,7 @@ module.exports = {
 		new MiniCssExtractPlugin(
 			{
 				// path: path.resolve(__dirname, 'assets/css/'),
-				filename: '../style.css'
+				filename: '../style_tailwind.css'
 			}
 		),
 		new BrowserSyncPlugin(

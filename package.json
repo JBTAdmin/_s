@@ -10,7 +10,7 @@
     "lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",
     "lint:js": "wp-scripts lint-js 'js/*.js'",
     "bundle": "dir-archiver --src . --dest ../gautam.zip --exclude dist .DS_Store .stylelintrc.json .eslintrc .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor1 package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map VNG_Readme.html webpack.config.js r-debug.php",
-    "build": "webpack --mode=development",
+    "build": "NODE_ENV=production webpack --mode=development",
     "buildprod": "webpack --mode=production",
     "dev": "webpack --watch",
     "eslint": "eslint \"src/**/*.{js,jsx}\" --quiet",
@@ -38,7 +38,6 @@
     "@babel/cli": "^7.6.2",
     "@babel/core": "^7.6.2",
     "@babel/preset-env": "^7.6.2",
-    "autoprefixer": "^9.8.0",
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
     "browser-sync": "^2.26.7",
@@ -77,7 +76,10 @@
     "wp-pot-cli": "^1.2.4"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.6.0"
+    "@babel/polyfill": "^7.6.0",
+    "autoprefixer": "^9.8.6",
+    "postcss": "^7.0.35",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.4"
   },
   "browserslist": [
     "last 4 version"
