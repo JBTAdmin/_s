@@ -26,8 +26,8 @@
   "scripts": {
     "lint:wpcs": "@php vendor/squizlabs/php_codesniffer/bin/phpcs",
     "lint:php": "@php vendor/bin/parallel-lint --exclude .git --exclude vendor .",
-    "checkphp": "@php vendor/bin/phpcs --exclude .git --exclude vendor --standard=WordPress.",
-    "make-pot": "wp i18n make-pot . languages/_s.pot"
+    "checkphp": "@php vendor/bin/phpcs -p --ignore=*/.git/* --ignore=./vendor/ --ignore=*/inc/kirki/* --standard=WordPress . *.php",
+    "make-pot": "wp i18n make-pot . languages/gautam.pot"
   },
   "support": {
     "issues": "https://github.com/Automattic/_s/issues",

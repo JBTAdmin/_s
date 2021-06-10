@@ -18,7 +18,7 @@
     "format": "prettier --write \"assets/**/*.{js,jsx,scss}\"",
     "stylelint": "stylelint \"assets/**/*.{css,scss}\"",
     "stylelint:fix": "stylelint \"src/**/*.{css,scss}\" --fix",
-    "wp-pot": "wp-pot --src '*.php' --dest-file 'languages/_s.pot' --domain '_s'"
+    "wp-pot": "wp-pot --src '*.php' --dest-file 'languages/gautam.pot' --domain 'gautam'"
   },
   "repository": {
     "type": "git",
