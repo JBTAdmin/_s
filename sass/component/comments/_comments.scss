@@ -5,19 +5,19 @@
 }
 
 .comment-list {
-  li {
-    padding-top: 40px;
-    list-style: none;
-  }
+  //   li {
+  //     padding-top: 40px;
+  //     list-style: none;
+  //   }
 
   .avatar {
     border-radius: 50% !important;
     //float: left;
     //margin-right: 15px;
     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    left: 0;
-    top: 0;
+    // position: absolute;
+    // left: 0;
+    // top: 0;
   }
 
   .bypostauthor img {
@@ -27,28 +27,28 @@
 }
 
 // Comment section When Image is not available or dont want to display.
-.comment-content,
-.reply,
-.comment-meta {
-  margin-left: 10rem;
-}
+// .comment-content,
+// .reply,
+// .comment-meta {
+//   margin-left: 10rem;
+// }
 
-.comment-content p {
-  margin-bottom: 0;
-}
+// .comment-content p {
+//   margin-bottom: 0;
+// }
 
-.comment-meta {
-  margin-bottom: 2rem;
-  line-height: 1.2;
-  a {
-    //color: #555;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
-    text-decoration: underline;
-  }
-}
+// .comment-meta {
+//   margin-bottom: 2rem;
+//   line-height: 1.2;
+//   a {
+//     //color: #555;
+//     font-size: 12px;
+//     font-weight: 700;
+//     letter-spacing: 1.2px;
+//     text-transform: uppercase;
+//     text-decoration: underline;
+//   }
+// }
 
 .edit-link {
   padding-left: 2rem;

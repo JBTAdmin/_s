@@ -50,9 +50,10 @@ if ( post_password_required() ) {
 			<?php
 			wp_list_comments(
 				array(
-					'style'       => 'ol',
+					// 'style'       => 'ol',
 					'short_ping'  => true,
-					'avatar_size' => 70,
+					// 'avatar_size' => 70,
+                    'callback'       => 'gautam_comments',
 				)
 			);
 			?>

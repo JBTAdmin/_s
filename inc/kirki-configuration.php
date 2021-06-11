@@ -751,7 +751,7 @@ Kirki::add_field(
 		),
 		'transport' => 'auto',
 		'choices'   => array(
-			'category'  => esc_html__( 'Category', 'gautam' ),
+			// 'category'  => esc_html__( 'Category', 'gautam' ),
 			'heading'   => esc_html__( 'Heading', 'gautam' ),
 			'metadata'  => esc_html__( 'Metadata', 'gautam' ),
 			'thumbnail' => esc_html__( 'Featured Image', 'gautam' ),
@@ -776,6 +776,7 @@ Kirki::add_field(
 			'posted_on'    => esc_html__( 'Posted Date', 'gautam' ),
 			'updated_on'   => esc_html__( 'Updated Date', 'gautam' ),
 			'posted_by'    => esc_html__( 'Author', 'gautam' ),
+            'category'    => esc_html__( 'Category', 'gautam' ),
 			'meta_comment' => esc_html__( 'Comment', 'gautam' ),
 		),
 		'priority' => 10,

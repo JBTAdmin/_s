@@ -11,7 +11,8 @@ module.exports = {
 	context: __dirname,
 	entry: {
 		// frontend: ['./js/main.js', './sass/style.scss']
-		frontend: ['./sass/style_tailwind.scss']
+		// frontend: ['./sass/style_tailwind.scss']
+        frontend: ['./sass/style.scss']
 		// customizer: './js/customizer.js'
 	},
 	// output: {
@@ -79,7 +80,8 @@ module.exports = {
 		new MiniCssExtractPlugin(
 			{
 				// path: path.resolve(__dirname, 'assets/css/'),
-				filename: '../style_tailwind.css'
+				// filename: '../style_tailwind.css'
+                filename: '../style.css'
 			}
 		),
 		new BrowserSyncPlugin(

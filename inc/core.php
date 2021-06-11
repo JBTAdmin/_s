@@ -155,6 +155,8 @@ require_once get_parent_theme_file_path( '/inc/kirki/kirki.php' );
 
 require get_template_directory() . '/inc/kirki-configuration.php';
 
+require get_template_directory() . '/inc/nav-menu-walker.php';
+
 /**
  * Provides the proper file location while kirki is in customizer view.
  *

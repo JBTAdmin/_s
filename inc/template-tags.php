@@ -45,7 +45,7 @@ if ( ! function_exists( 'gautam_posted_on' ) ) {
 			);
 		}
 
-		$posted_on = '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>';
+		$posted_on = '<div><span>Published On</span><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a></div>';
 
 		if ( $date_only ) {
 			return get_the_date();
@@ -67,6 +67,19 @@ if ( ! function_exists( 'gautam_updated_on' ) ) {
 	}
 }
 
+function gautam_category() {
+    global $post;
+
+    if ( 'post' === get_post_type() ) {
+        $categories_list = get_the_category_list( ' ' );
+        if ( $categories_list ) {
+            /* translators: 1: list of categories. */
+            printf( '<div class="cat-links"><span>Published In</span>' . esc_html( '%1$s ' ) . '</div>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+        }
+    }
+}
+
+
 if ( ! function_exists( 'gautam_posted_by' ) ) {
 	/**
 	 * Prints HTML with meta information for the current author.
@@ -80,7 +93,7 @@ if ( ! function_exists( 'gautam_posted_by' ) ) {
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( $author_id ) ) . '">' . esc_html( get_the_author_meta( 'nickname', $author_id ) ) . '</a></span>'
 		);
 
-		echo '<span class="byline"> ' . $byline . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo '<span class="byline"> <figure></figure><span><span>Published By</span>' . $byline . '</span></span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 	}
 }

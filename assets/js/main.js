@@ -26,13 +26,13 @@ document.addEventListener(
 		const subMenu              = document.querySelectorAll( "#primary-menu .sub-menu" );
 
 		// Adding the dropdown button.
-		subMenu.forEach(
-			el =>
-			el.insertAdjacentHTML(
-				"beforebegin",
-				'<button class="drawer-dropdown-button toggle" ><span class="plus"><i class="fa fa-plus"></i></span><span class="minus"><i class="fa fa-minus"></i></span></button>'
-			)
-		);
+		// subMenu.forEach(
+		// 	el =>
+		// 	el.insertAdjacentHTML(
+		// 		"beforebegin",
+		// 		'<button class="drawer-dropdown-button toggle" ><span class="plus"><i class="fa fa-plus"></i></span><span class="minus"><i class="fa fa-minus"></i></span></button>'
+		// 	)
+		// );
 
 		// Holding temp class name when mobile menu is open.
 		let tempClassMobileMenu;
@@ -78,9 +78,9 @@ document.addEventListener(
 			tempClassFixedHeader = fixedHeaderContainer.className;
 		}
 
-		window.addEventListener( "scroll", scrollFunc );
+		// window.addEventListener( "scroll", scrollFunc );
 
-		scrollToTopButton.addEventListener(
+		scrollToTopButton && scrollToTopButton.addEventListener(
 			"click",
 			function (e) {
 				e.preventDefault();
