@@ -22,76 +22,76 @@
 //}
 
 .in-content .entry-content {
-  padding-top: 3rem;
+	padding-top: 3rem;
 }
 
 .page article,
 .single-post article {
-  width: 100%;
-  flex: 100%;
+	width: 100%;
+	flex: 100%;
 }
 
 .post-thumbnail {
-  margin: 2rem 0;
+	margin: 2rem 0;
 
-  & img {
-    display: block;
-    margin: auto;
-  }
+	& img {
+		display: block;
+		margin: auto;
+	}
 }
 .post-thumbnail.in-style {
-  align-self: stretch;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
+	align-self: stretch;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
 }
 
 .single-post .cat-links > a {
-  //border-radius: 0.4rem;
-  //padding: 1px 8px;
-  display: inline-block;
-  //margin-bottom: 10px;
-  //color: rgba(0, 0, 0, 0.8);
-  //background: #fff;
-  //text-transform: uppercase;
-  //letter-spacing: 0.3rem;
-  font-weight: 500;
-  font-size: 1.6rem;
-  opacity: 0.9;
-  padding-right: 1rem;
-  //border: 1px solid #e0dede;
+	//border-radius: 0.4rem;
+	//padding: 1px 8px;
+	display: inline-block;
+	//margin-bottom: 10px;
+	//color: rgba(0, 0, 0, 0.8);
+	//background: #fff;
+	//text-transform: uppercase;
+	//letter-spacing: 0.3rem;
+	font-weight: 500;
+	font-size: 1.6rem;
+	opacity: 0.9;
+	padding-right: 1rem;
+	//border: 1px solid #e0dede;
 }
 
 .entry-title {
-  margin-bottom: 1.5rem;
-  //   color: inherit;
+	margin-bottom: 1.5rem;
+	//   color: inherit;
 }
 
 .entry-meta {
-  //color: rgba(0, 0, 0, 0.8);
-  font-size: 1.5rem;
-  font-weight: 400;
-  //opacity: 0.8;
+	//color: rgba(0, 0, 0, 0.8);
+	font-size: 1.5rem;
+	font-weight: 400;
+	//opacity: 0.8;
 }
 
 .single-post .entry-meta > *:not(:last-child):after {
-  content: "|";
-  display: inline-block;
-  margin-left: 7px;
-  margin-right: 7px;
-  //border-radius: 5px;
-  //width: 6px;
-  //height: 6px;
-  //border: 1px solid #909090;
-  color: $theme__color;
-  //top: -1px;
-  position: relative;
+	content: '|';
+	display: inline-block;
+	margin-left: 7px;
+	margin-right: 7px;
+	//border-radius: 5px;
+	//width: 6px;
+	//height: 6px;
+	//border: 1px solid #909090;
+	color: $theme__color;
+	//top: -1px;
+	position: relative;
 }
 
 .meta-data {
-  margin-bottom: 3rem;
+	margin-bottom: 3rem;
 }
 
 .page-links {
-  clear: both;
+	clear: both;
 }

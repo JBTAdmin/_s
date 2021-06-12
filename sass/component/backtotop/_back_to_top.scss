@@ -10,68 +10,68 @@
 //}
 
 .top-link {
-  transition: all 0.25s ease-in-out;
-  position: fixed;
-  right: calc(#{$right_position} - 2rem);
-  bottom: 2vw;
-  display: inline-flex;
+	transition: all 0.25s ease-in-out;
+	position: fixed;
+	right: calc(#{$right_position} - 2rem);
+	bottom: 2vw;
+	display: inline-flex;
 
-  cursor: pointer;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  padding: 2.2rem 2.6rem;
-  //background-color: rgba(136, 136, 136, 0.06);
-  background-color: #fff;
-  //border: 1px solid #e7ebed;
-  //box-shadow: $theme__color 7px 7px 0px 0px;
+	cursor: pointer;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	padding: 2.2rem 2.6rem;
+	//background-color: rgba(136, 136, 136, 0.06);
+	background-color: #fff;
+	//border: 1px solid #e7ebed;
+	//box-shadow: $theme__color 7px 7px 0px 0px;
 
-  //mix-blend-mode: difference;
-  //color: #000;
+	//mix-blend-mode: difference;
+	//color: #000;
 
-  &.show {
-    visibility: visible;
-    opacity: 1;
-  }
+	&.show {
+		visibility: visible;
+		opacity: 1;
+	}
 
-  &.hide {
-    visibility: hidden;
-    opacity: 0;
-  }
+	&.hide {
+		visibility: hidden;
+		opacity: 0;
+	}
 
-  svg {
-    width: 24px;
-    height: 24px;
-  }
+	svg {
+		width: 24px;
+		height: 24px;
+	}
 }
 
 // Text meant only for screen readers.
 .screen-reader-text {
-  position: absolute;
-  clip-path: inset(50%);
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  word-wrap: normal !important;
-  clip: rect(1px, 1px, 1px, 1px);
+	position: absolute;
+	clip-path: inset(50%);
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	word-wrap: normal !important;
+	clip: rect(1px, 1px, 1px, 1px);
 
-  &:focus {
-    display: block;
-    top: 5px;
-    left: 5px;
-    z-index: 100000; // Above WP toolbar
-    clip-path: none;
-    background-color: #eee;
-    padding: 15px 23px 14px;
-    width: auto;
-    height: auto;
-    text-decoration: none;
-    line-height: normal;
-    color: #444;
-    font-size: 1em;
-    clip: auto !important;
-  }
+	&:focus {
+		display: block;
+		top: 5px;
+		left: 5px;
+		z-index: 100000; // Above WP toolbar
+		clip-path: none;
+		background-color: #eee;
+		padding: 15px 23px 14px;
+		width: auto;
+		height: auto;
+		text-decoration: none;
+		line-height: normal;
+		color: #444;
+		font-size: 1em;
+		clip: auto !important;
+	}
 }

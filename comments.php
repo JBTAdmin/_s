@@ -51,9 +51,9 @@ if ( post_password_required() ) {
 			wp_list_comments(
 				array(
 					// 'style'       => 'ol',
-					'short_ping'  => true,
+					'short_ping' => true,
 					// 'avatar_size' => 70,
-                    'callback'       => 'gautam_comments',
+					'callback'   => 'gautam_comments',
 				)
 			);
 			?>

@@ -1,33 +1,33 @@
 //todo single post layout needs to be visited seems like soe unused stylesheet is there.
 .column-2-title-image {
-  & .wrap {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
-    background-color: #f5f5f5;
-    margin-top: 5rem;
-    & > div {
-      //flex-basis: 50%;
-      flex: 1 1 50%;
-      & img {
-        display: block;
-      }
-    }
-    & .meta-data {
-      padding: 10rem;
-    }
-  }
+	& .wrap {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		max-width: 100%;
+		background-color: #f5f5f5;
+		margin-top: 5rem;
+		& > div {
+			//flex-basis: 50%;
+			flex: 1 1 50%;
+			& img {
+				display: block;
+			}
+		}
+		& .meta-data {
+			padding: 10rem;
+		}
+	}
 }
 
 @media screen and (max-width: 1024px) {
-  .column-2-title-image {
-    & .wrap {
-      flex-direction: column;
-      & .post-thumbnail {
-        min-height: 45rem;
-      }
-    }
-  }
+	.column-2-title-image {
+		& .wrap {
+			flex-direction: column;
+			& .post-thumbnail {
+				min-height: 45rem;
+			}
+		}
+	}
 }

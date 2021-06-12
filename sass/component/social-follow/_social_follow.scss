@@ -1,46 +1,46 @@
 @media only screen and (max-width: 786px) {
-  .gautam_social_follow {
-    opacity: 0;
-    visibility: hidden;
-  }
+	.gautam_social_follow {
+		opacity: 0;
+		visibility: hidden;
+	}
 }
 
 .gautam_social_follow {
-  font-size: 1.4rem;
-  position: fixed;
-  right: $right_position;
-  top: 50%;
-  font-weight: 500;
-  z-index: 5;
-  align-items: center;
-  margin: auto;
-  transform-origin: center right;
-  transform: rotate(-90deg) translate(50%, -50%);
+	font-size: 1.4rem;
+	position: fixed;
+	right: $right_position;
+	top: 50%;
+	font-weight: 500;
+	z-index: 5;
+	align-items: center;
+	margin: auto;
+	transform-origin: center right;
+	transform: rotate(-90deg) translate(50%, -50%);
 }
 
 .gautam-social-holder {
-  white-space: nowrap;
-  display: flex;
-  list-style: none;
-  margin: 0;
+	white-space: nowrap;
+	display: flex;
+	list-style: none;
+	margin: 0;
 }
 
 ul.gautam-social-holder > li {
-  padding: 0 5px;
+	padding: 0 5px;
 }
 
 .gautam-social-holder li > a {
-  display: flex;
+	display: flex;
 }
 
 .gautam-social-holder li:not(:last-child) a:after {
-  content: ".";
+	content: '.';
 }
 
 .gautam_social_follow.no_social_color > .gautam-social-holder a {
-  color: #000;
+	color: #000;
 }
 
 .gautam_social_follow.no_social_color > .gautam-social-holder a:hover {
-  color: $theme__color;
+	color: $theme__color;
 }

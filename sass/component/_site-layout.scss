@@ -4,65 +4,65 @@
 .post-navigation .nav-links,
 .comment-navigation .nav-links,
 .comment-form {
-  display: flex;
-  flex-wrap: wrap;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .single,
 .page {
-  & .entry-content a {
-    color: $theme__color;
-    text-decoration: underline;
-    font-weight: 500;
-    &:hover,
-    &:focus,
-    &:active {
-      text-decoration: none;
-    }
-  }
+	& .entry-content a {
+		color: $theme__color;
+		text-decoration: underline;
+		font-weight: 500;
+		&:hover,
+		&:focus,
+		&:active {
+			text-decoration: none;
+		}
+	}
 }
 
 .site-container {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: auto;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: auto;
 }
 
 main {
-  flex: 3 1;
-  //max-width: 140rem; // todo need to check if this can be removed as other width is there screen and (min-width: 992px)
+	flex: 3 1;
+	//max-width: 140rem; // todo need to check if this can be removed as other width is there screen and (min-width: 992px)
 }
 
 aside:not(.sidebar-alt) {
-  flex: 1 1;
+	flex: 1 1;
 }
 
 .article-container {
-  justify-content: space-between;
-  align-items: stretch;
-  align-content: flex-start;
+	justify-content: space-between;
+	align-items: stretch;
+	align-content: flex-start;
 
-  &:after {
-    content: "";
-    flex: auto;
-  }
+	&:after {
+		content: '';
+		flex: auto;
+	}
 }
 
 article {
-  min-width: 0;
+	min-width: 0;
 }
 
 //@media screen and (min-width: 1200px){
 .single-post .primary-content,
 .page .primary-content {
-  max-width: 100%;
-  min-width: 0;
+	max-width: 100%;
+	min-width: 0;
 }
 
 @media screen and (max-width: 768px) {
-  .primary-content {
-    padding: 0;
-  }
+	.primary-content {
+		padding: 0;
+	}
 }

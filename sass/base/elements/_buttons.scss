@@ -1,37 +1,37 @@
 button:not(.toggle),
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  background: $button__background;
-  color: $button__text-color;
-  border: 1px solid $button--border-color;
-  border-radius: var(--button-border-radius);
-  padding: 10px 25px;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s linear;
-  cursor: pointer;
-  float: right;
-  //todo why do we need this??
-  //margin: 1rem;
-  font-weight: 600;
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+	background: $button__background;
+	color: $button__text-color;
+	border: 1px solid $button--border-color;
+	border-radius: var(--button-border-radius);
+	padding: 10px 25px;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.2s linear;
+	cursor: pointer;
+	float: right;
+	//todo why do we need this??
+	//margin: 1rem;
+	font-weight: 600;
 
-  &:hover,
-  &:active {
-    border-color: $button__hover-background;
-    background-color: $button__hover-background;
-    color: $button__hover-text-color;
-  }
+	&:hover,
+	&:active {
+		border-color: $button__hover-background;
+		background-color: $button__hover-background;
+		color: $button__hover-text-color;
+	}
 }
 
 .mejs-button > button {
-  &:hover,
-  &:active,
-  &:focus {
-    border-color: unset;
-    background-color: unset;
-    color: unset;
-    transition: unset;
-    border-radius: unset;
-  }
+	&:hover,
+	&:active,
+	&:focus {
+		border-color: unset;
+		background-color: unset;
+		color: unset;
+		transition: unset;
+		border-radius: unset;
+	}
 }

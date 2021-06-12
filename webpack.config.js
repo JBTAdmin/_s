@@ -12,26 +12,26 @@ module.exports = {
 	entry: {
 		// frontend: ['./js/main.js', './sass/style.scss']
 		// frontend: ['./sass/style_tailwind.scss']
-        frontend: ['./sass/style.scss']
+		frontend: ['./sass/style.scss']
 		// customizer: './js/customizer.js'
 	},
 	// output: {
-	// 	path: path.resolve( __dirname, 'assets/' ),
-	// 	filename: './js/main.js'
+	// path: path.resolve( __dirname, 'assets/' ),
+	// filename: './js/main.js'
 	// },
 	mode: 'development',
 	devtool: 'cheap-eval-source-map',
 	module: {
 		rules: [
-		// 	{
-		// 		enforce: 'pre',
-		// 		exclude: /node_modules/,
-		// 		test: /\.jsx$/,
-		// 		loader: 'eslint-loader'
+		// {
+		// enforce: 'pre',
+		// exclude: /node_modules/,
+		// test: /\.jsx$/,
+		// loader: 'eslint-loader'
 		// },
-		// 	{
-		// 		test: /\.jsx?$/,
-		// 		loader: 'babel-loader'
+		// {
+		// test: /\.jsx?$/,
+		// loader: 'babel-loader'
 		// },
 			// {
 			// test: /\.s?css$/,
@@ -43,12 +43,12 @@ module.exports = {
 				test: /\.(sass|scss)$/,
 				use: [MiniCssExtractPlugin.loader,
 					'css-loader',
-                    'postcss-loader',
-				// 	{
-				// 		loader: 'postcss-loader',
-				// 		options: {
-				// 			plugins: () => [autoprefixer()]
-				// 		}
+					'postcss-loader',
+				// {
+				// loader: 'postcss-loader',
+				// options: {
+				// plugins: () => [autoprefixer()]
+				// }
 				// },
 					'sass-loader']
 		},
@@ -81,7 +81,7 @@ module.exports = {
 			{
 				// path: path.resolve(__dirname, 'assets/css/'),
 				// filename: '../style_tailwind.css'
-                filename: '../style.css'
+				filename: '../style.css'
 			}
 		),
 		new BrowserSyncPlugin(

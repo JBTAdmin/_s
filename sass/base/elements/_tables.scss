@@ -1,56 +1,56 @@
 table {
-  margin: 0 0 1.5em;
-  width: 100%;
+	margin: 0 0 1.5em;
+	width: 100%;
 }
 
 .wp-block-table {
-  margin-bottom: 3.6rem;
-  overflow-x: auto;
+	margin-bottom: 3.6rem;
+	overflow-x: auto;
 }
 
 table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  border-left: 1px solid rgba(68, 68, 68, 0.3);
-  border-top: 1px solid rgba(68, 68, 68, 0.3);
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 0;
+	border-left: 1px solid rgba(68, 68, 68, 0.3);
+	border-top: 1px solid rgba(68, 68, 68, 0.3);
 }
 
 tbody {
-  display: table-row-group;
-  vertical-align: middle;
-  border-color: inherit;
+	display: table-row-group;
+	vertical-align: middle;
+	border-color: inherit;
 }
 
 thead {
-  //background-color: $theme__color;
-  //border-color: $theme__color;
-  color: $body_text_dark_color;
+	//background-color: $theme__color;
+	//border-color: $theme__color;
+	color: $body_text_dark_color;
 }
 
 tr {
-  display: table-row;
-  vertical-align: inherit;
-  border-color: inherit;
+	display: table-row;
+	vertical-align: inherit;
+	border-color: inherit;
 }
 
 .wp-block-table td,
 table td,
 .wp-block-table th,
 table th {
-  border: none;
-  border-right: 1px solid rgba(68, 68, 68, 0.3);
-  border-bottom: 1px solid rgba(68, 68, 68, 0.3);
-  padding: 5px;
-  text-align: center;
+	border: none;
+	border-right: 1px solid rgba(68, 68, 68, 0.3);
+	border-bottom: 1px solid rgba(68, 68, 68, 0.3);
+	padding: 5px;
+	text-align: center;
 }
 
 .wp-block-table th,
 table th {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 .wp-block-table tfoot,
 table tfoot {
-  font-weight: bold;
+	font-weight: bold;
 }

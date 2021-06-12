@@ -1,66 +1,66 @@
 .article-container.blog-2 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2rem;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 2rem;
 
-  & .inner-article {
-    position: relative;
-    height: 100%;
-  }
+	& .inner-article {
+		position: relative;
+		height: 100%;
+	}
 
-  & .sticky-badge {
-    position: absolute;
-    right: 0;
-    top: 0;
-    background: black;
-    color: white;
-    border-bottom-left-radius: 1rem;
-    padding: 1rem;
-  }
+	& .sticky-badge {
+		position: absolute;
+		right: 0;
+		top: 0;
+		background: black;
+		color: white;
+		border-bottom-left-radius: 1rem;
+		padding: 1rem;
+	}
 
-  & .inner-article::before {
-    content: "";
-    position: absolute;
-    background: #dadce0;
-    height: 100%;
-    width: 100%;
-    top: 3px;
-    left: 3px;
-    z-index: -1;
-    border-radius: 12px;
-  }
+	& .inner-article::before {
+		content: '';
+		position: absolute;
+		background: #dadce0;
+		height: 100%;
+		width: 100%;
+		top: 3px;
+		left: 3px;
+		z-index: -1;
+		border-radius: 12px;
+	}
 
-  & .inner-entry {
-    background: #fff;
-    padding: 2rem;
+	& .inner-entry {
+		background: #fff;
+		padding: 2rem;
 
-    &:hover {
-      transform: translate(-0.2rem, -0.2rem);
-    }
-  }
+		&:hover {
+			transform: translate(-0.2rem, -0.2rem);
+		}
+	}
 }
 
 .entry-meta > .cat-links {
-  background-color: #f5f7f8;
-  opacity: 0.8;
-  //color: #546e7a;
-  display: inline-block;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  padding: 5px;
-  text-transform: uppercase;
-  text-decoration: none;
-  border-radius: 0.5rem;
+	background-color: #f5f7f8;
+	opacity: 0.8;
+	//color: #546e7a;
+	display: inline-block;
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+	padding: 5px;
+	text-transform: uppercase;
+	text-decoration: none;
+	border-radius: 0.5rem;
 }
 
 // it can be merged with .post-thumbnail .post-date  .
 .entry-meta > .posted_on {
-  //color: #263238;
-  font-size: 14px;
-  font-size: 1.3rem;
-  font-weight: 600;
-  text-decoration: none;
-  margin-bottom: 2rem;
-  opacity: 0.8;
+	//color: #263238;
+	font-size: 14px;
+	font-size: 1.3rem;
+	font-weight: 600;
+	text-decoration: none;
+	margin-bottom: 2rem;
+	opacity: 0.8;
 }

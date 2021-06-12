@@ -3,96 +3,96 @@
  */
 
 aside.sidebar-alt-aside {
-  clip-path: circle(50px at 100% -10%);
-  transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+	clip-path: circle(50px at 100% -10%);
+	transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
 
-  background: #fff;
-  color: #000;
-  width: 100%;
-  //max-width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  right: 0;
-  overflow: auto;
-  z-index: 11;
-  //transform: translate(110%, 0);
-  //transition: transform 0.5s, width 0.5s ease-in-out;
-  font-size: 1.9rem;
-  visibility: hidden;
+	background: #fff;
+	color: #000;
+	width: 100%;
+	//max-width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	right: 0;
+	overflow: auto;
+	z-index: 11;
+	//transform: translate(110%, 0);
+	//transition: transform 0.5s, width 0.5s ease-in-out;
+	font-size: 1.9rem;
+	visibility: hidden;
 }
 
 aside.open {
-  clip-path: circle(2500px at 100% -10%);
+	clip-path: circle(2500px at 100% -10%);
 
-  //transform: translate3D(0, 0, 0); // is it necessary
-  box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
-  visibility: visible;
-  // TODO need to check if this section is getting copied two times in style.css????
+	//transform: translate3D(0, 0, 0); // is it necessary
+	box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+	visibility: visible;
+	// TODO need to check if this section is getting copied two times in style.css????
 
-  // New option
-  //box-shadow: 2px 2px 6px #efefef;
-  //border: 1px solid #eee;
-  //border-radius: 1rem;
+	// New option
+	//box-shadow: 2px 2px 6px #efefef;
+	//border: 1px solid #eee;
+	//border-radius: 1rem;
 }
 
 .sidebar-alt .widget-title {
-  font-size: 1.9rem;
-  margin-bottom: 1rem;
-  color: #6d6d6d;
+	font-size: 1.9rem;
+	margin-bottom: 1rem;
+	color: #6d6d6d;
 }
 
 aside.sidebar-alt-aside section {
-  padding: 1rem 4rem 1rem;
+	padding: 1rem 4rem 1rem;
 }
 
 .aside-header-container {
-  width: 100%;
-  z-index: 1000;
+	width: 100%;
+	z-index: 1000;
 }
 
 @media screen and (max-width: 48rem) {
-  aside {
-    //max-width: 32rem;
-    //padding: 10px 4px 4px;
-  }
+	aside {
+		//max-width: 32rem;
+		//padding: 10px 4px 4px;
+	}
 }
 
 .aside-header {
-  //padding: 3rem 2rem 2rem 5rem;
-  margin-bottom: 0 !important;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  height: 10rem;
-  .custom-logo {
-    max-width: 20rem;
-    vertical-align: middle;
-  }
+	//padding: 3rem 2rem 2rem 5rem;
+	margin-bottom: 0 !important;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	height: 10rem;
+	.custom-logo {
+		max-width: 20rem;
+		vertical-align: middle;
+	}
 }
 
 .sidebar-overlay {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  //todo is it stilll needed
-  z-index: 1;
-  //background: rgba(0, 0, 0, 0.4);
-  background: rgba(255, 255, 255, 1);
-  visibility: hidden;
-  cursor: pointer;
-  transition: all 0.2s ease-in 0.2s;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	//todo is it stilll needed
+	z-index: 1;
+	//background: rgba(0, 0, 0, 0.4);
+	background: rgba(255, 255, 255, 1);
+	visibility: hidden;
+	cursor: pointer;
+	transition: all 0.2s ease-in 0.2s;
 }
 
 .sidebar-overlay.open {
-  visibility: visible;
+	visibility: visible;
 }
 
 .sidebar-close-btn {
-  display: flex;
-  padding: 1rem;
-  //background: rgba(0, 0, 0, 0.05);
-  //border-radius: 0.4rem;
+	display: flex;
+	padding: 1rem;
+	//background: rgba(0, 0, 0, 0.05);
+	//border-radius: 0.4rem;
 }

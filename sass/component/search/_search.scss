@@ -1,132 +1,132 @@
 @media only screen and (max-width: 768px) {
-  .gautam-search.footer-search {
-    opacity: 0;
-    visibility: hidden;
-  }
+	.gautam-search.footer-search {
+		opacity: 0;
+		visibility: hidden;
+	}
 }
 
 .gautam-search.footer-search {
-  position: fixed;
-  left: $left_position;
-  bottom: 5vh;
-  margin-bottom: 8rem;
-  display: inline-flex;
-  //box-shadow: $theme__color 7px 7px 0px 0px;
-  cursor: pointer;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  //box-shadow: 1px 1px 1px 1px $theme__color;
-  //border: 1px solid #e7ebed;
-  //background: rgba(136, 136, 136, 0.06);
-  background: #fff;
-  //mix-blend-mode: difference;
-  //color: #000;
+	position: fixed;
+	left: $left_position;
+	bottom: 5vh;
+	margin-bottom: 8rem;
+	display: inline-flex;
+	//box-shadow: $theme__color 7px 7px 0px 0px;
+	cursor: pointer;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	//box-shadow: 1px 1px 1px 1px $theme__color;
+	//border: 1px solid #e7ebed;
+	//background: rgba(136, 136, 136, 0.06);
+	background: #fff;
+	//mix-blend-mode: difference;
+	//color: #000;
 
-  svg {
-    //fill: #000;
-    width: 24px;
-    height: 24px;
-  }
+	svg {
+		//fill: #000;
+		width: 24px;
+		height: 24px;
+	}
 }
 
 .popup_search_modal {
-  background-color: rgba(23, 22, 26, 0.99);
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  justify-content: center;
-  align-items: enter;
-  z-index: 1000;
-  overflow: hidden;
-  opacity: 0;
-  //visibility: hidden;
-  display: none;
-  transition: opacity 0s cubic-bezier(0.15, 0.2, 0.1, 1);
+	background-color: rgba(23, 22, 26, 0.99);
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	justify-content: center;
+	align-items: enter;
+	z-index: 1000;
+	overflow: hidden;
+	opacity: 0;
+	//visibility: hidden;
+	display: none;
+	transition: opacity 0s cubic-bezier(0.15, 0.2, 0.1, 1);
 }
 
 .popup_search_modal.visible {
-  //visibility: visible;
-  display: flex;
-  opacity: 1;
+	//visibility: visible;
+	display: flex;
+	opacity: 1;
 }
 
 .search-form {
-  position: relative;
+	position: relative;
 }
 //.popup_search_modal button.search-submit {
 .search-form button.search-submit {
-  position: absolute;
-  right: 4%;
-  top: 0;
-  height: 100%;
-  //color: #fff;
-  background: transparent;
-  border: none;
-  padding: 0;
-  display: flex;
-  cursor: pointer;
-  //height: 100%;
-  &:hover {
-    background: none;
-  }
+	position: absolute;
+	right: 4%;
+	top: 0;
+	height: 100%;
+	//color: #fff;
+	background: transparent;
+	border: none;
+	padding: 0;
+	display: flex;
+	cursor: pointer;
+	//height: 100%;
+	&:hover {
+		background: none;
+	}
 }
 
 .popup_search_modal .search-field {
-  &:focus {
-    color: #fff;
-  }
-  &::placeholder {
-    color: #fff;
-  }
-  font-size: 16px;
-  display: block;
-  width: 100%;
-  padding: 15px 20px;
+	&:focus {
+		color: #fff;
+	}
+	&::placeholder {
+		color: #fff;
+	}
+	font-size: 16px;
+	display: block;
+	width: 100%;
+	padding: 15px 20px;
 
-  background-color: rgba(255, 255, 255, 0.3);
-  //border-color: rgba(0, 0, 0, 0.2);
-  //border-radius: 5px;
-  color: #fff;
-  //height: 56px;
-  //width: 40rem;
+	background-color: rgba(255, 255, 255, 0.3);
+	//border-color: rgba(0, 0, 0, 0.2);
+	//border-radius: 5px;
+	color: #fff;
+	//height: 56px;
+	//width: 40rem;
 }
 
 .popup_search_modal .search_holder {
-  position: relative;
-  //z-index: 999;
-  top: 40vh;
-  overflow: hidden;
-  width: calc(100% - 50px);
-  max-width: 500px;
-  margin: 0 auto;
-  border-radius: 5px;
+	position: relative;
+	//z-index: 999;
+	top: 40vh;
+	overflow: hidden;
+	width: calc(100% - 50px);
+	max-width: 500px;
+	margin: 0 auto;
+	border-radius: 5px;
 }
 
 .popup_search_modal > .popup_modal_close_button {
-  color: #fff;
-  position: absolute;
-  right: 5vw;
-  top: 0;
-  padding: 1rem;
-  margin-top: 35px;
-  height: 10vh;
-  //padding: 4rem;
-  //display: flex;
-  //justify-content: flex-end;
-  & > svg {
-    width: 6rem;
-    height: 6rem;
-  }
+	color: #fff;
+	position: absolute;
+	right: 5vw;
+	top: 0;
+	padding: 1rem;
+	margin-top: 35px;
+	height: 10vh;
+	//padding: 4rem;
+	//display: flex;
+	//justify-content: flex-end;
+	& > svg {
+		width: 6rem;
+		height: 6rem;
+	}
 }
 
 .no-results.not-found {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }

@@ -1,26 +1,26 @@
 // Center block
 @mixin center-block {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
 }
 
 // Column width with margin
 @mixin column-width($numberColumns: 3) {
-  width: map-get($columns, $numberColumns) -
-    (($columns__margin * ($numberColumns - 1)) / $numberColumns);
+	width: map-get($columns, $numberColumns) -
+		(($columns__margin * ($numberColumns - 1)) / $numberColumns);
 }
 
 @mixin flex-row-center() {
-  justify-content: center;
+	justify-content: center;
 }
 
 @mixin flex-column-center() {
-  align-items: center;
+	align-items: center;
 }
 
 @mixin flex-center() {
-  @include flex-column-center;
-  @include flex-row-center;
+	@include flex-column-center;
+	@include flex-row-center;
 }

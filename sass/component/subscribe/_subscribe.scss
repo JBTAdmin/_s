@@ -1,19 +1,19 @@
 .subscribe-form {
-  display: flex;
+	display: flex;
 
-  input[type="button"],
-  input[type="reset"],
-  input[type="submit"] {
-    margin: unset;
-    border: none;
-    background: transparent;
-    transform: translateX(-100%);
-    &:hover,
-    &:active,
-    &:focus {
-      border-color: $button__hover-background;
-      background-color: $button__hover-background;
-      color: $button__hover-text-color;
-    }
-  }
+	input[type='button'],
+	input[type='reset'],
+	input[type='submit'] {
+		margin: unset;
+		border: none;
+		background: transparent;
+		transform: translateX(-100%);
+		&:hover,
+		&:active,
+		&:focus {
+			border-color: $button__hover-background;
+			background-color: $button__hover-background;
+			color: $button__hover-text-color;
+		}
+	}
 }

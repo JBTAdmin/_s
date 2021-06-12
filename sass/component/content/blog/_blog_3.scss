@@ -1,66 +1,66 @@
 .article-container.blog-3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2rem;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 2rem;
 
-  & h2.entry-title {
-    color: #fff;
-  }
+	& h2.entry-title {
+		color: #fff;
+	}
 
-  & > article {
-    padding: unset;
-    background: linear-gradient(to right, #1565c0, #b92b27);
-    border-radius: 1rem;
-  }
-  & .inner-entry {
-    border: none; //todo probably set border only to thise blog layout where it is needed.
+	& > article {
+		padding: unset;
+		background: linear-gradient(to right, #1565c0, #b92b27);
+		border-radius: 1rem;
+	}
+	& .inner-entry {
+		border: none; //todo probably set border only to thise blog layout where it is needed.
 
-    &:hover a > img {
-      transform: scale(1.2);
-    }
-  }
+		&:hover a > img {
+			transform: scale(1.2);
+		}
+	}
 
-  & .entry-header {
-    padding: 3rem 3rem;
-    position: absolute;
-    bottom: 0;
-    color: #fff;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 1), transparent);
-    width: 100%;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    & a:hover,
-    a:focus,
-    a:active {
-      color: inherit;
-    }
-  }
+	& .entry-header {
+		padding: 3rem 3rem;
+		position: absolute;
+		bottom: 0;
+		color: #fff;
+		background: linear-gradient(0deg, rgba(0, 0, 0, 1), transparent);
+		width: 100%;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+		& a:hover,
+		a:focus,
+		a:active {
+			color: inherit;
+		}
+	}
 
-  & .post-thumbnail {
-    min-height: 35rem;
+	& .post-thumbnail {
+		min-height: 35rem;
 
-    & > a > img {
-      transition: transform 0.5s ease-in-out;
-      width: 100%;
-      height: 100%;
-    }
-  }
+		& > a > img {
+			transition: transform 0.5s ease-in-out;
+			width: 100%;
+			height: 100%;
+		}
+	}
 
-  //todo should be removed as it is not used
-  & .post-thumbnail:not(.no-post-thumbnail) {
-    &::after {
-      content: " ";
-      background-color: rgba(23, 22, 26, 0.35);
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      border-radius: 1rem;
-    }
-  }
+	//todo should be removed as it is not used
+	& .post-thumbnail:not(.no-post-thumbnail) {
+		&::after {
+			content: ' ';
+			background-color: rgba(23, 22, 26, 0.35);
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			border-radius: 1rem;
+		}
+	}
 
-  & .post-thumbnail-drop-case {
-    align-items: flex-end;
-  }
+	& .post-thumbnail-drop-case {
+		align-items: flex-end;
+	}
 }

@@ -27,7 +27,10 @@
   "scripts": {
     "lint:wpcs": "@php vendor/squizlabs/php_codesniffer/bin/phpcs",
     "lint:php": "@php vendor/bin/parallel-lint --exclude .git --exclude vendor .",
-    "checkphp": "@php vendor/bin/phpcs -p --ignore=*/.git/* --ignore=./vendor/ --ignore=*/inc/kirki/* --standard=WordPress . *.php",
+    "checkphp": "phpcs -p  --standard=WordPress --ignore=./vendor,./node_modules,./inc/kirki,./assets/fonts,./assets/css . *.php",
+    "checkall": "phpcs -p  --standard=WordPress --ignore=./vendor,./node_modules,./inc/kirki,./assets/fonts,./assets/css .",
+    "fixphp": "phpcbf -p  --standard=WordPress --ignore=./vendor,./node_modules,./inc/kirki,./assets/fonts,./assets/css . *.php",
+    "fixall": "phpcbf -p  --standard=WordPress --ignore=./vendor,./node_modules,./inc/kirki,./assets/fonts,./assets/css .",
     "make-pot": "wp i18n make-pot . languages/gautam.pot"
   },
   "support": {

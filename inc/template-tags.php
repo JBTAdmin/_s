@@ -68,15 +68,15 @@ if ( ! function_exists( 'gautam_updated_on' ) ) {
 }
 
 function gautam_category() {
-    global $post;
+	global $post;
 
-    if ( 'post' === get_post_type() ) {
-        $categories_list = get_the_category_list( ' ' );
-        if ( $categories_list ) {
-            /* translators: 1: list of categories. */
-            printf( '<div class="cat-links"><span>Published In</span>' . esc_html( '%1$s ' ) . '</div>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-        }
-    }
+	if ( 'post' === get_post_type() ) {
+		$categories_list = get_the_category_list( ' ' );
+		if ( $categories_list ) {
+			/* translators: 1: list of categories. */
+			printf( '<div class="cat-links"><span>Published In</span>' . esc_html( '%1$s ' ) . '</div>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		}
+	}
 }
 
 

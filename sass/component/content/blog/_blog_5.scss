@@ -1,30 +1,30 @@
 .blog-5 {
-  & > article {
-    &:hover .post-thumbnail img {
-      transform: scale(1.05) translateZ(0);
-      border-radius: 1rem;
-    }
-  }
+	& > article {
+		&:hover .post-thumbnail img {
+			transform: scale(1.05) translateZ(0);
+			border-radius: 1rem;
+		}
+	}
 
-  & .inner-entry {
-    padding: 2rem;
-  }
+	& .inner-entry {
+		padding: 2rem;
+	}
 
-  & .post-thumbnail {
-    display: block;
-    overflow: hidden;
-    border-radius: 1rem;
-    position: relative;
-    width: 100%;
-  }
+	& .post-thumbnail {
+		display: block;
+		overflow: hidden;
+		border-radius: 1rem;
+		position: relative;
+		width: 100%;
+	}
 
-  & .post-thumbnail img {
-    height: 18.5rem;
-    transition: transform 1s cubic-bezier(0.46, 0.03, 0.52, 0.96);
-  }
+	& .post-thumbnail img {
+		height: 18.5rem;
+		transition: transform 1s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+	}
 
-  // todo is it needed?
-  & .no-post-thumbnail {
-    height: 18.5rem;
-  }
+	// todo is it needed?
+	& .no-post-thumbnail {
+		height: 18.5rem;
+	}
 }

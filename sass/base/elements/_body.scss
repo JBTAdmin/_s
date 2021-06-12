@@ -1,56 +1,56 @@
 * {
-  padding: 0;
-  margin: 0;
+	padding: 0;
+	margin: 0;
 } // todo need to check if this is needed?????
 
 html {
-  font-size: 62.5%;
-  width: 100%;
+	font-size: 62.5%;
+	width: 100%;
 }
 
 div {
-  outline: none;
+	outline: none;
 }
 
 body {
-  background: $color__background-body; // Fallback for when there is no custom background color defined.
-  //font: 400 18px / 1.77778 "Roboto",sans-serif;
-  font-family: $font__main;
-  color: $body_text_light_color;
-  text-rendering: optimizeLegibility;
-  line-height: 1.8;
-  letter-spacing: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	background: $color__background-body; // Fallback for when there is no custom background color defined.
+	//font: 400 18px / 1.77778 "Roboto",sans-serif;
+	font-family: $font__main;
+	color: $body_text_light_color;
+	text-rendering: optimizeLegibility;
+	line-height: 1.8;
+	letter-spacing: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 p {
-  margin: 1rem 0;
+	margin: 1rem 0;
 }
 
 .entry-content > * {
-  margin-top: 25px;
-  margin-bottom: 25px;
+	margin-top: 25px;
+	margin-bottom: 25px;
 }
 
 .wrap {
-  width: 90%;
-  margin: auto;
-  height: 100%;
-  //max-width: 115rem;
+	width: 90%;
+	margin: auto;
+	height: 100%;
+	//max-width: 115rem;
 }
 
 body.hide {
-  overflow: hidden;
+	overflow: hidden;
 }
 
 :focus {
-  outline-width: 2px;
-  outline-style: auto;
-  outline-color: $theme__color;
+	outline-width: 2px;
+	outline-style: auto;
+	outline-color: $theme__color;
 }
 
 //todo may be it can be moved to some proper place.
 .entry-content > *:first-child {
-  margin-top: 0;
+	margin-top: 0;
 }
