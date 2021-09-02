@@ -2,7 +2,7 @@
 Contributors: ipoweruser
 Tested up to: 5.7
 Requires PHP: 5.6
-Stable tag: 1.0.0
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: custom-background, custom-logo, custom-menu, custom-colors, featured-images, threaded-comments, two-columns, right-sidebar, left-sidebar, blog, news, featured-images, theme-options
@@ -33,6 +33,9 @@ Gautam WordPress Theme, Copyright (C) 2021 iPowerUser.com.
 Gautam is distributed under the terms of the GNU GPL.
 
 == Changelog ==
+= 1.1.1 =
+* Updated: Kirki Plugin.
+
 = 1.1.0 =
 * Added: Admin Deshboard.
 * Added: Configuration for Blog Excerpt.

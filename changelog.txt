@@ -1,3 +1,6 @@
+= 1.1.1 =
+* Updated: Kirki Plugin.
+
 = 1.1.0 =
 * Added: Admin Deshboard.
 * Added: Configuration for Blog Excerpt.
