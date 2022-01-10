@@ -1,5 +1,5 @@
 === Gautam ===
-Contributors: ipoweruser
+Contributors: gautamstudio
 Tested up to: 5.7
 Requires PHP: 5.6
 Stable tag: 1.1.1
@@ -29,10 +29,13 @@ gautam includes support for Jetpack (Excluding Infinite Scroll).
 
 == License ==
 
-Gautam WordPress Theme, Copyright (C) 2021 iPowerUser.com.
+Gautam WordPress Theme, Copyright (C) 2022 gautamstudio.com.
 Gautam is distributed under the terms of the GNU GPL.
 
 == Changelog ==
+= 1.1.2 =
+* Updated: Author and theme details updated.
+
 = 1.1.1 =
 * Updated: Kirki Plugin.
 

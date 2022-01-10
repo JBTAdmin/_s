@@ -1,3 +1,6 @@
+= 1.1.2 =
+* Updated: Author and theme details updated.
+
 = 1.1.1 =
 * Updated: Kirki Plugin.
 
